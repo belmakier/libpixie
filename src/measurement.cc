@@ -180,14 +180,14 @@ namespace PIXIE {
       }
       if (channel->traces) {
         PIXIE::Trace::Algorithm *tracealg = channel->alg;
-        if (!tracealg || !tracealg->loaded) {
+        if (!tracealg || !tracealg->is_loaded) {
           //no trace algorigthm, should never happen
         }
         else {
           auto tmeas = tracealg->Process(trace, traceLength);
           good_trace = tracealg->good_trace;
-          for (auto &m : tmeas) {
-            trace_meas[nTraceMeas] = m;
+          for (int i=0; i<tmeas.size(); ++i) {
+            trace_meas[nTraceMeas] = tmeas[i];
             ++nTraceMeas;
           }
         }

@@ -59,7 +59,7 @@ namespace PIXIE {
 	  if (ind == index) { break; }
 	}
 	fclose(fpr);
-	loaded = true;
+	is_loaded = true;
       }
       else {
 	printf("%sUnable to open file %s, traces will not be processed%s\n",ANSI_COLOR_RED, filename, ANSI_COLOR_RESET);
@@ -259,7 +259,7 @@ namespace PIXIE {
 	  }
 	}
 	fclose(fpr); fpr=NULL;
-	loaded = true;
+	is_loaded = true;
       }
       else {
 	printf("%sUnable to open file %s%s%s, traces will not be processed%s\n",ANSI_COLOR_RED, ANSI_COLOR_YELLOW,filename,ANSI_COLOR_RED, ANSI_COLOR_RESET);
@@ -431,7 +431,7 @@ namespace PIXIE {
           if (ind == index) { break; }
         }
         fclose(fpr);
-        loaded = true;
+        is_loaded = true;
       }
       else {
         printf("%sUnable to open file %s, traces will not be processed%s\n",ANSI_COLOR_RED, filename, ANSI_COLOR_RESET);

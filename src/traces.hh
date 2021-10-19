@@ -15,7 +15,7 @@ namespace PIXIE {
     class Algorithm {
     public:
       bool good_trace;
-      int loaded=false;
+      int is_loaded=false;
       
       virtual void Load(const char *filename, int index) = 0; //for loading parameters
       virtual std::vector<Measurement> Process(uint16_t *trace, int length) = 0; //pure virtual
