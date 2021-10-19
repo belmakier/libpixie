@@ -7,7 +7,7 @@ COMPILER=clang++  #make this g++ if linux
 
 all : libpixie.so
 
-libpixie.so : measurement.o reader.o event.o experiment_definition.o trace	_algorithms.o pixie.hh traces.hh trace_algorithms.hh
+libpixie.so : measurement.o reader.o event.o experiment_definition.o trace_algorithms.o pixie.hh traces.hh trace_algorithms.hh
 		$(COMPILER) $(FLAGS) -shared -o ../lib/libpixie.so ../obj/measurement.o ../obj/event.o ../obj/reader.o ../obj/experiment_definition.o ../obj/trace_algorithms.o $(ROOTFLAGS)
 
 measurement.o : measurement.cc measurement.hh
