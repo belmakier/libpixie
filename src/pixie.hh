@@ -5,7 +5,6 @@
 
 #include "event.hh"
 #include "experiment_definition.hh"
-#include "pre_reader.hh"
 #include "reader.hh"
 #include "colors.hh"
 

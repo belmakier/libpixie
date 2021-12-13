@@ -65,6 +65,11 @@ namespace PIXIE {
       int tHigh;
       int eLow;
       int eHigh;
+      int pbLow;
+      int pbHigh;
+      int fL;
+      int fG;
+      int ffThr;
 
       void Load(const char *file, int index); //for loading parameters
       std::vector<Measurement> Process(uint16_t *trace, int length); //pure virtual      

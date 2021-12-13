@@ -1,9 +1,9 @@
-FLAGS = -std=c++17 -O3
-COMPILER=clang++  #make this g++ if linux
+FLAGS = -std=c++11 -O3
+COMPILER=g++  #make this g++ if linux
 
 #define these for ROOT compilation
-#FLAGS = -std=c++17 -I`root-config --incdir` -I../extern -O3 -g
-#ROOTFLAGS = -L`root-config --libdir` `root-config --glibs --new `
+FLAGS = -std=c++14 -I`root-config --incdir` -I../extern -O3 -g
+ROOTFLAGS = -L`root-config --libdir` `root-config --glibs --new `
 
 all : libpixie.so
 

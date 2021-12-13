@@ -9,6 +9,6 @@
 #define MAX_CRATES 2
 #define MAX_TRACE_LENGTH 1600
 
-#define ROOT_COMPILE 0
+#define ROOT_COMPILE 1 
 
 #endif

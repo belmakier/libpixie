@@ -426,7 +426,9 @@ namespace PIXIE {
           case '#':
             break;
           default:
-            sscanf(line,"%d %d %d %d %d %d %d %d %d",&ind,&bLow,&bHigh,&pLow,&pHigh,&tLow,&tHigh,&eLow,&eHigh);
+            sscanf(line,"%d %d %d %d %d %d %d %d %d %d %d %d %d %d",
+              &ind,&bLow,&bHigh,&pLow,&pHigh,&tLow,&tHigh,&eLow,
+              &eHigh,&pbLow,&pbHigh,&fL,&fG,&ffThr);
           }
           if (ind == index) { break; }
         }
@@ -455,6 +457,10 @@ namespace PIXIE {
       good_trace = true;
       std::vector<Measurement> retval;
       //actual trace processing
+      float BL[length]={0};
+      float fD[length]={0};
+      float fTrap[length]={0};
+
       float background = 0.0;
       for (int i=bLow; i<=bHigh; ++i) {
         background += trace[i];
@@ -476,9 +482,30 @@ namespace PIXIE {
         tail += trace[i] - background;
       }
 
-      retval.emplace_back("energy", energy);
-      retval.emplace_back("peak", peak);
-      retval.emplace_back("tail", tail);
+      float post_background = 0.0;
+      for (int i=pbLow; i<=pbHigh; ++i) {
+        post_background += trace[i];
+      }
+      post_background /= (pbHigh - pbLow + 1);
+
+      int ffTrig = 0;
+      for (int k=0;k<length;k++) {
+        BL[k]=trace[k]-background;
+
+        fD[k]=BL[k] - (k-fL>=0)*BL[k-fL] - ((k-(fG+fL))>=0)*BL[k-(fG+fL)] + ((k-(fG + 2*fL))>=0)*BL[k-(fG + 2*fL)];
+        fTrap[k] = (k-1>=0)*fTrap[k-1] + fD[k];
+
+        //Find fast trigger and CFD values                                    
+        if (fTrap[k-1]/(float)fL<=ffThr && fTrap[k]/(float)fL>ffThr) {
+          ffTrig+=1;
+        }
+      }
+      retval.emplace_back("energy", (int)energy);
+      retval.emplace_back("peak", (int)peak);
+      retval.emplace_back("tail", (int)tail);
+      retval.emplace_back("background", (int)background);
+      retval.emplace_back("post_background", (int)post_background);
+      retval.emplace_back("nTrigs", ffTrig);
 
       return retval;
     }
