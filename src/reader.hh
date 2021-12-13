@@ -52,11 +52,15 @@ namespace PIXIE {
 
     int measCtr;    
     int eventCtr;
+
+    static float dither;
     
   public:
     Reader();
     ~Reader();
 
+    static float Dither(); 
+    
     const Experiment_Definition & experiment_definition() const
     {
       return (definition);

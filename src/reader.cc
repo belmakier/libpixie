@@ -171,73 +171,76 @@ namespace PIXIE
     return 0;
   }//Reader::read
 
-int Reader::dump_traces(int crate, int slot, int chan, std::string outPath, int maxTraces, int append, std::string traceName) {
-  fpos_t pos;
-  fgetpos(this->file, &pos);          
+  int Reader::dump_traces(int crate, int slot, int chan, std::string outPath, int maxTraces, int append, std::string traceName) {
+    fpos_t pos;
+    fgetpos(this->file, &pos);          
 
-  int retval=0;
+    int retval=0;
 
-  //Determine the length of traces for the given channel/if there are traces for the given channel
-  int traceLen = 0;
-  while (traceLen == 0){
-    PIXIE::Measurement meas;
-    int retval = meas.read_header(this);
-    retval = meas.read_full(this, NULL);
-    if (retval<0){break;}
-    else if (!meas.good_trace || crate!=meas.crateID || slot!=meas.slotID || chan!=meas.channelNumber){;}
-    else {
-      traceLen = meas.traceLength;        
-    }
-  }
-  if(traceLen == 0){printf("No traces for given channel\n");exit(1);}
-
-  fsetpos(this->file, &pos);  //we were never even here
-  //Draw traces
-  double superTrace[traceLen];//={0};
-
-  double x[traceLen];//={0};    
-  int nTraces=0;
-  printf("Dumping %d trace(s) from slot: %d chan: %d\n",maxTraces, slot, chan);
-  while (nTraces<maxTraces){
-    uint16_t trace[traceLen];//={0};
-    PIXIE::Measurement meas;
-    int retval = meas.read_header(this);
-    retval = meas.read_full(this, trace);
-    if (retval<0){break;}
-    else if (!meas.good_trace || crate!=meas.crateID || slot!=meas.slotID || chan!=meas.channelNumber){;}
-    else {
-      traceLen = meas.traceLength;
-      this->definition.GetChannel(crate, slot, chan)->alg->dumpTrace(&trace[0], traceLen, nTraces, outPath, append, traceName);        
-      nTraces+=1;
-      for(int i=0;i<traceLen;i++){
-        superTrace[i] = (double) ((superTrace[i]*(nTraces-1) +  trace[i])/nTraces);
+    //Determine the length of traces for the given channel/if there are traces for the given channel
+    int traceLen = 0;
+    while (traceLen == 0){
+      PIXIE::Measurement meas;
+      int retval = meas.read_header(this);
+      retval = meas.read_full(this, NULL);
+      if (retval<0){break;}
+      else if (!meas.good_trace || crate!=meas.crateID || slot!=meas.slotID || chan!=meas.channelNumber){;}
+      else {
+        traceLen = meas.traceLength;        
       }
     }
-  }
-  uint16_t tempTrace[traceLen];//={0};
+    if(traceLen == 0){printf("No traces for given channel\n");exit(1);}
 
-  for(int i=0;i<traceLen;i++){
-    tempTrace[i] = (uint16_t) superTrace[i];
-  }
-  if (nTraces==0){
-    printf("%s!!!Warning!!!  No traces saved%s\n",ANSI_COLOR_RED,ANSI_COLOR_RESET);
-    retval = -1;
-  }
-  else {
-    if (nTraces<maxTraces){
-      printf("%s!!!Warning!!!  Only %d traces saved%s\n",ANSI_COLOR_RED,nTraces,ANSI_COLOR_RESET);
+    fsetpos(this->file, &pos);  //we were never even here
+    //Draw traces
+    double superTrace[traceLen];//={0};
+
+    double x[traceLen];//={0};    
+    int nTraces=0;
+    printf("Dumping %d trace(s) from slot: %d chan: %d\n",maxTraces, slot, chan);
+    while (nTraces<maxTraces){
+      uint16_t trace[traceLen];//={0};
+      PIXIE::Measurement meas;
+      int retval = meas.read_header(this);
+      retval = meas.read_full(this, trace);
+      if (retval<0){break;}
+      else if (!meas.good_trace || crate!=meas.crateID || slot!=meas.slotID || chan!=meas.channelNumber){;}
+      else {
+        traceLen = meas.traceLength;
+        this->definition.GetChannel(crate, slot, chan)->alg->dumpTrace(&trace[0], traceLen, nTraces, outPath, append, traceName);        
+        nTraces+=1;
+        for(int i=0;i<traceLen;i++){
+          superTrace[i] = (double) ((superTrace[i]*(nTraces-1) +  trace[i])/nTraces);
+        }
+      }
     }
-    retval=1;
-    this->definition.GetChannel(crate, slot, chan)->alg->dumpTrace(&tempTrace[0], traceLen, nTraces, outPath, append, traceName+"_SuperTrace");
+    uint16_t tempTrace[traceLen];//={0};
+
+    for(int i=0;i<traceLen;i++){
+      tempTrace[i] = (uint16_t) superTrace[i];
+    }
+    if (nTraces==0){
+      printf("%s!!!Warning!!!  No traces saved%s\n",ANSI_COLOR_RED,ANSI_COLOR_RESET);
+      retval = -1;
+    }
+    else {
+      if (nTraces<maxTraces){
+        printf("%s!!!Warning!!!  Only %d traces saved%s\n",ANSI_COLOR_RED,nTraces,ANSI_COLOR_RESET);
+      }
+      retval=1;
+      this->definition.GetChannel(crate, slot, chan)->alg->dumpTrace(&tempTrace[0], traceLen, nTraces, outPath, append, traceName+"_SuperTrace");
+    }
+
+    fsetpos(this->file, &pos);  //we were never even here
+    return 1;
+    
+  }
+  
+  int Reader::set_algorithm(PIXIE::Trace::Algorithm *&alg) {
+    this->tracealg = alg;
+    return 0;
   }
 
-  fsetpos(this->file, &pos);  //we were never even here
-  return 1;
-    
-}
-  
-int Reader::set_algorithm(PIXIE::Trace::Algorithm *&alg) {
-  this->tracealg = alg;
-  return 0;
-}
+  float Reader::dither;
+  float Reader::Dither() { dither += 0.1; if (dither >= 1.0) { dither = 0.0; } return dither; }
 }//PIXIE

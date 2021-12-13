@@ -97,7 +97,7 @@ namespace PIXIE {
 
       return mean;
     }
-    std::vector<Measurement> Trapezoid::TrapFilter(uint16_t *trace, int length,int write) {
+    std::vector<Measurement> Trapezoid::TrapFilter(uint16_t *trace, const int length,int write) {
 
       good_trace = false;
       std::vector<Measurement> retval;
@@ -457,9 +457,9 @@ namespace PIXIE {
       good_trace = true;
       std::vector<Measurement> retval;
       //actual trace processing
-      float BL[length]={0};
-      float fD[length]={0};
-      float fTrap[length]={0};
+      float BL[length];//={0};
+      float fD[length];//={0};
+      float fTrap[length];//={0};
 
       float background = 0.0;
       for (int i=bLow; i<=bHigh; ++i) {
