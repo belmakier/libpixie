@@ -19,9 +19,10 @@ namespace PIXIE
     }
 
     if (!(this->file = fopen(path.c_str(), "r"))) {
+      std::cout << "Warning! " << path << " not opened successfully" << std::endl;              
       return (-2);
     }
-
+    
     return (0);
   }
   

@@ -457,9 +457,9 @@ namespace PIXIE {
       good_trace = true;
       std::vector<Measurement> retval;
       //actual trace processing
-      float BL[length];//={0};
-      float fD[length];//={0};
-      float fTrap[length];//={0};
+      //float BL[length];//={0};
+      //float fD[length];//={0};
+      //float fTrap[length];//={0};
 
       float background = 0.0;
       for (int i=bLow; i<=bHigh; ++i) {
@@ -488,6 +488,7 @@ namespace PIXIE {
       }
       post_background /= (pbHigh - pbLow + 1);
 
+      /*
       int ffTrig = 0;
       for (int k=0;k<length;k++) {
         BL[k]=trace[k]-background;
@@ -500,12 +501,13 @@ namespace PIXIE {
           ffTrig+=1;
         }
       }
+      */
       retval.emplace_back("energy", (int)energy);
       retval.emplace_back("peak", (int)peak);
       retval.emplace_back("tail", (int)tail);
       retval.emplace_back("background", (int)background);
       retval.emplace_back("post_background", (int)post_background);
-      retval.emplace_back("nTrigs", ffTrig);
+      //retval.emplace_back("nTrigs", ffTrig);
 
       return retval;
     }
