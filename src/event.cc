@@ -153,7 +153,7 @@ namespace PIXIE
 
   int Event::AddMeasurement(Reader *reader) {
     int retval = AddMeasHeader(reader);
-    if (retval == 1) {
+    if (retval == -1) {
       return retval;
     }
       
