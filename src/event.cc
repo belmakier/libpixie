@@ -123,7 +123,7 @@ namespace PIXIE
     }//loop for current event
 
     //average event length
-    reader->av_evt_length = (reader->av_evt_length*reader->nEvents + (maxTime/(3276.8*1e3)))/(double)(reader->nEvents + 1);
+    reader->av_evt_length = (reader->av_evt_length*reader->nEvents + ((maxTime-triggerTime)/(3276.8*1e3)))/(double)(reader->nEvents + 1);
     
     nMeas -= 1; //not in this event
     
