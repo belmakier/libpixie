@@ -27,6 +27,7 @@ namespace PIXIE {
       int channelNumber;
       bool qdcs;
       bool eraw;
+      bool extwind;
       bool traces;
       std::string algName;
       std::string algFile;
@@ -41,6 +42,7 @@ namespace PIXIE {
               int chN,
               bool e,
               bool q,
+              bool ext,
               bool t,
               std::string algN,
               std::string algF,
@@ -51,6 +53,7 @@ namespace PIXIE {
         channelNumber(chN),
         qdcs(q),
         eraw(e),
+        extwind(ext),
         traces(t),
         algName(algN),
         algFile(algF),
@@ -76,6 +79,7 @@ namespace PIXIE {
       int AddChannel(int channelNumber,
                      bool eraw=false,
                      bool qdcs=false,
+                     bool extwind=true,
                      bool traces=false,
                      std::string algName = "",
                      std::string algFile = "",
@@ -114,6 +118,7 @@ namespace PIXIE {
                    int channelNumber,
                    bool eraw=false,
                    bool qdcs=false,
+                   bool extwind=true,
                    bool traces=false,
                    std::string algName = "",
                    std::string algFile = "",

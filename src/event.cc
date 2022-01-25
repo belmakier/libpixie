@@ -106,7 +106,10 @@ namespace PIXIE
         lastCrate = next_meas->crateID;
         lastSlot = next_meas->slotID;
         lastChan = next_meas->channelNumber;
-        maxTime = next_meas->eventTime+coincWindow;
+        auto *channel = reader->definition.GetChannel(next_meas->crateID, next_meas->slotID, next_meas->channelNumber);
+        if (channel->extwind) {
+          maxTime = next_meas->eventTime+coincWindow;
+        }
         //go to next sub-event
 
         if (mult == MAX_MEAS_PER_EVENT-1) {
