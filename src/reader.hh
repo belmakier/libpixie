@@ -73,6 +73,7 @@ namespace PIXIE {
     bool check_pos();
     void printUpdate();
     void printSummary();
+    double av_evt_length = 0.0;
     
     int set_algorithm(PIXIE::Trace::Algorithm *&alg);
     int set_coinc(float window) { //window is in ns
