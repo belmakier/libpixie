@@ -55,6 +55,7 @@ namespace PIXIE {
 	    break;
 	  default:
 	    sscanf(line,"%d %d %d %d %d %f %d %d %f %f",&ind,&fL,&fG,&sL,&sG,&tau,&D,&S,&ffThr,&cfdThr);
+	    std::cout << ind << "  " << fL << "  " << fG << "  " << sL << "  " << sG << "  " << tau << "  " << D << "  " << S << "  " << ffThr << "  " << cfdThr << std::endl;
 	  }
 	  if (ind == index) { break; }
 	}
@@ -135,17 +136,32 @@ namespace PIXIE {
       for (int k=0;k<length;k++) {
         BL[k]=trace[k]-mean;
 
-        sD[k]=BL[k] - (k-sL>=0)*BL[k-sL] - ((k-(sG+sL))>=0)*BL[k-(sG+sL)] + ((k-(sG + 2*sL))>=0)*BL[k-(sG + 2*sL)];
-        fD[k]=BL[k] - (k-fL>=0)*BL[k-fL] - ((k-(fG+fL))>=0)*BL[k-(fG+fL)] + ((k-(fG + 2*fL))>=0)*BL[k-(fG + 2*fL)];
+        sD[k]=BL[k];
+        fD[k]=BL[k];
 
-        sP[k]=(k-1>=0)*sP[k-1] + sD[k];
-        fP[k]=(k-1>=0)*fP[k-1] + fD[k];
+	if (k-sL>=0) { sD[k] -= BL[k-sL]; }
+	if (k-fL>=0) { fD[k] -= BL[k-fL]; }
+
+	if (k-(sG+sL)>=0) { sD[k] -= BL[k-(sG+sL)]; }
+	if (k-(fG+fL)>=0) { fD[k] -= BL[k-(fG+fL)]; }
+
+	if (k-(sG+2*sL)>=0) { sD[k] += BL[k-(sG+2*sL)]; }
+	if (k-(fG+2*fL)>=0) { fD[k] += BL[k-(fG+2*fL)]; }
+
+        sP[k]= sD[k];
+        fP[k]= fD[k];
+
+	if (k-1>=0) { sP[k] += sP[k-1]; }
+	if (k-1>=0) { fP[k] += fP[k-1]; }
 
         sR[k] = P*sP[k] + M*sD[k];
         fR[k] = P*fP[k] + M*fD[k];
 
-        sTrap[k] = (k-1>=0)*sTrap[k-1] + sR[k]/(M*sL);
-        fTrap[k] = (k-1>=0)*fTrap[k-1] + fR[k]/(M);
+        sTrap[k] = sR[k]/(M*sL);
+        fTrap[k] = fR[k]/(M);
+
+	if (k-1>=0) { sTrap[k] += sTrap[k-1]; }
+	if (k-1>=0) { fTrap[k] += fTrap[k-1]; }
 
         CFD[k] = (1-S/8)*fTrap[k] - fTrap[k-D];
         //Find fast trigger and CFD values                                    
