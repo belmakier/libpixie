@@ -19,9 +19,10 @@ namespace PIXIE
     }
 
     if (!(this->file = fopen(path.c_str(), "r"))) {
+      std::cout << "Warning! " << path << " not opened successfully" << std::endl;              
       return (-2);
     }
-
+    
     return (0);
   }
   
@@ -59,6 +60,8 @@ namespace PIXIE
           int qdcs;
           int traces;
 
+          int extwind; //does this channel extend the event build window?
+
           std::string alg_name;
           std::string alg_file;
           int alg_index = -1;
@@ -70,7 +73,9 @@ namespace PIXIE
           if (ss >> eraw) { }
           else { eraw = false; }
           if (ss >> qdcs) { }
-          else { qdcs = false; }        
+          else { qdcs = false; }
+          if (ss >> extwind) {  }
+          else { extwind = false; }
           if (ss >> traces) { }
           else { traces = false; }
 
@@ -79,20 +84,20 @@ namespace PIXIE
           if (ss >> alg_file) { }
           else { alg_file = ""; }
           if (ss >> alg_index) { }
-          else { alg_index = -1; }
+          else { alg_index = -1; }          
           
           this->AddCrate(crateID);
           this->AddSlot(crateID, slotID, frequency);
           
           std::string name = "c"+std::to_string(crateID)+"s"+std::to_string(slotID)+"ch"+std::to_string(channelNumber);
           if (flag=='D'){
-            if (this->AddChannel(crateID, slotID, channelNumber, eraw, qdcs, traces, alg_name, alg_file, alg_index,false)!=0) {
+            if (this->AddChannel(crateID, slotID, channelNumber, eraw, qdcs, extwind, traces, alg_name, alg_file, alg_index,false)!=0) {
               std::cout << "Caution: channel " << crateID << "." << slotID << "." << channelNumber << " defined twice, second definition ignored" << std::endl;
               break;
             }	    
           }
           else if (flag=='T'){
-            if (this->AddChannel(crateID, slotID, channelNumber, eraw, qdcs, traces, alg_name, alg_file, alg_index,true)!=0) {
+            if (this->AddChannel(crateID, slotID, channelNumber, eraw, qdcs, extwind, traces, alg_name, alg_file, alg_index,true)!=0) {
               std::cout << "Caution: channel " << crateID << "." << slotID << "." << channelNumber << " defined twice, second definition ignored" << std::endl;
               break;
             }	    
@@ -139,6 +144,7 @@ namespace PIXIE
   int Experiment_Definition::Slot::AddChannel(int channelNumber,
                                               bool eraw,
                                               bool qdcs,
+                                              bool extwind,
                                               bool traces,
                                               std::string algName,
                                               std::string algFile,
@@ -149,6 +155,7 @@ namespace PIXIE
                                             channelNumber,
                                             eraw,
                                             qdcs,
+                                            extwind,
                                             traces,
                                             algName,
                                             algFile,
@@ -228,6 +235,7 @@ namespace PIXIE
                                         int channelNumber,
                                         bool eraw,
                                         bool qdcs,
+                                        bool extwind,
                                         bool traces,
                                         std::string algName,
                                         std::string algFile,
@@ -247,7 +255,7 @@ namespace PIXIE
       return (-1);
     }
     //both crate and slot exist
-    slot->AddChannel(channelNumber, eraw, qdcs, traces, algName, algFile, algIndex, isTagger);
+    slot->AddChannel(channelNumber, eraw, qdcs, extwind, traces, algName, algFile, algIndex, isTagger);
 
     return (0);
   } //Add channel  
@@ -265,6 +273,8 @@ namespace PIXIE
             for (int k=0; k<MAX_CHANNELS_PER_BOARD; ++k) {
               if (slot->channelMap[k] != NULL) {
                 auto channel = slot->channelMap[k];
+                if (channel->extwind) { std::cout << "   Coinc window extends"; }
+                else { std::cout << "   Coinc window does not extend"; }
                 if (channel->qdcs) { std::cout << "   QDCs"; }
                 if (channel->eraw) { std::cout << "   Raw Energy Sums"; }
                 if (channel->traces) { std::cout << "   Traces, (" << channel->algName << " \"" << channel->algFile << "\", ID="<<channel->algIndex<<")"; }

@@ -106,7 +106,10 @@ namespace PIXIE
         lastCrate = next_meas->crateID;
         lastSlot = next_meas->slotID;
         lastChan = next_meas->channelNumber;
-        maxTime = next_meas->eventTime+coincWindow;
+        auto *channel = reader->definition.GetChannel(next_meas->crateID, next_meas->slotID, next_meas->channelNumber);
+        if (channel->extwind) {
+          maxTime = next_meas->eventTime+coincWindow;
+        }
         //go to next sub-event
 
         if (mult == MAX_MEAS_PER_EVENT-1) {
@@ -118,6 +121,9 @@ namespace PIXIE
         curEvent=0; //breaks current event loop
       }
     }//loop for current event
+
+    //average event length
+    reader->av_evt_length = (reader->av_evt_length*reader->nEvents + ((maxTime-triggerTime)/(3276.8*1e3)))/(double)(reader->nEvents + 1);
     
     nMeas -= 1; //not in this event
     
@@ -153,7 +159,7 @@ namespace PIXIE
 
   int Event::AddMeasurement(Reader *reader) {
     int retval = AddMeasHeader(reader);
-    if (retval == 1) {
+    if (retval == -1) {
       return retval;
     }
       

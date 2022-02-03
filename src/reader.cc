@@ -106,6 +106,7 @@ namespace PIXIE
 
   void Reader::printSummary() {
     printf("\n");
+    printf("Average event length:     " ANSI_COLOR_YELLOW "%6.5f us\n" ANSI_COLOR_RESET, av_evt_length);
     printf("Total sub-events:     " ANSI_COLOR_YELLOW "%15lld\n" ANSI_COLOR_RESET, subevents);
     printf("Bad CFD sub-events:   " ANSI_COLOR_YELLOW "%15lld" ANSI_COLOR_RESET ",     " ANSI_COLOR_GREEN "%5.1f%% " ANSI_COLOR_RESET "good\n", badcfd, 100*(1-(double)badcfd/(double)subevents));
     printf("Pileups:              " ANSI_COLOR_YELLOW "%15lld" ANSI_COLOR_RESET ",     " ANSI_COLOR_GREEN "%5.1f%% " ANSI_COLOR_RESET "good\n", pileups, 100*(1-(double)pileups/(double)subevents));
