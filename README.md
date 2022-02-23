@@ -10,7 +10,7 @@ together using some coincidence window.
 
 ## Installation
 
-Installation is very simple, you'll just need to get the source code
+Installation is simple, you'll just need to get the source code
 and compile to get going. First clone the repository using
 
 ```
