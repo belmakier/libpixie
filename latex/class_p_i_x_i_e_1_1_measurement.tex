@@ -1,0 +1,167 @@
+\hypertarget{class_p_i_x_i_e_1_1_measurement}{}\doxysection{PIXIE\+::Measurement Class Reference}
+\label{class_p_i_x_i_e_1_1_measurement}\index{PIXIE::Measurement@{PIXIE::Measurement}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_a74305d42b7585f74b394d7cc9d174764}\label{class_p_i_x_i_e_1_1_measurement_a74305d42b7585f74b394d7cc9d174764}} 
+int {\bfseries print} () const
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_ae44119a232562550787b78263c87e819}\label{class_p_i_x_i_e_1_1_measurement_ae44119a232562550787b78263c87e819}} 
+int {\bfseries read\+\_\+header} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} $\ast$reader)
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_ab52c696179c4bb8c6447fe375f696c90}\label{class_p_i_x_i_e_1_1_measurement_ab52c696179c4bb8c6447fe375f696c90}} 
+int {\bfseries read\+\_\+full} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} $\ast$reader, uint16\+\_\+t $\ast$out\+Trace=NULL)
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_a05e9628990d53d21c0005577a782fe2b}\label{class_p_i_x_i_e_1_1_measurement_a05e9628990d53d21c0005577a782fe2b}} 
+int {\bfseries get\+Trace} (FILE $\ast$fpr, \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm}{PIXIE\+::\+Trace\+::\+Algorithm}} $\ast$tracealg, uint16\+\_\+t $\ast$trace)
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_aa7bc1d08159fb77021fe4b760278c305}\label{class_p_i_x_i_e_1_1_measurement_aa7bc1d08159fb77021fe4b760278c305}} 
+\mbox{\hyperlink{struct_p_i_x_i_e_1_1_c_f_d}{CFD}} {\bfseries Process\+CFD} (unsigned int data, int frequency)
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_abf6f92307ac08ac10ddbe40474ff2da0}\label{class_p_i_x_i_e_1_1_measurement_abf6f92307ac08ac10ddbe40474ff2da0}} 
+\mbox{\hyperlink{struct_p_i_x_i_e_1_1_event_time}{Event\+Time}} {\bfseries Process\+Time} (unsigned long long timestamp, unsigned int cfd, int frequency)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}\label{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}} 
+uint32\+\_\+t {\bfseries header\+Length}
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_aa6060560c9da323d13705c4683efbda1}\label{class_p_i_x_i_e_1_1_measurement_aa6060560c9da323d13705c4683efbda1}} 
+uint32\+\_\+t {\bfseries event\+Length}
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05}\label{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05}} 
+uint32\+\_\+t {\bfseries trace\+Length}
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}\label{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}} 
+uint32\+\_\+t {\bfseries crate\+ID}
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}\label{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}} 
+uint32\+\_\+t {\bfseries slot\+ID}
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}\label{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}} 
+uint32\+\_\+t {\bfseries channel\+Number}
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_abb003509076a78af508cfad581e40ad3}\label{class_p_i_x_i_e_1_1_measurement_abb003509076a78af508cfad581e40ad3}} 
+uint32\+\_\+t {\bfseries finish\+Code}
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}\label{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}} 
+uint64\+\_\+t {\bfseries event\+Time}
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_a175df9fa09111c252890700c9df36ddf}\label{class_p_i_x_i_e_1_1_measurement_a175df9fa09111c252890700c9df36ddf}} 
+uint32\+\_\+t {\bfseries event\+Rel\+Time}
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_a38a45a088073a1d679aa0687e39c9bcd}\label{class_p_i_x_i_e_1_1_measurement_a38a45a088073a1d679aa0687e39c9bcd}} 
+uint32\+\_\+t {\bfseries CFDForce}
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_a5691dc1289599d5044ebca0eb99c54a6}\label{class_p_i_x_i_e_1_1_measurement_a5691dc1289599d5044ebca0eb99c54a6}} 
+uint32\+\_\+t {\bfseries event\+Energy}
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_a0134ee34ee4211cc16ffc55a018d08db}\label{class_p_i_x_i_e_1_1_measurement_a0134ee34ee4211cc16ffc55a018d08db}} 
+uint32\+\_\+t {\bfseries out\+Of\+Range}
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_a9e369eb1d98fb082453b46e6f9866fa8}\label{class_p_i_x_i_e_1_1_measurement_a9e369eb1d98fb082453b46e6f9866fa8}} 
+uint32\+\_\+t {\bfseries ESum\+Trailing}
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_a11aa609326ddc2d6308f1a7c6b4e8c7b}\label{class_p_i_x_i_e_1_1_measurement_a11aa609326ddc2d6308f1a7c6b4e8c7b}} 
+uint32\+\_\+t {\bfseries ESum\+Leading}
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_a1db7026e4a701144051e4e1b17fd7710}\label{class_p_i_x_i_e_1_1_measurement_a1db7026e4a701144051e4e1b17fd7710}} 
+uint32\+\_\+t {\bfseries ESum\+Gap}
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_ac133d1b326913e4a8cab1c96bf600f3e}\label{class_p_i_x_i_e_1_1_measurement_ac133d1b326913e4a8cab1c96bf600f3e}} 
+uint32\+\_\+t {\bfseries baseline}
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}\label{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}} 
+uint32\+\_\+t {\bfseries QDCSums} \mbox{[}8\mbox{]}
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_abfb4ec14dc55376666331ec2ad293276}\label{class_p_i_x_i_e_1_1_measurement_abfb4ec14dc55376666331ec2ad293276}} 
+\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{PIXIE\+::\+Trace\+::\+Measurement}} {\bfseries trace\+\_\+meas} \mbox{[}MAX\+\_\+\+TRACE\+\_\+\+MEAS\mbox{]}
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_a3e2e36f00d13cc9afa7d8aaf2ffde095}\label{class_p_i_x_i_e_1_1_measurement_a3e2e36f00d13cc9afa7d8aaf2ffde095}} 
+uint16\+\_\+t {\bfseries trace} \mbox{[}MAX\+\_\+\+TRACE\+\_\+\+LENGTH\mbox{]}
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_aa32b41845cd96b951763bd94667edb5b}\label{class_p_i_x_i_e_1_1_measurement_aa32b41845cd96b951763bd94667edb5b}} 
+int {\bfseries n\+Trace\+Meas}
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_a7de1b2bfc4cb4f62d779fdb90bd241c5}\label{class_p_i_x_i_e_1_1_measurement_a7de1b2bfc4cb4f62d779fdb90bd241c5}} 
+bool {\bfseries good\+\_\+trace}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_a9f15a16ee3331625cdc14173fb80c923}\label{class_p_i_x_i_e_1_1_measurement_a9f15a16ee3331625cdc14173fb80c923}} 
+static \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} {\bfseries m\+Channel\+Number} = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0xF, 0)
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_a4c2f96d027dde1e34557a1db0d4ee63b}\label{class_p_i_x_i_e_1_1_measurement_a4c2f96d027dde1e34557a1db0d4ee63b}} 
+static \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} {\bfseries m\+Slot\+ID} = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x\+F0, 4)
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_ac6f66de145022af06f425a21ebb16264}\label{class_p_i_x_i_e_1_1_measurement_ac6f66de145022af06f425a21ebb16264}} 
+static \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} {\bfseries m\+Crate\+ID} = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x\+F00, 8)
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_a831c73bd6161b366ff0b71ea5562b2e9}\label{class_p_i_x_i_e_1_1_measurement_a831c73bd6161b366ff0b71ea5562b2e9}} 
+static \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} {\bfseries m\+Header\+Length} = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x1\+F000, 12)
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_acebdcc1444a74f66d13ffcf245d4f3c9}\label{class_p_i_x_i_e_1_1_measurement_acebdcc1444a74f66d13ffcf245d4f3c9}} 
+static \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} {\bfseries m\+Event\+Length} = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x7\+FFE0000, 17)
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_af1d03b0452c7557f88c0d1f080baac97}\label{class_p_i_x_i_e_1_1_measurement_af1d03b0452c7557f88c0d1f080baac97}} 
+static \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} {\bfseries m\+Finish\+Code} = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x80000000, 31)
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_a5be5eb5f0cd3a2fe95bc8b566d055af0}\label{class_p_i_x_i_e_1_1_measurement_a5be5eb5f0cd3a2fe95bc8b566d055af0}} 
+static \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} {\bfseries m\+Time\+Low} = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x\+FFFFFFFF, 0)
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_a11044cb22e1c5d875d5435b228927494}\label{class_p_i_x_i_e_1_1_measurement_a11044cb22e1c5d875d5435b228927494}} 
+static \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} {\bfseries m\+Time\+High} = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x\+FFFF, 0)
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_a6d94636a26be17a04c532d47adf635a3}\label{class_p_i_x_i_e_1_1_measurement_a6d94636a26be17a04c532d47adf635a3}} 
+static \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} {\bfseries m\+Event\+Energy} = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x\+FFFF, 0)
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_abc41327fb82ce874d11ba58362075052}\label{class_p_i_x_i_e_1_1_measurement_abc41327fb82ce874d11ba58362075052}} 
+static \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} {\bfseries m\+Trace\+Length} = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x7\+FFF0000, 16)
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_a5353a7a4ca1067137136cb23348f5eb5}\label{class_p_i_x_i_e_1_1_measurement_a5353a7a4ca1067137136cb23348f5eb5}} 
+static \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} {\bfseries m\+Trace\+Out\+Range} = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x80000000, 31)
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_aa2690e9c4c2fb04184fc23d0e3abd594}\label{class_p_i_x_i_e_1_1_measurement_aa2690e9c4c2fb04184fc23d0e3abd594}} 
+static \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} {\bfseries m\+CFDTime100} = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x7\+FFF0000, 16)
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_a0ac58e22ae8f5cd6aa9b0342022755cc}\label{class_p_i_x_i_e_1_1_measurement_a0ac58e22ae8f5cd6aa9b0342022755cc}} 
+static \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} {\bfseries m\+CFDTime250} = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x3\+FFF0000, 16)
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_adf575f775608ab62599568b6489e075e}\label{class_p_i_x_i_e_1_1_measurement_adf575f775608ab62599568b6489e075e}} 
+static \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} {\bfseries m\+CFDTime500} = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x1\+FFF0000, 16)
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_afa60a2503205247ae7f6004ce07b1572}\label{class_p_i_x_i_e_1_1_measurement_afa60a2503205247ae7f6004ce07b1572}} 
+static \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} {\bfseries m\+CFDForce100} = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x80000000, 31)
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_ab37457c5d56e9681a0a7603c7ccf2780}\label{class_p_i_x_i_e_1_1_measurement_ab37457c5d56e9681a0a7603c7ccf2780}} 
+static \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} {\bfseries m\+CFDForce250} = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x80000000, 31)
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_a8d0c8f565fa832fc8cc8bfc3e8e110bf}\label{class_p_i_x_i_e_1_1_measurement_a8d0c8f565fa832fc8cc8bfc3e8e110bf}} 
+static \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} {\bfseries m\+CFDTrig\+Source250} = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x40000000, 30)
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_ae14697de8f71d43c847635717e9f5292}\label{class_p_i_x_i_e_1_1_measurement_ae14697de8f71d43c847635717e9f5292}} 
+static \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} {\bfseries m\+CFDTrig\+Source500} = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x\+E0000000, 29)
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_a984c5db2a3a0c4b78488b39a63bc2eba}\label{class_p_i_x_i_e_1_1_measurement_a984c5db2a3a0c4b78488b39a63bc2eba}} 
+static \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} {\bfseries m\+ESum\+Trailing} = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x\+FFFFFFFF, 0)
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_a5d2aaf215e88a684e0b8a1b917ded74a}\label{class_p_i_x_i_e_1_1_measurement_a5d2aaf215e88a684e0b8a1b917ded74a}} 
+static \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} {\bfseries m\+ESum\+Leading} = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x\+FFFFFFFF, 0)
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_aab7a3ef37a548bbfa28c946a311efe27}\label{class_p_i_x_i_e_1_1_measurement_aab7a3ef37a548bbfa28c946a311efe27}} 
+static \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} {\bfseries m\+ESum\+Gap} = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x\+FFFFFFFF, 0)
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_a0e040ac6bbefe372503e83cb37c2b585}\label{class_p_i_x_i_e_1_1_measurement_a0e040ac6bbefe372503e83cb37c2b585}} 
+static \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} {\bfseries m\+Baseline} = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x\+FFFFFFFF, 0)
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_a0d9992a10a5d3aaba2f057067db05724}\label{class_p_i_x_i_e_1_1_measurement_a0d9992a10a5d3aaba2f057067db05724}} 
+static \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} {\bfseries m\+QDCSums} = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x\+FFFFFFFF, 0)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/measurement.\+hh\item 
+src/measurement.\+cc\end{DoxyCompactItemize}

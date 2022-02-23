@@ -1,0 +1,53 @@
+\hypertarget{class_p_i_x_i_e_1_1_event}{}\doxysection{PIXIE\+::Event Class Reference}
+\label{class_p_i_x_i_e_1_1_event}\index{PIXIE::Event@{PIXIE::Event}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_event_a16453e60e4bcd46e755c94418924272f}\label{class_p_i_x_i_e_1_1_event_a16453e60e4bcd46e755c94418924272f}} 
+int {\bfseries print} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} $\ast$reader)
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_event_a8d66886fa3a13b8f9b9490bfefb8482b}\label{class_p_i_x_i_e_1_1_event_a8d66886fa3a13b8f9b9490bfefb8482b}} 
+int {\bfseries Add\+Measurement} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} $\ast$reader)
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_event_a435968180a70e7b86a828e7f7fc1bf42}\label{class_p_i_x_i_e_1_1_event_a435968180a70e7b86a828e7f7fc1bf42}} 
+int {\bfseries Add\+Meas\+Header} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} $\ast$reader)
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_event_a10e1f7b5ac95b7665ba578fb291686b0}\label{class_p_i_x_i_e_1_1_event_a10e1f7b5ac95b7665ba578fb291686b0}} 
+int {\bfseries Add\+Meas\+Full} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} $\ast$reader)
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_event_a26b35f1babc2d2dc92db286381221229}\label{class_p_i_x_i_e_1_1_event_a26b35f1babc2d2dc92db286381221229}} 
+int {\bfseries read} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} $\ast$reader, int coinc\+Window, bool warnings)
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_event_ae9157873a711b1221138f999ea1a659e}\label{class_p_i_x_i_e_1_1_event_ae9157873a711b1221138f999ea1a659e}} 
+const \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement}{Measurement}} $\ast$ {\bfseries Get\+Measurement} (int crate\+ID, int slot\+ID, int channel\+Number, \mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} $\ast$reader) const
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_event_ad69a3dc399ab8b6e795a9827cabb5761}\label{class_p_i_x_i_e_1_1_event_ad69a3dc399ab8b6e795a9827cabb5761}} 
+const \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement}{Measurement}} $\ast$ {\bfseries Get\+Measurement} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} $\ast$reader, int i) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3}\label{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3}} 
+int {\bfseries f\+Measurements} \mbox{[}MAX\+\_\+\+MEAS\+\_\+\+PER\+\_\+\+EVENT\mbox{]}
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}\label{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}} 
+int {\bfseries n\+Meas}
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_event_a973b89428d1117d52568424015f327aa}\label{class_p_i_x_i_e_1_1_event_a973b89428d1117d52568424015f327aa}} 
+long long {\bfseries pileups}
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_event_ab4034a1f813be7192c14143d76040d6d}\label{class_p_i_x_i_e_1_1_event_ab4034a1f813be7192c14143d76040d6d}} 
+long long {\bfseries badcfd}
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_event_a1fa2c3028bd5b4b432d34e2c3319c8b9}\label{class_p_i_x_i_e_1_1_event_a1fa2c3028bd5b4b432d34e2c3319c8b9}} 
+long long {\bfseries outofrange}
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_event_a0164d55be13b1246c33fada1f298a2c0}\label{class_p_i_x_i_e_1_1_event_a0164d55be13b1246c33fada1f298a2c0}} 
+int {\bfseries mult}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/event.\+hh\item 
+src/event.\+cc\end{DoxyCompactItemize}

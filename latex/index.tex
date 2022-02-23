@@ -1,0 +1,49 @@
+\label{index_mainpage}%
+\Hypertarget{index_mainpage}%
+
+
+libpixie is a C++ library for reading the XIA Pixie16 data format (see \href{https://xia.com/wp-content/uploads/2018/04/Pixie16_UserManual.pdf}{\texttt{ https\+://xia.\+com/wp-\/content/uploads/2018/04/\+Pixie16\+\_\+\+User\+Manual.\+pdf}}) into C++ classes. libpixie also handles \char`\"{}event building\char`\"{} -\/ that is, grouping several sub-\/events (referred to as \char`\"{}measurements\char`\"{} here) together using some coincidence window.\hypertarget{index_autotoc_md0}{}\doxysection{Installation}\label{index_autotoc_md0}
+Installation is simple, you\textquotesingle{}ll just need to get the source code and compile to get going. First clone the repository using
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git clone https://github.com/belmakier/libpixie.git}
+
+\end{DoxyCode}
+
+
+Then change directory and make some build directories\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd libpixie;}
+\DoxyCodeLine{mkdir lib;}
+\DoxyCodeLine{mkdir obj;}
+
+\end{DoxyCode}
+
+
+Change directory again and compile
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd src}
+\DoxyCodeLine{make}
+
+\end{DoxyCode}
+
+
+The install directories are specified in the Makefile, by default they are {\ttfamily \$\+HOME/.local/include} for headers and {\ttfamily \$\+HOME/.local/lib} for dynamic libraries. If these don\textquotesingle{}t exist you\textquotesingle{}ll need to create them. After that, you can install with
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make install}
+
+\end{DoxyCode}
+
+
+Make sure the {\ttfamily \$\+HOME/.local/lib} directory is in your {\ttfamily \$\+LD\+\_\+\+LIBRARY\+\_\+\+PATH}, and you\textquotesingle{}re good to go!\hypertarget{index_authors}{}\doxysection{Developers}\label{index_authors}
+
+\begin{DoxyItemize}
+\item Timothy Gray \href{mailto:graytj@ornl.gov}{\texttt{ graytj@ornl.\+gov}} 
+\end{DoxyItemize}

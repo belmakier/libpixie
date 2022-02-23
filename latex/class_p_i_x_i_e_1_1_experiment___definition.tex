@@ -1,0 +1,65 @@
+\hypertarget{class_p_i_x_i_e_1_1_experiment___definition}{}\doxysection{PIXIE\+::Experiment\+\_\+\+Definition Class Reference}
+\label{class_p_i_x_i_e_1_1_experiment___definition}\index{PIXIE::Experiment\_Definition@{PIXIE::Experiment\_Definition}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_channel}{Channel}}
+\item 
+struct \mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_crate}{Crate}}
+\item 
+struct \mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_slot}{Slot}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_ab68933339e663b1e6fe6482bf510a58c}\label{class_p_i_x_i_e_1_1_experiment___definition_ab68933339e663b1e6fe6482bf510a58c}} 
+int {\bfseries open} (const std\+::string \&path)
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_a48d0d2442412ba4f0a450ead002bd650}\label{class_p_i_x_i_e_1_1_experiment___definition_a48d0d2442412ba4f0a450ead002bd650}} 
+int {\bfseries read} ()
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_a2a0e5023c4f5fd2d04488907e67effbb}\label{class_p_i_x_i_e_1_1_experiment___definition_a2a0e5023c4f5fd2d04488907e67effbb}} 
+int {\bfseries close} ()
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_ab593f322513f80001cc6a532d85a5de0}\label{class_p_i_x_i_e_1_1_experiment___definition_ab593f322513f80001cc6a532d85a5de0}} 
+int {\bfseries Add\+Channel} (int crate\+ID, int slot\+ID, int channel\+Number, bool eraw=false, bool qdcs=false, bool extwind=true, bool traces=false, std\+::string alg\+Name=\char`\"{}\char`\"{}, std\+::string alg\+File=\char`\"{}\char`\"{}, int alg\+Index=-\/1, bool is\+Tagger=false)
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_a2f700850bda51bad8fa86b742c7c8dd8}\label{class_p_i_x_i_e_1_1_experiment___definition_a2f700850bda51bad8fa86b742c7c8dd8}} 
+int {\bfseries Add\+Slot} (int crate\+ID, int slot\+ID, int frequency)
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_a7f6004df67245a80d8f9cecf4671a070}\label{class_p_i_x_i_e_1_1_experiment___definition_a7f6004df67245a80d8f9cecf4671a070}} 
+int {\bfseries Add\+Crate} (int crate\+ID)
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_a509a0fb52961be6d7cdd3c8dc94bc450}\label{class_p_i_x_i_e_1_1_experiment___definition_a509a0fb52961be6d7cdd3c8dc94bc450}} 
+\mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_crate}{Crate}} $\ast$ {\bfseries Get\+Crate} (int crate\+ID) const
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_a51df0f5bd8e8617bba0db3713d28dc4a}\label{class_p_i_x_i_e_1_1_experiment___definition_a51df0f5bd8e8617bba0db3713d28dc4a}} 
+\mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_slot}{Slot}} $\ast$ {\bfseries Get\+Slot} (int crate\+ID, int slot\+ID) const
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_a4dafec217c0b9f571c8cc9e944e3f050}\label{class_p_i_x_i_e_1_1_experiment___definition_a4dafec217c0b9f571c8cc9e944e3f050}} 
+\mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_channel}{Channel}} $\ast$ {\bfseries Get\+Channel} (int crate\+ID, int slot\+ID, int channel\+Number) const
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_aec71d748843362f4d7217c5db1dd0ce9}\label{class_p_i_x_i_e_1_1_experiment___definition_aec71d748843362f4d7217c5db1dd0ce9}} 
+int {\bfseries set\+\_\+algorithms} ()
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_a8566dd526c526b066c1d675f2ea3e2db}\label{class_p_i_x_i_e_1_1_experiment___definition_a8566dd526c526b066c1d675f2ea3e2db}} 
+int {\bfseries print} ()
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_ab2dc99614b57190162c685581f857a83}\label{class_p_i_x_i_e_1_1_experiment___definition_ab2dc99614b57190162c685581f857a83}} 
+int {\bfseries print} (std\+::ostream \&out)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_ab1228b0eef3ffe954b26a89238c88fe6}\label{class_p_i_x_i_e_1_1_experiment___definition_ab1228b0eef3ffe954b26a89238c88fe6}} 
+FILE $\ast$ {\bfseries file}
+\item 
+\mbox{\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_aabcea4cb8a3eb1e2b3185f108256b43d}\label{class_p_i_x_i_e_1_1_experiment___definition_aabcea4cb8a3eb1e2b3185f108256b43d}} 
+\mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_crate}{Crate}} $\ast$ {\bfseries crate\+Map} \mbox{[}MAX\+\_\+\+CRATES\mbox{]}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/experiment\+\_\+definition.\+hh\item 
+src/experiment\+\_\+definition.\+cc\end{DoxyCompactItemize}
