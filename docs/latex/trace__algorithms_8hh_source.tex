@@ -1,0 +1,90 @@
+\hypertarget{trace__algorithms_8hh_source}{}\doxysection{trace\+\_\+algorithms.\+hh}
+\label{trace__algorithms_8hh_source}\index{/Users/99j/git/libpixie/src/trace\_algorithms.hh@{/Users/99j/git/libpixie/src/trace\_algorithms.hh}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/* This file contains the details of every algorithm that could be used to process the traces.  }}
+\DoxyCodeLine{2 \textcolor{comment}{}}
+\DoxyCodeLine{3 \textcolor{comment}{   You should edit/add to this file, the corresponding .cc file if you want to add your own algorithm.}}
+\DoxyCodeLine{4 \textcolor{comment}{}}
+\DoxyCodeLine{5 \textcolor{comment}{   Create a class that inherits from the PIXIE::Trace::Algorithm base class, and make sure you overload the Load, Process, and Prototype methods.  Load should take a settings file and load appropriate settings into your object.  Process is a method that actually processes the traces, outputting a vector PIXIE::Trace::Measurement objects -\/ these must always be in the same order, and the method should always return the same number of them.  Prototype() returns an equivalent vector, but with no trace needed.  It is used only to determine how many measurements the particular algorithm returns, and get the names of the measurements for the Tree branch names.}}
+\DoxyCodeLine{6 \textcolor{comment}{}}
+\DoxyCodeLine{7 \textcolor{comment}{   If you're confused or don't understand, send me an email at <timothy.gray@anu.edu.au>}}
+\DoxyCodeLine{8 \textcolor{comment}{*/}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#ifndef PIXIE\_TRACE\_ALGS\_HH}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#define PIXIE\_TRACE\_ALGS\_HH}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}traces.hh"{}}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{namespace }PIXIE \{}
+\DoxyCodeLine{16   \textcolor{keywordtype}{int} setTraceAlg(\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm}{PIXIE::Trace::Algorithm}} *\&tracealg, std::string algName, std::string algFile, \textcolor{keywordtype}{int} algIndex);}
+\DoxyCodeLine{17   }
+\DoxyCodeLine{19   \textcolor{comment}{// EACH ALGORITHM CLASS //}}
+\DoxyCodeLine{21 \textcolor{comment}{}  \textcolor{keyword}{namespace }Trace \{}
+\DoxyCodeLine{22     \textcolor{keyword}{class }\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid}{Trapezoid}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm}{Algorithm}} \{}
+\DoxyCodeLine{23     \textcolor{keyword}{public}:}
+\DoxyCodeLine{24       \textcolor{comment}{//these paramters are set by load}}
+\DoxyCodeLine{25       \textcolor{keywordtype}{int} fL;}
+\DoxyCodeLine{26       \textcolor{keywordtype}{int} fG;}
+\DoxyCodeLine{27       \textcolor{keywordtype}{int} sL;}
+\DoxyCodeLine{28       \textcolor{keywordtype}{int} sG;}
+\DoxyCodeLine{29       \textcolor{keywordtype}{float} tau;}
+\DoxyCodeLine{30       \textcolor{keywordtype}{int} D;}
+\DoxyCodeLine{31       \textcolor{keywordtype}{int} S;}
+\DoxyCodeLine{32       \textcolor{keywordtype}{float} ffThr;}
+\DoxyCodeLine{33       \textcolor{keywordtype}{float} cfdThr;      }
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35       \textcolor{keywordtype}{void} Load(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *file, \textcolor{keywordtype}{int} index); \textcolor{comment}{//for loading parameters}}
+\DoxyCodeLine{36       std::vector<Measurement> Process(uint16\_t *trace, \textcolor{keywordtype}{int} length); \textcolor{comment}{//pure virtual      }}
+\DoxyCodeLine{37       std::vector<Measurement> Prototype();}
+\DoxyCodeLine{38       \textcolor{keywordtype}{int} dumpTrace(uint16\_t *trace, \textcolor{keywordtype}{int} traceLen, \textcolor{keywordtype}{int} n\_traces, std::string fileName, \textcolor{keywordtype}{int} append,std::string traceName);}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40       std::vector<Measurement> TrapFilter(uint16\_t *trace, \textcolor{keywordtype}{int} length, \textcolor{keywordtype}{int} write = 0);}
+\DoxyCodeLine{41       \textcolor{keywordtype}{double}  GetBaseline(uint16\_t *trace, \textcolor{keywordtype}{int} length);}
+\DoxyCodeLine{42     \};}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44     \textcolor{keyword}{class }\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c}{TrapezoidQDC}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid}{Trapezoid}} \{  \textcolor{comment}{//trapezoid with QDC windows as well}}
+\DoxyCodeLine{45     \textcolor{keyword}{public}:}
+\DoxyCodeLine{46       \textcolor{keywordtype}{float} QDCWindows[8];}
+\DoxyCodeLine{47       \textcolor{keywordtype}{char} stringSlow[9],stringFast[9];}
+\DoxyCodeLine{48       \textcolor{keywordtype}{float} enLo=0,enHi=999999999;}
+\DoxyCodeLine{49       \textcolor{keywordtype}{float} pidLo=0,pidHi=999999999;}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51       \textcolor{keywordtype}{void} Load(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *file, \textcolor{keywordtype}{int} index); \textcolor{comment}{//for loading parameters}}
+\DoxyCodeLine{52       std::vector<Measurement> Process(uint16\_t *trace, \textcolor{keywordtype}{int} length); \textcolor{comment}{//pure virtual}}
+\DoxyCodeLine{53       std::vector<Measurement> Prototype();}
+\DoxyCodeLine{54       \textcolor{keywordtype}{int} dumpTrace(uint16\_t *trace, \textcolor{keywordtype}{int} traceLen, \textcolor{keywordtype}{int} n\_traces, std::string fileName, \textcolor{keywordtype}{int} append,std::string traceName);}
+\DoxyCodeLine{55     \};}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57     \textcolor{keyword}{class }\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail}{PeakTail}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm}{Algorithm}} \{}
+\DoxyCodeLine{58     \textcolor{keyword}{public}:}
+\DoxyCodeLine{59       \textcolor{comment}{//these paramters are set by load}}
+\DoxyCodeLine{60       \textcolor{keywordtype}{int} bLow;}
+\DoxyCodeLine{61       \textcolor{keywordtype}{int} bHigh;}
+\DoxyCodeLine{62       \textcolor{keywordtype}{int} pLow;}
+\DoxyCodeLine{63       \textcolor{keywordtype}{int} pHigh;}
+\DoxyCodeLine{64       \textcolor{keywordtype}{int} tLow;}
+\DoxyCodeLine{65       \textcolor{keywordtype}{int} tHigh;}
+\DoxyCodeLine{66       \textcolor{keywordtype}{int} eLow;}
+\DoxyCodeLine{67       \textcolor{keywordtype}{int} eHigh;}
+\DoxyCodeLine{68       \textcolor{keywordtype}{int} pbLow;}
+\DoxyCodeLine{69       \textcolor{keywordtype}{int} pbHigh;}
+\DoxyCodeLine{70       \textcolor{keywordtype}{int} fL;}
+\DoxyCodeLine{71       \textcolor{keywordtype}{int} fG;}
+\DoxyCodeLine{72       \textcolor{keywordtype}{int} ffThr;}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74       \textcolor{keywordtype}{void} Load(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *file, \textcolor{keywordtype}{int} index); \textcolor{comment}{//for loading parameters}}
+\DoxyCodeLine{75       std::vector<Measurement> Process(uint16\_t *trace, \textcolor{keywordtype}{int} length); \textcolor{comment}{//pure virtual      }}
+\DoxyCodeLine{76       std::vector<Measurement> Prototype();}
+\DoxyCodeLine{77       \textcolor{keywordtype}{int} dumpTrace(uint16\_t *trace, \textcolor{keywordtype}{int} traceLen, \textcolor{keywordtype}{int} n\_traces, std::string fileName, \textcolor{keywordtype}{int} append,std::string traceName);}
+\DoxyCodeLine{78     \};}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81   \}}
+\DoxyCodeLine{82   }
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84 \}}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

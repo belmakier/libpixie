@@ -1,5 +1,7 @@
 obj/*
 lib/*
+html/*
+latex/*
 
 *.so
 *.dylib

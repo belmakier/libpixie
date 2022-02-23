@@ -1,0 +1,133 @@
+\hypertarget{measurement_8hh_source}{}\doxysection{measurement.\+hh}
+\label{measurement_8hh_source}\index{/Users/99j/git/libpixie/src/measurement.hh@{/Users/99j/git/libpixie/src/measurement.hh}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef LIBPIXIE\_MEASUREMENT\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define LIBPIXIE\_MEASUREMENT\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}experiment\_definition.hh"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}traces.hh"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}colors.hh"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}definitions.hh"{}}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{namespace }PIXIE \{}
+\DoxyCodeLine{14   \textcolor{keyword}{class }Reader;}
+\DoxyCodeLine{15   }
+\DoxyCodeLine{16   \textcolor{keyword}{struct }\mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} \{}
+\DoxyCodeLine{17     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} fBits;}
+\DoxyCodeLine{18     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} fShift;}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(\textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} bits, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} shift) : fBits(bits), fShift(shift) \{\}}
+\DoxyCodeLine{21     \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} operator() (\textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \&data)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{22       \textcolor{keywordflow}{return} (data\&fBits) >> fShift;}
+\DoxyCodeLine{23     \}}
+\DoxyCodeLine{24   \};}
+\DoxyCodeLine{25   }
+\DoxyCodeLine{26   \textcolor{keyword}{struct }\mbox{\hyperlink{struct_p_i_x_i_e_1_1_c_f_d}{CFD}} \{}
+\DoxyCodeLine{27     \textcolor{keywordtype}{int} CFDFraction;}
+\DoxyCodeLine{28     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} CFDForce;}
+\DoxyCodeLine{29   \};}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31   \textcolor{keyword}{struct }\mbox{\hyperlink{struct_p_i_x_i_e_1_1_event_time}{EventTime}} \{}
+\DoxyCodeLine{32     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} time;}
+\DoxyCodeLine{33     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} CFDForce;}
+\DoxyCodeLine{34   \};}
+\DoxyCodeLine{35   }
+\DoxyCodeLine{36   \textcolor{keyword}{class }\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement}{Measurement}} \{}
+\DoxyCodeLine{37   \textcolor{keyword}{public}:}
+\DoxyCodeLine{38     \textcolor{comment}{//regular things}}
+\DoxyCodeLine{39     uint32\_t headerLength;}
+\DoxyCodeLine{40     uint32\_t eventLength;}
+\DoxyCodeLine{41     uint32\_t traceLength;}
+\DoxyCodeLine{42     uint32\_t crateID;}
+\DoxyCodeLine{43     uint32\_t slotID;}
+\DoxyCodeLine{44     uint32\_t channelNumber;}
+\DoxyCodeLine{45     uint32\_t finishCode;}
+\DoxyCodeLine{46     uint64\_t eventTime;}
+\DoxyCodeLine{47     uint32\_t eventRelTime;    }
+\DoxyCodeLine{48     uint32\_t CFDForce;}
+\DoxyCodeLine{49     uint32\_t eventEnergy;}
+\DoxyCodeLine{50     uint32\_t outOfRange;}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52     \textcolor{comment}{//energy sums}}
+\DoxyCodeLine{53     uint32\_t ESumTrailing;}
+\DoxyCodeLine{54     uint32\_t ESumLeading;}
+\DoxyCodeLine{55     uint32\_t ESumGap;}
+\DoxyCodeLine{56     uint32\_t baseline;}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58     \textcolor{comment}{//QDC sums}}
+\DoxyCodeLine{59     uint32\_t QDCSums[8];}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61     \textcolor{comment}{//Trace measurements}}
+\DoxyCodeLine{62     \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{PIXIE::Trace::Measurement}} trace\_meas[MAX\_TRACE\_MEAS];}
+\DoxyCodeLine{63     uint16\_t trace[MAX\_TRACE\_LENGTH];}
+\DoxyCodeLine{64     \textcolor{keywordtype}{int} nTraceMeas;}
+\DoxyCodeLine{65     \textcolor{keywordtype}{bool} good\_trace;}
+\DoxyCodeLine{66     }
+\DoxyCodeLine{67     \textcolor{keyword}{static} \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} mChannelNumber;}
+\DoxyCodeLine{68     \textcolor{keyword}{static} \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} mSlotID;}
+\DoxyCodeLine{69     \textcolor{keyword}{static} \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} mCrateID;}
+\DoxyCodeLine{70     \textcolor{keyword}{static} \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} mHeaderLength;}
+\DoxyCodeLine{71     \textcolor{keyword}{static} \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} mEventLength;}
+\DoxyCodeLine{72     \textcolor{keyword}{static} \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} mFinishCode;}
+\DoxyCodeLine{73     \textcolor{keyword}{static} \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} mTimeLow;}
+\DoxyCodeLine{74     \textcolor{keyword}{static} \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} mTimeHigh;}
+\DoxyCodeLine{75     \textcolor{keyword}{static} \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} mEventEnergy;}
+\DoxyCodeLine{76     \textcolor{keyword}{static} \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} mTraceLength;}
+\DoxyCodeLine{77     \textcolor{keyword}{static} \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} mTraceOutRange;}
+\DoxyCodeLine{78     }
+\DoxyCodeLine{79     \textcolor{keyword}{static} \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} mCFDTime100;}
+\DoxyCodeLine{80     \textcolor{keyword}{static} \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} mCFDTime250;}
+\DoxyCodeLine{81     \textcolor{keyword}{static} \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} mCFDTime500;}
+\DoxyCodeLine{82     \textcolor{keyword}{static} \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} mCFDForce100;}
+\DoxyCodeLine{83     \textcolor{keyword}{static} \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} mCFDForce250;}
+\DoxyCodeLine{84     \textcolor{keyword}{static} \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} mCFDTrigSource250;}
+\DoxyCodeLine{85     \textcolor{keyword}{static} \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} mCFDTrigSource500;}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87     \textcolor{keyword}{static} \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} mESumTrailing;}
+\DoxyCodeLine{88     \textcolor{keyword}{static} \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} mESumLeading;}
+\DoxyCodeLine{89     \textcolor{keyword}{static} \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} mESumGap;}
+\DoxyCodeLine{90     \textcolor{keyword}{static} \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} mBaseline;}
+\DoxyCodeLine{91     }
+\DoxyCodeLine{92     \textcolor{keyword}{static} \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} mQDCSums;}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94   \textcolor{keyword}{public}:}
+\DoxyCodeLine{95     \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement}{Measurement}}() :}
+\DoxyCodeLine{96       headerLength(0),}
+\DoxyCodeLine{97       eventLength(0),}
+\DoxyCodeLine{98       traceLength(0),      }
+\DoxyCodeLine{99       crateID(0),}
+\DoxyCodeLine{100       slotID(0),}
+\DoxyCodeLine{101       channelNumber(0),}
+\DoxyCodeLine{102       finishCode(0),}
+\DoxyCodeLine{103       eventTime(0),}
+\DoxyCodeLine{104       eventRelTime(0),}
+\DoxyCodeLine{105       CFDForce(0),}
+\DoxyCodeLine{106       eventEnergy(0),}
+\DoxyCodeLine{107       outOfRange(0),}
+\DoxyCodeLine{108       ESumTrailing(0),}
+\DoxyCodeLine{109       ESumLeading(0),}
+\DoxyCodeLine{110       ESumGap(0),}
+\DoxyCodeLine{111       baseline(0),}
+\DoxyCodeLine{112       good\_trace(\textcolor{keyword}{false}),}
+\DoxyCodeLine{113       nTraceMeas(0) \{      }
+\DoxyCodeLine{114       std::fill(QDCSums, QDCSums + 8, 0);}
+\DoxyCodeLine{115     \}}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117     \textcolor{keywordtype}{int} print() \textcolor{keyword}{const};}
+\DoxyCodeLine{118     \textcolor{keywordtype}{int} read\_header(\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} *reader);}
+\DoxyCodeLine{119     \textcolor{keywordtype}{int} read\_full(\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} *reader, uint16\_t *outTrace=NULL);}
+\DoxyCodeLine{120     \textcolor{keywordtype}{int} getTrace(FILE *fpr,  \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm}{PIXIE::Trace::Algorithm}} *tracealg, uint16\_t* trace);}
+\DoxyCodeLine{121    }
+\DoxyCodeLine{122     \mbox{\hyperlink{struct_p_i_x_i_e_1_1_c_f_d}{CFD}} ProcessCFD(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} data, \textcolor{keywordtype}{int} frequency);}
+\DoxyCodeLine{123     \mbox{\hyperlink{struct_p_i_x_i_e_1_1_event_time}{EventTime}} ProcessTime(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} timestamp, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} cfd, \textcolor{keywordtype}{int} frequency);}
+\DoxyCodeLine{124   \};}
+\DoxyCodeLine{125 \}}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

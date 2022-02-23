@@ -1,0 +1,35 @@
+\hypertarget{traces_8hh_source}{}\doxysection{traces.\+hh}
+\label{traces_8hh_source}\index{/Users/99j/git/libpixie/src/traces.hh@{/Users/99j/git/libpixie/src/traces.hh}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef PIXIE\_TRACES\_HH}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define PIXIE\_TRACES\_HH}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{keyword}{namespace }PIXIE \{}
+\DoxyCodeLine{5   \textcolor{keyword}{namespace }Trace \{}
+\DoxyCodeLine{6     \textcolor{keyword}{class }\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}} \{}
+\DoxyCodeLine{7     \textcolor{keyword}{public}:}
+\DoxyCodeLine{8       std::string name; \textcolor{comment}{//for a branch name}}
+\DoxyCodeLine{9       int32\_t datum;  \textcolor{comment}{//arbitrarily 32-\/bit int, should be general enough}}
+\DoxyCodeLine{10       }
+\DoxyCodeLine{11       \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}() : datum(0) \{\};}
+\DoxyCodeLine{12       \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}(std::string n, int32\_t d) : name(n), datum(d) \{\}}
+\DoxyCodeLine{13     \};}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     \textcolor{keyword}{class }\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm}{Algorithm}} \{}
+\DoxyCodeLine{16     \textcolor{keyword}{public}:}
+\DoxyCodeLine{17       \textcolor{keywordtype}{bool} good\_trace;}
+\DoxyCodeLine{18       \textcolor{keywordtype}{int} is\_loaded=\textcolor{keyword}{false};}
+\DoxyCodeLine{19       }
+\DoxyCodeLine{20       \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} Load(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *filename, \textcolor{keywordtype}{int} index) = 0; \textcolor{comment}{//for loading parameters}}
+\DoxyCodeLine{21       \textcolor{keyword}{virtual} std::vector<Measurement> Process(uint16\_t *trace, \textcolor{keywordtype}{int} length) = 0; \textcolor{comment}{//pure virtual}}
+\DoxyCodeLine{22       \textcolor{keyword}{virtual} std::vector<Measurement> Prototype() = 0; \textcolor{comment}{//returns prototype -\/ same size + names as Process() but with all datums = 0, used to initialise the tree}}
+\DoxyCodeLine{23       \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} dumpTrace(uint16\_t *trace, \textcolor{keywordtype}{int} traceLen, \textcolor{keywordtype}{int} n\_traces, std::string fileName, \textcolor{keywordtype}{int} append,std::string traceName) = 0 ;}
+\DoxyCodeLine{24       }
+\DoxyCodeLine{25     \};}
+\DoxyCodeLine{26   \}}
+\DoxyCodeLine{27 \}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
