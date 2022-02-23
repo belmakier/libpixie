@@ -62,7 +62,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>PIXIE</b></li><li class="navelem"><b>Trace</b></li><li class="navelem"><a class="el" href="class_p_i_x_i_e_1_1_trace_1_1_algorithm.html">Algorithm</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespace_p_i_x_i_e.html">PIXIE</a></li><li class="navelem"><a class="el" href="namespace_p_i_x_i_e_1_1_trace.html">Trace</a></li><li class="navelem"><a class="el" href="class_p_i_x_i_e_1_1_trace_1_1_algorithm.html">Algorithm</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -73,6 +73,8 @@ $(function() {
   <div class="headertitle"><div class="title">PIXIE::Trace::Algorithm Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="traces_8hh_source.html">traces.hh</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for PIXIE::Trace::Algorithm:</div>
 <div class="dyncontent">
@@ -87,28 +89,224 @@ Inheritance diagram for PIXIE::Trace::Algorithm:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a507daabea5816729273219e9d310b695"><td class="memItemLeft" align="right" valign="top"><a id="a507daabea5816729273219e9d310b695" name="a507daabea5816729273219e9d310b695"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Load</b> (const char *filename, int index)=0</td></tr>
+<tr class="memitem:a507daabea5816729273219e9d310b695"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_x_i_e_1_1_trace_1_1_algorithm.html#a507daabea5816729273219e9d310b695">Load</a> (const char *filename, int index)=0</td></tr>
 <tr class="separator:a507daabea5816729273219e9d310b695"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74e1daba588fc6a054bc45d8f85b2aad"><td class="memItemLeft" align="right" valign="top"><a id="a74e1daba588fc6a054bc45d8f85b2aad" name="a74e1daba588fc6a054bc45d8f85b2aad"></a>
-virtual std::vector&lt; <a class="el" href="class_p_i_x_i_e_1_1_trace_1_1_measurement.html">Measurement</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Process</b> (uint16_t *trace, int length)=0</td></tr>
+<tr class="memitem:a74e1daba588fc6a054bc45d8f85b2aad"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="class_p_i_x_i_e_1_1_trace_1_1_measurement.html">Measurement</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_x_i_e_1_1_trace_1_1_algorithm.html#a74e1daba588fc6a054bc45d8f85b2aad">Process</a> (uint16_t *trace, int length)=0</td></tr>
 <tr class="separator:a74e1daba588fc6a054bc45d8f85b2aad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac695c0f7599c613b641d9b72dfa6dd7"><td class="memItemLeft" align="right" valign="top"><a id="aac695c0f7599c613b641d9b72dfa6dd7" name="aac695c0f7599c613b641d9b72dfa6dd7"></a>
-virtual std::vector&lt; <a class="el" href="class_p_i_x_i_e_1_1_trace_1_1_measurement.html">Measurement</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Prototype</b> ()=0</td></tr>
+<tr class="memitem:aac695c0f7599c613b641d9b72dfa6dd7"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="class_p_i_x_i_e_1_1_trace_1_1_measurement.html">Measurement</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_x_i_e_1_1_trace_1_1_algorithm.html#aac695c0f7599c613b641d9b72dfa6dd7">Prototype</a> ()=0</td></tr>
 <tr class="separator:aac695c0f7599c613b641d9b72dfa6dd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03f21dc897a2dcd2a2391964756c9737"><td class="memItemLeft" align="right" valign="top"><a id="a03f21dc897a2dcd2a2391964756c9737" name="a03f21dc897a2dcd2a2391964756c9737"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>dumpTrace</b> (uint16_t *trace, int traceLen, int n_traces, std::string fileName, int append, std::string traceName)=0</td></tr>
+<tr class="memitem:a03f21dc897a2dcd2a2391964756c9737"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_x_i_e_1_1_trace_1_1_algorithm.html#a03f21dc897a2dcd2a2391964756c9737">dumpTrace</a> (uint16_t *trace, int traceLen, int n_traces, std::string fileName, int append, std::string traceName)=0</td></tr>
 <tr class="separator:a03f21dc897a2dcd2a2391964756c9737"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a3a179dfa3c4c83f0750b0a205b55bb35"><td class="memItemLeft" align="right" valign="top"><a id="a3a179dfa3c4c83f0750b0a205b55bb35" name="a3a179dfa3c4c83f0750b0a205b55bb35"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>good_trace</b></td></tr>
+<tr class="memitem:a3a179dfa3c4c83f0750b0a205b55bb35"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_x_i_e_1_1_trace_1_1_algorithm.html#a3a179dfa3c4c83f0750b0a205b55bb35">good_trace</a></td></tr>
 <tr class="separator:a3a179dfa3c4c83f0750b0a205b55bb35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cd4fcab67f90370e5d485da02ee9934"><td class="memItemLeft" align="right" valign="top"><a id="a0cd4fcab67f90370e5d485da02ee9934" name="a0cd4fcab67f90370e5d485da02ee9934"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>is_loaded</b> =false</td></tr>
+<tr class="memitem:a0cd4fcab67f90370e5d485da02ee9934"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_x_i_e_1_1_trace_1_1_algorithm.html#a0cd4fcab67f90370e5d485da02ee9934">is_loaded</a> =false</td></tr>
 <tr class="separator:a0cd4fcab67f90370e5d485da02ee9934"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="traces_8hh_source.html#l00015">15</a> of file <a class="el" href="traces_8hh_source.html">traces.hh</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a03f21dc897a2dcd2a2391964756c9737" name="a03f21dc897a2dcd2a2391964756c9737"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03f21dc897a2dcd2a2391964756c9737">&#9670;&nbsp;</a></span>dumpTrace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int PIXIE::Trace::Algorithm::dumpTrace </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t *&#160;</td>
+          <td class="paramname"><em>trace</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>traceLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n_traces</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>fileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>append</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>traceName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#aa3cfc78f38f2c9f7ed09a3d7619b7db2">PIXIE::Trace::Trapezoid</a>, <a class="el" href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c.html#aab796d1e25b9d22af0a354a332a0be10">PIXIE::Trace::TrapezoidQDC</a>, and <a class="el" href="class_p_i_x_i_e_1_1_trace_1_1_peak_tail.html#a99a0e8ae1fb01950022e5415836496cc">PIXIE::Trace::PeakTail</a>.</p>
+
+</div>
+</div>
+<a id="a507daabea5816729273219e9d310b695" name="a507daabea5816729273219e9d310b695"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a507daabea5816729273219e9d310b695">&#9670;&nbsp;</a></span>Load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void PIXIE::Trace::Algorithm::Load </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#a7a5d35e6e5b6c79e62856f74f559861d">PIXIE::Trace::Trapezoid</a>, <a class="el" href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c.html#af392010e0ddd84193a52d47b1e45defe">PIXIE::Trace::TrapezoidQDC</a>, and <a class="el" href="class_p_i_x_i_e_1_1_trace_1_1_peak_tail.html#a25ed72da642f782767484902d5225f5d">PIXIE::Trace::PeakTail</a>.</p>
+
+</div>
+</div>
+<a id="a74e1daba588fc6a054bc45d8f85b2aad" name="a74e1daba588fc6a054bc45d8f85b2aad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74e1daba588fc6a054bc45d8f85b2aad">&#9670;&nbsp;</a></span>Process()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt; <a class="el" href="class_p_i_x_i_e_1_1_trace_1_1_measurement.html">Measurement</a> &gt; PIXIE::Trace::Algorithm::Process </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t *&#160;</td>
+          <td class="paramname"><em>trace</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#ac5d8fa6692cef0675a261c191e856fb8">PIXIE::Trace::Trapezoid</a>, <a class="el" href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c.html#ab0fc04f3144e4272d6f42800c4dc4183">PIXIE::Trace::TrapezoidQDC</a>, and <a class="el" href="class_p_i_x_i_e_1_1_trace_1_1_peak_tail.html#aa7ce2be65200d9e7a70e2bc226a71ec8">PIXIE::Trace::PeakTail</a>.</p>
+
+</div>
+</div>
+<a id="aac695c0f7599c613b641d9b72dfa6dd7" name="aac695c0f7599c613b641d9b72dfa6dd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac695c0f7599c613b641d9b72dfa6dd7">&#9670;&nbsp;</a></span>Prototype()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt; <a class="el" href="class_p_i_x_i_e_1_1_trace_1_1_measurement.html">Measurement</a> &gt; PIXIE::Trace::Algorithm::Prototype </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#a51cca59d8c13a43f3cf01f1eae8353a8">PIXIE::Trace::Trapezoid</a>, <a class="el" href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c.html#a69db32f78148ec967fa97e969b34df89">PIXIE::Trace::TrapezoidQDC</a>, and <a class="el" href="class_p_i_x_i_e_1_1_trace_1_1_peak_tail.html#aab290fa71e8d906d79bc9a3a1de8ddb5">PIXIE::Trace::PeakTail</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a3a179dfa3c4c83f0750b0a205b55bb35" name="a3a179dfa3c4c83f0750b0a205b55bb35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a179dfa3c4c83f0750b0a205b55bb35">&#9670;&nbsp;</a></span>good_trace</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PIXIE::Trace::Algorithm::good_trace</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="traces_8hh_source.html#l00017">17</a> of file <a class="el" href="traces_8hh_source.html">traces.hh</a>.</p>
+
+</div>
+</div>
+<a id="a0cd4fcab67f90370e5d485da02ee9934" name="a0cd4fcab67f90370e5d485da02ee9934"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cd4fcab67f90370e5d485da02ee9934">&#9670;&nbsp;</a></span>is_loaded</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PIXIE::Trace::Algorithm::is_loaded =false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="traces_8hh_source.html#l00018">18</a> of file <a class="el" href="traces_8hh_source.html">traces.hh</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/<a class="el" href="traces_8hh_source.html">traces.hh</a></li>
 </ul>
