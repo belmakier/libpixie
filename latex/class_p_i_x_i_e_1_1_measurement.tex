@@ -177,44 +177,44 @@ Definition at line \mbox{\hyperlink{measurement_8hh_source_l00095}{95}} of file 
 
 
 
-Definition at line \mbox{\hyperlink{measurement_8cc_source_l00200}{200}} of file \mbox{\hyperlink{measurement_8cc_source}{measurement.\+cc}}.
+Definition at line \mbox{\hyperlink{measurement_8cc_source_l00211}{211}} of file \mbox{\hyperlink{measurement_8cc_source}{measurement.\+cc}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00201   \{}
-\DoxyCodeLine{00202     std::cout << \textcolor{stringliteral}{"{}               Crate ID: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}} << std::endl;}
-\DoxyCodeLine{00203     std::cout << \textcolor{stringliteral}{"{}                Slot ID: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}} << std::endl;}
-\DoxyCodeLine{00204     std::cout << \textcolor{stringliteral}{"{}         Channel Number: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}} << std::endl;}
-\DoxyCodeLine{00205     std::cout << \textcolor{stringliteral}{"{}            Finish Code: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_abb003509076a78af508cfad581e40ad3}{finishCode}} << std::endl;}
-\DoxyCodeLine{00206     std::cout << \textcolor{stringliteral}{"{}             Event Time: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}{eventTime}} << std::endl;}
-\DoxyCodeLine{00207     std::cout << \textcolor{stringliteral}{"{}          Event RelTime: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a175df9fa09111c252890700c9df36ddf}{eventRelTime}} << std::endl;    }
-\DoxyCodeLine{00208     std::cout << \textcolor{stringliteral}{"{}              CFD Force: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a38a45a088073a1d679aa0687e39c9bcd}{CFDForce}} << std::endl;}
-\DoxyCodeLine{00209     std::cout << \textcolor{stringliteral}{"{}           Event Energy: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5691dc1289599d5044ebca0eb99c54a6}{eventEnergy}} << std::endl;}
-\DoxyCodeLine{00210     std::cout << \textcolor{stringliteral}{"{}           Out of Range: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a0134ee34ee4211cc16ffc55a018d08db}{outOfRange}} << std::endl;}
-\DoxyCodeLine{00211     }
-\DoxyCodeLine{00212     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}==8 || \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}} == 16) \{}
-\DoxyCodeLine{00213       std::cout << \textcolor{stringliteral}{"{}   Energy Sum (trailing): "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a9e369eb1d98fb082453b46e6f9866fa8}{ESumTrailing}} << std::endl;}
-\DoxyCodeLine{00214       std::cout << \textcolor{stringliteral}{"{}    Energy Sum (leading): "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a11aa609326ddc2d6308f1a7c6b4e8c7b}{ESumLeading}} << std::endl;}
-\DoxyCodeLine{00215       std::cout << \textcolor{stringliteral}{"{}        Energy Sum (gap): "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a1db7026e4a701144051e4e1b17fd7710}{ESumGap}} << std::endl;}
-\DoxyCodeLine{00216       std::cout << \textcolor{stringliteral}{"{}                Baseline: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac133d1b326913e4a8cab1c96bf600f3e}{baseline}} << std::endl;}
-\DoxyCodeLine{00217     \}}
-\DoxyCodeLine{00218     }
-\DoxyCodeLine{00219     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}==12 || \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}} == 16) \{}
-\DoxyCodeLine{00220       std::cout << \textcolor{stringliteral}{"{}                QDCSum0: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[0] << std::endl;}
-\DoxyCodeLine{00221       std::cout << \textcolor{stringliteral}{"{}                QDCSum1: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[1] << std::endl;}
-\DoxyCodeLine{00222       std::cout << \textcolor{stringliteral}{"{}                QDCSum2: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[2] << std::endl;}
-\DoxyCodeLine{00223       std::cout << \textcolor{stringliteral}{"{}                QDCSum3: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[3] << std::endl;}
-\DoxyCodeLine{00224       std::cout << \textcolor{stringliteral}{"{}                QDCSum4: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[4] << std::endl;}
-\DoxyCodeLine{00225       std::cout << \textcolor{stringliteral}{"{}                QDCSum5: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[5] << std::endl;}
-\DoxyCodeLine{00226       std::cout << \textcolor{stringliteral}{"{}                QDCSum6: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[6] << std::endl;}
-\DoxyCodeLine{00227       std::cout << \textcolor{stringliteral}{"{}                QDCSum7: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[7] << std::endl;}
+\DoxyCodeLine{00212   \{}
+\DoxyCodeLine{00213     std::cout << \textcolor{stringliteral}{"{}               Crate ID: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}} << std::endl;}
+\DoxyCodeLine{00214     std::cout << \textcolor{stringliteral}{"{}                Slot ID: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}} << std::endl;}
+\DoxyCodeLine{00215     std::cout << \textcolor{stringliteral}{"{}         Channel Number: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}} << std::endl;}
+\DoxyCodeLine{00216     std::cout << \textcolor{stringliteral}{"{}            Finish Code: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_abb003509076a78af508cfad581e40ad3}{finishCode}} << std::endl;}
+\DoxyCodeLine{00217     std::cout << \textcolor{stringliteral}{"{}             Event Time: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}{eventTime}} << std::endl;}
+\DoxyCodeLine{00218     std::cout << \textcolor{stringliteral}{"{}          Event RelTime: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a175df9fa09111c252890700c9df36ddf}{eventRelTime}} << std::endl;    }
+\DoxyCodeLine{00219     std::cout << \textcolor{stringliteral}{"{}              CFD Force: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a38a45a088073a1d679aa0687e39c9bcd}{CFDForce}} << std::endl;}
+\DoxyCodeLine{00220     std::cout << \textcolor{stringliteral}{"{}           Event Energy: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5691dc1289599d5044ebca0eb99c54a6}{eventEnergy}} << std::endl;}
+\DoxyCodeLine{00221     std::cout << \textcolor{stringliteral}{"{}           Out of Range: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a0134ee34ee4211cc16ffc55a018d08db}{outOfRange}} << std::endl;}
+\DoxyCodeLine{00222     }
+\DoxyCodeLine{00223     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}==8 || \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}} == 16) \{}
+\DoxyCodeLine{00224       std::cout << \textcolor{stringliteral}{"{}   Energy Sum (trailing): "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a9e369eb1d98fb082453b46e6f9866fa8}{ESumTrailing}} << std::endl;}
+\DoxyCodeLine{00225       std::cout << \textcolor{stringliteral}{"{}    Energy Sum (leading): "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a11aa609326ddc2d6308f1a7c6b4e8c7b}{ESumLeading}} << std::endl;}
+\DoxyCodeLine{00226       std::cout << \textcolor{stringliteral}{"{}        Energy Sum (gap): "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a1db7026e4a701144051e4e1b17fd7710}{ESumGap}} << std::endl;}
+\DoxyCodeLine{00227       std::cout << \textcolor{stringliteral}{"{}                Baseline: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac133d1b326913e4a8cab1c96bf600f3e}{baseline}} << std::endl;}
 \DoxyCodeLine{00228     \}}
-\DoxyCodeLine{00229 }
-\DoxyCodeLine{00230     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa32b41845cd96b951763bd94667edb5b}{nTraceMeas}}; ++i) \{}
-\DoxyCodeLine{00231       std::cout << \textcolor{stringliteral}{"{}             TraceMeas"{}}<< i<<\textcolor{stringliteral}{"{}: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_abfb4ec14dc55376666331ec2ad293276}{trace\_meas}}[i].\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement_a2aee7a7bb7b8c236f12eba1e56f6245d}{datum}} << std::endl;}
-\DoxyCodeLine{00232     \}}
-\DoxyCodeLine{00233     \textcolor{keywordflow}{return}(0);}
-\DoxyCodeLine{00234   \}  }
+\DoxyCodeLine{00229     }
+\DoxyCodeLine{00230     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}==12 || \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}} == 16) \{}
+\DoxyCodeLine{00231       std::cout << \textcolor{stringliteral}{"{}                QDCSum0: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[0] << std::endl;}
+\DoxyCodeLine{00232       std::cout << \textcolor{stringliteral}{"{}                QDCSum1: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[1] << std::endl;}
+\DoxyCodeLine{00233       std::cout << \textcolor{stringliteral}{"{}                QDCSum2: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[2] << std::endl;}
+\DoxyCodeLine{00234       std::cout << \textcolor{stringliteral}{"{}                QDCSum3: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[3] << std::endl;}
+\DoxyCodeLine{00235       std::cout << \textcolor{stringliteral}{"{}                QDCSum4: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[4] << std::endl;}
+\DoxyCodeLine{00236       std::cout << \textcolor{stringliteral}{"{}                QDCSum5: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[5] << std::endl;}
+\DoxyCodeLine{00237       std::cout << \textcolor{stringliteral}{"{}                QDCSum6: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[6] << std::endl;}
+\DoxyCodeLine{00238       std::cout << \textcolor{stringliteral}{"{}                QDCSum7: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[7] << std::endl;}
+\DoxyCodeLine{00239     \}}
+\DoxyCodeLine{00240 }
+\DoxyCodeLine{00241     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa32b41845cd96b951763bd94667edb5b}{nTraceMeas}}; ++i) \{}
+\DoxyCodeLine{00242       std::cout << \textcolor{stringliteral}{"{}             TraceMeas"{}}<< i<<\textcolor{stringliteral}{"{}: "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_abfb4ec14dc55376666331ec2ad293276}{trace\_meas}}[i].\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement_a2aee7a7bb7b8c236f12eba1e56f6245d}{datum}} << std::endl;}
+\DoxyCodeLine{00243     \}}
+\DoxyCodeLine{00244     \textcolor{keywordflow}{return}(0);}
+\DoxyCodeLine{00245   \}  }
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_aa7bc1d08159fb77021fe4b760278c305}\label{class_p_i_x_i_e_1_1_measurement_aa7bc1d08159fb77021fe4b760278c305}} 
@@ -300,82 +300,82 @@ Definition at line \mbox{\hyperlink{measurement_8cc_source_l00074}{74}} of file 
 
 
 
-Definition at line \mbox{\hyperlink{measurement_8cc_source_l00127}{127}} of file \mbox{\hyperlink{measurement_8cc_source}{measurement.\+cc}}.
+Definition at line \mbox{\hyperlink{measurement_8cc_source_l00138}{138}} of file \mbox{\hyperlink{measurement_8cc_source}{measurement.\+cc}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00127                                                                \{}
-\DoxyCodeLine{00128     \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa32b41845cd96b951763bd94667edb5b}{nTraceMeas}} = 0;}
-\DoxyCodeLine{00129 }
-\DoxyCodeLine{00130     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}} == 4) \{;\}}
-\DoxyCodeLine{00131     \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{00132       \textcolor{comment}{//read the rest of the header}}
-\DoxyCodeLine{00133       uint32\_t otherWords[\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}-\/4];}
-\DoxyCodeLine{00134       \textcolor{keywordflow}{if} (fread(\&otherWords, (\textcolor{keywordtype}{size\_t}) 4, (\textcolor{keywordtype}{size\_t}) \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}-\/4, reader-\/>file) != (\textcolor{keywordtype}{size\_t}) \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}-\/4) \{}
-\DoxyCodeLine{00135         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{00136       \}    }
-\DoxyCodeLine{00137       \textcolor{comment}{//Read the rest of the header}}
-\DoxyCodeLine{00138       \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}==8) \{\textcolor{comment}{//Raw energy sums}}
-\DoxyCodeLine{00139         \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a9e369eb1d98fb082453b46e6f9866fa8}{ESumTrailing}} = \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a984c5db2a3a0c4b78488b39a63bc2eba}{mESumTrailing}}(otherWords[0]);}
-\DoxyCodeLine{00140         \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a11aa609326ddc2d6308f1a7c6b4e8c7b}{ESumLeading}}  = \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5d2aaf215e88a684e0b8a1b917ded74a}{mESumLeading}}(otherWords[1]);}
-\DoxyCodeLine{00141         \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a1db7026e4a701144051e4e1b17fd7710}{ESumGap}}      = \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aab7a3ef37a548bbfa28c946a311efe27}{mESumGap}}(otherWords[2]);}
-\DoxyCodeLine{00142         \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac133d1b326913e4a8cab1c96bf600f3e}{baseline}}     = \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a0e040ac6bbefe372503e83cb37c2b585}{mBaseline}}(otherWords[3]);}
-\DoxyCodeLine{00143       \}}
-\DoxyCodeLine{00144       \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}==12) \{\textcolor{comment}{//QDCSums}}
-\DoxyCodeLine{00145         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<8; i++) \{}
-\DoxyCodeLine{00146           \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[i]=\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a0d9992a10a5d3aaba2f057067db05724}{mQDCSums}}(otherWords[i]);}
-\DoxyCodeLine{00147         \}}
-\DoxyCodeLine{00148       \}}
-\DoxyCodeLine{00149       \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}==16) \{ \textcolor{comment}{//Both}}
+\DoxyCodeLine{00138                                                                \{}
+\DoxyCodeLine{00139     \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa32b41845cd96b951763bd94667edb5b}{nTraceMeas}} = 0;}
+\DoxyCodeLine{00140 }
+\DoxyCodeLine{00141     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}} == 4) \{;\}}
+\DoxyCodeLine{00142     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00143       \textcolor{comment}{//read the rest of the header}}
+\DoxyCodeLine{00144       uint32\_t otherWords[\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}-\/4];}
+\DoxyCodeLine{00145       \textcolor{keywordflow}{if} (fread(\&otherWords, (\textcolor{keywordtype}{size\_t}) 4, (\textcolor{keywordtype}{size\_t}) \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}-\/4, reader-\/>file) != (\textcolor{keywordtype}{size\_t}) \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}-\/4) \{}
+\DoxyCodeLine{00146         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{00147       \}    }
+\DoxyCodeLine{00148       \textcolor{comment}{//Read the rest of the header}}
+\DoxyCodeLine{00149       \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}==8) \{\textcolor{comment}{//Raw energy sums}}
 \DoxyCodeLine{00150         \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a9e369eb1d98fb082453b46e6f9866fa8}{ESumTrailing}} = \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a984c5db2a3a0c4b78488b39a63bc2eba}{mESumTrailing}}(otherWords[0]);}
 \DoxyCodeLine{00151         \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a11aa609326ddc2d6308f1a7c6b4e8c7b}{ESumLeading}}  = \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5d2aaf215e88a684e0b8a1b917ded74a}{mESumLeading}}(otherWords[1]);}
 \DoxyCodeLine{00152         \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a1db7026e4a701144051e4e1b17fd7710}{ESumGap}}      = \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aab7a3ef37a548bbfa28c946a311efe27}{mESumGap}}(otherWords[2]);}
 \DoxyCodeLine{00153         \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac133d1b326913e4a8cab1c96bf600f3e}{baseline}}     = \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a0e040ac6bbefe372503e83cb37c2b585}{mBaseline}}(otherWords[3]);}
-\DoxyCodeLine{00154         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<8; i++) \{}
-\DoxyCodeLine{00155           \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[i]=\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a0d9992a10a5d3aaba2f057067db05724}{mQDCSums}}(otherWords[4+i]);}
-\DoxyCodeLine{00156         \}}
-\DoxyCodeLine{00157       \}}
-\DoxyCodeLine{00158     \}}
-\DoxyCodeLine{00159 }
-\DoxyCodeLine{00160     }
-\DoxyCodeLine{00161     \textcolor{comment}{//skip or proces the trace if recorded}}
-\DoxyCodeLine{00162     \textcolor{keyword}{auto} channel = reader-\/>definition.GetChannel(\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}}, \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}}, \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}});}
-\DoxyCodeLine{00163     \textcolor{comment}{//no trace, do nothing}}
-\DoxyCodeLine{00164     \textcolor{keywordflow}{if} ((\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa6060560c9da323d13705c4683efbda1}{eventLength}} -\/ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}) == 0) \{;\}}
-\DoxyCodeLine{00165     \textcolor{comment}{//skip trace if not needed}}
-\DoxyCodeLine{00166     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (outTrace==NULL \&\& !channel-\/>traces)\{}
-\DoxyCodeLine{00167       \textcolor{keywordflow}{if} (fseek(reader-\/>file, (\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa6060560c9da323d13705c4683efbda1}{eventLength}}-\/\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}})*4, SEEK\_CUR)) \{}
-\DoxyCodeLine{00168         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{00169       \}}
-\DoxyCodeLine{00170     \}}
-\DoxyCodeLine{00171     \textcolor{comment}{//Read trace}}
-\DoxyCodeLine{00172     \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{00173       \textcolor{comment}{//uint16\_t trace[traceLength]; // = \{0\};}}
-\DoxyCodeLine{00174       \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05}{traceLength}} > \mbox{\hyperlink{definitions_8hh_af0c0584410364a83dba3db590aa157e7}{MAX\_TRACE\_LENGTH}}) \{ std::cout << \textcolor{stringliteral}{"{}WARNING: traceLength > MAX\_TRACE\_LENGTH"{}} << std::endl; \}}
-\DoxyCodeLine{00175       \textcolor{keywordflow}{if} (fread(\&(this-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a3e2e36f00d13cc9afa7d8aaf2ffde095}{trace}}[0]), (\textcolor{keywordtype}{size\_t}) 2, (\textcolor{keywordtype}{size\_t}) \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05}{traceLength}}, reader-\/>file) != (\textcolor{keywordtype}{size\_t}) \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05}{traceLength}}) \{}
-\DoxyCodeLine{00176         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{00177       \}}
-\DoxyCodeLine{00178       \textcolor{keywordflow}{if} (outTrace!=NULL)\{}
-\DoxyCodeLine{00179         memcpy(outTrace, \&\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a3e2e36f00d13cc9afa7d8aaf2ffde095}{trace}},\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05}{traceLength}}*\textcolor{keyword}{sizeof}(uint16\_t));}
+\DoxyCodeLine{00154       \}}
+\DoxyCodeLine{00155       \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}==12) \{\textcolor{comment}{//QDCSums}}
+\DoxyCodeLine{00156         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<8; i++) \{}
+\DoxyCodeLine{00157           \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[i]=\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a0d9992a10a5d3aaba2f057067db05724}{mQDCSums}}(otherWords[i]);}
+\DoxyCodeLine{00158         \}}
+\DoxyCodeLine{00159       \}}
+\DoxyCodeLine{00160       \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}==16) \{ \textcolor{comment}{//Both}}
+\DoxyCodeLine{00161         \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a9e369eb1d98fb082453b46e6f9866fa8}{ESumTrailing}} = \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a984c5db2a3a0c4b78488b39a63bc2eba}{mESumTrailing}}(otherWords[0]);}
+\DoxyCodeLine{00162         \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a11aa609326ddc2d6308f1a7c6b4e8c7b}{ESumLeading}}  = \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5d2aaf215e88a684e0b8a1b917ded74a}{mESumLeading}}(otherWords[1]);}
+\DoxyCodeLine{00163         \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a1db7026e4a701144051e4e1b17fd7710}{ESumGap}}      = \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aab7a3ef37a548bbfa28c946a311efe27}{mESumGap}}(otherWords[2]);}
+\DoxyCodeLine{00164         \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac133d1b326913e4a8cab1c96bf600f3e}{baseline}}     = \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a0e040ac6bbefe372503e83cb37c2b585}{mBaseline}}(otherWords[3]);}
+\DoxyCodeLine{00165         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<8; i++) \{}
+\DoxyCodeLine{00166           \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[i]=\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a0d9992a10a5d3aaba2f057067db05724}{mQDCSums}}(otherWords[4+i]);}
+\DoxyCodeLine{00167         \}}
+\DoxyCodeLine{00168       \}}
+\DoxyCodeLine{00169     \}}
+\DoxyCodeLine{00170 }
+\DoxyCodeLine{00171     }
+\DoxyCodeLine{00172     \textcolor{comment}{//skip or proces the trace if recorded}}
+\DoxyCodeLine{00173     \textcolor{keyword}{auto} channel = reader-\/>definition.GetChannel(\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}}, \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}}, \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}});}
+\DoxyCodeLine{00174     \textcolor{comment}{//no trace, do nothing}}
+\DoxyCodeLine{00175     \textcolor{keywordflow}{if} ((\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa6060560c9da323d13705c4683efbda1}{eventLength}} -\/ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}) == 0) \{;\}}
+\DoxyCodeLine{00176     \textcolor{comment}{//skip trace if not needed}}
+\DoxyCodeLine{00177     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (outTrace==NULL \&\& !channel-\/>traces)\{}
+\DoxyCodeLine{00178       \textcolor{keywordflow}{if} (fseek(reader-\/>file, (\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa6060560c9da323d13705c4683efbda1}{eventLength}}-\/\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}})*4, SEEK\_CUR)) \{}
+\DoxyCodeLine{00179         \textcolor{keywordflow}{return} -\/1;}
 \DoxyCodeLine{00180       \}}
-\DoxyCodeLine{00181       \textcolor{keywordflow}{if} (channel-\/>traces) \{}
-\DoxyCodeLine{00182         \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm}{PIXIE::Trace::Algorithm}} *tracealg = channel-\/>alg;}
-\DoxyCodeLine{00183         \textcolor{keywordflow}{if} (!tracealg || !tracealg-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a0cd4fcab67f90370e5d485da02ee9934}{is\_loaded}}) \{}
-\DoxyCodeLine{00184           \textcolor{comment}{//no trace algorigthm, should never happen}}
-\DoxyCodeLine{00185         \}}
-\DoxyCodeLine{00186         \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{00187           \textcolor{keyword}{auto} tmeas = tracealg-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a74e1daba588fc6a054bc45d8f85b2aad}{Process}}(\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a3e2e36f00d13cc9afa7d8aaf2ffde095}{trace}}, \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05}{traceLength}});}
-\DoxyCodeLine{00188           \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a7de1b2bfc4cb4f62d779fdb90bd241c5}{good\_trace}} = tracealg-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a3a179dfa3c4c83f0750b0a205b55bb35}{good\_trace}};}
-\DoxyCodeLine{00189           \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<tmeas.size(); ++i) \{}
-\DoxyCodeLine{00190             \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_abfb4ec14dc55376666331ec2ad293276}{trace\_meas}}[\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa32b41845cd96b951763bd94667edb5b}{nTraceMeas}}] = tmeas[i];}
-\DoxyCodeLine{00191             ++\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa32b41845cd96b951763bd94667edb5b}{nTraceMeas}};}
-\DoxyCodeLine{00192           \}}
-\DoxyCodeLine{00193         \}}
-\DoxyCodeLine{00194       \}}
-\DoxyCodeLine{00195     \}}
-\DoxyCodeLine{00196 }
-\DoxyCodeLine{00197     \textcolor{keywordflow}{return} 0;     }
-\DoxyCodeLine{00198   \}  }
+\DoxyCodeLine{00181     \}}
+\DoxyCodeLine{00182     \textcolor{comment}{//Read trace}}
+\DoxyCodeLine{00183     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00184       \textcolor{comment}{//uint16\_t trace[traceLength]; // = \{0\};}}
+\DoxyCodeLine{00185       \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05}{traceLength}} > \mbox{\hyperlink{definitions_8hh_af0c0584410364a83dba3db590aa157e7}{MAX\_TRACE\_LENGTH}}) \{ std::cout << \textcolor{stringliteral}{"{}WARNING: traceLength > MAX\_TRACE\_LENGTH"{}} << std::endl; \}}
+\DoxyCodeLine{00186       \textcolor{keywordflow}{if} (fread(\&(this-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a3e2e36f00d13cc9afa7d8aaf2ffde095}{trace}}[0]), (\textcolor{keywordtype}{size\_t}) 2, (\textcolor{keywordtype}{size\_t}) \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05}{traceLength}}, reader-\/>file) != (\textcolor{keywordtype}{size\_t}) \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05}{traceLength}}) \{}
+\DoxyCodeLine{00187         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{00188       \}}
+\DoxyCodeLine{00189       \textcolor{keywordflow}{if} (outTrace!=NULL)\{}
+\DoxyCodeLine{00190         memcpy(outTrace, \&\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a3e2e36f00d13cc9afa7d8aaf2ffde095}{trace}},\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05}{traceLength}}*\textcolor{keyword}{sizeof}(uint16\_t));}
+\DoxyCodeLine{00191       \}}
+\DoxyCodeLine{00192       \textcolor{keywordflow}{if} (channel-\/>traces) \{}
+\DoxyCodeLine{00193         \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm}{PIXIE::Trace::Algorithm}} *tracealg = channel-\/>alg;}
+\DoxyCodeLine{00194         \textcolor{keywordflow}{if} (!tracealg || !tracealg-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a0cd4fcab67f90370e5d485da02ee9934}{is\_loaded}}) \{}
+\DoxyCodeLine{00195           \textcolor{comment}{//no trace algorigthm, should never happen}}
+\DoxyCodeLine{00196         \}}
+\DoxyCodeLine{00197         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00198           \textcolor{keyword}{auto} tmeas = tracealg-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a74e1daba588fc6a054bc45d8f85b2aad}{Process}}(\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a3e2e36f00d13cc9afa7d8aaf2ffde095}{trace}}, \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05}{traceLength}});}
+\DoxyCodeLine{00199           \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a7de1b2bfc4cb4f62d779fdb90bd241c5}{good\_trace}} = tracealg-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a3a179dfa3c4c83f0750b0a205b55bb35}{good\_trace}};}
+\DoxyCodeLine{00200           \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<tmeas.size(); ++i) \{}
+\DoxyCodeLine{00201             \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_abfb4ec14dc55376666331ec2ad293276}{trace\_meas}}[\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa32b41845cd96b951763bd94667edb5b}{nTraceMeas}}] = tmeas[i];}
+\DoxyCodeLine{00202             ++\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa32b41845cd96b951763bd94667edb5b}{nTraceMeas}};}
+\DoxyCodeLine{00203           \}}
+\DoxyCodeLine{00204         \}}
+\DoxyCodeLine{00205       \}}
+\DoxyCodeLine{00206     \}}
+\DoxyCodeLine{00207 }
+\DoxyCodeLine{00208     \textcolor{keywordflow}{return} 0;     }
+\DoxyCodeLine{00209   \}  }
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_p_i_x_i_e_1_1_measurement_ae44119a232562550787b78263c87e819}\label{class_p_i_x_i_e_1_1_measurement_ae44119a232562550787b78263c87e819}} 
@@ -392,46 +392,57 @@ Definition at line \mbox{\hyperlink{measurement_8cc_source_l00085}{85}} of file 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00085                                              \{}
 \DoxyCodeLine{00086     uint32\_t firstWords[4];}
-\DoxyCodeLine{00087     \textcolor{keywordflow}{if} (fread(\&firstWords, (\textcolor{keywordtype}{size\_t}) \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int})*4, (\textcolor{keywordtype}{size\_t}) 1, reader-\/>file) != 1) \{}
-\DoxyCodeLine{00088       \textcolor{keywordflow}{return} -\/1;    }
-\DoxyCodeLine{00089     \}}
-\DoxyCodeLine{00090     }
-\DoxyCodeLine{00091     \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}} = \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a9f15a16ee3331625cdc14173fb80c923}{mChannelNumber}}(firstWords[0]);}
-\DoxyCodeLine{00092     \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}}        = \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a4c2f96d027dde1e34557a1db0d4ee63b}{mSlotID}}(firstWords[0]);}
-\DoxyCodeLine{00093     \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}}       = \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac6f66de145022af06f425a21ebb16264}{mCrateID}}(firstWords[0]);}
-\DoxyCodeLine{00094     \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}  = \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a831c73bd6161b366ff0b71ea5562b2e9}{mHeaderLength}}(firstWords[0]);}
-\DoxyCodeLine{00095     \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa6060560c9da323d13705c4683efbda1}{eventLength}}   = \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_acebdcc1444a74f66d13ffcf245d4f3c9}{mEventLength}}(firstWords[0]);}
-\DoxyCodeLine{00096     \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_abb003509076a78af508cfad581e40ad3}{finishCode}}    = \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_af1d03b0452c7557f88c0d1f080baac97}{mFinishCode}}(firstWords[0]);}
-\DoxyCodeLine{00097 }
-\DoxyCodeLine{00098     \textcolor{keywordtype}{int} oldChan = \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}};}
-\DoxyCodeLine{00099          }
-\DoxyCodeLine{00100     uint32\_t timestampLow  = \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5be5eb5f0cd3a2fe95bc8b566d055af0}{mTimeLow}}(firstWords[1]);}
-\DoxyCodeLine{00101     uint32\_t timestampHigh = \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a11044cb22e1c5d875d5435b228927494}{mTimeHigh}}(firstWords[2]);}
-\DoxyCodeLine{00102    }
-\DoxyCodeLine{00103     uint64\_t timestamp=\textcolor{keyword}{static\_cast<}uint64\_t\textcolor{keyword}{>}(timestampHigh);}
-\DoxyCodeLine{00104     timestamp=timestamp<<32;}
-\DoxyCodeLine{00105     timestamp=timestamp+timestampLow;}
-\DoxyCodeLine{00106 }
-\DoxyCodeLine{00107     \textcolor{keywordflow}{if} (reader-\/>definition.GetChannel(\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}}, \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}}, \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}})) \{}
-\DoxyCodeLine{00108       EventTime time = \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_abf6f92307ac08ac10ddbe40474ff2da0}{ProcessTime}}(timestamp, firstWords[2], reader-\/>definition.GetSlot(\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}}, \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}})-\/>freq);}
-\DoxyCodeLine{00109       \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}{eventTime}} = time.time;}
-\DoxyCodeLine{00110       \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a38a45a088073a1d679aa0687e39c9bcd}{CFDForce}} = time.CFDForce;            }
-\DoxyCodeLine{00111     \}}
-\DoxyCodeLine{00112     \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{00113       std::cout << \textcolor{stringliteral}{"{}\(\backslash\)nWarning! CrateID.SlotID.ChannelNumber "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}} << \textcolor{stringliteral}{"{}."{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}} << \textcolor{stringliteral}{"{}."{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}} << \textcolor{stringliteral}{"{} not found"{}} << std::endl;}
-\DoxyCodeLine{00114       \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}{eventTime}} = timestamp;}
-\DoxyCodeLine{00115       \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5691dc1289599d5044ebca0eb99c54a6}{eventEnergy}}=\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a6d94636a26be17a04c532d47adf635a3}{mEventEnergy}}(firstWords[3]);}
-\DoxyCodeLine{00116       \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05}{traceLength}}=\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_abc41327fb82ce874d11ba58362075052}{mTraceLength}}(firstWords[3]);}
-\DoxyCodeLine{00117       \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a0134ee34ee4211cc16ffc55a018d08db}{outOfRange}}=\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5353a7a4ca1067137136cb23348f5eb5}{mTraceOutRange}}(firstWords[3]);}
-\DoxyCodeLine{00118       \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a74305d42b7585f74b394d7cc9d174764}{print}}();}
-\DoxyCodeLine{00119     \}}
-\DoxyCodeLine{00120     }
-\DoxyCodeLine{00121     \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5691dc1289599d5044ebca0eb99c54a6}{eventEnergy}}=\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a6d94636a26be17a04c532d47adf635a3}{mEventEnergy}}(firstWords[3]);}
-\DoxyCodeLine{00122     \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05}{traceLength}}=\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_abc41327fb82ce874d11ba58362075052}{mTraceLength}}(firstWords[3]);}
-\DoxyCodeLine{00123     \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a0134ee34ee4211cc16ffc55a018d08db}{outOfRange}}=\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5353a7a4ca1067137136cb23348f5eb5}{mTraceOutRange}}(firstWords[3]);}
-\DoxyCodeLine{00124 }
-\DoxyCodeLine{00125     \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{00126   \}  }
+\DoxyCodeLine{00087     \textcolor{keywordflow}{if} (!reader-\/>NSCLDAQ) \{}
+\DoxyCodeLine{00088       \textcolor{keywordflow}{if} (fread(\&firstWords, (\textcolor{keywordtype}{size\_t}) \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int})*4, (\textcolor{keywordtype}{size\_t}) 1, reader-\/>file) != 1) \{}
+\DoxyCodeLine{00089         \textcolor{keywordflow}{return} -\/1;    }
+\DoxyCodeLine{00090       \}}
+\DoxyCodeLine{00091     \}}
+\DoxyCodeLine{00092     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00093       \textcolor{comment}{//some logic here to navigate NSCL data structures and find the next PIXIE fragment?}}
+\DoxyCodeLine{00094       \textcolor{keywordflow}{if} (reader-\/>nsclreader-\/>findNextFragment(reader-\/>file) < 0 ) \{}
+\DoxyCodeLine{00095         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{00096       \}}
+\DoxyCodeLine{00097       \textcolor{keywordflow}{if} (fread(\&firstWords, (\textcolor{keywordtype}{size\_t}) \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int})*4, (\textcolor{keywordtype}{size\_t}) 1, reader-\/>file) != 1) \{}
+\DoxyCodeLine{00098         \textcolor{keywordflow}{return} -\/1;    }
+\DoxyCodeLine{00099       \}}
+\DoxyCodeLine{00100     \}}
+\DoxyCodeLine{00101     }
+\DoxyCodeLine{00102     \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}} = \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a9f15a16ee3331625cdc14173fb80c923}{mChannelNumber}}(firstWords[0]);}
+\DoxyCodeLine{00103     \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}}        = \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a4c2f96d027dde1e34557a1db0d4ee63b}{mSlotID}}(firstWords[0]);}
+\DoxyCodeLine{00104     \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}}       = \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac6f66de145022af06f425a21ebb16264}{mCrateID}}(firstWords[0]);}
+\DoxyCodeLine{00105     \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}  = \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a831c73bd6161b366ff0b71ea5562b2e9}{mHeaderLength}}(firstWords[0]);}
+\DoxyCodeLine{00106     \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa6060560c9da323d13705c4683efbda1}{eventLength}}   = \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_acebdcc1444a74f66d13ffcf245d4f3c9}{mEventLength}}(firstWords[0]);}
+\DoxyCodeLine{00107     \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_abb003509076a78af508cfad581e40ad3}{finishCode}}    = \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_af1d03b0452c7557f88c0d1f080baac97}{mFinishCode}}(firstWords[0]);}
+\DoxyCodeLine{00108 }
+\DoxyCodeLine{00109     \textcolor{keywordtype}{int} oldChan = \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}};}
+\DoxyCodeLine{00110          }
+\DoxyCodeLine{00111     uint32\_t timestampLow  = \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5be5eb5f0cd3a2fe95bc8b566d055af0}{mTimeLow}}(firstWords[1]);}
+\DoxyCodeLine{00112     uint32\_t timestampHigh = \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a11044cb22e1c5d875d5435b228927494}{mTimeHigh}}(firstWords[2]);}
+\DoxyCodeLine{00113    }
+\DoxyCodeLine{00114     uint64\_t timestamp=\textcolor{keyword}{static\_cast<}uint64\_t\textcolor{keyword}{>}(timestampHigh);}
+\DoxyCodeLine{00115     timestamp=timestamp<<32;}
+\DoxyCodeLine{00116     timestamp=timestamp+timestampLow;}
+\DoxyCodeLine{00117 }
+\DoxyCodeLine{00118     \textcolor{keywordflow}{if} (reader-\/>definition.GetChannel(\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}}, \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}}, \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}})) \{}
+\DoxyCodeLine{00119       EventTime time = \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_abf6f92307ac08ac10ddbe40474ff2da0}{ProcessTime}}(timestamp, firstWords[2], reader-\/>definition.GetSlot(\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}}, \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}})-\/>freq);}
+\DoxyCodeLine{00120       \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}{eventTime}} = time.time;}
+\DoxyCodeLine{00121       \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a38a45a088073a1d679aa0687e39c9bcd}{CFDForce}} = time.CFDForce;            }
+\DoxyCodeLine{00122     \}}
+\DoxyCodeLine{00123     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00124       std::cout << \textcolor{stringliteral}{"{}\(\backslash\)nWarning! CrateID.SlotID.ChannelNumber "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}} << \textcolor{stringliteral}{"{}."{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}} << \textcolor{stringliteral}{"{}."{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}} << \textcolor{stringliteral}{"{} not found"{}} << std::endl;}
+\DoxyCodeLine{00125       \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}{eventTime}} = timestamp;}
+\DoxyCodeLine{00126       \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5691dc1289599d5044ebca0eb99c54a6}{eventEnergy}}=\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a6d94636a26be17a04c532d47adf635a3}{mEventEnergy}}(firstWords[3]);}
+\DoxyCodeLine{00127       \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05}{traceLength}}=\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_abc41327fb82ce874d11ba58362075052}{mTraceLength}}(firstWords[3]);}
+\DoxyCodeLine{00128       \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a0134ee34ee4211cc16ffc55a018d08db}{outOfRange}}=\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5353a7a4ca1067137136cb23348f5eb5}{mTraceOutRange}}(firstWords[3]);}
+\DoxyCodeLine{00129       \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a74305d42b7585f74b394d7cc9d174764}{print}}();}
+\DoxyCodeLine{00130     \}}
+\DoxyCodeLine{00131     }
+\DoxyCodeLine{00132     \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5691dc1289599d5044ebca0eb99c54a6}{eventEnergy}}=\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a6d94636a26be17a04c532d47adf635a3}{mEventEnergy}}(firstWords[3]);}
+\DoxyCodeLine{00133     \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05}{traceLength}}=\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_abc41327fb82ce874d11ba58362075052}{mTraceLength}}(firstWords[3]);}
+\DoxyCodeLine{00134     \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a0134ee34ee4211cc16ffc55a018d08db}{outOfRange}}=\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5353a7a4ca1067137136cb23348f5eb5}{mTraceOutRange}}(firstWords[3]);}
+\DoxyCodeLine{00135 }
+\DoxyCodeLine{00136     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00137   \}  }
 
 \end{DoxyCode}
 

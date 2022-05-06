@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7ereader_0',['~Reader',['../class_p_i_x_i_e_1_1_reader.html#a05785721ce83b53a10daba9b3b82cda9',1,'PIXIE::Reader']]]
+  ['trapfilter_0',['TrapFilter',['../class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#a795b286a8b183874822bfa1bc8292a18',1,'PIXIE::Trace::Trapezoid']]]
 ];

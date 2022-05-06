@@ -112,6 +112,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a512016b34f00641448198b3168868de0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1bee3fadbcc007046d27f269f597887"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_x_i_e_1_1_reader.html#aa1bee3fadbcc007046d27f269f597887">start</a> ()</td></tr>
 <tr class="separator:aa1bee3fadbcc007046d27f269f597887"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98a0266af9f71037903416ae75d4066d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_x_i_e_1_1_reader.html#a98a0266af9f71037903416ae75d4066d">nscldaq</a> ()</td></tr>
+<tr class="separator:a98a0266af9f71037903416ae75d4066d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -172,6 +174,10 @@ Public Attributes</h2></td></tr>
 <tr class="separator:afd0eac4d82f9cd89651280c4bc637e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed38c96580fe22467fd7ac3d49275239"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_x_i_e_1_1_reader.html#aed38c96580fe22467fd7ac3d49275239">eventCtr</a></td></tr>
 <tr class="separator:aed38c96580fe22467fd7ac3d49275239"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00fb68aec2438b652adc6524be1be520"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_x_i_e_1_1_reader.html#a00fb68aec2438b652adc6524be1be520">NSCLDAQ</a></td></tr>
+<tr class="separator:a00fb68aec2438b652adc6524be1be520"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa503b0ca55f879e783fba0306734bc18"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_p_i_x_i_e_1_1_n_s_c_l_reader.html">NSCLReader</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_x_i_e_1_1_reader.html#aa503b0ca55f879e783fba0306734bc18">nsclreader</a></td></tr>
+<tr class="separator:aa503b0ca55f879e783fba0306734bc18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad84d4070b4658e152083ff76f9f1cba4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_x_i_e_1_1_reader.html#ad84d4070b4658e152083ff76f9f1cba4">av_evt_length</a> = 0.0</td></tr>
 <tr class="separator:ad84d4070b4658e152083ff76f9f1cba4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -182,7 +188,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00016">16</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00017">17</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a0bed6c777200e6d0b818c1ead0dea7e8" name="a0bed6c777200e6d0b818c1ead0dea7e8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0bed6c777200e6d0b818c1ead0dea7e8">&#9670;&nbsp;</a></span>Reader()</h2>
@@ -233,26 +239,29 @@ Static Public Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   49</span> </div>
 <div class="line"><span class="lineno">   50</span>    this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a1bca2a0a2ef65c46e65a7ff932a18c2d">warnings</a> = <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">   51</span>    this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a046891d103ef8746fc15a621676b81cd">RejectSCPU</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   52</span>  }</div>
-<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_a046891d103ef8746fc15a621676b81cd"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#a046891d103ef8746fc15a621676b81cd">PIXIE::Reader::RejectSCPU</a></div><div class="ttdeci">bool RejectSCPU</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00031">reader.hh:31</a></div></div>
-<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_a0ce86f5114467a18c6e22f7115f00fec"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#a0ce86f5114467a18c6e22f7115f00fec">PIXIE::Reader::subevents</a></div><div class="ttdeci">long long subevents</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00023">reader.hh:23</a></div></div>
-<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_a1bca2a0a2ef65c46e65a7ff932a18c2d"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#a1bca2a0a2ef65c46e65a7ff932a18c2d">PIXIE::Reader::warnings</a></div><div class="ttdeci">bool warnings</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00030">reader.hh:30</a></div></div>
-<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_a3cbf44c09c0127d4049eae7d04109084"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#a3cbf44c09c0127d4049eae7d04109084">PIXIE::Reader::fileSize</a></div><div class="ttdeci">long int fileSize</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00038">reader.hh:38</a></div></div>
-<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_a3e66bd0a75873843da872d57015733f7"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#a3e66bd0a75873843da872d57015733f7">PIXIE::Reader::max_offset</a></div><div class="ttdeci">off_t max_offset</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00043">reader.hh:43</a></div></div>
-<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_a4e64aae95c6689ee7770ff98de8900e1"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#a4e64aae95c6689ee7770ff98de8900e1">PIXIE::Reader::pileups</a></div><div class="ttdeci">long long pileups</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00021">reader.hh:21</a></div></div>
-<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_a6d2bf732ff199ed45f260516507bf808"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#a6d2bf732ff199ed45f260516507bf808">PIXIE::Reader::file</a></div><div class="ttdeci">FILE * file</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00033">reader.hh:33</a></div></div>
-<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_a75d5430b30747d8a8f4e2650d836b711"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#a75d5430b30747d8a8f4e2650d836b711">PIXIE::Reader::sameChanPU</a></div><div class="ttdeci">long long sameChanPU</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00025">reader.hh:25</a></div></div>
-<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_a838f7fc1f5b7db72f9eafa3c2ee55d49"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#a838f7fc1f5b7db72f9eafa3c2ee55d49">PIXIE::Reader::fileLength</a></div><div class="ttdeci">off_t fileLength</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00037">reader.hh:37</a></div></div>
-<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_a9e1ef7766d3ee935ff0b384d52d6a87c"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#a9e1ef7766d3ee935ff0b384d52d6a87c">PIXIE::Reader::end</a></div><div class="ttdeci">bool end</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00048">reader.hh:48</a></div></div>
-<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_ab55f638b22423b50b5bb35c1cb926c15"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#ab55f638b22423b50b5bb35c1cb926c15">PIXIE::Reader::mults</a></div><div class="ttdeci">long long mults[4]</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00027">reader.hh:27</a></div></div>
-<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_abd5a8a855c9fbbe15a7d551c5a7583c8"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#abd5a8a855c9fbbe15a7d551c5a7583c8">PIXIE::Reader::liveSort</a></div><div class="ttdeci">int liveSort</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00020">reader.hh:20</a></div></div>
-<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_ac0f5d35b39294a8597812b9e4c574ad5"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#ac0f5d35b39294a8597812b9e4c574ad5">PIXIE::Reader::nEvents</a></div><div class="ttdeci">long long nEvents</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00024">reader.hh:24</a></div></div>
-<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_ac743b3c98720b153ab06f1e17223f6ec"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#ac743b3c98720b153ab06f1e17223f6ec">PIXIE::Reader::outofrange</a></div><div class="ttdeci">long long outofrange</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00026">reader.hh:26</a></div></div>
-<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_ac7ddadef511f84bea18e6a287cdb38e0"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#ac7ddadef511f84bea18e6a287cdb38e0">PIXIE::Reader::start_offset</a></div><div class="ttdeci">off_t start_offset</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00044">reader.hh:44</a></div></div>
-<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_ae24f10cc7434b83d1d87892733debda8"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#ae24f10cc7434b83d1d87892733debda8">PIXIE::Reader::badcfd</a></div><div class="ttdeci">long long badcfd</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00022">reader.hh:22</a></div></div>
-<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_ae95c4e93a4bd8b7fec5cfc454fd7c94d"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#ae95c4e93a4bd8b7fec5cfc454fd7c94d">PIXIE::Reader::thread</a></div><div class="ttdeci">int thread</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00046">reader.hh:46</a></div></div>
-<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_aed38c96580fe22467fd7ac3d49275239"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#aed38c96580fe22467fd7ac3d49275239">PIXIE::Reader::eventCtr</a></div><div class="ttdeci">int eventCtr</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00054">reader.hh:54</a></div></div>
-<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_afd0eac4d82f9cd89651280c4bc637e33"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#afd0eac4d82f9cd89651280c4bc637e33">PIXIE::Reader::measCtr</a></div><div class="ttdeci">int measCtr</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00053">reader.hh:53</a></div></div>
+<div class="line"><span class="lineno">   52</span> </div>
+<div class="line"><span class="lineno">   53</span>    this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a00fb68aec2438b652adc6524be1be520">NSCLDAQ</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   54</span>  }</div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_a00fb68aec2438b652adc6524be1be520"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#a00fb68aec2438b652adc6524be1be520">PIXIE::Reader::NSCLDAQ</a></div><div class="ttdeci">bool NSCLDAQ</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00059">reader.hh:59</a></div></div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_a046891d103ef8746fc15a621676b81cd"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#a046891d103ef8746fc15a621676b81cd">PIXIE::Reader::RejectSCPU</a></div><div class="ttdeci">bool RejectSCPU</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00032">reader.hh:32</a></div></div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_a0ce86f5114467a18c6e22f7115f00fec"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#a0ce86f5114467a18c6e22f7115f00fec">PIXIE::Reader::subevents</a></div><div class="ttdeci">long long subevents</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00024">reader.hh:24</a></div></div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_a1bca2a0a2ef65c46e65a7ff932a18c2d"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#a1bca2a0a2ef65c46e65a7ff932a18c2d">PIXIE::Reader::warnings</a></div><div class="ttdeci">bool warnings</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00031">reader.hh:31</a></div></div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_a3cbf44c09c0127d4049eae7d04109084"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#a3cbf44c09c0127d4049eae7d04109084">PIXIE::Reader::fileSize</a></div><div class="ttdeci">long int fileSize</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00039">reader.hh:39</a></div></div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_a3e66bd0a75873843da872d57015733f7"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#a3e66bd0a75873843da872d57015733f7">PIXIE::Reader::max_offset</a></div><div class="ttdeci">off_t max_offset</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00044">reader.hh:44</a></div></div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_a4e64aae95c6689ee7770ff98de8900e1"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#a4e64aae95c6689ee7770ff98de8900e1">PIXIE::Reader::pileups</a></div><div class="ttdeci">long long pileups</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00022">reader.hh:22</a></div></div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_a6d2bf732ff199ed45f260516507bf808"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#a6d2bf732ff199ed45f260516507bf808">PIXIE::Reader::file</a></div><div class="ttdeci">FILE * file</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00034">reader.hh:34</a></div></div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_a75d5430b30747d8a8f4e2650d836b711"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#a75d5430b30747d8a8f4e2650d836b711">PIXIE::Reader::sameChanPU</a></div><div class="ttdeci">long long sameChanPU</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00026">reader.hh:26</a></div></div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_a838f7fc1f5b7db72f9eafa3c2ee55d49"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#a838f7fc1f5b7db72f9eafa3c2ee55d49">PIXIE::Reader::fileLength</a></div><div class="ttdeci">off_t fileLength</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00038">reader.hh:38</a></div></div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_a9e1ef7766d3ee935ff0b384d52d6a87c"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#a9e1ef7766d3ee935ff0b384d52d6a87c">PIXIE::Reader::end</a></div><div class="ttdeci">bool end</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00049">reader.hh:49</a></div></div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_ab55f638b22423b50b5bb35c1cb926c15"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#ab55f638b22423b50b5bb35c1cb926c15">PIXIE::Reader::mults</a></div><div class="ttdeci">long long mults[4]</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00028">reader.hh:28</a></div></div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_abd5a8a855c9fbbe15a7d551c5a7583c8"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#abd5a8a855c9fbbe15a7d551c5a7583c8">PIXIE::Reader::liveSort</a></div><div class="ttdeci">int liveSort</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00021">reader.hh:21</a></div></div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_ac0f5d35b39294a8597812b9e4c574ad5"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#ac0f5d35b39294a8597812b9e4c574ad5">PIXIE::Reader::nEvents</a></div><div class="ttdeci">long long nEvents</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00025">reader.hh:25</a></div></div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_ac743b3c98720b153ab06f1e17223f6ec"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#ac743b3c98720b153ab06f1e17223f6ec">PIXIE::Reader::outofrange</a></div><div class="ttdeci">long long outofrange</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00027">reader.hh:27</a></div></div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_ac7ddadef511f84bea18e6a287cdb38e0"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#ac7ddadef511f84bea18e6a287cdb38e0">PIXIE::Reader::start_offset</a></div><div class="ttdeci">off_t start_offset</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00045">reader.hh:45</a></div></div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_ae24f10cc7434b83d1d87892733debda8"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#ae24f10cc7434b83d1d87892733debda8">PIXIE::Reader::badcfd</a></div><div class="ttdeci">long long badcfd</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00023">reader.hh:23</a></div></div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_ae95c4e93a4bd8b7fec5cfc454fd7c94d"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#ae95c4e93a4bd8b7fec5cfc454fd7c94d">PIXIE::Reader::thread</a></div><div class="ttdeci">int thread</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00047">reader.hh:47</a></div></div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_aed38c96580fe22467fd7ac3d49275239"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#aed38c96580fe22467fd7ac3d49275239">PIXIE::Reader::eventCtr</a></div><div class="ttdeci">int eventCtr</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00055">reader.hh:55</a></div></div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_afd0eac4d82f9cd89651280c4bc637e33"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#afd0eac4d82f9cd89651280c4bc637e33">PIXIE::Reader::measCtr</a></div><div class="ttdeci">int measCtr</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00054">reader.hh:54</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -271,8 +280,8 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8cc_source.html#l00054">54</a> of file <a class="el" href="reader_8cc_source.html">reader.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   54</span>{}</div>
+<p class="definition">Definition at line <a class="el" href="reader_8cc_source.html#l00056">56</a> of file <a class="el" href="reader_8cc_source.html">reader.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>{}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -292,12 +301,12 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8cc_source.html#l00077">77</a> of file <a class="el" href="reader_8cc_source.html">reader.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   77</span>                         {</div>
-<div class="line"><span class="lineno">   78</span>    <span class="keywordflow">return</span>(this-&gt;<a class="code hl_function" href="class_p_i_x_i_e_1_1_reader.html#a58b8de6c0c1eddb1befb9898b6e335e6">offset</a>() &gt;= this-&gt;<a class="code hl_function" href="class_p_i_x_i_e_1_1_reader.html#a796047efa6b51174af849a2f92d69518">update_filesize</a>());</div>
-<div class="line"><span class="lineno">   79</span>  }    </div>
-<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_a58b8de6c0c1eddb1befb9898b6e335e6"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#a58b8de6c0c1eddb1befb9898b6e335e6">PIXIE::Reader::offset</a></div><div class="ttdeci">off_t offset() const</div><div class="ttdef"><b>Definition:</b> <a href="reader_8cc_source.html#l00056">reader.cc:56</a></div></div>
-<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_a796047efa6b51174af849a2f92d69518"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#a796047efa6b51174af849a2f92d69518">PIXIE::Reader::update_filesize</a></div><div class="ttdeci">off_t update_filesize()</div><div class="ttdef"><b>Definition:</b> <a href="reader_8cc_source.html#l00066">reader.cc:66</a></div></div>
+<p class="definition">Definition at line <a class="el" href="reader_8cc_source.html#l00079">79</a> of file <a class="el" href="reader_8cc_source.html">reader.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   79</span>                         {</div>
+<div class="line"><span class="lineno">   80</span>    <span class="keywordflow">return</span>(this-&gt;<a class="code hl_function" href="class_p_i_x_i_e_1_1_reader.html#a58b8de6c0c1eddb1befb9898b6e335e6">offset</a>() &gt;= this-&gt;<a class="code hl_function" href="class_p_i_x_i_e_1_1_reader.html#a796047efa6b51174af849a2f92d69518">update_filesize</a>());</div>
+<div class="line"><span class="lineno">   81</span>  }    </div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_a58b8de6c0c1eddb1befb9898b6e335e6"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#a58b8de6c0c1eddb1befb9898b6e335e6">PIXIE::Reader::offset</a></div><div class="ttdeci">off_t offset() const</div><div class="ttdef"><b>Definition:</b> <a href="reader_8cc_source.html#l00058">reader.cc:58</a></div></div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_a796047efa6b51174af849a2f92d69518"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#a796047efa6b51174af849a2f92d69518">PIXIE::Reader::update_filesize</a></div><div class="ttdeci">off_t update_filesize()</div><div class="ttdef"><b>Definition:</b> <a href="reader_8cc_source.html#l00068">reader.cc:68</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -324,9 +333,9 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8cc_source.html#l00246">246</a> of file <a class="el" href="reader_8cc_source.html">reader.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  246</span>{ <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a1b1a55edec38b1f82fcef3d45704ac18">dither</a> += 0.1; <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a1b1a55edec38b1f82fcef3d45704ac18">dither</a> &gt;= 1.0) { <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a1b1a55edec38b1f82fcef3d45704ac18">dither</a> = 0.0; } <span class="keywordflow">return</span> <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a1b1a55edec38b1f82fcef3d45704ac18">dither</a>; }</div>
-<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_a1b1a55edec38b1f82fcef3d45704ac18"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#a1b1a55edec38b1f82fcef3d45704ac18">PIXIE::Reader::dither</a></div><div class="ttdeci">static float dither</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00056">reader.hh:56</a></div></div>
+<p class="definition">Definition at line <a class="el" href="reader_8cc_source.html#l00248">248</a> of file <a class="el" href="reader_8cc_source.html">reader.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  248</span>{ <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a1b1a55edec38b1f82fcef3d45704ac18">dither</a> += 0.1; <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a1b1a55edec38b1f82fcef3d45704ac18">dither</a> &gt;= 1.0) { <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a1b1a55edec38b1f82fcef3d45704ac18">dither</a> = 0.0; } <span class="keywordflow">return</span> <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a1b1a55edec38b1f82fcef3d45704ac18">dither</a>; }</div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_a1b1a55edec38b1f82fcef3d45704ac18"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#a1b1a55edec38b1f82fcef3d45704ac18">PIXIE::Reader::dither</a></div><div class="ttdeci">static float dither</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00057">reader.hh:57</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -386,81 +395,81 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8cc_source.html#l00175">175</a> of file <a class="el" href="reader_8cc_source.html">reader.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  175</span>                                                                                                                          {</div>
-<div class="line"><span class="lineno">  176</span>    fpos_t pos;</div>
-<div class="line"><span class="lineno">  177</span>    fgetpos(this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a6d2bf732ff199ed45f260516507bf808">file</a>, &amp;pos);          </div>
-<div class="line"><span class="lineno">  178</span> </div>
-<div class="line"><span class="lineno">  179</span>    <span class="keywordtype">int</span> retval=0;</div>
+<p class="definition">Definition at line <a class="el" href="reader_8cc_source.html#l00177">177</a> of file <a class="el" href="reader_8cc_source.html">reader.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  177</span>                                                                                                                          {</div>
+<div class="line"><span class="lineno">  178</span>    fpos_t pos;</div>
+<div class="line"><span class="lineno">  179</span>    fgetpos(this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a6d2bf732ff199ed45f260516507bf808">file</a>, &amp;pos);          </div>
 <div class="line"><span class="lineno">  180</span> </div>
-<div class="line"><span class="lineno">  181</span>    <span class="comment">//Determine the length of traces for the given channel/if there are traces for the given channel</span></div>
-<div class="line"><span class="lineno">  182</span>    <span class="keywordtype">int</span> traceLen = 0;</div>
-<div class="line"><span class="lineno">  183</span>    <span class="keywordflow">while</span> (traceLen == 0){</div>
-<div class="line"><span class="lineno">  184</span>      <a class="code hl_class" href="class_p_i_x_i_e_1_1_measurement.html">PIXIE::Measurement</a> meas;</div>
-<div class="line"><span class="lineno">  185</span>      <span class="keywordtype">int</span> retval = meas.<a class="code hl_function" href="class_p_i_x_i_e_1_1_measurement.html#ae44119a232562550787b78263c87e819">read_header</a>(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  186</span>      retval = meas.<a class="code hl_function" href="class_p_i_x_i_e_1_1_measurement.html#ab52c696179c4bb8c6447fe375f696c90">read_full</a>(<span class="keyword">this</span>, NULL);</div>
-<div class="line"><span class="lineno">  187</span>      <span class="keywordflow">if</span> (retval&lt;0){<span class="keywordflow">break</span>;}</div>
-<div class="line"><span class="lineno">  188</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!meas.<a class="code hl_variable" href="class_p_i_x_i_e_1_1_measurement.html#a7de1b2bfc4cb4f62d779fdb90bd241c5">good_trace</a> || crate!=meas.<a class="code hl_variable" href="class_p_i_x_i_e_1_1_measurement.html#ac1630da7899d358a7f6c06bbce3b6417">crateID</a> || slot!=meas.<a class="code hl_variable" href="class_p_i_x_i_e_1_1_measurement.html#a5b5f3a4dea3cf357aaa82298af1ff1da">slotID</a> || chan!=meas.<a class="code hl_variable" href="class_p_i_x_i_e_1_1_measurement.html#a25bffef52002e2135c60b185085c62b0">channelNumber</a>){;}</div>
-<div class="line"><span class="lineno">  189</span>      <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  190</span>        traceLen = meas.<a class="code hl_variable" href="class_p_i_x_i_e_1_1_measurement.html#adb93890ef91a35ac88c9e23f31af4b05">traceLength</a>;        </div>
-<div class="line"><span class="lineno">  191</span>      }</div>
-<div class="line"><span class="lineno">  192</span>    }</div>
-<div class="line"><span class="lineno">  193</span>    <span class="keywordflow">if</span>(traceLen == 0){printf(<span class="stringliteral">&quot;No traces for given channel\n&quot;</span>);exit(1);}</div>
-<div class="line"><span class="lineno">  194</span> </div>
-<div class="line"><span class="lineno">  195</span>    fsetpos(this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a6d2bf732ff199ed45f260516507bf808">file</a>, &amp;pos);  <span class="comment">//we were never even here</span></div>
-<div class="line"><span class="lineno">  196</span>    <span class="comment">//Draw traces</span></div>
-<div class="line"><span class="lineno">  197</span>    <span class="keywordtype">double</span> superTrace[traceLen];<span class="comment">//={0};</span></div>
-<div class="line"><span class="lineno">  198</span> </div>
-<div class="line"><span class="lineno">  199</span>    <span class="keywordtype">double</span> x[traceLen];<span class="comment">//={0};    </span></div>
-<div class="line"><span class="lineno">  200</span>    <span class="keywordtype">int</span> nTraces=0;</div>
-<div class="line"><span class="lineno">  201</span>    printf(<span class="stringliteral">&quot;Dumping %d trace(s) from slot: %d chan: %d\n&quot;</span>,maxTraces, slot, chan);</div>
-<div class="line"><span class="lineno">  202</span>    <span class="keywordflow">while</span> (nTraces&lt;maxTraces){</div>
-<div class="line"><span class="lineno">  203</span>      uint16_t trace[traceLen];<span class="comment">//={0};</span></div>
-<div class="line"><span class="lineno">  204</span>      <a class="code hl_class" href="class_p_i_x_i_e_1_1_measurement.html">PIXIE::Measurement</a> meas;</div>
-<div class="line"><span class="lineno">  205</span>      <span class="keywordtype">int</span> retval = meas.<a class="code hl_function" href="class_p_i_x_i_e_1_1_measurement.html#ae44119a232562550787b78263c87e819">read_header</a>(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  206</span>      retval = meas.<a class="code hl_function" href="class_p_i_x_i_e_1_1_measurement.html#ab52c696179c4bb8c6447fe375f696c90">read_full</a>(<span class="keyword">this</span>, trace);</div>
-<div class="line"><span class="lineno">  207</span>      <span class="keywordflow">if</span> (retval&lt;0){<span class="keywordflow">break</span>;}</div>
-<div class="line"><span class="lineno">  208</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!meas.<a class="code hl_variable" href="class_p_i_x_i_e_1_1_measurement.html#a7de1b2bfc4cb4f62d779fdb90bd241c5">good_trace</a> || crate!=meas.<a class="code hl_variable" href="class_p_i_x_i_e_1_1_measurement.html#ac1630da7899d358a7f6c06bbce3b6417">crateID</a> || slot!=meas.<a class="code hl_variable" href="class_p_i_x_i_e_1_1_measurement.html#a5b5f3a4dea3cf357aaa82298af1ff1da">slotID</a> || chan!=meas.<a class="code hl_variable" href="class_p_i_x_i_e_1_1_measurement.html#a25bffef52002e2135c60b185085c62b0">channelNumber</a>){;}</div>
-<div class="line"><span class="lineno">  209</span>      <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  210</span>        traceLen = meas.<a class="code hl_variable" href="class_p_i_x_i_e_1_1_measurement.html#adb93890ef91a35ac88c9e23f31af4b05">traceLength</a>;</div>
-<div class="line"><span class="lineno">  211</span>        this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#abb0fc6333195ac9dd12f7fea78834b0f">definition</a>.<a class="code hl_function" href="class_p_i_x_i_e_1_1_experiment___definition.html#a4dafec217c0b9f571c8cc9e944e3f050">GetChannel</a>(crate, slot, chan)-&gt;<a class="code hl_variable" href="struct_p_i_x_i_e_1_1_experiment___definition_1_1_channel.html#ab4bc7928648f3bd401ff1327e6b86f9e">alg</a>-&gt;<a class="code hl_function" href="class_p_i_x_i_e_1_1_trace_1_1_algorithm.html#a03f21dc897a2dcd2a2391964756c9737">dumpTrace</a>(&amp;trace[0], traceLen, nTraces, outPath, append, traceName);        </div>
-<div class="line"><span class="lineno">  212</span>        nTraces+=1;</div>
-<div class="line"><span class="lineno">  213</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;traceLen;i++){</div>
-<div class="line"><span class="lineno">  214</span>          superTrace[i] = (double) ((superTrace[i]*(nTraces-1) +  trace[i])/nTraces);</div>
-<div class="line"><span class="lineno">  215</span>        }</div>
-<div class="line"><span class="lineno">  216</span>      }</div>
-<div class="line"><span class="lineno">  217</span>    }</div>
-<div class="line"><span class="lineno">  218</span>    uint16_t tempTrace[traceLen];<span class="comment">//={0};</span></div>
-<div class="line"><span class="lineno">  219</span> </div>
-<div class="line"><span class="lineno">  220</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;traceLen;i++){</div>
-<div class="line"><span class="lineno">  221</span>      tempTrace[i] = (uint16_t) superTrace[i];</div>
-<div class="line"><span class="lineno">  222</span>    }</div>
-<div class="line"><span class="lineno">  223</span>    <span class="keywordflow">if</span> (nTraces==0){</div>
-<div class="line"><span class="lineno">  224</span>      printf(<span class="stringliteral">&quot;%s!!!Warning!!!  No traces saved%s\n&quot;</span>,<a class="code hl_define" href="colors_8hh.html#a34995b955465f6bbb37c359173d50477">ANSI_COLOR_RED</a>,<a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a>);</div>
-<div class="line"><span class="lineno">  225</span>      retval = -1;</div>
-<div class="line"><span class="lineno">  226</span>    }</div>
-<div class="line"><span class="lineno">  227</span>    <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  228</span>      <span class="keywordflow">if</span> (nTraces&lt;maxTraces){</div>
-<div class="line"><span class="lineno">  229</span>        printf(<span class="stringliteral">&quot;%s!!!Warning!!!  Only %d traces saved%s\n&quot;</span>,<a class="code hl_define" href="colors_8hh.html#a34995b955465f6bbb37c359173d50477">ANSI_COLOR_RED</a>,nTraces,<a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a>);</div>
-<div class="line"><span class="lineno">  230</span>      }</div>
-<div class="line"><span class="lineno">  231</span>      retval=1;</div>
-<div class="line"><span class="lineno">  232</span>      this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#abb0fc6333195ac9dd12f7fea78834b0f">definition</a>.<a class="code hl_function" href="class_p_i_x_i_e_1_1_experiment___definition.html#a4dafec217c0b9f571c8cc9e944e3f050">GetChannel</a>(crate, slot, chan)-&gt;<a class="code hl_variable" href="struct_p_i_x_i_e_1_1_experiment___definition_1_1_channel.html#ab4bc7928648f3bd401ff1327e6b86f9e">alg</a>-&gt;<a class="code hl_function" href="class_p_i_x_i_e_1_1_trace_1_1_algorithm.html#a03f21dc897a2dcd2a2391964756c9737">dumpTrace</a>(&amp;tempTrace[0], traceLen, nTraces, outPath, append, traceName+<span class="stringliteral">&quot;_SuperTrace&quot;</span>);</div>
-<div class="line"><span class="lineno">  233</span>    }</div>
-<div class="line"><span class="lineno">  234</span> </div>
-<div class="line"><span class="lineno">  235</span>    fsetpos(this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a6d2bf732ff199ed45f260516507bf808">file</a>, &amp;pos);  <span class="comment">//we were never even here</span></div>
-<div class="line"><span class="lineno">  236</span>    <span class="keywordflow">return</span> 1;</div>
-<div class="line"><span class="lineno">  237</span>    </div>
-<div class="line"><span class="lineno">  238</span>  }</div>
+<div class="line"><span class="lineno">  181</span>    <span class="keywordtype">int</span> retval=0;</div>
+<div class="line"><span class="lineno">  182</span> </div>
+<div class="line"><span class="lineno">  183</span>    <span class="comment">//Determine the length of traces for the given channel/if there are traces for the given channel</span></div>
+<div class="line"><span class="lineno">  184</span>    <span class="keywordtype">int</span> traceLen = 0;</div>
+<div class="line"><span class="lineno">  185</span>    <span class="keywordflow">while</span> (traceLen == 0){</div>
+<div class="line"><span class="lineno">  186</span>      <a class="code hl_class" href="class_p_i_x_i_e_1_1_measurement.html">PIXIE::Measurement</a> meas;</div>
+<div class="line"><span class="lineno">  187</span>      <span class="keywordtype">int</span> retval = meas.<a class="code hl_function" href="class_p_i_x_i_e_1_1_measurement.html#ae44119a232562550787b78263c87e819">read_header</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  188</span>      retval = meas.<a class="code hl_function" href="class_p_i_x_i_e_1_1_measurement.html#ab52c696179c4bb8c6447fe375f696c90">read_full</a>(<span class="keyword">this</span>, NULL);</div>
+<div class="line"><span class="lineno">  189</span>      <span class="keywordflow">if</span> (retval&lt;0){<span class="keywordflow">break</span>;}</div>
+<div class="line"><span class="lineno">  190</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!meas.<a class="code hl_variable" href="class_p_i_x_i_e_1_1_measurement.html#a7de1b2bfc4cb4f62d779fdb90bd241c5">good_trace</a> || crate!=meas.<a class="code hl_variable" href="class_p_i_x_i_e_1_1_measurement.html#ac1630da7899d358a7f6c06bbce3b6417">crateID</a> || slot!=meas.<a class="code hl_variable" href="class_p_i_x_i_e_1_1_measurement.html#a5b5f3a4dea3cf357aaa82298af1ff1da">slotID</a> || chan!=meas.<a class="code hl_variable" href="class_p_i_x_i_e_1_1_measurement.html#a25bffef52002e2135c60b185085c62b0">channelNumber</a>){;}</div>
+<div class="line"><span class="lineno">  191</span>      <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  192</span>        traceLen = meas.<a class="code hl_variable" href="class_p_i_x_i_e_1_1_measurement.html#adb93890ef91a35ac88c9e23f31af4b05">traceLength</a>;        </div>
+<div class="line"><span class="lineno">  193</span>      }</div>
+<div class="line"><span class="lineno">  194</span>    }</div>
+<div class="line"><span class="lineno">  195</span>    <span class="keywordflow">if</span>(traceLen == 0){printf(<span class="stringliteral">&quot;No traces for given channel\n&quot;</span>);exit(1);}</div>
+<div class="line"><span class="lineno">  196</span> </div>
+<div class="line"><span class="lineno">  197</span>    fsetpos(this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a6d2bf732ff199ed45f260516507bf808">file</a>, &amp;pos);  <span class="comment">//we were never even here</span></div>
+<div class="line"><span class="lineno">  198</span>    <span class="comment">//Draw traces</span></div>
+<div class="line"><span class="lineno">  199</span>    <span class="keywordtype">double</span> superTrace[traceLen];<span class="comment">//={0};</span></div>
+<div class="line"><span class="lineno">  200</span> </div>
+<div class="line"><span class="lineno">  201</span>    <span class="keywordtype">double</span> x[traceLen];<span class="comment">//={0};    </span></div>
+<div class="line"><span class="lineno">  202</span>    <span class="keywordtype">int</span> nTraces=0;</div>
+<div class="line"><span class="lineno">  203</span>    printf(<span class="stringliteral">&quot;Dumping %d trace(s) from slot: %d chan: %d\n&quot;</span>,maxTraces, slot, chan);</div>
+<div class="line"><span class="lineno">  204</span>    <span class="keywordflow">while</span> (nTraces&lt;maxTraces){</div>
+<div class="line"><span class="lineno">  205</span>      uint16_t trace[traceLen];<span class="comment">//={0};</span></div>
+<div class="line"><span class="lineno">  206</span>      <a class="code hl_class" href="class_p_i_x_i_e_1_1_measurement.html">PIXIE::Measurement</a> meas;</div>
+<div class="line"><span class="lineno">  207</span>      <span class="keywordtype">int</span> retval = meas.<a class="code hl_function" href="class_p_i_x_i_e_1_1_measurement.html#ae44119a232562550787b78263c87e819">read_header</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  208</span>      retval = meas.<a class="code hl_function" href="class_p_i_x_i_e_1_1_measurement.html#ab52c696179c4bb8c6447fe375f696c90">read_full</a>(<span class="keyword">this</span>, trace);</div>
+<div class="line"><span class="lineno">  209</span>      <span class="keywordflow">if</span> (retval&lt;0){<span class="keywordflow">break</span>;}</div>
+<div class="line"><span class="lineno">  210</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!meas.<a class="code hl_variable" href="class_p_i_x_i_e_1_1_measurement.html#a7de1b2bfc4cb4f62d779fdb90bd241c5">good_trace</a> || crate!=meas.<a class="code hl_variable" href="class_p_i_x_i_e_1_1_measurement.html#ac1630da7899d358a7f6c06bbce3b6417">crateID</a> || slot!=meas.<a class="code hl_variable" href="class_p_i_x_i_e_1_1_measurement.html#a5b5f3a4dea3cf357aaa82298af1ff1da">slotID</a> || chan!=meas.<a class="code hl_variable" href="class_p_i_x_i_e_1_1_measurement.html#a25bffef52002e2135c60b185085c62b0">channelNumber</a>){;}</div>
+<div class="line"><span class="lineno">  211</span>      <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  212</span>        traceLen = meas.<a class="code hl_variable" href="class_p_i_x_i_e_1_1_measurement.html#adb93890ef91a35ac88c9e23f31af4b05">traceLength</a>;</div>
+<div class="line"><span class="lineno">  213</span>        this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#abb0fc6333195ac9dd12f7fea78834b0f">definition</a>.<a class="code hl_function" href="class_p_i_x_i_e_1_1_experiment___definition.html#a4dafec217c0b9f571c8cc9e944e3f050">GetChannel</a>(crate, slot, chan)-&gt;<a class="code hl_variable" href="struct_p_i_x_i_e_1_1_experiment___definition_1_1_channel.html#ab4bc7928648f3bd401ff1327e6b86f9e">alg</a>-&gt;<a class="code hl_function" href="class_p_i_x_i_e_1_1_trace_1_1_algorithm.html#a03f21dc897a2dcd2a2391964756c9737">dumpTrace</a>(&amp;trace[0], traceLen, nTraces, outPath, append, traceName);        </div>
+<div class="line"><span class="lineno">  214</span>        nTraces+=1;</div>
+<div class="line"><span class="lineno">  215</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;traceLen;i++){</div>
+<div class="line"><span class="lineno">  216</span>          superTrace[i] = (double) ((superTrace[i]*(nTraces-1) +  trace[i])/nTraces);</div>
+<div class="line"><span class="lineno">  217</span>        }</div>
+<div class="line"><span class="lineno">  218</span>      }</div>
+<div class="line"><span class="lineno">  219</span>    }</div>
+<div class="line"><span class="lineno">  220</span>    uint16_t tempTrace[traceLen];<span class="comment">//={0};</span></div>
+<div class="line"><span class="lineno">  221</span> </div>
+<div class="line"><span class="lineno">  222</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;traceLen;i++){</div>
+<div class="line"><span class="lineno">  223</span>      tempTrace[i] = (uint16_t) superTrace[i];</div>
+<div class="line"><span class="lineno">  224</span>    }</div>
+<div class="line"><span class="lineno">  225</span>    <span class="keywordflow">if</span> (nTraces==0){</div>
+<div class="line"><span class="lineno">  226</span>      printf(<span class="stringliteral">&quot;%s!!!Warning!!!  No traces saved%s\n&quot;</span>,<a class="code hl_define" href="colors_8hh.html#a34995b955465f6bbb37c359173d50477">ANSI_COLOR_RED</a>,<a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a>);</div>
+<div class="line"><span class="lineno">  227</span>      retval = -1;</div>
+<div class="line"><span class="lineno">  228</span>    }</div>
+<div class="line"><span class="lineno">  229</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  230</span>      <span class="keywordflow">if</span> (nTraces&lt;maxTraces){</div>
+<div class="line"><span class="lineno">  231</span>        printf(<span class="stringliteral">&quot;%s!!!Warning!!!  Only %d traces saved%s\n&quot;</span>,<a class="code hl_define" href="colors_8hh.html#a34995b955465f6bbb37c359173d50477">ANSI_COLOR_RED</a>,nTraces,<a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a>);</div>
+<div class="line"><span class="lineno">  232</span>      }</div>
+<div class="line"><span class="lineno">  233</span>      retval=1;</div>
+<div class="line"><span class="lineno">  234</span>      this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#abb0fc6333195ac9dd12f7fea78834b0f">definition</a>.<a class="code hl_function" href="class_p_i_x_i_e_1_1_experiment___definition.html#a4dafec217c0b9f571c8cc9e944e3f050">GetChannel</a>(crate, slot, chan)-&gt;<a class="code hl_variable" href="struct_p_i_x_i_e_1_1_experiment___definition_1_1_channel.html#ab4bc7928648f3bd401ff1327e6b86f9e">alg</a>-&gt;<a class="code hl_function" href="class_p_i_x_i_e_1_1_trace_1_1_algorithm.html#a03f21dc897a2dcd2a2391964756c9737">dumpTrace</a>(&amp;tempTrace[0], traceLen, nTraces, outPath, append, traceName+<span class="stringliteral">&quot;_SuperTrace&quot;</span>);</div>
+<div class="line"><span class="lineno">  235</span>    }</div>
+<div class="line"><span class="lineno">  236</span> </div>
+<div class="line"><span class="lineno">  237</span>    fsetpos(this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a6d2bf732ff199ed45f260516507bf808">file</a>, &amp;pos);  <span class="comment">//we were never even here</span></div>
+<div class="line"><span class="lineno">  238</span>    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">  239</span>    </div>
+<div class="line"><span class="lineno">  240</span>  }</div>
 <div class="ttc" id="aclass_p_i_x_i_e_1_1_experiment___definition_html_a4dafec217c0b9f571c8cc9e944e3f050"><div class="ttname"><a href="class_p_i_x_i_e_1_1_experiment___definition.html#a4dafec217c0b9f571c8cc9e944e3f050">PIXIE::Experiment_Definition::GetChannel</a></div><div class="ttdeci">Channel * GetChannel(int crateID, int slotID, int channelNumber) const</div><div class="ttdef"><b>Definition:</b> <a href="experiment__definition_8cc_source.html#l00188">experiment_definition.cc:188</a></div></div>
 <div class="ttc" id="aclass_p_i_x_i_e_1_1_measurement_html"><div class="ttname"><a href="class_p_i_x_i_e_1_1_measurement.html">PIXIE::Measurement</a></div><div class="ttdef"><b>Definition:</b> <a href="measurement_8hh_source.html#l00036">measurement.hh:36</a></div></div>
 <div class="ttc" id="aclass_p_i_x_i_e_1_1_measurement_html_a25bffef52002e2135c60b185085c62b0"><div class="ttname"><a href="class_p_i_x_i_e_1_1_measurement.html#a25bffef52002e2135c60b185085c62b0">PIXIE::Measurement::channelNumber</a></div><div class="ttdeci">uint32_t channelNumber</div><div class="ttdef"><b>Definition:</b> <a href="measurement_8hh_source.html#l00044">measurement.hh:44</a></div></div>
 <div class="ttc" id="aclass_p_i_x_i_e_1_1_measurement_html_a5b5f3a4dea3cf357aaa82298af1ff1da"><div class="ttname"><a href="class_p_i_x_i_e_1_1_measurement.html#a5b5f3a4dea3cf357aaa82298af1ff1da">PIXIE::Measurement::slotID</a></div><div class="ttdeci">uint32_t slotID</div><div class="ttdef"><b>Definition:</b> <a href="measurement_8hh_source.html#l00043">measurement.hh:43</a></div></div>
 <div class="ttc" id="aclass_p_i_x_i_e_1_1_measurement_html_a7de1b2bfc4cb4f62d779fdb90bd241c5"><div class="ttname"><a href="class_p_i_x_i_e_1_1_measurement.html#a7de1b2bfc4cb4f62d779fdb90bd241c5">PIXIE::Measurement::good_trace</a></div><div class="ttdeci">bool good_trace</div><div class="ttdef"><b>Definition:</b> <a href="measurement_8hh_source.html#l00065">measurement.hh:65</a></div></div>
-<div class="ttc" id="aclass_p_i_x_i_e_1_1_measurement_html_ab52c696179c4bb8c6447fe375f696c90"><div class="ttname"><a href="class_p_i_x_i_e_1_1_measurement.html#ab52c696179c4bb8c6447fe375f696c90">PIXIE::Measurement::read_full</a></div><div class="ttdeci">int read_full(Reader *reader, uint16_t *outTrace=NULL)</div><div class="ttdef"><b>Definition:</b> <a href="measurement_8cc_source.html#l00127">measurement.cc:127</a></div></div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_measurement_html_ab52c696179c4bb8c6447fe375f696c90"><div class="ttname"><a href="class_p_i_x_i_e_1_1_measurement.html#ab52c696179c4bb8c6447fe375f696c90">PIXIE::Measurement::read_full</a></div><div class="ttdeci">int read_full(Reader *reader, uint16_t *outTrace=NULL)</div><div class="ttdef"><b>Definition:</b> <a href="measurement_8cc_source.html#l00138">measurement.cc:138</a></div></div>
 <div class="ttc" id="aclass_p_i_x_i_e_1_1_measurement_html_ac1630da7899d358a7f6c06bbce3b6417"><div class="ttname"><a href="class_p_i_x_i_e_1_1_measurement.html#ac1630da7899d358a7f6c06bbce3b6417">PIXIE::Measurement::crateID</a></div><div class="ttdeci">uint32_t crateID</div><div class="ttdef"><b>Definition:</b> <a href="measurement_8hh_source.html#l00042">measurement.hh:42</a></div></div>
 <div class="ttc" id="aclass_p_i_x_i_e_1_1_measurement_html_adb93890ef91a35ac88c9e23f31af4b05"><div class="ttname"><a href="class_p_i_x_i_e_1_1_measurement.html#adb93890ef91a35ac88c9e23f31af4b05">PIXIE::Measurement::traceLength</a></div><div class="ttdeci">uint32_t traceLength</div><div class="ttdef"><b>Definition:</b> <a href="measurement_8hh_source.html#l00041">measurement.hh:41</a></div></div>
 <div class="ttc" id="aclass_p_i_x_i_e_1_1_measurement_html_ae44119a232562550787b78263c87e819"><div class="ttname"><a href="class_p_i_x_i_e_1_1_measurement.html#ae44119a232562550787b78263c87e819">PIXIE::Measurement::read_header</a></div><div class="ttdeci">int read_header(Reader *reader)</div><div class="ttdef"><b>Definition:</b> <a href="measurement_8cc_source.html#l00085">measurement.cc:85</a></div></div>
-<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_abb0fc6333195ac9dd12f7fea78834b0f"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#abb0fc6333195ac9dd12f7fea78834b0f">PIXIE::Reader::definition</a></div><div class="ttdeci">Experiment_Definition definition</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00019">reader.hh:19</a></div></div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_abb0fc6333195ac9dd12f7fea78834b0f"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#abb0fc6333195ac9dd12f7fea78834b0f">PIXIE::Reader::definition</a></div><div class="ttdeci">Experiment_Definition definition</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00020">reader.hh:20</a></div></div>
 <div class="ttc" id="aclass_p_i_x_i_e_1_1_trace_1_1_algorithm_html_a03f21dc897a2dcd2a2391964756c9737"><div class="ttname"><a href="class_p_i_x_i_e_1_1_trace_1_1_algorithm.html#a03f21dc897a2dcd2a2391964756c9737">PIXIE::Trace::Algorithm::dumpTrace</a></div><div class="ttdeci">virtual int dumpTrace(uint16_t *trace, int traceLen, int n_traces, std::string fileName, int append, std::string traceName)=0</div></div>
 <div class="ttc" id="acolors_8hh_html_a34995b955465f6bbb37c359173d50477"><div class="ttname"><a href="colors_8hh.html#a34995b955465f6bbb37c359173d50477">ANSI_COLOR_RED</a></div><div class="ttdeci">#define ANSI_COLOR_RED</div><div class="ttdef"><b>Definition:</b> <a href="colors_8hh_source.html#l00004">colors.hh:4</a></div></div>
 <div class="ttc" id="acolors_8hh_html_a92a364c2b863dde1a024a77eac2a5b3b"><div class="ttname"><a href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a></div><div class="ttdeci">#define ANSI_COLOR_RESET</div><div class="ttdef"><b>Definition:</b> <a href="colors_8hh_source.html#l00010">colors.hh:10</a></div></div>
@@ -483,19 +492,19 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8cc_source.html#l00081">81</a> of file <a class="el" href="reader_8cc_source.html">reader.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   81</span>                   {    </div>
-<div class="line"><span class="lineno">   82</span>    assert(this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a6d2bf732ff199ed45f260516507bf808">file</a>);</div>
-<div class="line"><span class="lineno">   83</span> </div>
-<div class="line"><span class="lineno">   84</span>    <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#abd5a8a855c9fbbe15a7d551c5a7583c8">liveSort</a>) {</div>
-<div class="line"><span class="lineno">   85</span>      <span class="keywordflow">if</span> (this-&gt;<a class="code hl_function" href="class_p_i_x_i_e_1_1_reader.html#a58b8de6c0c1eddb1befb9898b6e335e6">offset</a>()&gt;this-&gt;<a class="code hl_function" href="class_p_i_x_i_e_1_1_reader.html#a796047efa6b51174af849a2f92d69518">update_filesize</a>()) {</div>
-<div class="line"><span class="lineno">   86</span>        std::cout&lt;&lt; this-&gt;<a class="code hl_function" href="class_p_i_x_i_e_1_1_reader.html#a58b8de6c0c1eddb1befb9898b6e335e6">offset</a>() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a838f7fc1f5b7db72f9eafa3c2ee55d49">fileLength</a> &lt;&lt; std::endl;;</div>
-<div class="line"><span class="lineno">   87</span>      }</div>
-<div class="line"><span class="lineno">   88</span>    }</div>
-<div class="line"><span class="lineno">   89</span>    assert(this-&gt;<a class="code hl_function" href="class_p_i_x_i_e_1_1_reader.html#a58b8de6c0c1eddb1befb9898b6e335e6">offset</a>() &lt;= this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a838f7fc1f5b7db72f9eafa3c2ee55d49">fileLength</a>);</div>
-<div class="line"><span class="lineno">   90</span> </div>
-<div class="line"><span class="lineno">   91</span>    <span class="keywordflow">return</span>(this-&gt;<a class="code hl_function" href="class_p_i_x_i_e_1_1_reader.html#a58b8de6c0c1eddb1befb9898b6e335e6">offset</a>() == this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a838f7fc1f5b7db72f9eafa3c2ee55d49">fileLength</a> || std::feof(this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a6d2bf732ff199ed45f260516507bf808">file</a>) );</div>
-<div class="line"><span class="lineno">   92</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="reader_8cc_source.html#l00083">83</a> of file <a class="el" href="reader_8cc_source.html">reader.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   83</span>                   {    </div>
+<div class="line"><span class="lineno">   84</span>    assert(this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a6d2bf732ff199ed45f260516507bf808">file</a>);</div>
+<div class="line"><span class="lineno">   85</span> </div>
+<div class="line"><span class="lineno">   86</span>    <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#abd5a8a855c9fbbe15a7d551c5a7583c8">liveSort</a>) {</div>
+<div class="line"><span class="lineno">   87</span>      <span class="keywordflow">if</span> (this-&gt;<a class="code hl_function" href="class_p_i_x_i_e_1_1_reader.html#a58b8de6c0c1eddb1befb9898b6e335e6">offset</a>()&gt;this-&gt;<a class="code hl_function" href="class_p_i_x_i_e_1_1_reader.html#a796047efa6b51174af849a2f92d69518">update_filesize</a>()) {</div>
+<div class="line"><span class="lineno">   88</span>        std::cout&lt;&lt; this-&gt;<a class="code hl_function" href="class_p_i_x_i_e_1_1_reader.html#a58b8de6c0c1eddb1befb9898b6e335e6">offset</a>() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a838f7fc1f5b7db72f9eafa3c2ee55d49">fileLength</a> &lt;&lt; std::endl;;</div>
+<div class="line"><span class="lineno">   89</span>      }</div>
+<div class="line"><span class="lineno">   90</span>    }</div>
+<div class="line"><span class="lineno">   91</span>    assert(this-&gt;<a class="code hl_function" href="class_p_i_x_i_e_1_1_reader.html#a58b8de6c0c1eddb1befb9898b6e335e6">offset</a>() &lt;= this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a838f7fc1f5b7db72f9eafa3c2ee55d49">fileLength</a>);</div>
+<div class="line"><span class="lineno">   92</span> </div>
+<div class="line"><span class="lineno">   93</span>    <span class="keywordflow">return</span>(this-&gt;<a class="code hl_function" href="class_p_i_x_i_e_1_1_reader.html#a58b8de6c0c1eddb1befb9898b6e335e6">offset</a>() == this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a838f7fc1f5b7db72f9eafa3c2ee55d49">fileLength</a> || std::feof(this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a6d2bf732ff199ed45f260516507bf808">file</a>) );</div>
+<div class="line"><span class="lineno">   94</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -522,10 +531,42 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00064">64</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   65</span>    {</div>
-<div class="line"><span class="lineno">   66</span>      <span class="keywordflow">return</span> (<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#abb0fc6333195ac9dd12f7fea78834b0f">definition</a>);</div>
-<div class="line"><span class="lineno">   67</span>    };</div>
+<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00068">68</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>    {</div>
+<div class="line"><span class="lineno">   70</span>      <span class="keywordflow">return</span> (<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#abb0fc6333195ac9dd12f7fea78834b0f">definition</a>);</div>
+<div class="line"><span class="lineno">   71</span>    };</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a98a0266af9f71037903416ae75d4066d" name="a98a0266af9f71037903416ae75d4066d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98a0266af9f71037903416ae75d4066d">&#9670;&nbsp;</a></span>nscldaq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PIXIE::Reader::nscldaq </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00097">97</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   97</span>                   {</div>
+<div class="line"><span class="lineno">   98</span>      <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a00fb68aec2438b652adc6524be1be520">NSCLDAQ</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   99</span>      <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#aa503b0ca55f879e783fba0306734bc18">nsclreader</a> = <span class="keyword">new</span> NSCLReader();</div>
+<div class="line"><span class="lineno">  100</span>    }</div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_aa503b0ca55f879e783fba0306734bc18"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#aa503b0ca55f879e783fba0306734bc18">PIXIE::Reader::nsclreader</a></div><div class="ttdeci">NSCLReader * nsclreader</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00060">reader.hh:60</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -544,10 +585,10 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8cc_source.html#l00056">56</a> of file <a class="el" href="reader_8cc_source.html">reader.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>                             {</div>
-<div class="line"><span class="lineno">   57</span>    <span class="keywordflow">return</span> (ftello(this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a6d2bf732ff199ed45f260516507bf808">file</a>));</div>
-<div class="line"><span class="lineno">   58</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="reader_8cc_source.html#l00058">58</a> of file <a class="el" href="reader_8cc_source.html">reader.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>                             {</div>
+<div class="line"><span class="lineno">   59</span>    <span class="keywordflow">return</span> (ftello(this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a6d2bf732ff199ed45f260516507bf808">file</a>));</div>
+<div class="line"><span class="lineno">   60</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -567,24 +608,24 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8cc_source.html#l00123">123</a> of file <a class="el" href="reader_8cc_source.html">reader.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  123</span>                                        {    </div>
-<div class="line"><span class="lineno">  124</span>    <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a6d2bf732ff199ed45f260516507bf808">file</a>) {</div>
-<div class="line"><span class="lineno">  125</span>      <span class="keywordflow">return</span> (-1); <span class="comment">//file has already been opened</span></div>
-<div class="line"><span class="lineno">  126</span>    }</div>
-<div class="line"><span class="lineno">  127</span> </div>
-<div class="line"><span class="lineno">  128</span>    <span class="keywordflow">if</span> (!(this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a6d2bf732ff199ed45f260516507bf808">file</a> = fopen(path.c_str(), <span class="stringliteral">&quot;rb&quot;</span>))) {      </div>
-<div class="line"><span class="lineno">  129</span>      <span class="keywordflow">return</span> (-1);</div>
-<div class="line"><span class="lineno">  130</span>    }</div>
-<div class="line"><span class="lineno">  131</span> </div>
-<div class="line"><span class="lineno">  132</span>    fseek(this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a6d2bf732ff199ed45f260516507bf808">file</a>, 0L, SEEK_END);</div>
-<div class="line"><span class="lineno">  133</span>    <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a3cbf44c09c0127d4049eae7d04109084">fileSize</a> = ftell(this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a6d2bf732ff199ed45f260516507bf808">file</a>);</div>
-<div class="line"><span class="lineno">  134</span>    rewind(this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a6d2bf732ff199ed45f260516507bf808">file</a>);</div>
-<div class="line"><span class="lineno">  135</span>    </div>
-<div class="line"><span class="lineno">  136</span>    <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#abd5a8a855c9fbbe15a7d551c5a7583c8">liveSort</a>) {fseek(this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a6d2bf732ff199ed45f260516507bf808">file</a>, 0, SEEK_END); this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a9e1ef7766d3ee935ff0b384d52d6a87c">end</a> = <span class="keyword">true</span>; usleep(1000000);}</div>
-<div class="line"><span class="lineno">  137</span> </div>
-<div class="line"><span class="lineno">  138</span>    <span class="keywordflow">return</span> (0);</div>
-<div class="line"><span class="lineno">  139</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="reader_8cc_source.html#l00125">125</a> of file <a class="el" href="reader_8cc_source.html">reader.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  125</span>                                        {    </div>
+<div class="line"><span class="lineno">  126</span>    <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a6d2bf732ff199ed45f260516507bf808">file</a>) {</div>
+<div class="line"><span class="lineno">  127</span>      <span class="keywordflow">return</span> (-1); <span class="comment">//file has already been opened</span></div>
+<div class="line"><span class="lineno">  128</span>    }</div>
+<div class="line"><span class="lineno">  129</span> </div>
+<div class="line"><span class="lineno">  130</span>    <span class="keywordflow">if</span> (!(this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a6d2bf732ff199ed45f260516507bf808">file</a> = fopen(path.c_str(), <span class="stringliteral">&quot;rb&quot;</span>))) {      </div>
+<div class="line"><span class="lineno">  131</span>      <span class="keywordflow">return</span> (-1);</div>
+<div class="line"><span class="lineno">  132</span>    }</div>
+<div class="line"><span class="lineno">  133</span> </div>
+<div class="line"><span class="lineno">  134</span>    fseek(this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a6d2bf732ff199ed45f260516507bf808">file</a>, 0L, SEEK_END);</div>
+<div class="line"><span class="lineno">  135</span>    <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a3cbf44c09c0127d4049eae7d04109084">fileSize</a> = ftell(this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a6d2bf732ff199ed45f260516507bf808">file</a>);</div>
+<div class="line"><span class="lineno">  136</span>    rewind(this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a6d2bf732ff199ed45f260516507bf808">file</a>);</div>
+<div class="line"><span class="lineno">  137</span>    </div>
+<div class="line"><span class="lineno">  138</span>    <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#abd5a8a855c9fbbe15a7d551c5a7583c8">liveSort</a>) {fseek(this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a6d2bf732ff199ed45f260516507bf808">file</a>, 0, SEEK_END); this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a9e1ef7766d3ee935ff0b384d52d6a87c">end</a> = <span class="keyword">true</span>; usleep(1000000);}</div>
+<div class="line"><span class="lineno">  139</span> </div>
+<div class="line"><span class="lineno">  140</span>    <span class="keywordflow">return</span> (0);</div>
+<div class="line"><span class="lineno">  141</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -603,23 +644,23 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8cc_source.html#l00107">107</a> of file <a class="el" href="reader_8cc_source.html">reader.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  107</span>                            {</div>
-<div class="line"><span class="lineno">  108</span>    printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  109</span>    printf(<span class="stringliteral">&quot;Average event length:     &quot;</span> <a class="code hl_define" href="colors_8hh.html#a5a123b382640b3aa65dd5db386002fbc">ANSI_COLOR_YELLOW</a> <span class="stringliteral">&quot;%6.5f us\n&quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a>, <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ad84d4070b4658e152083ff76f9f1cba4">av_evt_length</a>);</div>
-<div class="line"><span class="lineno">  110</span>    printf(<span class="stringliteral">&quot;Total sub-events:     &quot;</span> <a class="code hl_define" href="colors_8hh.html#a5a123b382640b3aa65dd5db386002fbc">ANSI_COLOR_YELLOW</a> <span class="stringliteral">&quot;%15lld\n&quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a>, <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a0ce86f5114467a18c6e22f7115f00fec">subevents</a>);</div>
-<div class="line"><span class="lineno">  111</span>    printf(<span class="stringliteral">&quot;Bad CFD sub-events:   &quot;</span> <a class="code hl_define" href="colors_8hh.html#a5a123b382640b3aa65dd5db386002fbc">ANSI_COLOR_YELLOW</a> <span class="stringliteral">&quot;%15lld&quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot;,     &quot;</span> <a class="code hl_define" href="colors_8hh.html#a966c72d8d733c7734c6c784753d894c7">ANSI_COLOR_GREEN</a> <span class="stringliteral">&quot;%5.1f%% &quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot;good\n&quot;</span>, <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ae24f10cc7434b83d1d87892733debda8">badcfd</a>, 100*(1-(<span class="keywordtype">double</span>)<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ae24f10cc7434b83d1d87892733debda8">badcfd</a>/(<span class="keywordtype">double</span>)<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a0ce86f5114467a18c6e22f7115f00fec">subevents</a>));</div>
-<div class="line"><span class="lineno">  112</span>    printf(<span class="stringliteral">&quot;Pileups:              &quot;</span> <a class="code hl_define" href="colors_8hh.html#a5a123b382640b3aa65dd5db386002fbc">ANSI_COLOR_YELLOW</a> <span class="stringliteral">&quot;%15lld&quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot;,     &quot;</span> <a class="code hl_define" href="colors_8hh.html#a966c72d8d733c7734c6c784753d894c7">ANSI_COLOR_GREEN</a> <span class="stringliteral">&quot;%5.1f%% &quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot;good\n&quot;</span>, <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a4e64aae95c6689ee7770ff98de8900e1">pileups</a>, 100*(1-(<span class="keywordtype">double</span>)<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a4e64aae95c6689ee7770ff98de8900e1">pileups</a>/(<span class="keywordtype">double</span>)<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a0ce86f5114467a18c6e22f7115f00fec">subevents</a>));</div>
-<div class="line"><span class="lineno">  113</span>    printf(<span class="stringliteral">&quot;Same channel pileups: &quot;</span> <a class="code hl_define" href="colors_8hh.html#a5a123b382640b3aa65dd5db386002fbc">ANSI_COLOR_YELLOW</a> <span class="stringliteral">&quot;%15lld&quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot;,     &quot;</span> <a class="code hl_define" href="colors_8hh.html#a966c72d8d733c7734c6c784753d894c7">ANSI_COLOR_GREEN</a> <span class="stringliteral">&quot;%5.1f%% &quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot;good\n&quot;</span>, <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a75d5430b30747d8a8f4e2650d836b711">sameChanPU</a>, 100*(1-(<span class="keywordtype">double</span>)<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a75d5430b30747d8a8f4e2650d836b711">sameChanPU</a>/(<span class="keywordtype">double</span>)<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a0ce86f5114467a18c6e22f7115f00fec">subevents</a>));</div>
-<div class="line"><span class="lineno">  114</span>    printf(<span class="stringliteral">&quot;Out of range:         &quot;</span> <a class="code hl_define" href="colors_8hh.html#a5a123b382640b3aa65dd5db386002fbc">ANSI_COLOR_YELLOW</a> <span class="stringliteral">&quot;%15lld&quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot;,     &quot;</span> <a class="code hl_define" href="colors_8hh.html#a966c72d8d733c7734c6c784753d894c7">ANSI_COLOR_GREEN</a> <span class="stringliteral">&quot;%5.1f%% &quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot;good\n&quot;</span>, <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ac743b3c98720b153ab06f1e17223f6ec">outofrange</a>, 100*(1-(<span class="keywordtype">double</span>)<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ac743b3c98720b153ab06f1e17223f6ec">outofrange</a>/(<span class="keywordtype">double</span>)<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a0ce86f5114467a18c6e22f7115f00fec">subevents</a>));</div>
-<div class="line"><span class="lineno">  115</span>    printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  116</span>    printf(<span class="stringliteral">&quot;Singles:              &quot;</span> <a class="code hl_define" href="colors_8hh.html#a5a123b382640b3aa65dd5db386002fbc">ANSI_COLOR_YELLOW</a> <span class="stringliteral">&quot;%15lld&quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot;,     &quot;</span> <a class="code hl_define" href="colors_8hh.html#a966c72d8d733c7734c6c784753d894c7">ANSI_COLOR_GREEN</a> <span class="stringliteral">&quot;%5.1f%% &quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot;\n&quot;</span>, <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ab55f638b22423b50b5bb35c1cb926c15">mults</a>[0], 100*(<span class="keywordtype">double</span>)<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ab55f638b22423b50b5bb35c1cb926c15">mults</a>[0]/(<span class="keywordtype">double</span>)<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ac0f5d35b39294a8597812b9e4c574ad5">nEvents</a>);</div>
-<div class="line"><span class="lineno">  117</span>    printf(<span class="stringliteral">&quot;Doubles:              &quot;</span> <a class="code hl_define" href="colors_8hh.html#a5a123b382640b3aa65dd5db386002fbc">ANSI_COLOR_YELLOW</a> <span class="stringliteral">&quot;%15lld&quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot;,     &quot;</span> <a class="code hl_define" href="colors_8hh.html#a966c72d8d733c7734c6c784753d894c7">ANSI_COLOR_GREEN</a> <span class="stringliteral">&quot;%5.1f%% &quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot;\n&quot;</span>, <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ab55f638b22423b50b5bb35c1cb926c15">mults</a>[1], 100*(<span class="keywordtype">double</span>)<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ab55f638b22423b50b5bb35c1cb926c15">mults</a>[1]/(<span class="keywordtype">double</span>)<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ac0f5d35b39294a8597812b9e4c574ad5">nEvents</a>);</div>
-<div class="line"><span class="lineno">  118</span>    printf(<span class="stringliteral">&quot;Triples:              &quot;</span> <a class="code hl_define" href="colors_8hh.html#a5a123b382640b3aa65dd5db386002fbc">ANSI_COLOR_YELLOW</a> <span class="stringliteral">&quot;%15lld&quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot;,     &quot;</span> <a class="code hl_define" href="colors_8hh.html#a966c72d8d733c7734c6c784753d894c7">ANSI_COLOR_GREEN</a> <span class="stringliteral">&quot;%5.1f%% &quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot;\n&quot;</span>, <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ab55f638b22423b50b5bb35c1cb926c15">mults</a>[2], 100*(<span class="keywordtype">double</span>)<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ab55f638b22423b50b5bb35c1cb926c15">mults</a>[2]/(<span class="keywordtype">double</span>)<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ac0f5d35b39294a8597812b9e4c574ad5">nEvents</a>);</div>
-<div class="line"><span class="lineno">  119</span>    printf(<span class="stringliteral">&quot;Quadruples:           &quot;</span> <a class="code hl_define" href="colors_8hh.html#a5a123b382640b3aa65dd5db386002fbc">ANSI_COLOR_YELLOW</a> <span class="stringliteral">&quot;%15lld&quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot;,     &quot;</span> <a class="code hl_define" href="colors_8hh.html#a966c72d8d733c7734c6c784753d894c7">ANSI_COLOR_GREEN</a> <span class="stringliteral">&quot;%5.1f%% &quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot;\n&quot;</span>, <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ab55f638b22423b50b5bb35c1cb926c15">mults</a>[3], 100*(<span class="keywordtype">double</span>)<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ab55f638b22423b50b5bb35c1cb926c15">mults</a>[3]/(<span class="keywordtype">double</span>)<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ac0f5d35b39294a8597812b9e4c574ad5">nEvents</a>);</div>
-<div class="line"><span class="lineno">  120</span> </div>
-<div class="line"><span class="lineno">  121</span>  }</div>
-<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_ad84d4070b4658e152083ff76f9f1cba4"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#ad84d4070b4658e152083ff76f9f1cba4">PIXIE::Reader::av_evt_length</a></div><div class="ttdeci">double av_evt_length</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00076">reader.hh:76</a></div></div>
+<p class="definition">Definition at line <a class="el" href="reader_8cc_source.html#l00109">109</a> of file <a class="el" href="reader_8cc_source.html">reader.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  109</span>                            {</div>
+<div class="line"><span class="lineno">  110</span>    printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  111</span>    printf(<span class="stringliteral">&quot;Average event length:     &quot;</span> <a class="code hl_define" href="colors_8hh.html#a5a123b382640b3aa65dd5db386002fbc">ANSI_COLOR_YELLOW</a> <span class="stringliteral">&quot;%6.5f us\n&quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a>, <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ad84d4070b4658e152083ff76f9f1cba4">av_evt_length</a>);</div>
+<div class="line"><span class="lineno">  112</span>    printf(<span class="stringliteral">&quot;Total sub-events:     &quot;</span> <a class="code hl_define" href="colors_8hh.html#a5a123b382640b3aa65dd5db386002fbc">ANSI_COLOR_YELLOW</a> <span class="stringliteral">&quot;%15lld\n&quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a>, <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a0ce86f5114467a18c6e22f7115f00fec">subevents</a>);</div>
+<div class="line"><span class="lineno">  113</span>    printf(<span class="stringliteral">&quot;Bad CFD sub-events:   &quot;</span> <a class="code hl_define" href="colors_8hh.html#a5a123b382640b3aa65dd5db386002fbc">ANSI_COLOR_YELLOW</a> <span class="stringliteral">&quot;%15lld&quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot;,     &quot;</span> <a class="code hl_define" href="colors_8hh.html#a966c72d8d733c7734c6c784753d894c7">ANSI_COLOR_GREEN</a> <span class="stringliteral">&quot;%5.1f%% &quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot;good\n&quot;</span>, <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ae24f10cc7434b83d1d87892733debda8">badcfd</a>, 100*(1-(<span class="keywordtype">double</span>)<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ae24f10cc7434b83d1d87892733debda8">badcfd</a>/(<span class="keywordtype">double</span>)<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a0ce86f5114467a18c6e22f7115f00fec">subevents</a>));</div>
+<div class="line"><span class="lineno">  114</span>    printf(<span class="stringliteral">&quot;Pileups:              &quot;</span> <a class="code hl_define" href="colors_8hh.html#a5a123b382640b3aa65dd5db386002fbc">ANSI_COLOR_YELLOW</a> <span class="stringliteral">&quot;%15lld&quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot;,     &quot;</span> <a class="code hl_define" href="colors_8hh.html#a966c72d8d733c7734c6c784753d894c7">ANSI_COLOR_GREEN</a> <span class="stringliteral">&quot;%5.1f%% &quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot;good\n&quot;</span>, <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a4e64aae95c6689ee7770ff98de8900e1">pileups</a>, 100*(1-(<span class="keywordtype">double</span>)<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a4e64aae95c6689ee7770ff98de8900e1">pileups</a>/(<span class="keywordtype">double</span>)<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a0ce86f5114467a18c6e22f7115f00fec">subevents</a>));</div>
+<div class="line"><span class="lineno">  115</span>    printf(<span class="stringliteral">&quot;Same channel pileups: &quot;</span> <a class="code hl_define" href="colors_8hh.html#a5a123b382640b3aa65dd5db386002fbc">ANSI_COLOR_YELLOW</a> <span class="stringliteral">&quot;%15lld&quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot;,     &quot;</span> <a class="code hl_define" href="colors_8hh.html#a966c72d8d733c7734c6c784753d894c7">ANSI_COLOR_GREEN</a> <span class="stringliteral">&quot;%5.1f%% &quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot;good\n&quot;</span>, <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a75d5430b30747d8a8f4e2650d836b711">sameChanPU</a>, 100*(1-(<span class="keywordtype">double</span>)<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a75d5430b30747d8a8f4e2650d836b711">sameChanPU</a>/(<span class="keywordtype">double</span>)<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a0ce86f5114467a18c6e22f7115f00fec">subevents</a>));</div>
+<div class="line"><span class="lineno">  116</span>    printf(<span class="stringliteral">&quot;Out of range:         &quot;</span> <a class="code hl_define" href="colors_8hh.html#a5a123b382640b3aa65dd5db386002fbc">ANSI_COLOR_YELLOW</a> <span class="stringliteral">&quot;%15lld&quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot;,     &quot;</span> <a class="code hl_define" href="colors_8hh.html#a966c72d8d733c7734c6c784753d894c7">ANSI_COLOR_GREEN</a> <span class="stringliteral">&quot;%5.1f%% &quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot;good\n&quot;</span>, <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ac743b3c98720b153ab06f1e17223f6ec">outofrange</a>, 100*(1-(<span class="keywordtype">double</span>)<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ac743b3c98720b153ab06f1e17223f6ec">outofrange</a>/(<span class="keywordtype">double</span>)<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a0ce86f5114467a18c6e22f7115f00fec">subevents</a>));</div>
+<div class="line"><span class="lineno">  117</span>    printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  118</span>    printf(<span class="stringliteral">&quot;Singles:              &quot;</span> <a class="code hl_define" href="colors_8hh.html#a5a123b382640b3aa65dd5db386002fbc">ANSI_COLOR_YELLOW</a> <span class="stringliteral">&quot;%15lld&quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot;,     &quot;</span> <a class="code hl_define" href="colors_8hh.html#a966c72d8d733c7734c6c784753d894c7">ANSI_COLOR_GREEN</a> <span class="stringliteral">&quot;%5.1f%% &quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot;\n&quot;</span>, <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ab55f638b22423b50b5bb35c1cb926c15">mults</a>[0], 100*(<span class="keywordtype">double</span>)<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ab55f638b22423b50b5bb35c1cb926c15">mults</a>[0]/(<span class="keywordtype">double</span>)<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ac0f5d35b39294a8597812b9e4c574ad5">nEvents</a>);</div>
+<div class="line"><span class="lineno">  119</span>    printf(<span class="stringliteral">&quot;Doubles:              &quot;</span> <a class="code hl_define" href="colors_8hh.html#a5a123b382640b3aa65dd5db386002fbc">ANSI_COLOR_YELLOW</a> <span class="stringliteral">&quot;%15lld&quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot;,     &quot;</span> <a class="code hl_define" href="colors_8hh.html#a966c72d8d733c7734c6c784753d894c7">ANSI_COLOR_GREEN</a> <span class="stringliteral">&quot;%5.1f%% &quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot;\n&quot;</span>, <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ab55f638b22423b50b5bb35c1cb926c15">mults</a>[1], 100*(<span class="keywordtype">double</span>)<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ab55f638b22423b50b5bb35c1cb926c15">mults</a>[1]/(<span class="keywordtype">double</span>)<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ac0f5d35b39294a8597812b9e4c574ad5">nEvents</a>);</div>
+<div class="line"><span class="lineno">  120</span>    printf(<span class="stringliteral">&quot;Triples:              &quot;</span> <a class="code hl_define" href="colors_8hh.html#a5a123b382640b3aa65dd5db386002fbc">ANSI_COLOR_YELLOW</a> <span class="stringliteral">&quot;%15lld&quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot;,     &quot;</span> <a class="code hl_define" href="colors_8hh.html#a966c72d8d733c7734c6c784753d894c7">ANSI_COLOR_GREEN</a> <span class="stringliteral">&quot;%5.1f%% &quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot;\n&quot;</span>, <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ab55f638b22423b50b5bb35c1cb926c15">mults</a>[2], 100*(<span class="keywordtype">double</span>)<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ab55f638b22423b50b5bb35c1cb926c15">mults</a>[2]/(<span class="keywordtype">double</span>)<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ac0f5d35b39294a8597812b9e4c574ad5">nEvents</a>);</div>
+<div class="line"><span class="lineno">  121</span>    printf(<span class="stringliteral">&quot;Quadruples:           &quot;</span> <a class="code hl_define" href="colors_8hh.html#a5a123b382640b3aa65dd5db386002fbc">ANSI_COLOR_YELLOW</a> <span class="stringliteral">&quot;%15lld&quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot;,     &quot;</span> <a class="code hl_define" href="colors_8hh.html#a966c72d8d733c7734c6c784753d894c7">ANSI_COLOR_GREEN</a> <span class="stringliteral">&quot;%5.1f%% &quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot;\n&quot;</span>, <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ab55f638b22423b50b5bb35c1cb926c15">mults</a>[3], 100*(<span class="keywordtype">double</span>)<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ab55f638b22423b50b5bb35c1cb926c15">mults</a>[3]/(<span class="keywordtype">double</span>)<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ac0f5d35b39294a8597812b9e4c574ad5">nEvents</a>);</div>
+<div class="line"><span class="lineno">  122</span> </div>
+<div class="line"><span class="lineno">  123</span>  }</div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_ad84d4070b4658e152083ff76f9f1cba4"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#ad84d4070b4658e152083ff76f9f1cba4">PIXIE::Reader::av_evt_length</a></div><div class="ttdeci">double av_evt_length</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00080">reader.hh:80</a></div></div>
 <div class="ttc" id="acolors_8hh_html_a5a123b382640b3aa65dd5db386002fbc"><div class="ttname"><a href="colors_8hh.html#a5a123b382640b3aa65dd5db386002fbc">ANSI_COLOR_YELLOW</a></div><div class="ttdeci">#define ANSI_COLOR_YELLOW</div><div class="ttdef"><b>Definition:</b> <a href="colors_8hh_source.html#l00006">colors.hh:6</a></div></div>
 <div class="ttc" id="acolors_8hh_html_a966c72d8d733c7734c6c784753d894c7"><div class="ttname"><a href="colors_8hh.html#a966c72d8d733c7734c6c784753d894c7">ANSI_COLOR_GREEN</a></div><div class="ttdeci">#define ANSI_COLOR_GREEN</div><div class="ttdef"><b>Definition:</b> <a href="colors_8hh_source.html#l00005">colors.hh:5</a></div></div>
 </div><!-- fragment -->
@@ -640,20 +681,20 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8cc_source.html#l00094">94</a> of file <a class="el" href="reader_8cc_source.html">reader.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   94</span>                           {</div>
-<div class="line"><span class="lineno">   95</span>    time_t now;</div>
-<div class="line"><span class="lineno">   96</span>    time(&amp;now);</div>
-<div class="line"><span class="lineno">   97</span>    <span class="keywordtype">float</span> perc_complete;    </div>
-<div class="line"><span class="lineno">   98</span>    <span class="keywordtype">float</span> size_to_sort = 1;</div>
-<div class="line"><span class="lineno">   99</span> </div>
-<div class="line"><span class="lineno">  100</span>    <span class="keywordflow">if</span> (now==<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a8bbac18262af021f9b44e6b6af252e64">starttime</a>) { <span class="keywordflow">return</span>; }</div>
-<div class="line"><span class="lineno">  101</span>    </div>
-<div class="line"><span class="lineno">  102</span>    perc_complete = 100.0*(float)((<span class="keywordtype">float</span>)ftell(this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a6d2bf732ff199ed45f260516507bf808">file</a>))/<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a3cbf44c09c0127d4049eae7d04109084">fileSize</a>;</div>
-<div class="line"><span class="lineno">  103</span>    printf(<span class="stringliteral">&quot;\r[ %i ] Pixie Processing [&quot;</span> <a class="code hl_define" href="colors_8hh.html#a966c72d8d733c7734c6c784753d894c7">ANSI_COLOR_GREEN</a> <span class="stringliteral">&quot;%.1f%%&quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot;], elapsed time &quot;</span> <a class="code hl_define" href="colors_8hh.html#a966c72d8d733c7734c6c784753d894c7">ANSI_COLOR_GREEN</a> <span class="stringliteral">&quot;%ld&quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot; s, &quot;</span> <a class="code hl_define" href="colors_8hh.html#a966c72d8d733c7734c6c784753d894c7">ANSI_COLOR_GREEN</a> <span class="stringliteral">&quot;%llu&quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot; events per s&quot;</span>,this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ae95c4e93a4bd8b7fec5cfc454fd7c94d">thread</a>, (perc_complete), now-<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a8bbac18262af021f9b44e6b6af252e64">starttime</a>, this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ac0f5d35b39294a8597812b9e4c574ad5">nEvents</a>/(now-<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a8bbac18262af021f9b44e6b6af252e64">starttime</a>));</div>
-<div class="line"><span class="lineno">  104</span>    std::cout&lt;&lt;std::flush;</div>
-<div class="line"><span class="lineno">  105</span>  }</div>
-<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_a8bbac18262af021f9b44e6b6af252e64"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#a8bbac18262af021f9b44e6b6af252e64">PIXIE::Reader::starttime</a></div><div class="ttdeci">time_t starttime</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00040">reader.hh:40</a></div></div>
+<p class="definition">Definition at line <a class="el" href="reader_8cc_source.html#l00096">96</a> of file <a class="el" href="reader_8cc_source.html">reader.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   96</span>                           {</div>
+<div class="line"><span class="lineno">   97</span>    time_t now;</div>
+<div class="line"><span class="lineno">   98</span>    time(&amp;now);</div>
+<div class="line"><span class="lineno">   99</span>    <span class="keywordtype">float</span> perc_complete;    </div>
+<div class="line"><span class="lineno">  100</span>    <span class="keywordtype">float</span> size_to_sort = 1;</div>
+<div class="line"><span class="lineno">  101</span> </div>
+<div class="line"><span class="lineno">  102</span>    <span class="keywordflow">if</span> (now==<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a8bbac18262af021f9b44e6b6af252e64">starttime</a>) { <span class="keywordflow">return</span>; }</div>
+<div class="line"><span class="lineno">  103</span>    </div>
+<div class="line"><span class="lineno">  104</span>    perc_complete = 100.0*(float)((<span class="keywordtype">float</span>)ftell(this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a6d2bf732ff199ed45f260516507bf808">file</a>))/<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a3cbf44c09c0127d4049eae7d04109084">fileSize</a>;</div>
+<div class="line"><span class="lineno">  105</span>    printf(<span class="stringliteral">&quot;\r[ %i ] Pixie Processing [&quot;</span> <a class="code hl_define" href="colors_8hh.html#a966c72d8d733c7734c6c784753d894c7">ANSI_COLOR_GREEN</a> <span class="stringliteral">&quot;%.1f%%&quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot;], elapsed time &quot;</span> <a class="code hl_define" href="colors_8hh.html#a966c72d8d733c7734c6c784753d894c7">ANSI_COLOR_GREEN</a> <span class="stringliteral">&quot;%ld&quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot; s, &quot;</span> <a class="code hl_define" href="colors_8hh.html#a966c72d8d733c7734c6c784753d894c7">ANSI_COLOR_GREEN</a> <span class="stringliteral">&quot;%llu&quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> <span class="stringliteral">&quot; events per s&quot;</span>,this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ae95c4e93a4bd8b7fec5cfc454fd7c94d">thread</a>, (perc_complete), now-<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a8bbac18262af021f9b44e6b6af252e64">starttime</a>, this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ac0f5d35b39294a8597812b9e4c574ad5">nEvents</a>/(now-<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a8bbac18262af021f9b44e6b6af252e64">starttime</a>));</div>
+<div class="line"><span class="lineno">  106</span>    std::cout&lt;&lt;std::flush;</div>
+<div class="line"><span class="lineno">  107</span>  }</div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_a8bbac18262af021f9b44e6b6af252e64"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#a8bbac18262af021f9b44e6b6af252e64">PIXIE::Reader::starttime</a></div><div class="ttdeci">time_t starttime</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00041">reader.hh:41</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -672,42 +713,42 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8cc_source.html#l00141">141</a> of file <a class="el" href="reader_8cc_source.html">reader.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  141</span>                   {</div>
-<div class="line"><span class="lineno">  142</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#aed38c96580fe22467fd7ac3d49275239">eventCtr</a> == <a class="code hl_define" href="definitions_8hh.html#ae42954bb8545d24e3e9dcde5920c9a0b">MAX_EVENTS</a>) {</div>
-<div class="line"><span class="lineno">  143</span>      <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#aed38c96580fe22467fd7ac3d49275239">eventCtr</a> = 0;</div>
-<div class="line"><span class="lineno">  144</span>    }</div>
-<div class="line"><span class="lineno">  145</span>    </div>
-<div class="line"><span class="lineno">  146</span>    this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a9e1ef7766d3ee935ff0b384d52d6a87c">end</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  147</span> </div>
-<div class="line"><span class="lineno">  148</span>    Event *<span class="keyword">event</span> = &amp;(<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#acc83dbcc5e0677cf293a5f9b8c49f3bb">events</a>[<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#aed38c96580fe22467fd7ac3d49275239">eventCtr</a>]); <span class="comment">//pointer to event</span></div>
-<div class="line"><span class="lineno">  149</span>    <span class="keywordtype">int</span> retval = <span class="keyword">event</span>-&gt;read(<span class="keyword">this</span>, <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#afb6553488e3a40a7625f18fd68333407">coincWindow</a>, <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a1bca2a0a2ef65c46e65a7ff932a18c2d">warnings</a>);</div>
-<div class="line"><span class="lineno">  150</span> </div>
-<div class="line"><span class="lineno">  151</span>    <span class="keywordflow">if</span> (retval == 0) {}  <span class="comment">//successful read</span></div>
-<div class="line"><span class="lineno">  152</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (retval == -1) { <span class="comment">//end of file </span></div>
-<div class="line"><span class="lineno">  153</span>      this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a9e1ef7766d3ee935ff0b384d52d6a87c">end</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  154</span>      <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  155</span>    }</div>
-<div class="line"><span class="lineno">  156</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (retval == 1) { <span class="comment">//same channel pileup</span></div>
-<div class="line"><span class="lineno">  157</span>      this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a75d5430b30747d8a8f4e2650d836b711">sameChanPU</a> += 1;                    </div>
-<div class="line"><span class="lineno">  158</span>    }</div>
-<div class="line"><span class="lineno">  159</span>        </div>
-<div class="line"><span class="lineno">  160</span>    <span class="comment">//increment counters</span></div>
-<div class="line"><span class="lineno">  161</span>    this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a4e64aae95c6689ee7770ff98de8900e1">pileups</a> += <span class="keyword">event</span>-&gt;pileups;</div>
-<div class="line"><span class="lineno">  162</span>    this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ae24f10cc7434b83d1d87892733debda8">badcfd</a> += <span class="keyword">event</span>-&gt;badcfd;</div>
-<div class="line"><span class="lineno">  163</span>    this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a0ce86f5114467a18c6e22f7115f00fec">subevents</a> += <span class="keyword">event</span>-&gt;nMeas;</div>
-<div class="line"><span class="lineno">  164</span>    this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ac0f5d35b39294a8597812b9e4c574ad5">nEvents</a> += 1;</div>
-<div class="line"><span class="lineno">  165</span>    this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ac743b3c98720b153ab06f1e17223f6ec">outofrange</a> += <span class="keyword">event</span>-&gt;outofrange;</div>
-<div class="line"><span class="lineno">  166</span>    <span class="keywordflow">if</span> (event-&gt;mult &lt; 5) {</div>
-<div class="line"><span class="lineno">  167</span>      this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ab55f638b22423b50b5bb35c1cb926c15">mults</a>[<span class="keyword">event</span>-&gt;mult-1] += 1;</div>
-<div class="line"><span class="lineno">  168</span>    }</div>
-<div class="line"><span class="lineno">  169</span> </div>
-<div class="line"><span class="lineno">  170</span>    ++<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#aed38c96580fe22467fd7ac3d49275239">eventCtr</a>;</div>
+<p class="definition">Definition at line <a class="el" href="reader_8cc_source.html#l00143">143</a> of file <a class="el" href="reader_8cc_source.html">reader.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  143</span>                   {</div>
+<div class="line"><span class="lineno">  144</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#aed38c96580fe22467fd7ac3d49275239">eventCtr</a> == <a class="code hl_define" href="definitions_8hh.html#ae42954bb8545d24e3e9dcde5920c9a0b">MAX_EVENTS</a>) {</div>
+<div class="line"><span class="lineno">  145</span>      <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#aed38c96580fe22467fd7ac3d49275239">eventCtr</a> = 0;</div>
+<div class="line"><span class="lineno">  146</span>    }</div>
+<div class="line"><span class="lineno">  147</span>    </div>
+<div class="line"><span class="lineno">  148</span>    this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a9e1ef7766d3ee935ff0b384d52d6a87c">end</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  149</span> </div>
+<div class="line"><span class="lineno">  150</span>    Event *<span class="keyword">event</span> = &amp;(<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#acc83dbcc5e0677cf293a5f9b8c49f3bb">events</a>[<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#aed38c96580fe22467fd7ac3d49275239">eventCtr</a>]); <span class="comment">//pointer to event</span></div>
+<div class="line"><span class="lineno">  151</span>    <span class="keywordtype">int</span> retval = <span class="keyword">event</span>-&gt;read(<span class="keyword">this</span>, <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#afb6553488e3a40a7625f18fd68333407">coincWindow</a>, <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a1bca2a0a2ef65c46e65a7ff932a18c2d">warnings</a>);</div>
+<div class="line"><span class="lineno">  152</span> </div>
+<div class="line"><span class="lineno">  153</span>    <span class="keywordflow">if</span> (retval == 0) {}  <span class="comment">//successful read</span></div>
+<div class="line"><span class="lineno">  154</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (retval == -1) { <span class="comment">//end of file </span></div>
+<div class="line"><span class="lineno">  155</span>      this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a9e1ef7766d3ee935ff0b384d52d6a87c">end</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  156</span>      <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  157</span>    }</div>
+<div class="line"><span class="lineno">  158</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (retval == 1) { <span class="comment">//same channel pileup</span></div>
+<div class="line"><span class="lineno">  159</span>      this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a75d5430b30747d8a8f4e2650d836b711">sameChanPU</a> += 1;                    </div>
+<div class="line"><span class="lineno">  160</span>    }</div>
+<div class="line"><span class="lineno">  161</span>        </div>
+<div class="line"><span class="lineno">  162</span>    <span class="comment">//increment counters</span></div>
+<div class="line"><span class="lineno">  163</span>    this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a4e64aae95c6689ee7770ff98de8900e1">pileups</a> += <span class="keyword">event</span>-&gt;pileups;</div>
+<div class="line"><span class="lineno">  164</span>    this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ae24f10cc7434b83d1d87892733debda8">badcfd</a> += <span class="keyword">event</span>-&gt;badcfd;</div>
+<div class="line"><span class="lineno">  165</span>    this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a0ce86f5114467a18c6e22f7115f00fec">subevents</a> += <span class="keyword">event</span>-&gt;nMeas;</div>
+<div class="line"><span class="lineno">  166</span>    this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ac0f5d35b39294a8597812b9e4c574ad5">nEvents</a> += 1;</div>
+<div class="line"><span class="lineno">  167</span>    this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ac743b3c98720b153ab06f1e17223f6ec">outofrange</a> += <span class="keyword">event</span>-&gt;outofrange;</div>
+<div class="line"><span class="lineno">  168</span>    <span class="keywordflow">if</span> (event-&gt;mult &lt; 5) {</div>
+<div class="line"><span class="lineno">  169</span>      this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ab55f638b22423b50b5bb35c1cb926c15">mults</a>[<span class="keyword">event</span>-&gt;mult-1] += 1;</div>
+<div class="line"><span class="lineno">  170</span>    }</div>
 <div class="line"><span class="lineno">  171</span> </div>
-<div class="line"><span class="lineno">  172</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  173</span>  }<span class="comment">//Reader::read</span></div>
-<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_acc83dbcc5e0677cf293a5f9b8c49f3bb"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#acc83dbcc5e0677cf293a5f9b8c49f3bb">PIXIE::Reader::events</a></div><div class="ttdeci">PIXIE::Event events[MAX_EVENTS]</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00050">reader.hh:50</a></div></div>
-<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_afb6553488e3a40a7625f18fd68333407"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#afb6553488e3a40a7625f18fd68333407">PIXIE::Reader::coincWindow</a></div><div class="ttdeci">int coincWindow</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00029">reader.hh:29</a></div></div>
+<div class="line"><span class="lineno">  172</span>    ++<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#aed38c96580fe22467fd7ac3d49275239">eventCtr</a>;</div>
+<div class="line"><span class="lineno">  173</span> </div>
+<div class="line"><span class="lineno">  174</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  175</span>  }<span class="comment">//Reader::read</span></div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_acc83dbcc5e0677cf293a5f9b8c49f3bb"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#acc83dbcc5e0677cf293a5f9b8c49f3bb">PIXIE::Reader::events</a></div><div class="ttdeci">PIXIE::Event events[MAX_EVENTS]</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00051">reader.hh:51</a></div></div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_afb6553488e3a40a7625f18fd68333407"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#afb6553488e3a40a7625f18fd68333407">PIXIE::Reader::coincWindow</a></div><div class="ttdeci">int coincWindow</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00030">reader.hh:30</a></div></div>
 <div class="ttc" id="adefinitions_8hh_html_ae42954bb8545d24e3e9dcde5920c9a0b"><div class="ttname"><a href="definitions_8hh.html#ae42954bb8545d24e3e9dcde5920c9a0b">MAX_EVENTS</a></div><div class="ttdeci">#define MAX_EVENTS</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8hh_source.html#l00004">definitions.hh:4</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -728,12 +769,12 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8cc_source.html#l00240">240</a> of file <a class="el" href="reader_8cc_source.html">reader.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  240</span>                                                     {</div>
-<div class="line"><span class="lineno">  241</span>    this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a421ed8ca4ba0264f9c1101fa21459057">tracealg</a> = alg;</div>
-<div class="line"><span class="lineno">  242</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  243</span>  }</div>
-<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_a421ed8ca4ba0264f9c1101fa21459057"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#a421ed8ca4ba0264f9c1101fa21459057">PIXIE::Reader::tracealg</a></div><div class="ttdeci">PIXIE::Trace::Algorithm * tracealg</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00035">reader.hh:35</a></div></div>
+<p class="definition">Definition at line <a class="el" href="reader_8cc_source.html#l00242">242</a> of file <a class="el" href="reader_8cc_source.html">reader.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  242</span>                                                     {</div>
+<div class="line"><span class="lineno">  243</span>    this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a421ed8ca4ba0264f9c1101fa21459057">tracealg</a> = alg;</div>
+<div class="line"><span class="lineno">  244</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  245</span>  }</div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_a421ed8ca4ba0264f9c1101fa21459057"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#a421ed8ca4ba0264f9c1101fa21459057">PIXIE::Reader::tracealg</a></div><div class="ttdeci">PIXIE::Trace::Algorithm * tracealg</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00036">reader.hh:36</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -761,11 +802,11 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00079">79</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   79</span>                                { <span class="comment">//window is in ns</span></div>
-<div class="line"><span class="lineno">   80</span>      <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#afb6553488e3a40a7625f18fd68333407">coincWindow</a> = (int)(window*3276.8);</div>
-<div class="line"><span class="lineno">   81</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#afb6553488e3a40a7625f18fd68333407">coincWindow</a>;</div>
-<div class="line"><span class="lineno">   82</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00083">83</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   83</span>                                { <span class="comment">//window is in ns</span></div>
+<div class="line"><span class="lineno">   84</span>      <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#afb6553488e3a40a7625f18fd68333407">coincWindow</a> = (int)(window*3276.8);</div>
+<div class="line"><span class="lineno">   85</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#afb6553488e3a40a7625f18fd68333407">coincWindow</a>;</div>
+<div class="line"><span class="lineno">   86</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -785,12 +826,12 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8cc_source.html#l00060">60</a> of file <a class="el" href="reader_8cc_source.html">reader.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   60</span>                                         {</div>
-<div class="line"><span class="lineno">   61</span>    fseek(this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a6d2bf732ff199ed45f260516507bf808">file</a>, s_offset, SEEK_SET);</div>
-<div class="line"><span class="lineno">   62</span>    this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ac7ddadef511f84bea18e6a287cdb38e0">start_offset</a> = s_offset;</div>
-<div class="line"><span class="lineno">   63</span>    <span class="keywordflow">return</span> s_offset;</div>
-<div class="line"><span class="lineno">   64</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="reader_8cc_source.html#l00062">62</a> of file <a class="el" href="reader_8cc_source.html">reader.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>                                         {</div>
+<div class="line"><span class="lineno">   63</span>    fseek(this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a6d2bf732ff199ed45f260516507bf808">file</a>, s_offset, SEEK_SET);</div>
+<div class="line"><span class="lineno">   64</span>    this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#ac7ddadef511f84bea18e6a287cdb38e0">start_offset</a> = s_offset;</div>
+<div class="line"><span class="lineno">   65</span>    <span class="keywordflow">return</span> s_offset;</div>
+<div class="line"><span class="lineno">   66</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -817,12 +858,12 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00088">88</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   88</span>                 {</div>
-<div class="line"><span class="lineno">   89</span>      <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a59724abfa68ca0b7a4225a66a636e1d1">eventsread</a> = 0;</div>
-<div class="line"><span class="lineno">   90</span>      time(&amp;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a8bbac18262af021f9b44e6b6af252e64">starttime</a>);</div>
-<div class="line"><span class="lineno">   91</span>    }</div>
-<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_a59724abfa68ca0b7a4225a66a636e1d1"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#a59724abfa68ca0b7a4225a66a636e1d1">PIXIE::Reader::eventsread</a></div><div class="ttdeci">size_t eventsread</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00041">reader.hh:41</a></div></div>
+<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00092">92</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   92</span>                 {</div>
+<div class="line"><span class="lineno">   93</span>      <a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a59724abfa68ca0b7a4225a66a636e1d1">eventsread</a> = 0;</div>
+<div class="line"><span class="lineno">   94</span>      time(&amp;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a8bbac18262af021f9b44e6b6af252e64">starttime</a>);</div>
+<div class="line"><span class="lineno">   95</span>    }</div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_reader_html_a59724abfa68ca0b7a4225a66a636e1d1"><div class="ttname"><a href="class_p_i_x_i_e_1_1_reader.html#a59724abfa68ca0b7a4225a66a636e1d1">PIXIE::Reader::eventsread</a></div><div class="ttdeci">size_t eventsread</div><div class="ttdef"><b>Definition:</b> <a href="reader_8hh_source.html#l00042">reader.hh:42</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -841,16 +882,16 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8cc_source.html#l00066">66</a> of file <a class="el" href="reader_8cc_source.html">reader.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   66</span>                                {</div>
-<div class="line"><span class="lineno">   67</span>    <span class="keyword">struct </span>stat stat;</div>
-<div class="line"><span class="lineno">   68</span>    <span class="keywordflow">if</span> (fstat(fileno(this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a6d2bf732ff199ed45f260516507bf808">file</a>), &amp;stat) != 0) {</div>
-<div class="line"><span class="lineno">   69</span>      std::cout &lt;&lt; <span class="stringliteral">&quot;Couldn&#39;t stat&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   70</span>    }</div>
-<div class="line"><span class="lineno">   71</span> </div>
-<div class="line"><span class="lineno">   72</span>    this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a838f7fc1f5b7db72f9eafa3c2ee55d49">fileLength</a> = stat.st_size;</div>
-<div class="line"><span class="lineno">   73</span>    <span class="keywordflow">return</span>(this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a838f7fc1f5b7db72f9eafa3c2ee55d49">fileLength</a>);    </div>
-<div class="line"><span class="lineno">   74</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="reader_8cc_source.html#l00068">68</a> of file <a class="el" href="reader_8cc_source.html">reader.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>                                {</div>
+<div class="line"><span class="lineno">   69</span>    <span class="keyword">struct </span>stat stat;</div>
+<div class="line"><span class="lineno">   70</span>    <span class="keywordflow">if</span> (fstat(fileno(this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a6d2bf732ff199ed45f260516507bf808">file</a>), &amp;stat) != 0) {</div>
+<div class="line"><span class="lineno">   71</span>      std::cout &lt;&lt; <span class="stringliteral">&quot;Couldn&#39;t stat&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   72</span>    }</div>
+<div class="line"><span class="lineno">   73</span> </div>
+<div class="line"><span class="lineno">   74</span>    this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a838f7fc1f5b7db72f9eafa3c2ee55d49">fileLength</a> = stat.st_size;</div>
+<div class="line"><span class="lineno">   75</span>    <span class="keywordflow">return</span>(this-&gt;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_reader.html#a838f7fc1f5b7db72f9eafa3c2ee55d49">fileLength</a>);    </div>
+<div class="line"><span class="lineno">   76</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -867,7 +908,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00076">76</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00080">80</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
 
 </div>
 </div>
@@ -883,7 +924,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00022">22</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00023">23</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
 
 </div>
 </div>
@@ -899,7 +940,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00029">29</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00030">30</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
 
 </div>
 </div>
@@ -915,7 +956,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00019">19</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00020">20</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
 
 </div>
 </div>
@@ -939,7 +980,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00056">56</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00057">57</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
 
 </div>
 </div>
@@ -955,7 +996,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00048">48</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00049">49</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
 
 </div>
 </div>
@@ -971,7 +1012,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00054">54</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00055">55</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
 
 </div>
 </div>
@@ -987,7 +1028,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00050">50</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00051">51</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
 
 </div>
 </div>
@@ -1003,7 +1044,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00041">41</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00042">42</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
 
 </div>
 </div>
@@ -1019,7 +1060,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00033">33</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00034">34</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
 
 </div>
 </div>
@@ -1035,7 +1076,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00037">37</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00038">38</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
 
 </div>
 </div>
@@ -1051,7 +1092,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00038">38</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00039">39</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
 
 </div>
 </div>
@@ -1067,7 +1108,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00020">20</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00021">21</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
 
 </div>
 </div>
@@ -1083,7 +1124,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00043">43</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00044">44</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
 
 </div>
 </div>
@@ -1099,7 +1140,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00053">53</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00054">54</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
 
 </div>
 </div>
@@ -1115,7 +1156,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00051">51</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00052">52</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
 
 </div>
 </div>
@@ -1131,7 +1172,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00027">27</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00028">28</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
 
 </div>
 </div>
@@ -1147,7 +1188,39 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00024">24</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00025">25</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
+
+</div>
+</div>
+<a id="a00fb68aec2438b652adc6524be1be520" name="a00fb68aec2438b652adc6524be1be520"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00fb68aec2438b652adc6524be1be520">&#9670;&nbsp;</a></span>NSCLDAQ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PIXIE::Reader::NSCLDAQ</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00059">59</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
+
+</div>
+</div>
+<a id="aa503b0ca55f879e783fba0306734bc18" name="aa503b0ca55f879e783fba0306734bc18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa503b0ca55f879e783fba0306734bc18">&#9670;&nbsp;</a></span>nsclreader</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_p_i_x_i_e_1_1_n_s_c_l_reader.html">NSCLReader</a>* PIXIE::Reader::nsclreader</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00060">60</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
 
 </div>
 </div>
@@ -1163,7 +1236,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00026">26</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00027">27</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
 
 </div>
 </div>
@@ -1179,7 +1252,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00021">21</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00022">22</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
 
 </div>
 </div>
@@ -1195,7 +1268,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00031">31</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00032">32</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
 
 </div>
 </div>
@@ -1211,7 +1284,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00025">25</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00026">26</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
 
 </div>
 </div>
@@ -1227,7 +1300,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00044">44</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00045">45</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
 
 </div>
 </div>
@@ -1243,7 +1316,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00040">40</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00041">41</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
 
 </div>
 </div>
@@ -1259,7 +1332,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00023">23</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00024">24</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
 
 </div>
 </div>
@@ -1275,7 +1348,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00046">46</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00047">47</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
 
 </div>
 </div>
@@ -1291,7 +1364,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00035">35</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00036">36</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
 
 </div>
 </div>
@@ -1307,7 +1380,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00030">30</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reader_8hh_source.html#l00031">31</a> of file <a class="el" href="reader_8hh_source.html">reader.hh</a>.</p>
 
 </div>
 </div>

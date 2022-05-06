@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['reader_0',['Reader',['../class_p_i_x_i_e_1_1_reader.html',1,'PIXIE']]]
+  ['peaktail_0',['PeakTail',['../class_p_i_x_i_e_1_1_trace_1_1_peak_tail.html',1,'PIXIE::Trace']]]
 ];

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['reader_2ecc_0',['reader.cc',['../reader_8cc.html',1,'']]],
-  ['reader_2ehh_1',['reader.hh',['../reader_8hh.html',1,'']]],
-  ['readme_2emd_2',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]]
+  ['pixie_2ehh_0',['pixie.hh',['../pixie_8hh.html',1,'']]],
+  ['process_2ecc_1',['process.cc',['../process_8cc.html',1,'']]]
 ];

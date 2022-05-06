@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['set_5falgorithm_0',['set_algorithm',['../class_p_i_x_i_e_1_1_reader.html#a9d5674e7e9ffe3b69a9b262c7a2ac498',1,'PIXIE::Reader']]],
-  ['set_5falgorithms_1',['set_algorithms',['../class_p_i_x_i_e_1_1_experiment___definition.html#aec71d748843362f4d7217c5db1dd0ce9',1,'PIXIE::Experiment_Definition']]],
-  ['set_5fcoinc_2',['set_coinc',['../class_p_i_x_i_e_1_1_reader.html#abccceddec740a73144ec975512b6f1ea',1,'PIXIE::Reader']]],
-  ['set_5foffset_3',['set_offset',['../class_p_i_x_i_e_1_1_reader.html#ad897e69d49ff92db19104b099665c78f',1,'PIXIE::Reader']]],
-  ['settracealg_4',['setTraceAlg',['../namespace_p_i_x_i_e.html#a1dc265a21039e9941fc85af4ddcd7a84',1,'PIXIE']]],
-  ['slot_5',['Slot',['../struct_p_i_x_i_e_1_1_experiment___definition_1_1_slot.html#a87d8f34fc3e44e52f02a55fe9c8b1f1d',1,'PIXIE::Experiment_Definition::Slot']]],
-  ['start_6',['start',['../class_p_i_x_i_e_1_1_reader.html#aa1bee3fadbcc007046d27f269f597887',1,'PIXIE::Reader']]]
+  ['print_0',['print',['../class_p_i_x_i_e_1_1_experiment___definition.html#a8566dd526c526b066c1d675f2ea3e2db',1,'PIXIE::Experiment_Definition::print()'],['../class_p_i_x_i_e_1_1_experiment___definition.html#ab2dc99614b57190162c685581f857a83',1,'PIXIE::Experiment_Definition::print(std::ostream &amp;out)'],['../class_p_i_x_i_e_1_1_measurement.html#a74305d42b7585f74b394d7cc9d174764',1,'PIXIE::Measurement::print()'],['../class_p_i_x_i_e_1_1_event.html#a16453e60e4bcd46e755c94418924272f',1,'PIXIE::Event::print()']]],
+  ['printsummary_1',['printSummary',['../class_p_i_x_i_e_1_1_reader.html#a071bfe4a4c85addb5506826a30199a97',1,'PIXIE::Reader']]],
+  ['printupdate_2',['printUpdate',['../class_p_i_x_i_e_1_1_reader.html#a2b620bd53cc95def1ff061026b0c9c25',1,'PIXIE::Reader']]],
+  ['process_3',['Process',['../namespace_p_i_x_i_e.html#ad864ab63e26cb252877ab4d1c8acd85b',1,'PIXIE::Process()'],['../class_p_i_x_i_e_1_1_trace_1_1_algorithm.html#a74e1daba588fc6a054bc45d8f85b2aad',1,'PIXIE::Trace::Algorithm::Process()'],['../class_p_i_x_i_e_1_1_trace_1_1_peak_tail.html#aa7ce2be65200d9e7a70e2bc226a71ec8',1,'PIXIE::Trace::PeakTail::Process()'],['../class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c.html#ab0fc04f3144e4272d6f42800c4dc4183',1,'PIXIE::Trace::TrapezoidQDC::Process()'],['../class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#ac5d8fa6692cef0675a261c191e856fb8',1,'PIXIE::Trace::Trapezoid::Process()']]],
+  ['processcfd_4',['ProcessCFD',['../class_p_i_x_i_e_1_1_measurement.html#aa7bc1d08159fb77021fe4b760278c305',1,'PIXIE::Measurement']]],
+  ['processtime_5',['ProcessTime',['../class_p_i_x_i_e_1_1_measurement.html#abf6f92307ac08ac10ddbe40474ff2da0',1,'PIXIE::Measurement']]],
+  ['prototype_6',['Prototype',['../class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#a51cca59d8c13a43f3cf01f1eae8353a8',1,'PIXIE::Trace::Trapezoid::Prototype()'],['../class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c.html#a69db32f78148ec967fa97e969b34df89',1,'PIXIE::Trace::TrapezoidQDC::Prototype()'],['../class_p_i_x_i_e_1_1_trace_1_1_peak_tail.html#aab290fa71e8d906d79bc9a3a1de8ddb5',1,'PIXIE::Trace::PeakTail::Prototype()'],['../class_p_i_x_i_e_1_1_trace_1_1_algorithm.html#aac695c0f7599c613b641d9b72dfa6dd7',1,'PIXIE::Trace::Algorithm::Prototype()']]]
 ];

@@ -7,6 +7,13 @@ var searchData=
   ['reader_2ecc_4',['reader.cc',['../reader_8cc.html',1,'']]],
   ['reader_2ehh_5',['reader.hh',['../reader_8hh.html',1,'']]],
   ['readme_2emd_6',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
-  ['rejectscpu_7',['RejectSCPU',['../class_p_i_x_i_e_1_1_reader.html#a046891d103ef8746fc15a621676b81cd',1,'PIXIE::Reader']]],
-  ['root_5fcompile_8',['ROOT_COMPILE',['../definitions_8hh.html#a7f7cf5ecd4ea4fe07123da166d3c3178',1,'definitions.hh']]]
+  ['readnextfragment_7',['readNextFragment',['../class_p_i_x_i_e_1_1_n_s_c_l_reader.html#a16bab1f0a05ece0a9d60ff6ff9c5852e',1,'PIXIE::NSCLReader']]],
+  ['readringitembody_8',['readRingItemBody',['../class_p_i_x_i_e_1_1_n_s_c_l_reader.html#a78428cb78a9fb5b8cdac88c2d8a7406b',1,'PIXIE::NSCLReader']]],
+  ['readringitembodyheader_9',['readRingItemBodyHeader',['../class_p_i_x_i_e_1_1_n_s_c_l_reader.html#a405fa0a44294d4ef9614620d0b5f69a6',1,'PIXIE::NSCLReader']]],
+  ['readringitemheader_10',['readRingItemHeader',['../class_p_i_x_i_e_1_1_n_s_c_l_reader.html#ac13d50caf383d2b096043f770c74ebd9',1,'PIXIE::NSCLReader']]],
+  ['rejectscpu_11',['RejectSCPU',['../class_p_i_x_i_e_1_1_reader.html#a046891d103ef8746fc15a621676b81cd',1,'PIXIE::Reader']]],
+  ['ri_5fsize_12',['ri_size',['../class_p_i_x_i_e_1_1_n_s_c_l_reader.html#ab303c4f20abd69c93e0d08cf286f785a',1,'PIXIE::NSCLReader']]],
+  ['ri_5ftype_13',['ri_type',['../class_p_i_x_i_e_1_1_n_s_c_l_reader.html#a95a5e4361c7e3012e857c50594e3a38e',1,'PIXIE::NSCLReader']]],
+  ['rib_5fsize_14',['rib_size',['../class_p_i_x_i_e_1_1_n_s_c_l_reader.html#aa8e88e45223d6076a83dcd21df5cc723',1,'PIXIE::NSCLReader']]],
+  ['root_5fcompile_15',['ROOT_COMPILE',['../definitions_8hh.html#a7f7cf5ecd4ea4fe07123da166d3c3178',1,'definitions.hh']]]
 ];

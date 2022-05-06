@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['pixie_2ehh_0',['pixie.hh',['../pixie_8hh.html',1,'']]],
-  ['process_2ecc_1',['process.cc',['../process_8cc.html',1,'']]]
+  ['nsclreader_2ecc_0',['nsclreader.cc',['../nsclreader_8cc.html',1,'']]],
+  ['nsclreader_2ehh_1',['nsclreader.hh',['../nsclreader_8hh.html',1,'']]]
 ];

@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['read_0',['read',['../class_p_i_x_i_e_1_1_event.html#a26b35f1babc2d2dc92db286381221229',1,'PIXIE::Event::read()'],['../class_p_i_x_i_e_1_1_experiment___definition.html#a48d0d2442412ba4f0a450ead002bd650',1,'PIXIE::Experiment_Definition::read()'],['../class_p_i_x_i_e_1_1_reader.html#a132af92b0da147eddd7db419d5d97229',1,'PIXIE::Reader::read()']]],
-  ['read_5ffull_1',['read_full',['../class_p_i_x_i_e_1_1_measurement.html#ab52c696179c4bb8c6447fe375f696c90',1,'PIXIE::Measurement']]],
-  ['read_5fheader_2',['read_header',['../class_p_i_x_i_e_1_1_measurement.html#ae44119a232562550787b78263c87e819',1,'PIXIE::Measurement']]],
-  ['reader_3',['Reader',['../class_p_i_x_i_e_1_1_reader.html#a0bed6c777200e6d0b818c1ead0dea7e8',1,'PIXIE::Reader']]]
+  ['offset_0',['offset',['../class_p_i_x_i_e_1_1_reader.html#a58b8de6c0c1eddb1befb9898b6e335e6',1,'PIXIE::Reader']]],
+  ['open_1',['open',['../class_p_i_x_i_e_1_1_experiment___definition.html#ab68933339e663b1e6fe6482bf510a58c',1,'PIXIE::Experiment_Definition::open()'],['../class_p_i_x_i_e_1_1_reader.html#a4a55641e5cd36c07ea13fbbdf69d1573',1,'PIXIE::Reader::open()']]],
+  ['operator_28_29_2',['operator()',['../struct_p_i_x_i_e_1_1_mask.html#aacbf8f9d5a34ec7afd71c58e12fd8284',1,'PIXIE::Mask']]],
+  ['operator_3c_3',['operator&lt;',['../struct_p_i_x_i_e_1_1_experiment___definition_1_1_channel.html#ae05ff08abfad192f5a5a5d6d701957d4',1,'PIXIE::Experiment_Definition::Channel']]],
+  ['operator_3d_3d_4',['operator==',['../struct_p_i_x_i_e_1_1_experiment___definition_1_1_channel.html#a1ee5e4edb55d4e2ef25006fdc9b341df',1,'PIXIE::Experiment_Definition::Channel']]]
 ];

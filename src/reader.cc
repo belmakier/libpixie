@@ -49,6 +49,8 @@ namespace PIXIE
 
     this->warnings = false;
     this->RejectSCPU = false;
+
+    this->NSCLDAQ = false;
   }
   
   Reader::~Reader() {}
