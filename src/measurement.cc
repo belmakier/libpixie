@@ -84,8 +84,19 @@ namespace PIXIE {
 
   int Measurement::read_header(Reader *reader) {
     uint32_t firstWords[4];
-    if (fread(&firstWords, (size_t) sizeof(int)*4, (size_t) 1, reader->file) != 1) {
-      return -1;    
+    if (!reader->NSCLDAQ) {
+      if (fread(&firstWords, (size_t) sizeof(int)*4, (size_t) 1, reader->file) != 1) {
+        return -1;    
+      }
+    }
+    else {
+      //some logic here to navigate NSCL data structures and find the next PIXIE fragment?
+      if (reader->nsclreader->findNextFragment(reader->file) < 0 ) {
+        return -1;
+      }
+      if (fread(&firstWords, (size_t) sizeof(int)*4, (size_t) 1, reader->file) != 1) {
+        return -1;    
+      }
     }
     
     channelNumber = mChannelNumber(firstWords[0]);

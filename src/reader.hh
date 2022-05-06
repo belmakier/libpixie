@@ -11,6 +11,7 @@
 #include "event.hh"
 #include "traces.hh"
 #include "definitions.hh"
+#include "nsclreader.hh"
 
 namespace PIXIE {
   class Reader {
@@ -54,6 +55,9 @@ namespace PIXIE {
     int eventCtr;
 
     static float dither;
+
+    bool NSCLDAQ;
+    NSCLReader *nsclreader;
     
   public:
     Reader();
@@ -88,6 +92,11 @@ namespace PIXIE {
     void start() {
       eventsread = 0;
       time(&starttime);
+    }
+
+    void nscldaq() {
+      NSCLDAQ = true;
+      nsclreader = new NSCLReader();
     }
     
   };

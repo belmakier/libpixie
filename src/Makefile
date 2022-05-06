@@ -1,20 +1,23 @@
-FLAGS = -std=c++11 -O3 #-macos-version-min=11.4
-COMPILER=g++  #make this g++ if linux
+FLAGS = -std=c++17 -O3 -macos-version-min=11.6
+COMPILER=clang++  #make this g++ if linux
 
 #define these for ROOT compilation
-FLAGS = -std=c++14 -I`root-config --incdir` -I../extern -O3 -g #-mmacos-version-min=11.4
+FLAGS = -std=c++17 -I`root-config --incdir` -I../extern -O3 -g -mmacos-version-min=11.6
 ROOTFLAGS = -L`root-config --libdir` `root-config --glibs --new `
 
 all : libpixie.so
 
-libpixie.so : measurement.o reader.o event.o experiment_definition.o trace_algorithms.o pixie.hh traces.hh trace_algorithms.hh
-		$(COMPILER) $(FLAGS) -shared -o ../lib/libpixie.so ../obj/measurement.o ../obj/event.o ../obj/reader.o ../obj/experiment_definition.o ../obj/trace_algorithms.o $(ROOTFLAGS)
+libpixie.so : measurement.o reader.o nsclreader.o event.o experiment_definition.o trace_algorithms.o pixie.hh traces.hh trace_algorithms.hh nsclreader.hh
+		$(COMPILER) $(FLAGS) -shared -o ../lib/libpixie.so ../obj/measurement.o ../obj/event.o ../obj/reader.o ../obj/nsclreader.o ../obj/experiment_definition.o ../obj/trace_algorithms.o $(ROOTFLAGS)
 
 measurement.o : measurement.cc measurement.hh
 	$(COMPILER) $(FLAGS) -fPIC -c -o ../obj/measurement.o measurement.cc
 
 reader.o : reader.cc reader.hh
 	$(COMPILER) $(FLAGS) -fPIC -c -o ../obj/reader.o reader.cc
+
+nsclreader.o : nsclreader.cc nsclreader.hh
+	$(COMPILER) $(FLAGS) -fPIC -c -o ../obj/nsclreader.o nsclreader.cc
 
 experiment_definition.o : experiment_definition.cc experiment_definition.hh
 	$(COMPILER) $(FLAGS) -fPIC -c -o ../obj/experiment_definition.o experiment_definition.cc

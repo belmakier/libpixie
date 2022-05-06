@@ -91,16 +91,19 @@ namespace PIXIE
         mult = mult + 1;
 		 
         if (next_meas->eventTime<maxTime-coincWindow) {
-          std::cout<< ANSI_COLOR_RED "\nWarning! File is not properly time-sorted" << std::endl;
-          std::cout<< "First event: "
-                   << lastCrate << "." 
-                   << lastSlot << "." 
-                   << lastChan << "   " << maxTime - coincWindow << std::endl;
-          std::cout<< "Second event: "
-                   << next_meas->crateID << "."
-                   << next_meas->slotID << "."
-                   << next_meas->channelNumber << "   " << next_meas->eventTime << ANSI_COLOR_RESET << std::endl;
-
+          //this is super strict, even up to CFD timing
+          //relax somewhat:
+          if (next_meas->eventTime+32768<maxTime-coincWindow) {  //within 10 ns
+            std::cout<< ANSI_COLOR_RED "\nWarning! File is not properly time-sorted" << std::endl;
+            std::cout<< "First event: "
+                     << lastCrate << "." 
+                     << lastSlot << "." 
+                     << lastChan << "   " << maxTime - coincWindow << std::endl;
+            std::cout<< "Second event: "
+                     << next_meas->crateID << "."
+                     << next_meas->slotID << "."
+                     << next_meas->channelNumber << "   " << next_meas->eventTime << ANSI_COLOR_RESET << std::endl;
+          }
         }
                 
         lastCrate = next_meas->crateID;
