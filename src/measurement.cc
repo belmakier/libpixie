@@ -122,7 +122,7 @@ namespace PIXIE {
     }
     else {
       std::cout << "\nWarning! CrateID.SlotID.ChannelNumber " << crateID << "." << slotID << "." << channelNumber << " not found" << std::endl;
-      eventTime = timestamp;
+      eventTime = timestamp<<15;
       eventEnergy=mEventEnergy(firstWords[3]);
       traceLength=mTraceLength(firstWords[3]);
       outOfRange=mTraceOutRange(firstWords[3]);
@@ -174,6 +174,11 @@ namespace PIXIE {
     //no trace, do nothing
     if ((eventLength - headerLength) == 0) {;}
     //skip trace if not needed
+    else if (!channel) {
+      if (fseek(reader->file, (eventLength-headerLength)*4, SEEK_CUR)) {
+        return -1;
+      }
+    }
     else if (outTrace==NULL && !channel->traces){
       if (fseek(reader->file, (eventLength-headerLength)*4, SEEK_CUR)) {
         return -1;

@@ -31,169 +31,199 @@
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00027}00027         std::cout << \textcolor{stringliteral}{"{}============= RESUME RUN ==============="{}} << std::endl;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00028}00028       \}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00029}00029       \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a95a5e4361c7e3012e857c50594e3a38e}{ri\_type}} == 20) \{}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00030}00030         std::cout << std::endl;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00031}00031         std::cout << \textcolor{stringliteral}{"{}SCALERS FOUND..."{}} << std::endl;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00032}00032       \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00033}00033       \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00034}00034         std::cout << std::endl;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00035}00035         std::cout << \textcolor{stringliteral}{"{}Untreated Ring item: "{}} << std::endl;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00036}00036         std::cout << \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ab303c4f20abd69c93e0d08cf286f785a}{ri\_size}} << \textcolor{stringliteral}{"{}   "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a95a5e4361c7e3012e857c50594e3a38e}{ri\_type}} << std::endl;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00037}00037       \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00038}00038     \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00039}00039     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a95a5e4361c7e3012e857c50594e3a38e}{ri\_type}};}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00040}00040   \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00041}00041 }
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00042}\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a405fa0a44294d4ef9614620d0b5f69a6}{00042}}   \textcolor{keywordtype}{int} \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a405fa0a44294d4ef9614620d0b5f69a6}{NSCLReader::readRingItemBodyHeader}}(FILE *file) \{}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00043}00043     uint32\_t ribh\_size;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00044}00044     uint64\_t ribh\_ts;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00045}00045     uint32\_t ribh\_sid;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00046}00046     uint32\_t ribh\_bt;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00047}00047     \textcolor{keywordflow}{if} (fread(\&ribh\_size, (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}), 1, file) != 1) \{}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00048}00048       \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00049}00049     \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00050}00050     \textcolor{keywordflow}{if} (fread(\&ribh\_ts, (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(uint64\_t), 1, file) != 1) \{}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00051}00051       \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00052}00052     \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00053}00053     \textcolor{keywordflow}{if} (fread(\&ribh\_sid, (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}), 1, file) != 1) \{}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00054}00054       \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00055}00055     \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00056}00056     \textcolor{keywordflow}{if} (fread(\&ribh\_bt, (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}), 1, file) != 1) \{}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00057}00057       \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00058}00058     \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00059}00059 }
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00060}00060     \textcolor{comment}{/*}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00061}00061 \textcolor{comment}{    std::cout << "{}Ring Item Body Header: "{} << std::endl;}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00062}00062 \textcolor{comment}{    std::cout << "{}           size : "{} << ribh\_size << std::endl;}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00063}00063 \textcolor{comment}{    std::cout << "{}      timestamp : "{} << ribh\_ts << std::endl;}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00064}00064 \textcolor{comment}{    std::cout << "{}      source ID : "{} << ribh\_sid << std::endl;}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00065}00065 \textcolor{comment}{    std::cout << "{}   barrier type : "{} << ribh\_bt << std::endl;}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00066}00066 \textcolor{comment}{    */}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00067}00067     \textcolor{keywordflow}{return} ribh\_size;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00068}00068   \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00069}00069   }
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00070}\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a78428cb78a9fb5b8cdac88c2d8a7406b}{00070}}   \textcolor{keywordtype}{int} \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a78428cb78a9fb5b8cdac88c2d8a7406b}{NSCLReader::readRingItemBody}}(FILE *file) \{}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00071}00071     \textcolor{keywordflow}{if} (fread(\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}}, (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}), 1, file) != 1) \{}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00072}00072       \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00073}00073     \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00074}00074     \textcolor{comment}{//std::cout << "{}Reading ring item body size = "{} << rib\_size << std::endl;}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00075}00075     \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}} -\/= 4;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00076}00076     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}};}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00077}00077   \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00078}00078 }
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00079}\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a16bab1f0a05ece0a9d60ff6ff9c5852e}{00079}}   \textcolor{keywordtype}{int} \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a16bab1f0a05ece0a9d60ff6ff9c5852e}{NSCLReader::readNextFragment}}(FILE *file) \{}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00080}00080     \textcolor{comment}{//this skips over the fragment header, the ring item header, and the ring item body header associated with the fragment}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00081}00081     \textcolor{comment}{//reads the first 2 words of the ring item body (body size + device info)}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00082}00082     \textcolor{comment}{//leaves the pointer right at the beginning of the actual PIXIE fragment}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00083}00083     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}} > 48) \{}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00084}00084       \textcolor{comment}{//std::cout << "{}rib\_size = "{} << rib\_size << std::endl;}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00085}00085       uint64\_t frag\_ts;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00086}00086       uint32\_t frag\_sid;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00087}00087       uint32\_t frag\_paysize;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00088}00088       uint32\_t frag\_bt;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00089}00089 }
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00090}00090       uint32\_t frag\_rih\_size;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00091}00091       uint32\_t frag\_rih\_type;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00092}00092       }
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00093}00093       uint32\_t frag\_ribh\_size;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00094}00094       uint64\_t frag\_ribh\_ts;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00095}00095       uint32\_t frag\_ribh\_sid;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00096}00096       uint32\_t frag\_ribh\_bt;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00097}00097 }
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00098}00098       \textcolor{keywordflow}{if} (fread(\&frag\_ts, (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(uint64\_t), 1, file) != 1) \{ \textcolor{keywordflow}{return} -\/1; \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00099}00099       \textcolor{keywordflow}{if} (fread(\&frag\_sid, (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}), 1, file) != 1) \{ \textcolor{keywordflow}{return} -\/1; \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00100}00100       \textcolor{keywordflow}{if} (fread(\&frag\_paysize, (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}), 1, file) != 1) \{ \textcolor{keywordflow}{return} -\/1; \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00101}00101       \textcolor{keywordflow}{if} (fread(\&frag\_bt, (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}), 1, file) != 1) \{ \textcolor{keywordflow}{return} -\/1; \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00102}00102 }
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00103}00103       \textcolor{keywordflow}{if} (fread(\&frag\_rih\_size, (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}), 1, file) != 1) \{ \textcolor{keywordflow}{return} -\/1; \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00104}00104       \textcolor{keywordflow}{if} (fread(\&frag\_rih\_type, (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}), 1, file) != 1) \{ \textcolor{keywordflow}{return} -\/1; \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00105}00105 }
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00106}00106       \textcolor{keywordflow}{if} (fread(\&frag\_ribh\_size, (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}), 1, file) != 1) \{ \textcolor{keywordflow}{return} -\/1; \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00107}00107       \textcolor{keywordflow}{if} (fread(\&frag\_ribh\_ts, (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(uint64\_t), 1, file) != 1) \{ \textcolor{keywordflow}{return} -\/1; \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00108}00108       \textcolor{keywordflow}{if} (fread(\&frag\_ribh\_sid, (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}), 1, file) != 1) \{ \textcolor{keywordflow}{return} -\/1; \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00109}00109       \textcolor{keywordflow}{if} (fread(\&frag\_ribh\_bt, (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}), 1, file) != 1) \{ \textcolor{keywordflow}{return} -\/1; \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00110}00110 }
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00111}00111       \textcolor{comment}{/*}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00112}00112 \textcolor{comment}{      std::cout << "{}Fragment Header: "{} << std::endl;}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00113}00113 \textcolor{comment}{      std::cout << "{}       Timestamp: "{} << frag\_ts << std::endl;}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00114}00114 \textcolor{comment}{      std::cout << "{}       Source ID: "{} << frag\_sid << std::endl;}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00115}00115 \textcolor{comment}{      std::cout << "{}    Payload Size: "{} << frag\_paysize << std::endl;}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00116}00116 \textcolor{comment}{      std::cout << "{}    Barrier Type: "{} << frag\_bt << std::endl;}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00117}00117 \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00118}00118 \textcolor{comment}{      std::cout << "{}Fragment RIH: "{} << std::endl;}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00119}00119 \textcolor{comment}{      std::cout << "{}            Size: "{} << frag\_rih\_size << std::endl;}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00120}00120 \textcolor{comment}{      std::cout << "{}            Type: "{} << frag\_rih\_type << std::endl;}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00121}00121 \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00122}00122 \textcolor{comment}{      }}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00123}00123 \textcolor{comment}{      std::cout << "{}Fragment RIBH: "{} << std::endl;}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00124}00124 \textcolor{comment}{      std::cout << "{}            Size: "{} << frag\_ribh\_size << std::endl;}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00125}00125 \textcolor{comment}{      std::cout << "{}       Timestamp: "{} << frag\_ribh\_ts << std::endl;}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00126}00126 \textcolor{comment}{      std::cout << "{}       Source ID: "{} << frag\_ribh\_sid << std::endl;}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00127}00127 \textcolor{comment}{      std::cout << "{}    Barrier Type: "{} << frag\_ribh\_bt << std::endl;}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00128}00128 \textcolor{comment}{      */}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00129}00129       }
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00130}00130       uint32\_t frag\_size;  \textcolor{comment}{//in 16 bit words not 32 bit words}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00131}00131       uint32\_t dev\_info;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00132}00132       \textcolor{keywordflow}{if} (fread(\&frag\_size, (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}), 1, file) != 1) \{}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00133}00133         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00134}00134       \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00135}00135       \textcolor{keywordflow}{if} (fread(\&dev\_info, (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}), 1, file) != 1) \{}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00136}00136         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00137}00137       \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00138}00138 }
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00139}00139       \textcolor{comment}{/*}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00140}00140 \textcolor{comment}{      uint32\_t ADC\_freq = (dev\_info \& 0x0000ffff);}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00141}00141 \textcolor{comment}{      uint32\_t ADC\_res = (dev\_info \& 0xff0000) >> 16;}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00142}00142 \textcolor{comment}{      uint32\_t mod\_rev = (dev\_info \& 0xff000000) >> 24;}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00143}00143 \textcolor{comment}{      }}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00144}00144 \textcolor{comment}{      std::cout << "{}dev\_info = "{} << ADC\_freq << "{}   "{} << ADC\_res << "{}  "{} << mod\_rev << std::endl;}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00145}00145 \textcolor{comment}{           }}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00146}00146 \textcolor{comment}{      std::cout << "{}frag\_size = "{} << frag\_size << std::endl;}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00147}00147 \textcolor{comment}{      */}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00148}00148       }
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00149}00149       \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}} -\/= (48 + frag\_size*2);}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00150}00150       \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}} < 0 ) \{}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00151}00151         std::cout << \textcolor{stringliteral}{"{}SEVERE ERROR, NAVIGATION THROUGH RING BUFFER BROKEN"{}} << std::endl;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00152}00152         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00153}00153       \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00154}00154     \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00155}00155     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}} < 48) \{}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00156}00156       std::cout << \textcolor{stringliteral}{"{}REMAINING DATA: "{}} << std::endl;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00157}00157       \textcolor{keywordtype}{int} rib\_tmp = \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}};}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00158}00158       \textcolor{keywordtype}{int} data;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00159}00159       \textcolor{keywordflow}{while} (rib\_tmp > 0) \{}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00160}00160         fread(\&data, (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}), 1, file);}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00161}00161         std::cout << data << std::endl;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00162}00162         rib\_tmp -\/= 4;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00163}00163       \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00164}00164     \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00165}00165     \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00166}00166       std::cout << \textcolor{stringliteral}{"{}Warning! readNextFragment called when rib\_size == 0"{}} << std::endl;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00167}00167     \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00168}00168     \textcolor{comment}{//std::cout << "{}readNextFragment returning "{} << rib\_size << std::endl;}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00169}00169     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}};}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00170}00170   \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00171}00171 }
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00172}\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ad26c1515bfdd5f491a4640c9aa225ac7}{00172}}   \textcolor{keywordtype}{int} \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ad26c1515bfdd5f491a4640c9aa225ac7}{NSCLReader::findNextFragment}}(FILE *file) \{}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00173}00173     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}} > 0) \{}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00174}00174       \textcolor{keywordflow}{return} \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a16bab1f0a05ece0a9d60ff6ff9c5852e}{readNextFragment}}(file);}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00175}00175     \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00176}00176 }
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00177}00177     \textcolor{keywordflow}{while} (\textcolor{keyword}{true}) \{}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00178}00178       \textcolor{keywordtype}{int} type = \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ac13d50caf383d2b096043f770c74ebd9}{readRingItemHeader}}(file);}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00179}00179       \textcolor{keywordflow}{if} (type == -\/1) \{ \textcolor{keywordflow}{return} -\/1; \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00180}00180       \textcolor{keywordflow}{if} (type != 30) \{}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00181}00181         fseek(file, \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ab303c4f20abd69c93e0d08cf286f785a}{ri\_size}}-\/8, SEEK\_CUR);  \textcolor{comment}{//skip the rest of the non-\/physics event}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00182}00182         \textcolor{keywordflow}{continue};}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00183}00183       \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00184}00184       \textcolor{keywordtype}{int} ribh\_size = \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a405fa0a44294d4ef9614620d0b5f69a6}{readRingItemBodyHeader}}(file);}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00185}00185       \textcolor{keywordflow}{if} (ribh\_size < 0) \{ \textcolor{keywordflow}{return} ribh\_size; \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00186}00186 }
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00187}00187       \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a78428cb78a9fb5b8cdac88c2d8a7406b}{readRingItemBody}}(file);}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00188}00188       \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}} < 0) \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}}; \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00189}00189 }
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00190}00190       \textcolor{keywordflow}{return} \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a16bab1f0a05ece0a9d60ff6ff9c5852e}{readNextFragment}}(file);      }
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00191}00191     \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00192}00192   \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00193}00193 \}    }
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00030}00030          \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00031}00031 \textcolor{comment}{        std::cout << std::endl;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00032}00032 \textcolor{comment}{        std::cout << "{}SCALERS FOUND..."{} << std::endl;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00033}00033 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00034}00034       \}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00035}00035       \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00036}00036          \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00037}00037 \textcolor{comment}{        std::cout << std::endl;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00038}00038 \textcolor{comment}{        std::cout << "{}Untreated Ring item: "{} << std::endl;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00039}00039 \textcolor{comment}{        std::cout << ri\_size << "{}   "{} << ri\_type << std::endl;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00040}00040 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00041}00041       \}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00042}00042     \}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00043}00043     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a95a5e4361c7e3012e857c50594e3a38e}{ri\_type}};}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00044}00044   \}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00046}\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a405fa0a44294d4ef9614620d0b5f69a6}{00046}}   \textcolor{keywordtype}{int} \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a405fa0a44294d4ef9614620d0b5f69a6}{NSCLReader::readRingItemBodyHeader}}(FILE *file) \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00047}00047     uint32\_t ribh\_size;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00048}00048     uint64\_t ribh\_ts;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00049}00049     uint32\_t ribh\_sid;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00050}00050     uint32\_t ribh\_bt;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00051}00051     \textcolor{keywordflow}{if} (fread(\&ribh\_size, (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}), 1, file) != 1) \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00052}00052       \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00053}00053     \}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00054}00054     \textcolor{keywordflow}{if} (fread(\&ribh\_ts, (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(uint64\_t), 1, file) != 1) \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00055}00055       \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00056}00056     \}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00057}00057     \textcolor{keywordflow}{if} (fread(\&ribh\_sid, (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}), 1, file) != 1) \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00058}00058       \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00059}00059     \}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00060}00060     \textcolor{keywordflow}{if} (fread(\&ribh\_bt, (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}), 1, file) != 1) \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00061}00061       \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00062}00062     \}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00064}00064     \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00065}00065 \textcolor{comment}{    std::cout << "{}Ring Item Body Header: "{} << std::endl;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00066}00066 \textcolor{comment}{    std::cout << "{}           size : "{} << ribh\_size << std::endl;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00067}00067 \textcolor{comment}{    std::cout << "{}      timestamp : "{} << ribh\_ts << std::endl;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00068}00068 \textcolor{comment}{    std::cout << "{}      source ID : "{} << ribh\_sid << std::endl;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00069}00069 \textcolor{comment}{    std::cout << "{}   barrier type : "{} << ribh\_bt << std::endl;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00070}00070 \textcolor{comment}{    */}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00071}00071     \textcolor{keywordflow}{return} ribh\_size;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00072}00072   \}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00073}00073   }
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00074}\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a78428cb78a9fb5b8cdac88c2d8a7406b}{00074}}   \textcolor{keywordtype}{int} \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a78428cb78a9fb5b8cdac88c2d8a7406b}{NSCLReader::readRingItemBody}}(FILE *file) \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00075}00075     \textcolor{keywordflow}{if} (fread(\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}}, (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}), 1, file) != 1) \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00076}00076       \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00077}00077     \}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00078}00078     \textcolor{comment}{//std::cout << "{}Reading ring item body size = "{} << rib\_size << std::endl;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00079}00079     \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}} -\/= 4;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00080}00080     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}};}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00081}00081   \}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00082}00082 }
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00083}\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a16bab1f0a05ece0a9d60ff6ff9c5852e}{00083}}   \textcolor{keywordtype}{int} \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a16bab1f0a05ece0a9d60ff6ff9c5852e}{NSCLReader::readNextFragment}}(FILE *file) \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00084}00084     \textcolor{comment}{//this skips over the fragment header, the ring item header, and the ring item body header associated with the fragment}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00085}00085     \textcolor{comment}{//reads the first 2 words of the ring item body (body size + device info)}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00086}00086     \textcolor{comment}{//leaves the pointer right at the beginning of the actual PIXIE fragment}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00087}00087     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}} > 48) \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00088}00088       \textcolor{comment}{//std::cout << "{}rib\_size = "{} << rib\_size << std::endl;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00089}00089       \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00090}00090 \textcolor{comment}{      uint64\_t frag\_ts;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00091}00091 \textcolor{comment}{      uint32\_t frag\_sid;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00092}00092 \textcolor{comment}{      uint32\_t frag\_paysize;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00093}00093 \textcolor{comment}{      uint32\_t frag\_bt;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00094}00094 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00095}00095 \textcolor{comment}{      uint32\_t frag\_rih\_size;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00096}00096 \textcolor{comment}{      uint32\_t frag\_rih\_type;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00097}00097 \textcolor{comment}{      }}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00098}00098 \textcolor{comment}{      uint32\_t frag\_ribh\_size;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00099}00099 \textcolor{comment}{      uint64\_t frag\_ribh\_ts;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00100}00100 \textcolor{comment}{      uint32\_t frag\_ribh\_sid;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00101}00101 \textcolor{comment}{      uint32\_t frag\_ribh\_bt;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00102}00102 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00103}00103 \textcolor{comment}{      if (fread(\&frag\_ts, (size\_t)sizeof(uint64\_t), 1, file) != 1) \{ return -\/1; \}}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00104}00104 \textcolor{comment}{      if (fread(\&frag\_sid, (size\_t)sizeof(int), 1, file) != 1) \{ return -\/1; \}}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00105}00105 \textcolor{comment}{      if (fread(\&frag\_paysize, (size\_t)sizeof(int), 1, file) != 1) \{ return -\/1; \}}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00106}00106 \textcolor{comment}{      if (fread(\&frag\_bt, (size\_t)sizeof(int), 1, file) != 1) \{ return -\/1; \}}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00107}00107 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00108}00108 \textcolor{comment}{      if (fread(\&frag\_rih\_size, (size\_t)sizeof(int), 1, file) != 1) \{ return -\/1; \}}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00109}00109 \textcolor{comment}{      if (fread(\&frag\_rih\_type, (size\_t)sizeof(int), 1, file) != 1) \{ return -\/1; \}}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00110}00110 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00111}00111 \textcolor{comment}{      if (fread(\&frag\_ribh\_size, (size\_t)sizeof(int), 1, file) != 1) \{ return -\/1; \}}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00112}00112 \textcolor{comment}{      if (fread(\&frag\_ribh\_ts, (size\_t)sizeof(uint64\_t), 1, file) != 1) \{ return -\/1; \}}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00113}00113 \textcolor{comment}{      if (fread(\&frag\_ribh\_sid, (size\_t)sizeof(int), 1, file) != 1) \{ return -\/1; \}}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00114}00114 \textcolor{comment}{      if (fread(\&frag\_ribh\_bt, (size\_t)sizeof(int), 1, file) != 1) \{ return -\/1; \}}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00115}00115 \textcolor{comment}{      */}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00116}00116       fseek(file, 48, SEEK\_CUR);  \textcolor{comment}{//skip the rest of the non-\/physics event}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00117}00117       \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00118}00118 \textcolor{comment}{      std::cout << "{}Fragment Header: "{} << std::endl;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00119}00119 \textcolor{comment}{      std::cout << "{}       Timestamp: "{} << frag\_ts << std::endl;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00120}00120 \textcolor{comment}{      std::cout << "{}       Source ID: "{} << frag\_sid << std::endl;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00121}00121 \textcolor{comment}{      std::cout << "{}    Payload Size: "{} << frag\_paysize << std::endl;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00122}00122 \textcolor{comment}{      std::cout << "{}    Barrier Type: "{} << frag\_bt << std::endl;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00123}00123 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00124}00124 \textcolor{comment}{      std::cout << "{}Fragment RIH: "{} << std::endl;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00125}00125 \textcolor{comment}{      std::cout << "{}            Size: "{} << frag\_rih\_size << std::endl;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00126}00126 \textcolor{comment}{      std::cout << "{}            Type: "{} << frag\_rih\_type << std::endl;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00127}00127 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00128}00128 \textcolor{comment}{      }}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00129}00129 \textcolor{comment}{      std::cout << "{}Fragment RIBH: "{} << std::endl;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00130}00130 \textcolor{comment}{      std::cout << "{}            Size: "{} << frag\_ribh\_size << std::endl;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00131}00131 \textcolor{comment}{      std::cout << "{}       Timestamp: "{} << frag\_ribh\_ts << std::endl;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00132}00132 \textcolor{comment}{      std::cout << "{}       Source ID: "{} << frag\_ribh\_sid << std::endl;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00133}00133 \textcolor{comment}{      std::cout << "{}    Barrier Type: "{} << frag\_ribh\_bt << std::endl;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00134}00134 \textcolor{comment}{      */}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00135}00135       }
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00136}00136       uint32\_t frag\_size;  \textcolor{comment}{//in 16 bit words not 32 bit words}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00137}00137       uint32\_t dev\_info;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00138}00138       \textcolor{keywordflow}{if} (fread(\&frag\_size, (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}), 1, file) != 1) \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00139}00139         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00140}00140       \}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00141}00141       \textcolor{keywordflow}{if} (fread(\&dev\_info, (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}), 1, file) != 1) \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00142}00142         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00143}00143       \}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00144}00144 }
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00145}00145       \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00146}00146 \textcolor{comment}{      uint32\_t ADC\_freq = (dev\_info \& 0x0000ffff);}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00147}00147 \textcolor{comment}{      uint32\_t ADC\_res = (dev\_info \& 0xff0000) >> 16;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00148}00148 \textcolor{comment}{      uint32\_t mod\_rev = (dev\_info \& 0xff000000) >> 24;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00149}00149 \textcolor{comment}{      }}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00150}00150 \textcolor{comment}{      std::cout << "{}dev\_info = "{} << ADC\_freq << "{}   "{} << ADC\_res << "{}  "{} << mod\_rev << std::endl;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00151}00151 \textcolor{comment}{           }}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00152}00152 \textcolor{comment}{      std::cout << "{}frag\_size = "{} << frag\_size << std::endl;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00153}00153 \textcolor{comment}{      */}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00154}00154       }
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00155}00155       \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}} -\/= (48 + frag\_size*2);}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00156}00156       \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}} < 0 ) \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00157}00157         std::cout << \textcolor{stringliteral}{"{}SEVERE ERROR, NAVIGATION THROUGH RING BUFFER BROKEN"{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00158}00158         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00159}00159       \}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00160}00160     \}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00161}00161     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}} < 48) \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00162}00162       std::cout << \textcolor{stringliteral}{"{}REMAINING DATA: "{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00163}00163       \textcolor{keywordtype}{int} rib\_tmp = \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}};}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00164}00164       \textcolor{keywordtype}{int} data;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00165}00165       \textcolor{keywordflow}{while} (rib\_tmp > 0) \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00166}00166         fread(\&data, (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}), 1, file);}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00167}00167         std::cout << data << std::endl;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00168}00168         rib\_tmp -\/= 4;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00169}00169       \}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00170}00170     \}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00171}00171     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00172}00172       std::cout << \textcolor{stringliteral}{"{}Warning! readNextFragment called when rib\_size == 0"{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00173}00173     \}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00174}00174     \textcolor{comment}{//std::cout << "{}readNextFragment returning "{} << rib\_size << std::endl;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00175}00175     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}};}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00176}00176   \}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00177}00177 }
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00178}\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ad26c1515bfdd5f491a4640c9aa225ac7}{00178}}   \textcolor{keywordtype}{int} \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ad26c1515bfdd5f491a4640c9aa225ac7}{NSCLReader::findNextFragment}}(FILE *file) \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00179}00179     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}} > 0) \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00180}00180       \textcolor{keywordflow}{return} \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a16bab1f0a05ece0a9d60ff6ff9c5852e}{readNextFragment}}(file);}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00181}00181     \}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00182}00182 }
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00183}00183     \textcolor{keywordflow}{while} (\textcolor{keyword}{true}) \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00184}00184       \textcolor{keywordtype}{int} type = \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ac13d50caf383d2b096043f770c74ebd9}{readRingItemHeader}}(file);}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00185}00185       \textcolor{keywordflow}{if} (type == -\/1) \{ \textcolor{keywordflow}{return} -\/1; \}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00186}00186       \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00187}00187 \textcolor{comment}{      if (type >= 1 \&\& type <= 4) \{}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00188}00188 \textcolor{comment}{        uint32\_t nRun;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00189}00189 \textcolor{comment}{        uint32\_t toff;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00190}00190 \textcolor{comment}{        uint32\_t wall\_time;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00191}00191 \textcolor{comment}{        uint32\_t off\_div;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00192}00192 \textcolor{comment}{        char title[80];}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00193}00193 \textcolor{comment}{        fread(\&nRun, (size\_t)sizeof(int), 1, file);}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00194}00194 \textcolor{comment}{        fread(\&toff, (size\_t)sizeof(int), 1, file);}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00195}00195 \textcolor{comment}{        fread(\&wall\_time, (size\_t)sizeof(int), 1, file);}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00196}00196 \textcolor{comment}{        fread(\&off\_div, (size\_t)sizeof(int), 1, file);}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00197}00197 \textcolor{comment}{        fread(\&title[0], (size\_t)sizeof(char), 80, file);}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00198}00198 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00199}00199 \textcolor{comment}{        time\_t wall\_timet = (time\_t)wall\_time;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00200}00200 \textcolor{comment}{        struct tm* timeinfo;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00201}00201 \textcolor{comment}{        timeinfo = localtime(\&wall\_timet);}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00202}00202 \textcolor{comment}{        }}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00203}00203 \textcolor{comment}{        }}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00204}00204 \textcolor{comment}{        std::cout << "{}                 Run: "{} << nRun << std::endl;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00205}00205 \textcolor{comment}{        std::cout << "{}Time since run start: "{} << toff << "{}s"{} << std::endl;}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00206}00206 \textcolor{comment}{        printf(      "{}                Time: \%s\(\backslash\)n"{}, asctime(timeinfo));}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00207}00207 \textcolor{comment}{        std::cout << "{}               Title: "{} << title << std::endl;        }}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00208}00208 \textcolor{comment}{      \}        }}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00209}00209 \textcolor{comment}{      */}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00210}00210       \textcolor{keywordflow}{if} (type != 30) \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00211}00211         fseek(file, \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ab303c4f20abd69c93e0d08cf286f785a}{ri\_size}}-\/8, SEEK\_CUR);  \textcolor{comment}{//skip the rest of the non-\/physics event}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00212}00212         \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00213}00213       \}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00214}00214       \textcolor{keywordtype}{int} ribh\_size = \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a405fa0a44294d4ef9614620d0b5f69a6}{readRingItemBodyHeader}}(file);}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00215}00215       \textcolor{keywordflow}{if} (ribh\_size < 0) \{ \textcolor{keywordflow}{return} ribh\_size; \}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00216}00216 }
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00217}00217       \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a78428cb78a9fb5b8cdac88c2d8a7406b}{readRingItemBody}}(file);}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00218}00218       \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}} < 0) \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}}; \}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00219}00219 }
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00220}00220       \textcolor{keywordflow}{return} \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a16bab1f0a05ece0a9d60ff6ff9c5852e}{readNextFragment}}(file);      }
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00221}00221     \}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00222}00222   \}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00223}00223 \}    }
 
 \end{DoxyCode}
