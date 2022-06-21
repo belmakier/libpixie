@@ -1,8 +1,8 @@
-FLAGS = -std=c++17 -O3 -macos-version-min=11.6
+FLAGS = -std=c++17 -O3 -macos-version-min=12.0
 COMPILER=clang++  #make this g++ if linux
 
 #define these for ROOT compilation
-FLAGS = -std=c++17 -I`root-config --incdir` -I../extern -O3 -g -mmacos-version-min=11.6
+FLAGS = -std=c++17 -I`root-config --incdir` -I../extern -O3 -g -mmacos-version-min=12.0
 ROOTFLAGS = -L`root-config --libdir` `root-config --glibs --new `
 
 all : libpixie.so

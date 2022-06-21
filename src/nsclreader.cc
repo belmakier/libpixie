@@ -27,13 +27,17 @@ namespace PIXIE {
         std::cout << "============= RESUME RUN ===============" << std::endl;
       }
       else if (ri_type == 20) {
+         /*
         std::cout << std::endl;
         std::cout << "SCALERS FOUND..." << std::endl;
+        */
       }
       else {
+         /*
         std::cout << std::endl;
         std::cout << "Untreated Ring item: " << std::endl;
         std::cout << ri_size << "   " << ri_type << std::endl;
+        */
       }
     }
     return ri_type;
@@ -82,6 +86,7 @@ namespace PIXIE {
     //leaves the pointer right at the beginning of the actual PIXIE fragment
     if (rib_size > 48) {
       //std::cout << "rib_size = " << rib_size << std::endl;
+      /*
       uint64_t frag_ts;
       uint32_t frag_sid;
       uint32_t frag_paysize;
@@ -107,7 +112,8 @@ namespace PIXIE {
       if (fread(&frag_ribh_ts, (size_t)sizeof(uint64_t), 1, file) != 1) { return -1; }
       if (fread(&frag_ribh_sid, (size_t)sizeof(int), 1, file) != 1) { return -1; }
       if (fread(&frag_ribh_bt, (size_t)sizeof(int), 1, file) != 1) { return -1; }
-
+      */
+      fseek(file, 48, SEEK_CUR);  //skip the rest of the non-physics event
       /*
       std::cout << "Fragment Header: " << std::endl;
       std::cout << "       Timestamp: " << frag_ts << std::endl;
@@ -177,6 +183,30 @@ namespace PIXIE {
     while (true) {
       int type = readRingItemHeader(file);
       if (type == -1) { return -1; }
+      /*
+      if (type >= 1 && type <= 4) {
+        uint32_t nRun;
+        uint32_t toff;
+        uint32_t wall_time;
+        uint32_t off_div;
+        char title[80];
+        fread(&nRun, (size_t)sizeof(int), 1, file);
+        fread(&toff, (size_t)sizeof(int), 1, file);
+        fread(&wall_time, (size_t)sizeof(int), 1, file);
+        fread(&off_div, (size_t)sizeof(int), 1, file);
+        fread(&title[0], (size_t)sizeof(char), 80, file);
+
+        time_t wall_timet = (time_t)wall_time;
+        struct tm* timeinfo;
+        timeinfo = localtime(&wall_timet);
+        
+        
+        std::cout << "                 Run: " << nRun << std::endl;
+        std::cout << "Time since run start: " << toff << "s" << std::endl;
+        printf(      "                Time: %s\n", asctime(timeinfo));
+        std::cout << "               Title: " << title << std::endl;        
+      }        
+      */
       if (type != 30) {
         fseek(file, ri_size-8, SEEK_CUR);  //skip the rest of the non-physics event
         continue;
