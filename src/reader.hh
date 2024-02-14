@@ -25,7 +25,7 @@ namespace PIXIE {
     long long nEvents;
     long long sameChanPU;
     long long outofrange;
-    long long mults[4];
+    long long mults[MAX_MEAS_PER_EVENT];
 
     int coincWindow;
     bool warnings;
@@ -49,7 +49,9 @@ namespace PIXIE {
     bool end;
 
     PIXIE::Event events[MAX_EVENTS];  //>1 for correlations
-    PIXIE::Measurement measurements[MAX_EVENTS*MAX_MEAS_PER_EVENT];
+    //PIXIE::Measurement measurements[MAX_EVENTS*MAX_MEAS_PER_EVENT];
+    //PIXIE::Measurement *measurements[MAX_EVENTS*MAX_MEAS_PER_EVENT];
+    std::vector<PIXIE::Measurement> measurements;
 
     int measCtr;    
     int eventCtr;

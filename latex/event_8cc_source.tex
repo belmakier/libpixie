@@ -1,210 +1,211 @@
-\hypertarget{event_8cc_source}{}\doxysection{event.\+cc}
-\label{event_8cc_source}\index{src/event.cc@{src/event.cc}}
+\doxysection{event.\+cc}
+\hypertarget{event_8cc_source}{}\label{event_8cc_source}\index{src/event.cc@{src/event.cc}}
 \mbox{\hyperlink{event_8cc}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00001}00001 \textcolor{comment}{/* event implementation for libpixie */}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00002}00002 }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00003}00003 \textcolor{preprocessor}{\#include <vector>}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00004}00004 \textcolor{preprocessor}{\#include <iostream>}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00005}00005 }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00006}00006 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{experiment__definition_8hh}{experiment\_definition.hh}}"{}}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00007}00007 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{event_8hh}{event.hh}}"{}}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00008}00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{colors_8hh}{colors.hh}}"{}}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00009}00009 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{reader_8hh}{reader.hh}}"{}}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00010}00010 }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00011}\mbox{\hyperlink{namespace_p_i_x_i_e}{00011}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_p_i_x_i_e}{PIXIE}}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00012}00012 \{}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00013}\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a26b35f1babc2d2dc92db286381221229}{00013}}   \textcolor{keywordtype}{int} \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a26b35f1babc2d2dc92db286381221229}{Event::read}}(\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} *reader,}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00014}00014                   \textcolor{keywordtype}{int} coincWindow,}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00015}00015                   \textcolor{keywordtype}{bool} warnings) \{}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00016}00016 }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00017}00017     \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}{nMeas}} = 0;}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00018}00018     \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ab4034a1f813be7192c14143d76040d6d}{badcfd}} = 0;}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00019}00019     \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a973b89428d1117d52568424015f327aa}{pileups}} = 0;}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00020}00020     \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a1fa2c3028bd5b4b432d34e2c3319c8b9}{outofrange}} = 0;}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00021}00021 }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00022}00022     \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement}{Measurement}} *meas;}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00023}00023 }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00024}00024     \textcolor{keywordtype}{int} retval = 0;}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00025}00025     \textcolor{comment}{//only do this the first time}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00026}00026     \textcolor{keywordflow}{if} (reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_ac0f5d35b39294a8597812b9e4c574ad5}{nEvents}} == 0) \{}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00027}00027       retval = \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a8d66886fa3a13b8f9b9490bfefb8482b}{AddMeasurement}}(reader);}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00028}00028       \textcolor{keywordflow}{if} (retval == -\/1) \{}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00029}00029         \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}{nMeas}} -\/= 1;}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00030}00030         \textcolor{keywordflow}{return} retval; \textcolor{comment}{//end of file return}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00031}00031       \}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00032}00032 }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00033}00033       meas = \&(reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_ae27eedcdb6eb079a922bb6e104a86b4c}{measurements}}[\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3}{fMeasurements}}[\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}{nMeas}}-\/1]]);}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00034}00034     \}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00035}00035 }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00036}00036     \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00037}00037       \textcolor{keywordflow}{if} (reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_afd0eac4d82f9cd89651280c4bc637e33}{measCtr}} == 0) \{}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00038}00038         meas = \&(reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_ae27eedcdb6eb079a922bb6e104a86b4c}{measurements}}[\mbox{\hyperlink{definitions_8hh_a4440d694835967b63cafe00ad888c327}{MAX\_MEAS\_PER\_EVENT}} * \mbox{\hyperlink{definitions_8hh_ae42954bb8545d24e3e9dcde5920c9a0b}{MAX\_EVENTS}} -\/ 1]);}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00039}00039         \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3}{fMeasurements}}[0] = \mbox{\hyperlink{definitions_8hh_a4440d694835967b63cafe00ad888c327}{MAX\_MEAS\_PER\_EVENT}} * \mbox{\hyperlink{definitions_8hh_ae42954bb8545d24e3e9dcde5920c9a0b}{MAX\_EVENTS}} -\/ 1;}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00040}00040       \}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00041}00041       \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00042}00042         meas = \&(reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_ae27eedcdb6eb079a922bb6e104a86b4c}{measurements}}[reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_afd0eac4d82f9cd89651280c4bc637e33}{measCtr}} -\/ 1]);}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00043}00043         \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3}{fMeasurements}}[0] = reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_afd0eac4d82f9cd89651280c4bc637e33}{measCtr}} -\/ 1;}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00044}00044       \}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00045}00045 }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00046}00046       ++\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}{nMeas}};}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00047}00047     \}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00048}00048                                     }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00049}00049     \textcolor{keywordtype}{int} lastCrate = meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}};}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00050}00050     \textcolor{keywordtype}{int} lastSlot = meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}};}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00051}00051     \textcolor{keywordtype}{int} lastChan = meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}};}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00052}00052     }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00053}00053     uint64\_t maxTime = meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}{eventTime}} + coincWindow;}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00054}00054     uint64\_t triggerTime = meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}{eventTime}};}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00055}00055 }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00056}00056     \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a0164d55be13b1246c33fada1f298a2c0}{mult}} = 1;}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00057}00057 }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00058}00058     \textcolor{keywordtype}{int} curEvent = 1;}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00059}00059     \textcolor{keywordflow}{while} (curEvent) \{}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00060}00060       \textcolor{comment}{//loop for current event}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00061}00061 }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00062}00062       retval = \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a8d66886fa3a13b8f9b9490bfefb8482b}{AddMeasurement}}(reader);}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00063}00063            }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00064}00064       \textcolor{keywordflow}{if} (retval == -\/1) \{ \textcolor{comment}{//end of file}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00065}00065         \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00066}00066       \}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00067}00067       \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement}{Measurement}} *next\_meas = \&(reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_ae27eedcdb6eb079a922bb6e104a86b4c}{measurements}}[\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3}{fMeasurements}}[\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}{nMeas}}-\/1]]);}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00068}00068      }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00069}00069       \textcolor{comment}{//   get event time, check if it's in the coincidence window}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00070}00070       \textcolor{keywordflow}{if} (next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}{eventTime}}<=maxTime) \{}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00071}00071         \textcolor{comment}{//in current event}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00072}00072         \textcolor{comment}{//check for duplicate in same channel}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00073}00073         \textcolor{keywordflow}{if} (reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a046891d103ef8746fc15a621676b81cd}{RejectSCPU}}) \{}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00074}00074           \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ae9157873a711b1221138f999ea1a659e}{GetMeasurement}}(next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}}, next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}}, next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}}, reader)) \{}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00075}00075             \textcolor{keyword}{const} \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement}{Measurement}} *dup\_meas = \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ae9157873a711b1221138f999ea1a659e}{GetMeasurement}}(next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}}, next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}}, next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}}, reader);}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00076}00076       }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00077}00077             \textcolor{keywordflow}{if} (warnings) \{}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00078}00078               std::cout << \mbox{\hyperlink{colors_8hh_a34995b955465f6bbb37c359173d50477}{ANSI\_COLOR\_RED}} << \textcolor{stringliteral}{"{}Warning: Channel "{}} << dup\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}} << \textcolor{stringliteral}{"{}:"{}} << dup\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}} << \textcolor{stringliteral}{"{} already fired in this event, perhaps the coincidence window is too large?"{}} \mbox{\hyperlink{colors_8hh_a92a364c2b863dde1a024a77eac2a5b3b}{ANSI\_COLOR\_RESET}} << std::endl;}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00079}00079               std::cout << \mbox{\hyperlink{colors_8hh_a34995b955465f6bbb37c359173d50477}{ANSI\_COLOR\_RED}} << dup\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}{eventTime}} << \textcolor{stringliteral}{"{} vs "{}} << next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}{eventTime}} << \textcolor{stringliteral}{"{} :  "{}} << (double)(-\/dup\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}{eventTime}} + next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}{eventTime}})/3276.8 << \mbox{\hyperlink{colors_8hh_a92a364c2b863dde1a024a77eac2a5b3b}{ANSI\_COLOR\_RESET}} << std::endl;}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00080}00080             \}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00081}00081             \textcolor{comment}{//if it's not a tagger, end this event and start another}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00082}00082             \textcolor{keyword}{auto} *channel = reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_abb0fc6333195ac9dd12f7fea78834b0f}{definition}}.\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a4dafec217c0b9f571c8cc9e944e3f050}{GetChannel}}(next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}}, next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}}, next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}});}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00083}00083             \textcolor{keywordflow}{if}(!channel-\/>isTagger)\{}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00084}00084               curEvent = 0;}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00085}00085               retval = 1; \textcolor{comment}{//end of event with same channel pileup}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00086}00086               \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00087}00087             \}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00088}00088           \}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00089}00089         \}        }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00090}00090         }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00091}00091         \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a0164d55be13b1246c33fada1f298a2c0}{mult}} = \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a0164d55be13b1246c33fada1f298a2c0}{mult}} + 1;}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00092}00092          }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00093}00093         \textcolor{keywordflow}{if} (next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}{eventTime}}<maxTime-\/coincWindow) \{}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00094}00094           \textcolor{comment}{//this is super strict, even up to CFD timing}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00095}00095           \textcolor{comment}{//relax somewhat:}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00096}00096           \textcolor{keywordflow}{if} (next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}{eventTime}}+32768<maxTime-\/coincWindow) \{  \textcolor{comment}{//within 10 ns}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00097}00097             std::cout<< \mbox{\hyperlink{colors_8hh_a34995b955465f6bbb37c359173d50477}{ANSI\_COLOR\_RED}} \textcolor{stringliteral}{"{}\(\backslash\)nWarning! File is not properly time-\/sorted"{}} << std::endl;}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00098}00098             std::cout<< \textcolor{stringliteral}{"{}First event: "{}}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00099}00099                      << lastCrate << \textcolor{stringliteral}{"{}."{}} }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00100}00100                      << lastSlot << \textcolor{stringliteral}{"{}."{}} }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00101}00101                      << lastChan << \textcolor{stringliteral}{"{}   "{}} << maxTime -\/ coincWindow << std::endl;}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00102}00102             std::cout<< \textcolor{stringliteral}{"{}Second event: "{}}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00103}00103                      << next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}} << \textcolor{stringliteral}{"{}."{}}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00104}00104                      << next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}} << \textcolor{stringliteral}{"{}."{}}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00105}00105                      << next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}} << \textcolor{stringliteral}{"{}   "{}} << next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}{eventTime}} << \mbox{\hyperlink{colors_8hh_a92a364c2b863dde1a024a77eac2a5b3b}{ANSI\_COLOR\_RESET}} << std::endl;}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00106}00106           \}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00107}00107         \}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00108}00108                 }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00109}00109         lastCrate = next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}};}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00110}00110         lastSlot = next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}};}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00111}00111         lastChan = next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}};}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00112}00112         \textcolor{keyword}{auto} *channel = reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_abb0fc6333195ac9dd12f7fea78834b0f}{definition}}.\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a4dafec217c0b9f571c8cc9e944e3f050}{GetChannel}}(next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}}, next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}}, next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}});}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00113}00113         \textcolor{keywordflow}{if} (!channel) \{ ; \}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00114}00114         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (channel-\/>extwind) \{}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00115}00115           maxTime = next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}{eventTime}}+coincWindow;}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00116}00116         \}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00117}00117         \textcolor{comment}{//go to next sub-\/event}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00118}00118 }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00119}00119         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a0164d55be13b1246c33fada1f298a2c0}{mult}} == \mbox{\hyperlink{definitions_8hh_a4440d694835967b63cafe00ad888c327}{MAX\_MEAS\_PER\_EVENT}}-\/1) \{}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00120}00120           retval = 2;}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00121}00121           \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00122}00122         \}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00123}00123       \}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00124}00124       \textcolor{keywordflow}{else} \{        }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00125}00125         curEvent=0; \textcolor{comment}{//breaks current event loop}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00126}00126       \}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00127}00127     \}\textcolor{comment}{//loop for current event}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00128}00128 }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00129}00129     \textcolor{comment}{//average event length}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00130}00130     reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_ad84d4070b4658e152083ff76f9f1cba4}{av\_evt\_length}} = (reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_ad84d4070b4658e152083ff76f9f1cba4}{av\_evt\_length}}*reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_ac0f5d35b39294a8597812b9e4c574ad5}{nEvents}} + ((maxTime-\/triggerTime)/(3276.8*1e3)))/(double)(reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_ac0f5d35b39294a8597812b9e4c574ad5}{nEvents}} + 1);}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00131}00131     }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00132}00132     \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}{nMeas}} -\/= 1; \textcolor{comment}{//not in this event}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00133}00133     }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00134}00134     \textcolor{keywordflow}{return} retval;}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00135}00135   \}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00136}00136 }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00137}\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a16453e60e4bcd46e755c94418924272f}{00137}}   \textcolor{keywordtype}{int} \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a16453e60e4bcd46e755c94418924272f}{Event::print}}(\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} *reader)}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00138}00138   \{}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00139}00139     std::cout << \textcolor{stringliteral}{"{}======= NEW EVENT ======"{}} << std::endl;}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00140}00140     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}{nMeas}}; ++i) \{}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00141}00141       std::cout << \textcolor{stringliteral}{"{}index = "{}} << \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3}{fMeasurements}}[i] << std::endl;}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00142}00142       reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_ae27eedcdb6eb079a922bb6e104a86b4c}{measurements}}[\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3}{fMeasurements}}[i]].\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a74305d42b7585f74b394d7cc9d174764}{print}}();}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00143}00143     \}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00144}00144     std::cout << \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a973b89428d1117d52568424015f327aa}{pileups}} << std::endl;}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00145}00145     std::cout << \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ab4034a1f813be7192c14143d76040d6d}{badcfd}} << std::endl;}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00146}00146     std::cout << \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a1fa2c3028bd5b4b432d34e2c3319c8b9}{outofrange}} << std::endl;}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00147}00147     }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00148}00148     \textcolor{keywordflow}{return} (0);}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00149}00149   \}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00150}00150 }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00151}00151 }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00152}\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ae9157873a711b1221138f999ea1a659e}{00152}}   \textcolor{keyword}{const} \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement}{Measurement}} *\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ae9157873a711b1221138f999ea1a659e}{Event::GetMeasurement}}(\textcolor{keywordtype}{int} crateID, \textcolor{keywordtype}{int} slotID, \textcolor{keywordtype}{int} channelNumber, \mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} *reader)\textcolor{keyword}{ const }\{}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00153}00153     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}{nMeas}}-\/1; ++i) \{}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00154}00154       \textcolor{keyword}{const} \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement}{Measurement}} *meas = \&(reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_ae27eedcdb6eb079a922bb6e104a86b4c}{measurements}}[\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3}{fMeasurements}}[i]]);}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00155}00155       \textcolor{keywordflow}{if} (meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}} == crateID \&\&}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00156}00156           meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}} == slotID \&\&}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00157}00157           meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}} == channelNumber) \{}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00158}00158         \textcolor{keywordflow}{return} meas;}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00159}00159       \}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00160}00160     \}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00161}00161     \textcolor{keywordflow}{return} (NULL);}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00162}00162   \}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00163}00163 }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00164}\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a8d66886fa3a13b8f9b9490bfefb8482b}{00164}}   \textcolor{keywordtype}{int} \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a8d66886fa3a13b8f9b9490bfefb8482b}{Event::AddMeasurement}}(\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} *reader) \{}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00165}00165     \textcolor{keywordtype}{int} retval = \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a435968180a70e7b86a828e7f7fc1bf42}{AddMeasHeader}}(reader);}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00166}00166     \textcolor{keywordflow}{if} (retval == -\/1) \{}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00167}00167       \textcolor{keywordflow}{return} retval;}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00168}00168     \}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00169}00169       }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00170}00170     retval = \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a10e1f7b5ac95b7665ba578fb291686b0}{AddMeasFull}}(reader);}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00171}00171     \textcolor{keywordflow}{return} retval;}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00172}00172   \}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00173}\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a435968180a70e7b86a828e7f7fc1bf42}{00173}}   \textcolor{keywordtype}{int} \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a435968180a70e7b86a828e7f7fc1bf42}{Event::AddMeasHeader}}(\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} *reader) \{}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00174}00174     \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3}{fMeasurements}}[\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}{nMeas}}] = reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_afd0eac4d82f9cd89651280c4bc637e33}{measCtr}};}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00175}00175     \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement}{Measurement}} *meas = \&(reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_ae27eedcdb6eb079a922bb6e104a86b4c}{measurements}}[reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_afd0eac4d82f9cd89651280c4bc637e33}{measCtr}}]);}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00176}00176     \textcolor{keywordtype}{int} retval = meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ae44119a232562550787b78263c87e819}{read\_header}}(reader);}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00177}00177       }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00178}00178     ++\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}{nMeas}};}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00179}00179     ++reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_afd0eac4d82f9cd89651280c4bc637e33}{measCtr}};}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00180}00180     \textcolor{keywordflow}{if} (reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_afd0eac4d82f9cd89651280c4bc637e33}{measCtr}} == \mbox{\hyperlink{definitions_8hh_a4440d694835967b63cafe00ad888c327}{MAX\_MEAS\_PER\_EVENT}} * \mbox{\hyperlink{definitions_8hh_ae42954bb8545d24e3e9dcde5920c9a0b}{MAX\_EVENTS}}) \{}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00181}00181       reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_afd0eac4d82f9cd89651280c4bc637e33}{measCtr}} = 0;}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00182}00182     \}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00183}00183     \textcolor{keywordflow}{return} retval;}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00184}00184   \}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00185}\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a10e1f7b5ac95b7665ba578fb291686b0}{00185}}   \textcolor{keywordtype}{int} \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a10e1f7b5ac95b7665ba578fb291686b0}{Event::AddMeasFull}}(\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} *reader) \{}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00186}00186     \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement}{Measurement}} *meas = \&(reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_ae27eedcdb6eb079a922bb6e104a86b4c}{measurements}}[\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3}{fMeasurements}}[\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}{nMeas}}-\/1]]);}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00187}00187     \textcolor{keywordtype}{int} retval = meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ab52c696179c4bb8c6447fe375f696c90}{read\_full}}(reader);}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00188}00188     \textcolor{comment}{//at this point we know that this belongs in the event}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00189}00189     \textcolor{keywordflow}{if} (meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_abb003509076a78af508cfad581e40ad3}{finishCode}} == 1) \{}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00190}00190       ++\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a973b89428d1117d52568424015f327aa}{pileups}};}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00191}00191     \}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00192}00192 }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00193}00193     \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ab4034a1f813be7192c14143d76040d6d}{badcfd}} += meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a38a45a088073a1d679aa0687e39c9bcd}{CFDForce}};}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00194}00194     \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a1fa2c3028bd5b4b432d34e2c3319c8b9}{outofrange}} += meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a0134ee34ee4211cc16ffc55a018d08db}{outOfRange}};   }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00195}00195       }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00196}00196     \textcolor{keywordflow}{return} retval;}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00197}00197   \}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00198}00198 }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00199}\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ad69a3dc399ab8b6e795a9827cabb5761}{00199}}   \textcolor{keyword}{const} \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement}{Measurement}} *\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ae9157873a711b1221138f999ea1a659e}{Event::GetMeasurement}}(\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} *reader, \textcolor{keywordtype}{int} i)\textcolor{keyword}{ const }\{}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00200}00200     \textcolor{keywordflow}{return} \&(reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_ae27eedcdb6eb079a922bb6e104a86b4c}{measurements}}[\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3}{fMeasurements}}[i]]);}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00201}00201   \}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00202}00202     }
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00203}00203 \}\textcolor{comment}{//PIXIE namespace}}
-\DoxyCodeLine{\Hypertarget{event_8cc_source_l00204}00204                        }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00001}00001\ \textcolor{comment}{/*\ event\ implementation\ for\ libpixie\ */}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{experiment__definition_8hh}{experiment\_definition.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{event_8hh}{event.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{colors_8hh}{colors.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{reader_8hh}{reader.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00011}\mbox{\hyperlink{namespace_p_i_x_i_e}{00011}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_p_i_x_i_e}{PIXIE}}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00012}00012\ \{}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00013}\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a26b35f1babc2d2dc92db286381221229}{00013}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a26b35f1babc2d2dc92db286381221229}{Event::read}}(\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}}\ *reader,}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ coincWindow,}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ warnings)\ \{}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00017}00017\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}{nMeas}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00018}00018\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ab4034a1f813be7192c14143d76040d6d}{badcfd}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00019}00019\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a973b89428d1117d52568424015f327aa}{pileups}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00020}00020\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a1fa2c3028bd5b4b432d34e2c3319c8b9}{outofrange}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00022}00022\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement}{Measurement}}\ *meas;}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00024}00024\ \ \ \ \ \textcolor{keywordtype}{int}\ retval\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00025}00025\ \ \ \ \ \textcolor{comment}{//only\ do\ this\ the\ first\ time}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00026}00026\ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_ac0f5d35b39294a8597812b9e4c574ad5}{nEvents}}\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00027}00027\ \ \ \ \ \ \ retval\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a8d66886fa3a13b8f9b9490bfefb8482b}{AddMeasurement}}(reader);}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00028}00028\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (retval\ ==\ -\/1)\ \{}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00029}00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}{nMeas}}\ -\/=\ 1;}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ retval;\ \textcolor{comment}{//end\ of\ file\ return}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00031}00031\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00033}00033\ \ \ \ \ \ \ meas\ =\ \&(reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a21d550481d610d9a6063b9d861b7bbb2}{measurements}}[\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3}{fMeasurements}}[\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}{nMeas}}-\/1]]);}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00034}00034\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00035}00035\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00036}00036\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_afd0eac4d82f9cd89651280c4bc637e33}{measCtr}}\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00037}00037\ \ \ \ \ \ \ \ \ meas\ =\ \&(reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a21d550481d610d9a6063b9d861b7bbb2}{measurements}}[\mbox{\hyperlink{definitions_8hh_a4440d694835967b63cafe00ad888c327}{MAX\_MEAS\_PER\_EVENT}}\ *\ \mbox{\hyperlink{definitions_8hh_ae42954bb8545d24e3e9dcde5920c9a0b}{MAX\_EVENTS}}\ -\/\ 1]);}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00038}00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3}{fMeasurements}}[0]\ =\ \mbox{\hyperlink{definitions_8hh_a4440d694835967b63cafe00ad888c327}{MAX\_MEAS\_PER\_EVENT}}\ *\ \mbox{\hyperlink{definitions_8hh_ae42954bb8545d24e3e9dcde5920c9a0b}{MAX\_EVENTS}}\ -\/\ 1;}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00039}00039\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00040}00040\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00041}00041\ \ \ \ \ \ \ \ \ meas\ =\ \&(reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a21d550481d610d9a6063b9d861b7bbb2}{measurements}}[reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_afd0eac4d82f9cd89651280c4bc637e33}{measCtr}}\ -\/\ 1]);}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00042}00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3}{fMeasurements}}[0]\ =\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_afd0eac4d82f9cd89651280c4bc637e33}{measCtr}}\ -\/\ 1;}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00043}00043\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00045}00045\ \ \ \ \ \ \ ++\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}{nMeas}};}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00046}00046\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00048}00048\ \ \ \ \ \textcolor{keywordtype}{int}\ lastCrate\ =\ meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}};}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00049}00049\ \ \ \ \ \textcolor{keywordtype}{int}\ lastSlot\ =\ meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}};}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00050}00050\ \ \ \ \ \textcolor{keywordtype}{int}\ lastChan\ =\ meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}};}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00051}00051\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00052}00052\ \ \ \ \ uint64\_t\ maxTime\ =\ meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}{eventTime}}\ +\ coincWindow;}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00053}00053\ \ \ \ \ uint64\_t\ triggerTime\ =\ meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}{eventTime}};}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00055}00055\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a0164d55be13b1246c33fada1f298a2c0}{mult}}\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00057}00057\ \ \ \ \ \textcolor{keywordtype}{int}\ curEvent\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00058}00058\ \ \ \ \ \textcolor{keywordflow}{while}\ (curEvent)\ \{}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00059}00059\ \ \ \ \ \ \ \textcolor{comment}{//loop\ for\ current\ event}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00061}00061\ \ \ \ \ \ \ retval\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a8d66886fa3a13b8f9b9490bfefb8482b}{AddMeasurement}}(reader);}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00063}00063\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (retval\ ==\ -\/1)\ \{\ \textcolor{comment}{//end\ of\ file}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00065}00065\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00066}00066\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement}{Measurement}}\ *next\_meas\ =\ \&(reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a21d550481d610d9a6063b9d861b7bbb2}{measurements}}[\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3}{fMeasurements}}[\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}{nMeas}}-\/1]]);}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00067}00067\ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00068}00068\ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ get\ event\ time,\ check\ if\ it's\ in\ the\ coincidence\ window}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00069}00069\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}{eventTime}}<=maxTime)\ \{}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{comment}{//in\ current\ event}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00071}00071\ \ \ \ \ \ \ \ \ \textcolor{comment}{//check\ for\ duplicate\ in\ same\ channel}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a046891d103ef8746fc15a621676b81cd}{RejectSCPU}})\ \{}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ae9157873a711b1221138f999ea1a659e}{GetMeasurement}}(next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}},\ next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}},\ next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}},\ reader))\ \{}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement}{Measurement}}\ *dup\_meas\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ae9157873a711b1221138f999ea1a659e}{GetMeasurement}}(next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}},\ next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}},\ next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}},\ reader);}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00075}00075\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (warnings)\ \{}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \mbox{\hyperlink{colors_8hh_a34995b955465f6bbb37c359173d50477}{ANSI\_COLOR\_RED}}\ <<\ \textcolor{stringliteral}{"{}Warning:\ Channel\ "{}}\ <<\ dup\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}}\ <<\ \textcolor{stringliteral}{"{}:"{}}\ <<\ dup\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}}\ <<\ \textcolor{stringliteral}{"{}\ already\ fired\ in\ this\ event,\ perhaps\ the\ coincidence\ window\ is\ too\ large?"{}}\ \mbox{\hyperlink{colors_8hh_a92a364c2b863dde1a024a77eac2a5b3b}{ANSI\_COLOR\_RESET}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \mbox{\hyperlink{colors_8hh_a34995b955465f6bbb37c359173d50477}{ANSI\_COLOR\_RED}}\ <<\ dup\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}{eventTime}}\ <<\ \textcolor{stringliteral}{"{}\ vs\ "{}}\ <<\ next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}{eventTime}}\ <<\ \textcolor{stringliteral}{"{}\ :\ \ "{}}\ <<\ (double)(-\/dup\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}{eventTime}}\ +\ next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}{eventTime}})/3276.8\ <<\ \mbox{\hyperlink{colors_8hh_a92a364c2b863dde1a024a77eac2a5b3b}{ANSI\_COLOR\_RESET}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//if\ it's\ not\ a\ tagger,\ end\ this\ event\ and\ start\ another}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ *channel\ =\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_abb0fc6333195ac9dd12f7fea78834b0f}{definition}}.\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a4dafec217c0b9f571c8cc9e944e3f050}{GetChannel}}(next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}},\ next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}},\ next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}});}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!channel-\/>isTagger)\{}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ curEvent\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ retval\ =\ 1;\ \textcolor{comment}{//end\ of\ event\ with\ same\ channel\ pileup}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00088}00088\ \ \ \ \ \ \ \ \ \}\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00089}00089\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00090}00090\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a0164d55be13b1246c33fada1f298a2c0}{mult}}\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a0164d55be13b1246c33fada1f298a2c0}{mult}}\ +\ 1;}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00091}00091\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00092}00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}{eventTime}}<maxTime-\/coincWindow)\ \{}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//this\ is\ super\ strict,\ even\ up\ to\ CFD\ timing}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//relax\ somewhat:}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}{eventTime}}+32768<maxTime-\/coincWindow)\ \{\ \ \textcolor{comment}{//within\ 10\ ns}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (warnings)\ \{}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout<<\ \mbox{\hyperlink{colors_8hh_a34995b955465f6bbb37c359173d50477}{ANSI\_COLOR\_RED}}\ \textcolor{stringliteral}{"{}\(\backslash\)nWarning!\ File\ is\ not\ properly\ time-\/sorted"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout<<\ \textcolor{stringliteral}{"{}First\ event:\ "{}}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ lastCrate\ <<\ \textcolor{stringliteral}{"{}."{}}\ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ lastSlot\ <<\ \textcolor{stringliteral}{"{}."{}}\ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ lastChan\ <<\ \textcolor{stringliteral}{"{}\ \ \ "{}}\ <<\ maxTime\ -\/\ coincWindow\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout<<\ \textcolor{stringliteral}{"{}Second\ event:\ "{}}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}}\ <<\ \textcolor{stringliteral}{"{}."{}}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}}\ <<\ \textcolor{stringliteral}{"{}."{}}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}}\ <<\ \textcolor{stringliteral}{"{}\ \ \ "{}}\ <<\ next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}{eventTime}}\ <<\ \mbox{\hyperlink{colors_8hh_a92a364c2b863dde1a024a77eac2a5b3b}{ANSI\_COLOR\_RESET}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00108}00108\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00110}00110\ \ \ \ \ \ \ \ \ lastCrate\ =\ next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}};}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00111}00111\ \ \ \ \ \ \ \ \ lastSlot\ =\ next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}};}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00112}00112\ \ \ \ \ \ \ \ \ lastChan\ =\ next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}};}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00113}00113\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ *channel\ =\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_abb0fc6333195ac9dd12f7fea78834b0f}{definition}}.\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a4dafec217c0b9f571c8cc9e944e3f050}{GetChannel}}(next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}},\ next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}},\ next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}});}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00114}00114\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!channel)\ \{\ ;\ \}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00115}00115\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (channel-\/>extwind)\ \{}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ maxTime\ =\ next\_meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}{eventTime}}+coincWindow;}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00117}00117\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00118}00118\ \ \ \ \ \ \ \ \ \textcolor{comment}{//go\ to\ next\ sub-\/event}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00120}00120\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a0164d55be13b1246c33fada1f298a2c0}{mult}}\ ==\ \mbox{\hyperlink{definitions_8hh_a4440d694835967b63cafe00ad888c327}{MAX\_MEAS\_PER\_EVENT}}-\/1)\ \{}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ retval\ =\ 2;}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00123}00123\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00124}00124\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00125}00125\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00126}00126\ \ \ \ \ \ \ \ \ curEvent=0;\ \textcolor{comment}{//breaks\ current\ event\ loop}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00127}00127\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00128}00128\ \ \ \ \ \}\textcolor{comment}{//loop\ for\ current\ event}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00129}00129\ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00130}00130\ \ \ \ \ \textcolor{comment}{//average\ event\ length}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00131}00131\ \ \ \ \ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_ad84d4070b4658e152083ff76f9f1cba4}{av\_evt\_length}}\ =\ (reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_ad84d4070b4658e152083ff76f9f1cba4}{av\_evt\_length}}*reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_ac0f5d35b39294a8597812b9e4c574ad5}{nEvents}}\ +\ ((maxTime-\/triggerTime)/(3276.8*1e3)))/(double)(reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_ac0f5d35b39294a8597812b9e4c574ad5}{nEvents}}\ +\ 1);}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00132}00132\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00133}00133\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}{nMeas}}\ -\/=\ 1;\ \textcolor{comment}{//not\ in\ this\ event}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00135}00135\ \ \ \ \ \textcolor{keywordflow}{return}\ retval;}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00136}00136\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00137}00137\ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00138}\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a16453e60e4bcd46e755c94418924272f}{00138}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a16453e60e4bcd46e755c94418924272f}{Event::print}}(\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}}\ *reader)}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00139}00139\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00140}00140\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}=======\ NEW\ EVENT\ ======"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00141}00141\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}{nMeas}};\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00142}00142\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}index\ =\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3}{fMeasurements}}[i]\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00143}00143\ \ \ \ \ \ \ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a21d550481d610d9a6063b9d861b7bbb2}{measurements}}[\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3}{fMeasurements}}[i]].print();}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00144}00144\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00145}00145\ \ \ \ \ std::cout\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a973b89428d1117d52568424015f327aa}{pileups}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00146}00146\ \ \ \ \ std::cout\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ab4034a1f813be7192c14143d76040d6d}{badcfd}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00147}00147\ \ \ \ \ std::cout\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a1fa2c3028bd5b4b432d34e2c3319c8b9}{outofrange}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00148}00148\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00149}00149\ \ \ \ \ \textcolor{keywordflow}{return}\ (0);}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00150}00150\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00151}00151\ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00152}00152\ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00153}\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ae9157873a711b1221138f999ea1a659e}{00153}}\ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement}{Measurement}}\ *\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ae9157873a711b1221138f999ea1a659e}{Event::GetMeasurement}}(\textcolor{keywordtype}{int}\ crateID,\ \textcolor{keywordtype}{int}\ slotID,\ \textcolor{keywordtype}{int}\ channelNumber,\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}}\ *reader)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00154}00154\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}{nMeas}}-\/1;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00155}00155\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement}{Measurement}}\ *meas\ =\ \&(reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a21d550481d610d9a6063b9d861b7bbb2}{measurements}}[\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3}{fMeasurements}}[i]]);}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00156}00156\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}}\ ==\ crateID\ \&\&}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}}\ ==\ slotID\ \&\&}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}}\ ==\ channelNumber)\ \{}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00159}00159\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ meas;}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00160}00160\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00161}00161\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00162}00162\ \ \ \ \ \textcolor{keywordflow}{return}\ (NULL);}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00163}00163\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00164}00164\ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00165}\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a8d66886fa3a13b8f9b9490bfefb8482b}{00165}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a8d66886fa3a13b8f9b9490bfefb8482b}{Event::AddMeasurement}}(\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}}\ *reader)\ \{}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00166}00166\ \ \ \ \ \textcolor{keywordtype}{int}\ retval\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a435968180a70e7b86a828e7f7fc1bf42}{AddMeasHeader}}(reader);}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00167}00167\ \ \ \ \ \textcolor{keywordflow}{if}\ (retval\ ==\ -\/1)\ \{}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00168}00168\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ retval;}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00169}00169\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00170}00170\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00171}00171\ \ \ \ \ retval\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a10e1f7b5ac95b7665ba578fb291686b0}{AddMeasFull}}(reader);}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00172}00172\ \ \ \ \ \textcolor{keywordflow}{return}\ retval;}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00173}00173\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00174}\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a435968180a70e7b86a828e7f7fc1bf42}{00174}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a435968180a70e7b86a828e7f7fc1bf42}{Event::AddMeasHeader}}(\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}}\ *reader)\ \{}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00175}00175\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3}{fMeasurements}}[\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}{nMeas}}]\ =\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_afd0eac4d82f9cd89651280c4bc637e33}{measCtr}};}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00176}00176\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement}{Measurement}}\ *meas\ =\ \&(reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a21d550481d610d9a6063b9d861b7bbb2}{measurements}}[reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_afd0eac4d82f9cd89651280c4bc637e33}{measCtr}}]);}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00177}00177\ \ \ \ \ \textcolor{keywordtype}{int}\ retval\ =\ meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ae44119a232562550787b78263c87e819}{read\_header}}(reader);}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00178}00178\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00179}00179\ \ \ \ \ ++\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}{nMeas}};}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00180}00180\ \ \ \ \ ++reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_afd0eac4d82f9cd89651280c4bc637e33}{measCtr}};}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00181}00181\ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_afd0eac4d82f9cd89651280c4bc637e33}{measCtr}}\ ==\ \mbox{\hyperlink{definitions_8hh_a4440d694835967b63cafe00ad888c327}{MAX\_MEAS\_PER\_EVENT}}\ *\ \mbox{\hyperlink{definitions_8hh_ae42954bb8545d24e3e9dcde5920c9a0b}{MAX\_EVENTS}})\ \{}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00182}00182\ \ \ \ \ \ \ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_afd0eac4d82f9cd89651280c4bc637e33}{measCtr}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00183}00183\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00184}00184\ \ \ \ \ \textcolor{keywordflow}{return}\ retval;}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00185}00185\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00186}\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a10e1f7b5ac95b7665ba578fb291686b0}{00186}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a10e1f7b5ac95b7665ba578fb291686b0}{Event::AddMeasFull}}(\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}}\ *reader)\ \{}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00187}00187\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement}{Measurement}}\ *meas\ =\ \&(reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a21d550481d610d9a6063b9d861b7bbb2}{measurements}}[\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3}{fMeasurements}}[\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}{nMeas}}-\/1]]);}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00188}00188\ \ \ \ \ \textcolor{keywordtype}{int}\ retval\ =\ meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ab52c696179c4bb8c6447fe375f696c90}{read\_full}}(reader);}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00189}00189\ \ \ \ \ \textcolor{comment}{//at\ this\ point\ we\ know\ that\ this\ belongs\ in\ the\ event}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00190}00190\ \ \ \ \ \textcolor{keywordflow}{if}\ (meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_abb003509076a78af508cfad581e40ad3}{finishCode}}\ ==\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00191}00191\ \ \ \ \ \ \ ++\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a973b89428d1117d52568424015f327aa}{pileups}};}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00192}00192\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00193}00193\ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00194}00194\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ab4034a1f813be7192c14143d76040d6d}{badcfd}}\ +=\ meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a38a45a088073a1d679aa0687e39c9bcd}{CFDForce}};}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00195}00195\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a1fa2c3028bd5b4b432d34e2c3319c8b9}{outofrange}}\ +=\ meas-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a0134ee34ee4211cc16ffc55a018d08db}{outOfRange}};\ \ \ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00196}00196\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00197}00197\ \ \ \ \ \textcolor{keywordflow}{return}\ retval;}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00198}00198\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00199}00199\ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00200}\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ad69a3dc399ab8b6e795a9827cabb5761}{00200}}\ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement}{Measurement}}\ *\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ae9157873a711b1221138f999ea1a659e}{Event::GetMeasurement}}(\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}}\ *reader,\ \textcolor{keywordtype}{int}\ i)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00201}00201\ \ \ \ \ \textcolor{keywordflow}{return}\ \&(reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a21d550481d610d9a6063b9d861b7bbb2}{measurements}}[\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3}{fMeasurements}}[i]]);}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00202}00202\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00203}00203\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00204}00204\ \}\textcolor{comment}{//PIXIE\ namespace}}
+\DoxyCodeLine{\Hypertarget{event_8cc_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
 
 \end{DoxyCode}

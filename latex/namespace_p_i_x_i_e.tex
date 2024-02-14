@@ -1,11 +1,11 @@
-\hypertarget{namespace_p_i_x_i_e}{}\doxysection{PIXIE Namespace Reference}
-\label{namespace_p_i_x_i_e}\index{PIXIE@{PIXIE}}
-\doxysubsection*{Namespaces}
+\doxysection{PIXIE Namespace Reference}
+\hypertarget{namespace_p_i_x_i_e}{}\label{namespace_p_i_x_i_e}\index{PIXIE@{PIXIE}}
+\doxysubsubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
 namespace \mbox{\hyperlink{namespace_p_i_x_i_e_1_1_trace}{Trace}}
 \end{DoxyCompactItemize}
-\doxysubsection*{Classes}
+\doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{struct_p_i_x_i_e_1_1_c_f_d}{CFD}}
@@ -24,21 +24,21 @@ class \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader}{NSCLReader}}
 \item 
 class \mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}}
 \end{DoxyCompactItemize}
-\doxysubsection*{Functions}
+\doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void $\ast$ \mbox{\hyperlink{namespace_p_i_x_i_e_ad864ab63e26cb252877ab4d1c8acd85b}{Process}} (void $\ast$thread)
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_p_i_x_i_e_ad864ab63e26cb252877ab4d1c8acd85b}{Process}} (void \texorpdfstring{$\ast$}{*}thread)
 \item 
-int \mbox{\hyperlink{namespace_p_i_x_i_e_a1dc265a21039e9941fc85af4ddcd7a84}{set\+Trace\+Alg}} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm}{PIXIE\+::\+Trace\+::\+Algorithm}} $\ast$\&tracealg, std\+::string alg\+Name, std\+::string alg\+File, int alg\+Index)
+int \mbox{\hyperlink{namespace_p_i_x_i_e_a1dc265a21039e9941fc85af4ddcd7a84}{set\+Trace\+Alg}} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm}{PIXIE\+::\+Trace\+::\+Algorithm}} \texorpdfstring{$\ast$}{*}\&tracealg, std\+::string alg\+Name, std\+::string alg\+File, int alg\+Index)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{namespace_p_i_x_i_e_ad864ab63e26cb252877ab4d1c8acd85b}\label{namespace_p_i_x_i_e_ad864ab63e26cb252877ab4d1c8acd85b}} 
+\Hypertarget{namespace_p_i_x_i_e_ad864ab63e26cb252877ab4d1c8acd85b}\label{namespace_p_i_x_i_e_ad864ab63e26cb252877ab4d1c8acd85b} 
 \index{PIXIE@{PIXIE}!Process@{Process}}
 \index{Process@{Process}!PIXIE@{PIXIE}}
 \doxysubsubsection{\texorpdfstring{Process()}{Process()}}
-{\footnotesize\ttfamily void $\ast$ PIXIE\+::\+Process (\begin{DoxyParamCaption}\item[{void $\ast$}]{thread }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void \texorpdfstring{$\ast$}{*} PIXIE\+::\+Process (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{thread }\end{DoxyParamCaption})}
 
 
 
@@ -46,277 +46,277 @@ Definition at line \mbox{\hyperlink{process_8cc_source_l00029}{29}} of file \mbo
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00029                               \{}
-\DoxyCodeLine{00030     \mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{PIXIE::Reader}} *reader            = \&(((PixieThread*)thread) -\/> reader);}
-\DoxyCodeLine{00031     options options                  = ((PixieThread*)thread) -\/> opt;}
-\DoxyCodeLine{00032     \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition}{Experiment\_Definition}} definition = ((PixieThread*)thread) -\/> definition;}
-\DoxyCodeLine{00033     off\_t offset                     = ((PixieThread*)thread) -\/> offset;}
-\DoxyCodeLine{00034     off\_t max\_offset                 = ((PixieThread*)thread) -\/> max\_offset;}
-\DoxyCodeLine{00035     \textcolor{keywordtype}{int} threadNum                    = ((PixieThread*)thread) -\/> threadNum;}
-\DoxyCodeLine{00036 }
-\DoxyCodeLine{00037     reader -\/> definition = definition;}
-\DoxyCodeLine{00038     reader -\/> thread = threadNum;}
-\DoxyCodeLine{00039     }
-\DoxyCodeLine{00040     \textcolor{comment}{//reader -\/> set\_algorithm(((PixieThread*)thread) -\/> tracealg);    }}
-\DoxyCodeLine{00041 }
-\DoxyCodeLine{00042     std::ofstream log((\textcolor{stringliteral}{"{}Thread\_"{}}+std::to\_string(threadNum)+\textcolor{stringliteral}{"{}.log"{}}).c\_str());}
-\DoxyCodeLine{00043     log << \textcolor{stringliteral}{"{}[ "{}} << threadNum << \textcolor{stringliteral}{"{} ] "{}} << std::endl;}
-\DoxyCodeLine{00044     log << std::flush;}
-\DoxyCodeLine{00045 }
-\DoxyCodeLine{00046     TFile outFile((options.path\_output+\textcolor{stringliteral}{"{}\_"{}}+std::to\_string(threadNum)).c\_str(), \textcolor{stringliteral}{"{}recreate"{}});}
-\DoxyCodeLine{00047     \textcolor{comment}{//outFile.SetCompressionAlgorithm(ROOT::kLZ4);}}
-\DoxyCodeLine{00048     \textcolor{comment}{//outFile.SetCompressionLevel(3);}}
-\DoxyCodeLine{00049   }
-\DoxyCodeLine{00050     \textcolor{keywordflow}{if} (options.verbose==\textcolor{keyword}{true}) \{}
-\DoxyCodeLine{00051       log << \textcolor{stringliteral}{"{}Creating ROOT Tree in file: "{}}<< (options.path\_output+\textcolor{stringliteral}{"{}\_"{}}+std::to\_string(threadNum)).c\_str() << std::endl;}
-\DoxyCodeLine{00052       log << std::flush;}
-\DoxyCodeLine{00053     \} }
-\DoxyCodeLine{00054 }
-\DoxyCodeLine{00055     TTree *tree;}
-\DoxyCodeLine{00056     tree = \textcolor{keyword}{new} TTree(\textcolor{stringliteral}{"{}RawTree"{}}, \textcolor{stringliteral}{"{}RawTree"{}});}
-\DoxyCodeLine{00057 }
-\DoxyCodeLine{00058     std::unordered\_map<const PIXIE::Experiment\_Definition::Channel*, PixieTraceEvent*> channel\_to\_tracedata;}
-\DoxyCodeLine{00059     std::unordered\_map<const PIXIE::Experiment\_Definition::Channel*, PixieEvent*> channel\_to\_data;}
-\DoxyCodeLine{00060     std::unordered\_map<const PIXIE::Experiment\_Definition::Channel*, PixieTagger*> channel\_to\_tagger;}
-\DoxyCodeLine{00061   }
-\DoxyCodeLine{00063     \textcolor{comment}{// Add branches //}}
-\DoxyCodeLine{00065 \textcolor{comment}{}    \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto} \&crate\_it : reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_abb0fc6333195ac9dd12f7fea78834b0f}{definition}}.\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_aabcea4cb8a3eb1e2b3185f108256b43d}{crateMap}}) \{}
-\DoxyCodeLine{00066       \textcolor{keyword}{auto} crate = crate\_it.second;}
-\DoxyCodeLine{00067       \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto} \&slot\_it : crate-\/>slotMap) \{}
-\DoxyCodeLine{00068         \textcolor{keyword}{auto} slot = slot\_it.second;}
-\DoxyCodeLine{00069         \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto} \&channel\_it : slot-\/>channelMap) \{}
-\DoxyCodeLine{00070           \textcolor{keyword}{auto} channel = channel\_it.second;        }
-\DoxyCodeLine{00071           \textcolor{comment}{// tree branch prefix}}
-\DoxyCodeLine{00072           std::string branchName(std::to\_string(crate-\/>crateID) +}
-\DoxyCodeLine{00073                                  \textcolor{stringliteral}{"{}."{}} +}
-\DoxyCodeLine{00074                                  std::to\_string(slot-\/>slotID) +}
-\DoxyCodeLine{00075                                  \textcolor{stringliteral}{"{}."{}} +}
-\DoxyCodeLine{00076                                  std::to\_string(channel-\/>channelNumber));  \textcolor{comment}{//add options to include the name?}}
-\DoxyCodeLine{00077           log << \textcolor{stringliteral}{"{}adding branch "{}} << branchName << std::endl;}
-\DoxyCodeLine{00078           log << std::flush;}
-\DoxyCodeLine{00079 }
-\DoxyCodeLine{00080           \textcolor{comment}{//the branch is a tagger:}}
-\DoxyCodeLine{00081           \textcolor{keywordflow}{if} (std::find(reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_abb0fc6333195ac9dd12f7fea78834b0f}{definition}}.taggers.begin(), reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_abb0fc6333195ac9dd12f7fea78834b0f}{definition}}.taggers.end(), channel) != reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_abb0fc6333195ac9dd12f7fea78834b0f}{definition}}.taggers.end()) \{ }
-\DoxyCodeLine{00082             PixieTagger* tag = \textcolor{keyword}{new} PixieTagger(); \textcolor{comment}{// IIRC legit use of pointer for the sake of Branch}}
-\DoxyCodeLine{00083           }
-\DoxyCodeLine{00084             tree -\/> Branch((branchName+\textcolor{stringliteral}{"{}.taggerTime"{}}).c\_str(), \&(tag-\/>taggerTime));}
-\DoxyCodeLine{00085             tree -\/> Branch((branchName+\textcolor{stringliteral}{"{}.taggerValue"{}}).c\_str(), \&(tag-\/>taggerValue));}
-\DoxyCodeLine{00086             tree -\/> Branch((branchName+\textcolor{stringliteral}{"{}.taggerNew"{}}).c\_str(), \&(tag-\/>taggerNew));}
-\DoxyCodeLine{00087           }
-\DoxyCodeLine{00088 }
-\DoxyCodeLine{00089             channel\_to\_tagger.insert(\{channel, tag\});}
-\DoxyCodeLine{00090           \} \textcolor{keywordflow}{else} \{ \textcolor{comment}{//regular measurement}}
-\DoxyCodeLine{00091             PixieEvent *data = \textcolor{keyword}{new} PixieEvent();          }
-\DoxyCodeLine{00092             tree -\/> Branch((branchName+\textcolor{stringliteral}{"{}.eventTime"{}}).c\_str(), \&(data-\/>eventTime));}
-\DoxyCodeLine{00093             tree -\/> Branch((branchName+\textcolor{stringliteral}{"{}.eventRelTime"{}}).c\_str(), \&(data-\/>eventRelTime));}
-\DoxyCodeLine{00094             tree -\/> Branch((branchName+\textcolor{stringliteral}{"{}.finishCode"{}}).c\_str(), \&(data-\/>finishCode));}
-\DoxyCodeLine{00095             tree -\/> Branch((branchName+\textcolor{stringliteral}{"{}.CFDForce"{}}).c\_str(), \&(data-\/>CFDForce));}
-\DoxyCodeLine{00096             tree -\/> Branch((branchName+\textcolor{stringliteral}{"{}.eventEnergy"{}}).c\_str(), \&(data-\/>eventEnergy));}
-\DoxyCodeLine{00097             tree -\/> Branch((branchName+\textcolor{stringliteral}{"{}.outOfRange"{}}).c\_str(), \&(data-\/>outOfRange));}
-\DoxyCodeLine{00098 }
-\DoxyCodeLine{00099             \textcolor{comment}{//if Raw Energy Sums enabled}}
-\DoxyCodeLine{00100             \textcolor{keywordflow}{if} (options.rawE) \{}
-\DoxyCodeLine{00101               \textcolor{keywordflow}{if} (channel-\/>eraw) \{}
-\DoxyCodeLine{00102                 tree -\/> Branch((branchName+\textcolor{stringliteral}{"{}.ESumTrailing"{}}).c\_str(), \&(data-\/>ESumTrailing));}
-\DoxyCodeLine{00103                 tree -\/> Branch((branchName+\textcolor{stringliteral}{"{}.ESumLeading"{}}).c\_str(), \&(data-\/>ESumLeading));}
-\DoxyCodeLine{00104                 tree -\/> Branch((branchName+\textcolor{stringliteral}{"{}.ESumGap"{}}).c\_str(), \&(data-\/>ESumGap));}
-\DoxyCodeLine{00105                 tree -\/> Branch((branchName+\textcolor{stringliteral}{"{}.baseline"{}}).c\_str(), \&(data-\/>baseline));}
-\DoxyCodeLine{00106               \}}
-\DoxyCodeLine{00107             \}}
-\DoxyCodeLine{00108 }
-\DoxyCodeLine{00109             \textcolor{comment}{//if QDCs enabled}}
-\DoxyCodeLine{00110             \textcolor{keywordflow}{if} (options.QDCs) \{}
-\DoxyCodeLine{00111               \textcolor{keywordflow}{if} (channel-\/>qdcs) \{}
-\DoxyCodeLine{00112                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<8; ++i) \{}
-\DoxyCodeLine{00113                   tree -\/> Branch((branchName+\textcolor{stringliteral}{"{}.QDCSum"{}}+std::to\_string(i)).c\_str(), \&(data-\/>QDCSums[i]));}
-\DoxyCodeLine{00114                 \}}
-\DoxyCodeLine{00115               \}}
-\DoxyCodeLine{00116             \}}
-\DoxyCodeLine{00117 }
-\DoxyCodeLine{00118             \textcolor{comment}{//if traces enabled}}
-\DoxyCodeLine{00119             \textcolor{keywordflow}{if} (options.traces) \{            }
-\DoxyCodeLine{00120               \textcolor{keywordflow}{if} (channel-\/>traces) \{}
-\DoxyCodeLine{00121                 \textcolor{keywordflow}{if} (!channel-\/>alg) \{}
-\DoxyCodeLine{00122                   std::cout << \textcolor{stringliteral}{"{}Must provide an algorithm to process traces! "{}} << std::endl;}
-\DoxyCodeLine{00123                 \}}
-\DoxyCodeLine{00124                 \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{00125                   \textcolor{keyword}{auto} trace\_meas = channel-\/>alg-\/>Prototype();}
-\DoxyCodeLine{00126                   PixieTraceEvent *tracedata = \textcolor{keyword}{new} PixieTraceEvent(trace\_meas.size());}
-\DoxyCodeLine{00127                   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<trace\_meas.size(); ++i) \{}
-\DoxyCodeLine{00128                     \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{PIXIE::Trace::Measurement}} meas = trace\_meas[i];}
-\DoxyCodeLine{00129                     tree-\/>Branch((branchName+\textcolor{stringliteral}{"{}."{}}+meas.\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement_a5fa417f5be604f7a14ab8e6d8f521be5}{name}}).c\_str(), \&(tracedata-\/>meas[i]));}
-\DoxyCodeLine{00130                   \}}
-\DoxyCodeLine{00131                   channel\_to\_tracedata.insert(\{channel, tracedata\});}
-\DoxyCodeLine{00132                 \}}
-\DoxyCodeLine{00133               \}}
-\DoxyCodeLine{00134             \}}
-\DoxyCodeLine{00135 }
-\DoxyCodeLine{00136             channel\_to\_data.insert(\{channel, data\});}
-\DoxyCodeLine{00137           \}}
-\DoxyCodeLine{00138 }
-\DoxyCodeLine{00139         \} }
-\DoxyCodeLine{00140       \} }
-\DoxyCodeLine{00141     \} }
-\DoxyCodeLine{00142 }
-\DoxyCodeLine{00143 }
-\DoxyCodeLine{00144     \textcolor{comment}{// preallocating should speed up}}
-\DoxyCodeLine{00145     std::vector<PIXIE::Event> new\_events(options.events\_per\_read);}
-\DoxyCodeLine{00146 }
-\DoxyCodeLine{00147     log << \textcolor{stringliteral}{"{}opening the listmode data "{}} << std::endl;}
-\DoxyCodeLine{00148     log << std::flush;}
-\DoxyCodeLine{00149     reader -\/> open(options.listPath);}
-\DoxyCodeLine{00150     \textcolor{keywordflow}{if} (options.verbose==\textcolor{keyword}{true}) \{}
-\DoxyCodeLine{00151       printf(\textcolor{stringliteral}{"{}[ \%i ] Opened listmode data file "{}} \mbox{\hyperlink{colors_8hh_aca16e6a49eb51333c5fd3eee19487315}{ANSI\_COLOR\_BLUE}} \textcolor{stringliteral}{"{}\%s"{}} \mbox{\hyperlink{colors_8hh_a92a364c2b863dde1a024a77eac2a5b3b}{ANSI\_COLOR\_RESET}} \textcolor{stringliteral}{"{}\(\backslash\)n"{}}, threadNum, options.listPath.c\_str());}
-\DoxyCodeLine{00152       printf(\textcolor{stringliteral}{"{}[ \%i ] Processing "{}} \mbox{\hyperlink{colors_8hh_aca16e6a49eb51333c5fd3eee19487315}{ANSI\_COLOR\_BLUE}} \textcolor{stringliteral}{"{}\%d"{}} \mbox{\hyperlink{colors_8hh_a92a364c2b863dde1a024a77eac2a5b3b}{ANSI\_COLOR\_RESET}} \textcolor{stringliteral}{"{} events at a time, with a coincidence window of "{}} \mbox{\hyperlink{colors_8hh_aca16e6a49eb51333c5fd3eee19487315}{ANSI\_COLOR\_BLUE}} \textcolor{stringliteral}{"{}\%d"{}} \mbox{\hyperlink{colors_8hh_a92a364c2b863dde1a024a77eac2a5b3b}{ANSI\_COLOR\_RESET}} \textcolor{stringliteral}{"{}\(\backslash\)n"{}}, threadNum, options.events\_per\_read, options.coincWindow);}
-\DoxyCodeLine{00153       std::cout << std::flush;}
-\DoxyCodeLine{00154     \}}
-\DoxyCodeLine{00155 }
-\DoxyCodeLine{00156     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& map\_entry : channel\_to\_tagger) \{}
-\DoxyCodeLine{00157       \textcolor{comment}{//*reinterpret\_cast<PixieTagger *>(map\_entry.second) = \{0, 0, 0\};}}
-\DoxyCodeLine{00158       map\_entry.second -\/> Reset(); \textcolor{comment}{// this is how we do, chill in laid back}}
-\DoxyCodeLine{00159     \}}
-\DoxyCodeLine{00160 }
-\DoxyCodeLine{00161     reader -\/> set\_offset(offset);  }
-\DoxyCodeLine{00162     \textcolor{comment}{// start timing}}
-\DoxyCodeLine{00163     \textcolor{comment}{//size\_t eventsread = 0;}}
-\DoxyCodeLine{00164     log << \textcolor{stringliteral}{"{}starting the event loop "{}} << std::endl;}
-\DoxyCodeLine{00165     log << std::flush;}
-\DoxyCodeLine{00166     reader -\/> start();}
-\DoxyCodeLine{00167     reader -\/> set\_offset(offset);}
-\DoxyCodeLine{00168 }
-\DoxyCodeLine{00170     \textcolor{comment}{// read loop //}}
-\DoxyCodeLine{00172 \textcolor{comment}{}    \textcolor{keywordflow}{while}(\textcolor{keyword}{true}) \{}
-\DoxyCodeLine{00173       new\_events.clear();}
-\DoxyCodeLine{00174       \textcolor{keywordflow}{if} (options.breakatevent > 0 \&\& reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a59724abfa68ca0b7a4225a66a636e1d1}{eventsread}} + options.events\_per\_read > options.breakatevent)\{}
-\DoxyCodeLine{00175     reader -\/> read(new\_events, options.coincWindow, options.breakatevent -\/ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a59724abfa68ca0b7a4225a66a636e1d1}{eventsread}}, max\_offset, options.warnings);}
-\DoxyCodeLine{00176       \}}
-\DoxyCodeLine{00177       \textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{00178         reader -\/> read(new\_events, options.coincWindow, options.events\_per\_read, max\_offset, options.warnings);}
-\DoxyCodeLine{00179       \}}
-\DoxyCodeLine{00180       reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a59724abfa68ca0b7a4225a66a636e1d1}{eventsread}} = reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a59724abfa68ca0b7a4225a66a636e1d1}{eventsread}} + new\_events.size();}
-\DoxyCodeLine{00181 }
-\DoxyCodeLine{00182       \textcolor{keywordflow}{if} (new\_events.size()) \{}
-\DoxyCodeLine{00183         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& event : new\_events) \{}
-\DoxyCodeLine{00184           \textcolor{keywordtype}{int} mult = 0;}
-\DoxyCodeLine{00185           \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&map\_entry : channel\_to\_data) \{}
-\DoxyCodeLine{00186             map\_entry.second -\/> Reset(); \textcolor{comment}{// bring the beat back}}
-\DoxyCodeLine{00187           \}}
-\DoxyCodeLine{00188           \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&map\_entry : channel\_to\_tracedata) \{}
-\DoxyCodeLine{00189             map\_entry.second -\/> Reset(); \textcolor{comment}{// bring the beat back}}
-\DoxyCodeLine{00190           \}}
-\DoxyCodeLine{00191           \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&map\_entry : channel\_to\_tagger) \{}
-\DoxyCodeLine{00192             \textcolor{comment}{// only change this part of the tagger}}
-\DoxyCodeLine{00193             (map\_entry.second) -\/> taggerNew = 0;}
-\DoxyCodeLine{00194           \}}
-\DoxyCodeLine{00195 }
-\DoxyCodeLine{00196           \textcolor{comment}{// Done setting up, iterate and fill the event}}
-\DoxyCodeLine{00197           \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&meas : event.fMeasurements) \{}
-\DoxyCodeLine{00198             \textcolor{keyword}{auto} *channel = reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_abb0fc6333195ac9dd12f7fea78834b0f}{definition}}.\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a4dafec217c0b9f571c8cc9e944e3f050}{GetChannel}}(meas.crateID, meas.slotID, meas.channelNumber);}
-\DoxyCodeLine{00199             \textcolor{keyword}{const} \textcolor{keyword}{auto}\& detector = channel\_to\_data.find(channel);}
-\DoxyCodeLine{00200             \textcolor{keyword}{const} \textcolor{keyword}{auto}\& tagger = channel\_to\_tagger.find(channel);}
-\DoxyCodeLine{00201 }
-\DoxyCodeLine{00202             \textcolor{keywordflow}{if} (!(detector == channel\_to\_data.end())) \{}
-\DoxyCodeLine{00203               \textcolor{comment}{//it's a detector}}
-\DoxyCodeLine{00204               (detector-\/>second)-\/>finishCode   = meas.finishCode;}
-\DoxyCodeLine{00205               (detector-\/>second)-\/>eventTime    = meas.eventTime;}
-\DoxyCodeLine{00206               (detector-\/>second)-\/>eventRelTime = meas.eventRelTime; \textcolor{comment}{// time relative to the first trigger plus 1 -\/A}}
-\DoxyCodeLine{00207               (detector-\/>second)-\/>CFDForce     = meas.CFDForce;}
-\DoxyCodeLine{00208               (detector-\/>second)-\/>eventEnergy  = meas.eventEnergy;}
-\DoxyCodeLine{00209               (detector-\/>second)-\/>outOfRange   = meas.outOfRange;}
-\DoxyCodeLine{00210 }
-\DoxyCodeLine{00211               \textcolor{keywordflow}{if} (options.rawE) \{}
-\DoxyCodeLine{00212                 \textcolor{keywordflow}{if} (channel-\/>eraw) \{}
-\DoxyCodeLine{00213                   (detector-\/>second)-\/>ESumTrailing   = meas.ESumTrailing;}
-\DoxyCodeLine{00214                   (detector-\/>second)-\/>ESumLeading   = meas.ESumLeading;}
-\DoxyCodeLine{00215                   (detector-\/>second)-\/>ESumGap   = meas.ESumGap;}
-\DoxyCodeLine{00216                   (detector-\/>second)-\/>baseline   = meas.baseline;}
-\DoxyCodeLine{00217                 \}}
-\DoxyCodeLine{00218               \}}
-\DoxyCodeLine{00219 }
-\DoxyCodeLine{00220               \textcolor{keywordflow}{if} (options.QDCs) \{}
-\DoxyCodeLine{00221                 \textcolor{keywordflow}{if} (channel-\/>qdcs) \{}
-\DoxyCodeLine{00222                   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0;i<8;++i)}
-\DoxyCodeLine{00223                     \{}
-\DoxyCodeLine{00224                       (detector-\/>second)-\/>QDCSums[i]   = meas.QDCSums[i];}
-\DoxyCodeLine{00225                     \}}
-\DoxyCodeLine{00226                 \}}
-\DoxyCodeLine{00227               \}}
-\DoxyCodeLine{00228             \}}
-\DoxyCodeLine{00229 }
-\DoxyCodeLine{00230             \textcolor{keyword}{const} \textcolor{keyword}{auto}\& tracedetector = channel\_to\_tracedata.find(channel);}
-\DoxyCodeLine{00231 }
-\DoxyCodeLine{00232             \textcolor{keywordflow}{if} (!(tracedetector == channel\_to\_tracedata.end())) \{}
-\DoxyCodeLine{00233               \textcolor{keywordflow}{if} (options.traces) \{}
-\DoxyCodeLine{00234                 \textcolor{keywordflow}{if} (channel-\/>traces) \{}
-\DoxyCodeLine{00235                   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0;i<(tracedetector-\/>second)-\/>meas.size(); ++i) \{}
-\DoxyCodeLine{00236                     \textcolor{keywordflow}{if} (i >= meas.trace\_meas.size()) \{}
-\DoxyCodeLine{00237                       (tracedetector-\/>second)-\/>meas[i] = 0;}
-\DoxyCodeLine{00238                     \}}
-\DoxyCodeLine{00239                     \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{00240                       (tracedetector-\/>second)-\/>meas[i] = meas.trace\_meas[i].datum;}
-\DoxyCodeLine{00241                     \}}
-\DoxyCodeLine{00242                   \}}
-\DoxyCodeLine{00243                 \}}
-\DoxyCodeLine{00244               \}}
-\DoxyCodeLine{00245             \}}
-\DoxyCodeLine{00246 }
-\DoxyCodeLine{00247             mult += 1;}
-\DoxyCodeLine{00248 }
-\DoxyCodeLine{00249             \textcolor{keywordflow}{if} (!(tagger == channel\_to\_tagger.end())) \{}
-\DoxyCodeLine{00250               \textcolor{comment}{//it's a tagger}}
-\DoxyCodeLine{00251               \textcolor{keywordflow}{if} ( meas.finishCode == 0 ) \{}
-\DoxyCodeLine{00252         \textcolor{comment}{//Only update for the first tagger in the event}}
-\DoxyCodeLine{00253         \textcolor{keywordflow}{if}((tagger-\/>second)-\/>taggerNew == 0 ) \{}
-\DoxyCodeLine{00254           (tagger-\/>second)-\/>taggerValue = meas.eventEnergy;  \textcolor{comment}{//tag values are stored as energy}}
-\DoxyCodeLine{00255           (tagger-\/>second)-\/>taggerTime = meas.eventTime;  \textcolor{comment}{//time at which the tagger fired}}
-\DoxyCodeLine{00256         \}}
-\DoxyCodeLine{00257         (tagger-\/>second)-\/>taggerNew += 1; \textcolor{comment}{// ask Tim Gray about this one.}}
-\DoxyCodeLine{00258               \}}
-\DoxyCodeLine{00259               \textcolor{keywordflow}{continue};}
-\DoxyCodeLine{00260             \}}
-\DoxyCodeLine{00261             \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{00262               \textcolor{keywordflow}{continue};}
-\DoxyCodeLine{00263             \}}
-\DoxyCodeLine{00264           \}}
-\DoxyCodeLine{00265         }
-\DoxyCodeLine{00266           \textcolor{keywordflow}{if} (mult >= options.minMult) \{}
-\DoxyCodeLine{00267             tree -\/> Fill();}
-\DoxyCodeLine{00268           \}}
-\DoxyCodeLine{00269         \}\textcolor{comment}{// event loop}}
-\DoxyCodeLine{00270       \}}
-\DoxyCodeLine{00271 }
-\DoxyCodeLine{00272       tree -\/> Write();}
-\DoxyCodeLine{00273       reader -\/> printUpdate();}
-\DoxyCodeLine{00274 }
-\DoxyCodeLine{00275       \textcolor{keywordflow}{if} (options.breakatevent \&\& reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a59724abfa68ca0b7a4225a66a636e1d1}{eventsread}} >= options.breakatevent) \{}
-\DoxyCodeLine{00276         tree -\/> Write(tree-\/>GetName(), TObject::kOverwrite);}
-\DoxyCodeLine{00277         \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00278       \}}
-\DoxyCodeLine{00279 }
-\DoxyCodeLine{00280       \textcolor{keywordflow}{if} (reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a9290c324fdbec0c231d1f4dbc34dd402}{eof}}() || reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a9e1ef7766d3ee935ff0b384d52d6a87c}{end}}) \{}
-\DoxyCodeLine{00281         \textcolor{keywordflow}{if} (options.live \&\& options.liveCount<=10) \{ \textcolor{comment}{//if we hit the end of the file for 50 seconds continuously, assume we have stopped acquiring data and quit}}
-\DoxyCodeLine{00282           std::cout << \textcolor{stringliteral}{"{} eof? "{}} << options.liveCount << std::endl;}
-\DoxyCodeLine{00283           std::this\_thread::sleep\_for(std::chrono::milliseconds(10));}
-\DoxyCodeLine{00284           options.liveCount=options.liveCount+1;}
-\DoxyCodeLine{00285           \textcolor{keywordflow}{continue};}
-\DoxyCodeLine{00286         \} \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{00287           \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00288         \}}
-\DoxyCodeLine{00289       \} \textcolor{keywordflow}{else} \{ options.liveCount=0; \}}
-\DoxyCodeLine{00290 }
-\DoxyCodeLine{00291     \} \textcolor{comment}{//while (true) loop}}
-\DoxyCodeLine{00292 }
-\DoxyCodeLine{00293     outFile.Purge();}
-\DoxyCodeLine{00294     outFile.Close();}
-\DoxyCodeLine{00295     pthread\_exit(NULL);}
-\DoxyCodeLine{00296   \}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{PIXIE::Reader}}\ *reader\ \ \ \ \ \ \ \ \ \ \ \ =\ \&(((PixieThread*)thread)\ -\/>\ reader);}
+\DoxyCodeLine{00031\ \ \ \ \ options\ options\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ ((PixieThread*)thread)\ -\/>\ opt;}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition}{Experiment\_Definition}}\ definition\ =\ ((PixieThread*)thread)\ -\/>\ definition;}
+\DoxyCodeLine{00033\ \ \ \ \ off\_t\ offset\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ ((PixieThread*)thread)\ -\/>\ offset;}
+\DoxyCodeLine{00034\ \ \ \ \ off\_t\ max\_offset\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ ((PixieThread*)thread)\ -\/>\ max\_offset;}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{int}\ threadNum\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ ((PixieThread*)thread)\ -\/>\ threadNum;}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ reader\ -\/>\ definition\ =\ definition;}
+\DoxyCodeLine{00038\ \ \ \ \ reader\ -\/>\ thread\ =\ threadNum;}
+\DoxyCodeLine{00039\ \ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//reader\ -\/>\ set\_algorithm(((PixieThread*)thread)\ -\/>\ tracealg);\ \ \ \ }}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ std::ofstream\ log((\textcolor{stringliteral}{"{}Thread\_"{}}+std::to\_string(threadNum)+\textcolor{stringliteral}{"{}.log"{}}).c\_str());}
+\DoxyCodeLine{00043\ \ \ \ \ log\ <<\ \textcolor{stringliteral}{"{}[\ "{}}\ <<\ threadNum\ <<\ \textcolor{stringliteral}{"{}\ ]\ "{}}\ <<\ std::endl;}
+\DoxyCodeLine{00044\ \ \ \ \ log\ <<\ std::flush;}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ TFile\ outFile((options.path\_output+\textcolor{stringliteral}{"{}\_"{}}+std::to\_string(threadNum)).c\_str(),\ \textcolor{stringliteral}{"{}recreate"{}});}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//outFile.SetCompressionAlgorithm(ROOT::kLZ4);}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{//outFile.SetCompressionLevel(3);}}
+\DoxyCodeLine{00049\ \ \ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordflow}{if}\ (options.verbose==\textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ log\ <<\ \textcolor{stringliteral}{"{}Creating\ ROOT\ Tree\ in\ file:\ "{}}<<\ (options.path\_output+\textcolor{stringliteral}{"{}\_"{}}+std::to\_string(threadNum)).c\_str()\ <<\ std::endl;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ log\ <<\ std::flush;}
+\DoxyCodeLine{00053\ \ \ \ \ \}\ }
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ TTree\ *tree;}
+\DoxyCodeLine{00056\ \ \ \ \ tree\ =\ \textcolor{keyword}{new}\ TTree(\textcolor{stringliteral}{"{}RawTree"{}},\ \textcolor{stringliteral}{"{}RawTree"{}});}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ std::unordered\_map<const\ PIXIE::Experiment\_Definition::Channel*,\ PixieTraceEvent*>\ channel\_to\_tracedata;}
+\DoxyCodeLine{00059\ \ \ \ \ std::unordered\_map<const\ PIXIE::Experiment\_Definition::Channel*,\ PixieEvent*>\ channel\_to\_data;}
+\DoxyCodeLine{00060\ \ \ \ \ std::unordered\_map<const\ PIXIE::Experiment\_Definition::Channel*,\ PixieTagger*>\ channel\_to\_tagger;}
+\DoxyCodeLine{00061\ \ \ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//\ Add\ branches\ //}}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&crate\_it\ :\ reader-\/>definition.crateMap)\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \textcolor{keyword}{auto}\ crate\ =\ crate\_it.second;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&slot\_it\ :\ crate-\/>slotMap)\ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ slot\ =\ slot\_it.second;}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&channel\_it\ :\ slot-\/>channelMap)\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ channel\ =\ channel\_it.second;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ tree\ branch\ prefix}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ std::string\ branchName(std::to\_string(crate-\/>crateID)\ +}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}."{}}\ +}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::to\_string(slot-\/>slotID)\ +}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}."{}}\ +}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::to\_string(channel-\/>channelNumber));\ \ \textcolor{comment}{//add\ options\ to\ include\ the\ name?}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ log\ <<\ \textcolor{stringliteral}{"{}adding\ branch\ "{}}\ <<\ branchName\ <<\ std::endl;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ log\ <<\ std::flush;}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//the\ branch\ is\ a\ tagger:}}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (std::find(reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_abb0fc6333195ac9dd12f7fea78834b0f}{definition}}.taggers.begin(),\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_abb0fc6333195ac9dd12f7fea78834b0f}{definition}}.taggers.end(),\ channel)\ !=\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_abb0fc6333195ac9dd12f7fea78834b0f}{definition}}.taggers.end())\ \{\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ PixieTagger*\ tag\ =\ \textcolor{keyword}{new}\ PixieTagger();\ \textcolor{comment}{//\ IIRC\ legit\ use\ of\ pointer\ for\ the\ sake\ of\ Branch}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ tree\ -\/>\ Branch((branchName+\textcolor{stringliteral}{"{}.taggerTime"{}}).c\_str(),\ \&(tag-\/>taggerTime));}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ tree\ -\/>\ Branch((branchName+\textcolor{stringliteral}{"{}.taggerValue"{}}).c\_str(),\ \&(tag-\/>taggerValue));}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ tree\ -\/>\ Branch((branchName+\textcolor{stringliteral}{"{}.taggerNew"{}}).c\_str(),\ \&(tag-\/>taggerNew));}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ channel\_to\_tagger.insert(\{channel,\ tag\});}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{\ \textcolor{comment}{//regular\ measurement}}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ PixieEvent\ *data\ =\ \textcolor{keyword}{new}\ PixieEvent();\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ tree\ -\/>\ Branch((branchName+\textcolor{stringliteral}{"{}.eventTime"{}}).c\_str(),\ \&(data-\/>eventTime));}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ tree\ -\/>\ Branch((branchName+\textcolor{stringliteral}{"{}.eventRelTime"{}}).c\_str(),\ \&(data-\/>eventRelTime));}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ tree\ -\/>\ Branch((branchName+\textcolor{stringliteral}{"{}.finishCode"{}}).c\_str(),\ \&(data-\/>finishCode));}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ tree\ -\/>\ Branch((branchName+\textcolor{stringliteral}{"{}.CFDForce"{}}).c\_str(),\ \&(data-\/>CFDForce));}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ tree\ -\/>\ Branch((branchName+\textcolor{stringliteral}{"{}.eventEnergy"{}}).c\_str(),\ \&(data-\/>eventEnergy));}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ tree\ -\/>\ Branch((branchName+\textcolor{stringliteral}{"{}.outOfRange"{}}).c\_str(),\ \&(data-\/>outOfRange));}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//if\ Raw\ Energy\ Sums\ enabled}}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (options.rawE)\ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (channel-\/>eraw)\ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tree\ -\/>\ Branch((branchName+\textcolor{stringliteral}{"{}.ESumTrailing"{}}).c\_str(),\ \&(data-\/>ESumTrailing));}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tree\ -\/>\ Branch((branchName+\textcolor{stringliteral}{"{}.ESumLeading"{}}).c\_str(),\ \&(data-\/>ESumLeading));}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tree\ -\/>\ Branch((branchName+\textcolor{stringliteral}{"{}.ESumGap"{}}).c\_str(),\ \&(data-\/>ESumGap));}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tree\ -\/>\ Branch((branchName+\textcolor{stringliteral}{"{}.baseline"{}}).c\_str(),\ \&(data-\/>baseline));}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//if\ QDCs\ enabled}}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (options.QDCs)\ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (channel-\/>qdcs)\ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<8;\ ++i)\ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tree\ -\/>\ Branch((branchName+\textcolor{stringliteral}{"{}.QDCSum"{}}+std::to\_string(i)).c\_str(),\ \&(data-\/>QDCSums[i]));}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//if\ traces\ enabled}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (options.traces)\ \{\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (channel-\/>traces)\ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!channel-\/>alg)\ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Must\ provide\ an\ algorithm\ to\ process\ traces!\ "{}}\ <<\ std::endl;}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ trace\_meas\ =\ channel-\/>alg-\/>Prototype();}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PixieTraceEvent\ *tracedata\ =\ \textcolor{keyword}{new}\ PixieTraceEvent(trace\_meas.size());}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<trace\_meas.size();\ ++i)\ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{PIXIE::Trace::Measurement}}\ meas\ =\ trace\_meas[i];}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tree-\/>Branch((branchName+\textcolor{stringliteral}{"{}."{}}+meas.\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement_a5fa417f5be604f7a14ab8e6d8f521be5}{name}}).c\_str(),\ \&(tracedata-\/>meas[i]));}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ channel\_to\_tracedata.insert(\{channel,\ tracedata\});}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ channel\_to\_data.insert(\{channel,\ data\});}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{00141\ \ \ \ \ \}\ }
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{comment}{//\ preallocating\ should\ speed\ up}}
+\DoxyCodeLine{00145\ \ \ \ \ std::vector<PIXIE::Event>\ new\_events(options.events\_per\_read);}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \ \ \ \ log\ <<\ \textcolor{stringliteral}{"{}opening\ the\ listmode\ data\ "{}}\ <<\ std::endl;}
+\DoxyCodeLine{00148\ \ \ \ \ log\ <<\ std::flush;}
+\DoxyCodeLine{00149\ \ \ \ \ reader\ -\/>\ open(options.listPath);}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordflow}{if}\ (options.verbose==\textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}[\ \%i\ ]\ Opened\ listmode\ data\ file\ "{}}\ \mbox{\hyperlink{colors_8hh_aca16e6a49eb51333c5fd3eee19487315}{ANSI\_COLOR\_BLUE}}\ \textcolor{stringliteral}{"{}\%s"{}}\ \mbox{\hyperlink{colors_8hh_a92a364c2b863dde1a024a77eac2a5b3b}{ANSI\_COLOR\_RESET}}\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}},\ threadNum,\ options.listPath.c\_str());}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}[\ \%i\ ]\ Processing\ "{}}\ \mbox{\hyperlink{colors_8hh_aca16e6a49eb51333c5fd3eee19487315}{ANSI\_COLOR\_BLUE}}\ \textcolor{stringliteral}{"{}\%d"{}}\ \mbox{\hyperlink{colors_8hh_a92a364c2b863dde1a024a77eac2a5b3b}{ANSI\_COLOR\_RESET}}\ \textcolor{stringliteral}{"{}\ events\ at\ a\ time,\ with\ a\ coincidence\ window\ of\ "{}}\ \mbox{\hyperlink{colors_8hh_aca16e6a49eb51333c5fd3eee19487315}{ANSI\_COLOR\_BLUE}}\ \textcolor{stringliteral}{"{}\%d"{}}\ \mbox{\hyperlink{colors_8hh_a92a364c2b863dde1a024a77eac2a5b3b}{ANSI\_COLOR\_RESET}}\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}},\ threadNum,\ options.events\_per\_read,\ options.coincWindow);}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ std::cout\ <<\ std::flush;}
+\DoxyCodeLine{00154\ \ \ \ \ \}}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ map\_entry\ :\ channel\_to\_tagger)\ \{}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \textcolor{comment}{//*reinterpret\_cast<PixieTagger\ *>(map\_entry.second)\ =\ \{0,\ 0,\ 0\};}}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ map\_entry.second\ -\/>\ Reset();\ \textcolor{comment}{//\ this\ is\ how\ we\ do,\ chill\ in\ laid\ back}}
+\DoxyCodeLine{00159\ \ \ \ \ \}}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \ \ reader\ -\/>\ set\_offset(offset);\ \ }
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{comment}{//\ start\ timing}}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{comment}{//size\_t\ eventsread\ =\ 0;}}
+\DoxyCodeLine{00164\ \ \ \ \ log\ <<\ \textcolor{stringliteral}{"{}starting\ the\ event\ loop\ "{}}\ <<\ std::endl;}
+\DoxyCodeLine{00165\ \ \ \ \ log\ <<\ std::flush;}
+\DoxyCodeLine{00166\ \ \ \ \ reader\ -\/>\ start();}
+\DoxyCodeLine{00167\ \ \ \ \ reader\ -\/>\ set\_offset(offset);}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{comment}{//\ read\ loop\ //}}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordflow}{while}(\textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ new\_events.clear();}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (options.breakatevent\ >\ 0\ \&\&\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a59724abfa68ca0b7a4225a66a636e1d1}{eventsread}}\ +\ options.events\_per\_read\ >\ options.breakatevent)\{}
+\DoxyCodeLine{00175\ \ \ \ \ reader\ -\/>\ read(new\_events,\ options.coincWindow,\ options.breakatevent\ -\/\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a59724abfa68ca0b7a4225a66a636e1d1}{eventsread}},\ max\_offset,\ options.warnings);}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ reader\ -\/>\ read(new\_events,\ options.coincWindow,\ options.events\_per\_read,\ max\_offset,\ options.warnings);}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a59724abfa68ca0b7a4225a66a636e1d1}{eventsread}}\ =\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a59724abfa68ca0b7a4225a66a636e1d1}{eventsread}}\ +\ new\_events.size();}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (new\_events.size())\ \{}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ event\ :\ new\_events)\ \{}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ mult\ =\ 0;}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&map\_entry\ :\ channel\_to\_data)\ \{}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ map\_entry.second\ -\/>\ Reset();\ \textcolor{comment}{//\ bring\ the\ beat\ back}}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&map\_entry\ :\ channel\_to\_tracedata)\ \{}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ map\_entry.second\ -\/>\ Reset();\ \textcolor{comment}{//\ bring\ the\ beat\ back}}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&map\_entry\ :\ channel\_to\_tagger)\ \{}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ only\ change\ this\ part\ of\ the\ tagger}}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ (map\_entry.second)\ -\/>\ taggerNew\ =\ 0;}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Done\ setting\ up,\ iterate\ and\ fill\ the\ event}}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&meas\ :\ event.fMeasurements)\ \{}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ *channel\ =\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_abb0fc6333195ac9dd12f7fea78834b0f}{definition}}.\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a4dafec217c0b9f571c8cc9e944e3f050}{GetChannel}}(meas.crateID,\ meas.slotID,\ meas.channelNumber);}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ detector\ =\ channel\_to\_data.find(channel);}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ tagger\ =\ channel\_to\_tagger.find(channel);}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!(detector\ ==\ channel\_to\_data.end()))\ \{}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//it's\ a\ detector}}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (detector-\/>second)-\/>finishCode\ \ \ =\ meas.finishCode;}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (detector-\/>second)-\/>eventTime\ \ \ \ =\ meas.eventTime;}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (detector-\/>second)-\/>eventRelTime\ =\ meas.eventRelTime;\ \textcolor{comment}{//\ time\ relative\ to\ the\ first\ trigger\ plus\ 1\ -\/A}}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (detector-\/>second)-\/>CFDForce\ \ \ \ \ =\ meas.CFDForce;}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (detector-\/>second)-\/>eventEnergy\ \ =\ meas.eventEnergy;}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (detector-\/>second)-\/>outOfRange\ \ \ =\ meas.outOfRange;}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (options.rawE)\ \{}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (channel-\/>eraw)\ \{}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (detector-\/>second)-\/>ESumTrailing\ \ \ =\ meas.ESumTrailing;}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (detector-\/>second)-\/>ESumLeading\ \ \ =\ meas.ESumLeading;}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (detector-\/>second)-\/>ESumGap\ \ \ =\ meas.ESumGap;}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (detector-\/>second)-\/>baseline\ \ \ =\ meas.baseline;}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (options.QDCs)\ \{}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (channel-\/>qdcs)\ \{}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;i<8;++i)}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (detector-\/>second)-\/>QDCSums[i]\ \ \ =\ meas.QDCSums[i];}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00229\ }
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ tracedetector\ =\ channel\_to\_tracedata.find(channel);}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!(tracedetector\ ==\ channel\_to\_tracedata.end()))\ \{}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (options.traces)\ \{}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (channel-\/>traces)\ \{}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;i<(tracedetector-\/>second)-\/>meas.size();\ ++i)\ \{}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ >=\ meas.trace\_meas.size())\ \{}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (tracedetector-\/>second)-\/>meas[i]\ =\ 0;}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (tracedetector-\/>second)-\/>meas[i]\ =\ meas.trace\_meas[i].datum;}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00246\ }
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ mult\ +=\ 1;}
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!(tagger\ ==\ channel\_to\_tagger.end()))\ \{}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//it's\ a\ tagger}}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\ meas.finishCode\ ==\ 0\ )\ \{}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Only\ update\ for\ the\ first\ tagger\ in\ the\ event}}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}((tagger-\/>second)-\/>taggerNew\ ==\ 0\ )\ \{}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ (tagger-\/>second)-\/>taggerValue\ =\ meas.eventEnergy;\ \ \textcolor{comment}{//tag\ values\ are\ stored\ as\ energy}}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ (tagger-\/>second)-\/>taggerTime\ =\ meas.eventTime;\ \ \textcolor{comment}{//time\ at\ which\ the\ tagger\ fired}}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ (tagger-\/>second)-\/>taggerNew\ +=\ 1;\ \textcolor{comment}{//\ ask\ Tim\ Gray\ about\ this\ one.}}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mult\ >=\ options.minMult)\ \{}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \ \ \ \ tree\ -\/>\ Fill();}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \}\textcolor{comment}{//\ event\ loop}}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00271\ }
+\DoxyCodeLine{00272\ \ \ \ \ \ \ tree\ -\/>\ Write();}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ reader\ -\/>\ printUpdate();}
+\DoxyCodeLine{00274\ }
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (options.breakatevent\ \&\&\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a59724abfa68ca0b7a4225a66a636e1d1}{eventsread}}\ >=\ options.breakatevent)\ \{}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ tree\ -\/>\ Write(tree-\/>GetName(),\ TObject::kOverwrite);}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00279\ }
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a9290c324fdbec0c231d1f4dbc34dd402}{eof}}()\ ||\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a9e1ef7766d3ee935ff0b384d52d6a87c}{end}})\ \{}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (options.live\ \&\&\ options.liveCount<=10)\ \{\ \textcolor{comment}{//if\ we\ hit\ the\ end\ of\ the\ file\ for\ 50\ seconds\ continuously,\ assume\ we\ have\ stopped\ acquiring\ data\ and\ quit}}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ eof?\ "{}}\ <<\ options.liveCount\ <<\ std::endl;}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \ \ std::this\_thread::sleep\_for(std::chrono::milliseconds(10));}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ options.liveCount=options.liveCount+1;}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{\ options.liveCount=0;\ \}}
+\DoxyCodeLine{00290\ }
+\DoxyCodeLine{00291\ \ \ \ \ \}\ \textcolor{comment}{//while\ (true)\ loop}}
+\DoxyCodeLine{00292\ }
+\DoxyCodeLine{00293\ \ \ \ \ outFile.Purge();}
+\DoxyCodeLine{00294\ \ \ \ \ outFile.Close();}
+\DoxyCodeLine{00295\ \ \ \ \ pthread\_exit(NULL);}
+\DoxyCodeLine{00296\ \ \ \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{namespace_p_i_x_i_e_a1dc265a21039e9941fc85af4ddcd7a84}\label{namespace_p_i_x_i_e_a1dc265a21039e9941fc85af4ddcd7a84}} 
+\Hypertarget{namespace_p_i_x_i_e_a1dc265a21039e9941fc85af4ddcd7a84}\label{namespace_p_i_x_i_e_a1dc265a21039e9941fc85af4ddcd7a84} 
 \index{PIXIE@{PIXIE}!setTraceAlg@{setTraceAlg}}
 \index{setTraceAlg@{setTraceAlg}!PIXIE@{PIXIE}}
 \doxysubsubsection{\texorpdfstring{setTraceAlg()}{setTraceAlg()}}
-{\footnotesize\ttfamily int PIXIE\+::set\+Trace\+Alg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm}{PIXIE\+::\+Trace\+::\+Algorithm}} $\ast$\&}]{tracealg,  }\item[{std\+::string}]{alg\+Name,  }\item[{std\+::string}]{alg\+File,  }\item[{int}]{alg\+Index }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int PIXIE\+::set\+Trace\+Alg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm}{PIXIE\+::\+Trace\+::\+Algorithm}} \texorpdfstring{$\ast$}{*}\&}]{tracealg,  }\item[{std\+::string}]{alg\+Name,  }\item[{std\+::string}]{alg\+File,  }\item[{int}]{alg\+Index }\end{DoxyParamCaption})}
 
 
 
@@ -324,21 +324,21 @@ Definition at line \mbox{\hyperlink{trace__algorithms_8cc_source_l00025}{25}} of
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00025                                                                                                       \{}
-\DoxyCodeLine{00026     \textcolor{keywordflow}{if} (!((algName).compare(\textcolor{stringliteral}{"{}trapfilter"{}}))) \{}
-\DoxyCodeLine{00027       tracealg = \textcolor{keyword}{new} \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid}{PIXIE::Trace::Trapezoid}}();}
-\DoxyCodeLine{00028     \}}
-\DoxyCodeLine{00029     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!((algName).compare(\textcolor{stringliteral}{"{}trapfilterqdcs"{}}))) \{}
-\DoxyCodeLine{00030       tracealg = \textcolor{keyword}{new} \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c}{PIXIE::Trace::TrapezoidQDC}}();}
-\DoxyCodeLine{00031     \}}
-\DoxyCodeLine{00032     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!((algName).compare(\textcolor{stringliteral}{"{}peaktail"{}}))) \{}
-\DoxyCodeLine{00033       tracealg = \textcolor{keyword}{new} \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail}{PIXIE::Trace::PeakTail}}();}
-\DoxyCodeLine{00034     \}}
-\DoxyCodeLine{00035     \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{00036       \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{00037     \}}
-\DoxyCodeLine{00038     tracealg-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a507daabea5816729273219e9d310b695}{Load}}(algFile.c\_str(), algIndex);}
-\DoxyCodeLine{00039     \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{00040   \}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordflow}{if}\ (!((algName).compare(\textcolor{stringliteral}{"{}trapfilter"{}})))\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ tracealg\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid}{PIXIE::Trace::Trapezoid}}();}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (!((algName).compare(\textcolor{stringliteral}{"{}trapfilterqdcs"{}})))\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ tracealg\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c}{PIXIE::Trace::TrapezoidQDC}}();}
+\DoxyCodeLine{00031\ \ \ \ \ \}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (!((algName).compare(\textcolor{stringliteral}{"{}peaktail"{}})))\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ tracealg\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail}{PIXIE::Trace::PeakTail}}();}
+\DoxyCodeLine{00034\ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ tracealg-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a507daabea5816729273219e9d310b695}{Load}}(algFile.c\_str(),\ algIndex);}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00040\ \ \ \}}
 
 \end{DoxyCode}

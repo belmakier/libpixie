@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['mask_0',['Mask',['../struct_p_i_x_i_e_1_1_mask.html#a132376085978d0aa4c7ce958b79e017f',1,'PIXIE::Mask::Mask()'],['../struct_p_i_x_i_e_1_1_mask.html',1,'PIXIE::Mask']]],
+  ['mask_0',['Mask',['../struct_p_i_x_i_e_1_1_mask.html',1,'PIXIE::Mask'],['../struct_p_i_x_i_e_1_1_mask.html#a132376085978d0aa4c7ce958b79e017f',1,'PIXIE::Mask::Mask()']]],
   ['max_5fchannels_5fper_5fboard_1',['MAX_CHANNELS_PER_BOARD',['../definitions_8hh.html#aa5e7f9ac14bdfa863ef36c7647bbbd5d',1,'definitions.hh']]],
   ['max_5fcrates_2',['MAX_CRATES',['../definitions_8hh.html#ac5deb6d94c264069aa7845432331c3f7',1,'definitions.hh']]],
   ['max_5fevents_3',['MAX_EVENTS',['../definitions_8hh.html#ae42954bb8545d24e3e9dcde5920c9a0b',1,'definitions.hh']]],
@@ -20,10 +20,10 @@ var searchData=
   ['mchannelnumber_17',['mChannelNumber',['../class_p_i_x_i_e_1_1_measurement.html#a9f15a16ee3331625cdc14173fb80c923',1,'PIXIE::Measurement']]],
   ['mcrateid_18',['mCrateID',['../class_p_i_x_i_e_1_1_measurement.html#ac6f66de145022af06f425a21ebb16264',1,'PIXIE::Measurement']]],
   ['measctr_19',['measCtr',['../class_p_i_x_i_e_1_1_reader.html#afd0eac4d82f9cd89651280c4bc637e33',1,'PIXIE::Reader']]],
-  ['measurement_20',['Measurement',['../class_p_i_x_i_e_1_1_measurement.html#ab7b12b67d5b3922542217805da9486ec',1,'PIXIE::Measurement::Measurement()'],['../class_p_i_x_i_e_1_1_trace_1_1_measurement.html#aacccd9506ef800b0cdf377c98e3b785d',1,'PIXIE::Trace::Measurement::Measurement()'],['../class_p_i_x_i_e_1_1_trace_1_1_measurement.html#a7885e7c63a02e8d65162110d8d5bae1e',1,'PIXIE::Trace::Measurement::Measurement(std::string n, int32_t d)'],['../class_p_i_x_i_e_1_1_measurement.html',1,'PIXIE::Measurement'],['../class_p_i_x_i_e_1_1_trace_1_1_measurement.html',1,'PIXIE::Trace::Measurement']]],
+  ['measurement_20',['Measurement',['../class_p_i_x_i_e_1_1_measurement.html',1,'PIXIE::Measurement'],['../class_p_i_x_i_e_1_1_trace_1_1_measurement.html',1,'PIXIE::Trace::Measurement'],['../class_p_i_x_i_e_1_1_measurement.html#ab7b12b67d5b3922542217805da9486ec',1,'PIXIE::Measurement::Measurement()'],['../class_p_i_x_i_e_1_1_trace_1_1_measurement.html#aacccd9506ef800b0cdf377c98e3b785d',1,'PIXIE::Trace::Measurement::Measurement()'],['../class_p_i_x_i_e_1_1_trace_1_1_measurement.html#a7885e7c63a02e8d65162110d8d5bae1e',1,'PIXIE::Trace::Measurement::Measurement(std::string n, int32_t d)']]],
   ['measurement_2ecc_21',['measurement.cc',['../measurement_8cc.html',1,'']]],
   ['measurement_2ehh_22',['measurement.hh',['../measurement_8hh.html',1,'']]],
-  ['measurements_23',['measurements',['../class_p_i_x_i_e_1_1_reader.html#ae27eedcdb6eb079a922bb6e104a86b4c',1,'PIXIE::Reader']]],
+  ['measurements_23',['measurements',['../class_p_i_x_i_e_1_1_reader.html#a21d550481d610d9a6063b9d861b7bbb2',1,'PIXIE::Reader']]],
   ['mesumgap_24',['mESumGap',['../class_p_i_x_i_e_1_1_measurement.html#aab7a3ef37a548bbfa28c946a311efe27',1,'PIXIE::Measurement']]],
   ['mesumleading_25',['mESumLeading',['../class_p_i_x_i_e_1_1_measurement.html#a5d2aaf215e88a684e0b8a1b917ded74a',1,'PIXIE::Measurement']]],
   ['mesumtrailing_26',['mESumTrailing',['../class_p_i_x_i_e_1_1_measurement.html#a984c5db2a3a0c4b78488b39a63bc2eba',1,'PIXIE::Measurement']]],
@@ -38,5 +38,5 @@ var searchData=
   ['mtracelength_35',['mTraceLength',['../class_p_i_x_i_e_1_1_measurement.html#abc41327fb82ce874d11ba58362075052',1,'PIXIE::Measurement']]],
   ['mtraceoutrange_36',['mTraceOutRange',['../class_p_i_x_i_e_1_1_measurement.html#a5353a7a4ca1067137136cb23348f5eb5',1,'PIXIE::Measurement']]],
   ['mult_37',['mult',['../class_p_i_x_i_e_1_1_event.html#a0164d55be13b1246c33fada1f298a2c0',1,'PIXIE::Event']]],
-  ['mults_38',['mults',['../class_p_i_x_i_e_1_1_reader.html#ab55f638b22423b50b5bb35c1cb926c15',1,'PIXIE::Reader']]]
+  ['mults_38',['mults',['../class_p_i_x_i_e_1_1_reader.html#a38cbedbd2290d6c1ab7c995e22c6289c',1,'PIXIE::Reader']]]
 ];

@@ -1,10 +1,10 @@
-\hypertarget{class_p_i_x_i_e_1_1_experiment___definition}{}\doxysection{PIXIE\+::Experiment\+\_\+\+Definition Class Reference}
-\label{class_p_i_x_i_e_1_1_experiment___definition}\index{PIXIE::Experiment\_Definition@{PIXIE::Experiment\_Definition}}
+\doxysection{PIXIE\+::Experiment\+\_\+\+Definition Class Reference}
+\hypertarget{class_p_i_x_i_e_1_1_experiment___definition}{}\label{class_p_i_x_i_e_1_1_experiment___definition}\index{PIXIE::Experiment\_Definition@{PIXIE::Experiment\_Definition}}
 
 
 {\ttfamily \#include $<$experiment\+\_\+definition.\+hh$>$}
 
-\doxysubsection*{Classes}
+\doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_channel}{Channel}}
@@ -13,7 +13,7 @@ struct \mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_crate}{
 \item 
 struct \mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_slot}{Slot}}
 \end{DoxyCompactItemize}
-\doxysubsection*{Public Member Functions}
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_afb630e48afd4e90e82f6ebb0578e5a68}{Experiment\+\_\+\+Definition}} ()
@@ -24,17 +24,17 @@ int \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a48d0d2442412ba
 \item 
 int \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a2a0e5023c4f5fd2d04488907e67effbb}{close}} ()
 \item 
-int \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_ab593f322513f80001cc6a532d85a5de0}{Add\+Channel}} (int crate\+ID, int slot\+ID, int channel\+Number, bool eraw=false, bool qdcs=false, bool extwind=true, bool traces=false, std\+::string alg\+Name=\char`\"{}\char`\"{}, std\+::string alg\+File=\char`\"{}\char`\"{}, int alg\+Index=-\/1, bool is\+Tagger=false)
+int \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_ab593f322513f80001cc6a532d85a5de0}{Add\+Channel}} (int crate\+ID, int slot\+ID, int channel\+Number, bool eraw=false, bool qdcs=false, bool extwind=true, bool traces=false, std\+::string alg\+Name="{}"{}, std\+::string alg\+File="{}"{}, int alg\+Index=-\/1, bool is\+Tagger=false)
 \item 
 int \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a2f700850bda51bad8fa86b742c7c8dd8}{Add\+Slot}} (int crate\+ID, int slot\+ID, int frequency)
 \item 
 int \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a7f6004df67245a80d8f9cecf4671a070}{Add\+Crate}} (int crate\+ID)
 \item 
-\mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_crate}{Crate}} $\ast$ \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a509a0fb52961be6d7cdd3c8dc94bc450}{Get\+Crate}} (int crate\+ID) const
+\mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_crate}{Crate}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a509a0fb52961be6d7cdd3c8dc94bc450}{Get\+Crate}} (int crate\+ID) const
 \item 
-\mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_slot}{Slot}} $\ast$ \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a51df0f5bd8e8617bba0db3713d28dc4a}{Get\+Slot}} (int crate\+ID, int slot\+ID) const
+\mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_slot}{Slot}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a51df0f5bd8e8617bba0db3713d28dc4a}{Get\+Slot}} (int crate\+ID, int slot\+ID) const
 \item 
-\mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_channel}{Channel}} $\ast$ \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a4dafec217c0b9f571c8cc9e944e3f050}{Get\+Channel}} (int crate\+ID, int slot\+ID, int channel\+Number) const
+\mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_channel}{Channel}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a4dafec217c0b9f571c8cc9e944e3f050}{Get\+Channel}} (int crate\+ID, int slot\+ID, int channel\+Number) const
 \item 
 int \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_aec71d748843362f4d7217c5db1dd0ce9}{set\+\_\+algorithms}} ()
 \item 
@@ -42,12 +42,12 @@ int \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a8566dd526c526b
 \item 
 int \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_ab2dc99614b57190162c685581f857a83}{print}} (std\+::ostream \&out)
 \end{DoxyCompactItemize}
-\doxysubsection*{Public Attributes}
+\doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-FILE $\ast$ \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_ab1228b0eef3ffe954b26a89238c88fe6}{file}}
+FILE \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_ab1228b0eef3ffe954b26a89238c88fe6}{file}}
 \item 
-\mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_crate}{Crate}} $\ast$ \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_aabcea4cb8a3eb1e2b3185f108256b43d}{crate\+Map}} \mbox{[}\mbox{\hyperlink{definitions_8hh_ac5deb6d94c264069aa7845432331c3f7}{MAX\+\_\+\+CRATES}}\mbox{]}
+\mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_crate}{Crate}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_aabcea4cb8a3eb1e2b3185f108256b43d}{crate\+Map}} \mbox{[}\mbox{\hyperlink{definitions_8hh_ac5deb6d94c264069aa7845432331c3f7}{MAX\+\_\+\+CRATES}}\mbox{]}
 \end{DoxyCompactItemize}
 
 
@@ -59,7 +59,7 @@ Definition at line \mbox{\hyperlink{experiment__definition_8hh_source_l00020}{20
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_afb630e48afd4e90e82f6ebb0578e5a68}\label{class_p_i_x_i_e_1_1_experiment___definition_afb630e48afd4e90e82f6ebb0578e5a68}} 
+\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_afb630e48afd4e90e82f6ebb0578e5a68}\label{class_p_i_x_i_e_1_1_experiment___definition_afb630e48afd4e90e82f6ebb0578e5a68} 
 \index{PIXIE::Experiment\_Definition@{PIXIE::Experiment\_Definition}!Experiment\_Definition@{Experiment\_Definition}}
 \index{Experiment\_Definition@{Experiment\_Definition}!PIXIE::Experiment\_Definition@{PIXIE::Experiment\_Definition}}
 \doxysubsubsection{\texorpdfstring{Experiment\_Definition()}{Experiment\_Definition()}}
@@ -71,21 +71,21 @@ Definition at line \mbox{\hyperlink{experiment__definition_8hh_source_l00107}{10
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00107                             : \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_ab1228b0eef3ffe954b26a89238c88fe6}{file}}(NULL) \{}
-\DoxyCodeLine{00108       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{definitions_8hh_ac5deb6d94c264069aa7845432331c3f7}{MAX\_CRATES}}; ++i) \{}
-\DoxyCodeLine{00109         \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_aabcea4cb8a3eb1e2b3185f108256b43d}{crateMap}}[i] = NULL;}
-\DoxyCodeLine{00110       \}}
-\DoxyCodeLine{00111     \};}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_ab1228b0eef3ffe954b26a89238c88fe6}{file}}(NULL)\ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<\mbox{\hyperlink{definitions_8hh_ac5deb6d94c264069aa7845432331c3f7}{MAX\_CRATES}};\ ++i)\ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_aabcea4cb8a3eb1e2b3185f108256b43d}{crateMap}}[i]\ =\ NULL;}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00111\ \ \ \ \ \};}
 
 \end{DoxyCode}
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_ab593f322513f80001cc6a532d85a5de0}\label{class_p_i_x_i_e_1_1_experiment___definition_ab593f322513f80001cc6a532d85a5de0}} 
+\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_ab593f322513f80001cc6a532d85a5de0}\label{class_p_i_x_i_e_1_1_experiment___definition_ab593f322513f80001cc6a532d85a5de0} 
 \index{PIXIE::Experiment\_Definition@{PIXIE::Experiment\_Definition}!AddChannel@{AddChannel}}
 \index{AddChannel@{AddChannel}!PIXIE::Experiment\_Definition@{PIXIE::Experiment\_Definition}}
 \doxysubsubsection{\texorpdfstring{AddChannel()}{AddChannel()}}
-{\footnotesize\ttfamily int PIXIE\+::\+Experiment\+\_\+\+Definition\+::\+Add\+Channel (\begin{DoxyParamCaption}\item[{int}]{crate\+ID,  }\item[{int}]{slot\+ID,  }\item[{int}]{channel\+Number,  }\item[{bool}]{eraw = {\ttfamily false},  }\item[{bool}]{qdcs = {\ttfamily false},  }\item[{bool}]{extwind = {\ttfamily true},  }\item[{bool}]{traces = {\ttfamily false},  }\item[{std\+::string}]{alg\+Name = {\ttfamily \char`\"{}\char`\"{}},  }\item[{std\+::string}]{alg\+File = {\ttfamily \char`\"{}\char`\"{}},  }\item[{int}]{alg\+Index = {\ttfamily -\/1},  }\item[{bool}]{is\+Tagger = {\ttfamily false} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int PIXIE\+::\+Experiment\+\_\+\+Definition\+::\+Add\+Channel (\begin{DoxyParamCaption}\item[{int}]{crate\+ID,  }\item[{int}]{slot\+ID,  }\item[{int}]{channel\+Number,  }\item[{bool}]{eraw = {\ttfamily false},  }\item[{bool}]{qdcs = {\ttfamily false},  }\item[{bool}]{extwind = {\ttfamily true},  }\item[{bool}]{traces = {\ttfamily false},  }\item[{std\+::string}]{alg\+Name = {\ttfamily "{}"{}},  }\item[{std\+::string}]{alg\+File = {\ttfamily "{}"{}},  }\item[{int}]{alg\+Index = {\ttfamily -\/1},  }\item[{bool}]{is\+Tagger = {\ttfamily false} }\end{DoxyParamCaption})}
 
 
 
@@ -93,27 +93,27 @@ Definition at line \mbox{\hyperlink{experiment__definition_8cc_source_l00233}{23
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00244   \{}
-\DoxyCodeLine{00245     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a4dafec217c0b9f571c8cc9e944e3f050}{GetChannel}}(crateID, slotID, channelNumber))}
-\DoxyCodeLine{00246       \{}
-\DoxyCodeLine{00247         \textcolor{keywordflow}{return} (-\/1);  \textcolor{comment}{//channel already exists}}
-\DoxyCodeLine{00248       \}}
-\DoxyCodeLine{00249 }
-\DoxyCodeLine{00250     \textcolor{comment}{//channel does not exist}}
-\DoxyCodeLine{00251     \textcolor{keyword}{auto} slot = \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a51df0f5bd8e8617bba0db3713d28dc4a}{GetSlot}}(crateID, slotID);}
-\DoxyCodeLine{00252     }
-\DoxyCodeLine{00253     \textcolor{keywordflow}{if} (!slot) \{}
-\DoxyCodeLine{00254       \textcolor{comment}{//slot does not exist!}}
-\DoxyCodeLine{00255       \textcolor{keywordflow}{return} (-\/1);}
-\DoxyCodeLine{00256     \}}
-\DoxyCodeLine{00257     \textcolor{comment}{//both crate and slot exist}}
-\DoxyCodeLine{00258     slot-\/>AddChannel(channelNumber, eraw, qdcs, extwind, traces, algName, algFile, algIndex, isTagger);}
-\DoxyCodeLine{00259 }
-\DoxyCodeLine{00260     \textcolor{keywordflow}{return} (0);}
-\DoxyCodeLine{00261   \} \textcolor{comment}{//Add channel  }}
+\DoxyCodeLine{00244\ \ \ \{}
+\DoxyCodeLine{00245\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a4dafec217c0b9f571c8cc9e944e3f050}{GetChannel}}(crateID,\ slotID,\ channelNumber))}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (-\/1);\ \ \textcolor{comment}{//channel\ already\ exists}}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00249\ }
+\DoxyCodeLine{00250\ \ \ \ \ \textcolor{comment}{//channel\ does\ not\ exist}}
+\DoxyCodeLine{00251\ \ \ \ \ \textcolor{keyword}{auto}\ slot\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a51df0f5bd8e8617bba0db3713d28dc4a}{GetSlot}}(crateID,\ slotID);}
+\DoxyCodeLine{00252\ \ \ \ \ }
+\DoxyCodeLine{00253\ \ \ \ \ \textcolor{keywordflow}{if}\ (!slot)\ \{}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \textcolor{comment}{//slot\ does\ not\ exist!}}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (-\/1);}
+\DoxyCodeLine{00256\ \ \ \ \ \}}
+\DoxyCodeLine{00257\ \ \ \ \ \textcolor{comment}{//both\ crate\ and\ slot\ exist}}
+\DoxyCodeLine{00258\ \ \ \ \ slot-\/>AddChannel(channelNumber,\ eraw,\ qdcs,\ extwind,\ traces,\ algName,\ algFile,\ algIndex,\ isTagger);}
+\DoxyCodeLine{00259\ }
+\DoxyCodeLine{00260\ \ \ \ \ \textcolor{keywordflow}{return}\ (0);}
+\DoxyCodeLine{00261\ \ \ \}\ \textcolor{comment}{//Add\ channel\ \ }}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_a7f6004df67245a80d8f9cecf4671a070}\label{class_p_i_x_i_e_1_1_experiment___definition_a7f6004df67245a80d8f9cecf4671a070}} 
+\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_a7f6004df67245a80d8f9cecf4671a070}\label{class_p_i_x_i_e_1_1_experiment___definition_a7f6004df67245a80d8f9cecf4671a070} 
 \index{PIXIE::Experiment\_Definition@{PIXIE::Experiment\_Definition}!AddCrate@{AddCrate}}
 \index{AddCrate@{AddCrate}!PIXIE::Experiment\_Definition@{PIXIE::Experiment\_Definition}}
 \doxysubsubsection{\texorpdfstring{AddCrate()}{AddCrate()}}
@@ -125,18 +125,18 @@ Definition at line \mbox{\hyperlink{experiment__definition_8cc_source_l00199}{19
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00200   \{}
-\DoxyCodeLine{00201     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a509a0fb52961be6d7cdd3c8dc94bc450}{GetCrate}}(crateID))\{}
-\DoxyCodeLine{00202       \textcolor{keywordflow}{return} (-\/1);  \textcolor{comment}{//crate already exists}}
-\DoxyCodeLine{00203     \}}
-\DoxyCodeLine{00204 }
-\DoxyCodeLine{00205     \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_aabcea4cb8a3eb1e2b3185f108256b43d}{crateMap}}[crateID] = \textcolor{keyword}{new} Crate(crateID);}
-\DoxyCodeLine{00206 }
-\DoxyCodeLine{00207     \textcolor{keywordflow}{return} (0);}
-\DoxyCodeLine{00208   \}  \textcolor{comment}{//Add crate}}
+\DoxyCodeLine{00200\ \ \ \{}
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a509a0fb52961be6d7cdd3c8dc94bc450}{GetCrate}}(crateID))\{}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (-\/1);\ \ \textcolor{comment}{//crate\ already\ exists}}
+\DoxyCodeLine{00203\ \ \ \ \ \}}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_aabcea4cb8a3eb1e2b3185f108256b43d}{crateMap}}[crateID]\ =\ \textcolor{keyword}{new}\ Crate(crateID);}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{keywordflow}{return}\ (0);}
+\DoxyCodeLine{00208\ \ \ \}\ \ \textcolor{comment}{//Add\ crate}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_a2f700850bda51bad8fa86b742c7c8dd8}\label{class_p_i_x_i_e_1_1_experiment___definition_a2f700850bda51bad8fa86b742c7c8dd8}} 
+\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_a2f700850bda51bad8fa86b742c7c8dd8}\label{class_p_i_x_i_e_1_1_experiment___definition_a2f700850bda51bad8fa86b742c7c8dd8} 
 \index{PIXIE::Experiment\_Definition@{PIXIE::Experiment\_Definition}!AddSlot@{AddSlot}}
 \index{AddSlot@{AddSlot}!PIXIE::Experiment\_Definition@{PIXIE::Experiment\_Definition}}
 \doxysubsubsection{\texorpdfstring{AddSlot()}{AddSlot()}}
@@ -148,30 +148,30 @@ Definition at line \mbox{\hyperlink{experiment__definition_8cc_source_l00210}{21
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00211   \{}
-\DoxyCodeLine{00212     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a51df0f5bd8e8617bba0db3713d28dc4a}{GetSlot}}(crateID, slotID))}
-\DoxyCodeLine{00213       \{}
-\DoxyCodeLine{00214         \textcolor{keywordflow}{return} (-\/1);  \textcolor{comment}{//slot already exists }}
-\DoxyCodeLine{00215       \}}
-\DoxyCodeLine{00216 }
-\DoxyCodeLine{00217     \textcolor{comment}{//slot does not exist in crate}}
-\DoxyCodeLine{00218     \textcolor{keyword}{auto} crate = \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a509a0fb52961be6d7cdd3c8dc94bc450}{GetCrate}}(crateID);}
-\DoxyCodeLine{00219 }
-\DoxyCodeLine{00220     \textcolor{keywordflow}{if} (!crate)}
-\DoxyCodeLine{00221       \{}
-\DoxyCodeLine{00222         \textcolor{comment}{//crate does not exist!}}
-\DoxyCodeLine{00223         \textcolor{keywordflow}{return} (-\/1);}
-\DoxyCodeLine{00224       \}}
-\DoxyCodeLine{00225 }
-\DoxyCodeLine{00226     \textcolor{comment}{//crate exists and slot doesn't}}
-\DoxyCodeLine{00227 }
-\DoxyCodeLine{00228     crate-\/>AddSlot(slotID, frequency);}
-\DoxyCodeLine{00229 }
-\DoxyCodeLine{00230     \textcolor{keywordflow}{return} (0);}
-\DoxyCodeLine{00231   \} \textcolor{comment}{//Add slot}}
+\DoxyCodeLine{00211\ \ \ \{}
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a51df0f5bd8e8617bba0db3713d28dc4a}{GetSlot}}(crateID,\ slotID))}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (-\/1);\ \ \textcolor{comment}{//slot\ already\ exists\ }}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{comment}{//slot\ does\ not\ exist\ in\ crate}}
+\DoxyCodeLine{00218\ \ \ \ \ \textcolor{keyword}{auto}\ crate\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a509a0fb52961be6d7cdd3c8dc94bc450}{GetCrate}}(crateID);}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{keywordflow}{if}\ (!crate)}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \textcolor{comment}{//crate\ does\ not\ exist!}}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (-\/1);}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00226\ \ \ \ \ \textcolor{comment}{//crate\ exists\ and\ slot\ doesn't}}
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00228\ \ \ \ \ crate-\/>AddSlot(slotID,\ frequency);}
+\DoxyCodeLine{00229\ }
+\DoxyCodeLine{00230\ \ \ \ \ \textcolor{keywordflow}{return}\ (0);}
+\DoxyCodeLine{00231\ \ \ \}\ \textcolor{comment}{//Add\ slot}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_a2a0e5023c4f5fd2d04488907e67effbb}\label{class_p_i_x_i_e_1_1_experiment___definition_a2a0e5023c4f5fd2d04488907e67effbb}} 
+\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_a2a0e5023c4f5fd2d04488907e67effbb}\label{class_p_i_x_i_e_1_1_experiment___definition_a2a0e5023c4f5fd2d04488907e67effbb} 
 \index{PIXIE::Experiment\_Definition@{PIXIE::Experiment\_Definition}!close@{close}}
 \index{close@{close}!PIXIE::Experiment\_Definition@{PIXIE::Experiment\_Definition}}
 \doxysubsubsection{\texorpdfstring{close()}{close()}}
@@ -183,14 +183,14 @@ Definition at line \mbox{\hyperlink{experiment__definition_8hh_source_l00114}{11
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00114 \{ fclose(this-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_ab1228b0eef3ffe954b26a89238c88fe6}{file}}); \textcolor{keywordflow}{return} 0; \}}
+\DoxyCodeLine{00114\ \{\ fclose(this-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_ab1228b0eef3ffe954b26a89238c88fe6}{file}});\ \textcolor{keywordflow}{return}\ 0;\ \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_a4dafec217c0b9f571c8cc9e944e3f050}\label{class_p_i_x_i_e_1_1_experiment___definition_a4dafec217c0b9f571c8cc9e944e3f050}} 
+\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_a4dafec217c0b9f571c8cc9e944e3f050}\label{class_p_i_x_i_e_1_1_experiment___definition_a4dafec217c0b9f571c8cc9e944e3f050} 
 \index{PIXIE::Experiment\_Definition@{PIXIE::Experiment\_Definition}!GetChannel@{GetChannel}}
 \index{GetChannel@{GetChannel}!PIXIE::Experiment\_Definition@{PIXIE::Experiment\_Definition}}
 \doxysubsubsection{\texorpdfstring{GetChannel()}{GetChannel()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_channel}{Experiment\+\_\+\+Definition\+::\+Channel}} $\ast$ PIXIE\+::\+Experiment\+\_\+\+Definition\+::\+Get\+Channel (\begin{DoxyParamCaption}\item[{int}]{crate\+ID,  }\item[{int}]{slot\+ID,  }\item[{int}]{channel\+Number }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_channel}{Experiment\+\_\+\+Definition\+::\+Channel}} \texorpdfstring{$\ast$}{*} PIXIE\+::\+Experiment\+\_\+\+Definition\+::\+Get\+Channel (\begin{DoxyParamCaption}\item[{int}]{crate\+ID,  }\item[{int}]{slot\+ID,  }\item[{int}]{channel\+Number }\end{DoxyParamCaption}) const}
 
 
 
@@ -198,22 +198,22 @@ Definition at line \mbox{\hyperlink{experiment__definition_8cc_source_l00188}{18
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00189   \{\textcolor{comment}{//Gets channel in slot with ID slotID in crate with crateID, if it doesn't exist then returns null}}
-\DoxyCodeLine{00190     Experiment\_Definition::Slot *slot = \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a51df0f5bd8e8617bba0db3713d28dc4a}{GetSlot}}(crateID, slotID);}
-\DoxyCodeLine{00191     \textcolor{keywordflow}{if} (!slot) \{}
-\DoxyCodeLine{00192       \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{00193     \}}
-\DoxyCodeLine{00194     \textcolor{keyword}{const} \textcolor{keyword}{auto} channel = slot-\/>GetChannel(channelNumber);}
-\DoxyCodeLine{00195     }
-\DoxyCodeLine{00196     \textcolor{keywordflow}{return} (channel);}
-\DoxyCodeLine{00197   \}}
+\DoxyCodeLine{00189\ \ \ \{\textcolor{comment}{//Gets\ channel\ in\ slot\ with\ ID\ slotID\ in\ crate\ with\ crateID,\ if\ it\ doesn't\ exist\ then\ returns\ null}}
+\DoxyCodeLine{00190\ \ \ \ \ Experiment\_Definition::Slot\ *slot\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a51df0f5bd8e8617bba0db3713d28dc4a}{GetSlot}}(crateID,\ slotID);}
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keywordflow}{if}\ (!slot)\ \{}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00193\ \ \ \ \ \}}
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ channel\ =\ slot-\/>GetChannel(channelNumber);}
+\DoxyCodeLine{00195\ \ \ \ \ }
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keywordflow}{return}\ (channel);}
+\DoxyCodeLine{00197\ \ \ \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_a509a0fb52961be6d7cdd3c8dc94bc450}\label{class_p_i_x_i_e_1_1_experiment___definition_a509a0fb52961be6d7cdd3c8dc94bc450}} 
+\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_a509a0fb52961be6d7cdd3c8dc94bc450}\label{class_p_i_x_i_e_1_1_experiment___definition_a509a0fb52961be6d7cdd3c8dc94bc450} 
 \index{PIXIE::Experiment\_Definition@{PIXIE::Experiment\_Definition}!GetCrate@{GetCrate}}
 \index{GetCrate@{GetCrate}!PIXIE::Experiment\_Definition@{PIXIE::Experiment\_Definition}}
 \doxysubsubsection{\texorpdfstring{GetCrate()}{GetCrate()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_crate}{Experiment\+\_\+\+Definition\+::\+Crate}} $\ast$ PIXIE\+::\+Experiment\+\_\+\+Definition\+::\+Get\+Crate (\begin{DoxyParamCaption}\item[{int}]{crate\+ID }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_crate}{Experiment\+\_\+\+Definition\+::\+Crate}} \texorpdfstring{$\ast$}{*} PIXIE\+::\+Experiment\+\_\+\+Definition\+::\+Get\+Crate (\begin{DoxyParamCaption}\item[{int}]{crate\+ID }\end{DoxyParamCaption}) const}
 
 
 
@@ -221,19 +221,19 @@ Definition at line \mbox{\hyperlink{experiment__definition_8cc_source_l00168}{16
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00169   \{\textcolor{comment}{//Gets crate with ID crateID, if it doesn't exist then returns     }}
-\DoxyCodeLine{00170     \textcolor{keywordflow}{if} (crateID < 0) \{ \textcolor{keywordflow}{return} NULL; \}}
-\DoxyCodeLine{00171     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (crateID >= \mbox{\hyperlink{definitions_8hh_ac5deb6d94c264069aa7845432331c3f7}{MAX\_CRATES}}) \{ \textcolor{keywordflow}{return} NULL; \}}
-\DoxyCodeLine{00172     }
-\DoxyCodeLine{00173     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_aabcea4cb8a3eb1e2b3185f108256b43d}{crateMap}}[crateID];}
-\DoxyCodeLine{00174   \}}
+\DoxyCodeLine{00169\ \ \ \{\textcolor{comment}{//Gets\ crate\ with\ ID\ crateID,\ if\ it\ doesn't\ exist\ then\ returns\ \ \ \ \ }}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordflow}{if}\ (crateID\ <\ 0)\ \{\ \textcolor{keywordflow}{return}\ NULL;\ \}}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (crateID\ >=\ \mbox{\hyperlink{definitions_8hh_ac5deb6d94c264069aa7845432331c3f7}{MAX\_CRATES}})\ \{\ \textcolor{keywordflow}{return}\ NULL;\ \}}
+\DoxyCodeLine{00172\ \ \ \ \ }
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_aabcea4cb8a3eb1e2b3185f108256b43d}{crateMap}}[crateID];}
+\DoxyCodeLine{00174\ \ \ \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_a51df0f5bd8e8617bba0db3713d28dc4a}\label{class_p_i_x_i_e_1_1_experiment___definition_a51df0f5bd8e8617bba0db3713d28dc4a}} 
+\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_a51df0f5bd8e8617bba0db3713d28dc4a}\label{class_p_i_x_i_e_1_1_experiment___definition_a51df0f5bd8e8617bba0db3713d28dc4a} 
 \index{PIXIE::Experiment\_Definition@{PIXIE::Experiment\_Definition}!GetSlot@{GetSlot}}
 \index{GetSlot@{GetSlot}!PIXIE::Experiment\_Definition@{PIXIE::Experiment\_Definition}}
 \doxysubsubsection{\texorpdfstring{GetSlot()}{GetSlot()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_slot}{Experiment\+\_\+\+Definition\+::\+Slot}} $\ast$ PIXIE\+::\+Experiment\+\_\+\+Definition\+::\+Get\+Slot (\begin{DoxyParamCaption}\item[{int}]{crate\+ID,  }\item[{int}]{slot\+ID }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_slot}{Experiment\+\_\+\+Definition\+::\+Slot}} \texorpdfstring{$\ast$}{*} PIXIE\+::\+Experiment\+\_\+\+Definition\+::\+Get\+Slot (\begin{DoxyParamCaption}\item[{int}]{crate\+ID,  }\item[{int}]{slot\+ID }\end{DoxyParamCaption}) const}
 
 
 
@@ -241,19 +241,19 @@ Definition at line \mbox{\hyperlink{experiment__definition_8cc_source_l00176}{17
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00177   \{\textcolor{comment}{//Gets slot with ID slotID in crate with crateID, if it doesn't exist then returns null}}
-\DoxyCodeLine{00178     Experiment\_Definition::Crate *crate = \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a509a0fb52961be6d7cdd3c8dc94bc450}{GetCrate}}(crateID);}
-\DoxyCodeLine{00179     \textcolor{keywordflow}{if} (!crate) \{}
-\DoxyCodeLine{00180       \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{00181     \}}
-\DoxyCodeLine{00182     }
-\DoxyCodeLine{00183     \textcolor{keyword}{const} \textcolor{keyword}{auto} slot = crate-\/>GetSlot(slotID);}
-\DoxyCodeLine{00184 }
-\DoxyCodeLine{00185     \textcolor{keywordflow}{return} (slot);    }
-\DoxyCodeLine{00186   \}}
+\DoxyCodeLine{00177\ \ \ \{\textcolor{comment}{//Gets\ slot\ with\ ID\ slotID\ in\ crate\ with\ crateID,\ if\ it\ doesn't\ exist\ then\ returns\ null}}
+\DoxyCodeLine{00178\ \ \ \ \ Experiment\_Definition::Crate\ *crate\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a509a0fb52961be6d7cdd3c8dc94bc450}{GetCrate}}(crateID);}
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordflow}{if}\ (!crate)\ \{}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00181\ \ \ \ \ \}}
+\DoxyCodeLine{00182\ \ \ \ \ }
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ slot\ =\ crate-\/>GetSlot(slotID);}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordflow}{return}\ (slot);\ \ \ \ }
+\DoxyCodeLine{00186\ \ \ \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_ab68933339e663b1e6fe6482bf510a58c}\label{class_p_i_x_i_e_1_1_experiment___definition_ab68933339e663b1e6fe6482bf510a58c}} 
+\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_ab68933339e663b1e6fe6482bf510a58c}\label{class_p_i_x_i_e_1_1_experiment___definition_ab68933339e663b1e6fe6482bf510a58c} 
 \index{PIXIE::Experiment\_Definition@{PIXIE::Experiment\_Definition}!open@{open}}
 \index{open@{open}!PIXIE::Experiment\_Definition@{PIXIE::Experiment\_Definition}}
 \doxysubsubsection{\texorpdfstring{open()}{open()}}
@@ -265,21 +265,21 @@ Definition at line \mbox{\hyperlink{experiment__definition_8cc_source_l00016}{16
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00016                                                        \{}
-\DoxyCodeLine{00017     \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_ab1228b0eef3ffe954b26a89238c88fe6}{file}}) \{}
-\DoxyCodeLine{00018       \textcolor{keywordflow}{return} (-\/1); \textcolor{comment}{//file has already been opened}}
-\DoxyCodeLine{00019     \}}
-\DoxyCodeLine{00020 }
-\DoxyCodeLine{00021     \textcolor{keywordflow}{if} (!(this-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_ab1228b0eef3ffe954b26a89238c88fe6}{file}} = fopen(path.c\_str(), \textcolor{stringliteral}{"{}r"{}}))) \{}
-\DoxyCodeLine{00022       std::cout << \textcolor{stringliteral}{"{}Warning! "{}} << path << \textcolor{stringliteral}{"{} not opened successfully"{}} << std::endl;              }
-\DoxyCodeLine{00023       \textcolor{keywordflow}{return} (-\/2);}
-\DoxyCodeLine{00024     \}}
-\DoxyCodeLine{00025     }
-\DoxyCodeLine{00026     \textcolor{keywordflow}{return} (0);}
-\DoxyCodeLine{00027   \}}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_ab1228b0eef3ffe954b26a89238c88fe6}{file}})\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (-\/1);\ \textcolor{comment}{//file\ has\ already\ been\ opened}}
+\DoxyCodeLine{00019\ \ \ \ \ \}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordflow}{if}\ (!(this-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_ab1228b0eef3ffe954b26a89238c88fe6}{file}}\ =\ fopen(path.c\_str(),\ \textcolor{stringliteral}{"{}r"{}})))\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Warning!\ "{}}\ <<\ path\ <<\ \textcolor{stringliteral}{"{}\ not\ opened\ successfully"{}}\ <<\ std::endl;\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (-\/2);}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+\DoxyCodeLine{00025\ \ \ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordflow}{return}\ (0);}
+\DoxyCodeLine{00027\ \ \ \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_a8566dd526c526b066c1d675f2ea3e2db}\label{class_p_i_x_i_e_1_1_experiment___definition_a8566dd526c526b066c1d675f2ea3e2db}} 
+\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_a8566dd526c526b066c1d675f2ea3e2db}\label{class_p_i_x_i_e_1_1_experiment___definition_a8566dd526c526b066c1d675f2ea3e2db} 
 \index{PIXIE::Experiment\_Definition@{PIXIE::Experiment\_Definition}!print@{print}}
 \index{print@{print}!PIXIE::Experiment\_Definition@{PIXIE::Experiment\_Definition}}
 \doxysubsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
@@ -291,13 +291,13 @@ Definition at line \mbox{\hyperlink{experiment__definition_8cc_source_l00296}{29
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00297   \{}
-\DoxyCodeLine{00298     \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a8566dd526c526b066c1d675f2ea3e2db}{print}}(std::cout);}
-\DoxyCodeLine{00299     \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{00300   \}}
+\DoxyCodeLine{00297\ \ \ \{}
+\DoxyCodeLine{00298\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a8566dd526c526b066c1d675f2ea3e2db}{print}}(std::cout);}
+\DoxyCodeLine{00299\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00300\ \ \ \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_ab2dc99614b57190162c685581f857a83}\label{class_p_i_x_i_e_1_1_experiment___definition_ab2dc99614b57190162c685581f857a83}} 
+\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_ab2dc99614b57190162c685581f857a83}\label{class_p_i_x_i_e_1_1_experiment___definition_ab2dc99614b57190162c685581f857a83} 
 \index{PIXIE::Experiment\_Definition@{PIXIE::Experiment\_Definition}!print@{print}}
 \index{print@{print}!PIXIE::Experiment\_Definition@{PIXIE::Experiment\_Definition}}
 \doxysubsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
@@ -309,40 +309,40 @@ Definition at line \mbox{\hyperlink{experiment__definition_8cc_source_l00263}{26
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00264   \{}
-\DoxyCodeLine{00265     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{definitions_8hh_ac5deb6d94c264069aa7845432331c3f7}{MAX\_CRATES}}; ++i) \{}
-\DoxyCodeLine{00266       \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_aabcea4cb8a3eb1e2b3185f108256b43d}{crateMap}}[i] != NULL) \{}
-\DoxyCodeLine{00267         \textcolor{keyword}{auto} crate = \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_aabcea4cb8a3eb1e2b3185f108256b43d}{crateMap}}[i]; \textcolor{comment}{//crate\_it.second;}}
-\DoxyCodeLine{00268         log << \textcolor{stringliteral}{"{}Crate ID "{}} << crate-\/>\mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_crate_a94058e9b0ea10b9b05ec9121986c3ba5}{crateID}} << std::endl;}
-\DoxyCodeLine{00269         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j<\mbox{\hyperlink{definitions_8hh_aea2a89422b7c0431259b6e918642898a}{MAX\_SLOTS\_PER\_CRATE}}; ++j) \{}
-\DoxyCodeLine{00270           \textcolor{keywordflow}{if} (crate-\/>slotMap[j] != NULL) \{}
-\DoxyCodeLine{00271             \textcolor{keyword}{auto} slot = crate-\/>slotMap[j];}
-\DoxyCodeLine{00272             log << \textcolor{stringliteral}{"{}  Slot ID "{}} << slot-\/>slotID << \textcolor{stringliteral}{"{}     Frequency "{}} << slot-\/>freq << \textcolor{stringliteral}{"{} MHz"{}} << std::endl;}
-\DoxyCodeLine{00273             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k=0; k<\mbox{\hyperlink{definitions_8hh_aa5e7f9ac14bdfa863ef36c7647bbbd5d}{MAX\_CHANNELS\_PER\_BOARD}}; ++k) \{}
-\DoxyCodeLine{00274               \textcolor{keywordflow}{if} (slot-\/>channelMap[k] != NULL) \{}
-\DoxyCodeLine{00275                 \textcolor{keyword}{auto} channel = slot-\/>channelMap[k];}
-\DoxyCodeLine{00276                 \textcolor{keywordflow}{if} (channel-\/>extwind) \{ std::cout << \textcolor{stringliteral}{"{}   Coinc window extends"{}}; \}}
-\DoxyCodeLine{00277                 \textcolor{keywordflow}{else} \{ std::cout << \textcolor{stringliteral}{"{}   Coinc window does not extend"{}}; \}}
-\DoxyCodeLine{00278                 \textcolor{keywordflow}{if} (channel-\/>qdcs) \{ std::cout << \textcolor{stringliteral}{"{}   QDCs"{}}; \}}
-\DoxyCodeLine{00279                 \textcolor{keywordflow}{if} (channel-\/>eraw) \{ std::cout << \textcolor{stringliteral}{"{}   Raw Energy Sums"{}}; \}}
-\DoxyCodeLine{00280                 \textcolor{keywordflow}{if} (channel-\/>traces) \{ std::cout << \textcolor{stringliteral}{"{}   Traces, ("{}} << channel-\/>algName << \textcolor{stringliteral}{"{} \(\backslash\)"{}"{}} << channel-\/>algFile << \textcolor{stringliteral}{"{}\(\backslash\)"{}, ID="{}}<<channel-\/>algIndex<<\textcolor{stringliteral}{"{})"{}}; \}}
-\DoxyCodeLine{00281                 log << \textcolor{stringliteral}{"{}    Channel "{}} << channel-\/>channelNumber;}
-\DoxyCodeLine{00282                 \textcolor{keywordflow}{if} (channel-\/>isTagger) \{}
-\DoxyCodeLine{00283                   log << \textcolor{stringliteral}{"{}    (Tagger)"{}};}
-\DoxyCodeLine{00284                 \}}
-\DoxyCodeLine{00285                 }
-\DoxyCodeLine{00286                 log << std::endl;}
-\DoxyCodeLine{00287               \}}
-\DoxyCodeLine{00288             \}            }
-\DoxyCodeLine{00289           \}}
-\DoxyCodeLine{00290         \}}
-\DoxyCodeLine{00291       \}}
-\DoxyCodeLine{00292     \}}
-\DoxyCodeLine{00293     \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{00294   \}}
+\DoxyCodeLine{00264\ \ \ \{}
+\DoxyCodeLine{00265\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<\mbox{\hyperlink{definitions_8hh_ac5deb6d94c264069aa7845432331c3f7}{MAX\_CRATES}};\ ++i)\ \{}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_aabcea4cb8a3eb1e2b3185f108256b43d}{crateMap}}[i]\ !=\ NULL)\ \{}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ crate\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_aabcea4cb8a3eb1e2b3185f108256b43d}{crateMap}}[i];\ \textcolor{comment}{//crate\_it.second;}}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ log\ <<\ \textcolor{stringliteral}{"{}Crate\ ID\ "{}}\ <<\ crate-\/>\mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_crate_a94058e9b0ea10b9b05ec9121986c3ba5}{crateID}}\ <<\ std::endl;}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j=0;\ j<\mbox{\hyperlink{definitions_8hh_aea2a89422b7c0431259b6e918642898a}{MAX\_SLOTS\_PER\_CRATE}};\ ++j)\ \{}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (crate-\/>slotMap[j]\ !=\ NULL)\ \{}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ slot\ =\ crate-\/>slotMap[j];}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ log\ <<\ \textcolor{stringliteral}{"{}\ \ Slot\ ID\ "{}}\ <<\ slot-\/>slotID\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ Frequency\ "{}}\ <<\ slot-\/>freq\ <<\ \textcolor{stringliteral}{"{}\ MHz"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ k=0;\ k<\mbox{\hyperlink{definitions_8hh_aa5e7f9ac14bdfa863ef36c7647bbbd5d}{MAX\_CHANNELS\_PER\_BOARD}};\ ++k)\ \{}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (slot-\/>channelMap[k]\ !=\ NULL)\ \{}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ channel\ =\ slot-\/>channelMap[k];}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (channel-\/>extwind)\ \{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ Coinc\ window\ extends"{}};\ \}}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ Coinc\ window\ does\ not\ extend"{}};\ \}}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (channel-\/>qdcs)\ \{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ QDCs"{}};\ \}}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (channel-\/>eraw)\ \{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ Raw\ Energy\ Sums"{}};\ \}}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (channel-\/>traces)\ \{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ Traces,\ ("{}}\ <<\ channel-\/>algName\ <<\ \textcolor{stringliteral}{"{}\ \(\backslash\)"{}"{}}\ <<\ channel-\/>algFile\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{},\ ID="{}}<<channel-\/>algIndex<<\textcolor{stringliteral}{"{})"{}};\ \}}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ log\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ Channel\ "{}}\ <<\ channel-\/>channelNumber;}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (channel-\/>isTagger)\ \{}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ log\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ (Tagger)"{}};}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ log\ <<\ std::endl;}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00292\ \ \ \ \ \}}
+\DoxyCodeLine{00293\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00294\ \ \ \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_a48d0d2442412ba4f0a450ead002bd650}\label{class_p_i_x_i_e_1_1_experiment___definition_a48d0d2442412ba4f0a450ead002bd650}} 
+\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_a48d0d2442412ba4f0a450ead002bd650}\label{class_p_i_x_i_e_1_1_experiment___definition_a48d0d2442412ba4f0a450ead002bd650} 
 \index{PIXIE::Experiment\_Definition@{PIXIE::Experiment\_Definition}!read@{read}}
 \index{read@{read}!PIXIE::Experiment\_Definition@{PIXIE::Experiment\_Definition}}
 \doxysubsubsection{\texorpdfstring{read()}{read()}}
@@ -354,99 +354,99 @@ Definition at line \mbox{\hyperlink{experiment__definition_8cc_source_l00029}{29
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00029                                   \{}
-\DoxyCodeLine{00030     \textcolor{keywordflow}{if} (!this-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_ab1228b0eef3ffe954b26a89238c88fe6}{file}}) \{}
-\DoxyCodeLine{00031       \textcolor{keywordflow}{return} (-\/1);}
-\DoxyCodeLine{00032     \}}
-\DoxyCodeLine{00033 }
-\DoxyCodeLine{00034     std::stringstream ss;}
-\DoxyCodeLine{00035     \textcolor{keywordtype}{char} cline[2048];}
-\DoxyCodeLine{00036 }
-\DoxyCodeLine{00037     \textcolor{keywordtype}{int} progress = 0;}
-\DoxyCodeLine{00038 }
-\DoxyCodeLine{00039     \textcolor{keywordflow}{while}(std::fgets(cline, \textcolor{keyword}{sizeof} cline, this-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_ab1228b0eef3ffe954b26a89238c88fe6}{file}})!=NULL) \{}
-\DoxyCodeLine{00040       std::string line (cline);}
-\DoxyCodeLine{00041       \textcolor{keywordflow}{switch} (line[0])\{}
-\DoxyCodeLine{00042       \textcolor{keywordflow}{case} \textcolor{charliteral}{' '}:}
-\DoxyCodeLine{00043       \textcolor{keywordflow}{case} \textcolor{charliteral}{'\(\backslash\)t'}:}
-\DoxyCodeLine{00044       \textcolor{keywordflow}{case} \textcolor{charliteral}{'\(\backslash\)n'}:}
-\DoxyCodeLine{00045       \textcolor{keywordflow}{case} \textcolor{charliteral}{'\#'}:}
-\DoxyCodeLine{00046         \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00047       \textcolor{keywordflow}{case} \textcolor{charliteral}{'D'}:}
-\DoxyCodeLine{00048       \textcolor{keywordflow}{case} \textcolor{charliteral}{'T'}:}
-\DoxyCodeLine{00049         \{}
-\DoxyCodeLine{00050           ss.clear();}
-\DoxyCodeLine{00051           ss.str(line);}
-\DoxyCodeLine{00052 }
-\DoxyCodeLine{00053           \textcolor{keywordtype}{char} flag;}
-\DoxyCodeLine{00054           \textcolor{keywordtype}{int} crateID;}
-\DoxyCodeLine{00055           \textcolor{keywordtype}{int} slotID;}
-\DoxyCodeLine{00056           \textcolor{keywordtype}{int} channelNumber;}
-\DoxyCodeLine{00057           \textcolor{keywordtype}{int} frequency;}
-\DoxyCodeLine{00058           }
-\DoxyCodeLine{00059           \textcolor{keywordtype}{int} eraw;}
-\DoxyCodeLine{00060           \textcolor{keywordtype}{int} qdcs;}
-\DoxyCodeLine{00061           \textcolor{keywordtype}{int} traces;}
-\DoxyCodeLine{00062 }
-\DoxyCodeLine{00063           \textcolor{keywordtype}{int} extwind; \textcolor{comment}{//does this channel extend the event build window?}}
-\DoxyCodeLine{00064 }
-\DoxyCodeLine{00065           std::string alg\_name;}
-\DoxyCodeLine{00066           std::string alg\_file;}
-\DoxyCodeLine{00067           \textcolor{keywordtype}{int} alg\_index = -\/1;}
-\DoxyCodeLine{00068           ss >> flag;}
-\DoxyCodeLine{00069           ss >> crateID;}
-\DoxyCodeLine{00070           ss >> slotID;}
-\DoxyCodeLine{00071           ss >> channelNumber;}
-\DoxyCodeLine{00072           ss >> frequency;}
-\DoxyCodeLine{00073           \textcolor{keywordflow}{if} (ss >> eraw) \{ \}}
-\DoxyCodeLine{00074           \textcolor{keywordflow}{else} \{ eraw = \textcolor{keyword}{false}; \}}
-\DoxyCodeLine{00075           \textcolor{keywordflow}{if} (ss >> qdcs) \{ \}}
-\DoxyCodeLine{00076           \textcolor{keywordflow}{else} \{ qdcs = \textcolor{keyword}{false}; \}}
-\DoxyCodeLine{00077           \textcolor{keywordflow}{if} (ss >> extwind) \{  \}}
-\DoxyCodeLine{00078           \textcolor{keywordflow}{else} \{ extwind = \textcolor{keyword}{false}; \}}
-\DoxyCodeLine{00079           \textcolor{keywordflow}{if} (ss >> traces) \{ \}}
-\DoxyCodeLine{00080           \textcolor{keywordflow}{else} \{ traces = \textcolor{keyword}{false}; \}}
-\DoxyCodeLine{00081 }
-\DoxyCodeLine{00082           \textcolor{keywordflow}{if} (ss >> alg\_name) \{ \}}
-\DoxyCodeLine{00083           \textcolor{keywordflow}{else} \{ alg\_name = \textcolor{stringliteral}{"{}"{}}; \}}
-\DoxyCodeLine{00084           \textcolor{keywordflow}{if} (ss >> alg\_file) \{ \}}
-\DoxyCodeLine{00085           \textcolor{keywordflow}{else} \{ alg\_file = \textcolor{stringliteral}{"{}"{}}; \}}
-\DoxyCodeLine{00086           \textcolor{keywordflow}{if} (ss >> alg\_index) \{ \}}
-\DoxyCodeLine{00087           \textcolor{keywordflow}{else} \{ alg\_index = -\/1; \}          }
-\DoxyCodeLine{00088           }
-\DoxyCodeLine{00089           this-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a7f6004df67245a80d8f9cecf4671a070}{AddCrate}}(crateID);}
-\DoxyCodeLine{00090           this-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a2f700850bda51bad8fa86b742c7c8dd8}{AddSlot}}(crateID, slotID, frequency);}
-\DoxyCodeLine{00091           }
-\DoxyCodeLine{00092           std::string name = \textcolor{stringliteral}{"{}c"{}}+std::to\_string(crateID)+\textcolor{stringliteral}{"{}s"{}}+std::to\_string(slotID)+\textcolor{stringliteral}{"{}ch"{}}+std::to\_string(channelNumber);}
-\DoxyCodeLine{00093           \textcolor{keywordflow}{if} (flag==\textcolor{charliteral}{'D'})\{}
-\DoxyCodeLine{00094             \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_ab593f322513f80001cc6a532d85a5de0}{AddChannel}}(crateID, slotID, channelNumber, eraw, qdcs, extwind, traces, alg\_name, alg\_file, alg\_index,\textcolor{keyword}{false})!=0) \{}
-\DoxyCodeLine{00095               std::cout << \textcolor{stringliteral}{"{}Caution: channel "{}} << crateID << \textcolor{stringliteral}{"{}."{}} << slotID << \textcolor{stringliteral}{"{}."{}} << channelNumber << \textcolor{stringliteral}{"{} defined twice, second definition ignored"{}} << std::endl;}
-\DoxyCodeLine{00096               \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00097             \}       }
-\DoxyCodeLine{00098           \}}
-\DoxyCodeLine{00099           \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (flag==\textcolor{charliteral}{'T'})\{}
-\DoxyCodeLine{00100             \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_ab593f322513f80001cc6a532d85a5de0}{AddChannel}}(crateID, slotID, channelNumber, eraw, qdcs, extwind, traces, alg\_name, alg\_file, alg\_index,\textcolor{keyword}{true})!=0) \{}
-\DoxyCodeLine{00101               std::cout << \textcolor{stringliteral}{"{}Caution: channel "{}} << crateID << \textcolor{stringliteral}{"{}."{}} << slotID << \textcolor{stringliteral}{"{}."{}} << channelNumber << \textcolor{stringliteral}{"{} defined twice, second definition ignored"{}} << std::endl;}
-\DoxyCodeLine{00102               \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00103             \}       }
-\DoxyCodeLine{00104           \}}
-\DoxyCodeLine{00105           \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00106         \}}
-\DoxyCodeLine{00107       \textcolor{keywordflow}{case} \textcolor{charliteral}{'C'}:}
-\DoxyCodeLine{00108         \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00109       \}}
-\DoxyCodeLine{00110     \}}
-\DoxyCodeLine{00111 }
-\DoxyCodeLine{00112     \textcolor{comment}{//create algorithm objects}}
-\DoxyCodeLine{00113     std::cout << \textcolor{stringliteral}{"{}Setting algorithms"{}} << std::endl;}
-\DoxyCodeLine{00114     \textcolor{keywordtype}{int} nalgs = \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_aec71d748843362f4d7217c5db1dd0ce9}{set\_algorithms}}();}
-\DoxyCodeLine{00115     std::cout << nalgs << \textcolor{stringliteral}{"{} set"{}} << std::endl;}
-\DoxyCodeLine{00116     }
-\DoxyCodeLine{00117     \textcolor{keywordflow}{return} (0);}
-\DoxyCodeLine{00118   \}\textcolor{comment}{//read\_definition  }}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordflow}{if}\ (!this-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_ab1228b0eef3ffe954b26a89238c88fe6}{file}})\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (-\/1);}
+\DoxyCodeLine{00032\ \ \ \ \ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ std::stringstream\ ss;}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{char}\ cline[2048];}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{int}\ progress\ =\ 0;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordflow}{while}(std::fgets(cline,\ \textcolor{keyword}{sizeof}\ cline,\ this-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_ab1228b0eef3ffe954b26a89238c88fe6}{file}})!=NULL)\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ std::string\ line\ (cline);}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (line[0])\{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'\ '}:}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'\(\backslash\)t'}:}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'\(\backslash\)n'}:}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'\#'}:}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'D'}:}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'T'}:}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ ss.clear();}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ ss.str(line);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ flag;}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ crateID;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ slotID;}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ channelNumber;}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ frequency;}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ eraw;}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ qdcs;}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ traces;}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ extwind;\ \textcolor{comment}{//does\ this\ channel\ extend\ the\ event\ build\ window?}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ std::string\ alg\_name;}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ std::string\ alg\_file;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ alg\_index\ =\ -\/1;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ ss\ >>\ flag;}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ ss\ >>\ crateID;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ ss\ >>\ slotID;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ ss\ >>\ channelNumber;}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ ss\ >>\ frequency;}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ss\ >>\ eraw)\ \{\ \}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{\ eraw\ =\ \textcolor{keyword}{false};\ \}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ss\ >>\ qdcs)\ \{\ \}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{\ qdcs\ =\ \textcolor{keyword}{false};\ \}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ss\ >>\ extwind)\ \{\ \ \}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{\ extwind\ =\ \textcolor{keyword}{false};\ \}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ss\ >>\ traces)\ \{\ \}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{\ traces\ =\ \textcolor{keyword}{false};\ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ss\ >>\ alg\_name)\ \{\ \}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{\ alg\_name\ =\ \textcolor{stringliteral}{"{}"{}};\ \}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ss\ >>\ alg\_file)\ \{\ \}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{\ alg\_file\ =\ \textcolor{stringliteral}{"{}"{}};\ \}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ss\ >>\ alg\_index)\ \{\ \}}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{\ alg\_index\ =\ -\/1;\ \}\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a7f6004df67245a80d8f9cecf4671a070}{AddCrate}}(crateID);}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a2f700850bda51bad8fa86b742c7c8dd8}{AddSlot}}(crateID,\ slotID,\ frequency);}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ std::string\ name\ =\ \textcolor{stringliteral}{"{}c"{}}+std::to\_string(crateID)+\textcolor{stringliteral}{"{}s"{}}+std::to\_string(slotID)+\textcolor{stringliteral}{"{}ch"{}}+std::to\_string(channelNumber);}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (flag==\textcolor{charliteral}{'D'})\{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_ab593f322513f80001cc6a532d85a5de0}{AddChannel}}(crateID,\ slotID,\ channelNumber,\ eraw,\ qdcs,\ extwind,\ traces,\ alg\_name,\ alg\_file,\ alg\_index,\textcolor{keyword}{false})!=0)\ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Caution:\ channel\ "{}}\ <<\ crateID\ <<\ \textcolor{stringliteral}{"{}."{}}\ <<\ slotID\ <<\ \textcolor{stringliteral}{"{}."{}}\ <<\ channelNumber\ <<\ \textcolor{stringliteral}{"{}\ defined\ twice,\ second\ definition\ ignored"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \ \ \ \ \ \ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (flag==\textcolor{charliteral}{'T'})\{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_ab593f322513f80001cc6a532d85a5de0}{AddChannel}}(crateID,\ slotID,\ channelNumber,\ eraw,\ qdcs,\ extwind,\ traces,\ alg\_name,\ alg\_file,\ alg\_index,\textcolor{keyword}{true})!=0)\ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Caution:\ channel\ "{}}\ <<\ crateID\ <<\ \textcolor{stringliteral}{"{}."{}}\ <<\ slotID\ <<\ \textcolor{stringliteral}{"{}."{}}\ <<\ channelNumber\ <<\ \textcolor{stringliteral}{"{}\ defined\ twice,\ second\ definition\ ignored"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \ \ \ \ \ \ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'C'}:}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00110\ \ \ \ \ \}}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{comment}{//create\ algorithm\ objects}}
+\DoxyCodeLine{00113\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Setting\ algorithms"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{int}\ nalgs\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_aec71d748843362f4d7217c5db1dd0ce9}{set\_algorithms}}();}
+\DoxyCodeLine{00115\ \ \ \ \ std::cout\ <<\ nalgs\ <<\ \textcolor{stringliteral}{"{}\ set"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00116\ \ \ \ \ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordflow}{return}\ (0);}
+\DoxyCodeLine{00118\ \ \ \}\textcolor{comment}{//read\_definition\ \ }}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_aec71d748843362f4d7217c5db1dd0ce9}\label{class_p_i_x_i_e_1_1_experiment___definition_aec71d748843362f4d7217c5db1dd0ce9}} 
+\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_aec71d748843362f4d7217c5db1dd0ce9}\label{class_p_i_x_i_e_1_1_experiment___definition_aec71d748843362f4d7217c5db1dd0ce9} 
 \index{PIXIE::Experiment\_Definition@{PIXIE::Experiment\_Definition}!set\_algorithms@{set\_algorithms}}
 \index{set\_algorithms@{set\_algorithms}!PIXIE::Experiment\_Definition@{PIXIE::Experiment\_Definition}}
 \doxysubsubsection{\texorpdfstring{set\_algorithms()}{set\_algorithms()}}
@@ -458,53 +458,53 @@ Definition at line \mbox{\hyperlink{experiment__definition_8cc_source_l00302}{30
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00302                                             \{}
-\DoxyCodeLine{00303     \textcolor{keywordtype}{int} n\_chans = 0;}
-\DoxyCodeLine{00304 }
-\DoxyCodeLine{00305     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{definitions_8hh_ac5deb6d94c264069aa7845432331c3f7}{MAX\_CRATES}}; ++i) \{}
-\DoxyCodeLine{00306       \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_aabcea4cb8a3eb1e2b3185f108256b43d}{crateMap}}[i] != NULL) \{}
-\DoxyCodeLine{00307         \textcolor{keyword}{auto} crate = \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_aabcea4cb8a3eb1e2b3185f108256b43d}{crateMap}}[i];}
-\DoxyCodeLine{00308         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j<\mbox{\hyperlink{definitions_8hh_aea2a89422b7c0431259b6e918642898a}{MAX\_SLOTS\_PER\_CRATE}}; ++j) \{}
-\DoxyCodeLine{00309           \textcolor{keywordflow}{if} (crate-\/>slotMap[j] != NULL) \{}
-\DoxyCodeLine{00310             \textcolor{keyword}{auto} slot = crate-\/>\mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_crate_a09f02776dd8e6fcfd40f15b5fdfd14b7}{slotMap}}[j];      }
-\DoxyCodeLine{00311             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k=0; k<\mbox{\hyperlink{definitions_8hh_aa5e7f9ac14bdfa863ef36c7647bbbd5d}{MAX\_CHANNELS\_PER\_BOARD}}; ++k) \{}
-\DoxyCodeLine{00312               \textcolor{keywordflow}{if} (slot-\/>channelMap[k] != NULL) \{}
-\DoxyCodeLine{00313                 \textcolor{keyword}{auto} channel = slot-\/>\mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_slot_a576df736f35d23967239ae5e3a2ef44b}{channelMap}}[k];}
-\DoxyCodeLine{00314                 \textcolor{keywordflow}{if} (channel-\/>traces) \{}
-\DoxyCodeLine{00315                   ++n\_chans;}
-\DoxyCodeLine{00316                   \textcolor{keywordtype}{int} retval = \mbox{\hyperlink{namespace_p_i_x_i_e_a1dc265a21039e9941fc85af4ddcd7a84}{PIXIE::setTraceAlg}}(channel-\/>alg, channel-\/>algName, channel-\/>algFile, channel-\/>algIndex);}
-\DoxyCodeLine{00317                   \textcolor{keywordflow}{if} (retval < 0) \{}
-\DoxyCodeLine{00318                     std::cout << \textcolor{stringliteral}{"{}Trace Algorithm not set properly!"{}} << std::endl;}
-\DoxyCodeLine{00319                   \}}
-\DoxyCodeLine{00320                 \}}
-\DoxyCodeLine{00321               \}}
-\DoxyCodeLine{00322             \}}
-\DoxyCodeLine{00323           \}}
-\DoxyCodeLine{00324         \}}
-\DoxyCodeLine{00325       \}}
-\DoxyCodeLine{00326     \}}
-\DoxyCodeLine{00327     \textcolor{keywordflow}{return} n\_chans;}
-\DoxyCodeLine{00328   \}}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00303\ \ \ \ \ \textcolor{keywordtype}{int}\ n\_chans\ =\ 0;}
+\DoxyCodeLine{00304\ }
+\DoxyCodeLine{00305\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<\mbox{\hyperlink{definitions_8hh_ac5deb6d94c264069aa7845432331c3f7}{MAX\_CRATES}};\ ++i)\ \{}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_aabcea4cb8a3eb1e2b3185f108256b43d}{crateMap}}[i]\ !=\ NULL)\ \{}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ crate\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_aabcea4cb8a3eb1e2b3185f108256b43d}{crateMap}}[i];}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j=0;\ j<\mbox{\hyperlink{definitions_8hh_aea2a89422b7c0431259b6e918642898a}{MAX\_SLOTS\_PER\_CRATE}};\ ++j)\ \{}
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (crate-\/>slotMap[j]\ !=\ NULL)\ \{}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ slot\ =\ crate-\/>\mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_crate_a09f02776dd8e6fcfd40f15b5fdfd14b7}{slotMap}}[j];\ \ \ \ \ \ }
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ k=0;\ k<\mbox{\hyperlink{definitions_8hh_aa5e7f9ac14bdfa863ef36c7647bbbd5d}{MAX\_CHANNELS\_PER\_BOARD}};\ ++k)\ \{}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (slot-\/>channelMap[k]\ !=\ NULL)\ \{}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ channel\ =\ slot-\/>\mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_slot_a576df736f35d23967239ae5e3a2ef44b}{channelMap}}[k];}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (channel-\/>traces)\ \{}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ++n\_chans;}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ retval\ =\ \mbox{\hyperlink{namespace_p_i_x_i_e_a1dc265a21039e9941fc85af4ddcd7a84}{PIXIE::setTraceAlg}}(channel-\/>alg,\ channel-\/>algName,\ channel-\/>algFile,\ channel-\/>algIndex);}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (retval\ <\ 0)\ \{}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Trace\ Algorithm\ not\ set\ properly!"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00326\ \ \ \ \ \}}
+\DoxyCodeLine{00327\ \ \ \ \ \textcolor{keywordflow}{return}\ n\_chans;}
+\DoxyCodeLine{00328\ \ \ \}}
 
 \end{DoxyCode}
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_aabcea4cb8a3eb1e2b3185f108256b43d}\label{class_p_i_x_i_e_1_1_experiment___definition_aabcea4cb8a3eb1e2b3185f108256b43d}} 
+\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_aabcea4cb8a3eb1e2b3185f108256b43d}\label{class_p_i_x_i_e_1_1_experiment___definition_aabcea4cb8a3eb1e2b3185f108256b43d} 
 \index{PIXIE::Experiment\_Definition@{PIXIE::Experiment\_Definition}!crateMap@{crateMap}}
 \index{crateMap@{crateMap}!PIXIE::Experiment\_Definition@{PIXIE::Experiment\_Definition}}
 \doxysubsubsection{\texorpdfstring{crateMap}{crateMap}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_crate}{Crate}}$\ast$ PIXIE\+::\+Experiment\+\_\+\+Definition\+::crate\+Map\mbox{[}\mbox{\hyperlink{definitions_8hh_ac5deb6d94c264069aa7845432331c3f7}{MAX\+\_\+\+CRATES}}\mbox{]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_crate}{Crate}}\texorpdfstring{$\ast$}{*} PIXIE\+::\+Experiment\+\_\+\+Definition\+::crate\+Map\mbox{[}\mbox{\hyperlink{definitions_8hh_ac5deb6d94c264069aa7845432331c3f7}{MAX\+\_\+\+CRATES}}\mbox{]}}
 
 
 
 Definition at line \mbox{\hyperlink{experiment__definition_8hh_source_l00104}{104}} of file \mbox{\hyperlink{experiment__definition_8hh_source}{experiment\+\_\+definition.\+hh}}.
 
-\mbox{\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_ab1228b0eef3ffe954b26a89238c88fe6}\label{class_p_i_x_i_e_1_1_experiment___definition_ab1228b0eef3ffe954b26a89238c88fe6}} 
+\Hypertarget{class_p_i_x_i_e_1_1_experiment___definition_ab1228b0eef3ffe954b26a89238c88fe6}\label{class_p_i_x_i_e_1_1_experiment___definition_ab1228b0eef3ffe954b26a89238c88fe6} 
 \index{PIXIE::Experiment\_Definition@{PIXIE::Experiment\_Definition}!file@{file}}
 \index{file@{file}!PIXIE::Experiment\_Definition@{PIXIE::Experiment\_Definition}}
 \doxysubsubsection{\texorpdfstring{file}{file}}
-{\footnotesize\ttfamily FILE$\ast$ PIXIE\+::\+Experiment\+\_\+\+Definition\+::file}
+{\footnotesize\ttfamily FILE\texorpdfstring{$\ast$}{*} PIXIE\+::\+Experiment\+\_\+\+Definition\+::file}
 
 
 

@@ -6,5 +6,5 @@ var searchData=
   ['getmeasurement_3',['GetMeasurement',['../class_p_i_x_i_e_1_1_event.html#ae9157873a711b1221138f999ea1a659e',1,'PIXIE::Event::GetMeasurement(int crateID, int slotID, int channelNumber, Reader *reader) const'],['../class_p_i_x_i_e_1_1_event.html#ad69a3dc399ab8b6e795a9827cabb5761',1,'PIXIE::Event::GetMeasurement(Reader *reader, int i) const']]],
   ['getslot_4',['GetSlot',['../struct_p_i_x_i_e_1_1_experiment___definition_1_1_crate.html#af289cc7d5a6dac17154f7063e7d0a802',1,'PIXIE::Experiment_Definition::Crate::GetSlot()'],['../class_p_i_x_i_e_1_1_experiment___definition.html#a51df0f5bd8e8617bba0db3713d28dc4a',1,'PIXIE::Experiment_Definition::GetSlot()']]],
   ['gettrace_5',['getTrace',['../class_p_i_x_i_e_1_1_measurement.html#a05e9628990d53d21c0005577a782fe2b',1,'PIXIE::Measurement']]],
-  ['good_5ftrace_6',['good_trace',['../class_p_i_x_i_e_1_1_measurement.html#a7de1b2bfc4cb4f62d779fdb90bd241c5',1,'PIXIE::Measurement::good_trace()'],['../class_p_i_x_i_e_1_1_trace_1_1_algorithm.html#a3a179dfa3c4c83f0750b0a205b55bb35',1,'PIXIE::Trace::Algorithm::good_trace()']]]
+  ['good_5ftrace_6',['good_trace',['../class_p_i_x_i_e_1_1_measurement.html#a7de1b2bfc4cb4f62d779fdb90bd241c5',1,'PIXIE::Measurement::good_trace'],['../class_p_i_x_i_e_1_1_trace_1_1_algorithm.html#a3a179dfa3c4c83f0750b0a205b55bb35',1,'PIXIE::Trace::Algorithm::good_trace']]]
 ];

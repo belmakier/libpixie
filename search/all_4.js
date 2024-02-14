@@ -10,7 +10,7 @@ var searchData=
   ['esumgap_7',['ESumGap',['../class_p_i_x_i_e_1_1_measurement.html#a1db7026e4a701144051e4e1b17fd7710',1,'PIXIE::Measurement']]],
   ['esumleading_8',['ESumLeading',['../class_p_i_x_i_e_1_1_measurement.html#a11aa609326ddc2d6308f1a7c6b4e8c7b',1,'PIXIE::Measurement']]],
   ['esumtrailing_9',['ESumTrailing',['../class_p_i_x_i_e_1_1_measurement.html#a9e369eb1d98fb082453b46e6f9866fa8',1,'PIXIE::Measurement']]],
-  ['event_10',['Event',['../class_p_i_x_i_e_1_1_event.html#a1891645403ab4ba2e8481f3856b7cec2',1,'PIXIE::Event::Event()'],['../class_p_i_x_i_e_1_1_event.html',1,'PIXIE::Event']]],
+  ['event_10',['Event',['../class_p_i_x_i_e_1_1_event.html',1,'PIXIE::Event'],['../class_p_i_x_i_e_1_1_event.html#a1891645403ab4ba2e8481f3856b7cec2',1,'PIXIE::Event::Event()']]],
   ['event_2ecc_11',['event.cc',['../event_8cc.html',1,'']]],
   ['event_2ehh_12',['event.hh',['../event_8hh.html',1,'']]],
   ['eventctr_13',['eventCtr',['../class_p_i_x_i_e_1_1_reader.html#aed38c96580fe22467fd7ac3d49275239',1,'PIXIE::Reader']]],
@@ -19,12 +19,11 @@ var searchData=
   ['eventreltime_16',['eventRelTime',['../class_p_i_x_i_e_1_1_measurement.html#a175df9fa09111c252890700c9df36ddf',1,'PIXIE::Measurement']]],
   ['events_17',['events',['../class_p_i_x_i_e_1_1_reader.html#acc83dbcc5e0677cf293a5f9b8c49f3bb',1,'PIXIE::Reader']]],
   ['eventsread_18',['eventsread',['../class_p_i_x_i_e_1_1_reader.html#a59724abfa68ca0b7a4225a66a636e1d1',1,'PIXIE::Reader']]],
-  ['eventtime_19',['eventTime',['../class_p_i_x_i_e_1_1_measurement.html#a258ca7d91a3a9b095914567599ccf01d',1,'PIXIE::Measurement']]],
-  ['eventtime_20',['EventTime',['../struct_p_i_x_i_e_1_1_event_time.html',1,'PIXIE']]],
-  ['experiment_5fdefinition_21',['Experiment_Definition',['../class_p_i_x_i_e_1_1_experiment___definition.html#afb630e48afd4e90e82f6ebb0578e5a68',1,'PIXIE::Experiment_Definition']]],
+  ['eventtime_19',['EventTime',['../struct_p_i_x_i_e_1_1_event_time.html',1,'PIXIE']]],
+  ['eventtime_20',['eventTime',['../class_p_i_x_i_e_1_1_measurement.html#a258ca7d91a3a9b095914567599ccf01d',1,'PIXIE::Measurement']]],
+  ['experiment_5fdefinition_21',['Experiment_Definition',['../class_p_i_x_i_e_1_1_experiment___definition.html',1,'PIXIE::Experiment_Definition'],['../class_p_i_x_i_e_1_1_experiment___definition.html#afb630e48afd4e90e82f6ebb0578e5a68',1,'PIXIE::Experiment_Definition::Experiment_Definition()']]],
   ['experiment_5fdefinition_22',['experiment_definition',['../class_p_i_x_i_e_1_1_reader.html#a7943740f3a97f32e6e2db5d126ccee76',1,'PIXIE::Reader']]],
-  ['experiment_5fdefinition_23',['Experiment_Definition',['../class_p_i_x_i_e_1_1_experiment___definition.html',1,'PIXIE']]],
-  ['experiment_5fdefinition_2ecc_24',['experiment_definition.cc',['../experiment__definition_8cc.html',1,'']]],
-  ['experiment_5fdefinition_2ehh_25',['experiment_definition.hh',['../experiment__definition_8hh.html',1,'']]],
-  ['extwind_26',['extwind',['../struct_p_i_x_i_e_1_1_experiment___definition_1_1_channel.html#a3a8ae23deb85024d7172fc43f0157bf1',1,'PIXIE::Experiment_Definition::Channel']]]
+  ['experiment_5fdefinition_2ecc_23',['experiment_definition.cc',['../experiment__definition_8cc.html',1,'']]],
+  ['experiment_5fdefinition_2ehh_24',['experiment_definition.hh',['../experiment__definition_8hh.html',1,'']]],
+  ['extwind_25',['extwind',['../struct_p_i_x_i_e_1_1_experiment___definition_1_1_channel.html#a3a8ae23deb85024d7172fc43f0157bf1',1,'PIXIE::Experiment_Definition::Channel']]]
 ];

@@ -1,42 +1,44 @@
-\hypertarget{nsclreader_8hh_source}{}\doxysection{nsclreader.\+hh}
-\label{nsclreader_8hh_source}\index{src/nsclreader.hh@{src/nsclreader.hh}}
+\doxysection{nsclreader.\+hh}
+\hypertarget{nsclreader_8hh_source}{}\label{nsclreader_8hh_source}\index{src/nsclreader.hh@{src/nsclreader.hh}}
 \mbox{\hyperlink{nsclreader_8hh}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00001}00001 \textcolor{comment}{// -\/*-\/c++-\/*-\/}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00002}00002 \textcolor{comment}{/* libpixie reader */}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00003}00003 }
-\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00004}00004 \textcolor{preprocessor}{\#ifndef LIBPIXIE\_NSCLREADER\_H}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00005}00005 \textcolor{preprocessor}{\#define LIBPIXIE\_NSCLREADER\_H}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00006}00006 }
-\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00007}00007 \textcolor{preprocessor}{\#include <stdio.h>}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00008}00008 \textcolor{preprocessor}{\#include <sys/stat.h>}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00009}00009 \textcolor{preprocessor}{\#include <time.h>}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00010}00010 }
-\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00011}00011 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{event_8hh}{event.hh}}"{}}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00012}00012 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{traces_8hh}{traces.hh}}"{}}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00013}00013 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{definitions_8hh}{definitions.hh}}"{}}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00014}00014 }
-\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00015}00015 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_p_i_x_i_e}{PIXIE}} \{}
-\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00016}\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader}{00016}}   \textcolor{keyword}{class }\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader}{NSCLReader}} \{}
-\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00017}00017   \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00018}\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ab303c4f20abd69c93e0d08cf286f785a}{00018}}     uint32\_t \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ab303c4f20abd69c93e0d08cf286f785a}{ri\_size}};}
-\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00019}\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a95a5e4361c7e3012e857c50594e3a38e}{00019}}     uint32\_t \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a95a5e4361c7e3012e857c50594e3a38e}{ri\_type}};}
-\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00020}00020     }
-\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00021}\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{00021}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}}; \textcolor{comment}{//this tells us the size of the event => how many PIXIE fragments}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00022}00022     }
-\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00023}00023     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ac13d50caf383d2b096043f770c74ebd9}{readRingItemHeader}}(FILE *file);}
-\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00024}00024     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a405fa0a44294d4ef9614620d0b5f69a6}{readRingItemBodyHeader}}(FILE *file);}
-\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00025}00025     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a78428cb78a9fb5b8cdac88c2d8a7406b}{readRingItemBody}}(FILE *file);}
-\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00026}00026     }
-\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00027}00027     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a16bab1f0a05ece0a9d60ff6ff9c5852e}{readNextFragment}}(FILE *file);}
-\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00028}00028 }
-\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00029}00029     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ad26c1515bfdd5f491a4640c9aa225ac7}{findNextFragment}}(FILE *file);}
-\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00030}00030   \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00031}\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a6e33052a4b1cad162ae1301ac022f620}{00031}}     \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a6e33052a4b1cad162ae1301ac022f620}{NSCLReader}}() : \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ab303c4f20abd69c93e0d08cf286f785a}{ri\_size}}(0), \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a95a5e4361c7e3012e857c50594e3a38e}{ri\_type}}(0), \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}}(0) \{\};}
-\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00032}\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a8c7adaf937098c9e9c38e97ea57f2caf}{00032}}     \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a8c7adaf937098c9e9c38e97ea57f2caf}{\string~NSCLReader}}() \{\};}
-\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00033}00033   \};}
-\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00034}00034 \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00035}00035 }
-\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00036}00036 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//LIBPIXIE\_NSCLREADER\_H}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00001}00001\ \textcolor{comment}{//\ -\/*-\/c++-\/*-\/}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00002}00002\ \textcolor{comment}{/*\ libpixie\ reader\ */}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00004}00004\ \textcolor{preprocessor}{\#ifndef\ LIBPIXIE\_NSCLREADER\_H}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00005}00005\ \textcolor{preprocessor}{\#define\ LIBPIXIE\_NSCLREADER\_H}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <sys/stat.h>}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <time.h>}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{event_8hh}{event.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{traces_8hh}{traces.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{definitions_8hh}{definitions.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00015}00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_p_i_x_i_e}{PIXIE}}\ \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00016}\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader}{00016}}\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader}{NSCLReader}}\ \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00017}00017\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00018}\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a4f1e5db4d9f299423cbb76f6a58927da}{00018}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a4f1e5db4d9f299423cbb76f6a58927da}{presort}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00019}00019\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00020}\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ab303c4f20abd69c93e0d08cf286f785a}{00020}}\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ab303c4f20abd69c93e0d08cf286f785a}{ri\_size}};}
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00021}\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a95a5e4361c7e3012e857c50594e3a38e}{00021}}\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a95a5e4361c7e3012e857c50594e3a38e}{ri\_type}};}
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00022}00022\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00023}\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{00023}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}};\ \textcolor{comment}{//this\ tells\ us\ the\ size\ of\ the\ event\ =>\ how\ many\ PIXIE\ fragments}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00024}00024\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00025}00025\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ac13d50caf383d2b096043f770c74ebd9}{readRingItemHeader}}(FILE\ *file);}
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00026}00026\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a405fa0a44294d4ef9614620d0b5f69a6}{readRingItemBodyHeader}}(FILE\ *file);}
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00027}00027\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a78428cb78a9fb5b8cdac88c2d8a7406b}{readRingItemBody}}(FILE\ *file);}
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00028}00028\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00029}00029\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a16bab1f0a05ece0a9d60ff6ff9c5852e}{readNextFragment}}(FILE\ *file);}
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00031}00031\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ad26c1515bfdd5f491a4640c9aa225ac7}{findNextFragment}}(FILE\ *file);}
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00032}00032\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00033}\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a6e33052a4b1cad162ae1301ac022f620}{00033}}\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a6e33052a4b1cad162ae1301ac022f620}{NSCLReader}}()\ :\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ab303c4f20abd69c93e0d08cf286f785a}{ri\_size}}(0),\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a95a5e4361c7e3012e857c50594e3a38e}{ri\_type}}(0),\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}}(0),\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a4f1e5db4d9f299423cbb76f6a58927da}{presort}}(false)\ \{\};}
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00034}\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a8c7adaf937098c9e9c38e97ea57f2caf}{00034}}\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a8c7adaf937098c9e9c38e97ea57f2caf}{\string~NSCLReader}}()\ \{\};}
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00035}00035\ \ \ \};}
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00036}00036\ \}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{nsclreader_8hh_source_l00038}00038\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//LIBPIXIE\_NSCLREADER\_H}}
 
 \end{DoxyCode}
