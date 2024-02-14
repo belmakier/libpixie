@@ -97,6 +97,7 @@ namespace PIXIE {
       if (fread(&firstWords, (size_t) sizeof(int)*4, (size_t) 1, reader->file) != 1) {
         return -1;    
       }
+      if (reader->nsclreader->presort) { reader->nsclreader->rib_size -= sizeof(int)*4; }
     }
     
     channelNumber = mChannelNumber(firstWords[0]);
@@ -144,7 +145,9 @@ namespace PIXIE {
       uint32_t otherWords[headerLength-4];
       if (fread(&otherWords, (size_t) 4, (size_t) headerLength-4, reader->file) != (size_t) headerLength-4) {
         return -1;
-      }    
+      }
+      if (reader->NSCLDAQ) { if (reader->nsclreader->presort) { reader->nsclreader->rib_size -= 4*(headerLength-4); } }
+      
       //Read the rest of the header
       if (headerLength==8) {//Raw energy sums
         ESumTrailing = mESumTrailing(otherWords[0]);
@@ -178,19 +181,24 @@ namespace PIXIE {
       if (fseek(reader->file, (eventLength-headerLength)*4, SEEK_CUR)) {
         return -1;
       }
+      if (reader->NSCLDAQ) { if (reader->nsclreader->presort) { reader->nsclreader->rib_size -= 4*(eventLength-headerLength); } }
     }
     else if (outTrace==NULL && !channel->traces){
       if (fseek(reader->file, (eventLength-headerLength)*4, SEEK_CUR)) {
         return -1;
       }
+      if (reader->NSCLDAQ) { if (reader->nsclreader->presort) { reader->nsclreader->rib_size -= 4*(eventLength-headerLength); } }
     }
     //Read trace
     else {
       //uint16_t trace[traceLength]; // = {0};
       if (traceLength > MAX_TRACE_LENGTH) { std::cout << "WARNING: traceLength > MAX_TRACE_LENGTH" << std::endl; }
+      
       if (fread(&(this->trace[0]), (size_t) 2, (size_t) traceLength, reader->file) != (size_t) traceLength) {
         return -1;
       }
+      if (reader->NSCLDAQ) { if (reader->nsclreader->presort) { reader->nsclreader->rib_size -= 2*traceLength; } }
+      
       if (outTrace!=NULL){
         memcpy(outTrace, &trace,traceLength*sizeof(uint16_t));
       }

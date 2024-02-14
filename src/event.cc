@@ -32,7 +32,6 @@ namespace PIXIE
 
       meas = &(reader->measurements[fMeasurements[nMeas-1]]);
     }
-
     else {
       if (reader->measCtr == 0) {
         meas = &(reader->measurements[MAX_MEAS_PER_EVENT * MAX_EVENTS - 1]);
@@ -94,6 +93,7 @@ namespace PIXIE
           //this is super strict, even up to CFD timing
           //relax somewhat:
           if (next_meas->eventTime+32768<maxTime-coincWindow) {  //within 10 ns
+            if (warnings) {
             std::cout<< ANSI_COLOR_RED "\nWarning! File is not properly time-sorted" << std::endl;
             std::cout<< "First event: "
                      << lastCrate << "." 
@@ -103,6 +103,7 @@ namespace PIXIE
                      << next_meas->crateID << "."
                      << next_meas->slotID << "."
                      << next_meas->channelNumber << "   " << next_meas->eventTime << ANSI_COLOR_RESET << std::endl;
+            }
           }
         }
                 
@@ -130,7 +131,7 @@ namespace PIXIE
     reader->av_evt_length = (reader->av_evt_length*reader->nEvents + ((maxTime-triggerTime)/(3276.8*1e3)))/(double)(reader->nEvents + 1);
     
     nMeas -= 1; //not in this event
-    
+
     return retval;
   }
 

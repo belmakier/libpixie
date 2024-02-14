@@ -15,6 +15,8 @@
 namespace PIXIE {
   class NSCLReader {
   public:
+    bool presort = false;
+    
     uint32_t ri_size;
     uint32_t ri_type;
     
@@ -28,7 +30,7 @@ namespace PIXIE {
 
     int findNextFragment(FILE *file);
   public:
-    NSCLReader() : ri_size(0), ri_type(0), rib_size(0) {};
+    NSCLReader() : ri_size(0), ri_type(0), rib_size(0), presort(false) {};
     ~NSCLReader() {};
   };
 }

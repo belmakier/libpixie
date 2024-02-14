@@ -16,7 +16,7 @@ namespace PIXIE {
   
   class Event {
   public:
-    int fMeasurements[MAX_MEAS_PER_EVENT];
+    int fMeasurements[MAX_MEAS_PER_EVENT] ;
     
     int nMeas;
 

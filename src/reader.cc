@@ -51,6 +51,10 @@ namespace PIXIE
     this->RejectSCPU = false;
 
     this->NSCLDAQ = false;
+    measurements.reserve(MAX_EVENTS*MAX_MEAS_PER_EVENT);
+    for (int i=0; i<MAX_EVENTS*MAX_MEAS_PER_EVENT; ++i) {
+      measurements.emplace_back();
+    }
   }
   
   Reader::~Reader() {}
@@ -112,14 +116,15 @@ namespace PIXIE
     printf("Total sub-events:     " ANSI_COLOR_YELLOW "%15lld\n" ANSI_COLOR_RESET, subevents);
     printf("Bad CFD sub-events:   " ANSI_COLOR_YELLOW "%15lld" ANSI_COLOR_RESET ",     " ANSI_COLOR_GREEN "%5.1f%% " ANSI_COLOR_RESET "good\n", badcfd, 100*(1-(double)badcfd/(double)subevents));
     printf("Pileups:              " ANSI_COLOR_YELLOW "%15lld" ANSI_COLOR_RESET ",     " ANSI_COLOR_GREEN "%5.1f%% " ANSI_COLOR_RESET "good\n", pileups, 100*(1-(double)pileups/(double)subevents));
-    printf("Same channel pileups: " ANSI_COLOR_YELLOW "%15lld" ANSI_COLOR_RESET ",     " ANSI_COLOR_GREEN "%5.1f%% " ANSI_COLOR_RESET "good\n", sameChanPU, 100*(1-(double)sameChanPU/(double)subevents));
+    if (RejectSCPU) {
+      printf("Same channel pileups: " ANSI_COLOR_YELLOW "%15lld" ANSI_COLOR_RESET ",     " ANSI_COLOR_GREEN "%5.1f%% " ANSI_COLOR_RESET "good\n", sameChanPU, 100*(1-(double)sameChanPU/(double)subevents));
+    }
     printf("Out of range:         " ANSI_COLOR_YELLOW "%15lld" ANSI_COLOR_RESET ",     " ANSI_COLOR_GREEN "%5.1f%% " ANSI_COLOR_RESET "good\n", outofrange, 100*(1-(double)outofrange/(double)subevents));
     printf("\n");
     printf("Singles:              " ANSI_COLOR_YELLOW "%15lld" ANSI_COLOR_RESET ",     " ANSI_COLOR_GREEN "%5.1f%% " ANSI_COLOR_RESET "\n", mults[0], 100*(double)mults[0]/(double)nEvents);
     printf("Doubles:              " ANSI_COLOR_YELLOW "%15lld" ANSI_COLOR_RESET ",     " ANSI_COLOR_GREEN "%5.1f%% " ANSI_COLOR_RESET "\n", mults[1], 100*(double)mults[1]/(double)nEvents);
     printf("Triples:              " ANSI_COLOR_YELLOW "%15lld" ANSI_COLOR_RESET ",     " ANSI_COLOR_GREEN "%5.1f%% " ANSI_COLOR_RESET "\n", mults[2], 100*(double)mults[2]/(double)nEvents);
     printf("Quadruples:           " ANSI_COLOR_YELLOW "%15lld" ANSI_COLOR_RESET ",     " ANSI_COLOR_GREEN "%5.1f%% " ANSI_COLOR_RESET "\n", mults[3], 100*(double)mults[3]/(double)nEvents);
-
   }
     
   int Reader::open(const std::string &path) {    
@@ -157,6 +162,9 @@ namespace PIXIE
     }
     else if (retval == 1) { //same channel pileup
       this->sameChanPU += 1;                    
+    }
+    else if (retval == 2) { //MAX_MEAS_PER_EVENT exceeded
+      std::cerr << "Severe warning! MAX_MEAS_PER_EVENT exceeded" << std::endl;
     }
         
     //increment counters
