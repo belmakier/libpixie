@@ -5,10 +5,9 @@ var searchData=
   ['nmeas_2',['nMeas',['../class_p_i_x_i_e_1_1_event.html#ad39077e66bf9468214071572181d7bb1',1,'PIXIE::Event']]],
   ['nscldaq_3',['NSCLDAQ',['../class_p_i_x_i_e_1_1_reader.html#a00fb68aec2438b652adc6524be1be520',1,'PIXIE::Reader']]],
   ['nscldaq_4',['nscldaq',['../class_p_i_x_i_e_1_1_reader.html#a98a0266af9f71037903416ae75d4066d',1,'PIXIE::Reader']]],
-  ['nsclreader_5',['NSCLReader',['../class_p_i_x_i_e_1_1_n_s_c_l_reader.html',1,'PIXIE']]],
+  ['nsclreader_5',['NSCLReader',['../class_p_i_x_i_e_1_1_n_s_c_l_reader.html',1,'PIXIE::NSCLReader'],['../class_p_i_x_i_e_1_1_n_s_c_l_reader.html#a6e33052a4b1cad162ae1301ac022f620',1,'PIXIE::NSCLReader::NSCLReader()']]],
   ['nsclreader_6',['nsclreader',['../class_p_i_x_i_e_1_1_reader.html#aa503b0ca55f879e783fba0306734bc18',1,'PIXIE::Reader']]],
-  ['nsclreader_7',['NSCLReader',['../class_p_i_x_i_e_1_1_n_s_c_l_reader.html#a6e33052a4b1cad162ae1301ac022f620',1,'PIXIE::NSCLReader']]],
-  ['nsclreader_2ecc_8',['nsclreader.cc',['../nsclreader_8cc.html',1,'']]],
-  ['nsclreader_2ehh_9',['nsclreader.hh',['../nsclreader_8hh.html',1,'']]],
-  ['ntracemeas_10',['nTraceMeas',['../class_p_i_x_i_e_1_1_measurement.html#aa32b41845cd96b951763bd94667edb5b',1,'PIXIE::Measurement']]]
+  ['nsclreader_2ecc_7',['nsclreader.cc',['../nsclreader_8cc.html',1,'']]],
+  ['nsclreader_2ehh_8',['nsclreader.hh',['../nsclreader_8hh.html',1,'']]],
+  ['ntracemeas_9',['nTraceMeas',['../class_p_i_x_i_e_1_1_measurement.html#aa32b41845cd96b951763bd94667edb5b',1,'PIXIE::Measurement']]]
 ];

@@ -14,6 +14,15 @@
 #include "nsclreader.hh"
 
 namespace PIXIE {
+  /*
+  enum class ReadType {
+    kFRead = 1,
+    kBuffRead = 2,
+    kMemMapRead = 3,
+    kFullBuffRead = 4
+  };
+  */
+  
   class Reader {
   public:
     //bool binary;
@@ -30,6 +39,7 @@ namespace PIXIE {
     int coincWindow;
     bool warnings;
     bool RejectSCPU;
+    bool extendOnZeros;
     
     FILE *file;
     
@@ -55,6 +65,13 @@ namespace PIXIE {
 
     int measCtr;    
     int eventCtr;
+
+    int fd;
+    unsigned int off;
+    char *buffer;
+    unsigned int *pBuff; //pixie buffer
+    unsigned int pOff;
+    unsigned int pOffMax;
 
     static float dither;
 
@@ -87,7 +104,10 @@ namespace PIXIE {
       return coincWindow;
     }
 
-    int open(const std::string &path);
+    int openfile(const std::string &path);
+    int loadbuffer();
+    int clearbuffer();
+    int closefile();
     int read();
     int dump_traces(int crate, int slot, int chan, std::string outPath, int maxTraces, int append, std::string traceName);
 

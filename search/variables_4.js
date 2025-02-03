@@ -16,5 +16,6 @@ var searchData=
   ['events_13',['events',['../class_p_i_x_i_e_1_1_reader.html#acc83dbcc5e0677cf293a5f9b8c49f3bb',1,'PIXIE::Reader']]],
   ['eventsread_14',['eventsread',['../class_p_i_x_i_e_1_1_reader.html#a59724abfa68ca0b7a4225a66a636e1d1',1,'PIXIE::Reader']]],
   ['eventtime_15',['eventTime',['../class_p_i_x_i_e_1_1_measurement.html#a258ca7d91a3a9b095914567599ccf01d',1,'PIXIE::Measurement']]],
-  ['extwind_16',['extwind',['../struct_p_i_x_i_e_1_1_experiment___definition_1_1_channel.html#a3a8ae23deb85024d7172fc43f0157bf1',1,'PIXIE::Experiment_Definition::Channel']]]
+  ['extendonzeros_16',['extendOnZeros',['../class_p_i_x_i_e_1_1_reader.html#a25d24b599eee5372ed5d3d37f0345bee',1,'PIXIE::Reader']]],
+  ['extwind_17',['extwind',['../struct_p_i_x_i_e_1_1_experiment___definition_1_1_channel.html#a3a8ae23deb85024d7172fc43f0157bf1',1,'PIXIE::Experiment_Definition::Channel']]]
 ];

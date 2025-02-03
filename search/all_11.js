@@ -5,7 +5,7 @@ var searchData=
   ['thread_2',['thread',['../class_p_i_x_i_e_1_1_reader.html#ae95c4e93a4bd8b7fec5cfc454fd7c94d',1,'PIXIE::Reader']]],
   ['time_3',['time',['../struct_p_i_x_i_e_1_1_event_time.html#aedec9247ad6439829189a1b2047512cb',1,'PIXIE::EventTime']]],
   ['tlow_4',['tLow',['../class_p_i_x_i_e_1_1_trace_1_1_peak_tail.html#a10e2aa9fe5568010ab3c8b33a6bfe1dc',1,'PIXIE::Trace::PeakTail']]],
-  ['trace_5',['trace',['../class_p_i_x_i_e_1_1_measurement.html#a3e2e36f00d13cc9afa7d8aaf2ffde095',1,'PIXIE::Measurement']]],
+  ['trace_5',['trace',['../class_p_i_x_i_e_1_1_measurement.html#a99543a8cee3bf5123da2d5c110eb09f0',1,'PIXIE::Measurement']]],
   ['trace_5falgorithms_2ecc_6',['trace_algorithms.cc',['../trace__algorithms_8cc.html',1,'']]],
   ['trace_5falgorithms_2ehh_7',['trace_algorithms.hh',['../trace__algorithms_8hh.html',1,'']]],
   ['trace_5fmeas_8',['trace_meas',['../class_p_i_x_i_e_1_1_measurement.html#abfb4ec14dc55376666331ec2ad293276',1,'PIXIE::Measurement']]],

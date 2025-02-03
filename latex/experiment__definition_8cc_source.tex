@@ -132,8 +132,8 @@
 \DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00128}00128\ \ \ \}}
 \DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00129}00129\ }
 \DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00130}\mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_crate_ae97fa611d0705f073438a05783711e8d}{00130}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_crate_ae97fa611d0705f073438a05783711e8d}{Experiment\_Definition::Crate::AddSlot}}(\textcolor{keywordtype}{int}\ slotID,\ \textcolor{keywordtype}{int}\ frequency)\ \{}
-\DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00131}00131\ \ \ \ \ slotMap[slotID-\/2]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_slot}{Slot}}(crateID,\ slotID);}
-\DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00132}00132\ \ \ \ \ slotMap[slotID-\/2]-\/>freq\ =\ frequency;}
+\DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00131}00131\ \ \ \ \ \mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_crate_a09f02776dd8e6fcfd40f15b5fdfd14b7}{slotMap}}[slotID-\/2]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_slot}{Slot}}(\mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_crate_a94058e9b0ea10b9b05ec9121986c3ba5}{crateID}},\ slotID);}
+\DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00132}00132\ \ \ \ \ \mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_crate_a09f02776dd8e6fcfd40f15b5fdfd14b7}{slotMap}}[slotID-\/2]-\/>freq\ =\ frequency;}
 \DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00133}00133\ }
 \DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00134}00134\ \ \ \ \ \textcolor{keywordflow}{return}(0);}
 \DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00135}00135\ \ \ \}}
@@ -142,7 +142,7 @@
 \DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00138}00138\ \ \ \ \ \textcolor{keywordflow}{if}\ (channelNumber\ <\ 0)\ \{\ \textcolor{keywordflow}{return}\ NULL;\ \}}
 \DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00139}00139\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (channelNumber\ >=\ \mbox{\hyperlink{definitions_8hh_aa5e7f9ac14bdfa863ef36c7647bbbd5d}{MAX\_CHANNELS\_PER\_BOARD}})\ \{\ \textcolor{keywordflow}{return}\ NULL;\ \}}
 \DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00140}00140\ }
-\DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00141}00141\ \ \ \ \ \textcolor{keywordflow}{return}\ channelMap[channelNumber];}
+\DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00141}00141\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_slot_a576df736f35d23967239ae5e3a2ef44b}{channelMap}}[channelNumber];}
 \DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00142}00142\ \ \ \}}
 \DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00143}00143\ }
 \DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00144}\mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_slot_a3a0c92cc580db26bfd66c4379568f005}{00144}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_slot_a3a0c92cc580db26bfd66c4379568f005}{Experiment\_Definition::Slot::AddChannel}}(\textcolor{keywordtype}{int}\ channelNumber,}
@@ -154,8 +154,8 @@
 \DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ algFile,}
 \DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ algIndex,}
 \DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isTagger)\ \{}
-\DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00153}00153\ \ \ \ \ channelMap[channelNumber]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_channel}{Channel}}(crateID,}
-\DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ slotID,}
+\DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00153}00153\ \ \ \ \ \mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_slot_a576df736f35d23967239ae5e3a2ef44b}{channelMap}}[channelNumber]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_channel}{Channel}}(\mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_slot_a8f99820e0eeab64c71c18bdb90516605}{crateID}},}
+\DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_slot_a6fe3292c2683cdc3df1139bd41ff99d7}{slotID}},}
 \DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ channelNumber,}
 \DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ eraw,}
 \DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ qdcs,}
@@ -269,7 +269,7 @@
 \DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00265}00265\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<\mbox{\hyperlink{definitions_8hh_ac5deb6d94c264069aa7845432331c3f7}{MAX\_CRATES}};\ ++i)\ \{}
 \DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00266}00266\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_aabcea4cb8a3eb1e2b3185f108256b43d}{crateMap}}[i]\ !=\ NULL)\ \{}
 \DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00267}00267\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ crate\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_aabcea4cb8a3eb1e2b3185f108256b43d}{crateMap}}[i];\ \textcolor{comment}{//crate\_it.second;}}
-\DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00268}00268\ \ \ \ \ \ \ \ \ log\ <<\ \textcolor{stringliteral}{"{}Crate\ ID\ "{}}\ <<\ crate-\/>\mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_crate_a94058e9b0ea10b9b05ec9121986c3ba5}{crateID}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00268}00268\ \ \ \ \ \ \ \ \ log\ <<\ \textcolor{stringliteral}{"{}Crate\ ID\ "{}}\ <<\ crate-\/>crateID\ <<\ std::endl;}
 \DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00269}00269\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j=0;\ j<\mbox{\hyperlink{definitions_8hh_aea2a89422b7c0431259b6e918642898a}{MAX\_SLOTS\_PER\_CRATE}};\ ++j)\ \{}
 \DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00270}00270\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (crate-\/>slotMap[j]\ !=\ NULL)\ \{}
 \DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00271}00271\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ slot\ =\ crate-\/>slotMap[j];}
@@ -311,10 +311,10 @@
 \DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00307}00307\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ crate\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_aabcea4cb8a3eb1e2b3185f108256b43d}{crateMap}}[i];}
 \DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00308}00308\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j=0;\ j<\mbox{\hyperlink{definitions_8hh_aea2a89422b7c0431259b6e918642898a}{MAX\_SLOTS\_PER\_CRATE}};\ ++j)\ \{}
 \DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00309}00309\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (crate-\/>slotMap[j]\ !=\ NULL)\ \{}
-\DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00310}00310\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ slot\ =\ crate-\/>\mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_crate_a09f02776dd8e6fcfd40f15b5fdfd14b7}{slotMap}}[j];\ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00310}00310\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ slot\ =\ crate-\/>slotMap[j];\ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00311}00311\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ k=0;\ k<\mbox{\hyperlink{definitions_8hh_aa5e7f9ac14bdfa863ef36c7647bbbd5d}{MAX\_CHANNELS\_PER\_BOARD}};\ ++k)\ \{}
 \DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00312}00312\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (slot-\/>channelMap[k]\ !=\ NULL)\ \{}
-\DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00313}00313\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ channel\ =\ slot-\/>\mbox{\hyperlink{struct_p_i_x_i_e_1_1_experiment___definition_1_1_slot_a576df736f35d23967239ae5e3a2ef44b}{channelMap}}[k];}
+\DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00313}00313\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ channel\ =\ slot-\/>channelMap[k];}
 \DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00314}00314\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (channel-\/>traces)\ \{}
 \DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00315}00315\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ++n\_chans;}
 \DoxyCodeLine{\Hypertarget{experiment__definition_8cc_source_l00316}00316\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ retval\ =\ \mbox{\hyperlink{namespace_p_i_x_i_e_a1dc265a21039e9941fc85af4ddcd7a84}{PIXIE::setTraceAlg}}(channel-\/>alg,\ channel-\/>algName,\ channel-\/>algFile,\ channel-\/>algIndex);}

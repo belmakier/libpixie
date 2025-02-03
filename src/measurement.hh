@@ -60,7 +60,7 @@ namespace PIXIE {
 
     //Trace measurements
     PIXIE::Trace::Measurement trace_meas[MAX_TRACE_MEAS];
-    uint16_t trace[MAX_TRACE_LENGTH];
+    uint16_t *trace; //[MAX_TRACE_LENGTH];
     int nTraceMeas;
     bool good_trace;
     
@@ -112,6 +112,14 @@ namespace PIXIE {
       good_trace(false),
       nTraceMeas(0) {      
       std::fill(QDCSums, QDCSums + 8, 0);
+#if PIXIE_READTYPE!=2
+        trace = new uint16_t[MAX_TRACE_LENGTH];
+#endif
+    }
+    ~Measurement() {
+#if PIXIE_READTYPE!=2
+        delete trace;
+#endif
     }
 
     int print() const;

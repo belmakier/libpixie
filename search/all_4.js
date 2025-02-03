@@ -25,5 +25,6 @@ var searchData=
   ['experiment_5fdefinition_22',['experiment_definition',['../class_p_i_x_i_e_1_1_reader.html#a7943740f3a97f32e6e2db5d126ccee76',1,'PIXIE::Reader']]],
   ['experiment_5fdefinition_2ecc_23',['experiment_definition.cc',['../experiment__definition_8cc.html',1,'']]],
   ['experiment_5fdefinition_2ehh_24',['experiment_definition.hh',['../experiment__definition_8hh.html',1,'']]],
-  ['extwind_25',['extwind',['../struct_p_i_x_i_e_1_1_experiment___definition_1_1_channel.html#a3a8ae23deb85024d7172fc43f0157bf1',1,'PIXIE::Experiment_Definition::Channel']]]
+  ['extendonzeros_25',['extendOnZeros',['../class_p_i_x_i_e_1_1_reader.html#a25d24b599eee5372ed5d3d37f0345bee',1,'PIXIE::Reader']]],
+  ['extwind_26',['extwind',['../struct_p_i_x_i_e_1_1_experiment___definition_1_1_channel.html#a3a8ae23deb85024d7172fc43f0157bf1',1,'PIXIE::Experiment_Definition::Channel']]]
 ];

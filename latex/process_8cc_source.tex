@@ -194,7 +194,7 @@
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00195}00195\ }
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Done\ setting\ up,\ iterate\ and\ fill\ the\ event}}
-\DoxyCodeLine{\Hypertarget{process_8cc_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&meas\ :\ \textcolor{keyword}{event}.fMeasurements)\ \{}
+\DoxyCodeLine{\Hypertarget{process_8cc_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&meas\ :\ event.fMeasurements)\ \{}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ *channel\ =\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_abb0fc6333195ac9dd12f7fea78834b0f}{definition}}.\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a4dafec217c0b9f571c8cc9e944e3f050}{GetChannel}}(meas.crateID,\ meas.slotID,\ meas.channelNumber);}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ detector\ =\ channel\_to\_data.find(channel);}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ tagger\ =\ channel\_to\_tagger.find(channel);}

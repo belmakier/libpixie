@@ -5,8 +5,8 @@ var searchData=
   ['definition_2',['definition',['../class_p_i_x_i_e_1_1_reader.html#abb0fc6333195ac9dd12f7fea78834b0f',1,'PIXIE::Reader']]],
   ['definitions_2ehh_3',['definitions.hh',['../definitions_8hh.html',1,'']]],
   ['developers_4',['Developers',['../index.html#authors',1,'']]],
-  ['dither_5',['dither',['../class_p_i_x_i_e_1_1_reader.html#a1b1a55edec38b1f82fcef3d45704ac18',1,'PIXIE::Reader']]],
-  ['dither_6',['Dither',['../class_p_i_x_i_e_1_1_reader.html#a970d13d240d243425a28d4f0ab5fcf25',1,'PIXIE::Reader']]],
+  ['dither_5',['Dither',['../class_p_i_x_i_e_1_1_reader.html#a970d13d240d243425a28d4f0ab5fcf25',1,'PIXIE::Reader']]],
+  ['dither_6',['dither',['../class_p_i_x_i_e_1_1_reader.html#a1b1a55edec38b1f82fcef3d45704ac18',1,'PIXIE::Reader']]],
   ['dump_5ftraces_7',['dump_traces',['../class_p_i_x_i_e_1_1_reader.html#a512016b34f00641448198b3168868de0',1,'PIXIE::Reader']]],
   ['dumptrace_8',['dumpTrace',['../class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#aa3cfc78f38f2c9f7ed09a3d7619b7db2',1,'PIXIE::Trace::Trapezoid::dumpTrace()'],['../class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c.html#aab796d1e25b9d22af0a354a332a0be10',1,'PIXIE::Trace::TrapezoidQDC::dumpTrace()'],['../class_p_i_x_i_e_1_1_trace_1_1_peak_tail.html#a99a0e8ae1fb01950022e5415836496cc',1,'PIXIE::Trace::PeakTail::dumpTrace()'],['../class_p_i_x_i_e_1_1_trace_1_1_algorithm.html#a03f21dc897a2dcd2a2391964756c9737',1,'PIXIE::Trace::Algorithm::dumpTrace()']]]
 ];

@@ -48,11 +48,11 @@ Definition at line \mbox{\hyperlink{event_8hh_source_l00017}{17}} of file \mbox{
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{class_p_i_x_i_e_1_1_event_a1891645403ab4ba2e8481f3856b7cec2}\label{class_p_i_x_i_e_1_1_event_a1891645403ab4ba2e8481f3856b7cec2} 
-\index{PIXIE::Event@{PIXIE::Event}!Event@{Event}}
+\Hypertarget{class_p_i_x_i_e_1_1_event_a1891645403ab4ba2e8481f3856b7cec2}\index{PIXIE::Event@{PIXIE::Event}!Event@{Event}}
 \index{Event@{Event}!PIXIE::Event@{PIXIE::Event}}
 \doxysubsubsection{\texorpdfstring{Event()}{Event()}}
-{\footnotesize\ttfamily PIXIE\+::\+Event\+::\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_event_a1891645403ab4ba2e8481f3856b7cec2} 
+PIXIE\+::\+Event\+::\+Event (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -72,155 +72,155 @@ Definition at line \mbox{\hyperlink{event_8hh_source_l00029}{29}} of file \mbox{
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_p_i_x_i_e_1_1_event_a10e1f7b5ac95b7665ba578fb291686b0}\label{class_p_i_x_i_e_1_1_event_a10e1f7b5ac95b7665ba578fb291686b0} 
-\index{PIXIE::Event@{PIXIE::Event}!AddMeasFull@{AddMeasFull}}
+\Hypertarget{class_p_i_x_i_e_1_1_event_a10e1f7b5ac95b7665ba578fb291686b0}\index{PIXIE::Event@{PIXIE::Event}!AddMeasFull@{AddMeasFull}}
 \index{AddMeasFull@{AddMeasFull}!PIXIE::Event@{PIXIE::Event}}
 \doxysubsubsection{\texorpdfstring{AddMeasFull()}{AddMeasFull()}}
-{\footnotesize\ttfamily int PIXIE\+::\+Event\+::\+Add\+Meas\+Full (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} \texorpdfstring{$\ast$}{*}}]{reader }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_event_a10e1f7b5ac95b7665ba578fb291686b0} 
+int PIXIE\+::\+Event\+::\+Add\+Meas\+Full (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} \texorpdfstring{$\ast$}{*}}]{reader}{}\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{event_8cc_source_l00186}{186}} of file \mbox{\hyperlink{event_8cc_source}{event.\+cc}}.
+Definition at line \mbox{\hyperlink{event_8cc_source_l00188}{188}} of file \mbox{\hyperlink{event_8cc_source}{event.\+cc}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00187\ \ \ \ \ Measurement\ *meas\ =\ \&(reader-\/>measurements[\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3}{fMeasurements}}[\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}{nMeas}}-\/1]]);}
-\DoxyCodeLine{00188\ \ \ \ \ \textcolor{keywordtype}{int}\ retval\ =\ meas-\/>read\_full(reader);}
-\DoxyCodeLine{00189\ \ \ \ \ \textcolor{comment}{//at\ this\ point\ we\ know\ that\ this\ belongs\ in\ the\ event}}
-\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordflow}{if}\ (meas-\/>finishCode\ ==\ 1)\ \{}
-\DoxyCodeLine{00191\ \ \ \ \ \ \ ++\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a973b89428d1117d52568424015f327aa}{pileups}};}
-\DoxyCodeLine{00192\ \ \ \ \ \}}
-\DoxyCodeLine{00193\ }
-\DoxyCodeLine{00194\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ab4034a1f813be7192c14143d76040d6d}{badcfd}}\ +=\ meas-\/>CFDForce;}
-\DoxyCodeLine{00195\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a1fa2c3028bd5b4b432d34e2c3319c8b9}{outofrange}}\ +=\ meas-\/>outOfRange;\ \ \ }
-\DoxyCodeLine{00196\ \ \ \ \ \ \ }
-\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keywordflow}{return}\ retval;}
-\DoxyCodeLine{00198\ \ \ \}}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00189\ \ \ \ \ Measurement\ *meas\ =\ \&(reader-\/>measurements[\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3}{fMeasurements}}[\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}{nMeas}}-\/1]]);}
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordtype}{int}\ retval\ =\ meas-\/>read\_full(reader);}
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{comment}{//at\ this\ point\ we\ know\ that\ this\ belongs\ in\ the\ event}}
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordflow}{if}\ (meas-\/>finishCode\ ==\ 1)\ \{}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ ++\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a973b89428d1117d52568424015f327aa}{pileups}};}
+\DoxyCodeLine{00194\ \ \ \ \ \}}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00196\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ab4034a1f813be7192c14143d76040d6d}{badcfd}}\ +=\ meas-\/>CFDForce;}
+\DoxyCodeLine{00197\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a1fa2c3028bd5b4b432d34e2c3319c8b9}{outofrange}}\ +=\ meas-\/>outOfRange;\ \ \ }
+\DoxyCodeLine{00198\ \ \ \ \ \ \ }
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{keywordflow}{return}\ retval;}
+\DoxyCodeLine{00200\ \ \ \}}
 
 \end{DoxyCode}
-\Hypertarget{class_p_i_x_i_e_1_1_event_a435968180a70e7b86a828e7f7fc1bf42}\label{class_p_i_x_i_e_1_1_event_a435968180a70e7b86a828e7f7fc1bf42} 
-\index{PIXIE::Event@{PIXIE::Event}!AddMeasHeader@{AddMeasHeader}}
+\Hypertarget{class_p_i_x_i_e_1_1_event_a435968180a70e7b86a828e7f7fc1bf42}\index{PIXIE::Event@{PIXIE::Event}!AddMeasHeader@{AddMeasHeader}}
 \index{AddMeasHeader@{AddMeasHeader}!PIXIE::Event@{PIXIE::Event}}
 \doxysubsubsection{\texorpdfstring{AddMeasHeader()}{AddMeasHeader()}}
-{\footnotesize\ttfamily int PIXIE\+::\+Event\+::\+Add\+Meas\+Header (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} \texorpdfstring{$\ast$}{*}}]{reader }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_event_a435968180a70e7b86a828e7f7fc1bf42} 
+int PIXIE\+::\+Event\+::\+Add\+Meas\+Header (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} \texorpdfstring{$\ast$}{*}}]{reader}{}\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{event_8cc_source_l00174}{174}} of file \mbox{\hyperlink{event_8cc_source}{event.\+cc}}.
+Definition at line \mbox{\hyperlink{event_8cc_source_l00176}{176}} of file \mbox{\hyperlink{event_8cc_source}{event.\+cc}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00175\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3}{fMeasurements}}[\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}{nMeas}}]\ =\ reader-\/>measCtr;}
-\DoxyCodeLine{00176\ \ \ \ \ Measurement\ *meas\ =\ \&(reader-\/>measurements[reader-\/>measCtr]);}
-\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordtype}{int}\ retval\ =\ meas-\/>read\_header(reader);}
-\DoxyCodeLine{00178\ \ \ \ \ \ \ }
-\DoxyCodeLine{00179\ \ \ \ \ ++\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}{nMeas}};}
-\DoxyCodeLine{00180\ \ \ \ \ ++reader-\/>measCtr;}
-\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>measCtr\ ==\ \mbox{\hyperlink{definitions_8hh_a4440d694835967b63cafe00ad888c327}{MAX\_MEAS\_PER\_EVENT}}\ *\ \mbox{\hyperlink{definitions_8hh_ae42954bb8545d24e3e9dcde5920c9a0b}{MAX\_EVENTS}})\ \{}
-\DoxyCodeLine{00182\ \ \ \ \ \ \ reader-\/>measCtr\ =\ 0;}
-\DoxyCodeLine{00183\ \ \ \ \ \}}
-\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordflow}{return}\ retval;}
-\DoxyCodeLine{00185\ \ \ \}}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00177\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3}{fMeasurements}}[\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}{nMeas}}]\ =\ reader-\/>measCtr;}
+\DoxyCodeLine{00178\ \ \ \ \ Measurement\ *meas\ =\ \&(reader-\/>measurements[reader-\/>measCtr]);}
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{int}\ retval\ =\ meas-\/>read\_header(reader);}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ }
+\DoxyCodeLine{00181\ \ \ \ \ ++\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}{nMeas}};}
+\DoxyCodeLine{00182\ \ \ \ \ ++reader-\/>measCtr;}
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>measCtr\ ==\ \mbox{\hyperlink{definitions_8hh_a4440d694835967b63cafe00ad888c327}{MAX\_MEAS\_PER\_EVENT}}\ *\ \mbox{\hyperlink{definitions_8hh_ae42954bb8545d24e3e9dcde5920c9a0b}{MAX\_EVENTS}})\ \{}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ reader-\/>measCtr\ =\ 0;}
+\DoxyCodeLine{00185\ \ \ \ \ \}}
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keywordflow}{return}\ retval;}
+\DoxyCodeLine{00187\ \ \ \}}
 
 \end{DoxyCode}
-\Hypertarget{class_p_i_x_i_e_1_1_event_a8d66886fa3a13b8f9b9490bfefb8482b}\label{class_p_i_x_i_e_1_1_event_a8d66886fa3a13b8f9b9490bfefb8482b} 
-\index{PIXIE::Event@{PIXIE::Event}!AddMeasurement@{AddMeasurement}}
+\Hypertarget{class_p_i_x_i_e_1_1_event_a8d66886fa3a13b8f9b9490bfefb8482b}\index{PIXIE::Event@{PIXIE::Event}!AddMeasurement@{AddMeasurement}}
 \index{AddMeasurement@{AddMeasurement}!PIXIE::Event@{PIXIE::Event}}
 \doxysubsubsection{\texorpdfstring{AddMeasurement()}{AddMeasurement()}}
-{\footnotesize\ttfamily int PIXIE\+::\+Event\+::\+Add\+Measurement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} \texorpdfstring{$\ast$}{*}}]{reader }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_event_a8d66886fa3a13b8f9b9490bfefb8482b} 
+int PIXIE\+::\+Event\+::\+Add\+Measurement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} \texorpdfstring{$\ast$}{*}}]{reader}{}\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{event_8cc_source_l00165}{165}} of file \mbox{\hyperlink{event_8cc_source}{event.\+cc}}.
+Definition at line \mbox{\hyperlink{event_8cc_source_l00167}{167}} of file \mbox{\hyperlink{event_8cc_source}{event.\+cc}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{int}\ retval\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a435968180a70e7b86a828e7f7fc1bf42}{AddMeasHeader}}(reader);}
-\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordflow}{if}\ (retval\ ==\ -\/1)\ \{}
-\DoxyCodeLine{00168\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ retval;}
-\DoxyCodeLine{00169\ \ \ \ \ \}}
-\DoxyCodeLine{00170\ \ \ \ \ \ \ }
-\DoxyCodeLine{00171\ \ \ \ \ retval\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a10e1f7b5ac95b7665ba578fb291686b0}{AddMeasFull}}(reader);}
-\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordflow}{return}\ retval;}
-\DoxyCodeLine{00173\ \ \ \}}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordtype}{int}\ retval\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a435968180a70e7b86a828e7f7fc1bf42}{AddMeasHeader}}(reader);}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordflow}{if}\ (retval\ ==\ -\/1)\ \{}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ retval;}
+\DoxyCodeLine{00171\ \ \ \ \ \}}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ }
+\DoxyCodeLine{00173\ \ \ \ \ retval\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a10e1f7b5ac95b7665ba578fb291686b0}{AddMeasFull}}(reader);}
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordflow}{return}\ retval;}
+\DoxyCodeLine{00175\ \ \ \}}
 
 \end{DoxyCode}
-\Hypertarget{class_p_i_x_i_e_1_1_event_ae9157873a711b1221138f999ea1a659e}\label{class_p_i_x_i_e_1_1_event_ae9157873a711b1221138f999ea1a659e} 
-\index{PIXIE::Event@{PIXIE::Event}!GetMeasurement@{GetMeasurement}}
+\Hypertarget{class_p_i_x_i_e_1_1_event_ae9157873a711b1221138f999ea1a659e}\index{PIXIE::Event@{PIXIE::Event}!GetMeasurement@{GetMeasurement}}
 \index{GetMeasurement@{GetMeasurement}!PIXIE::Event@{PIXIE::Event}}
 \doxysubsubsection{\texorpdfstring{GetMeasurement()}{GetMeasurement()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement}{Measurement}} \texorpdfstring{$\ast$}{*} PIXIE\+::\+Event\+::\+Get\+Measurement (\begin{DoxyParamCaption}\item[{int}]{crate\+ID,  }\item[{int}]{slot\+ID,  }\item[{int}]{channel\+Number,  }\item[{\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} \texorpdfstring{$\ast$}{*}}]{reader }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_event_ae9157873a711b1221138f999ea1a659e} 
+const \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement}{Measurement}} \texorpdfstring{$\ast$}{*} PIXIE\+::\+Event\+::\+Get\+Measurement (\begin{DoxyParamCaption}\item[{int}]{crate\+ID}{, }\item[{int}]{slot\+ID}{, }\item[{int}]{channel\+Number}{, }\item[{\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} \texorpdfstring{$\ast$}{*}}]{reader}{}\end{DoxyParamCaption}) const}
 
 
 
-Definition at line \mbox{\hyperlink{event_8cc_source_l00153}{153}} of file \mbox{\hyperlink{event_8cc_source}{event.\+cc}}.
+Definition at line \mbox{\hyperlink{event_8cc_source_l00155}{155}} of file \mbox{\hyperlink{event_8cc_source}{event.\+cc}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}{nMeas}}-\/1;\ ++i)\ \{}
-\DoxyCodeLine{00155\ \ \ \ \ \ \ \textcolor{keyword}{const}\ Measurement\ *meas\ =\ \&(reader-\/>measurements[\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3}{fMeasurements}}[i]]);}
-\DoxyCodeLine{00156\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (meas-\/>crateID\ ==\ crateID\ \&\&}
-\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ meas-\/>slotID\ ==\ slotID\ \&\&}
-\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ meas-\/>channelNumber\ ==\ channelNumber)\ \{}
-\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ meas;}
-\DoxyCodeLine{00160\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00161\ \ \ \ \ \}}
-\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordflow}{return}\ (NULL);}
-\DoxyCodeLine{00163\ \ \ \}}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}{nMeas}}-\/1;\ ++i)\ \{}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \textcolor{keyword}{const}\ Measurement\ *meas\ =\ \&(reader-\/>measurements[\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3}{fMeasurements}}[i]]);}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (meas-\/>crateID\ ==\ crateID\ \&\&}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ meas-\/>slotID\ ==\ slotID\ \&\&}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ meas-\/>channelNumber\ ==\ channelNumber)\ \{}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ meas;}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00163\ \ \ \ \ \}}
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordflow}{return}\ (NULL);}
+\DoxyCodeLine{00165\ \ \ \}}
 
 \end{DoxyCode}
-\Hypertarget{class_p_i_x_i_e_1_1_event_ad69a3dc399ab8b6e795a9827cabb5761}\label{class_p_i_x_i_e_1_1_event_ad69a3dc399ab8b6e795a9827cabb5761} 
-\index{PIXIE::Event@{PIXIE::Event}!GetMeasurement@{GetMeasurement}}
+\Hypertarget{class_p_i_x_i_e_1_1_event_ad69a3dc399ab8b6e795a9827cabb5761}\index{PIXIE::Event@{PIXIE::Event}!GetMeasurement@{GetMeasurement}}
 \index{GetMeasurement@{GetMeasurement}!PIXIE::Event@{PIXIE::Event}}
 \doxysubsubsection{\texorpdfstring{GetMeasurement()}{GetMeasurement()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement}{Measurement}} \texorpdfstring{$\ast$}{*} PIXIE\+::\+Event\+::\+Get\+Measurement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} \texorpdfstring{$\ast$}{*}}]{reader,  }\item[{int}]{i }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_event_ad69a3dc399ab8b6e795a9827cabb5761} 
+const \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement}{Measurement}} \texorpdfstring{$\ast$}{*} PIXIE\+::\+Event\+::\+Get\+Measurement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} \texorpdfstring{$\ast$}{*}}]{reader}{, }\item[{int}]{i}{}\end{DoxyParamCaption}) const}
 
 
 
-Definition at line \mbox{\hyperlink{event_8cc_source_l00200}{200}} of file \mbox{\hyperlink{event_8cc_source}{event.\+cc}}.
+Definition at line \mbox{\hyperlink{event_8cc_source_l00202}{202}} of file \mbox{\hyperlink{event_8cc_source}{event.\+cc}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00201\ \ \ \ \ \textcolor{keywordflow}{return}\ \&(reader-\/>measurements[\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3}{fMeasurements}}[i]]);}
-\DoxyCodeLine{00202\ \ \ \}}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00203\ \ \ \ \ \textcolor{keywordflow}{return}\ \&(reader-\/>measurements[\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3}{fMeasurements}}[i]]);}
+\DoxyCodeLine{00204\ \ \ \}}
 
 \end{DoxyCode}
-\Hypertarget{class_p_i_x_i_e_1_1_event_a16453e60e4bcd46e755c94418924272f}\label{class_p_i_x_i_e_1_1_event_a16453e60e4bcd46e755c94418924272f} 
-\index{PIXIE::Event@{PIXIE::Event}!print@{print}}
+\Hypertarget{class_p_i_x_i_e_1_1_event_a16453e60e4bcd46e755c94418924272f}\index{PIXIE::Event@{PIXIE::Event}!print@{print}}
 \index{print@{print}!PIXIE::Event@{PIXIE::Event}}
 \doxysubsubsection{\texorpdfstring{print()}{print()}}
-{\footnotesize\ttfamily int PIXIE\+::\+Event\+::print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} \texorpdfstring{$\ast$}{*}}]{reader }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_event_a16453e60e4bcd46e755c94418924272f} 
+int PIXIE\+::\+Event\+::print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} \texorpdfstring{$\ast$}{*}}]{reader}{}\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{event_8cc_source_l00138}{138}} of file \mbox{\hyperlink{event_8cc_source}{event.\+cc}}.
+Definition at line \mbox{\hyperlink{event_8cc_source_l00140}{140}} of file \mbox{\hyperlink{event_8cc_source}{event.\+cc}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00139\ \ \ \{}
-\DoxyCodeLine{00140\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}=======\ NEW\ EVENT\ ======"{}}\ <<\ std::endl;}
-\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}{nMeas}};\ ++i)\ \{}
-\DoxyCodeLine{00142\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}index\ =\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3}{fMeasurements}}[i]\ <<\ std::endl;}
-\DoxyCodeLine{00143\ \ \ \ \ \ \ reader-\/>measurements[\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3}{fMeasurements}}[i]].print();}
-\DoxyCodeLine{00144\ \ \ \ \ \}}
-\DoxyCodeLine{00145\ \ \ \ \ std::cout\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a973b89428d1117d52568424015f327aa}{pileups}}\ <<\ std::endl;}
-\DoxyCodeLine{00146\ \ \ \ \ std::cout\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ab4034a1f813be7192c14143d76040d6d}{badcfd}}\ <<\ std::endl;}
-\DoxyCodeLine{00147\ \ \ \ \ std::cout\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a1fa2c3028bd5b4b432d34e2c3319c8b9}{outofrange}}\ <<\ std::endl;}
-\DoxyCodeLine{00148\ \ \ \ \ }
-\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordflow}{return}\ (0);}
-\DoxyCodeLine{00150\ \ \ \}}
+\DoxyCodeLine{00141\ \ \ \{}
+\DoxyCodeLine{00142\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}=======\ NEW\ EVENT\ ======"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}{nMeas}};\ ++i)\ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}index\ =\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3}{fMeasurements}}[i]\ <<\ std::endl;}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ reader-\/>measurements[\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3}{fMeasurements}}[i]].print();}
+\DoxyCodeLine{00146\ \ \ \ \ \}}
+\DoxyCodeLine{00147\ \ \ \ \ std::cout\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a973b89428d1117d52568424015f327aa}{pileups}}\ <<\ std::endl;}
+\DoxyCodeLine{00148\ \ \ \ \ std::cout\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ab4034a1f813be7192c14143d76040d6d}{badcfd}}\ <<\ std::endl;}
+\DoxyCodeLine{00149\ \ \ \ \ std::cout\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a1fa2c3028bd5b4b432d34e2c3319c8b9}{outofrange}}\ <<\ std::endl;}
+\DoxyCodeLine{00150\ \ \ \ \ }
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordflow}{return}\ (0);}
+\DoxyCodeLine{00152\ \ \ \}}
 
 \end{DoxyCode}
-\Hypertarget{class_p_i_x_i_e_1_1_event_a26b35f1babc2d2dc92db286381221229}\label{class_p_i_x_i_e_1_1_event_a26b35f1babc2d2dc92db286381221229} 
-\index{PIXIE::Event@{PIXIE::Event}!read@{read}}
+\Hypertarget{class_p_i_x_i_e_1_1_event_a26b35f1babc2d2dc92db286381221229}\index{PIXIE::Event@{PIXIE::Event}!read@{read}}
 \index{read@{read}!PIXIE::Event@{PIXIE::Event}}
 \doxysubsubsection{\texorpdfstring{read()}{read()}}
-{\footnotesize\ttfamily int PIXIE\+::\+Event\+::read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} \texorpdfstring{$\ast$}{*}}]{reader,  }\item[{int}]{coinc\+Window,  }\item[{bool}]{warnings }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_event_a26b35f1babc2d2dc92db286381221229} 
+int PIXIE\+::\+Event\+::read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} \texorpdfstring{$\ast$}{*}}]{reader}{, }\item[{int}]{coinc\+Window}{, }\item[{bool}]{warnings}{}\end{DoxyParamCaption})}
 
 
 
@@ -329,87 +329,89 @@ Definition at line \mbox{\hyperlink{event_8cc_source_l00013}{13}} of file \mbox{
 \DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ *channel\ =\ reader-\/>definition.GetChannel(next\_meas-\/>crateID,\ next\_meas-\/>slotID,\ next\_meas-\/>channelNumber);}
 \DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!channel)\ \{\ ;\ \}}
 \DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (channel-\/>extwind)\ \{}
-\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ maxTime\ =\ next\_meas-\/>eventTime+coincWindow;}
-\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{comment}{//go\ to\ next\ sub-\/event}}
-\DoxyCodeLine{00119\ }
-\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a0164d55be13b1246c33fada1f298a2c0}{mult}}\ ==\ \mbox{\hyperlink{definitions_8hh_a4440d694835967b63cafe00ad888c327}{MAX\_MEAS\_PER\_EVENT}}-\/1)\ \{}
-\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ retval\ =\ 2;}
-\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00124\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00125\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{\ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ curEvent=0;\ \textcolor{comment}{//breaks\ current\ event\ loop}}
-\DoxyCodeLine{00127\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00128\ \ \ \ \ \}\textcolor{comment}{//loop\ for\ current\ event}}
-\DoxyCodeLine{00129\ }
-\DoxyCodeLine{00130\ \ \ \ \ \textcolor{comment}{//average\ event\ length}}
-\DoxyCodeLine{00131\ \ \ \ \ reader-\/>av\_evt\_length\ =\ (reader-\/>av\_evt\_length*reader-\/>nEvents\ +\ ((maxTime-\/triggerTime)/(3276.8*1e3)))/(double)(reader-\/>nEvents\ +\ 1);}
-\DoxyCodeLine{00132\ \ \ \ \ }
-\DoxyCodeLine{00133\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}{nMeas}}\ -\/=\ 1;\ \textcolor{comment}{//not\ in\ this\ event}}
-\DoxyCodeLine{00134\ }
-\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordflow}{return}\ retval;}
-\DoxyCodeLine{00136\ \ \ \}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (next\_meas-\/>eventEnergy\ >\ 0\ ||\ reader-\/>extendOnZeros)\ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ maxTime\ =\ next\_meas-\/>eventTime+coincWindow;}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{comment}{//go\ to\ next\ sub-\/event}}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_event_a0164d55be13b1246c33fada1f298a2c0}{mult}}\ ==\ \mbox{\hyperlink{definitions_8hh_a4440d694835967b63cafe00ad888c327}{MAX\_MEAS\_PER\_EVENT}}-\/1)\ \{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ retval\ =\ 2;}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ curEvent=0;\ \textcolor{comment}{//breaks\ current\ event\ loop}}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00130\ \ \ \ \ \}\textcolor{comment}{//loop\ for\ current\ event}}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{comment}{//average\ event\ length}}
+\DoxyCodeLine{00133\ \ \ \ \ reader-\/>av\_evt\_length\ =\ (reader-\/>av\_evt\_length*reader-\/>nEvents\ +\ ((maxTime-\/triggerTime)/(3276.8*1e3)))/(\textcolor{keywordtype}{double})(reader-\/>nEvents\ +\ 1);}
+\DoxyCodeLine{00134\ \ \ \ \ }
+\DoxyCodeLine{00135\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}{nMeas}}\ -\/=\ 1;\ \textcolor{comment}{//not\ in\ this\ event}}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordflow}{return}\ retval;}
+\DoxyCodeLine{00138\ \ \ \}}
 
 \end{DoxyCode}
 
 
 \doxysubsection{Member Data Documentation}
-\Hypertarget{class_p_i_x_i_e_1_1_event_ab4034a1f813be7192c14143d76040d6d}\label{class_p_i_x_i_e_1_1_event_ab4034a1f813be7192c14143d76040d6d} 
-\index{PIXIE::Event@{PIXIE::Event}!badcfd@{badcfd}}
+\Hypertarget{class_p_i_x_i_e_1_1_event_ab4034a1f813be7192c14143d76040d6d}\index{PIXIE::Event@{PIXIE::Event}!badcfd@{badcfd}}
 \index{badcfd@{badcfd}!PIXIE::Event@{PIXIE::Event}}
 \doxysubsubsection{\texorpdfstring{badcfd}{badcfd}}
-{\footnotesize\ttfamily long long PIXIE\+::\+Event\+::badcfd}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_event_ab4034a1f813be7192c14143d76040d6d} 
+long long PIXIE\+::\+Event\+::badcfd}
 
 
 
 Definition at line \mbox{\hyperlink{event_8hh_source_l00024}{24}} of file \mbox{\hyperlink{event_8hh_source}{event.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3}\label{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3} 
-\index{PIXIE::Event@{PIXIE::Event}!fMeasurements@{fMeasurements}}
+\Hypertarget{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3}\index{PIXIE::Event@{PIXIE::Event}!fMeasurements@{fMeasurements}}
 \index{fMeasurements@{fMeasurements}!PIXIE::Event@{PIXIE::Event}}
 \doxysubsubsection{\texorpdfstring{fMeasurements}{fMeasurements}}
-{\footnotesize\ttfamily int PIXIE\+::\+Event\+::f\+Measurements\mbox{[}\mbox{\hyperlink{definitions_8hh_a4440d694835967b63cafe00ad888c327}{MAX\+\_\+\+MEAS\+\_\+\+PER\+\_\+\+EVENT}}\mbox{]}}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_event_a93932ad5d16872467ad4a5a3e44cfaa3} 
+int PIXIE\+::\+Event\+::f\+Measurements\mbox{[}\mbox{\hyperlink{definitions_8hh_a4440d694835967b63cafe00ad888c327}{MAX\+\_\+\+MEAS\+\_\+\+PER\+\_\+\+EVENT}}\mbox{]}}
 
 
 
 Definition at line \mbox{\hyperlink{event_8hh_source_l00019}{19}} of file \mbox{\hyperlink{event_8hh_source}{event.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_event_a0164d55be13b1246c33fada1f298a2c0}\label{class_p_i_x_i_e_1_1_event_a0164d55be13b1246c33fada1f298a2c0} 
-\index{PIXIE::Event@{PIXIE::Event}!mult@{mult}}
+\Hypertarget{class_p_i_x_i_e_1_1_event_a0164d55be13b1246c33fada1f298a2c0}\index{PIXIE::Event@{PIXIE::Event}!mult@{mult}}
 \index{mult@{mult}!PIXIE::Event@{PIXIE::Event}}
 \doxysubsubsection{\texorpdfstring{mult}{mult}}
-{\footnotesize\ttfamily int PIXIE\+::\+Event\+::mult}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_event_a0164d55be13b1246c33fada1f298a2c0} 
+int PIXIE\+::\+Event\+::mult}
 
 
 
 Definition at line \mbox{\hyperlink{event_8hh_source_l00026}{26}} of file \mbox{\hyperlink{event_8hh_source}{event.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}\label{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1} 
-\index{PIXIE::Event@{PIXIE::Event}!nMeas@{nMeas}}
+\Hypertarget{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1}\index{PIXIE::Event@{PIXIE::Event}!nMeas@{nMeas}}
 \index{nMeas@{nMeas}!PIXIE::Event@{PIXIE::Event}}
 \doxysubsubsection{\texorpdfstring{nMeas}{nMeas}}
-{\footnotesize\ttfamily int PIXIE\+::\+Event\+::n\+Meas}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_event_ad39077e66bf9468214071572181d7bb1} 
+int PIXIE\+::\+Event\+::n\+Meas}
 
 
 
 Definition at line \mbox{\hyperlink{event_8hh_source_l00021}{21}} of file \mbox{\hyperlink{event_8hh_source}{event.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_event_a1fa2c3028bd5b4b432d34e2c3319c8b9}\label{class_p_i_x_i_e_1_1_event_a1fa2c3028bd5b4b432d34e2c3319c8b9} 
-\index{PIXIE::Event@{PIXIE::Event}!outofrange@{outofrange}}
+\Hypertarget{class_p_i_x_i_e_1_1_event_a1fa2c3028bd5b4b432d34e2c3319c8b9}\index{PIXIE::Event@{PIXIE::Event}!outofrange@{outofrange}}
 \index{outofrange@{outofrange}!PIXIE::Event@{PIXIE::Event}}
 \doxysubsubsection{\texorpdfstring{outofrange}{outofrange}}
-{\footnotesize\ttfamily long long PIXIE\+::\+Event\+::outofrange}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_event_a1fa2c3028bd5b4b432d34e2c3319c8b9} 
+long long PIXIE\+::\+Event\+::outofrange}
 
 
 
 Definition at line \mbox{\hyperlink{event_8hh_source_l00025}{25}} of file \mbox{\hyperlink{event_8hh_source}{event.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_event_a973b89428d1117d52568424015f327aa}\label{class_p_i_x_i_e_1_1_event_a973b89428d1117d52568424015f327aa} 
-\index{PIXIE::Event@{PIXIE::Event}!pileups@{pileups}}
+\Hypertarget{class_p_i_x_i_e_1_1_event_a973b89428d1117d52568424015f327aa}\index{PIXIE::Event@{PIXIE::Event}!pileups@{pileups}}
 \index{pileups@{pileups}!PIXIE::Event@{PIXIE::Event}}
 \doxysubsubsection{\texorpdfstring{pileups}{pileups}}
-{\footnotesize\ttfamily long long PIXIE\+::\+Event\+::pileups}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_event_a973b89428d1117d52568424015f327aa} 
+long long PIXIE\+::\+Event\+::pileups}
 
 
 

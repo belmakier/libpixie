@@ -13,6 +13,8 @@
 #include "definitions.hh"
 
 namespace PIXIE {
+  class Reader;
+  
   class NSCLReader {
   public:
     bool presort = false;
@@ -22,13 +24,13 @@ namespace PIXIE {
     
     int rib_size; //this tells us the size of the event => how many PIXIE fragments
     
-    int readRingItemHeader(FILE *file);
-    int readRingItemBodyHeader(FILE *file);
-    int readRingItemBody(FILE *file);
+    int readRingItemHeader(Reader *reader);
+    int readRingItemBodyHeader(Reader *reader);
+    int readRingItemBody(Reader *reader);
     
-    int readNextFragment(FILE *file);
+    int readNextFragment(Reader *reader);
 
-    int findNextFragment(FILE *file);
+    int findNextFragment(Reader *reader);
   public:
     NSCLReader() : ri_size(0), ri_type(0), rib_size(0), presort(false) {};
     ~NSCLReader() {};

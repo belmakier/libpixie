@@ -3,6 +3,8 @@
 #include <sstream>
 #include <string>
 #include <iostream>
+#include <sys/mman.h>
+#include <fcntl.h>
 #include <cstdio>
 #include <cstring>
 #include <cassert>
@@ -58,7 +60,7 @@ namespace PIXIE
   }
   
   Reader::~Reader() {}
-
+  
   off_t Reader::offset() const {
     return (ftello(this->file));
   }
@@ -104,8 +106,17 @@ namespace PIXIE
     float size_to_sort = 1;
 
     if (now==starttime) { return; }
-    
-    perc_complete = 100.0*(float)((float)ftell(this->file))/fileSize;
+
+    if (PIXIE_READTYPE==0) {
+      perc_complete = 100.0*(float)((float)ftell(this->file))/fileSize;
+    }
+    else if (PIXIE_READTYPE==1) {
+      perc_complete = 100.0*(float)((float)this->off)/fileSize;
+    }
+    else if (PIXIE_READTYPE==2) {
+      perc_complete = 100.0*(float)((float)this->pOff)/this->pOffMax;
+    }
+      
     printf("\r[ %i ] Pixie Processing [" ANSI_COLOR_GREEN "%.1f%%" ANSI_COLOR_RESET "], elapsed time " ANSI_COLOR_GREEN "%ld" ANSI_COLOR_RESET " s, " ANSI_COLOR_GREEN "%llu" ANSI_COLOR_RESET " events per s",this->thread, (perc_complete), now-starttime, this->nEvents/(now-starttime));
     std::cout<<std::flush;
   }
@@ -127,7 +138,7 @@ namespace PIXIE
     printf("Quadruples:           " ANSI_COLOR_YELLOW "%15lld" ANSI_COLOR_RESET ",     " ANSI_COLOR_GREEN "%5.1f%% " ANSI_COLOR_RESET "\n", mults[3], 100*(double)mults[3]/(double)nEvents);
   }
     
-  int Reader::open(const std::string &path) {    
+  int Reader::openfile(const std::string &path) {
     if (this->file) {
       return (-1); //file has already been opened
     }
@@ -139,10 +150,72 @@ namespace PIXIE
     fseek(this->file, 0L, SEEK_END);
     fileSize = ftell(this->file);
     rewind(this->file);
-    
+
     if (this->liveSort) {fseek(this->file, 0, SEEK_END); this->end = true; usleep(1000000);}
+    if (PIXIE_READTYPE==1 || PIXIE_READTYPE==2) {
+      fd = open(path.c_str(), O_RDONLY);
+      std::cout << fd << std::endl;
+      // memory map things
+      this->off = 0;
+      this->buffer = (char*)mmap(NULL, fileSize, PROT_READ, MAP_PRIVATE, fd, 0);
+    }
 
     return (0);
+  }
+
+  int Reader::closefile() {
+    if (this->file) { fclose(this->file); }
+
+    if (PIXIE_READTYPE==1 || PIXIE_READTYPE==2) {
+      munmap(this->buffer, fileSize);
+      close(fd);
+    }
+  }
+
+  int Reader::loadbuffer() {
+    if (PIXIE_READTYPE != 2) { std::cout << "Reader::loadbuffer() not appropriate for PIXIE_READTYPE = " << PIXIE_READTYPE << std::endl; return -1; }
+
+    pBuff = new unsigned int[fileSize/4];
+    pOff = 0;
+    pOffMax = 0;
+    if (!NSCLDAQ) {
+      std::memcpy(&pBuff[0], &buffer[0], fileSize);
+    }
+    else {
+      while (true) {
+        if (nsclreader->findNextFragment(this) < 0 ) {
+          return -1;
+        }
+        std::memcpy(&pBuff[pOffMax], &buffer[off], 4*sizeof(unsigned int));
+        unsigned int headerLength = (0x1F000 & pBuff[pOffMax]) >> 12;
+        unsigned int eventLength = (0x7FFE0000 & pBuff[pOffMax]) >> 17;
+        off += 4*4;
+        pOffMax += 4;
+        if (headerLength > 4) {
+          std::memcpy(&pBuff[pOffMax], &buffer[off], (headerLength-4)*4);
+          pOffMax += headerLength - 4;
+          off += (headerLength - 4)*4;
+        }
+        if (eventLength-headerLength != 0) {
+          std::memcpy(&pBuff[pOffMax], &buffer[off], (eventLength-headerLength)*4);
+          pOffMax += eventLength-headerLength;
+          off += (eventLength-headerLength)*4;
+        }
+        if (nsclreader->presort) { nsclreader->rib_size -= sizeof(int)*4; }
+        if (off >= fileSize) { break; }
+        if (pOffMax % 10000 == 0) {
+          std::cout << "\rfs : " << off << " / " << fileSize << " pOff = " << pOffMax << std::flush;
+        }
+      }
+      std::cout << "\rfs : " << off << " / " << fileSize << " pOff = " << pOffMax << std::flush;
+    }
+    return 1;
+  }
+
+  int Reader::clearbuffer() {
+    delete pBuff;
+    pOff = 0;
+    pOffMax = 0;
   }
 
   int Reader::read() {

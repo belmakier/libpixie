@@ -8,10 +8,12 @@ var searchData=
   ['channelmap_5',['channelMap',['../struct_p_i_x_i_e_1_1_experiment___definition_1_1_slot.html#a576df736f35d23967239ae5e3a2ef44b',1,'PIXIE::Experiment_Definition::Slot']]],
   ['channelnumber_6',['channelNumber',['../struct_p_i_x_i_e_1_1_experiment___definition_1_1_channel.html#aaac3a77904e85a43911c804aa60d6665',1,'PIXIE::Experiment_Definition::Channel::channelNumber'],['../class_p_i_x_i_e_1_1_measurement.html#a25bffef52002e2135c60b185085c62b0',1,'PIXIE::Measurement::channelNumber']]],
   ['check_5fpos_7',['check_pos',['../class_p_i_x_i_e_1_1_reader.html#a92b3992329a0b61e02f5d5e73a8cac18',1,'PIXIE::Reader']]],
-  ['close_8',['close',['../class_p_i_x_i_e_1_1_experiment___definition.html#a2a0e5023c4f5fd2d04488907e67effbb',1,'PIXIE::Experiment_Definition']]],
-  ['coincwindow_9',['coincWindow',['../class_p_i_x_i_e_1_1_reader.html#afb6553488e3a40a7625f18fd68333407',1,'PIXIE::Reader']]],
-  ['colors_2ehh_10',['colors.hh',['../colors_8hh.html',1,'']]],
-  ['crate_11',['Crate',['../struct_p_i_x_i_e_1_1_experiment___definition_1_1_crate.html',1,'PIXIE::Experiment_Definition::Crate'],['../struct_p_i_x_i_e_1_1_experiment___definition_1_1_crate.html#a04339f8ef5f22ef96930fee96ed35e24',1,'PIXIE::Experiment_Definition::Crate::Crate()']]],
-  ['crateid_12',['crateID',['../struct_p_i_x_i_e_1_1_experiment___definition_1_1_channel.html#a53f6d7537fc2d2a0aec0ad3b7122852a',1,'PIXIE::Experiment_Definition::Channel::crateID'],['../struct_p_i_x_i_e_1_1_experiment___definition_1_1_slot.html#a8f99820e0eeab64c71c18bdb90516605',1,'PIXIE::Experiment_Definition::Slot::crateID'],['../struct_p_i_x_i_e_1_1_experiment___definition_1_1_crate.html#a94058e9b0ea10b9b05ec9121986c3ba5',1,'PIXIE::Experiment_Definition::Crate::crateID'],['../class_p_i_x_i_e_1_1_measurement.html#ac1630da7899d358a7f6c06bbce3b6417',1,'PIXIE::Measurement::crateID']]],
-  ['cratemap_13',['crateMap',['../class_p_i_x_i_e_1_1_experiment___definition.html#aabcea4cb8a3eb1e2b3185f108256b43d',1,'PIXIE::Experiment_Definition']]]
+  ['clearbuffer_8',['clearbuffer',['../class_p_i_x_i_e_1_1_reader.html#a730ea6495b68c981c1e8eb422524a951',1,'PIXIE::Reader']]],
+  ['close_9',['close',['../class_p_i_x_i_e_1_1_experiment___definition.html#a2a0e5023c4f5fd2d04488907e67effbb',1,'PIXIE::Experiment_Definition']]],
+  ['closefile_10',['closefile',['../class_p_i_x_i_e_1_1_reader.html#a64737d5e2611f1b9e79ae5b9773082cd',1,'PIXIE::Reader']]],
+  ['coincwindow_11',['coincWindow',['../class_p_i_x_i_e_1_1_reader.html#afb6553488e3a40a7625f18fd68333407',1,'PIXIE::Reader']]],
+  ['colors_2ehh_12',['colors.hh',['../colors_8hh.html',1,'']]],
+  ['crate_13',['Crate',['../struct_p_i_x_i_e_1_1_experiment___definition_1_1_crate.html',1,'PIXIE::Experiment_Definition::Crate'],['../struct_p_i_x_i_e_1_1_experiment___definition_1_1_crate.html#a04339f8ef5f22ef96930fee96ed35e24',1,'PIXIE::Experiment_Definition::Crate::Crate()']]],
+  ['crateid_14',['crateID',['../struct_p_i_x_i_e_1_1_experiment___definition_1_1_channel.html#a53f6d7537fc2d2a0aec0ad3b7122852a',1,'PIXIE::Experiment_Definition::Channel::crateID'],['../struct_p_i_x_i_e_1_1_experiment___definition_1_1_slot.html#a8f99820e0eeab64c71c18bdb90516605',1,'PIXIE::Experiment_Definition::Slot::crateID'],['../struct_p_i_x_i_e_1_1_experiment___definition_1_1_crate.html#a94058e9b0ea10b9b05ec9121986c3ba5',1,'PIXIE::Experiment_Definition::Crate::crateID'],['../class_p_i_x_i_e_1_1_measurement.html#ac1630da7899d358a7f6c06bbce3b6417',1,'PIXIE::Measurement::crateID']]],
+  ['cratemap_15',['crateMap',['../class_p_i_x_i_e_1_1_experiment___definition.html#aabcea4cb8a3eb1e2b3185f108256b43d',1,'PIXIE::Experiment_Definition']]]
 ];

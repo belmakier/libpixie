@@ -9,13 +9,15 @@
 \item 
 \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ab7b12b67d5b3922542217805da9486ec}{Measurement}} ()
 \item 
+\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a7316eb6881aad0f9a40d4e4555636da8}{\texorpdfstring{$\sim$}{\string~}\+Measurement}} ()
+\item 
 int \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a74305d42b7585f74b394d7cc9d174764}{print}} () const
 \item 
 int \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ae44119a232562550787b78263c87e819}{read\+\_\+header}} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} \texorpdfstring{$\ast$}{*}reader)
 \item 
 int \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ab52c696179c4bb8c6447fe375f696c90}{read\+\_\+full}} (\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} \texorpdfstring{$\ast$}{*}reader, uint16\+\_\+t \texorpdfstring{$\ast$}{*}out\+Trace=NULL)
 \item 
-int \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a05e9628990d53d21c0005577a782fe2b}{get\+Trace}} (FILE \texorpdfstring{$\ast$}{*}fpr, \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm}{PIXIE\+::\+Trace\+::\+Algorithm}} \texorpdfstring{$\ast$}{*}tracealg, uint16\+\_\+t \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a3e2e36f00d13cc9afa7d8aaf2ffde095}{trace}})
+int \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a05e9628990d53d21c0005577a782fe2b}{get\+Trace}} (FILE \texorpdfstring{$\ast$}{*}fpr, \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm}{PIXIE\+::\+Trace\+::\+Algorithm}} \texorpdfstring{$\ast$}{*}tracealg, uint16\+\_\+t \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a99543a8cee3bf5123da2d5c110eb09f0}{trace}})
 \item 
 \mbox{\hyperlink{struct_p_i_x_i_e_1_1_c_f_d}{CFD}} \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa7bc1d08159fb77021fe4b760278c305}{Process\+CFD}} (unsigned int data, int frequency)
 \item 
@@ -60,7 +62,7 @@ uint32\+\_\+t \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc716
 \item 
 \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{PIXIE\+::\+Trace\+::\+Measurement}} \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_abfb4ec14dc55376666331ec2ad293276}{trace\+\_\+meas}} \mbox{[}\mbox{\hyperlink{definitions_8hh_ae6ab47a1aec9dc6e7cb916c266a4e5a6}{MAX\+\_\+\+TRACE\+\_\+\+MEAS}}\mbox{]}
 \item 
-uint16\+\_\+t \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a3e2e36f00d13cc9afa7d8aaf2ffde095}{trace}} \mbox{[}\mbox{\hyperlink{definitions_8hh_af0c0584410364a83dba3db590aa157e7}{MAX\+\_\+\+TRACE\+\_\+\+LENGTH}}\mbox{]}
+uint16\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a99543a8cee3bf5123da2d5c110eb09f0}{trace}}
 \item 
 int \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa32b41845cd96b951763bd94667edb5b}{n\+Trace\+Meas}}
 \item 
@@ -125,11 +127,11 @@ Definition at line \mbox{\hyperlink{measurement_8hh_source_l00036}{36}} of file 
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_ab7b12b67d5b3922542217805da9486ec}\label{class_p_i_x_i_e_1_1_measurement_ab7b12b67d5b3922542217805da9486ec} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!Measurement@{Measurement}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_ab7b12b67d5b3922542217805da9486ec}\index{PIXIE::Measurement@{PIXIE::Measurement}!Measurement@{Measurement}}
 \index{Measurement@{Measurement}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{Measurement()}{Measurement()}}
-{\footnotesize\ttfamily PIXIE\+::\+Measurement\+::\+Measurement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_ab7b12b67d5b3922542217805da9486ec} 
+PIXIE\+::\+Measurement\+::\+Measurement (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -157,71 +159,93 @@ Definition at line \mbox{\hyperlink{measurement_8hh_source_l00095}{95}} of file 
 \DoxyCodeLine{00112\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a7de1b2bfc4cb4f62d779fdb90bd241c5}{good\_trace}}(\textcolor{keyword}{false}),}
 \DoxyCodeLine{00113\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa32b41845cd96b951763bd94667edb5b}{nTraceMeas}}(0)\ \{\ \ \ \ \ \ }
 \DoxyCodeLine{00114\ \ \ \ \ \ \ std::fill(\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}},\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}\ +\ 8,\ 0);}
-\DoxyCodeLine{00115\ \ \ \ \ \}}
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#if\ PIXIE\_READTYPE!=2}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a99543a8cee3bf5123da2d5c110eb09f0}{trace}}\ =\ \textcolor{keyword}{new}\ uint16\_t[\mbox{\hyperlink{definitions_8hh_af0c0584410364a83dba3db590aa157e7}{MAX\_TRACE\_LENGTH}}];}
+\DoxyCodeLine{00117\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00118\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_a7316eb6881aad0f9a40d4e4555636da8}\index{PIXIE::Measurement@{PIXIE::Measurement}!````~Measurement@{\texorpdfstring{$\sim$}{\string~}Measurement}}
+\index{````~Measurement@{\texorpdfstring{$\sim$}{\string~}Measurement}!PIXIE::Measurement@{PIXIE::Measurement}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Measurement()}{\string~Measurement()}}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_a7316eb6881aad0f9a40d4e4555636da8} 
+PIXIE\+::\+Measurement\+::\texorpdfstring{$\sim$}{\string~}\+Measurement (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{measurement_8hh_source_l00119}{119}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#if\ PIXIE\_READTYPE!=2}}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a99543a8cee3bf5123da2d5c110eb09f0}{trace}};}
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00123\ \ \ \ \ \}}
 
 \end{DoxyCode}
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_a05e9628990d53d21c0005577a782fe2b}\label{class_p_i_x_i_e_1_1_measurement_a05e9628990d53d21c0005577a782fe2b} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!getTrace@{getTrace}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_a05e9628990d53d21c0005577a782fe2b}\index{PIXIE::Measurement@{PIXIE::Measurement}!getTrace@{getTrace}}
 \index{getTrace@{getTrace}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{getTrace()}{getTrace()}}
-{\footnotesize\ttfamily int PIXIE\+::\+Measurement\+::get\+Trace (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{fpr,  }\item[{\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm}{PIXIE\+::\+Trace\+::\+Algorithm}} \texorpdfstring{$\ast$}{*}}]{tracealg,  }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{trace }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_a05e9628990d53d21c0005577a782fe2b} 
+int PIXIE\+::\+Measurement\+::get\+Trace (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{fpr}{, }\item[{\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm}{PIXIE\+::\+Trace\+::\+Algorithm}} \texorpdfstring{$\ast$}{*}}]{tracealg}{, }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{trace}{}\end{DoxyParamCaption})}
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_a74305d42b7585f74b394d7cc9d174764}\label{class_p_i_x_i_e_1_1_measurement_a74305d42b7585f74b394d7cc9d174764} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!print@{print}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_a74305d42b7585f74b394d7cc9d174764}\index{PIXIE::Measurement@{PIXIE::Measurement}!print@{print}}
 \index{print@{print}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{print()}{print()}}
-{\footnotesize\ttfamily int PIXIE\+::\+Measurement\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_a74305d42b7585f74b394d7cc9d174764} 
+int PIXIE\+::\+Measurement\+::print (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
 
 
 
-Definition at line \mbox{\hyperlink{measurement_8cc_source_l00224}{224}} of file \mbox{\hyperlink{measurement_8cc_source}{measurement.\+cc}}.
+Definition at line \mbox{\hyperlink{measurement_8cc_source_l00316}{316}} of file \mbox{\hyperlink{measurement_8cc_source}{measurement.\+cc}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00225\ \ \ \{}
-\DoxyCodeLine{00226\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Crate\ ID:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}}\ <<\ std::endl;}
-\DoxyCodeLine{00227\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Slot\ ID:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}}\ <<\ std::endl;}
-\DoxyCodeLine{00228\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ Channel\ Number:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}}\ <<\ std::endl;}
-\DoxyCodeLine{00229\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ Finish\ Code:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_abb003509076a78af508cfad581e40ad3}{finishCode}}\ <<\ std::endl;}
-\DoxyCodeLine{00230\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ Event\ Time:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}{eventTime}}\ <<\ std::endl;}
-\DoxyCodeLine{00231\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ Event\ RelTime:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a175df9fa09111c252890700c9df36ddf}{eventRelTime}}\ <<\ std::endl;\ \ \ \ }
-\DoxyCodeLine{00232\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ CFD\ Force:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a38a45a088073a1d679aa0687e39c9bcd}{CFDForce}}\ <<\ std::endl;}
-\DoxyCodeLine{00233\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ Event\ Energy:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5691dc1289599d5044ebca0eb99c54a6}{eventEnergy}}\ <<\ std::endl;}
-\DoxyCodeLine{00234\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ Out\ of\ Range:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a0134ee34ee4211cc16ffc55a018d08db}{outOfRange}}\ <<\ std::endl;}
-\DoxyCodeLine{00235\ \ \ \ \ }
-\DoxyCodeLine{00236\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}==8\ ||\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}\ ==\ 16)\ \{}
-\DoxyCodeLine{00237\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ Energy\ Sum\ (trailing):\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a9e369eb1d98fb082453b46e6f9866fa8}{ESumTrailing}}\ <<\ std::endl;}
-\DoxyCodeLine{00238\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ Energy\ Sum\ (leading):\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a11aa609326ddc2d6308f1a7c6b4e8c7b}{ESumLeading}}\ <<\ std::endl;}
-\DoxyCodeLine{00239\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ Energy\ Sum\ (gap):\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a1db7026e4a701144051e4e1b17fd7710}{ESumGap}}\ <<\ std::endl;}
-\DoxyCodeLine{00240\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Baseline:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac133d1b326913e4a8cab1c96bf600f3e}{baseline}}\ <<\ std::endl;}
-\DoxyCodeLine{00241\ \ \ \ \ \}}
-\DoxyCodeLine{00242\ \ \ \ \ }
-\DoxyCodeLine{00243\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}==12\ ||\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}\ ==\ 16)\ \{}
-\DoxyCodeLine{00244\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QDCSum0:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[0]\ <<\ std::endl;}
-\DoxyCodeLine{00245\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QDCSum1:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[1]\ <<\ std::endl;}
-\DoxyCodeLine{00246\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QDCSum2:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[2]\ <<\ std::endl;}
-\DoxyCodeLine{00247\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QDCSum3:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[3]\ <<\ std::endl;}
-\DoxyCodeLine{00248\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QDCSum4:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[4]\ <<\ std::endl;}
-\DoxyCodeLine{00249\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QDCSum5:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[5]\ <<\ std::endl;}
-\DoxyCodeLine{00250\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QDCSum6:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[6]\ <<\ std::endl;}
-\DoxyCodeLine{00251\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QDCSum7:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[7]\ <<\ std::endl;}
-\DoxyCodeLine{00252\ \ \ \ \ \}}
-\DoxyCodeLine{00253\ }
-\DoxyCodeLine{00254\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa32b41845cd96b951763bd94667edb5b}{nTraceMeas}};\ ++i)\ \{}
-\DoxyCodeLine{00255\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ TraceMeas"{}}<<\ i<<\textcolor{stringliteral}{"{}:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_abfb4ec14dc55376666331ec2ad293276}{trace\_meas}}[i].\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement_a2aee7a7bb7b8c236f12eba1e56f6245d}{datum}}\ <<\ std::endl;}
-\DoxyCodeLine{00256\ \ \ \ \ \}}
-\DoxyCodeLine{00257\ \ \ \ \ \textcolor{keywordflow}{return}(0);}
-\DoxyCodeLine{00258\ \ \ \}\ \ }
+\DoxyCodeLine{00317\ \ \ \{}
+\DoxyCodeLine{00318\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Crate\ ID:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}}\ <<\ std::endl;}
+\DoxyCodeLine{00319\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Slot\ ID:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}}\ <<\ std::endl;}
+\DoxyCodeLine{00320\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ Channel\ Number:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}}\ <<\ std::endl;}
+\DoxyCodeLine{00321\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ Finish\ Code:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_abb003509076a78af508cfad581e40ad3}{finishCode}}\ <<\ std::endl;}
+\DoxyCodeLine{00322\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ Event\ Time:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}{eventTime}}\ <<\ std::endl;}
+\DoxyCodeLine{00323\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ Event\ RelTime:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a175df9fa09111c252890700c9df36ddf}{eventRelTime}}\ <<\ std::endl;\ \ \ \ }
+\DoxyCodeLine{00324\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ CFD\ Force:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a38a45a088073a1d679aa0687e39c9bcd}{CFDForce}}\ <<\ std::endl;}
+\DoxyCodeLine{00325\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ Event\ Energy:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5691dc1289599d5044ebca0eb99c54a6}{eventEnergy}}\ <<\ std::endl;}
+\DoxyCodeLine{00326\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ Out\ of\ Range:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a0134ee34ee4211cc16ffc55a018d08db}{outOfRange}}\ <<\ std::endl;}
+\DoxyCodeLine{00327\ \ \ \ \ }
+\DoxyCodeLine{00328\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}==8\ ||\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}\ ==\ 16)\ \{}
+\DoxyCodeLine{00329\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ Energy\ Sum\ (trailing):\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a9e369eb1d98fb082453b46e6f9866fa8}{ESumTrailing}}\ <<\ std::endl;}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ Energy\ Sum\ (leading):\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a11aa609326ddc2d6308f1a7c6b4e8c7b}{ESumLeading}}\ <<\ std::endl;}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ Energy\ Sum\ (gap):\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a1db7026e4a701144051e4e1b17fd7710}{ESumGap}}\ <<\ std::endl;}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Baseline:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac133d1b326913e4a8cab1c96bf600f3e}{baseline}}\ <<\ std::endl;}
+\DoxyCodeLine{00333\ \ \ \ \ \}}
+\DoxyCodeLine{00334\ \ \ \ \ }
+\DoxyCodeLine{00335\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}==12\ ||\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}\ ==\ 16)\ \{}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QDCSum0:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[0]\ <<\ std::endl;}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QDCSum1:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[1]\ <<\ std::endl;}
+\DoxyCodeLine{00338\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QDCSum2:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[2]\ <<\ std::endl;}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QDCSum3:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[3]\ <<\ std::endl;}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QDCSum4:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[4]\ <<\ std::endl;}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QDCSum5:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[5]\ <<\ std::endl;}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QDCSum6:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[6]\ <<\ std::endl;}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QDCSum7:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[7]\ <<\ std::endl;}
+\DoxyCodeLine{00344\ \ \ \ \ \}}
+\DoxyCodeLine{00345\ }
+\DoxyCodeLine{00346\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa32b41845cd96b951763bd94667edb5b}{nTraceMeas}};\ ++i)\ \{}
+\DoxyCodeLine{00347\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ TraceMeas"{}}<<\ i<<\textcolor{stringliteral}{"{}:\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_abfb4ec14dc55376666331ec2ad293276}{trace\_meas}}[i].datum\ <<\ std::endl;}
+\DoxyCodeLine{00348\ \ \ \ \ \}}
+\DoxyCodeLine{00349\ \ \ \ \ \textcolor{keywordflow}{return}(0);}
+\DoxyCodeLine{00350\ \ \ \}\ \ }
 
 \end{DoxyCode}
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_aa7bc1d08159fb77021fe4b760278c305}\label{class_p_i_x_i_e_1_1_measurement_aa7bc1d08159fb77021fe4b760278c305} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!ProcessCFD@{ProcessCFD}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_aa7bc1d08159fb77021fe4b760278c305}\index{PIXIE::Measurement@{PIXIE::Measurement}!ProcessCFD@{ProcessCFD}}
 \index{ProcessCFD@{ProcessCFD}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{ProcessCFD()}{ProcessCFD()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_i_x_i_e_1_1_c_f_d}{CFD}} PIXIE\+::\+Measurement\+::\+Process\+CFD (\begin{DoxyParamCaption}\item[{unsigned int}]{data,  }\item[{int}]{frequency }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_aa7bc1d08159fb77021fe4b760278c305} 
+\mbox{\hyperlink{struct_p_i_x_i_e_1_1_c_f_d}{CFD}} PIXIE\+::\+Measurement\+::\+Process\+CFD (\begin{DoxyParamCaption}\item[{unsigned int}]{data}{, }\item[{int}]{frequency}{}\end{DoxyParamCaption})}
 
 
 
@@ -268,11 +292,11 @@ Definition at line \mbox{\hyperlink{measurement_8cc_source_l00036}{36}} of file 
 \DoxyCodeLine{00072\ \ \ \}}
 
 \end{DoxyCode}
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_abf6f92307ac08ac10ddbe40474ff2da0}\label{class_p_i_x_i_e_1_1_measurement_abf6f92307ac08ac10ddbe40474ff2da0} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!ProcessTime@{ProcessTime}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_abf6f92307ac08ac10ddbe40474ff2da0}\index{PIXIE::Measurement@{PIXIE::Measurement}!ProcessTime@{ProcessTime}}
 \index{ProcessTime@{ProcessTime}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{ProcessTime()}{ProcessTime()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_i_x_i_e_1_1_event_time}{Event\+Time}} PIXIE\+::\+Measurement\+::\+Process\+Time (\begin{DoxyParamCaption}\item[{unsigned long long}]{timestamp,  }\item[{unsigned int}]{cfd,  }\item[{int}]{frequency }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_abf6f92307ac08ac10ddbe40474ff2da0} 
+\mbox{\hyperlink{struct_p_i_x_i_e_1_1_event_time}{Event\+Time}} PIXIE\+::\+Measurement\+::\+Process\+Time (\begin{DoxyParamCaption}\item[{unsigned long long}]{timestamp}{, }\item[{unsigned int}]{cfd}{, }\item[{int}]{frequency}{}\end{DoxyParamCaption})}
 
 
 
@@ -292,109 +316,169 @@ Definition at line \mbox{\hyperlink{measurement_8cc_source_l00074}{74}} of file 
 \DoxyCodeLine{00083\ \ \ \}}
 
 \end{DoxyCode}
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_ab52c696179c4bb8c6447fe375f696c90}\label{class_p_i_x_i_e_1_1_measurement_ab52c696179c4bb8c6447fe375f696c90} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!read\_full@{read\_full}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_ab52c696179c4bb8c6447fe375f696c90}\index{PIXIE::Measurement@{PIXIE::Measurement}!read\_full@{read\_full}}
 \index{read\_full@{read\_full}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{read\_full()}{read\_full()}}
-{\footnotesize\ttfamily int PIXIE\+::\+Measurement\+::read\+\_\+full (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} \texorpdfstring{$\ast$}{*}}]{reader,  }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{out\+Trace = {\ttfamily NULL} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_ab52c696179c4bb8c6447fe375f696c90} 
+int PIXIE\+::\+Measurement\+::read\+\_\+full (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} \texorpdfstring{$\ast$}{*}}]{reader}{, }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{out\+Trace}{ = {\ttfamily NULL}}\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{measurement_8cc_source_l00139}{139}} of file \mbox{\hyperlink{measurement_8cc_source}{measurement.\+cc}}.
+Definition at line \mbox{\hyperlink{measurement_8cc_source_l00171}{171}} of file \mbox{\hyperlink{measurement_8cc_source}{measurement.\+cc}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00140\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa32b41845cd96b951763bd94667edb5b}{nTraceMeas}}\ =\ 0;}
-\DoxyCodeLine{00141\ }
-\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}\ ==\ 4)\ \{;\}}
-\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{00144\ \ \ \ \ \ \ \textcolor{comment}{//read\ the\ rest\ of\ the\ header}}
-\DoxyCodeLine{00145\ \ \ \ \ \ \ uint32\_t\ otherWords[\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}-\/4];}
-\DoxyCodeLine{00146\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fread(\&otherWords,\ (\textcolor{keywordtype}{size\_t})\ 4,\ (\textcolor{keywordtype}{size\_t})\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}-\/4,\ reader-\/>file)\ !=\ (\textcolor{keywordtype}{size\_t})\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}-\/4)\ \{}
-\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
-\DoxyCodeLine{00148\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00149\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>NSCLDAQ)\ \{\ \textcolor{keywordflow}{if}\ (reader-\/>nsclreader-\/>presort)\ \{\ reader-\/>nsclreader-\/>rib\_size\ -\/=\ 4*(\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}-\/4);\ \}\ \}}
-\DoxyCodeLine{00150\ \ \ \ \ \ \ }
-\DoxyCodeLine{00151\ \ \ \ \ \ \ \textcolor{comment}{//Read\ the\ rest\ of\ the\ header}}
-\DoxyCodeLine{00152\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}==8)\ \{\textcolor{comment}{//Raw\ energy\ sums}}
-\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a9e369eb1d98fb082453b46e6f9866fa8}{ESumTrailing}}\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a984c5db2a3a0c4b78488b39a63bc2eba}{mESumTrailing}}(otherWords[0]);}
-\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a11aa609326ddc2d6308f1a7c6b4e8c7b}{ESumLeading}}\ \ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5d2aaf215e88a684e0b8a1b917ded74a}{mESumLeading}}(otherWords[1]);}
-\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a1db7026e4a701144051e4e1b17fd7710}{ESumGap}}\ \ \ \ \ \ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aab7a3ef37a548bbfa28c946a311efe27}{mESumGap}}(otherWords[2]);}
-\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac133d1b326913e4a8cab1c96bf600f3e}{baseline}}\ \ \ \ \ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a0e040ac6bbefe372503e83cb37c2b585}{mBaseline}}(otherWords[3]);}
-\DoxyCodeLine{00157\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00158\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}==12)\ \{\textcolor{comment}{//QDCSums}}
-\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<8;\ i++)\ \{}
-\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[i]=\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a0d9992a10a5d3aaba2f057067db05724}{mQDCSums}}(otherWords[i]);}
-\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00162\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00163\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}==16)\ \{\ \textcolor{comment}{//Both}}
-\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a9e369eb1d98fb082453b46e6f9866fa8}{ESumTrailing}}\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a984c5db2a3a0c4b78488b39a63bc2eba}{mESumTrailing}}(otherWords[0]);}
-\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a11aa609326ddc2d6308f1a7c6b4e8c7b}{ESumLeading}}\ \ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5d2aaf215e88a684e0b8a1b917ded74a}{mESumLeading}}(otherWords[1]);}
-\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a1db7026e4a701144051e4e1b17fd7710}{ESumGap}}\ \ \ \ \ \ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aab7a3ef37a548bbfa28c946a311efe27}{mESumGap}}(otherWords[2]);}
-\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac133d1b326913e4a8cab1c96bf600f3e}{baseline}}\ \ \ \ \ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a0e040ac6bbefe372503e83cb37c2b585}{mBaseline}}(otherWords[3]);}
-\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<8;\ i++)\ \{}
-\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[i]=\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a0d9992a10a5d3aaba2f057067db05724}{mQDCSums}}(otherWords[4+i]);}
-\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00171\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00172\ \ \ \ \ \}}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00172\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa32b41845cd96b951763bd94667edb5b}{nTraceMeas}}\ =\ 0;}
 \DoxyCodeLine{00173\ }
-\DoxyCodeLine{00174\ \ \ \ \ }
-\DoxyCodeLine{00175\ \ \ \ \ \textcolor{comment}{//skip\ or\ proces\ the\ trace\ if\ recorded}}
-\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keyword}{auto}\ channel\ =\ reader-\/>definition.GetChannel(\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}},\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}},\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}});}
-\DoxyCodeLine{00177\ \ \ \ \ \textcolor{comment}{//no\ trace,\ do\ nothing}}
-\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordflow}{if}\ ((\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa6060560c9da323d13705c4683efbda1}{eventLength}}\ -\/\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}})\ ==\ 0)\ \{;\}}
-\DoxyCodeLine{00179\ \ \ \ \ \textcolor{comment}{//skip\ trace\ if\ not\ needed}}
-\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (!channel)\ \{}
-\DoxyCodeLine{00181\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fseek(reader-\/>file,\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa6060560c9da323d13705c4683efbda1}{eventLength}}-\/\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}})*4,\ SEEK\_CUR))\ \{}
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}\ ==\ 4)\ \{;\}}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \textcolor{comment}{//read\ the\ rest\ of\ the\ header}}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \textcolor{comment}{//uint32\_t\ otherWords[headerLength-\/4];}}
+\DoxyCodeLine{00178\ \textcolor{preprocessor}{\#if\ PIXIE\_READTYPE<2}}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ otherWords[\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}-\/4];}
+\DoxyCodeLine{00180\ \textcolor{preprocessor}{\#if\ PIXIE\_READTYPE==0}}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fread(\&otherWords[0],\ (\textcolor{keywordtype}{size\_t})\ 4,\ (\textcolor{keywordtype}{size\_t})\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}-\/4,\ reader-\/>file)\ !=\ (\textcolor{keywordtype}{size\_t})\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}-\/4)\ \{}
 \DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
 \DoxyCodeLine{00183\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00184\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>NSCLDAQ)\ \{\ \textcolor{keywordflow}{if}\ (reader-\/>nsclreader-\/>presort)\ \{\ reader-\/>nsclreader-\/>rib\_size\ -\/=\ 4*(\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa6060560c9da323d13705c4683efbda1}{eventLength}}-\/\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}});\ \}\ \}}
-\DoxyCodeLine{00185\ \ \ \ \ \}}
-\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (outTrace==NULL\ \&\&\ !channel-\/>traces)\{}
-\DoxyCodeLine{00187\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fseek(reader-\/>file,\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa6060560c9da323d13705c4683efbda1}{eventLength}}-\/\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}})*4,\ SEEK\_CUR))\ \{}
-\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
-\DoxyCodeLine{00189\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00190\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>NSCLDAQ)\ \{\ \textcolor{keywordflow}{if}\ (reader-\/>nsclreader-\/>presort)\ \{\ reader-\/>nsclreader-\/>rib\_size\ -\/=\ 4*(\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa6060560c9da323d13705c4683efbda1}{eventLength}}-\/\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}});\ \}\ \}}
-\DoxyCodeLine{00191\ \ \ \ \ \}}
-\DoxyCodeLine{00192\ \ \ \ \ \textcolor{comment}{//Read\ trace}}
-\DoxyCodeLine{00193\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{00194\ \ \ \ \ \ \ \textcolor{comment}{//uint16\_t\ trace[traceLength];\ //\ =\ \{0\};}}
-\DoxyCodeLine{00195\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05}{traceLength}}\ >\ \mbox{\hyperlink{definitions_8hh_af0c0584410364a83dba3db590aa157e7}{MAX\_TRACE\_LENGTH}})\ \{\ std::cout\ <<\ \textcolor{stringliteral}{"{}WARNING:\ traceLength\ >\ MAX\_TRACE\_LENGTH"{}}\ <<\ std::endl;\ \}}
-\DoxyCodeLine{00196\ \ \ \ \ \ \ }
-\DoxyCodeLine{00197\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fread(\&(this-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a3e2e36f00d13cc9afa7d8aaf2ffde095}{trace}}[0]),\ (size\_t)\ 2,\ (\textcolor{keywordtype}{size\_t})\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05}{traceLength}},\ reader-\/>file)\ !=\ (\textcolor{keywordtype}{size\_t})\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05}{traceLength}})\ \{}
-\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
-\DoxyCodeLine{00199\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00200\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>NSCLDAQ)\ \{\ \textcolor{keywordflow}{if}\ (reader-\/>nsclreader-\/>presort)\ \{\ reader-\/>nsclreader-\/>rib\_size\ -\/=\ 2*\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05}{traceLength}};\ \}\ \}}
-\DoxyCodeLine{00201\ \ \ \ \ \ \ }
-\DoxyCodeLine{00202\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (outTrace!=NULL)\{}
-\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ memcpy(outTrace,\ \&\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a3e2e36f00d13cc9afa7d8aaf2ffde095}{trace}},\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05}{traceLength}}*\textcolor{keyword}{sizeof}(uint16\_t));}
-\DoxyCodeLine{00204\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00205\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (channel-\/>traces)\ \{}
-\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm}{PIXIE::Trace::Algorithm}}\ *tracealg\ =\ channel-\/>alg;}
-\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!tracealg\ ||\ !tracealg-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a0cd4fcab67f90370e5d485da02ee9934}{is\_loaded}})\ \{}
-\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//no\ trace\ algorigthm,\ should\ never\ happen}}
-\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ tmeas\ =\ tracealg-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a74e1daba588fc6a054bc45d8f85b2aad}{Process}}(\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a3e2e36f00d13cc9afa7d8aaf2ffde095}{trace}},\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05}{traceLength}});}
-\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a7de1b2bfc4cb4f62d779fdb90bd241c5}{good\_trace}}\ =\ tracealg-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a3a179dfa3c4c83f0750b0a205b55bb35}{good\_trace}};}
-\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<tmeas.size();\ ++i)\ \{}
-\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_abfb4ec14dc55376666331ec2ad293276}{trace\_meas}}[\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa32b41845cd96b951763bd94667edb5b}{nTraceMeas}}]\ =\ tmeas[i];}
-\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ ++\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa32b41845cd96b951763bd94667edb5b}{nTraceMeas}};}
-\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00218\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00219\ \ \ \ \ \}}
-\DoxyCodeLine{00220\ }
-\DoxyCodeLine{00221\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;\ \ \ \ \ }
-\DoxyCodeLine{00222\ \ \ \}\ \ }
+\DoxyCodeLine{00184\ \textcolor{preprocessor}{\#elif\ PIXIE\_READTYPE==1}}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ std::memcpy(\&otherWords[0],\ \&reader-\/>buffer[reader-\/>off],\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})*(\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}-\/4));}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ reader-\/>off\ +=\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned}\ int)*(\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}-\/4);}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>off\ >\ reader-\/>fileSize)\ \{\ \textcolor{keywordflow}{return}\ -\/1;\ \}}
+\DoxyCodeLine{00189\ \textcolor{preprocessor}{\#endif\ \ \ \ \ \ }}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>NSCLDAQ)\ \{\ \textcolor{keywordflow}{if}\ (reader-\/>nsclreader-\/>presort)\ \{\ reader-\/>nsclreader-\/>rib\_size\ -\/=\ 4*(\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}-\/4);\ \}\ \}}
+\DoxyCodeLine{00191\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>pOff\ +\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}\ -\/\ 4\ >\ reader-\/>pOffMax)\ \{\ \textcolor{keywordflow}{return}\ -\/1;\ \}}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ }
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \textcolor{comment}{//Read\ the\ rest\ of\ the\ header}}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}==8)\ \{\textcolor{comment}{//Raw\ energy\ sums}}
+\DoxyCodeLine{00197\ \textcolor{preprocessor}{\#if\ PIXIE\_READTYPE<2}}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a9e369eb1d98fb082453b46e6f9866fa8}{ESumTrailing}}\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a984c5db2a3a0c4b78488b39a63bc2eba}{mESumTrailing}}(otherWords[0]);}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a11aa609326ddc2d6308f1a7c6b4e8c7b}{ESumLeading}}\ \ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5d2aaf215e88a684e0b8a1b917ded74a}{mESumLeading}}(otherWords[1]);}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a1db7026e4a701144051e4e1b17fd7710}{ESumGap}}\ \ \ \ \ \ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aab7a3ef37a548bbfa28c946a311efe27}{mESumGap}}(otherWords[2]);}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac133d1b326913e4a8cab1c96bf600f3e}{baseline}}\ \ \ \ \ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a0e040ac6bbefe372503e83cb37c2b585}{mBaseline}}(otherWords[3]);}
+\DoxyCodeLine{00202\ \textcolor{preprocessor}{\#elif\ PIXIE\_READTYPE==2}}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a9e369eb1d98fb082453b46e6f9866fa8}{ESumTrailing}}\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a984c5db2a3a0c4b78488b39a63bc2eba}{mESumTrailing}}(reader-\/>pBuff[reader-\/>pOff]);}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a11aa609326ddc2d6308f1a7c6b4e8c7b}{ESumLeading}}\ \ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5d2aaf215e88a684e0b8a1b917ded74a}{mESumLeading}}(reader-\/>pBuff[reader-\/>pOff+1]);}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a1db7026e4a701144051e4e1b17fd7710}{ESumGap}}\ \ \ \ \ \ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aab7a3ef37a548bbfa28c946a311efe27}{mESumGap}}(reader-\/>pBuff[reader-\/>pOff+2]);}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac133d1b326913e4a8cab1c96bf600f3e}{baseline}}\ \ \ \ \ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a0e040ac6bbefe372503e83cb37c2b585}{mBaseline}}(reader-\/>pBuff[reader-\/>pOff+3]);}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ reader-\/>pOff\ +=\ 4;}
+\DoxyCodeLine{00208\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}==12)\ \{\textcolor{comment}{//QDCSums}}
+\DoxyCodeLine{00211\ \textcolor{preprocessor}{\#if\ PIXIE\_READTYPE<2}}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<8;\ i++)\ \{}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[i]=\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a0d9992a10a5d3aaba2f057067db05724}{mQDCSums}}(otherWords[i]);}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00215\ \textcolor{preprocessor}{\#elif\ PIXIE\_READTYPE==2}}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<8;\ i++)\ \{}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[i]=\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a0d9992a10a5d3aaba2f057067db05724}{mQDCSums}}(reader-\/>pBuff[reader-\/>pOff+i]);}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ reader-\/>pOff\ +=\ 8;}
+\DoxyCodeLine{00220\ \textcolor{preprocessor}{\#endif\ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}==16)\ \{\ \textcolor{comment}{//Both}}
+\DoxyCodeLine{00223\ \textcolor{preprocessor}{\#if\ PIXIE\_READTYPE<2}}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a9e369eb1d98fb082453b46e6f9866fa8}{ESumTrailing}}\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a984c5db2a3a0c4b78488b39a63bc2eba}{mESumTrailing}}(otherWords[0]);}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a11aa609326ddc2d6308f1a7c6b4e8c7b}{ESumLeading}}\ \ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5d2aaf215e88a684e0b8a1b917ded74a}{mESumLeading}}(otherWords[1]);}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a1db7026e4a701144051e4e1b17fd7710}{ESumGap}}\ \ \ \ \ \ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aab7a3ef37a548bbfa28c946a311efe27}{mESumGap}}(otherWords[2]);}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac133d1b326913e4a8cab1c96bf600f3e}{baseline}}\ \ \ \ \ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a0e040ac6bbefe372503e83cb37c2b585}{mBaseline}}(otherWords[3]);}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<8;\ i++)\ \{}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[i]=\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a0d9992a10a5d3aaba2f057067db05724}{mQDCSums}}(otherWords[4+i]);}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00231\ \textcolor{preprocessor}{\#elif\ PIXIE\_READTYPE==2}}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a9e369eb1d98fb082453b46e6f9866fa8}{ESumTrailing}}\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a984c5db2a3a0c4b78488b39a63bc2eba}{mESumTrailing}}(reader-\/>pBuff[reader-\/>pOff]);}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a11aa609326ddc2d6308f1a7c6b4e8c7b}{ESumLeading}}\ \ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5d2aaf215e88a684e0b8a1b917ded74a}{mESumLeading}}(reader-\/>pBuff[reader-\/>pOff+1]);}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a1db7026e4a701144051e4e1b17fd7710}{ESumGap}}\ \ \ \ \ \ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aab7a3ef37a548bbfa28c946a311efe27}{mESumGap}}(reader-\/>pBuff[reader-\/>pOff+2]);}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac133d1b326913e4a8cab1c96bf600f3e}{baseline}}\ \ \ \ \ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a0e040ac6bbefe372503e83cb37c2b585}{mBaseline}}(reader-\/>pBuff[reader-\/>pOff+3]);}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<8;\ i++)\ \{}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}{QDCSums}}[i]=\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a0d9992a10a5d3aaba2f057067db05724}{mQDCSums}}(reader-\/>pBuff[reader-\/>pOff+4+i]);}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ reader-\/>pOff\ +=\ 12;}
+\DoxyCodeLine{00240\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00242\ \ \ \ \ \}}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ }
+\DoxyCodeLine{00244\ \ \ \ \ \textcolor{comment}{//skip\ or\ proces\ the\ trace\ if\ recorded}}
+\DoxyCodeLine{00245\ \ \ \ \ \textcolor{keyword}{auto}\ channel\ =\ reader-\/>definition.GetChannel(\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}},\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}},\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}});}
+\DoxyCodeLine{00246\ \ \ \ \ \textcolor{comment}{//no\ trace,\ do\ nothing}}
+\DoxyCodeLine{00247\ \ \ \ \ \textcolor{keywordflow}{if}\ ((\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa6060560c9da323d13705c4683efbda1}{eventLength}}\ -\/\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}})\ ==\ 0)\ \{;\}}
+\DoxyCodeLine{00248\ \ \ \ \ \textcolor{comment}{//skip\ trace\ if\ not\ needed}}
+\DoxyCodeLine{00249\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (!channel)\ \{}
+\DoxyCodeLine{00250\ \textcolor{preprocessor}{\#if\ PIXIE\_READTYPE==0}}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fseek(reader-\/>file,\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa6060560c9da323d13705c4683efbda1}{eventLength}}-\/\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}})*4,\ SEEK\_CUR))\ \{}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00254\ \textcolor{preprocessor}{\#elif\ PIXIE\_READTYPE==1}}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ reader-\/>off\ +=\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa6060560c9da323d13705c4683efbda1}{eventLength}}-\/\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}})*4;}
+\DoxyCodeLine{00256\ \textcolor{preprocessor}{\#elif\ PIXIE\_READTYPE==2\ \ \ \ \ \ }}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ reader-\/>pOff\ +=\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa6060560c9da323d13705c4683efbda1}{eventLength}}\ -\/\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}};}
+\DoxyCodeLine{00258\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>NSCLDAQ)\ \{\ \textcolor{keywordflow}{if}\ (reader-\/>nsclreader-\/>presort)\ \{\ reader-\/>nsclreader-\/>rib\_size\ -\/=\ 4*(\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa6060560c9da323d13705c4683efbda1}{eventLength}}-\/\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}});\ \}\ \}}
+\DoxyCodeLine{00260\ \ \ \ \ \}}
+\DoxyCodeLine{00261\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (outTrace==NULL\ \&\&\ !channel-\/>traces)\{}
+\DoxyCodeLine{00262\ \textcolor{preprocessor}{\#if\ PIXIE\_READTYPE==0}}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fseek(reader-\/>file,\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa6060560c9da323d13705c4683efbda1}{eventLength}}-\/\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}})*4,\ SEEK\_CUR))\ \{}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00266\ \textcolor{preprocessor}{\#elif\ PIXIE\_READTYPE==1}}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ reader-\/>off\ +=\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa6060560c9da323d13705c4683efbda1}{eventLength}}-\/\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}})*4;}
+\DoxyCodeLine{00268\ \textcolor{preprocessor}{\#elif\ PIXIE\_READTYPE==2}}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ reader-\/>pOff\ +=\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa6060560c9da323d13705c4683efbda1}{eventLength}}\ -\/\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}};}
+\DoxyCodeLine{00270\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>NSCLDAQ)\ \{\ \textcolor{keywordflow}{if}\ (reader-\/>nsclreader-\/>presort)\ \{\ reader-\/>nsclreader-\/>rib\_size\ -\/=\ 4*(\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa6060560c9da323d13705c4683efbda1}{eventLength}}-\/\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}});\ \}\ \}}
+\DoxyCodeLine{00272\ \ \ \ \ \}}
+\DoxyCodeLine{00273\ \ \ \ \ \textcolor{comment}{//Read\ trace}}
+\DoxyCodeLine{00274\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \textcolor{comment}{//uint16\_t\ trace[traceLength];\ //\ =\ \{0\};}}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05}{traceLength}}\ >\ \mbox{\hyperlink{definitions_8hh_af0c0584410364a83dba3db590aa157e7}{MAX\_TRACE\_LENGTH}})\ \{\ std::cout\ <<\ \textcolor{stringliteral}{"{}WARNING:\ traceLength\ >\ MAX\_TRACE\_LENGTH"{}}\ <<\ std::endl;\ \}}
+\DoxyCodeLine{00277\ }
+\DoxyCodeLine{00278\ \textcolor{preprocessor}{\#if\ PIXIE\_READTYPE==0}}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fread(\&(this-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a99543a8cee3bf5123da2d5c110eb09f0}{trace}}[0]),\ (\textcolor{keywordtype}{size\_t})\ 2,\ (\textcolor{keywordtype}{size\_t})\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05}{traceLength}},\ reader-\/>file)\ !=\ (\textcolor{keywordtype}{size\_t})\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05}{traceLength}})\ \{}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00282\ \textcolor{preprocessor}{\#elif\ PIXIE\_READTYPE==1}}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ memcpy(\&(this-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a99543a8cee3bf5123da2d5c110eb09f0}{trace}}[0]),\ \&reader-\/>buffer[reader-\/>off],\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05}{traceLength}}*2);}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ reader-\/>off\ +=\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05}{traceLength}}*2;}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>off\ >\ reader-\/>fileSize)\ \{\ \textcolor{keywordflow}{return}\ -\/1;\ \}}
+\DoxyCodeLine{00286\ \textcolor{preprocessor}{\#elif\ PIXIE\_READTYPE==2}}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \textcolor{comment}{//memcpy(\&(this-\/>trace[0]),\ \&reader-\/>pBuff[reader-\/>pOff],\ traceLength*2);}}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a99543a8cee3bf5123da2d5c110eb09f0}{trace}}\ =\ (uint16\_t*)\&reader-\/>pBuff[reader-\/>pOff];}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ reader-\/>pOff\ +=\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05}{traceLength}}/2;}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>pOff\ >\ reader-\/>pOffMax)\ \{\ \textcolor{keywordflow}{return}\ -\/1;\ \}}
+\DoxyCodeLine{00291\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>NSCLDAQ)\ \{\ \textcolor{keywordflow}{if}\ (reader-\/>nsclreader-\/>presort)\ \{\ reader-\/>nsclreader-\/>rib\_size\ -\/=\ 2*\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05}{traceLength}};\ \}\ \}}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ }
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (outTrace!=NULL)\{}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ memcpy(outTrace,\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a99543a8cee3bf5123da2d5c110eb09f0}{trace}},\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05}{traceLength}}*\textcolor{keyword}{sizeof}(uint16\_t));}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (channel-\/>traces)\ \{}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ PIXIE::Trace::Algorithm\ *tracealg\ =\ channel-\/>alg;}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!tracealg\ ||\ !tracealg-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a0cd4fcab67f90370e5d485da02ee9934}{is\_loaded}})\ \{}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//no\ trace\ algorigthm,\ should\ never\ happen}}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ tmeas\ =\ tracealg-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a74e1daba588fc6a054bc45d8f85b2aad}{Process}}(\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a99543a8cee3bf5123da2d5c110eb09f0}{trace}},\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05}{traceLength}});}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a7de1b2bfc4cb4f62d779fdb90bd241c5}{good\_trace}}\ =\ tracealg-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a3a179dfa3c4c83f0750b0a205b55bb35}{good\_trace}};}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<tmeas.size();\ ++i)\ \{}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_abfb4ec14dc55376666331ec2ad293276}{trace\_meas}}[\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa32b41845cd96b951763bd94667edb5b}{nTraceMeas}}]\ =\ tmeas[i];}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \ \ \ \ ++\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa32b41845cd96b951763bd94667edb5b}{nTraceMeas}};}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00311\ \ \ \ \ \}}
+\DoxyCodeLine{00312\ }
+\DoxyCodeLine{00313\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;\ \ \ \ \ }
+\DoxyCodeLine{00314\ \ \ \}\ \ }
 
 \end{DoxyCode}
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_ae44119a232562550787b78263c87e819}\label{class_p_i_x_i_e_1_1_measurement_ae44119a232562550787b78263c87e819} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!read\_header@{read\_header}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_ae44119a232562550787b78263c87e819}\index{PIXIE::Measurement@{PIXIE::Measurement}!read\_header@{read\_header}}
 \index{read\_header@{read\_header}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{read\_header()}{read\_header()}}
-{\footnotesize\ttfamily int PIXIE\+::\+Measurement\+::read\+\_\+header (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} \texorpdfstring{$\ast$}{*}}]{reader }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_ae44119a232562550787b78263c87e819} 
+int PIXIE\+::\+Measurement\+::read\+\_\+header (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}} \texorpdfstring{$\ast$}{*}}]{reader}{}\end{DoxyParamCaption})}
 
 
 
@@ -403,499 +487,531 @@ Definition at line \mbox{\hyperlink{measurement_8cc_source_l00085}{85}} of file 
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00086\ \ \ \ \ uint32\_t\ firstWords[4];}
-\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordflow}{if}\ (!reader-\/>NSCLDAQ)\ \{}
-\DoxyCodeLine{00088\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fread(\&firstWords,\ (\textcolor{keywordtype}{size\_t})\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int})*4,\ (\textcolor{keywordtype}{size\_t})\ 1,\ reader-\/>file)\ !=\ 1)\ \{}
-\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;\ \ \ \ }
-\DoxyCodeLine{00090\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00091\ \ \ \ \ \}}
-\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{00093\ \ \ \ \ \ \ \textcolor{comment}{//some\ logic\ here\ to\ navigate\ NSCL\ data\ structures\ and\ find\ the\ next\ PIXIE\ fragment?}}
-\DoxyCodeLine{00094\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>nsclreader-\/>findNextFragment(reader-\/>file)\ <\ 0\ )\ \{}
-\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
-\DoxyCodeLine{00096\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00097\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fread(\&firstWords,\ (\textcolor{keywordtype}{size\_t})\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int})*4,\ (\textcolor{keywordtype}{size\_t})\ 1,\ reader-\/>file)\ !=\ 1)\ \{}
-\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;\ \ \ \ }
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#if\ PIXIE\_READTYPE<2}}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ firstWords[4];}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordflow}{if}\ (!reader-\/>NSCLDAQ)\ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{definitions_8hh_a39dd79273f1b6d19cfaa0ccbb40943ae}{PIXIE\_READTYPE}}==0)\ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fread(\&firstWords[0],\ (\textcolor{keywordtype}{size\_t})\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int})*4,\ (\textcolor{keywordtype}{size\_t})\ 1,\ reader-\/>file)\ !=\ 1)\ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \}\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00094\ \ \ \ \ \}}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \textcolor{comment}{//some\ logic\ here\ to\ navigate\ NSCL\ data\ structures\ and\ find\ the\ next\ PIXIE\ fragment?}}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>nsclreader-\/>findNextFragment(reader)\ <\ 0\ )\ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
 \DoxyCodeLine{00099\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00100\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>nsclreader-\/>presort)\ \{\ reader-\/>nsclreader-\/>rib\_size\ -\/=\ \textcolor{keyword}{sizeof}(int)*4;\ \}}
-\DoxyCodeLine{00101\ \ \ \ \ \}}
-\DoxyCodeLine{00102\ \ \ \ \ }
-\DoxyCodeLine{00103\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}}\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a9f15a16ee3331625cdc14173fb80c923}{mChannelNumber}}(firstWords[0]);}
-\DoxyCodeLine{00104\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}}\ \ \ \ \ \ \ \ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a4c2f96d027dde1e34557a1db0d4ee63b}{mSlotID}}(firstWords[0]);}
-\DoxyCodeLine{00105\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}}\ \ \ \ \ \ \ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac6f66de145022af06f425a21ebb16264}{mCrateID}}(firstWords[0]);}
-\DoxyCodeLine{00106\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}\ \ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a831c73bd6161b366ff0b71ea5562b2e9}{mHeaderLength}}(firstWords[0]);}
-\DoxyCodeLine{00107\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa6060560c9da323d13705c4683efbda1}{eventLength}}\ \ \ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_acebdcc1444a74f66d13ffcf245d4f3c9}{mEventLength}}(firstWords[0]);}
-\DoxyCodeLine{00108\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_abb003509076a78af508cfad581e40ad3}{finishCode}}\ \ \ \ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_af1d03b0452c7557f88c0d1f080baac97}{mFinishCode}}(firstWords[0]);}
-\DoxyCodeLine{00109\ }
-\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{int}\ oldChan\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}};}
-\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00112\ \ \ \ \ uint32\_t\ timestampLow\ \ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5be5eb5f0cd3a2fe95bc8b566d055af0}{mTimeLow}}(firstWords[1]);}
-\DoxyCodeLine{00113\ \ \ \ \ uint32\_t\ timestampHigh\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a11044cb22e1c5d875d5435b228927494}{mTimeHigh}}(firstWords[2]);}
-\DoxyCodeLine{00114\ \ \ \ }
-\DoxyCodeLine{00115\ \ \ \ \ uint64\_t\ timestamp=\textcolor{keyword}{static\_cast<}uint64\_t\textcolor{keyword}{>}(timestampHigh);}
-\DoxyCodeLine{00116\ \ \ \ \ timestamp=timestamp<<32;}
-\DoxyCodeLine{00117\ \ \ \ \ timestamp=timestamp+timestampLow;}
-\DoxyCodeLine{00118\ }
-\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>definition.GetChannel(\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}},\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}},\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}}))\ \{}
-\DoxyCodeLine{00120\ \ \ \ \ \ \ EventTime\ time\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_abf6f92307ac08ac10ddbe40474ff2da0}{ProcessTime}}(timestamp,\ firstWords[2],\ reader-\/>definition.GetSlot(\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}},\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}})-\/>freq);}
-\DoxyCodeLine{00121\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}{eventTime}}\ =\ time.time;}
-\DoxyCodeLine{00122\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a38a45a088073a1d679aa0687e39c9bcd}{CFDForce}}\ =\ time.CFDForce;\ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00123\ \ \ \ \ \}}
-\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{00125\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nWarning!\ CrateID.SlotID.ChannelNumber\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}}\ <<\ \textcolor{stringliteral}{"{}."{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}}\ <<\ \textcolor{stringliteral}{"{}."{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}}\ <<\ \textcolor{stringliteral}{"{}\ not\ found"{}}\ <<\ std::endl;}
-\DoxyCodeLine{00126\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}{eventTime}}\ =\ timestamp<<15;}
-\DoxyCodeLine{00127\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5691dc1289599d5044ebca0eb99c54a6}{eventEnergy}}=\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a6d94636a26be17a04c532d47adf635a3}{mEventEnergy}}(firstWords[3]);}
-\DoxyCodeLine{00128\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05}{traceLength}}=\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_abc41327fb82ce874d11ba58362075052}{mTraceLength}}(firstWords[3]);}
-\DoxyCodeLine{00129\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a0134ee34ee4211cc16ffc55a018d08db}{outOfRange}}=\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5353a7a4ca1067137136cb23348f5eb5}{mTraceOutRange}}(firstWords[3]);}
-\DoxyCodeLine{00130\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a74305d42b7585f74b394d7cc9d174764}{print}}();}
-\DoxyCodeLine{00131\ \ \ \ \ \}}
-\DoxyCodeLine{00132\ \ \ \ \ }
-\DoxyCodeLine{00133\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5691dc1289599d5044ebca0eb99c54a6}{eventEnergy}}=\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a6d94636a26be17a04c532d47adf635a3}{mEventEnergy}}(firstWords[3]);}
-\DoxyCodeLine{00134\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05}{traceLength}}=\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_abc41327fb82ce874d11ba58362075052}{mTraceLength}}(firstWords[3]);}
-\DoxyCodeLine{00135\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a0134ee34ee4211cc16ffc55a018d08db}{outOfRange}}=\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5353a7a4ca1067137136cb23348f5eb5}{mTraceOutRange}}(firstWords[3]);}
-\DoxyCodeLine{00136\ }
-\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{00138\ \ \ \}\ \ }
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#if\ PIXIE\_READTYPE==0}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fread(\&firstWords[0],\ (\textcolor{keywordtype}{size\_t})\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int})*4,\ (\textcolor{keywordtype}{size\_t})\ 1,\ reader-\/>file)\ !=\ 1)\ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;\ \ \ \ }
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>nsclreader-\/>presort)\ \{\ reader-\/>nsclreader-\/>rib\_size\ -\/=\ \textcolor{keyword}{sizeof}(int)*4;\ \}}
+\DoxyCodeLine{00106\ \ \ \ \ \}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ std::memcpy(\&firstWords[0],\ \&reader-\/>buffer[reader-\/>off],\ 4*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}));}
+\DoxyCodeLine{00109\ \ \ \ \ reader-\/>off\ +=\ 4*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned}\ int);}
+\DoxyCodeLine{00110\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}}\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a9f15a16ee3331625cdc14173fb80c923}{mChannelNumber}}(firstWords[0]);}
+\DoxyCodeLine{00111\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}}\ \ \ \ \ \ \ \ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a4c2f96d027dde1e34557a1db0d4ee63b}{mSlotID}}(firstWords[0]);}
+\DoxyCodeLine{00112\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}}\ \ \ \ \ \ \ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac6f66de145022af06f425a21ebb16264}{mCrateID}}(firstWords[0]);}
+\DoxyCodeLine{00113\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}\ \ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a831c73bd6161b366ff0b71ea5562b2e9}{mHeaderLength}}(firstWords[0]);}
+\DoxyCodeLine{00114\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa6060560c9da323d13705c4683efbda1}{eventLength}}\ \ \ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_acebdcc1444a74f66d13ffcf245d4f3c9}{mEventLength}}(firstWords[0]);}
+\DoxyCodeLine{00115\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_abb003509076a78af508cfad581e40ad3}{finishCode}}\ \ \ \ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_af1d03b0452c7557f88c0d1f080baac97}{mFinishCode}}(firstWords[0]);}
+\DoxyCodeLine{00116\ \textcolor{preprocessor}{\#elif\ PIXIE\_READTYPE==2\ }}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>pOff\ +\ 4\ >\ reader-\/>pOffMax)\ \{\ \textcolor{keywordflow}{return}\ -\/1;\ \}}
+\DoxyCodeLine{00118\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}}\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a9f15a16ee3331625cdc14173fb80c923}{mChannelNumber}}(reader-\/>pBuff[reader-\/>pOff]);}
+\DoxyCodeLine{00119\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}}\ \ \ \ \ \ \ \ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a4c2f96d027dde1e34557a1db0d4ee63b}{mSlotID}}(reader-\/>pBuff[reader-\/>pOff]);}
+\DoxyCodeLine{00120\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}}\ \ \ \ \ \ \ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac6f66de145022af06f425a21ebb16264}{mCrateID}}(reader-\/>pBuff[reader-\/>pOff]);}
+\DoxyCodeLine{00121\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}{headerLength}}\ \ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a831c73bd6161b366ff0b71ea5562b2e9}{mHeaderLength}}(reader-\/>pBuff[reader-\/>pOff]);}
+\DoxyCodeLine{00122\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_aa6060560c9da323d13705c4683efbda1}{eventLength}}\ \ \ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_acebdcc1444a74f66d13ffcf245d4f3c9}{mEventLength}}(reader-\/>pBuff[reader-\/>pOff]);}
+\DoxyCodeLine{00123\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_abb003509076a78af508cfad581e40ad3}{finishCode}}\ \ \ \ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_af1d03b0452c7557f88c0d1f080baac97}{mFinishCode}}(reader-\/>pBuff[reader-\/>pOff]);}
+\DoxyCodeLine{00124\ \ \ \ \ reader-\/>pOff++;}
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{int}\ oldChan\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}};}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ uint32\_t\ timestampLow;}
+\DoxyCodeLine{00130\ \ \ \ \ uint32\_t\ timestampHigh;}
+\DoxyCodeLine{00131\ \ \ \ \ }
+\DoxyCodeLine{00132\ \textcolor{preprocessor}{\#if\ PIXIE\_READTYPE<2}}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ timestampLow\ \ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5be5eb5f0cd3a2fe95bc8b566d055af0}{mTimeLow}}(firstWords[1]);}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ timestampHigh\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a11044cb22e1c5d875d5435b228927494}{mTimeHigh}}(firstWords[2]);}
+\DoxyCodeLine{00135\ \textcolor{preprocessor}{\#elif\ PIXIE\_READTYPE==2}}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ timestampLow\ \ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5be5eb5f0cd3a2fe95bc8b566d055af0}{mTimeLow}}(reader-\/>pBuff[reader-\/>pOff]);}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ reader-\/>pOff++;}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ timestampHigh\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a11044cb22e1c5d875d5435b228927494}{mTimeHigh}}(reader-\/>pBuff[reader-\/>pOff]);}
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \ \ uint64\_t\ timestamp=\textcolor{keyword}{static\_cast<}uint64\_t\textcolor{keyword}{>}(timestampHigh);}
+\DoxyCodeLine{00142\ \ \ \ \ timestamp=timestamp<<32;}
+\DoxyCodeLine{00143\ \ \ \ \ timestamp=timestamp+timestampLow;}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5691dc1289599d5044ebca0eb99c54a6}{eventEnergy}}=\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a6d94636a26be17a04c532d47adf635a3}{mEventEnergy}}(reader-\/>pBuff[reader-\/>pOff+1]);}
+\DoxyCodeLine{00146\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05}{traceLength}}=\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_abc41327fb82ce874d11ba58362075052}{mTraceLength}}(reader-\/>pBuff[reader-\/>pOff+1]);}
+\DoxyCodeLine{00147\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a0134ee34ee4211cc16ffc55a018d08db}{outOfRange}}=\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5353a7a4ca1067137136cb23348f5eb5}{mTraceOutRange}}(reader-\/>pBuff[reader-\/>pOff+1]);}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>definition.GetChannel(\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}},\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}},\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}}))\ \{}
+\DoxyCodeLine{00150\ \textcolor{preprocessor}{\#if\ PIXIE\_READTYPE<2}}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ EventTime\ time\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_abf6f92307ac08ac10ddbe40474ff2da0}{ProcessTime}}(timestamp,\ firstWords[2],\ reader-\/>definition.GetSlot(\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}},\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}})-\/>freq);}
+\DoxyCodeLine{00152\ \textcolor{preprocessor}{\#elif\ PIXIE\_READTYPE==2}}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ EventTime\ time\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_abf6f92307ac08ac10ddbe40474ff2da0}{ProcessTime}}(timestamp,\ reader-\/>pBuff[reader-\/>pOff],\ reader-\/>definition.GetSlot(\mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}},\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}})-\/>freq);}
+\DoxyCodeLine{00154\ \textcolor{preprocessor}{\#endif\ \ \ \ \ \ }}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}{eventTime}}\ =\ time.time;}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a38a45a088073a1d679aa0687e39c9bcd}{CFDForce}}\ =\ time.CFDForce;}
+\DoxyCodeLine{00157\ \ \ \ \ \}}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nWarning!\ CrateID.SlotID.ChannelNumber\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}{crateID}}\ <<\ \textcolor{stringliteral}{"{}."{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}{slotID}}\ <<\ \textcolor{stringliteral}{"{}."{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}{channelNumber}}\ <<\ \textcolor{stringliteral}{"{}\ not\ found"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}{eventTime}}\ =\ timestamp<<15;}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \ \ \ \ \ \ std::cout\ <<\ reader-\/>pOff\ <<\ \textcolor{stringliteral}{"{}\ \ \ "{}}\ <<\ reader-\/>pOffMax\ <<\ std::endl;}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_measurement_a74305d42b7585f74b394d7cc9d174764}{print}}();}
+\DoxyCodeLine{00164\ \ \ \ \ \}}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{comment}{//print();}}
+\DoxyCodeLine{00167\ \ \ \ \ reader-\/>pOff\ +=\ 2;}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00170\ \ \ \}\ \ }
 
 \end{DoxyCode}
 
 
 \doxysubsection{Member Data Documentation}
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_ac133d1b326913e4a8cab1c96bf600f3e}\label{class_p_i_x_i_e_1_1_measurement_ac133d1b326913e4a8cab1c96bf600f3e} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!baseline@{baseline}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_ac133d1b326913e4a8cab1c96bf600f3e}\index{PIXIE::Measurement@{PIXIE::Measurement}!baseline@{baseline}}
 \index{baseline@{baseline}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{baseline}{baseline}}
-{\footnotesize\ttfamily uint32\+\_\+t PIXIE\+::\+Measurement\+::baseline}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_ac133d1b326913e4a8cab1c96bf600f3e} 
+uint32\+\_\+t PIXIE\+::\+Measurement\+::baseline}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00056}{56}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_a38a45a088073a1d679aa0687e39c9bcd}\label{class_p_i_x_i_e_1_1_measurement_a38a45a088073a1d679aa0687e39c9bcd} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!CFDForce@{CFDForce}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_a38a45a088073a1d679aa0687e39c9bcd}\index{PIXIE::Measurement@{PIXIE::Measurement}!CFDForce@{CFDForce}}
 \index{CFDForce@{CFDForce}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{CFDForce}{CFDForce}}
-{\footnotesize\ttfamily uint32\+\_\+t PIXIE\+::\+Measurement\+::\+CFDForce}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_a38a45a088073a1d679aa0687e39c9bcd} 
+uint32\+\_\+t PIXIE\+::\+Measurement\+::\+CFDForce}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00048}{48}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}\label{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!channelNumber@{channelNumber}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0}\index{PIXIE::Measurement@{PIXIE::Measurement}!channelNumber@{channelNumber}}
 \index{channelNumber@{channelNumber}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{channelNumber}{channelNumber}}
-{\footnotesize\ttfamily uint32\+\_\+t PIXIE\+::\+Measurement\+::channel\+Number}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_a25bffef52002e2135c60b185085c62b0} 
+uint32\+\_\+t PIXIE\+::\+Measurement\+::channel\+Number}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00044}{44}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}\label{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!crateID@{crateID}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417}\index{PIXIE::Measurement@{PIXIE::Measurement}!crateID@{crateID}}
 \index{crateID@{crateID}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{crateID}{crateID}}
-{\footnotesize\ttfamily uint32\+\_\+t PIXIE\+::\+Measurement\+::crate\+ID}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_ac1630da7899d358a7f6c06bbce3b6417} 
+uint32\+\_\+t PIXIE\+::\+Measurement\+::crate\+ID}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00042}{42}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_a1db7026e4a701144051e4e1b17fd7710}\label{class_p_i_x_i_e_1_1_measurement_a1db7026e4a701144051e4e1b17fd7710} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!ESumGap@{ESumGap}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_a1db7026e4a701144051e4e1b17fd7710}\index{PIXIE::Measurement@{PIXIE::Measurement}!ESumGap@{ESumGap}}
 \index{ESumGap@{ESumGap}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{ESumGap}{ESumGap}}
-{\footnotesize\ttfamily uint32\+\_\+t PIXIE\+::\+Measurement\+::\+ESum\+Gap}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_a1db7026e4a701144051e4e1b17fd7710} 
+uint32\+\_\+t PIXIE\+::\+Measurement\+::\+ESum\+Gap}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00055}{55}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_a11aa609326ddc2d6308f1a7c6b4e8c7b}\label{class_p_i_x_i_e_1_1_measurement_a11aa609326ddc2d6308f1a7c6b4e8c7b} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!ESumLeading@{ESumLeading}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_a11aa609326ddc2d6308f1a7c6b4e8c7b}\index{PIXIE::Measurement@{PIXIE::Measurement}!ESumLeading@{ESumLeading}}
 \index{ESumLeading@{ESumLeading}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{ESumLeading}{ESumLeading}}
-{\footnotesize\ttfamily uint32\+\_\+t PIXIE\+::\+Measurement\+::\+ESum\+Leading}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_a11aa609326ddc2d6308f1a7c6b4e8c7b} 
+uint32\+\_\+t PIXIE\+::\+Measurement\+::\+ESum\+Leading}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00054}{54}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_a9e369eb1d98fb082453b46e6f9866fa8}\label{class_p_i_x_i_e_1_1_measurement_a9e369eb1d98fb082453b46e6f9866fa8} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!ESumTrailing@{ESumTrailing}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_a9e369eb1d98fb082453b46e6f9866fa8}\index{PIXIE::Measurement@{PIXIE::Measurement}!ESumTrailing@{ESumTrailing}}
 \index{ESumTrailing@{ESumTrailing}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{ESumTrailing}{ESumTrailing}}
-{\footnotesize\ttfamily uint32\+\_\+t PIXIE\+::\+Measurement\+::\+ESum\+Trailing}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_a9e369eb1d98fb082453b46e6f9866fa8} 
+uint32\+\_\+t PIXIE\+::\+Measurement\+::\+ESum\+Trailing}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00053}{53}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_a5691dc1289599d5044ebca0eb99c54a6}\label{class_p_i_x_i_e_1_1_measurement_a5691dc1289599d5044ebca0eb99c54a6} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!eventEnergy@{eventEnergy}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_a5691dc1289599d5044ebca0eb99c54a6}\index{PIXIE::Measurement@{PIXIE::Measurement}!eventEnergy@{eventEnergy}}
 \index{eventEnergy@{eventEnergy}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{eventEnergy}{eventEnergy}}
-{\footnotesize\ttfamily uint32\+\_\+t PIXIE\+::\+Measurement\+::event\+Energy}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_a5691dc1289599d5044ebca0eb99c54a6} 
+uint32\+\_\+t PIXIE\+::\+Measurement\+::event\+Energy}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00049}{49}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_aa6060560c9da323d13705c4683efbda1}\label{class_p_i_x_i_e_1_1_measurement_aa6060560c9da323d13705c4683efbda1} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!eventLength@{eventLength}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_aa6060560c9da323d13705c4683efbda1}\index{PIXIE::Measurement@{PIXIE::Measurement}!eventLength@{eventLength}}
 \index{eventLength@{eventLength}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{eventLength}{eventLength}}
-{\footnotesize\ttfamily uint32\+\_\+t PIXIE\+::\+Measurement\+::event\+Length}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_aa6060560c9da323d13705c4683efbda1} 
+uint32\+\_\+t PIXIE\+::\+Measurement\+::event\+Length}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00040}{40}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_a175df9fa09111c252890700c9df36ddf}\label{class_p_i_x_i_e_1_1_measurement_a175df9fa09111c252890700c9df36ddf} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!eventRelTime@{eventRelTime}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_a175df9fa09111c252890700c9df36ddf}\index{PIXIE::Measurement@{PIXIE::Measurement}!eventRelTime@{eventRelTime}}
 \index{eventRelTime@{eventRelTime}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{eventRelTime}{eventRelTime}}
-{\footnotesize\ttfamily uint32\+\_\+t PIXIE\+::\+Measurement\+::event\+Rel\+Time}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_a175df9fa09111c252890700c9df36ddf} 
+uint32\+\_\+t PIXIE\+::\+Measurement\+::event\+Rel\+Time}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00047}{47}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}\label{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!eventTime@{eventTime}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d}\index{PIXIE::Measurement@{PIXIE::Measurement}!eventTime@{eventTime}}
 \index{eventTime@{eventTime}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{eventTime}{eventTime}}
-{\footnotesize\ttfamily uint64\+\_\+t PIXIE\+::\+Measurement\+::event\+Time}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_a258ca7d91a3a9b095914567599ccf01d} 
+uint64\+\_\+t PIXIE\+::\+Measurement\+::event\+Time}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00046}{46}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_abb003509076a78af508cfad581e40ad3}\label{class_p_i_x_i_e_1_1_measurement_abb003509076a78af508cfad581e40ad3} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!finishCode@{finishCode}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_abb003509076a78af508cfad581e40ad3}\index{PIXIE::Measurement@{PIXIE::Measurement}!finishCode@{finishCode}}
 \index{finishCode@{finishCode}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{finishCode}{finishCode}}
-{\footnotesize\ttfamily uint32\+\_\+t PIXIE\+::\+Measurement\+::finish\+Code}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_abb003509076a78af508cfad581e40ad3} 
+uint32\+\_\+t PIXIE\+::\+Measurement\+::finish\+Code}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00045}{45}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_a7de1b2bfc4cb4f62d779fdb90bd241c5}\label{class_p_i_x_i_e_1_1_measurement_a7de1b2bfc4cb4f62d779fdb90bd241c5} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!good\_trace@{good\_trace}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_a7de1b2bfc4cb4f62d779fdb90bd241c5}\index{PIXIE::Measurement@{PIXIE::Measurement}!good\_trace@{good\_trace}}
 \index{good\_trace@{good\_trace}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{good\_trace}{good\_trace}}
-{\footnotesize\ttfamily bool PIXIE\+::\+Measurement\+::good\+\_\+trace}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_a7de1b2bfc4cb4f62d779fdb90bd241c5} 
+bool PIXIE\+::\+Measurement\+::good\+\_\+trace}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00065}{65}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}\label{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!headerLength@{headerLength}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78}\index{PIXIE::Measurement@{PIXIE::Measurement}!headerLength@{headerLength}}
 \index{headerLength@{headerLength}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{headerLength}{headerLength}}
-{\footnotesize\ttfamily uint32\+\_\+t PIXIE\+::\+Measurement\+::header\+Length}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_a783f12bc945d9978469aa7c60aefcb78} 
+uint32\+\_\+t PIXIE\+::\+Measurement\+::header\+Length}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00039}{39}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_a0e040ac6bbefe372503e83cb37c2b585}\label{class_p_i_x_i_e_1_1_measurement_a0e040ac6bbefe372503e83cb37c2b585} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!mBaseline@{mBaseline}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_a0e040ac6bbefe372503e83cb37c2b585}\index{PIXIE::Measurement@{PIXIE::Measurement}!mBaseline@{mBaseline}}
 \index{mBaseline@{mBaseline}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{mBaseline}{mBaseline}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+Baseline = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x\+FFFFFFFF, 0)\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_a0e040ac6bbefe372503e83cb37c2b585} 
+\mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+Baseline = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x\+FFFFFFFF, 0)\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00090}{90}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_afa60a2503205247ae7f6004ce07b1572}\label{class_p_i_x_i_e_1_1_measurement_afa60a2503205247ae7f6004ce07b1572} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!mCFDForce100@{mCFDForce100}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_afa60a2503205247ae7f6004ce07b1572}\index{PIXIE::Measurement@{PIXIE::Measurement}!mCFDForce100@{mCFDForce100}}
 \index{mCFDForce100@{mCFDForce100}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{mCFDForce100}{mCFDForce100}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+CFDForce100 = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x80000000, 31)\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_afa60a2503205247ae7f6004ce07b1572} 
+\mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+CFDForce100 = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x80000000, 31)\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00082}{82}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_ab37457c5d56e9681a0a7603c7ccf2780}\label{class_p_i_x_i_e_1_1_measurement_ab37457c5d56e9681a0a7603c7ccf2780} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!mCFDForce250@{mCFDForce250}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_ab37457c5d56e9681a0a7603c7ccf2780}\index{PIXIE::Measurement@{PIXIE::Measurement}!mCFDForce250@{mCFDForce250}}
 \index{mCFDForce250@{mCFDForce250}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{mCFDForce250}{mCFDForce250}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+CFDForce250 = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x80000000, 31)\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_ab37457c5d56e9681a0a7603c7ccf2780} 
+\mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+CFDForce250 = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x80000000, 31)\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00083}{83}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_aa2690e9c4c2fb04184fc23d0e3abd594}\label{class_p_i_x_i_e_1_1_measurement_aa2690e9c4c2fb04184fc23d0e3abd594} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!mCFDTime100@{mCFDTime100}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_aa2690e9c4c2fb04184fc23d0e3abd594}\index{PIXIE::Measurement@{PIXIE::Measurement}!mCFDTime100@{mCFDTime100}}
 \index{mCFDTime100@{mCFDTime100}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{mCFDTime100}{mCFDTime100}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+CFDTime100 = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x7\+FFF0000, 16)\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_aa2690e9c4c2fb04184fc23d0e3abd594} 
+\mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+CFDTime100 = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x7\+FFF0000, 16)\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00079}{79}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_a0ac58e22ae8f5cd6aa9b0342022755cc}\label{class_p_i_x_i_e_1_1_measurement_a0ac58e22ae8f5cd6aa9b0342022755cc} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!mCFDTime250@{mCFDTime250}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_a0ac58e22ae8f5cd6aa9b0342022755cc}\index{PIXIE::Measurement@{PIXIE::Measurement}!mCFDTime250@{mCFDTime250}}
 \index{mCFDTime250@{mCFDTime250}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{mCFDTime250}{mCFDTime250}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+CFDTime250 = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x3\+FFF0000, 16)\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_a0ac58e22ae8f5cd6aa9b0342022755cc} 
+\mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+CFDTime250 = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x3\+FFF0000, 16)\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00080}{80}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_adf575f775608ab62599568b6489e075e}\label{class_p_i_x_i_e_1_1_measurement_adf575f775608ab62599568b6489e075e} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!mCFDTime500@{mCFDTime500}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_adf575f775608ab62599568b6489e075e}\index{PIXIE::Measurement@{PIXIE::Measurement}!mCFDTime500@{mCFDTime500}}
 \index{mCFDTime500@{mCFDTime500}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{mCFDTime500}{mCFDTime500}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+CFDTime500 = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x1\+FFF0000, 16)\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_adf575f775608ab62599568b6489e075e} 
+\mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+CFDTime500 = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x1\+FFF0000, 16)\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00081}{81}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_a8d0c8f565fa832fc8cc8bfc3e8e110bf}\label{class_p_i_x_i_e_1_1_measurement_a8d0c8f565fa832fc8cc8bfc3e8e110bf} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!mCFDTrigSource250@{mCFDTrigSource250}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_a8d0c8f565fa832fc8cc8bfc3e8e110bf}\index{PIXIE::Measurement@{PIXIE::Measurement}!mCFDTrigSource250@{mCFDTrigSource250}}
 \index{mCFDTrigSource250@{mCFDTrigSource250}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{mCFDTrigSource250}{mCFDTrigSource250}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+CFDTrig\+Source250 = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x40000000, 30)\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_a8d0c8f565fa832fc8cc8bfc3e8e110bf} 
+\mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+CFDTrig\+Source250 = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x40000000, 30)\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00084}{84}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_ae14697de8f71d43c847635717e9f5292}\label{class_p_i_x_i_e_1_1_measurement_ae14697de8f71d43c847635717e9f5292} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!mCFDTrigSource500@{mCFDTrigSource500}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_ae14697de8f71d43c847635717e9f5292}\index{PIXIE::Measurement@{PIXIE::Measurement}!mCFDTrigSource500@{mCFDTrigSource500}}
 \index{mCFDTrigSource500@{mCFDTrigSource500}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{mCFDTrigSource500}{mCFDTrigSource500}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+CFDTrig\+Source500 = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x\+E0000000, 29)\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_ae14697de8f71d43c847635717e9f5292} 
+\mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+CFDTrig\+Source500 = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x\+E0000000, 29)\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00085}{85}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_a9f15a16ee3331625cdc14173fb80c923}\label{class_p_i_x_i_e_1_1_measurement_a9f15a16ee3331625cdc14173fb80c923} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!mChannelNumber@{mChannelNumber}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_a9f15a16ee3331625cdc14173fb80c923}\index{PIXIE::Measurement@{PIXIE::Measurement}!mChannelNumber@{mChannelNumber}}
 \index{mChannelNumber@{mChannelNumber}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{mChannelNumber}{mChannelNumber}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+Channel\+Number = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0xF, 0)\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_a9f15a16ee3331625cdc14173fb80c923} 
+\mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+Channel\+Number = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0xF, 0)\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00067}{67}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_ac6f66de145022af06f425a21ebb16264}\label{class_p_i_x_i_e_1_1_measurement_ac6f66de145022af06f425a21ebb16264} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!mCrateID@{mCrateID}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_ac6f66de145022af06f425a21ebb16264}\index{PIXIE::Measurement@{PIXIE::Measurement}!mCrateID@{mCrateID}}
 \index{mCrateID@{mCrateID}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{mCrateID}{mCrateID}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+Crate\+ID = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x\+F00, 8)\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_ac6f66de145022af06f425a21ebb16264} 
+\mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+Crate\+ID = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x\+F00, 8)\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00069}{69}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_aab7a3ef37a548bbfa28c946a311efe27}\label{class_p_i_x_i_e_1_1_measurement_aab7a3ef37a548bbfa28c946a311efe27} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!mESumGap@{mESumGap}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_aab7a3ef37a548bbfa28c946a311efe27}\index{PIXIE::Measurement@{PIXIE::Measurement}!mESumGap@{mESumGap}}
 \index{mESumGap@{mESumGap}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{mESumGap}{mESumGap}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+ESum\+Gap = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x\+FFFFFFFF, 0)\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_aab7a3ef37a548bbfa28c946a311efe27} 
+\mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+ESum\+Gap = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x\+FFFFFFFF, 0)\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00089}{89}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_a5d2aaf215e88a684e0b8a1b917ded74a}\label{class_p_i_x_i_e_1_1_measurement_a5d2aaf215e88a684e0b8a1b917ded74a} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!mESumLeading@{mESumLeading}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_a5d2aaf215e88a684e0b8a1b917ded74a}\index{PIXIE::Measurement@{PIXIE::Measurement}!mESumLeading@{mESumLeading}}
 \index{mESumLeading@{mESumLeading}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{mESumLeading}{mESumLeading}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+ESum\+Leading = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x\+FFFFFFFF, 0)\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_a5d2aaf215e88a684e0b8a1b917ded74a} 
+\mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+ESum\+Leading = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x\+FFFFFFFF, 0)\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00088}{88}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_a984c5db2a3a0c4b78488b39a63bc2eba}\label{class_p_i_x_i_e_1_1_measurement_a984c5db2a3a0c4b78488b39a63bc2eba} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!mESumTrailing@{mESumTrailing}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_a984c5db2a3a0c4b78488b39a63bc2eba}\index{PIXIE::Measurement@{PIXIE::Measurement}!mESumTrailing@{mESumTrailing}}
 \index{mESumTrailing@{mESumTrailing}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{mESumTrailing}{mESumTrailing}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+ESum\+Trailing = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x\+FFFFFFFF, 0)\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_a984c5db2a3a0c4b78488b39a63bc2eba} 
+\mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+ESum\+Trailing = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x\+FFFFFFFF, 0)\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00087}{87}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_a6d94636a26be17a04c532d47adf635a3}\label{class_p_i_x_i_e_1_1_measurement_a6d94636a26be17a04c532d47adf635a3} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!mEventEnergy@{mEventEnergy}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_a6d94636a26be17a04c532d47adf635a3}\index{PIXIE::Measurement@{PIXIE::Measurement}!mEventEnergy@{mEventEnergy}}
 \index{mEventEnergy@{mEventEnergy}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{mEventEnergy}{mEventEnergy}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+Event\+Energy = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x\+FFFF, 0)\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_a6d94636a26be17a04c532d47adf635a3} 
+\mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+Event\+Energy = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x\+FFFF, 0)\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00075}{75}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_acebdcc1444a74f66d13ffcf245d4f3c9}\label{class_p_i_x_i_e_1_1_measurement_acebdcc1444a74f66d13ffcf245d4f3c9} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!mEventLength@{mEventLength}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_acebdcc1444a74f66d13ffcf245d4f3c9}\index{PIXIE::Measurement@{PIXIE::Measurement}!mEventLength@{mEventLength}}
 \index{mEventLength@{mEventLength}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{mEventLength}{mEventLength}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+Event\+Length = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x7\+FFE0000, 17)\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_acebdcc1444a74f66d13ffcf245d4f3c9} 
+\mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+Event\+Length = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x7\+FFE0000, 17)\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00071}{71}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_af1d03b0452c7557f88c0d1f080baac97}\label{class_p_i_x_i_e_1_1_measurement_af1d03b0452c7557f88c0d1f080baac97} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!mFinishCode@{mFinishCode}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_af1d03b0452c7557f88c0d1f080baac97}\index{PIXIE::Measurement@{PIXIE::Measurement}!mFinishCode@{mFinishCode}}
 \index{mFinishCode@{mFinishCode}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{mFinishCode}{mFinishCode}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+Finish\+Code = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x80000000, 31)\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_af1d03b0452c7557f88c0d1f080baac97} 
+\mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+Finish\+Code = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x80000000, 31)\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00072}{72}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_a831c73bd6161b366ff0b71ea5562b2e9}\label{class_p_i_x_i_e_1_1_measurement_a831c73bd6161b366ff0b71ea5562b2e9} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!mHeaderLength@{mHeaderLength}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_a831c73bd6161b366ff0b71ea5562b2e9}\index{PIXIE::Measurement@{PIXIE::Measurement}!mHeaderLength@{mHeaderLength}}
 \index{mHeaderLength@{mHeaderLength}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{mHeaderLength}{mHeaderLength}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+Header\+Length = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x1\+F000, 12)\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_a831c73bd6161b366ff0b71ea5562b2e9} 
+\mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+Header\+Length = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x1\+F000, 12)\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00070}{70}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_a0d9992a10a5d3aaba2f057067db05724}\label{class_p_i_x_i_e_1_1_measurement_a0d9992a10a5d3aaba2f057067db05724} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!mQDCSums@{mQDCSums}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_a0d9992a10a5d3aaba2f057067db05724}\index{PIXIE::Measurement@{PIXIE::Measurement}!mQDCSums@{mQDCSums}}
 \index{mQDCSums@{mQDCSums}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{mQDCSums}{mQDCSums}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+QDCSums = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x\+FFFFFFFF, 0)\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_a0d9992a10a5d3aaba2f057067db05724} 
+\mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+QDCSums = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x\+FFFFFFFF, 0)\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00092}{92}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_a4c2f96d027dde1e34557a1db0d4ee63b}\label{class_p_i_x_i_e_1_1_measurement_a4c2f96d027dde1e34557a1db0d4ee63b} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!mSlotID@{mSlotID}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_a4c2f96d027dde1e34557a1db0d4ee63b}\index{PIXIE::Measurement@{PIXIE::Measurement}!mSlotID@{mSlotID}}
 \index{mSlotID@{mSlotID}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{mSlotID}{mSlotID}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+Slot\+ID = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x\+F0, 4)\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_a4c2f96d027dde1e34557a1db0d4ee63b} 
+\mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+Slot\+ID = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x\+F0, 4)\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00068}{68}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_a11044cb22e1c5d875d5435b228927494}\label{class_p_i_x_i_e_1_1_measurement_a11044cb22e1c5d875d5435b228927494} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!mTimeHigh@{mTimeHigh}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_a11044cb22e1c5d875d5435b228927494}\index{PIXIE::Measurement@{PIXIE::Measurement}!mTimeHigh@{mTimeHigh}}
 \index{mTimeHigh@{mTimeHigh}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{mTimeHigh}{mTimeHigh}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+Time\+High = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x\+FFFF, 0)\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_a11044cb22e1c5d875d5435b228927494} 
+\mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+Time\+High = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x\+FFFF, 0)\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00074}{74}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_a5be5eb5f0cd3a2fe95bc8b566d055af0}\label{class_p_i_x_i_e_1_1_measurement_a5be5eb5f0cd3a2fe95bc8b566d055af0} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!mTimeLow@{mTimeLow}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_a5be5eb5f0cd3a2fe95bc8b566d055af0}\index{PIXIE::Measurement@{PIXIE::Measurement}!mTimeLow@{mTimeLow}}
 \index{mTimeLow@{mTimeLow}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{mTimeLow}{mTimeLow}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+Time\+Low = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x\+FFFFFFFF, 0)\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_a5be5eb5f0cd3a2fe95bc8b566d055af0} 
+\mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+Time\+Low = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x\+FFFFFFFF, 0)\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00073}{73}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_abc41327fb82ce874d11ba58362075052}\label{class_p_i_x_i_e_1_1_measurement_abc41327fb82ce874d11ba58362075052} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!mTraceLength@{mTraceLength}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_abc41327fb82ce874d11ba58362075052}\index{PIXIE::Measurement@{PIXIE::Measurement}!mTraceLength@{mTraceLength}}
 \index{mTraceLength@{mTraceLength}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{mTraceLength}{mTraceLength}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+Trace\+Length = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x7\+FFF0000, 16)\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_abc41327fb82ce874d11ba58362075052} 
+\mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+Trace\+Length = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x7\+FFF0000, 16)\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00076}{76}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_a5353a7a4ca1067137136cb23348f5eb5}\label{class_p_i_x_i_e_1_1_measurement_a5353a7a4ca1067137136cb23348f5eb5} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!mTraceOutRange@{mTraceOutRange}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_a5353a7a4ca1067137136cb23348f5eb5}\index{PIXIE::Measurement@{PIXIE::Measurement}!mTraceOutRange@{mTraceOutRange}}
 \index{mTraceOutRange@{mTraceOutRange}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{mTraceOutRange}{mTraceOutRange}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+Trace\+Out\+Range = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x80000000, 31)\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_a5353a7a4ca1067137136cb23348f5eb5} 
+\mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}} PIXIE\+::\+Measurement\+::m\+Trace\+Out\+Range = \mbox{\hyperlink{struct_p_i_x_i_e_1_1_mask}{Mask}}(0x80000000, 31)\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00077}{77}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_aa32b41845cd96b951763bd94667edb5b}\label{class_p_i_x_i_e_1_1_measurement_aa32b41845cd96b951763bd94667edb5b} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!nTraceMeas@{nTraceMeas}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_aa32b41845cd96b951763bd94667edb5b}\index{PIXIE::Measurement@{PIXIE::Measurement}!nTraceMeas@{nTraceMeas}}
 \index{nTraceMeas@{nTraceMeas}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{nTraceMeas}{nTraceMeas}}
-{\footnotesize\ttfamily int PIXIE\+::\+Measurement\+::n\+Trace\+Meas}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_aa32b41845cd96b951763bd94667edb5b} 
+int PIXIE\+::\+Measurement\+::n\+Trace\+Meas}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00064}{64}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_a0134ee34ee4211cc16ffc55a018d08db}\label{class_p_i_x_i_e_1_1_measurement_a0134ee34ee4211cc16ffc55a018d08db} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!outOfRange@{outOfRange}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_a0134ee34ee4211cc16ffc55a018d08db}\index{PIXIE::Measurement@{PIXIE::Measurement}!outOfRange@{outOfRange}}
 \index{outOfRange@{outOfRange}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{outOfRange}{outOfRange}}
-{\footnotesize\ttfamily uint32\+\_\+t PIXIE\+::\+Measurement\+::out\+Of\+Range}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_a0134ee34ee4211cc16ffc55a018d08db} 
+uint32\+\_\+t PIXIE\+::\+Measurement\+::out\+Of\+Range}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00050}{50}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}\label{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!QDCSums@{QDCSums}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995}\index{PIXIE::Measurement@{PIXIE::Measurement}!QDCSums@{QDCSums}}
 \index{QDCSums@{QDCSums}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{QDCSums}{QDCSums}}
-{\footnotesize\ttfamily uint32\+\_\+t PIXIE\+::\+Measurement\+::\+QDCSums\mbox{[}8\mbox{]}}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_a31c2c4f1aa0bc7163c2f0bb09d0f4995} 
+uint32\+\_\+t PIXIE\+::\+Measurement\+::\+QDCSums\mbox{[}8\mbox{]}}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00059}{59}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}\label{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!slotID@{slotID}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da}\index{PIXIE::Measurement@{PIXIE::Measurement}!slotID@{slotID}}
 \index{slotID@{slotID}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{slotID}{slotID}}
-{\footnotesize\ttfamily uint32\+\_\+t PIXIE\+::\+Measurement\+::slot\+ID}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_a5b5f3a4dea3cf357aaa82298af1ff1da} 
+uint32\+\_\+t PIXIE\+::\+Measurement\+::slot\+ID}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00043}{43}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_a3e2e36f00d13cc9afa7d8aaf2ffde095}\label{class_p_i_x_i_e_1_1_measurement_a3e2e36f00d13cc9afa7d8aaf2ffde095} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!trace@{trace}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_a99543a8cee3bf5123da2d5c110eb09f0}\index{PIXIE::Measurement@{PIXIE::Measurement}!trace@{trace}}
 \index{trace@{trace}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{trace}{trace}}
-{\footnotesize\ttfamily uint16\+\_\+t PIXIE\+::\+Measurement\+::trace\mbox{[}\mbox{\hyperlink{definitions_8hh_af0c0584410364a83dba3db590aa157e7}{MAX\+\_\+\+TRACE\+\_\+\+LENGTH}}\mbox{]}}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_a99543a8cee3bf5123da2d5c110eb09f0} 
+uint16\+\_\+t\texorpdfstring{$\ast$}{*} PIXIE\+::\+Measurement\+::trace}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00063}{63}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_abfb4ec14dc55376666331ec2ad293276}\label{class_p_i_x_i_e_1_1_measurement_abfb4ec14dc55376666331ec2ad293276} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!trace\_meas@{trace\_meas}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_abfb4ec14dc55376666331ec2ad293276}\index{PIXIE::Measurement@{PIXIE::Measurement}!trace\_meas@{trace\_meas}}
 \index{trace\_meas@{trace\_meas}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{trace\_meas}{trace\_meas}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{PIXIE\+::\+Trace\+::\+Measurement}} PIXIE\+::\+Measurement\+::trace\+\_\+meas\mbox{[}\mbox{\hyperlink{definitions_8hh_ae6ab47a1aec9dc6e7cb916c266a4e5a6}{MAX\+\_\+\+TRACE\+\_\+\+MEAS}}\mbox{]}}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_abfb4ec14dc55376666331ec2ad293276} 
+\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{PIXIE\+::\+Trace\+::\+Measurement}} PIXIE\+::\+Measurement\+::trace\+\_\+meas\mbox{[}\mbox{\hyperlink{definitions_8hh_ae6ab47a1aec9dc6e7cb916c266a4e5a6}{MAX\+\_\+\+TRACE\+\_\+\+MEAS}}\mbox{]}}
 
 
 
 Definition at line \mbox{\hyperlink{measurement_8hh_source_l00062}{62}} of file \mbox{\hyperlink{measurement_8hh_source}{measurement.\+hh}}.
 
-\Hypertarget{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05}\label{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05} 
-\index{PIXIE::Measurement@{PIXIE::Measurement}!traceLength@{traceLength}}
+\Hypertarget{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05}\index{PIXIE::Measurement@{PIXIE::Measurement}!traceLength@{traceLength}}
 \index{traceLength@{traceLength}!PIXIE::Measurement@{PIXIE::Measurement}}
 \doxysubsubsection{\texorpdfstring{traceLength}{traceLength}}
-{\footnotesize\ttfamily uint32\+\_\+t PIXIE\+::\+Measurement\+::trace\+Length}
+{\footnotesize\ttfamily \label{class_p_i_x_i_e_1_1_measurement_adb93890ef91a35ac88c9e23f31af4b05} 
+uint32\+\_\+t PIXIE\+::\+Measurement\+::trace\+Length}
 
 
 
