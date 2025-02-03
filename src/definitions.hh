@@ -9,6 +9,11 @@
 #define MAX_CRATES 2
 #define MAX_TRACE_LENGTH 2500 
 
-#define ROOT_COMPILE 1 
+#define ROOT_COMPILE 1
+#define PIXIE_READTYPE 2
+
+// 0 - fread  
+// 1 - mmap
+// 2 - fully buffer pixie data
 
 #endif

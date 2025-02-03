@@ -83,56 +83,88 @@ namespace PIXIE {
   }
 
   int Measurement::read_header(Reader *reader) {
-    uint32_t firstWords[4];
+#if PIXIE_READTYPE<2
+    unsigned int firstWords[4];
     if (!reader->NSCLDAQ) {
-      if (fread(&firstWords, (size_t) sizeof(int)*4, (size_t) 1, reader->file) != 1) {
-        return -1;    
-      }
+      if (PIXIE_READTYPE==0) {
+        if (fread(&firstWords[0], (size_t) sizeof(int)*4, (size_t) 1, reader->file) != 1) {
+          return -1;
+        }
+      }        
     }
     else {
       //some logic here to navigate NSCL data structures and find the next PIXIE fragment?
-      if (reader->nsclreader->findNextFragment(reader->file) < 0 ) {
+      if (reader->nsclreader->findNextFragment(reader) < 0 ) {
         return -1;
       }
-      if (fread(&firstWords, (size_t) sizeof(int)*4, (size_t) 1, reader->file) != 1) {
-        return -1;    
-      }
+#if PIXIE_READTYPE==0
+        if (fread(&firstWords[0], (size_t) sizeof(int)*4, (size_t) 1, reader->file) != 1) {
+          return -1;    
+        }
+#endif
       if (reader->nsclreader->presort) { reader->nsclreader->rib_size -= sizeof(int)*4; }
     }
-    
+
+    std::memcpy(&firstWords[0], &reader->buffer[reader->off], 4*sizeof(unsigned int));
+    reader->off += 4*sizeof(unsigned int);
     channelNumber = mChannelNumber(firstWords[0]);
     slotID        = mSlotID(firstWords[0]);
     crateID       = mCrateID(firstWords[0]);
     headerLength  = mHeaderLength(firstWords[0]);
     eventLength   = mEventLength(firstWords[0]);
     finishCode    = mFinishCode(firstWords[0]);
-
+#elif PIXIE_READTYPE==2 
+    if (reader->pOff + 4 > reader->pOffMax) { return -1; }
+    channelNumber = mChannelNumber(reader->pBuff[reader->pOff]);
+    slotID        = mSlotID(reader->pBuff[reader->pOff]);
+    crateID       = mCrateID(reader->pBuff[reader->pOff]);
+    headerLength  = mHeaderLength(reader->pBuff[reader->pOff]);
+    eventLength   = mEventLength(reader->pBuff[reader->pOff]);
+    finishCode    = mFinishCode(reader->pBuff[reader->pOff]);
+    reader->pOff++;
+#endif
+      
     int oldChan = channelNumber;
-	     
-    uint32_t timestampLow  = mTimeLow(firstWords[1]);
-    uint32_t timestampHigh = mTimeHigh(firstWords[2]);
-   
+
+    uint32_t timestampLow;
+    uint32_t timestampHigh;
+    
+#if PIXIE_READTYPE<2
+      timestampLow  = mTimeLow(firstWords[1]);
+      timestampHigh = mTimeHigh(firstWords[2]);
+#elif PIXIE_READTYPE==2
+      timestampLow  = mTimeLow(reader->pBuff[reader->pOff]);
+      reader->pOff++;
+      timestampHigh = mTimeHigh(reader->pBuff[reader->pOff]);
+#endif
+
     uint64_t timestamp=static_cast<uint64_t>(timestampHigh);
     timestamp=timestamp<<32;
     timestamp=timestamp+timestampLow;
 
+    eventEnergy=mEventEnergy(reader->pBuff[reader->pOff+1]);
+    traceLength=mTraceLength(reader->pBuff[reader->pOff+1]);
+    outOfRange=mTraceOutRange(reader->pBuff[reader->pOff+1]);
+
     if (reader->definition.GetChannel(crateID, slotID, channelNumber)) {
+#if PIXIE_READTYPE<2
       EventTime time = ProcessTime(timestamp, firstWords[2], reader->definition.GetSlot(crateID, slotID)->freq);
+#elif PIXIE_READTYPE==2
+      EventTime time = ProcessTime(timestamp, reader->pBuff[reader->pOff], reader->definition.GetSlot(crateID, slotID)->freq);
+#endif      
       eventTime = time.time;
-      CFDForce = time.CFDForce;            
+      CFDForce = time.CFDForce;
     }
     else {
       std::cout << "\nWarning! CrateID.SlotID.ChannelNumber " << crateID << "." << slotID << "." << channelNumber << " not found" << std::endl;
       eventTime = timestamp<<15;
-      eventEnergy=mEventEnergy(firstWords[3]);
-      traceLength=mTraceLength(firstWords[3]);
-      outOfRange=mTraceOutRange(firstWords[3]);
+
+      std::cout << reader->pOff << "   " << reader->pOffMax << std::endl;
       print();
     }
-    
-    eventEnergy=mEventEnergy(firstWords[3]);
-    traceLength=mTraceLength(firstWords[3]);
-    outOfRange=mTraceOutRange(firstWords[3]);
+
+    //print();
+    reader->pOff += 2;
 
     return 0;
   }  
@@ -142,25 +174,53 @@ namespace PIXIE {
     if (headerLength == 4) {;}
     else {
       //read the rest of the header
-      uint32_t otherWords[headerLength-4];
-      if (fread(&otherWords, (size_t) 4, (size_t) headerLength-4, reader->file) != (size_t) headerLength-4) {
+      //uint32_t otherWords[headerLength-4];
+#if PIXIE_READTYPE<2
+      unsigned int otherWords[headerLength-4];
+#if PIXIE_READTYPE==0
+      if (fread(&otherWords[0], (size_t) 4, (size_t) headerLength-4, reader->file) != (size_t) headerLength-4) {
         return -1;
       }
+#elif PIXIE_READTYPE==1
+      std::memcpy(&otherWords[0], &reader->buffer[reader->off], sizeof(unsigned int)*(headerLength-4));
+      reader->off += sizeof(unsigned int)*(headerLength-4);
+
+      if (reader->off > reader->fileSize) { return -1; }
+#endif      
       if (reader->NSCLDAQ) { if (reader->nsclreader->presort) { reader->nsclreader->rib_size -= 4*(headerLength-4); } }
+#endif
+
+      if (reader->pOff + headerLength - 4 > reader->pOffMax) { return -1; }
       
       //Read the rest of the header
       if (headerLength==8) {//Raw energy sums
-        ESumTrailing = mESumTrailing(otherWords[0]);
-        ESumLeading  = mESumLeading(otherWords[1]);
-        ESumGap      = mESumGap(otherWords[2]);
-        baseline     = mBaseline(otherWords[3]);
+#if PIXIE_READTYPE<2
+          ESumTrailing = mESumTrailing(otherWords[0]);
+          ESumLeading  = mESumLeading(otherWords[1]);
+          ESumGap      = mESumGap(otherWords[2]);
+          baseline     = mBaseline(otherWords[3]);
+#elif PIXIE_READTYPE==2
+          ESumTrailing = mESumTrailing(reader->pBuff[reader->pOff]);
+          ESumLeading  = mESumLeading(reader->pBuff[reader->pOff+1]);
+          ESumGap      = mESumGap(reader->pBuff[reader->pOff+2]);
+          baseline     = mBaseline(reader->pBuff[reader->pOff+3]);
+          reader->pOff += 4;
+#endif
       }
       else if (headerLength==12) {//QDCSums
+#if PIXIE_READTYPE<2
         for (int i=0; i<8; i++) {
           QDCSums[i]=mQDCSums(otherWords[i]);
         }
+#elif PIXIE_READTYPE==2
+        for (int i=0; i<8; i++) {
+          QDCSums[i]=mQDCSums(reader->pBuff[reader->pOff+i]);
+        }
+        reader->pOff += 8;
+#endif          
       }
       else if (headerLength==16) { //Both
+#if PIXIE_READTYPE<2
         ESumTrailing = mESumTrailing(otherWords[0]);
         ESumLeading  = mESumLeading(otherWords[1]);
         ESumGap      = mESumGap(otherWords[2]);
@@ -168,39 +228,71 @@ namespace PIXIE {
         for (int i=0; i<8; i++) {
           QDCSums[i]=mQDCSums(otherWords[4+i]);
         }
+#elif PIXIE_READTYPE==2
+        ESumTrailing = mESumTrailing(reader->pBuff[reader->pOff]);
+        ESumLeading  = mESumLeading(reader->pBuff[reader->pOff+1]);
+        ESumGap      = mESumGap(reader->pBuff[reader->pOff+2]);
+        baseline     = mBaseline(reader->pBuff[reader->pOff+3]);
+        for (int i=0; i<8; i++) {
+          QDCSums[i]=mQDCSums(reader->pBuff[reader->pOff+4+i]);
+        }
+        reader->pOff += 12;
+#endif
       }
     }
-
-    
+      
     //skip or proces the trace if recorded
     auto channel = reader->definition.GetChannel(crateID, slotID, channelNumber);
     //no trace, do nothing
     if ((eventLength - headerLength) == 0) {;}
     //skip trace if not needed
     else if (!channel) {
+#if PIXIE_READTYPE==0
       if (fseek(reader->file, (eventLength-headerLength)*4, SEEK_CUR)) {
         return -1;
       }
+#elif PIXIE_READTYPE==1
+      reader->off += (eventLength-headerLength)*4;
+#elif PIXIE_READTYPE==2      
+      reader->pOff += eventLength - headerLength;
+#endif
       if (reader->NSCLDAQ) { if (reader->nsclreader->presort) { reader->nsclreader->rib_size -= 4*(eventLength-headerLength); } }
     }
     else if (outTrace==NULL && !channel->traces){
+#if PIXIE_READTYPE==0
       if (fseek(reader->file, (eventLength-headerLength)*4, SEEK_CUR)) {
         return -1;
       }
+#elif PIXIE_READTYPE==1
+      reader->off += (eventLength-headerLength)*4;
+#elif PIXIE_READTYPE==2
+      reader->pOff += eventLength - headerLength;
+#endif
       if (reader->NSCLDAQ) { if (reader->nsclreader->presort) { reader->nsclreader->rib_size -= 4*(eventLength-headerLength); } }
     }
     //Read trace
     else {
       //uint16_t trace[traceLength]; // = {0};
       if (traceLength > MAX_TRACE_LENGTH) { std::cout << "WARNING: traceLength > MAX_TRACE_LENGTH" << std::endl; }
-      
+
+#if PIXIE_READTYPE==0
       if (fread(&(this->trace[0]), (size_t) 2, (size_t) traceLength, reader->file) != (size_t) traceLength) {
         return -1;
       }
+#elif PIXIE_READTYPE==1
+      memcpy(&(this->trace[0]), &reader->buffer[reader->off], traceLength*2);
+      reader->off += traceLength*2;
+      if (reader->off > reader->fileSize) { return -1; }
+#elif PIXIE_READTYPE==2
+      //memcpy(&(this->trace[0]), &reader->pBuff[reader->pOff], traceLength*2);
+      this->trace = (uint16_t*)&reader->pBuff[reader->pOff];
+      reader->pOff += traceLength/2;
+      if (reader->pOff > reader->pOffMax) { return -1; }
+#endif
       if (reader->NSCLDAQ) { if (reader->nsclreader->presort) { reader->nsclreader->rib_size -= 2*traceLength; } }
       
       if (outTrace!=NULL){
-        memcpy(outTrace, &trace,traceLength*sizeof(uint16_t));
+        memcpy(outTrace, trace,traceLength*sizeof(uint16_t));
       }
       if (channel->traces) {
         PIXIE::Trace::Algorithm *tracealg = channel->alg;

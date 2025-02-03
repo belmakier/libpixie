@@ -113,7 +113,9 @@ namespace PIXIE
         auto *channel = reader->definition.GetChannel(next_meas->crateID, next_meas->slotID, next_meas->channelNumber);
         if (!channel) { ; }
         else if (channel->extwind) {
-          maxTime = next_meas->eventTime+coincWindow;
+          if (next_meas->eventEnergy > 0 || reader->extendOnZeros) {
+            maxTime = next_meas->eventTime+coincWindow;
+          }
         }
         //go to next sub-event
 
