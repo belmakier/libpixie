@@ -9,8 +9,9 @@ var searchData=
   ['filesize_6',['fileSize',['../class_p_i_x_i_e_1_1_reader.html#a3cbf44c09c0127d4049eae7d04109084',1,'PIXIE::Reader']]],
   ['findnextfragment_7',['findNextFragment',['../class_p_i_x_i_e_1_1_n_s_c_l_reader.html#ae9f362ee912a172d39aca9d6dcb6d861',1,'PIXIE::NSCLReader']]],
   ['finishcode_8',['finishCode',['../class_p_i_x_i_e_1_1_measurement.html#abb003509076a78af508cfad581e40ad3',1,'PIXIE::Measurement']]],
-  ['fl_9',['fL',['../class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#ae12b21d1f5a546e1fc560af9b848b1e3',1,'PIXIE::Trace::Trapezoid::fL'],['../class_p_i_x_i_e_1_1_trace_1_1_peak_tail.html#ad26df172bdcf19a31c3c3fb2194d1422',1,'PIXIE::Trace::PeakTail::fL']]],
-  ['fmeasurements_10',['fMeasurements',['../class_p_i_x_i_e_1_1_event.html#a93932ad5d16872467ad4a5a3e44cfaa3',1,'PIXIE::Event']]],
-  ['freq_11',['freq',['../struct_p_i_x_i_e_1_1_experiment___definition_1_1_slot.html#aa9a0adee74322cdf40b154e4a1b85836',1,'PIXIE::Experiment_Definition::Slot']]],
-  ['fshift_12',['fShift',['../struct_p_i_x_i_e_1_1_mask.html#a0ed6d118e74974e13b937fc23822ab89',1,'PIXIE::Mask']]]
+  ['first_5ftime_9',['first_time',['../class_p_i_x_i_e_1_1_reader.html#a6d6ccccaed8685259f32ccc90fed2b45',1,'PIXIE::Reader']]],
+  ['fl_10',['fL',['../class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#ae12b21d1f5a546e1fc560af9b848b1e3',1,'PIXIE::Trace::Trapezoid::fL'],['../class_p_i_x_i_e_1_1_trace_1_1_peak_tail.html#ad26df172bdcf19a31c3c3fb2194d1422',1,'PIXIE::Trace::PeakTail::fL']]],
+  ['fmeasurements_11',['fMeasurements',['../class_p_i_x_i_e_1_1_event.html#a93932ad5d16872467ad4a5a3e44cfaa3',1,'PIXIE::Event']]],
+  ['freq_12',['freq',['../struct_p_i_x_i_e_1_1_experiment___definition_1_1_slot.html#aa9a0adee74322cdf40b154e4a1b85836',1,'PIXIE::Experiment_Definition::Slot']]],
+  ['fshift_13',['fShift',['../struct_p_i_x_i_e_1_1_mask.html#a0ed6d118e74974e13b937fc23822ab89',1,'PIXIE::Mask']]]
 ];

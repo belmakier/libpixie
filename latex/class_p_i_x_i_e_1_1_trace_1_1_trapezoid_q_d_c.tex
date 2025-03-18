@@ -95,53 +95,53 @@ Reimplemented from \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_aa3c
 
 
 
-Definition at line \mbox{\hyperlink{trace__algorithms_8cc_source_l00387}{387}} of file \mbox{\hyperlink{trace__algorithms_8cc_source}{trace\+\_\+algorithms.\+cc}}.
+Definition at line \mbox{\hyperlink{trace__algorithms_8cc_source_l00391}{391}} of file \mbox{\hyperlink{trace__algorithms_8cc_source}{trace\+\_\+algorithms.\+cc}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00387\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00388\ \ \ \ \ \ \ \textcolor{comment}{//Open\ files}}
-\DoxyCodeLine{00389\ }
-\DoxyCodeLine{00390\ \textcolor{preprocessor}{\#if\ ROOT\_COMPILE\ ==\ 1}}
-\DoxyCodeLine{00391\ \ \ \ \ \ \ TFile\ *outFile;}
-\DoxyCodeLine{00392\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (append==1)\{}
-\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ outFile\ =\ \textcolor{keyword}{new}\ TFile(fileName.c\_str(),\ \textcolor{stringliteral}{"{}UPDATE"{}});}
-\DoxyCodeLine{00394\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00395\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{00396\ \ \ \ \ \ \ \ \ outFile\ =\ \textcolor{keyword}{new}\ TFile(fileName.c\_str(),\ \textcolor{stringliteral}{"{}RECREATE"{}});}
-\DoxyCodeLine{00397\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00398\ }
-\DoxyCodeLine{00399\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ max\ =\ 1;}
-\DoxyCodeLine{00400\ \ \ \ \ \ \ TH1D\ *HTrace=\textcolor{keyword}{new}\ TH1D((traceName+std::to\_string(n\_traces)).c\_str(),(traceName+std::to\_string(n\_traces)).c\_str(),traceLen,0,traceLen);}
-\DoxyCodeLine{00401\ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i=0;i<traceLen;i++)\{}
-\DoxyCodeLine{00402\ \ \ \ \ \ \ \ \ HTrace-\/>AddBinContent(i,trace[i]-\/trace[0]);}
-\DoxyCodeLine{00403\ \ \ \ \ \textcolor{keywordflow}{if}\ (trace[i]-\/trace[0]>max)\{}
-\DoxyCodeLine{00404\ \ \ \ \ \ \ max\ =\ trace[i]-\/trace[0];}
-\DoxyCodeLine{00405\ \ \ \ \ \}}
-\DoxyCodeLine{00406\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00407\ \ \ \ \ \ \ HTrace-\/>Write();\ \ \ \ \ \ }
-\DoxyCodeLine{00408\ }
-\DoxyCodeLine{00409\ \ \ \ \ \ \ \textcolor{comment}{//Draw\ QDC\ windows}}
-\DoxyCodeLine{00410\ \ \ \ \ \ \ TMultiGraph\ *mg\ =\ \textcolor{keyword}{new}\ TMultiGraph(\textcolor{stringliteral}{"{}QDCS"{}},\textcolor{stringliteral}{"{}QDCS"{}});}
-\DoxyCodeLine{00411\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ nextQDC=0;}
-\DoxyCodeLine{00412\ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i=0;i<8;i++)\{}
-\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ TGraph\ *gr\ =\ \textcolor{keyword}{new}\ TGraph();}
-\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ gr-\/>SetLineColor(kRed);}
-\DoxyCodeLine{00415\ \ \ \ \ \ \ \ \ gr-\/>SetLineWidth(2);}
-\DoxyCodeLine{00416\ \ \ \ \ \ \ \ \ nextQDC\ +=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[i];}
-\DoxyCodeLine{00417\ \ \ \ \ \ \ \ \ gr-\/>SetPoint(0,nextQDC,0);}
-\DoxyCodeLine{00418\ \ \ \ \ \ \ \ \ gr-\/>SetPoint(1,nextQDC,0.1*max);}
-\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ mg\ -\/>Add(gr);}
-\DoxyCodeLine{00420\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00421\ \ \ \ \ \ \ mg-\/>Write();}
-\DoxyCodeLine{00422\ }
-\DoxyCodeLine{00423\ \ \ \ \ \ \ \textcolor{comment}{//Close\ files}}
-\DoxyCodeLine{00424\ \ \ \ \ \ \ outFile-\/>Purge();}
-\DoxyCodeLine{00425\ \ \ \ \ \ \ outFile-\/>Close();}
-\DoxyCodeLine{00426\ \textcolor{preprocessor}{\#endif\ }}
-\DoxyCodeLine{00427\ \ \ \ \ \ }
-\DoxyCodeLine{00428\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
-\DoxyCodeLine{00429\ \ \ \ \ \}}
+\DoxyCodeLine{00391\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00392\ \ \ \ \ \ \ \textcolor{comment}{//Open\ files}}
+\DoxyCodeLine{00393\ }
+\DoxyCodeLine{00394\ \textcolor{preprocessor}{\#if\ ROOT\_COMPILE\ ==\ 1}}
+\DoxyCodeLine{00395\ \ \ \ \ \ \ TFile\ *outFile;}
+\DoxyCodeLine{00396\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (append==1)\{}
+\DoxyCodeLine{00397\ \ \ \ \ \ \ \ \ outFile\ =\ \textcolor{keyword}{new}\ TFile(fileName.c\_str(),\ \textcolor{stringliteral}{"{}UPDATE"{}});}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00399\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00400\ \ \ \ \ \ \ \ \ outFile\ =\ \textcolor{keyword}{new}\ TFile(fileName.c\_str(),\ \textcolor{stringliteral}{"{}RECREATE"{}});}
+\DoxyCodeLine{00401\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00402\ }
+\DoxyCodeLine{00403\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ max\ =\ 1;}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ TH1D\ *HTrace=\textcolor{keyword}{new}\ TH1D((traceName+std::to\_string(n\_traces)).c\_str(),(traceName+std::to\_string(n\_traces)).c\_str(),traceLen,0,traceLen);}
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i=0;i<traceLen;i++)\{}
+\DoxyCodeLine{00406\ \ \ \ \ \ \ \ \ HTrace-\/>AddBinContent(i,trace[i]-\/trace[0]);}
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (trace[i]-\/trace[0]>max)\{}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ \ \ max\ =\ trace[i]-\/trace[0];}
+\DoxyCodeLine{00409\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00411\ \ \ \ \ \ \ HTrace-\/>Write();\ \ \ \ \ \ }
+\DoxyCodeLine{00412\ }
+\DoxyCodeLine{00413\ \ \ \ \ \ \ \textcolor{comment}{//Draw\ QDC\ windows}}
+\DoxyCodeLine{00414\ \ \ \ \ \ \ TMultiGraph\ *mg\ =\ \textcolor{keyword}{new}\ TMultiGraph(\textcolor{stringliteral}{"{}QDCS"{}},\textcolor{stringliteral}{"{}QDCS"{}});}
+\DoxyCodeLine{00415\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ nextQDC=0;}
+\DoxyCodeLine{00416\ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i=0;i<8;i++)\{}
+\DoxyCodeLine{00417\ \ \ \ \ \ \ \ \ TGraph\ *gr\ =\ \textcolor{keyword}{new}\ TGraph();}
+\DoxyCodeLine{00418\ \ \ \ \ \ \ \ \ gr-\/>SetLineColor(kRed);}
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ gr-\/>SetLineWidth(2);}
+\DoxyCodeLine{00420\ \ \ \ \ \ \ \ \ nextQDC\ +=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[i];}
+\DoxyCodeLine{00421\ \ \ \ \ \ \ \ \ gr-\/>SetPoint(0,nextQDC,0);}
+\DoxyCodeLine{00422\ \ \ \ \ \ \ \ \ gr-\/>SetPoint(1,nextQDC,0.1*max);}
+\DoxyCodeLine{00423\ \ \ \ \ \ \ \ \ mg\ -\/>Add(gr);}
+\DoxyCodeLine{00424\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00425\ \ \ \ \ \ \ mg-\/>Write();}
+\DoxyCodeLine{00426\ }
+\DoxyCodeLine{00427\ \ \ \ \ \ \ \textcolor{comment}{//Close\ files}}
+\DoxyCodeLine{00428\ \ \ \ \ \ \ outFile-\/>Purge();}
+\DoxyCodeLine{00429\ \ \ \ \ \ \ outFile-\/>Close();}
+\DoxyCodeLine{00430\ \textcolor{preprocessor}{\#endif\ }}
+\DoxyCodeLine{00431\ \ \ \ \ \ }
+\DoxyCodeLine{00432\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00433\ \ \ \ \ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_af392010e0ddd84193a52d47b1e45defe}\index{PIXIE::Trace::TrapezoidQDC@{PIXIE::Trace::TrapezoidQDC}!Load@{Load}}
@@ -156,36 +156,36 @@ Reimplemented from \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a7a5
 
 
 
-Definition at line \mbox{\hyperlink{trace__algorithms_8cc_source_l00258}{258}} of file \mbox{\hyperlink{trace__algorithms_8cc_source}{trace\+\_\+algorithms.\+cc}}.
+Definition at line \mbox{\hyperlink{trace__algorithms_8cc_source_l00262}{262}} of file \mbox{\hyperlink{trace__algorithms_8cc_source}{trace\+\_\+algorithms.\+cc}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00259\ \ \ \ \ \ \ FILE\ *fpr\ =\ fopen(filename,\ \textcolor{stringliteral}{"{}r"{}});}
-\DoxyCodeLine{00260\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fpr!=NULL)\{}
-\DoxyCodeLine{00261\ \ \ \ \ \textcolor{keywordtype}{char}\ line[200];}
-\DoxyCodeLine{00262\ \ \ \ \ \textcolor{keywordtype}{int}\ ind=-\/1;}
-\DoxyCodeLine{00263\ \ \ \ \ \textcolor{keywordflow}{while}\ (fgets(line,\ 200,\ fpr)!=0)\ \{}
-\DoxyCodeLine{00264\ \ \ \ \ \ \ \textcolor{keywordflow}{switch}(line[0])\{}
-\DoxyCodeLine{00265\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'\ '}:}
-\DoxyCodeLine{00266\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'\(\backslash\)t'}:}
-\DoxyCodeLine{00267\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'\(\backslash\)n'}:}
-\DoxyCodeLine{00268\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'\#'}:}
-\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00270\ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
-\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ sscanf(line,\textcolor{stringliteral}{"{}\%d\ \%d\ \%d\ \%d\ \%d\ \%f\ \%d\ \%d\ \%f\ \%f\ \%f\ \%f\ \%f\ \%f\ \%f\ \%f\ \%f\ \%f\ \%s\ \%s\ \%f\ \%f\ \%f\ \%f"{}},\&ind,\ \&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ae12b21d1f5a546e1fc560af9b848b1e3}{fL}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ac2acbbb289bfb291f8ad3f02c23d97b1}{fG}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a24bbb5f118d7127ebedede680dbef4fd}{sL}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a89e14d45faf34067d08ed11f5ca89cb4}{sG}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a05c05dd147acad46cc9fc88b0ec44bd7}{tau}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a3e4714dc2551cbd6396ce3a5dbeac6f8}{D}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a0569baccfd2c27a8bae5b42b532ccba9}{S}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_aebe5c3c6e03ebaf78d8e658132b75090}{ffThr}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_abcd3c02217b2f785ab57c6b31ff9c29c}{cfdThr}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[0],\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[1],\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[2],\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[3],\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[4],\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[5],\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[6],\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[7],\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_a801141883a2df166e5048313044dfa7a}{stringFast}},\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_a0da37779ec0506e2743cf6c6a7edbae5}{stringSlow}},\ \&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_aba49a9a963be936189b7d38866ad777a}{enLo}},\ \&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_a2b15828b1fbcd4471034a8197521a98f}{enHi}},\ \&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_a7a40be509cfdc1cd5feee35eac88c7d9}{pidLo}},\ \&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ac290a329c53ec0c1aa837a764e645ed2}{pidHi}});}
-\DoxyCodeLine{00272\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00273\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ind\ ==\ index)\ \{}
-\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00275\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00276\ \ \ \ \ \}}
-\DoxyCodeLine{00277\ \ \ \ \ fclose(fpr);\ fpr=NULL;}
-\DoxyCodeLine{00278\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a0cd4fcab67f90370e5d485da02ee9934}{is\_loaded}}\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00279\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00280\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{00281\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%sUnable\ to\ open\ file\ \%s\%s\%s,\ traces\ will\ not\ be\ processed\%s\(\backslash\)n"{}},\mbox{\hyperlink{colors_8hh_a34995b955465f6bbb37c359173d50477}{ANSI\_COLOR\_RED}},\ \mbox{\hyperlink{colors_8hh_a5a123b382640b3aa65dd5db386002fbc}{ANSI\_COLOR\_YELLOW}},filename,\mbox{\hyperlink{colors_8hh_a34995b955465f6bbb37c359173d50477}{ANSI\_COLOR\_RED}},\ \mbox{\hyperlink{colors_8hh_a92a364c2b863dde1a024a77eac2a5b3b}{ANSI\_COLOR\_RESET}});}
-\DoxyCodeLine{00282\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00283\ \ \ \ \ \}}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ FILE\ *fpr\ =\ fopen(filename,\ \textcolor{stringliteral}{"{}r"{}});}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fpr!=NULL)\{}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ line[200];}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ ind=-\/1;}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (fgets(line,\ 200,\ fpr)!=0)\ \{}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}(line[0])\{}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'\ '}:}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'\(\backslash\)t'}:}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'\(\backslash\)n'}:}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'\#'}:}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \ \ \ \ sscanf(line,\textcolor{stringliteral}{"{}\%d\ \%d\ \%d\ \%d\ \%d\ \%f\ \%d\ \%d\ \%f\ \%f\ \%f\ \%f\ \%f\ \%f\ \%f\ \%f\ \%f\ \%f\ \%s\ \%s\ \%f\ \%f\ \%f\ \%f"{}},\&ind,\ \&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ae12b21d1f5a546e1fc560af9b848b1e3}{fL}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ac2acbbb289bfb291f8ad3f02c23d97b1}{fG}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a24bbb5f118d7127ebedede680dbef4fd}{sL}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a89e14d45faf34067d08ed11f5ca89cb4}{sG}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a05c05dd147acad46cc9fc88b0ec44bd7}{tau}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a3e4714dc2551cbd6396ce3a5dbeac6f8}{D}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a0569baccfd2c27a8bae5b42b532ccba9}{S}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_aebe5c3c6e03ebaf78d8e658132b75090}{ffThr}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_abcd3c02217b2f785ab57c6b31ff9c29c}{cfdThr}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[0],\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[1],\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[2],\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[3],\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[4],\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[5],\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[6],\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[7],\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_a801141883a2df166e5048313044dfa7a}{stringFast}},\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_a0da37779ec0506e2743cf6c6a7edbae5}{stringSlow}},\ \&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_aba49a9a963be936189b7d38866ad777a}{enLo}},\ \&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_a2b15828b1fbcd4471034a8197521a98f}{enHi}},\ \&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_a7a40be509cfdc1cd5feee35eac88c7d9}{pidLo}},\ \&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ac290a329c53ec0c1aa837a764e645ed2}{pidHi}});}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ind\ ==\ index)\ \{}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ fclose(fpr);\ fpr=NULL;}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a0cd4fcab67f90370e5d485da02ee9934}{is\_loaded}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%sUnable\ to\ open\ file\ \%s\%s\%s,\ traces\ will\ not\ be\ processed\%s\(\backslash\)n"{}},\mbox{\hyperlink{colors_8hh_a34995b955465f6bbb37c359173d50477}{ANSI\_COLOR\_RED}},\ \mbox{\hyperlink{colors_8hh_a5a123b382640b3aa65dd5db386002fbc}{ANSI\_COLOR\_YELLOW}},filename,\mbox{\hyperlink{colors_8hh_a34995b955465f6bbb37c359173d50477}{ANSI\_COLOR\_RED}},\ \mbox{\hyperlink{colors_8hh_a92a364c2b863dde1a024a77eac2a5b3b}{ANSI\_COLOR\_RESET}});}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00287\ \ \ \ \ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab0fc04f3144e4272d6f42800c4dc4183}\index{PIXIE::Trace::TrapezoidQDC@{PIXIE::Trace::TrapezoidQDC}!Process@{Process}}
@@ -200,77 +200,77 @@ Reimplemented from \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ac5d
 
 
 
-Definition at line \mbox{\hyperlink{trace__algorithms_8cc_source_l00319}{319}} of file \mbox{\hyperlink{trace__algorithms_8cc_source}{trace\+\_\+algorithms.\+cc}}.
+Definition at line \mbox{\hyperlink{trace__algorithms_8cc_source_l00323}{323}} of file \mbox{\hyperlink{trace__algorithms_8cc_source}{trace\+\_\+algorithms.\+cc}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00320\ \ \ \ \ \ \ std::vector<Measurement>\ retval;}
-\DoxyCodeLine{00321\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ BL[length];\textcolor{comment}{//=\{0\};}}
-\DoxyCodeLine{00322\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ QDCSums[8];\textcolor{comment}{//=\{0\};}}
-\DoxyCodeLine{00323\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ prevQDC=0;}
-\DoxyCodeLine{00324\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ currentQDC=0;}
-\DoxyCodeLine{00325\ \ \ \ \ \ \ }
-\DoxyCodeLine{00326\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ Q=0,\ QTime=0;}
-\DoxyCodeLine{00327\ \ \ \ \ \ \ }
-\DoxyCodeLine{00328\ \ \ \ \ \ \ retval\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a795b286a8b183874822bfa1bc8292a18}{Trapezoid::TrapFilter}}(trace,\ length);}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ std::vector<Measurement>\ retval;}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ BL[length];\textcolor{comment}{//=\{0\};}}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ QDCSums[8];\textcolor{comment}{//=\{0\};}}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ prevQDC=0;}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ currentQDC=0;}
 \DoxyCodeLine{00329\ \ \ \ \ \ \ }
-\DoxyCodeLine{00330\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ mean\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a00e96dba2654d6815574e4f5cd73931a}{Trapezoid::GetBaseline}}(trace,\ length);}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ Q=0,\ QTime=0;}
 \DoxyCodeLine{00331\ \ \ \ \ \ \ }
-\DoxyCodeLine{00332\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ k=0;k<length;k++)\ \{}
-\DoxyCodeLine{00333\ \ \ \ \ BL[k]=trace[k]-\/mean;}
-\DoxyCodeLine{00334\ \ \ \ \ }
-\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Get\ QDCSums}}
-\DoxyCodeLine{00336\ \ \ \ \ \textcolor{keywordflow}{if}\ ((k-\/prevQDC)>=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[currentQDC])\ \{}
-\DoxyCodeLine{00337\ \ \ \ \ \ \ prevQDC+=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[currentQDC];}
-\DoxyCodeLine{00338\ \ \ \ \ \ \ currentQDC+=1;}
-\DoxyCodeLine{00339\ \ \ \ \ \}}
-\DoxyCodeLine{00340\ \ \ \ \ \textcolor{keywordflow}{if}\ (currentQDC<8)\{\ \ \ \ }
-\DoxyCodeLine{00341\ \ \ \ \ \ \ QDCSums[currentQDC]+=BL[k];}
-\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00343\ }
-\DoxyCodeLine{00344\ \ \ \ \ \textcolor{comment}{//Get\ QTime}}
-\DoxyCodeLine{00345\ \ \ \ \ Q+=BL[k];}
-\DoxyCodeLine{00346\ \ \ \ \ QTime\ +=\ BL[k]*k;}
-\DoxyCodeLine{00347\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00348\ \ \ \ \ \ \ QTime\ =\ QTime\ /\ Q;\ \ \ \ \ \ }
-\DoxyCodeLine{00349\ }
-\DoxyCodeLine{00350\ \ \ \ \ \ \ Measurement\ qtime(\textcolor{stringliteral}{"{}TraceQTime"{}},\ (int16\_t)\ QTime);}
-\DoxyCodeLine{00351\ \ \ \ \ \ \ retval.push\_back(qtime);}
-\DoxyCodeLine{00352\ }
-\DoxyCodeLine{00353\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ qdcT=0,qdcF=0,qdcS=0,qdcP;}
-\DoxyCodeLine{00354\ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ *ptr;}
-\DoxyCodeLine{00355\ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ slowMask=strtol(\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_a0da37779ec0506e2743cf6c6a7edbae5}{stringSlow}},\&ptr,2),\ fastMask=strtol(\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_a801141883a2df166e5048313044dfa7a}{stringFast}},\&ptr,2);}
-\DoxyCodeLine{00356\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<8;\ ++i)\ \{}
-\DoxyCodeLine{00357\ \ \ \ \ Measurement\ qdc(\textcolor{stringliteral}{"{}TraceQDC"{}}+std::to\_string(i),\ round(QDCSums[i]));}
-\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ retval.push\_back(qdc);}
-\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(slowMask\ \&\ (1<<(7-\/i)))\{}
-\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ \ \ qdcS\ +=\ round(QDCSums[i]);}
-\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(fastMask\ \&\ (1<<(7-\/i)))\{}
-\DoxyCodeLine{00363\ \ \ \ \ \ \ \ \ \ \ qdcF\ +=\ round(QDCSums[i]);}
-\DoxyCodeLine{00364\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ qdcT\ +=\ round(QDCSums[i]);}
-\DoxyCodeLine{00366\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00367\ \ \ \ \ \ \ qdcP\ =\ qdcS/qdcF\ *\ 32768;}
-\DoxyCodeLine{00368\ \ \ \ \ \ \ }
-\DoxyCodeLine{00369\ \ \ \ \ \ \ Measurement\ qdcFast(\textcolor{stringliteral}{"{}TraceQDCFast"{}},\ qdcF);}
-\DoxyCodeLine{00370\ \ \ \ \ \ \ retval.push\_back(qdcFast);}
-\DoxyCodeLine{00371\ }
-\DoxyCodeLine{00372\ \ \ \ \ \ \ Measurement\ qdcSlow(\textcolor{stringliteral}{"{}TraceQDCSlow"{}},\ qdcS);}
-\DoxyCodeLine{00373\ \ \ \ \ \ \ retval.push\_back(qdcSlow);}
-\DoxyCodeLine{00374\ \ \ \ \ \ \ }
-\DoxyCodeLine{00375\ \ \ \ \ \ \ Measurement\ qdcPID(\textcolor{stringliteral}{"{}TraceQDCPID"{}},\ qdcP\ \ );}
-\DoxyCodeLine{00376\ \ \ \ \ \ \ retval.push\_back(qdcPID);}
-\DoxyCodeLine{00377\ }
-\DoxyCodeLine{00378\ \ \ \ \ \ \ Measurement\ qdcTotal(\textcolor{stringliteral}{"{}TraceQDCTotal"{}},\ qdcT);}
-\DoxyCodeLine{00379\ \ \ \ \ \ \ retval.push\_back(qdcTotal);}
-\DoxyCodeLine{00380\ }
-\DoxyCodeLine{00381\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (qdcT\ >\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_aba49a9a963be936189b7d38866ad777a}{enLo}}\ \&\&\ qdcT\ <\ enHi\ \&\&\ qdcP\ >\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_a7a40be509cfdc1cd5feee35eac88c7d9}{pidLo}}\ \&\&\ qdcP\ <\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ac290a329c53ec0c1aa837a764e645ed2}{pidHi}})\ \{\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a3a179dfa3c4c83f0750b0a205b55bb35}{good\_trace}}\ =\ \textcolor{keyword}{true};\ \}}
-\DoxyCodeLine{00382\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a3a179dfa3c4c83f0750b0a205b55bb35}{good\_trace}}=\textcolor{keyword}{false};\}\ \ \ \ \ \ }
-\DoxyCodeLine{00383\ }
-\DoxyCodeLine{00384\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ retval;}
-\DoxyCodeLine{00385\ \ \ \ \ \}}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ retval\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a795b286a8b183874822bfa1bc8292a18}{Trapezoid::TrapFilter}}(trace,\ length);}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ }
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ mean\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a00e96dba2654d6815574e4f5cd73931a}{Trapezoid::GetBaseline}}(trace,\ length);}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ }
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ k=0;k<length;k++)\ \{}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ BL[k]=trace[k]-\/mean;}
+\DoxyCodeLine{00338\ \ \ \ \ }
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Get\ QDCSums}}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((k-\/prevQDC)>=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[currentQDC])\ \{}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \ \ prevQDC+=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[currentQDC];}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \ \ currentQDC+=1;}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (currentQDC<8)\{\ \ \ \ }
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \ \ QDCSums[currentQDC]+=BL[k];}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00347\ }
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Get\ QTime}}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ Q+=BL[k];}
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ QTime\ +=\ BL[k]*k;}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ QTime\ =\ QTime\ /\ Q;\ \ \ \ \ \ }
+\DoxyCodeLine{00353\ }
+\DoxyCodeLine{00354\ \ \ \ \ \ \ Measurement\ qtime(\textcolor{stringliteral}{"{}TraceQTime"{}},\ (int16\_t)\ QTime);}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ retval.push\_back(qtime);}
+\DoxyCodeLine{00356\ }
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ qdcT=0,qdcF=0,qdcS=0,qdcP;}
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ *ptr;}
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ slowMask=strtol(\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_a0da37779ec0506e2743cf6c6a7edbae5}{stringSlow}},\&ptr,2),\ fastMask=strtol(\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_a801141883a2df166e5048313044dfa7a}{stringFast}},\&ptr,2);}
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<8;\ ++i)\ \{}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ Measurement\ qdc(\textcolor{stringliteral}{"{}TraceQDC"{}}+std::to\_string(i),\ round(QDCSums[i]));}
+\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ retval.push\_back(qdc);}
+\DoxyCodeLine{00363\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(slowMask\ \&\ (1<<(7-\/i)))\{}
+\DoxyCodeLine{00364\ \ \ \ \ \ \ \ \ \ \ qdcS\ +=\ round(QDCSums[i]);}
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00366\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(fastMask\ \&\ (1<<(7-\/i)))\{}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ \ \ qdcF\ +=\ round(QDCSums[i]);}
+\DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00369\ \ \ \ \ \ \ \ \ qdcT\ +=\ round(QDCSums[i]);}
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00371\ \ \ \ \ \ \ qdcP\ =\ qdcS/qdcF\ *\ 32768;}
+\DoxyCodeLine{00372\ \ \ \ \ \ \ }
+\DoxyCodeLine{00373\ \ \ \ \ \ \ Measurement\ qdcFast(\textcolor{stringliteral}{"{}TraceQDCFast"{}},\ qdcF);}
+\DoxyCodeLine{00374\ \ \ \ \ \ \ retval.push\_back(qdcFast);}
+\DoxyCodeLine{00375\ }
+\DoxyCodeLine{00376\ \ \ \ \ \ \ Measurement\ qdcSlow(\textcolor{stringliteral}{"{}TraceQDCSlow"{}},\ qdcS);}
+\DoxyCodeLine{00377\ \ \ \ \ \ \ retval.push\_back(qdcSlow);}
+\DoxyCodeLine{00378\ \ \ \ \ \ \ }
+\DoxyCodeLine{00379\ \ \ \ \ \ \ Measurement\ qdcPID(\textcolor{stringliteral}{"{}TraceQDCPID"{}},\ qdcP\ \ );}
+\DoxyCodeLine{00380\ \ \ \ \ \ \ retval.push\_back(qdcPID);}
+\DoxyCodeLine{00381\ }
+\DoxyCodeLine{00382\ \ \ \ \ \ \ Measurement\ qdcTotal(\textcolor{stringliteral}{"{}TraceQDCTotal"{}},\ qdcT);}
+\DoxyCodeLine{00383\ \ \ \ \ \ \ retval.push\_back(qdcTotal);}
+\DoxyCodeLine{00384\ }
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (qdcT\ >\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_aba49a9a963be936189b7d38866ad777a}{enLo}}\ \&\&\ qdcT\ <\ enHi\ \&\&\ qdcP\ >\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_a7a40be509cfdc1cd5feee35eac88c7d9}{pidLo}}\ \&\&\ qdcP\ <\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ac290a329c53ec0c1aa837a764e645ed2}{pidHi}})\ \{\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a3a179dfa3c4c83f0750b0a205b55bb35}{good\_trace}}\ =\ \textcolor{keyword}{true};\ \}}
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a3a179dfa3c4c83f0750b0a205b55bb35}{good\_trace}}=\textcolor{keyword}{false};\}\ \ \ \ \ \ }
+\DoxyCodeLine{00387\ }
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ retval;}
+\DoxyCodeLine{00389\ \ \ \ \ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_a69db32f78148ec967fa97e969b34df89}\index{PIXIE::Trace::TrapezoidQDC@{PIXIE::Trace::TrapezoidQDC}!Prototype@{Prototype}}
@@ -285,43 +285,43 @@ Reimplemented from \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a51c
 
 
 
-Definition at line \mbox{\hyperlink{trace__algorithms_8cc_source_l00285}{285}} of file \mbox{\hyperlink{trace__algorithms_8cc_source}{trace\+\_\+algorithms.\+cc}}.
+Definition at line \mbox{\hyperlink{trace__algorithms_8cc_source_l00289}{289}} of file \mbox{\hyperlink{trace__algorithms_8cc_source}{trace\+\_\+algorithms.\+cc}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00286\ \ \ \ \ \ \ std::vector<Measurement>\ retval;}
-\DoxyCodeLine{00287\ \ \ \ \ \ \ Measurement\ tcp(\textcolor{stringliteral}{"{}TraceTCP"{}},\ 0);}
-\DoxyCodeLine{00288\ \ \ \ \ \ \ Measurement\ zcp(\textcolor{stringliteral}{"{}TraceZCP"{}},\ 0);}
-\DoxyCodeLine{00289\ \ \ \ \ \ \ Measurement\ cfd(\textcolor{stringliteral}{"{}TraceCFD"{}},\ 0);}
-\DoxyCodeLine{00290\ \ \ \ \ \ \ Measurement\ energy(\textcolor{stringliteral}{"{}TraceEnergy"{}},\ 0);}
-\DoxyCodeLine{00291\ \ \ \ \ \ \ Measurement\ QTime(\textcolor{stringliteral}{"{}TraceQTime"{}},\ 0);}
-\DoxyCodeLine{00292\ \ \ \ \ \ \ }
-\DoxyCodeLine{00293\ \ \ \ \ \ \ retval.push\_back(tcp);}
-\DoxyCodeLine{00294\ \ \ \ \ \ \ retval.push\_back(zcp);}
-\DoxyCodeLine{00295\ \ \ \ \ \ \ retval.push\_back(cfd);}
-\DoxyCodeLine{00296\ \ \ \ \ \ \ retval.push\_back(energy);}
-\DoxyCodeLine{00297\ \ \ \ \ \ \ retval.push\_back(QTime);}
-\DoxyCodeLine{00298\ \ \ \ \ \ \ }
-\DoxyCodeLine{00299\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<8;\ ++i)\ \{}
-\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ Measurement\ qdc(\textcolor{stringliteral}{"{}TraceQDC"{}}+std::to\_string(i),\ 0);}
-\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ retval.push\_back(qdc);}
-\DoxyCodeLine{00302\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00303\ }
-\DoxyCodeLine{00304\ \ \ \ \ \ \ Measurement\ qdcFast(\textcolor{stringliteral}{"{}TraceQDCFast"{}},\ 0);}
-\DoxyCodeLine{00305\ \ \ \ \ \ \ retval.push\_back(qdcFast);}
-\DoxyCodeLine{00306\ }
-\DoxyCodeLine{00307\ \ \ \ \ \ \ Measurement\ qdcSlow(\textcolor{stringliteral}{"{}TraceQDCSlow"{}},\ 0);}
-\DoxyCodeLine{00308\ \ \ \ \ \ \ retval.push\_back(qdcSlow);}
-\DoxyCodeLine{00309\ }
-\DoxyCodeLine{00310\ \ \ \ \ \ \ Measurement\ qdcPID(\textcolor{stringliteral}{"{}TraceQDCPID"{}},\ 0);}
-\DoxyCodeLine{00311\ \ \ \ \ \ \ retval.push\_back(qdcPID);}
-\DoxyCodeLine{00312\ }
-\DoxyCodeLine{00313\ \ \ \ \ \ \ Measurement\ qdcTotal(\textcolor{stringliteral}{"{}TraceQDCTot"{}},\ 0);}
-\DoxyCodeLine{00314\ \ \ \ \ \ \ retval.push\_back(qdcTotal);}
-\DoxyCodeLine{00315\ }
-\DoxyCodeLine{00316\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ retval;}
-\DoxyCodeLine{00317\ \ \ \ \ \}}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ std::vector<Measurement>\ retval;}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ Measurement\ tcp(\textcolor{stringliteral}{"{}TraceTCP"{}},\ 0);}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ Measurement\ zcp(\textcolor{stringliteral}{"{}TraceZCP"{}},\ 0);}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ Measurement\ cfd(\textcolor{stringliteral}{"{}TraceCFD"{}},\ 0);}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ Measurement\ energy(\textcolor{stringliteral}{"{}TraceEnergy"{}},\ 0);}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ Measurement\ QTime(\textcolor{stringliteral}{"{}TraceQTime"{}},\ 0);}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ }
+\DoxyCodeLine{00297\ \ \ \ \ \ \ retval.push\_back(tcp);}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ retval.push\_back(zcp);}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ retval.push\_back(cfd);}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ retval.push\_back(energy);}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ retval.push\_back(QTime);}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ }
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<8;\ ++i)\ \{}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ Measurement\ qdc(\textcolor{stringliteral}{"{}TraceQDC"{}}+std::to\_string(i),\ 0);}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ retval.push\_back(qdc);}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00307\ }
+\DoxyCodeLine{00308\ \ \ \ \ \ \ Measurement\ qdcFast(\textcolor{stringliteral}{"{}TraceQDCFast"{}},\ 0);}
+\DoxyCodeLine{00309\ \ \ \ \ \ \ retval.push\_back(qdcFast);}
+\DoxyCodeLine{00310\ }
+\DoxyCodeLine{00311\ \ \ \ \ \ \ Measurement\ qdcSlow(\textcolor{stringliteral}{"{}TraceQDCSlow"{}},\ 0);}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ retval.push\_back(qdcSlow);}
+\DoxyCodeLine{00313\ }
+\DoxyCodeLine{00314\ \ \ \ \ \ \ Measurement\ qdcPID(\textcolor{stringliteral}{"{}TraceQDCPID"{}},\ 0);}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ retval.push\_back(qdcPID);}
+\DoxyCodeLine{00316\ }
+\DoxyCodeLine{00317\ \ \ \ \ \ \ Measurement\ qdcTotal(\textcolor{stringliteral}{"{}TraceQDCTot"{}},\ 0);}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ retval.push\_back(qdcTotal);}
+\DoxyCodeLine{00319\ }
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ retval;}
+\DoxyCodeLine{00321\ \ \ \ \ \}}
 
 \end{DoxyCode}
 

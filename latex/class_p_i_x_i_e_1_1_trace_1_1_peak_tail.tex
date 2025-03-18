@@ -79,33 +79,33 @@ Implements \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a03f21dc897a
 
 
 
-Definition at line \mbox{\hyperlink{trace__algorithms_8cc_source_l00531}{531}} of file \mbox{\hyperlink{trace__algorithms_8cc_source}{trace\+\_\+algorithms.\+cc}}.
+Definition at line \mbox{\hyperlink{trace__algorithms_8cc_source_l00535}{535}} of file \mbox{\hyperlink{trace__algorithms_8cc_source}{trace\+\_\+algorithms.\+cc}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00531\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00532\ \textcolor{preprocessor}{\#if\ ROOT\_COMPILE\ ==\ 1}}
-\DoxyCodeLine{00533\ \ \ \ \ \ \ TFile\ *outFile;}
-\DoxyCodeLine{00534\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (append==1)\{}
-\DoxyCodeLine{00535\ \ \ \ \ \ \ \ \ outFile\ =\ \textcolor{keyword}{new}\ TFile(fileName.c\_str(),\ \textcolor{stringliteral}{"{}UPDATE"{}});}
-\DoxyCodeLine{00536\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00537\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{00538\ \ \ \ \ \ \ \ \ outFile\ =\ \textcolor{keyword}{new}\ TFile(fileName.c\_str(),\ \textcolor{stringliteral}{"{}RECREATE"{}});}
-\DoxyCodeLine{00539\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00540\ \ \ \ \ \ \ }
-\DoxyCodeLine{00541\ \ \ \ \ \ \ \textcolor{comment}{//write\ trace\ +\ anything\ else\ to\ file}}
-\DoxyCodeLine{00542\ \ \ \ \ \ \ TH1D\ *HTrace=\textcolor{keyword}{new}\ TH1D((traceName+std::to\_string(n\_traces)).c\_str(),(traceName+std::to\_string(n\_traces)).c\_str(),traceLen,0,traceLen);}
-\DoxyCodeLine{00543\ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i=0;i<traceLen;i++)\{}
-\DoxyCodeLine{00544\ \ \ \ \ \ \ \ \ HTrace-\/>AddBinContent(i,trace[i]-\/trace[0]);}
-\DoxyCodeLine{00545\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00546\ \ \ \ \ \ \ HTrace-\/>Write();}
-\DoxyCodeLine{00547\ \ \ \ \ \ \ }
-\DoxyCodeLine{00548\ \ \ \ \ \ \ \textcolor{comment}{//Close\ File}}
-\DoxyCodeLine{00549\ \ \ \ \ \ \ outFile-\/>Purge();}
-\DoxyCodeLine{00550\ \ \ \ \ \ \ outFile-\/>Close();}
-\DoxyCodeLine{00551\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{00552\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{00553\ \ \ \ \ \}}
+\DoxyCodeLine{00535\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00536\ \textcolor{preprocessor}{\#if\ ROOT\_COMPILE\ ==\ 1}}
+\DoxyCodeLine{00537\ \ \ \ \ \ \ TFile\ *outFile;}
+\DoxyCodeLine{00538\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (append==1)\{}
+\DoxyCodeLine{00539\ \ \ \ \ \ \ \ \ outFile\ =\ \textcolor{keyword}{new}\ TFile(fileName.c\_str(),\ \textcolor{stringliteral}{"{}UPDATE"{}});}
+\DoxyCodeLine{00540\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00541\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00542\ \ \ \ \ \ \ \ \ outFile\ =\ \textcolor{keyword}{new}\ TFile(fileName.c\_str(),\ \textcolor{stringliteral}{"{}RECREATE"{}});}
+\DoxyCodeLine{00543\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00544\ \ \ \ \ \ \ }
+\DoxyCodeLine{00545\ \ \ \ \ \ \ \textcolor{comment}{//write\ trace\ +\ anything\ else\ to\ file}}
+\DoxyCodeLine{00546\ \ \ \ \ \ \ TH1D\ *HTrace=\textcolor{keyword}{new}\ TH1D((traceName+std::to\_string(n\_traces)).c\_str(),(traceName+std::to\_string(n\_traces)).c\_str(),traceLen,0,traceLen);}
+\DoxyCodeLine{00547\ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i=0;i<traceLen;i++)\{}
+\DoxyCodeLine{00548\ \ \ \ \ \ \ \ \ HTrace-\/>AddBinContent(i,trace[i]-\/trace[0]);}
+\DoxyCodeLine{00549\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00550\ \ \ \ \ \ \ HTrace-\/>Write();}
+\DoxyCodeLine{00551\ \ \ \ \ \ \ }
+\DoxyCodeLine{00552\ \ \ \ \ \ \ \textcolor{comment}{//Close\ File}}
+\DoxyCodeLine{00553\ \ \ \ \ \ \ outFile-\/>Purge();}
+\DoxyCodeLine{00554\ \ \ \ \ \ \ outFile-\/>Close();}
+\DoxyCodeLine{00555\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00556\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00557\ \ \ \ \ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a25ed72da642f782767484902d5225f5d}\index{PIXIE::Trace::PeakTail@{PIXIE::Trace::PeakTail}!Load@{Load}}
@@ -120,36 +120,36 @@ Implements \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a507daabea58
 
 
 
-Definition at line \mbox{\hyperlink{trace__algorithms_8cc_source_l00432}{432}} of file \mbox{\hyperlink{trace__algorithms_8cc_source}{trace\+\_\+algorithms.\+cc}}.
+Definition at line \mbox{\hyperlink{trace__algorithms_8cc_source_l00436}{436}} of file \mbox{\hyperlink{trace__algorithms_8cc_source}{trace\+\_\+algorithms.\+cc}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00432\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00433\ \ \ \ \ \ \ FILE\ *fpr\ =\ fopen(filename,\ \textcolor{stringliteral}{"{}r"{}});}
-\DoxyCodeLine{00434\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fpr!=NULL)\{}
-\DoxyCodeLine{00435\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ line[200];}
-\DoxyCodeLine{00436\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ ind=-\/1;}
-\DoxyCodeLine{00437\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (fgets(line,\ 200,\ fpr)!=0)\ \{}
-\DoxyCodeLine{00438\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}(line[0])\{}
-\DoxyCodeLine{00439\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'\ '}:}
-\DoxyCodeLine{00440\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'\(\backslash\)t'}:}
-\DoxyCodeLine{00441\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'\(\backslash\)n'}:}
-\DoxyCodeLine{00442\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'\#'}:}
-\DoxyCodeLine{00443\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00444\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
-\DoxyCodeLine{00445\ \ \ \ \ \ \ \ \ \ \ \ \ sscanf(line,\textcolor{stringliteral}{"{}\%d\ \%d\ \%d\ \%d\ \%d\ \%d\ \%d\ \%d\ \%d\ \%d\ \%d\ \%d\ \%d\ \%d"{}},}
-\DoxyCodeLine{00446\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&ind,\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a8c2a6d33bfd7323c9e05967e7d441f45}{bLow}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a1b8495d9daea87fdc674a386d1c74c70}{bHigh}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a4a25e450168b3e5521683f328871beb9}{pLow}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a73804ea0ad6dc29ae555ed16b23fce7b}{pHigh}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a10e2aa9fe5568010ab3c8b33a6bfe1dc}{tLow}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_ab542f7ddb6ce6d19ae46051227b8edc5}{tHigh}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_ad5630eeeb7c19d8d69c29d2f188dba25}{eLow}},}
-\DoxyCodeLine{00447\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a0f92a714ca0df2b74642b3c0989bb86f}{eHigh}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a401b665d51166cad9fecf827a6641095}{pbLow}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a6c43713d36ed3009af04737bbba12388}{pbHigh}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_ad26df172bdcf19a31c3c3fb2194d1422}{fL}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_aa122b94a93ad1b03188d9a35d5139b34}{fG}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a7d8bf7203a54b69bb1e9f7a8ae5c38b4}{ffThr}});}
-\DoxyCodeLine{00448\ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00449\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ind\ ==\ index)\ \{\ \textcolor{keywordflow}{break};\ \}}
-\DoxyCodeLine{00450\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00451\ \ \ \ \ \ \ \ \ fclose(fpr);}
-\DoxyCodeLine{00452\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a0cd4fcab67f90370e5d485da02ee9934}{is\_loaded}}\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00453\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00454\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{00455\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%sUnable\ to\ open\ file\ \%s,\ traces\ will\ not\ be\ processed\%s\(\backslash\)n"{}},\mbox{\hyperlink{colors_8hh_a34995b955465f6bbb37c359173d50477}{ANSI\_COLOR\_RED}},\ filename,\ \mbox{\hyperlink{colors_8hh_a92a364c2b863dde1a024a77eac2a5b3b}{ANSI\_COLOR\_RESET}});}
-\DoxyCodeLine{00456\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00457\ \ \ \ \ \}}
+\DoxyCodeLine{00436\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00437\ \ \ \ \ \ \ FILE\ *fpr\ =\ fopen(filename,\ \textcolor{stringliteral}{"{}r"{}});}
+\DoxyCodeLine{00438\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fpr!=NULL)\{}
+\DoxyCodeLine{00439\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ line[200];}
+\DoxyCodeLine{00440\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ ind=-\/1;}
+\DoxyCodeLine{00441\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (fgets(line,\ 200,\ fpr)!=0)\ \{}
+\DoxyCodeLine{00442\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}(line[0])\{}
+\DoxyCodeLine{00443\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'\ '}:}
+\DoxyCodeLine{00444\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'\(\backslash\)t'}:}
+\DoxyCodeLine{00445\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'\(\backslash\)n'}:}
+\DoxyCodeLine{00446\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'\#'}:}
+\DoxyCodeLine{00447\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00448\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00449\ \ \ \ \ \ \ \ \ \ \ \ \ sscanf(line,\textcolor{stringliteral}{"{}\%d\ \%d\ \%d\ \%d\ \%d\ \%d\ \%d\ \%d\ \%d\ \%d\ \%d\ \%d\ \%d\ \%d"{}},}
+\DoxyCodeLine{00450\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&ind,\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a8c2a6d33bfd7323c9e05967e7d441f45}{bLow}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a1b8495d9daea87fdc674a386d1c74c70}{bHigh}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a4a25e450168b3e5521683f328871beb9}{pLow}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a73804ea0ad6dc29ae555ed16b23fce7b}{pHigh}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a10e2aa9fe5568010ab3c8b33a6bfe1dc}{tLow}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_ab542f7ddb6ce6d19ae46051227b8edc5}{tHigh}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_ad5630eeeb7c19d8d69c29d2f188dba25}{eLow}},}
+\DoxyCodeLine{00451\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a0f92a714ca0df2b74642b3c0989bb86f}{eHigh}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a401b665d51166cad9fecf827a6641095}{pbLow}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a6c43713d36ed3009af04737bbba12388}{pbHigh}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_ad26df172bdcf19a31c3c3fb2194d1422}{fL}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_aa122b94a93ad1b03188d9a35d5139b34}{fG}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a7d8bf7203a54b69bb1e9f7a8ae5c38b4}{ffThr}});}
+\DoxyCodeLine{00452\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00453\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ind\ ==\ index)\ \{\ \textcolor{keywordflow}{break};\ \}}
+\DoxyCodeLine{00454\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00455\ \ \ \ \ \ \ \ \ fclose(fpr);}
+\DoxyCodeLine{00456\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a0cd4fcab67f90370e5d485da02ee9934}{is\_loaded}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00457\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00458\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00459\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%sUnable\ to\ open\ file\ \%s,\ traces\ will\ not\ be\ processed\%s\(\backslash\)n"{}},\mbox{\hyperlink{colors_8hh_a34995b955465f6bbb37c359173d50477}{ANSI\_COLOR\_RED}},\ filename,\ \mbox{\hyperlink{colors_8hh_a92a364c2b863dde1a024a77eac2a5b3b}{ANSI\_COLOR\_RESET}});}
+\DoxyCodeLine{00460\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00461\ \ \ \ \ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_aa7ce2be65200d9e7a70e2bc226a71ec8}\index{PIXIE::Trace::PeakTail@{PIXIE::Trace::PeakTail}!Process@{Process}}
@@ -164,68 +164,68 @@ Implements \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a74e1daba588
 
 
 
-Definition at line \mbox{\hyperlink{trace__algorithms_8cc_source_l00472}{472}} of file \mbox{\hyperlink{trace__algorithms_8cc_source}{trace\+\_\+algorithms.\+cc}}.
+Definition at line \mbox{\hyperlink{trace__algorithms_8cc_source_l00476}{476}} of file \mbox{\hyperlink{trace__algorithms_8cc_source}{trace\+\_\+algorithms.\+cc}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00472\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00473\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a3a179dfa3c4c83f0750b0a205b55bb35}{good\_trace}}\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00474\ \ \ \ \ \ \ std::vector<Measurement>\ retval;}
-\DoxyCodeLine{00475\ \ \ \ \ \ \ \textcolor{comment}{//actual\ trace\ processing}}
-\DoxyCodeLine{00476\ \ \ \ \ \ \ \textcolor{comment}{//float\ BL[length];//=\{0\};}}
-\DoxyCodeLine{00477\ \ \ \ \ \ \ \textcolor{comment}{//float\ fD[length];//=\{0\};}}
-\DoxyCodeLine{00478\ \ \ \ \ \ \ \textcolor{comment}{//float\ fTrap[length];//=\{0\};}}
-\DoxyCodeLine{00479\ }
-\DoxyCodeLine{00480\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ background\ =\ 0.0;}
-\DoxyCodeLine{00481\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a8c2a6d33bfd7323c9e05967e7d441f45}{bLow}};\ i<=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a1b8495d9daea87fdc674a386d1c74c70}{bHigh}};\ ++i)\ \{}
-\DoxyCodeLine{00482\ \ \ \ \ \ \ \ \ background\ +=\ trace[i];}
-\DoxyCodeLine{00483\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00484\ \ \ \ \ \ \ background\ /=\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a1b8495d9daea87fdc674a386d1c74c70}{bHigh}}\ -\/\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a8c2a6d33bfd7323c9e05967e7d441f45}{bLow}}\ +\ 1);}
-\DoxyCodeLine{00485\ }
-\DoxyCodeLine{00486\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ energy\ =\ 0.0;}
-\DoxyCodeLine{00487\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_ad5630eeeb7c19d8d69c29d2f188dba25}{eLow}};\ i<=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a0f92a714ca0df2b74642b3c0989bb86f}{eHigh}};\ ++i)\ \{}
-\DoxyCodeLine{00488\ \ \ \ \ \ \ \ \ energy\ +=\ trace[i]\ -\/\ background;}
-\DoxyCodeLine{00489\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00490\ }
-\DoxyCodeLine{00491\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ peak\ =\ 0.0;}
-\DoxyCodeLine{00492\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a4a25e450168b3e5521683f328871beb9}{pLow}};\ i<=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a73804ea0ad6dc29ae555ed16b23fce7b}{pHigh}};\ ++i)\ \{}
-\DoxyCodeLine{00493\ \ \ \ \ \ \ \ \ peak\ +=\ trace[i]\ -\/\ background;}
-\DoxyCodeLine{00494\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00495\ }
-\DoxyCodeLine{00496\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ tail\ =\ 0.0;}
-\DoxyCodeLine{00497\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a10e2aa9fe5568010ab3c8b33a6bfe1dc}{tLow}};\ i<=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_ab542f7ddb6ce6d19ae46051227b8edc5}{tHigh}};\ ++i)\ \{}
-\DoxyCodeLine{00498\ \ \ \ \ \ \ \ \ tail\ +=\ trace[i]\ -\/\ background;}
-\DoxyCodeLine{00499\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00500\ }
-\DoxyCodeLine{00501\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ post\_background\ =\ 0.0;}
-\DoxyCodeLine{00502\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a401b665d51166cad9fecf827a6641095}{pbLow}};\ i<=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a6c43713d36ed3009af04737bbba12388}{pbHigh}};\ ++i)\ \{}
-\DoxyCodeLine{00503\ \ \ \ \ \ \ \ \ post\_background\ +=\ trace[i];}
-\DoxyCodeLine{00504\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00505\ \ \ \ \ \ \ post\_background\ /=\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a6c43713d36ed3009af04737bbba12388}{pbHigh}}\ -\/\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a401b665d51166cad9fecf827a6641095}{pbLow}}\ +\ 1);}
-\DoxyCodeLine{00506\ }
-\DoxyCodeLine{00507\ \ \ \ \ \ \ \textcolor{comment}{/*}}
-\DoxyCodeLine{00508\ \textcolor{comment}{\ \ \ \ \ \ int\ ffTrig\ =\ 0;}}
-\DoxyCodeLine{00509\ \textcolor{comment}{\ \ \ \ \ \ for\ (int\ k=0;k<length;k++)\ \{}}
-\DoxyCodeLine{00510\ \textcolor{comment}{\ \ \ \ \ \ \ \ BL[k]=trace[k]-\/background;}}
-\DoxyCodeLine{00511\ \textcolor{comment}{}}
-\DoxyCodeLine{00512\ \textcolor{comment}{\ \ \ \ \ \ \ \ fD[k]=BL[k]\ -\/\ (k-\/fL>=0)*BL[k-\/fL]\ -\/\ ((k-\/(fG+fL))>=0)*BL[k-\/(fG+fL)]\ +\ ((k-\/(fG\ +\ 2*fL))>=0)*BL[k-\/(fG\ +\ 2*fL)];}}
-\DoxyCodeLine{00513\ \textcolor{comment}{\ \ \ \ \ \ \ \ fTrap[k]\ =\ (k-\/1>=0)*fTrap[k-\/1]\ +\ fD[k];}}
-\DoxyCodeLine{00514\ \textcolor{comment}{}}
-\DoxyCodeLine{00515\ \textcolor{comment}{\ \ \ \ \ \ \ \ //Find\ fast\ trigger\ and\ CFD\ values\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
-\DoxyCodeLine{00516\ \textcolor{comment}{\ \ \ \ \ \ \ \ if\ (fTrap[k-\/1]/(float)fL<=ffThr\ \&\&\ fTrap[k]/(float)fL>ffThr)\ \{}}
-\DoxyCodeLine{00517\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ ffTrig+=1;}}
-\DoxyCodeLine{00518\ \textcolor{comment}{\ \ \ \ \ \ \ \ \}}}
-\DoxyCodeLine{00519\ \textcolor{comment}{\ \ \ \ \ \ \}}}
-\DoxyCodeLine{00520\ \textcolor{comment}{\ \ \ \ \ \ */}}
-\DoxyCodeLine{00521\ \ \ \ \ \ \ retval.emplace\_back(\textcolor{stringliteral}{"{}energy"{}},\ (\textcolor{keywordtype}{int})energy);}
-\DoxyCodeLine{00522\ \ \ \ \ \ \ retval.emplace\_back(\textcolor{stringliteral}{"{}peak"{}},\ (\textcolor{keywordtype}{int})peak);}
-\DoxyCodeLine{00523\ \ \ \ \ \ \ retval.emplace\_back(\textcolor{stringliteral}{"{}tail"{}},\ (\textcolor{keywordtype}{int})tail);}
-\DoxyCodeLine{00524\ \ \ \ \ \ \ retval.emplace\_back(\textcolor{stringliteral}{"{}background"{}},\ (\textcolor{keywordtype}{int})background);}
-\DoxyCodeLine{00525\ \ \ \ \ \ \ retval.emplace\_back(\textcolor{stringliteral}{"{}post\_background"{}},\ (\textcolor{keywordtype}{int})post\_background);}
-\DoxyCodeLine{00526\ \ \ \ \ \ \ \textcolor{comment}{//retval.emplace\_back("{}nTrigs"{},\ ffTrig);}}
-\DoxyCodeLine{00527\ }
-\DoxyCodeLine{00528\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ retval;}
-\DoxyCodeLine{00529\ \ \ \ \ \}}
+\DoxyCodeLine{00476\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00477\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a3a179dfa3c4c83f0750b0a205b55bb35}{good\_trace}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00478\ \ \ \ \ \ \ std::vector<Measurement>\ retval;}
+\DoxyCodeLine{00479\ \ \ \ \ \ \ \textcolor{comment}{//actual\ trace\ processing}}
+\DoxyCodeLine{00480\ \ \ \ \ \ \ \textcolor{comment}{//float\ BL[length];//=\{0\};}}
+\DoxyCodeLine{00481\ \ \ \ \ \ \ \textcolor{comment}{//float\ fD[length];//=\{0\};}}
+\DoxyCodeLine{00482\ \ \ \ \ \ \ \textcolor{comment}{//float\ fTrap[length];//=\{0\};}}
+\DoxyCodeLine{00483\ }
+\DoxyCodeLine{00484\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ background\ =\ 0.0;}
+\DoxyCodeLine{00485\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a8c2a6d33bfd7323c9e05967e7d441f45}{bLow}};\ i<=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a1b8495d9daea87fdc674a386d1c74c70}{bHigh}};\ ++i)\ \{}
+\DoxyCodeLine{00486\ \ \ \ \ \ \ \ \ background\ +=\ trace[i];}
+\DoxyCodeLine{00487\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00488\ \ \ \ \ \ \ background\ /=\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a1b8495d9daea87fdc674a386d1c74c70}{bHigh}}\ -\/\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a8c2a6d33bfd7323c9e05967e7d441f45}{bLow}}\ +\ 1);}
+\DoxyCodeLine{00489\ }
+\DoxyCodeLine{00490\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ energy\ =\ 0.0;}
+\DoxyCodeLine{00491\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_ad5630eeeb7c19d8d69c29d2f188dba25}{eLow}};\ i<=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a0f92a714ca0df2b74642b3c0989bb86f}{eHigh}};\ ++i)\ \{}
+\DoxyCodeLine{00492\ \ \ \ \ \ \ \ \ energy\ +=\ trace[i]\ -\/\ background;}
+\DoxyCodeLine{00493\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00494\ }
+\DoxyCodeLine{00495\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ peak\ =\ 0.0;}
+\DoxyCodeLine{00496\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a4a25e450168b3e5521683f328871beb9}{pLow}};\ i<=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a73804ea0ad6dc29ae555ed16b23fce7b}{pHigh}};\ ++i)\ \{}
+\DoxyCodeLine{00497\ \ \ \ \ \ \ \ \ peak\ +=\ trace[i]\ -\/\ background;}
+\DoxyCodeLine{00498\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00499\ }
+\DoxyCodeLine{00500\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ tail\ =\ 0.0;}
+\DoxyCodeLine{00501\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a10e2aa9fe5568010ab3c8b33a6bfe1dc}{tLow}};\ i<=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_ab542f7ddb6ce6d19ae46051227b8edc5}{tHigh}};\ ++i)\ \{}
+\DoxyCodeLine{00502\ \ \ \ \ \ \ \ \ tail\ +=\ trace[i]\ -\/\ background;}
+\DoxyCodeLine{00503\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00504\ }
+\DoxyCodeLine{00505\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ post\_background\ =\ 0.0;}
+\DoxyCodeLine{00506\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a401b665d51166cad9fecf827a6641095}{pbLow}};\ i<=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a6c43713d36ed3009af04737bbba12388}{pbHigh}};\ ++i)\ \{}
+\DoxyCodeLine{00507\ \ \ \ \ \ \ \ \ post\_background\ +=\ trace[i];}
+\DoxyCodeLine{00508\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00509\ \ \ \ \ \ \ post\_background\ /=\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a6c43713d36ed3009af04737bbba12388}{pbHigh}}\ -\/\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a401b665d51166cad9fecf827a6641095}{pbLow}}\ +\ 1);}
+\DoxyCodeLine{00510\ }
+\DoxyCodeLine{00511\ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00512\ \textcolor{comment}{\ \ \ \ \ \ \ \ int\ ffTrig\ =\ 0;}}
+\DoxyCodeLine{00513\ \textcolor{comment}{\ \ \ \ \ \ \ \ for\ (int\ k=0;k<length;k++)\ \{}}
+\DoxyCodeLine{00514\ \textcolor{comment}{\ \ \ \ \ \ \ \ BL[k]=trace[k]-\/background;}}
+\DoxyCodeLine{00515\ \textcolor{comment}{}}
+\DoxyCodeLine{00516\ \textcolor{comment}{\ \ \ \ \ \ \ \ fD[k]=BL[k]\ -\/\ (k-\/fL>=0)*BL[k-\/fL]\ -\/\ ((k-\/(fG+fL))>=0)*BL[k-\/(fG+fL)]\ +\ ((k-\/(fG\ +\ 2*fL))>=0)*BL[k-\/(fG\ +\ 2*fL)];}}
+\DoxyCodeLine{00517\ \textcolor{comment}{\ \ \ \ \ \ \ \ fTrap[k]\ =\ (k-\/1>=0)*fTrap[k-\/1]\ +\ fD[k];}}
+\DoxyCodeLine{00518\ \textcolor{comment}{}}
+\DoxyCodeLine{00519\ \textcolor{comment}{\ \ \ \ \ \ \ \ //Find\ fast\ trigger\ and\ CFD\ values\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00520\ \textcolor{comment}{\ \ \ \ \ \ \ \ if\ (fTrap[k-\/1]/(float)fL<=ffThr\ \&\&\ fTrap[k]/(float)fL>ffThr)\ \{}}
+\DoxyCodeLine{00521\ \textcolor{comment}{\ \ \ \ \ \ \ \ ffTrig+=1;}}
+\DoxyCodeLine{00522\ \textcolor{comment}{\ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{00523\ \textcolor{comment}{\ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{00524\ \textcolor{comment}{\ \ \ \ \ \ */}}
+\DoxyCodeLine{00525\ \ \ \ \ \ \ retval.emplace\_back(\textcolor{stringliteral}{"{}energy"{}},\ (\textcolor{keywordtype}{int})energy);}
+\DoxyCodeLine{00526\ \ \ \ \ \ \ retval.emplace\_back(\textcolor{stringliteral}{"{}peak"{}},\ (\textcolor{keywordtype}{int})peak);}
+\DoxyCodeLine{00527\ \ \ \ \ \ \ retval.emplace\_back(\textcolor{stringliteral}{"{}tail"{}},\ (\textcolor{keywordtype}{int})tail);}
+\DoxyCodeLine{00528\ \ \ \ \ \ \ retval.emplace\_back(\textcolor{stringliteral}{"{}background"{}},\ (\textcolor{keywordtype}{int})background);}
+\DoxyCodeLine{00529\ \ \ \ \ \ \ retval.emplace\_back(\textcolor{stringliteral}{"{}post\_background"{}},\ (\textcolor{keywordtype}{int})post\_background);}
+\DoxyCodeLine{00530\ \ \ \ \ \ \ \textcolor{comment}{//retval.emplace\_back("{}nTrigs"{},\ ffTrig);}}
+\DoxyCodeLine{00531\ }
+\DoxyCodeLine{00532\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ retval;}
+\DoxyCodeLine{00533\ \ \ \ \ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_aab290fa71e8d906d79bc9a3a1de8ddb5}\index{PIXIE::Trace::PeakTail@{PIXIE::Trace::PeakTail}!Prototype@{Prototype}}
@@ -240,22 +240,22 @@ Implements \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_aac695c0f759
 
 
 
-Definition at line \mbox{\hyperlink{trace__algorithms_8cc_source_l00459}{459}} of file \mbox{\hyperlink{trace__algorithms_8cc_source}{trace\+\_\+algorithms.\+cc}}.
+Definition at line \mbox{\hyperlink{trace__algorithms_8cc_source_l00463}{463}} of file \mbox{\hyperlink{trace__algorithms_8cc_source}{trace\+\_\+algorithms.\+cc}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00459\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00460\ \ \ \ \ \ \ std::vector<Measurement>\ retval;}
-\DoxyCodeLine{00461\ \ \ \ \ \ \ Measurement\ energy(\textcolor{stringliteral}{"{}energy"{}},\ 0);}
-\DoxyCodeLine{00462\ \ \ \ \ \ \ Measurement\ peak(\textcolor{stringliteral}{"{}peak"{}},\ 0);}
-\DoxyCodeLine{00463\ \ \ \ \ \ \ Measurement\ tail(\textcolor{stringliteral}{"{}tail"{}},\ 0);}
-\DoxyCodeLine{00464\ }
-\DoxyCodeLine{00465\ \ \ \ \ \ \ retval.push\_back(energy);}
-\DoxyCodeLine{00466\ \ \ \ \ \ \ retval.push\_back(peak);}
-\DoxyCodeLine{00467\ \ \ \ \ \ \ retval.push\_back(tail);}
+\DoxyCodeLine{00463\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00464\ \ \ \ \ \ \ std::vector<Measurement>\ retval;}
+\DoxyCodeLine{00465\ \ \ \ \ \ \ Measurement\ energy(\textcolor{stringliteral}{"{}energy"{}},\ 0);}
+\DoxyCodeLine{00466\ \ \ \ \ \ \ Measurement\ peak(\textcolor{stringliteral}{"{}peak"{}},\ 0);}
+\DoxyCodeLine{00467\ \ \ \ \ \ \ Measurement\ tail(\textcolor{stringliteral}{"{}tail"{}},\ 0);}
 \DoxyCodeLine{00468\ }
-\DoxyCodeLine{00469\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ retval;}
-\DoxyCodeLine{00470\ \ \ \ \ \}}
+\DoxyCodeLine{00469\ \ \ \ \ \ \ retval.push\_back(energy);}
+\DoxyCodeLine{00470\ \ \ \ \ \ \ retval.push\_back(peak);}
+\DoxyCodeLine{00471\ \ \ \ \ \ \ retval.push\_back(tail);}
+\DoxyCodeLine{00472\ }
+\DoxyCodeLine{00473\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ retval;}
+\DoxyCodeLine{00474\ \ \ \ \ \}}
 
 \end{DoxyCode}
 

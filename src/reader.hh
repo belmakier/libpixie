@@ -36,6 +36,8 @@ namespace PIXIE {
     long long outofrange;
     long long mults[MAX_MEAS_PER_EVENT];
 
+    unsigned long long int first_time;
+    unsigned long long int last_time;
     int coincWindow;
     bool warnings;
     bool RejectSCPU;

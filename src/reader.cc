@@ -38,6 +38,8 @@ namespace PIXIE
 
     this->fileLength   = 0;
     this->fileSize = 0;
+    this->first_time = 0;
+    this->last_time = 0;
     
     this->end          = false;
 
@@ -123,6 +125,7 @@ namespace PIXIE
 
   void Reader::printSummary() {
     printf("\n");
+    printf("Run length from timestamps:     " ANSI_COLOR_YELLOW "%6.1f m\n" ANSI_COLOR_RESET, (double)((long long)last_time-(long long)first_time)/(3276.8*1e9*60));
     printf("Average event length:     " ANSI_COLOR_YELLOW "%6.5f us\n" ANSI_COLOR_RESET, av_evt_length);
     printf("Total sub-events:     " ANSI_COLOR_YELLOW "%15lld\n" ANSI_COLOR_RESET, subevents);
     printf("Bad CFD sub-events:   " ANSI_COLOR_YELLOW "%15lld" ANSI_COLOR_RESET ",     " ANSI_COLOR_GREEN "%5.1f%% " ANSI_COLOR_RESET "good\n", badcfd, 100*(1-(double)badcfd/(double)subevents));
@@ -166,10 +169,12 @@ namespace PIXIE
   int Reader::closefile() {
     if (this->file) { fclose(this->file); }
 
-    if (PIXIE_READTYPE==1 || PIXIE_READTYPE==2) {
+    if ((PIXIE_READTYPE==1) || (PIXIE_READTYPE==2)) {
       munmap(this->buffer, fileSize);
       close(fd);
     }
+
+    return 0;
   }
 
   int Reader::loadbuffer() {
@@ -216,6 +221,7 @@ namespace PIXIE
     delete pBuff;
     pOff = 0;
     pOffMax = 0;
+    return 0;
   }
 
   int Reader::read() {
@@ -227,6 +233,8 @@ namespace PIXIE
 
     Event *event = &(events[eventCtr]); //pointer to event
     int retval = event->read(this, coincWindow, warnings);
+    if (last_time == 0) { first_time = measurements[event->fMeasurements[0]].eventTime; }
+    last_time = measurements[event->fMeasurements[0]].eventTime;
 
     if (retval == 0) {}  //successful read
     else if (retval == -1) { //end of file 

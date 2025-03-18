@@ -334,11 +334,15 @@ Definition at line \mbox{\hyperlink{trace__algorithms_8cc_source_l00025}{25}} of
 \DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (!((algName).compare(\textcolor{stringliteral}{"{}peaktail"{}})))\ \{}
 \DoxyCodeLine{00033\ \ \ \ \ \ \ tracealg\ =\ \textcolor{keyword}{new}\ PIXIE::Trace::PeakTail();}
 \DoxyCodeLine{00034\ \ \ \ \ \}}
-\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (!((algName).compare(\textcolor{stringliteral}{"{}qdc\_maxval"{}})))\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ tracealg\ =\ \textcolor{keyword}{new}\ PIXIE::Trace::QDCMaxVal();}
 \DoxyCodeLine{00037\ \ \ \ \ \}}
-\DoxyCodeLine{00038\ \ \ \ \ tracealg-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a507daabea5816729273219e9d310b695}{Load}}(algFile.c\_str(),\ algIndex);}
-\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{00040\ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Warning!\ Unknown\ trace\ algorithm\ "{}}\ <<\ algName\ <<\ std::endl;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{00041\ \ \ \ \ \}}
+\DoxyCodeLine{00042\ \ \ \ \ tracealg-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a507daabea5816729273219e9d310b695}{Load}}(algFile.c\_str(),\ algIndex);}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00044\ \ \ \}}
 
 \end{DoxyCode}

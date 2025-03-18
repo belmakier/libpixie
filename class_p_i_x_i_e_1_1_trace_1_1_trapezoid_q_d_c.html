@@ -218,50 +218,50 @@ Public Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#aa3cfc78f38f2c9f7ed09a3d7619b7db2">PIXIE::Trace::Trapezoid</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="trace__algorithms_8cc_source.html#l00387">387</a> of file <a class="el" href="trace__algorithms_8cc_source.html">trace_algorithms.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  387</span>                                                                                                                               {</div>
-<div class="line"><span class="lineno">  388</span>      <span class="comment">//Open files</span></div>
-<div class="line"><span class="lineno">  389</span> </div>
-<div class="line"><span class="lineno">  390</span><span class="preprocessor">#if ROOT_COMPILE == 1</span></div>
-<div class="line"><span class="lineno">  391</span>      TFile *outFile;</div>
-<div class="line"><span class="lineno">  392</span>      <span class="keywordflow">if</span> (append==1){</div>
-<div class="line"><span class="lineno">  393</span>        outFile = <span class="keyword">new</span> TFile(fileName.c_str(), <span class="stringliteral">&quot;UPDATE&quot;</span>);</div>
-<div class="line"><span class="lineno">  394</span>      }</div>
-<div class="line"><span class="lineno">  395</span>      <span class="keywordflow">else</span>{</div>
-<div class="line"><span class="lineno">  396</span>        outFile = <span class="keyword">new</span> TFile(fileName.c_str(), <span class="stringliteral">&quot;RECREATE&quot;</span>);</div>
-<div class="line"><span class="lineno">  397</span>      }</div>
-<div class="line"><span class="lineno">  398</span> </div>
-<div class="line"><span class="lineno">  399</span>      <span class="keywordtype">double</span> max = 1;</div>
-<div class="line"><span class="lineno">  400</span>      TH1D *HTrace=<span class="keyword">new</span> TH1D((traceName+std::to_string(n_traces)).c_str(),(traceName+std::to_string(n_traces)).c_str(),traceLen,0,traceLen);</div>
-<div class="line"><span class="lineno">  401</span>      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;traceLen;i++){</div>
-<div class="line"><span class="lineno">  402</span>        HTrace-&gt;AddBinContent(i,trace[i]-trace[0]);</div>
-<div class="line"><span class="lineno">  403</span>    <span class="keywordflow">if</span> (trace[i]-trace[0]&gt;max){</div>
-<div class="line"><span class="lineno">  404</span>      max = trace[i]-trace[0];</div>
-<div class="line"><span class="lineno">  405</span>    }</div>
-<div class="line"><span class="lineno">  406</span>      }</div>
-<div class="line"><span class="lineno">  407</span>      HTrace-&gt;Write();      </div>
-<div class="line"><span class="lineno">  408</span> </div>
-<div class="line"><span class="lineno">  409</span>      <span class="comment">//Draw QDC windows</span></div>
-<div class="line"><span class="lineno">  410</span>      TMultiGraph *mg = <span class="keyword">new</span> TMultiGraph(<span class="stringliteral">&quot;QDCS&quot;</span>,<span class="stringliteral">&quot;QDCS&quot;</span>);</div>
-<div class="line"><span class="lineno">  411</span>      <span class="keywordtype">float</span> nextQDC=0;</div>
-<div class="line"><span class="lineno">  412</span>      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;8;i++){</div>
-<div class="line"><span class="lineno">  413</span>        TGraph *gr = <span class="keyword">new</span> TGraph();</div>
-<div class="line"><span class="lineno">  414</span>        gr-&gt;SetLineColor(kRed);</div>
-<div class="line"><span class="lineno">  415</span>        gr-&gt;SetLineWidth(2);</div>
-<div class="line"><span class="lineno">  416</span>        nextQDC +=<a class="code hl_variable" href="#ab8c6063e07e11f83af27244e0cca9fa7">QDCWindows</a>[i];</div>
-<div class="line"><span class="lineno">  417</span>        gr-&gt;SetPoint(0,nextQDC,0);</div>
-<div class="line"><span class="lineno">  418</span>        gr-&gt;SetPoint(1,nextQDC,0.1*max);</div>
-<div class="line"><span class="lineno">  419</span>        mg -&gt;Add(gr);</div>
-<div class="line"><span class="lineno">  420</span>      }</div>
-<div class="line"><span class="lineno">  421</span>      mg-&gt;Write();</div>
-<div class="line"><span class="lineno">  422</span> </div>
-<div class="line"><span class="lineno">  423</span>      <span class="comment">//Close files</span></div>
-<div class="line"><span class="lineno">  424</span>      outFile-&gt;Purge();</div>
-<div class="line"><span class="lineno">  425</span>      outFile-&gt;Close();</div>
-<div class="line"><span class="lineno">  426</span><span class="preprocessor">#endif </span></div>
-<div class="line"><span class="lineno">  427</span>     </div>
-<div class="line"><span class="lineno">  428</span>      <span class="keywordflow">return</span> 1;</div>
-<div class="line"><span class="lineno">  429</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="trace__algorithms_8cc_source.html#l00391">391</a> of file <a class="el" href="trace__algorithms_8cc_source.html">trace_algorithms.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  391</span>                                                                                                                               {</div>
+<div class="line"><span class="lineno">  392</span>      <span class="comment">//Open files</span></div>
+<div class="line"><span class="lineno">  393</span> </div>
+<div class="line"><span class="lineno">  394</span><span class="preprocessor">#if ROOT_COMPILE == 1</span></div>
+<div class="line"><span class="lineno">  395</span>      TFile *outFile;</div>
+<div class="line"><span class="lineno">  396</span>      <span class="keywordflow">if</span> (append==1){</div>
+<div class="line"><span class="lineno">  397</span>        outFile = <span class="keyword">new</span> TFile(fileName.c_str(), <span class="stringliteral">&quot;UPDATE&quot;</span>);</div>
+<div class="line"><span class="lineno">  398</span>      }</div>
+<div class="line"><span class="lineno">  399</span>      <span class="keywordflow">else</span>{</div>
+<div class="line"><span class="lineno">  400</span>        outFile = <span class="keyword">new</span> TFile(fileName.c_str(), <span class="stringliteral">&quot;RECREATE&quot;</span>);</div>
+<div class="line"><span class="lineno">  401</span>      }</div>
+<div class="line"><span class="lineno">  402</span> </div>
+<div class="line"><span class="lineno">  403</span>      <span class="keywordtype">double</span> max = 1;</div>
+<div class="line"><span class="lineno">  404</span>      TH1D *HTrace=<span class="keyword">new</span> TH1D((traceName+std::to_string(n_traces)).c_str(),(traceName+std::to_string(n_traces)).c_str(),traceLen,0,traceLen);</div>
+<div class="line"><span class="lineno">  405</span>      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;traceLen;i++){</div>
+<div class="line"><span class="lineno">  406</span>        HTrace-&gt;AddBinContent(i,trace[i]-trace[0]);</div>
+<div class="line"><span class="lineno">  407</span>        <span class="keywordflow">if</span> (trace[i]-trace[0]&gt;max){</div>
+<div class="line"><span class="lineno">  408</span>          max = trace[i]-trace[0];</div>
+<div class="line"><span class="lineno">  409</span>        }</div>
+<div class="line"><span class="lineno">  410</span>      }</div>
+<div class="line"><span class="lineno">  411</span>      HTrace-&gt;Write();      </div>
+<div class="line"><span class="lineno">  412</span> </div>
+<div class="line"><span class="lineno">  413</span>      <span class="comment">//Draw QDC windows</span></div>
+<div class="line"><span class="lineno">  414</span>      TMultiGraph *mg = <span class="keyword">new</span> TMultiGraph(<span class="stringliteral">&quot;QDCS&quot;</span>,<span class="stringliteral">&quot;QDCS&quot;</span>);</div>
+<div class="line"><span class="lineno">  415</span>      <span class="keywordtype">float</span> nextQDC=0;</div>
+<div class="line"><span class="lineno">  416</span>      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;8;i++){</div>
+<div class="line"><span class="lineno">  417</span>        TGraph *gr = <span class="keyword">new</span> TGraph();</div>
+<div class="line"><span class="lineno">  418</span>        gr-&gt;SetLineColor(kRed);</div>
+<div class="line"><span class="lineno">  419</span>        gr-&gt;SetLineWidth(2);</div>
+<div class="line"><span class="lineno">  420</span>        nextQDC +=<a class="code hl_variable" href="#ab8c6063e07e11f83af27244e0cca9fa7">QDCWindows</a>[i];</div>
+<div class="line"><span class="lineno">  421</span>        gr-&gt;SetPoint(0,nextQDC,0);</div>
+<div class="line"><span class="lineno">  422</span>        gr-&gt;SetPoint(1,nextQDC,0.1*max);</div>
+<div class="line"><span class="lineno">  423</span>        mg -&gt;Add(gr);</div>
+<div class="line"><span class="lineno">  424</span>      }</div>
+<div class="line"><span class="lineno">  425</span>      mg-&gt;Write();</div>
+<div class="line"><span class="lineno">  426</span> </div>
+<div class="line"><span class="lineno">  427</span>      <span class="comment">//Close files</span></div>
+<div class="line"><span class="lineno">  428</span>      outFile-&gt;Purge();</div>
+<div class="line"><span class="lineno">  429</span>      outFile-&gt;Close();</div>
+<div class="line"><span class="lineno">  430</span><span class="preprocessor">#endif </span></div>
+<div class="line"><span class="lineno">  431</span>     </div>
+<div class="line"><span class="lineno">  432</span>      <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">  433</span>    }</div>
 <div class="ttc" id="aclass_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_html_ab8c6063e07e11f83af27244e0cca9fa7"><div class="ttname"><a href="#ab8c6063e07e11f83af27244e0cca9fa7">PIXIE::Trace::TrapezoidQDC::QDCWindows</a></div><div class="ttdeci">float QDCWindows[8]</div><div class="ttdef"><b>Definition</b> <a href="trace__algorithms_8hh_source.html#l00046">trace_algorithms.hh:46</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -295,33 +295,33 @@ Public Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#a7a5d35e6e5b6c79e62856f74f559861d">PIXIE::Trace::Trapezoid</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="trace__algorithms_8cc_source.html#l00258">258</a> of file <a class="el" href="trace__algorithms_8cc_source.html">trace_algorithms.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  258</span>                                                           {</div>
-<div class="line"><span class="lineno">  259</span>      FILE *fpr = fopen(filename, <span class="stringliteral">&quot;r&quot;</span>);</div>
-<div class="line"><span class="lineno">  260</span>      <span class="keywordflow">if</span> (fpr!=NULL){</div>
-<div class="line"><span class="lineno">  261</span>    <span class="keywordtype">char</span> line[200];</div>
-<div class="line"><span class="lineno">  262</span>    <span class="keywordtype">int</span> ind=-1;</div>
-<div class="line"><span class="lineno">  263</span>    <span class="keywordflow">while</span> (fgets(line, 200, fpr)!=0) {</div>
-<div class="line"><span class="lineno">  264</span>      <span class="keywordflow">switch</span>(line[0]){</div>
-<div class="line"><span class="lineno">  265</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39; &#39;</span>:</div>
-<div class="line"><span class="lineno">  266</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;\t&#39;</span>:</div>
-<div class="line"><span class="lineno">  267</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;\n&#39;</span>:</div>
-<div class="line"><span class="lineno">  268</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;#&#39;</span>:</div>
-<div class="line"><span class="lineno">  269</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  270</span>      <span class="keywordflow">default</span>:</div>
-<div class="line"><span class="lineno">  271</span>        sscanf(line,<span class="stringliteral">&quot;%d %d %d %d %d %f %d %d %f %f %f %f %f %f %f %f %f %f %s %s %f %f %f %f&quot;</span>,&amp;ind, &amp;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#ae12b21d1f5a546e1fc560af9b848b1e3">fL</a>,&amp;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#ac2acbbb289bfb291f8ad3f02c23d97b1">fG</a>,&amp;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#a24bbb5f118d7127ebedede680dbef4fd">sL</a>,&amp;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#a89e14d45faf34067d08ed11f5ca89cb4">sG</a>,&amp;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#a05c05dd147acad46cc9fc88b0ec44bd7">tau</a>,&amp;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#a3e4714dc2551cbd6396ce3a5dbeac6f8">D</a>,&amp;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#a0569baccfd2c27a8bae5b42b532ccba9">S</a>,&amp;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#aebe5c3c6e03ebaf78d8e658132b75090">ffThr</a>,&amp;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#abcd3c02217b2f785ab57c6b31ff9c29c">cfdThr</a>,&amp;<a class="code hl_variable" href="#ab8c6063e07e11f83af27244e0cca9fa7">QDCWindows</a>[0],&amp;<a class="code hl_variable" href="#ab8c6063e07e11f83af27244e0cca9fa7">QDCWindows</a>[1],&amp;<a class="code hl_variable" href="#ab8c6063e07e11f83af27244e0cca9fa7">QDCWindows</a>[2],&amp;<a class="code hl_variable" href="#ab8c6063e07e11f83af27244e0cca9fa7">QDCWindows</a>[3],&amp;<a class="code hl_variable" href="#ab8c6063e07e11f83af27244e0cca9fa7">QDCWindows</a>[4],&amp;<a class="code hl_variable" href="#ab8c6063e07e11f83af27244e0cca9fa7">QDCWindows</a>[5],&amp;<a class="code hl_variable" href="#ab8c6063e07e11f83af27244e0cca9fa7">QDCWindows</a>[6],&amp;<a class="code hl_variable" href="#ab8c6063e07e11f83af27244e0cca9fa7">QDCWindows</a>[7], <a class="code hl_variable" href="#a801141883a2df166e5048313044dfa7a">stringFast</a>, <a class="code hl_variable" href="#a0da37779ec0506e2743cf6c6a7edbae5">stringSlow</a>, &amp;<a class="code hl_variable" href="#aba49a9a963be936189b7d38866ad777a">enLo</a>, &amp;<a class="code hl_variable" href="#a2b15828b1fbcd4471034a8197521a98f">enHi</a>, &amp;<a class="code hl_variable" href="#a7a40be509cfdc1cd5feee35eac88c7d9">pidLo</a>, &amp;<a class="code hl_variable" href="#ac290a329c53ec0c1aa837a764e645ed2">pidHi</a>);</div>
-<div class="line"><span class="lineno">  272</span>      }</div>
-<div class="line"><span class="lineno">  273</span>      <span class="keywordflow">if</span> (ind == index) {</div>
-<div class="line"><span class="lineno">  274</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  275</span>      }</div>
-<div class="line"><span class="lineno">  276</span>    }</div>
-<div class="line"><span class="lineno">  277</span>    fclose(fpr); fpr=NULL;</div>
-<div class="line"><span class="lineno">  278</span>    <a class="code hl_variable" href="class_p_i_x_i_e_1_1_trace_1_1_algorithm.html#a0cd4fcab67f90370e5d485da02ee9934">is_loaded</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  279</span>      }</div>
-<div class="line"><span class="lineno">  280</span>      <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  281</span>    printf(<span class="stringliteral">&quot;%sUnable to open file %s%s%s, traces will not be processed%s\n&quot;</span>,<a class="code hl_define" href="colors_8hh.html#a34995b955465f6bbb37c359173d50477">ANSI_COLOR_RED</a>, <a class="code hl_define" href="colors_8hh.html#a5a123b382640b3aa65dd5db386002fbc">ANSI_COLOR_YELLOW</a>,filename,<a class="code hl_define" href="colors_8hh.html#a34995b955465f6bbb37c359173d50477">ANSI_COLOR_RED</a>, <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a>);</div>
-<div class="line"><span class="lineno">  282</span>      }</div>
-<div class="line"><span class="lineno">  283</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="trace__algorithms_8cc_source.html#l00262">262</a> of file <a class="el" href="trace__algorithms_8cc_source.html">trace_algorithms.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  262</span>                                                           {</div>
+<div class="line"><span class="lineno">  263</span>      FILE *fpr = fopen(filename, <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><span class="lineno">  264</span>      <span class="keywordflow">if</span> (fpr!=NULL){</div>
+<div class="line"><span class="lineno">  265</span>        <span class="keywordtype">char</span> line[200];</div>
+<div class="line"><span class="lineno">  266</span>        <span class="keywordtype">int</span> ind=-1;</div>
+<div class="line"><span class="lineno">  267</span>        <span class="keywordflow">while</span> (fgets(line, 200, fpr)!=0) {</div>
+<div class="line"><span class="lineno">  268</span>          <span class="keywordflow">switch</span>(line[0]){</div>
+<div class="line"><span class="lineno">  269</span>          <span class="keywordflow">case</span> <span class="charliteral">&#39; &#39;</span>:</div>
+<div class="line"><span class="lineno">  270</span>          <span class="keywordflow">case</span> <span class="charliteral">&#39;\t&#39;</span>:</div>
+<div class="line"><span class="lineno">  271</span>          <span class="keywordflow">case</span> <span class="charliteral">&#39;\n&#39;</span>:</div>
+<div class="line"><span class="lineno">  272</span>          <span class="keywordflow">case</span> <span class="charliteral">&#39;#&#39;</span>:</div>
+<div class="line"><span class="lineno">  273</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  274</span>          <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  275</span>            sscanf(line,<span class="stringliteral">&quot;%d %d %d %d %d %f %d %d %f %f %f %f %f %f %f %f %f %f %s %s %f %f %f %f&quot;</span>,&amp;ind, &amp;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#ae12b21d1f5a546e1fc560af9b848b1e3">fL</a>,&amp;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#ac2acbbb289bfb291f8ad3f02c23d97b1">fG</a>,&amp;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#a24bbb5f118d7127ebedede680dbef4fd">sL</a>,&amp;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#a89e14d45faf34067d08ed11f5ca89cb4">sG</a>,&amp;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#a05c05dd147acad46cc9fc88b0ec44bd7">tau</a>,&amp;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#a3e4714dc2551cbd6396ce3a5dbeac6f8">D</a>,&amp;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#a0569baccfd2c27a8bae5b42b532ccba9">S</a>,&amp;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#aebe5c3c6e03ebaf78d8e658132b75090">ffThr</a>,&amp;<a class="code hl_variable" href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#abcd3c02217b2f785ab57c6b31ff9c29c">cfdThr</a>,&amp;<a class="code hl_variable" href="#ab8c6063e07e11f83af27244e0cca9fa7">QDCWindows</a>[0],&amp;<a class="code hl_variable" href="#ab8c6063e07e11f83af27244e0cca9fa7">QDCWindows</a>[1],&amp;<a class="code hl_variable" href="#ab8c6063e07e11f83af27244e0cca9fa7">QDCWindows</a>[2],&amp;<a class="code hl_variable" href="#ab8c6063e07e11f83af27244e0cca9fa7">QDCWindows</a>[3],&amp;<a class="code hl_variable" href="#ab8c6063e07e11f83af27244e0cca9fa7">QDCWindows</a>[4],&amp;<a class="code hl_variable" href="#ab8c6063e07e11f83af27244e0cca9fa7">QDCWindows</a>[5],&amp;<a class="code hl_variable" href="#ab8c6063e07e11f83af27244e0cca9fa7">QDCWindows</a>[6],&amp;<a class="code hl_variable" href="#ab8c6063e07e11f83af27244e0cca9fa7">QDCWindows</a>[7], <a class="code hl_variable" href="#a801141883a2df166e5048313044dfa7a">stringFast</a>, <a class="code hl_variable" href="#a0da37779ec0506e2743cf6c6a7edbae5">stringSlow</a>, &amp;<a class="code hl_variable" href="#aba49a9a963be936189b7d38866ad777a">enLo</a>, &amp;<a class="code hl_variable" href="#a2b15828b1fbcd4471034a8197521a98f">enHi</a>, &amp;<a class="code hl_variable" href="#a7a40be509cfdc1cd5feee35eac88c7d9">pidLo</a>, &amp;<a class="code hl_variable" href="#ac290a329c53ec0c1aa837a764e645ed2">pidHi</a>);</div>
+<div class="line"><span class="lineno">  276</span>          }</div>
+<div class="line"><span class="lineno">  277</span>          <span class="keywordflow">if</span> (ind == index) {</div>
+<div class="line"><span class="lineno">  278</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  279</span>          }</div>
+<div class="line"><span class="lineno">  280</span>        }</div>
+<div class="line"><span class="lineno">  281</span>        fclose(fpr); fpr=NULL;</div>
+<div class="line"><span class="lineno">  282</span>        <a class="code hl_variable" href="class_p_i_x_i_e_1_1_trace_1_1_algorithm.html#a0cd4fcab67f90370e5d485da02ee9934">is_loaded</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  283</span>      }</div>
+<div class="line"><span class="lineno">  284</span>      <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  285</span>        printf(<span class="stringliteral">&quot;%sUnable to open file %s%s%s, traces will not be processed%s\n&quot;</span>,<a class="code hl_define" href="colors_8hh.html#a34995b955465f6bbb37c359173d50477">ANSI_COLOR_RED</a>, <a class="code hl_define" href="colors_8hh.html#a5a123b382640b3aa65dd5db386002fbc">ANSI_COLOR_YELLOW</a>,filename,<a class="code hl_define" href="colors_8hh.html#a34995b955465f6bbb37c359173d50477">ANSI_COLOR_RED</a>, <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a>);</div>
+<div class="line"><span class="lineno">  286</span>      }</div>
+<div class="line"><span class="lineno">  287</span>    }</div>
 <div class="ttc" id="aclass_p_i_x_i_e_1_1_trace_1_1_algorithm_html_a0cd4fcab67f90370e5d485da02ee9934"><div class="ttname"><a href="class_p_i_x_i_e_1_1_trace_1_1_algorithm.html#a0cd4fcab67f90370e5d485da02ee9934">PIXIE::Trace::Algorithm::is_loaded</a></div><div class="ttdeci">int is_loaded</div><div class="ttdef"><b>Definition</b> <a href="traces_8hh_source.html#l00018">traces.hh:18</a></div></div>
 <div class="ttc" id="aclass_p_i_x_i_e_1_1_trace_1_1_trapezoid_html_a0569baccfd2c27a8bae5b42b532ccba9"><div class="ttname"><a href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#a0569baccfd2c27a8bae5b42b532ccba9">PIXIE::Trace::Trapezoid::S</a></div><div class="ttdeci">int S</div><div class="ttdef"><b>Definition</b> <a href="trace__algorithms_8hh_source.html#l00031">trace_algorithms.hh:31</a></div></div>
 <div class="ttc" id="aclass_p_i_x_i_e_1_1_trace_1_1_trapezoid_html_a05c05dd147acad46cc9fc88b0ec44bd7"><div class="ttname"><a href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#a05c05dd147acad46cc9fc88b0ec44bd7">PIXIE::Trace::Trapezoid::tau</a></div><div class="ttdeci">float tau</div><div class="ttdef"><b>Definition</b> <a href="trace__algorithms_8hh_source.html#l00029">trace_algorithms.hh:29</a></div></div>
@@ -373,77 +373,77 @@ Public Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#ac5d8fa6692cef0675a261c191e856fb8">PIXIE::Trace::Trapezoid</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="trace__algorithms_8cc_source.html#l00319">319</a> of file <a class="el" href="trace__algorithms_8cc_source.html">trace_algorithms.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  319</span>                                                                            {</div>
-<div class="line"><span class="lineno">  320</span>      std::vector&lt;Measurement&gt; retval;</div>
-<div class="line"><span class="lineno">  321</span>      <span class="keywordtype">float</span> BL[length];<span class="comment">//={0};</span></div>
-<div class="line"><span class="lineno">  322</span>      <span class="keywordtype">double</span> QDCSums[8];<span class="comment">//={0};</span></div>
-<div class="line"><span class="lineno">  323</span>      <span class="keywordtype">int</span> prevQDC=0;</div>
-<div class="line"><span class="lineno">  324</span>      <span class="keywordtype">int</span> currentQDC=0;</div>
-<div class="line"><span class="lineno">  325</span>      </div>
-<div class="line"><span class="lineno">  326</span>      <span class="keywordtype">double</span> Q=0, QTime=0;</div>
-<div class="line"><span class="lineno">  327</span>      </div>
-<div class="line"><span class="lineno">  328</span>      retval = <a class="code hl_function" href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#a795b286a8b183874822bfa1bc8292a18">Trapezoid::TrapFilter</a>(trace, length);</div>
+<p class="definition">Definition at line <a class="el" href="trace__algorithms_8cc_source.html#l00323">323</a> of file <a class="el" href="trace__algorithms_8cc_source.html">trace_algorithms.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  323</span>                                                                            {</div>
+<div class="line"><span class="lineno">  324</span>      std::vector&lt;Measurement&gt; retval;</div>
+<div class="line"><span class="lineno">  325</span>      <span class="keywordtype">float</span> BL[length];<span class="comment">//={0};</span></div>
+<div class="line"><span class="lineno">  326</span>      <span class="keywordtype">double</span> QDCSums[8];<span class="comment">//={0};</span></div>
+<div class="line"><span class="lineno">  327</span>      <span class="keywordtype">int</span> prevQDC=0;</div>
+<div class="line"><span class="lineno">  328</span>      <span class="keywordtype">int</span> currentQDC=0;</div>
 <div class="line"><span class="lineno">  329</span>      </div>
-<div class="line"><span class="lineno">  330</span>      <span class="keywordtype">double</span> mean = <a class="code hl_function" href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#a00e96dba2654d6815574e4f5cd73931a">Trapezoid::GetBaseline</a>(trace, length);</div>
+<div class="line"><span class="lineno">  330</span>      <span class="keywordtype">double</span> Q=0, QTime=0;</div>
 <div class="line"><span class="lineno">  331</span>      </div>
-<div class="line"><span class="lineno">  332</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k=0;k&lt;length;k++) {</div>
-<div class="line"><span class="lineno">  333</span>    BL[k]=trace[k]-mean;</div>
-<div class="line"><span class="lineno">  334</span>    </div>
-<div class="line"><span class="lineno">  335</span>        <span class="comment">//Get QDCSums</span></div>
-<div class="line"><span class="lineno">  336</span>    <span class="keywordflow">if</span> ((k-prevQDC)&gt;=<a class="code hl_variable" href="#ab8c6063e07e11f83af27244e0cca9fa7">QDCWindows</a>[currentQDC]) {</div>
-<div class="line"><span class="lineno">  337</span>      prevQDC+=<a class="code hl_variable" href="#ab8c6063e07e11f83af27244e0cca9fa7">QDCWindows</a>[currentQDC];</div>
-<div class="line"><span class="lineno">  338</span>      currentQDC+=1;</div>
-<div class="line"><span class="lineno">  339</span>    }</div>
-<div class="line"><span class="lineno">  340</span>    <span class="keywordflow">if</span> (currentQDC&lt;8){    </div>
-<div class="line"><span class="lineno">  341</span>      QDCSums[currentQDC]+=BL[k];</div>
-<div class="line"><span class="lineno">  342</span>        }</div>
-<div class="line"><span class="lineno">  343</span> </div>
-<div class="line"><span class="lineno">  344</span>    <span class="comment">//Get QTime</span></div>
-<div class="line"><span class="lineno">  345</span>    Q+=BL[k];</div>
-<div class="line"><span class="lineno">  346</span>    QTime += BL[k]*k;</div>
-<div class="line"><span class="lineno">  347</span>      }</div>
-<div class="line"><span class="lineno">  348</span>      QTime = QTime / Q;      </div>
-<div class="line"><span class="lineno">  349</span> </div>
-<div class="line"><span class="lineno">  350</span>      Measurement qtime(<span class="stringliteral">&quot;TraceQTime&quot;</span>, (int16_t) QTime);</div>
-<div class="line"><span class="lineno">  351</span>      retval.push_back(qtime);</div>
-<div class="line"><span class="lineno">  352</span> </div>
-<div class="line"><span class="lineno">  353</span>      <span class="keywordtype">double</span> qdcT=0,qdcF=0,qdcS=0,qdcP;</div>
-<div class="line"><span class="lineno">  354</span>      <span class="keywordtype">char</span> *ptr;</div>
-<div class="line"><span class="lineno">  355</span>      <span class="keywordtype">long</span> <span class="keywordtype">int</span> slowMask=strtol(<a class="code hl_variable" href="#a0da37779ec0506e2743cf6c6a7edbae5">stringSlow</a>,&amp;ptr,2), fastMask=strtol(<a class="code hl_variable" href="#a801141883a2df166e5048313044dfa7a">stringFast</a>,&amp;ptr,2);</div>
-<div class="line"><span class="lineno">  356</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;8; ++i) {</div>
-<div class="line"><span class="lineno">  357</span>    Measurement qdc(<span class="stringliteral">&quot;TraceQDC&quot;</span>+std::to_string(i), round(QDCSums[i]));</div>
-<div class="line"><span class="lineno">  358</span>        retval.push_back(qdc);</div>
-<div class="line"><span class="lineno">  359</span>        <span class="keywordflow">if</span>(slowMask &amp; (1&lt;&lt;(7-i))){</div>
-<div class="line"><span class="lineno">  360</span>          qdcS += round(QDCSums[i]);</div>
-<div class="line"><span class="lineno">  361</span>        }</div>
-<div class="line"><span class="lineno">  362</span>        <span class="keywordflow">if</span>(fastMask &amp; (1&lt;&lt;(7-i))){</div>
-<div class="line"><span class="lineno">  363</span>          qdcF += round(QDCSums[i]);</div>
-<div class="line"><span class="lineno">  364</span>        }</div>
-<div class="line"><span class="lineno">  365</span>        qdcT += round(QDCSums[i]);</div>
-<div class="line"><span class="lineno">  366</span>      }</div>
-<div class="line"><span class="lineno">  367</span>      qdcP = qdcS/qdcF * 32768;</div>
-<div class="line"><span class="lineno">  368</span>      </div>
-<div class="line"><span class="lineno">  369</span>      Measurement qdcFast(<span class="stringliteral">&quot;TraceQDCFast&quot;</span>, qdcF);</div>
-<div class="line"><span class="lineno">  370</span>      retval.push_back(qdcFast);</div>
-<div class="line"><span class="lineno">  371</span> </div>
-<div class="line"><span class="lineno">  372</span>      Measurement qdcSlow(<span class="stringliteral">&quot;TraceQDCSlow&quot;</span>, qdcS);</div>
-<div class="line"><span class="lineno">  373</span>      retval.push_back(qdcSlow);</div>
-<div class="line"><span class="lineno">  374</span>      </div>
-<div class="line"><span class="lineno">  375</span>      Measurement qdcPID(<span class="stringliteral">&quot;TraceQDCPID&quot;</span>, qdcP  );</div>
-<div class="line"><span class="lineno">  376</span>      retval.push_back(qdcPID);</div>
-<div class="line"><span class="lineno">  377</span> </div>
-<div class="line"><span class="lineno">  378</span>      Measurement qdcTotal(<span class="stringliteral">&quot;TraceQDCTotal&quot;</span>, qdcT);</div>
-<div class="line"><span class="lineno">  379</span>      retval.push_back(qdcTotal);</div>
-<div class="line"><span class="lineno">  380</span> </div>
-<div class="line"><span class="lineno">  381</span>      <span class="keywordflow">if</span> (qdcT &gt; <a class="code hl_variable" href="#aba49a9a963be936189b7d38866ad777a">enLo</a> &amp;&amp; qdcT &lt; enHi &amp;&amp; qdcP &gt; <a class="code hl_variable" href="#a7a40be509cfdc1cd5feee35eac88c7d9">pidLo</a> &amp;&amp; qdcP &lt; <a class="code hl_variable" href="#ac290a329c53ec0c1aa837a764e645ed2">pidHi</a>) { <a class="code hl_variable" href="class_p_i_x_i_e_1_1_trace_1_1_algorithm.html#a3a179dfa3c4c83f0750b0a205b55bb35">good_trace</a> = <span class="keyword">true</span>; }</div>
-<div class="line"><span class="lineno">  382</span>      <span class="keywordflow">else</span>{<a class="code hl_variable" href="class_p_i_x_i_e_1_1_trace_1_1_algorithm.html#a3a179dfa3c4c83f0750b0a205b55bb35">good_trace</a>=<span class="keyword">false</span>;}      </div>
-<div class="line"><span class="lineno">  383</span> </div>
-<div class="line"><span class="lineno">  384</span>      <span class="keywordflow">return</span> retval;</div>
-<div class="line"><span class="lineno">  385</span>    }</div>
+<div class="line"><span class="lineno">  332</span>      retval = <a class="code hl_function" href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#a795b286a8b183874822bfa1bc8292a18">Trapezoid::TrapFilter</a>(trace, length);</div>
+<div class="line"><span class="lineno">  333</span>      </div>
+<div class="line"><span class="lineno">  334</span>      <span class="keywordtype">double</span> mean = <a class="code hl_function" href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#a00e96dba2654d6815574e4f5cd73931a">Trapezoid::GetBaseline</a>(trace, length);</div>
+<div class="line"><span class="lineno">  335</span>      </div>
+<div class="line"><span class="lineno">  336</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k=0;k&lt;length;k++) {</div>
+<div class="line"><span class="lineno">  337</span>        BL[k]=trace[k]-mean;</div>
+<div class="line"><span class="lineno">  338</span>    </div>
+<div class="line"><span class="lineno">  339</span>        <span class="comment">//Get QDCSums</span></div>
+<div class="line"><span class="lineno">  340</span>        <span class="keywordflow">if</span> ((k-prevQDC)&gt;=<a class="code hl_variable" href="#ab8c6063e07e11f83af27244e0cca9fa7">QDCWindows</a>[currentQDC]) {</div>
+<div class="line"><span class="lineno">  341</span>          prevQDC+=<a class="code hl_variable" href="#ab8c6063e07e11f83af27244e0cca9fa7">QDCWindows</a>[currentQDC];</div>
+<div class="line"><span class="lineno">  342</span>          currentQDC+=1;</div>
+<div class="line"><span class="lineno">  343</span>        }</div>
+<div class="line"><span class="lineno">  344</span>        <span class="keywordflow">if</span> (currentQDC&lt;8){    </div>
+<div class="line"><span class="lineno">  345</span>          QDCSums[currentQDC]+=BL[k];</div>
+<div class="line"><span class="lineno">  346</span>        }</div>
+<div class="line"><span class="lineno">  347</span> </div>
+<div class="line"><span class="lineno">  348</span>        <span class="comment">//Get QTime</span></div>
+<div class="line"><span class="lineno">  349</span>        Q+=BL[k];</div>
+<div class="line"><span class="lineno">  350</span>        QTime += BL[k]*k;</div>
+<div class="line"><span class="lineno">  351</span>      }</div>
+<div class="line"><span class="lineno">  352</span>      QTime = QTime / Q;      </div>
+<div class="line"><span class="lineno">  353</span> </div>
+<div class="line"><span class="lineno">  354</span>      Measurement qtime(<span class="stringliteral">&quot;TraceQTime&quot;</span>, (int16_t) QTime);</div>
+<div class="line"><span class="lineno">  355</span>      retval.push_back(qtime);</div>
+<div class="line"><span class="lineno">  356</span> </div>
+<div class="line"><span class="lineno">  357</span>      <span class="keywordtype">double</span> qdcT=0,qdcF=0,qdcS=0,qdcP;</div>
+<div class="line"><span class="lineno">  358</span>      <span class="keywordtype">char</span> *ptr;</div>
+<div class="line"><span class="lineno">  359</span>      <span class="keywordtype">long</span> <span class="keywordtype">int</span> slowMask=strtol(<a class="code hl_variable" href="#a0da37779ec0506e2743cf6c6a7edbae5">stringSlow</a>,&amp;ptr,2), fastMask=strtol(<a class="code hl_variable" href="#a801141883a2df166e5048313044dfa7a">stringFast</a>,&amp;ptr,2);</div>
+<div class="line"><span class="lineno">  360</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;8; ++i) {</div>
+<div class="line"><span class="lineno">  361</span>        Measurement qdc(<span class="stringliteral">&quot;TraceQDC&quot;</span>+std::to_string(i), round(QDCSums[i]));</div>
+<div class="line"><span class="lineno">  362</span>        retval.push_back(qdc);</div>
+<div class="line"><span class="lineno">  363</span>        <span class="keywordflow">if</span>(slowMask &amp; (1&lt;&lt;(7-i))){</div>
+<div class="line"><span class="lineno">  364</span>          qdcS += round(QDCSums[i]);</div>
+<div class="line"><span class="lineno">  365</span>        }</div>
+<div class="line"><span class="lineno">  366</span>        <span class="keywordflow">if</span>(fastMask &amp; (1&lt;&lt;(7-i))){</div>
+<div class="line"><span class="lineno">  367</span>          qdcF += round(QDCSums[i]);</div>
+<div class="line"><span class="lineno">  368</span>        }</div>
+<div class="line"><span class="lineno">  369</span>        qdcT += round(QDCSums[i]);</div>
+<div class="line"><span class="lineno">  370</span>      }</div>
+<div class="line"><span class="lineno">  371</span>      qdcP = qdcS/qdcF * 32768;</div>
+<div class="line"><span class="lineno">  372</span>      </div>
+<div class="line"><span class="lineno">  373</span>      Measurement qdcFast(<span class="stringliteral">&quot;TraceQDCFast&quot;</span>, qdcF);</div>
+<div class="line"><span class="lineno">  374</span>      retval.push_back(qdcFast);</div>
+<div class="line"><span class="lineno">  375</span> </div>
+<div class="line"><span class="lineno">  376</span>      Measurement qdcSlow(<span class="stringliteral">&quot;TraceQDCSlow&quot;</span>, qdcS);</div>
+<div class="line"><span class="lineno">  377</span>      retval.push_back(qdcSlow);</div>
+<div class="line"><span class="lineno">  378</span>      </div>
+<div class="line"><span class="lineno">  379</span>      Measurement qdcPID(<span class="stringliteral">&quot;TraceQDCPID&quot;</span>, qdcP  );</div>
+<div class="line"><span class="lineno">  380</span>      retval.push_back(qdcPID);</div>
+<div class="line"><span class="lineno">  381</span> </div>
+<div class="line"><span class="lineno">  382</span>      Measurement qdcTotal(<span class="stringliteral">&quot;TraceQDCTotal&quot;</span>, qdcT);</div>
+<div class="line"><span class="lineno">  383</span>      retval.push_back(qdcTotal);</div>
+<div class="line"><span class="lineno">  384</span> </div>
+<div class="line"><span class="lineno">  385</span>      <span class="keywordflow">if</span> (qdcT &gt; <a class="code hl_variable" href="#aba49a9a963be936189b7d38866ad777a">enLo</a> &amp;&amp; qdcT &lt; enHi &amp;&amp; qdcP &gt; <a class="code hl_variable" href="#a7a40be509cfdc1cd5feee35eac88c7d9">pidLo</a> &amp;&amp; qdcP &lt; <a class="code hl_variable" href="#ac290a329c53ec0c1aa837a764e645ed2">pidHi</a>) { <a class="code hl_variable" href="class_p_i_x_i_e_1_1_trace_1_1_algorithm.html#a3a179dfa3c4c83f0750b0a205b55bb35">good_trace</a> = <span class="keyword">true</span>; }</div>
+<div class="line"><span class="lineno">  386</span>      <span class="keywordflow">else</span>{<a class="code hl_variable" href="class_p_i_x_i_e_1_1_trace_1_1_algorithm.html#a3a179dfa3c4c83f0750b0a205b55bb35">good_trace</a>=<span class="keyword">false</span>;}      </div>
+<div class="line"><span class="lineno">  387</span> </div>
+<div class="line"><span class="lineno">  388</span>      <span class="keywordflow">return</span> retval;</div>
+<div class="line"><span class="lineno">  389</span>    }</div>
 <div class="ttc" id="aclass_p_i_x_i_e_1_1_trace_1_1_algorithm_html_a3a179dfa3c4c83f0750b0a205b55bb35"><div class="ttname"><a href="class_p_i_x_i_e_1_1_trace_1_1_algorithm.html#a3a179dfa3c4c83f0750b0a205b55bb35">PIXIE::Trace::Algorithm::good_trace</a></div><div class="ttdeci">bool good_trace</div><div class="ttdef"><b>Definition</b> <a href="traces_8hh_source.html#l00017">traces.hh:17</a></div></div>
-<div class="ttc" id="aclass_p_i_x_i_e_1_1_trace_1_1_trapezoid_html_a00e96dba2654d6815574e4f5cd73931a"><div class="ttname"><a href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#a00e96dba2654d6815574e4f5cd73931a">PIXIE::Trace::Trapezoid::GetBaseline</a></div><div class="ttdeci">double GetBaseline(uint16_t *trace, int length)</div><div class="ttdef"><b>Definition</b> <a href="trace__algorithms_8cc_source.html#l00091">trace_algorithms.cc:91</a></div></div>
-<div class="ttc" id="aclass_p_i_x_i_e_1_1_trace_1_1_trapezoid_html_a795b286a8b183874822bfa1bc8292a18"><div class="ttname"><a href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#a795b286a8b183874822bfa1bc8292a18">PIXIE::Trace::Trapezoid::TrapFilter</a></div><div class="ttdeci">std::vector&lt; Measurement &gt; TrapFilter(uint16_t *trace, int length, int write=0)</div><div class="ttdef"><b>Definition</b> <a href="trace__algorithms_8cc_source.html#l00101">trace_algorithms.cc:101</a></div></div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_trace_1_1_trapezoid_html_a00e96dba2654d6815574e4f5cd73931a"><div class="ttname"><a href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#a00e96dba2654d6815574e4f5cd73931a">PIXIE::Trace::Trapezoid::GetBaseline</a></div><div class="ttdeci">double GetBaseline(uint16_t *trace, int length)</div><div class="ttdef"><b>Definition</b> <a href="trace__algorithms_8cc_source.html#l00095">trace_algorithms.cc:95</a></div></div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_trace_1_1_trapezoid_html_a795b286a8b183874822bfa1bc8292a18"><div class="ttname"><a href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#a795b286a8b183874822bfa1bc8292a18">PIXIE::Trace::Trapezoid::TrapFilter</a></div><div class="ttdeci">std::vector&lt; Measurement &gt; TrapFilter(uint16_t *trace, int length, int write=0)</div><div class="ttdef"><b>Definition</b> <a href="trace__algorithms_8cc_source.html#l00105">trace_algorithms.cc:105</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -472,40 +472,40 @@ Public Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#a51cca59d8c13a43f3cf01f1eae8353a8">PIXIE::Trace::Trapezoid</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="trace__algorithms_8cc_source.html#l00285">285</a> of file <a class="el" href="trace__algorithms_8cc_source.html">trace_algorithms.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  285</span>                                                   {</div>
-<div class="line"><span class="lineno">  286</span>      std::vector&lt;Measurement&gt; retval;</div>
-<div class="line"><span class="lineno">  287</span>      Measurement tcp(<span class="stringliteral">&quot;TraceTCP&quot;</span>, 0);</div>
-<div class="line"><span class="lineno">  288</span>      Measurement zcp(<span class="stringliteral">&quot;TraceZCP&quot;</span>, 0);</div>
-<div class="line"><span class="lineno">  289</span>      Measurement cfd(<span class="stringliteral">&quot;TraceCFD&quot;</span>, 0);</div>
-<div class="line"><span class="lineno">  290</span>      Measurement energy(<span class="stringliteral">&quot;TraceEnergy&quot;</span>, 0);</div>
-<div class="line"><span class="lineno">  291</span>      Measurement QTime(<span class="stringliteral">&quot;TraceQTime&quot;</span>, 0);</div>
-<div class="line"><span class="lineno">  292</span>      </div>
-<div class="line"><span class="lineno">  293</span>      retval.push_back(tcp);</div>
-<div class="line"><span class="lineno">  294</span>      retval.push_back(zcp);</div>
-<div class="line"><span class="lineno">  295</span>      retval.push_back(cfd);</div>
-<div class="line"><span class="lineno">  296</span>      retval.push_back(energy);</div>
-<div class="line"><span class="lineno">  297</span>      retval.push_back(QTime);</div>
-<div class="line"><span class="lineno">  298</span>      </div>
-<div class="line"><span class="lineno">  299</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;8; ++i) {</div>
-<div class="line"><span class="lineno">  300</span>        Measurement qdc(<span class="stringliteral">&quot;TraceQDC&quot;</span>+std::to_string(i), 0);</div>
-<div class="line"><span class="lineno">  301</span>        retval.push_back(qdc);</div>
-<div class="line"><span class="lineno">  302</span>      }</div>
-<div class="line"><span class="lineno">  303</span> </div>
-<div class="line"><span class="lineno">  304</span>      Measurement qdcFast(<span class="stringliteral">&quot;TraceQDCFast&quot;</span>, 0);</div>
-<div class="line"><span class="lineno">  305</span>      retval.push_back(qdcFast);</div>
-<div class="line"><span class="lineno">  306</span> </div>
-<div class="line"><span class="lineno">  307</span>      Measurement qdcSlow(<span class="stringliteral">&quot;TraceQDCSlow&quot;</span>, 0);</div>
-<div class="line"><span class="lineno">  308</span>      retval.push_back(qdcSlow);</div>
-<div class="line"><span class="lineno">  309</span> </div>
-<div class="line"><span class="lineno">  310</span>      Measurement qdcPID(<span class="stringliteral">&quot;TraceQDCPID&quot;</span>, 0);</div>
-<div class="line"><span class="lineno">  311</span>      retval.push_back(qdcPID);</div>
-<div class="line"><span class="lineno">  312</span> </div>
-<div class="line"><span class="lineno">  313</span>      Measurement qdcTotal(<span class="stringliteral">&quot;TraceQDCTot&quot;</span>, 0);</div>
-<div class="line"><span class="lineno">  314</span>      retval.push_back(qdcTotal);</div>
-<div class="line"><span class="lineno">  315</span> </div>
-<div class="line"><span class="lineno">  316</span>      <span class="keywordflow">return</span> retval;</div>
-<div class="line"><span class="lineno">  317</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="trace__algorithms_8cc_source.html#l00289">289</a> of file <a class="el" href="trace__algorithms_8cc_source.html">trace_algorithms.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  289</span>                                                   {</div>
+<div class="line"><span class="lineno">  290</span>      std::vector&lt;Measurement&gt; retval;</div>
+<div class="line"><span class="lineno">  291</span>      Measurement tcp(<span class="stringliteral">&quot;TraceTCP&quot;</span>, 0);</div>
+<div class="line"><span class="lineno">  292</span>      Measurement zcp(<span class="stringliteral">&quot;TraceZCP&quot;</span>, 0);</div>
+<div class="line"><span class="lineno">  293</span>      Measurement cfd(<span class="stringliteral">&quot;TraceCFD&quot;</span>, 0);</div>
+<div class="line"><span class="lineno">  294</span>      Measurement energy(<span class="stringliteral">&quot;TraceEnergy&quot;</span>, 0);</div>
+<div class="line"><span class="lineno">  295</span>      Measurement QTime(<span class="stringliteral">&quot;TraceQTime&quot;</span>, 0);</div>
+<div class="line"><span class="lineno">  296</span>      </div>
+<div class="line"><span class="lineno">  297</span>      retval.push_back(tcp);</div>
+<div class="line"><span class="lineno">  298</span>      retval.push_back(zcp);</div>
+<div class="line"><span class="lineno">  299</span>      retval.push_back(cfd);</div>
+<div class="line"><span class="lineno">  300</span>      retval.push_back(energy);</div>
+<div class="line"><span class="lineno">  301</span>      retval.push_back(QTime);</div>
+<div class="line"><span class="lineno">  302</span>      </div>
+<div class="line"><span class="lineno">  303</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;8; ++i) {</div>
+<div class="line"><span class="lineno">  304</span>        Measurement qdc(<span class="stringliteral">&quot;TraceQDC&quot;</span>+std::to_string(i), 0);</div>
+<div class="line"><span class="lineno">  305</span>        retval.push_back(qdc);</div>
+<div class="line"><span class="lineno">  306</span>      }</div>
+<div class="line"><span class="lineno">  307</span> </div>
+<div class="line"><span class="lineno">  308</span>      Measurement qdcFast(<span class="stringliteral">&quot;TraceQDCFast&quot;</span>, 0);</div>
+<div class="line"><span class="lineno">  309</span>      retval.push_back(qdcFast);</div>
+<div class="line"><span class="lineno">  310</span> </div>
+<div class="line"><span class="lineno">  311</span>      Measurement qdcSlow(<span class="stringliteral">&quot;TraceQDCSlow&quot;</span>, 0);</div>
+<div class="line"><span class="lineno">  312</span>      retval.push_back(qdcSlow);</div>
+<div class="line"><span class="lineno">  313</span> </div>
+<div class="line"><span class="lineno">  314</span>      Measurement qdcPID(<span class="stringliteral">&quot;TraceQDCPID&quot;</span>, 0);</div>
+<div class="line"><span class="lineno">  315</span>      retval.push_back(qdcPID);</div>
+<div class="line"><span class="lineno">  316</span> </div>
+<div class="line"><span class="lineno">  317</span>      Measurement qdcTotal(<span class="stringliteral">&quot;TraceQDCTot&quot;</span>, 0);</div>
+<div class="line"><span class="lineno">  318</span>      retval.push_back(qdcTotal);</div>
+<div class="line"><span class="lineno">  319</span> </div>
+<div class="line"><span class="lineno">  320</span>      <span class="keywordflow">return</span> retval;</div>
+<div class="line"><span class="lineno">  321</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
