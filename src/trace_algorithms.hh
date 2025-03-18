@@ -77,10 +77,18 @@ namespace PIXIE {
       int dumpTrace(uint16_t *trace, int traceLen, int n_traces, std::string fileName, int append,std::string traceName);
     };
 
-
+    class QDCMaxVal : public Algorithm {
+    public:
+      int bLow;
+      int bHigh;
+      int pLow;
+      int pHigh;
+      void Load(const char *file, int index);
+      std::vector<Measurement> Process(uint16_t *trace, int length);
+      std::vector<Measurement> Prototype();
+      int dumpTrace(uint16_t *trace, int traceLen, int n_traces, std::string fileName, int append,std::string traceName);
+    };      
   }
-  
-
 }
 
 #endif
