@@ -53,11 +53,19 @@ namespace PIXIE
 
     this->warnings = false;
     this->RejectSCPU = false;
+    this->warning_thresh = 0.05; //if > 5% of events in a given channel have a particular failure code (pileup, CFD fail, out of range, double hit) then print a warning
 
     this->NSCLDAQ = false;
     measurements.reserve(MAX_EVENTS*MAX_MEAS_PER_EVENT);
     for (int i=0; i<MAX_EVENTS*MAX_MEAS_PER_EVENT; ++i) {
       measurements.emplace_back();
+    }
+    for (int i=0; i<MAX_CRATES*MAX_SLOTS_PER_CRATE*MAX_CHANNELS_PER_BOARD; ++i) {
+      this->chPileups[i]=0;
+      this->chBadCFD[i]=0;
+      this->chTotal[i]=0;
+      this->chSCPU[i]=0;
+      this->chOutOfRange[i]=0;
     }
   }
   
@@ -130,15 +138,59 @@ namespace PIXIE
     printf("Total sub-events:     " ANSI_COLOR_YELLOW "%15lld\n" ANSI_COLOR_RESET, subevents);
     printf("Bad CFD sub-events:   " ANSI_COLOR_YELLOW "%15lld" ANSI_COLOR_RESET ",     " ANSI_COLOR_GREEN "%5.1f%% " ANSI_COLOR_RESET "good\n", badcfd, 100*(1-(double)badcfd/(double)subevents));
     printf("Pileups:              " ANSI_COLOR_YELLOW "%15lld" ANSI_COLOR_RESET ",     " ANSI_COLOR_GREEN "%5.1f%% " ANSI_COLOR_RESET "good\n", pileups, 100*(1-(double)pileups/(double)subevents));
-    if (RejectSCPU) {
-      printf("Same channel pileups: " ANSI_COLOR_YELLOW "%15lld" ANSI_COLOR_RESET ",     " ANSI_COLOR_GREEN "%5.1f%% " ANSI_COLOR_RESET "good\n", sameChanPU, 100*(1-(double)sameChanPU/(double)subevents));
-    }
+    printf("Same channel pileups: " ANSI_COLOR_YELLOW "%15lld" ANSI_COLOR_RESET ",     " ANSI_COLOR_GREEN "%5.1f%% " ANSI_COLOR_RESET "good\n", sameChanPU, 100*(1-(double)sameChanPU/(double)subevents));
     printf("Out of range:         " ANSI_COLOR_YELLOW "%15lld" ANSI_COLOR_RESET ",     " ANSI_COLOR_GREEN "%5.1f%% " ANSI_COLOR_RESET "good\n", outofrange, 100*(1-(double)outofrange/(double)subevents));
     printf("\n");
     printf("Singles:              " ANSI_COLOR_YELLOW "%15lld" ANSI_COLOR_RESET ",     " ANSI_COLOR_GREEN "%5.1f%% " ANSI_COLOR_RESET "\n", mults[0], 100*(double)mults[0]/(double)nEvents);
     printf("Doubles:              " ANSI_COLOR_YELLOW "%15lld" ANSI_COLOR_RESET ",     " ANSI_COLOR_GREEN "%5.1f%% " ANSI_COLOR_RESET "\n", mults[1], 100*(double)mults[1]/(double)nEvents);
     printf("Triples:              " ANSI_COLOR_YELLOW "%15lld" ANSI_COLOR_RESET ",     " ANSI_COLOR_GREEN "%5.1f%% " ANSI_COLOR_RESET "\n", mults[2], 100*(double)mults[2]/(double)nEvents);
     printf("Quadruples:           " ANSI_COLOR_YELLOW "%15lld" ANSI_COLOR_RESET ",     " ANSI_COLOR_GREEN "%5.1f%% " ANSI_COLOR_RESET "\n", mults[3], 100*(double)mults[3]/(double)nEvents);
+    printf("\n");
+    std::vector<int> badPU, badCFD, badSCPU, badOOR;
+    for (int i=0; i<MAX_CRATES*MAX_SLOTS_PER_CRATE*MAX_CHANNELS_PER_BOARD; ++i) {
+      double total = chTotal[i];
+      if ((double)chPileups[i]/total > warning_thresh) {
+        badPU.push_back(i);
+      }
+      if ((double)chBadCFD[i]/total > warning_thresh) {
+        badCFD.push_back(i);
+      }
+      if ((double)chSCPU[i]/total > warning_thresh) {
+        badSCPU.push_back(i);
+      }
+      if ((double)chOutOfRange[i]/total > warning_thresh) {
+        badOOR.push_back(i);
+      }
+    }
+
+    if (badPU.size() > 0) {
+      printf("Channels " ANSI_COLOR_RED);
+      for (int i=0; i<badPU.size(); ++i) {
+        printf("%d ", badPU[i]);
+      } 
+      printf(ANSI_COLOR_RESET "have high rates of pileup\n");
+    }
+    if (badCFD.size() > 0) {
+      printf("Channels " ANSI_COLOR_RED);
+      for (int i=0; i<badCFD.size(); ++i) {
+        printf("%d ", badCFD[i]);
+      } 
+      printf(ANSI_COLOR_RESET "have high rates of failed CFD\n");
+    }
+    if (badSCPU.size() > 0) {
+      printf("Channels " ANSI_COLOR_RED);
+      for (int i=0; i<badSCPU.size(); ++i) {
+        printf("%d ", badSCPU[i]);
+      } 
+      printf(ANSI_COLOR_RESET "have high rates of double firing\n");
+    }
+    if (badOOR.size() > 0) {
+      printf("Channels " ANSI_COLOR_RED);
+      for (int i=0; i<badOOR.size(); ++i) {
+        printf("%d ", badOOR[i]);
+      } 
+      printf(ANSI_COLOR_RESET "going out of range\n");
+    }
   }
     
   int Reader::openfile(const std::string &path) {
@@ -242,7 +294,6 @@ namespace PIXIE
       return -1;
     }
     else if (retval == 1) { //same channel pileup
-      this->sameChanPU += 1;                    
     }
     else if (retval == 2) { //MAX_MEAS_PER_EVENT exceeded
       std::cerr << "Severe warning! MAX_MEAS_PER_EVENT exceeded" << std::endl;

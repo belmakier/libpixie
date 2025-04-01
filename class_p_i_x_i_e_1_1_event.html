@@ -191,21 +191,28 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="event_8cc_source.html#l00188">188</a> of file <a class="el" href="event_8cc_source.html">event.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  188</span>                                       {</div>
-<div class="line"><span class="lineno">  189</span>    Measurement *meas = &amp;(reader-&gt;measurements[<a class="code hl_variable" href="#a93932ad5d16872467ad4a5a3e44cfaa3">fMeasurements</a>[<a class="code hl_variable" href="#ad39077e66bf9468214071572181d7bb1">nMeas</a>-1]]);</div>
-<div class="line"><span class="lineno">  190</span>    <span class="keywordtype">int</span> retval = meas-&gt;read_full(reader);</div>
-<div class="line"><span class="lineno">  191</span>    <span class="comment">//at this point we know that this belongs in the event</span></div>
-<div class="line"><span class="lineno">  192</span>    <span class="keywordflow">if</span> (meas-&gt;finishCode == 1) {</div>
-<div class="line"><span class="lineno">  193</span>      ++<a class="code hl_variable" href="#a973b89428d1117d52568424015f327aa">pileups</a>;</div>
-<div class="line"><span class="lineno">  194</span>    }</div>
-<div class="line"><span class="lineno">  195</span> </div>
-<div class="line"><span class="lineno">  196</span>    <a class="code hl_variable" href="#ab4034a1f813be7192c14143d76040d6d">badcfd</a> += meas-&gt;CFDForce;</div>
-<div class="line"><span class="lineno">  197</span>    <a class="code hl_variable" href="#a1fa2c3028bd5b4b432d34e2c3319c8b9">outofrange</a> += meas-&gt;outOfRange;   </div>
-<div class="line"><span class="lineno">  198</span>      </div>
-<div class="line"><span class="lineno">  199</span>    <span class="keywordflow">return</span> retval;</div>
-<div class="line"><span class="lineno">  200</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="event_8cc_source.html#l00191">191</a> of file <a class="el" href="event_8cc_source.html">event.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  191</span>                                       {</div>
+<div class="line"><span class="lineno">  192</span>    Measurement *meas = &amp;(reader-&gt;measurements[<a class="code hl_variable" href="#a93932ad5d16872467ad4a5a3e44cfaa3">fMeasurements</a>[<a class="code hl_variable" href="#ad39077e66bf9468214071572181d7bb1">nMeas</a>-1]]);</div>
+<div class="line"><span class="lineno">  193</span>    <span class="keywordtype">int</span> retval = meas-&gt;read_full(reader);</div>
+<div class="line"><span class="lineno">  194</span>    <span class="comment">//at this point we know that this belongs in the event</span></div>
+<div class="line"><span class="lineno">  195</span>    <span class="keywordflow">if</span> (meas-&gt;finishCode == 1) {</div>
+<div class="line"><span class="lineno">  196</span>      ++<a class="code hl_variable" href="#a973b89428d1117d52568424015f327aa">pileups</a>;</div>
+<div class="line"><span class="lineno">  197</span>    }</div>
+<div class="line"><span class="lineno">  198</span> </div>
+<div class="line"><span class="lineno">  199</span>    <a class="code hl_variable" href="#ab4034a1f813be7192c14143d76040d6d">badcfd</a> += meas-&gt;CFDForce;</div>
+<div class="line"><span class="lineno">  200</span>    <a class="code hl_variable" href="#a1fa2c3028bd5b4b432d34e2c3319c8b9">outofrange</a> += meas-&gt;outOfRange;   </div>
+<div class="line"><span class="lineno">  201</span> </div>
+<div class="line"><span class="lineno">  202</span>    reader-&gt;chTotal[meas-&gt;crateID*<a class="code hl_define" href="definitions_8hh.html#aea2a89422b7c0431259b6e918642898a">MAX_SLOTS_PER_CRATE</a>*<a class="code hl_define" href="definitions_8hh.html#aa5e7f9ac14bdfa863ef36c7647bbbd5d">MAX_CHANNELS_PER_BOARD</a> + (meas-&gt;slotID-2)*<a class="code hl_define" href="definitions_8hh.html#aa5e7f9ac14bdfa863ef36c7647bbbd5d">MAX_CHANNELS_PER_BOARD</a> + meas-&gt;channelNumber] += 1;</div>
+<div class="line"><span class="lineno">  203</span>    reader-&gt;chBadCFD[meas-&gt;crateID*<a class="code hl_define" href="definitions_8hh.html#aea2a89422b7c0431259b6e918642898a">MAX_SLOTS_PER_CRATE</a>*<a class="code hl_define" href="definitions_8hh.html#aa5e7f9ac14bdfa863ef36c7647bbbd5d">MAX_CHANNELS_PER_BOARD</a> + (meas-&gt;slotID-2)*<a class="code hl_define" href="definitions_8hh.html#aa5e7f9ac14bdfa863ef36c7647bbbd5d">MAX_CHANNELS_PER_BOARD</a> + meas-&gt;channelNumber] += meas-&gt;CFDForce;</div>
+<div class="line"><span class="lineno">  204</span>    reader-&gt;chOutOfRange[meas-&gt;crateID*<a class="code hl_define" href="definitions_8hh.html#aea2a89422b7c0431259b6e918642898a">MAX_SLOTS_PER_CRATE</a>*<a class="code hl_define" href="definitions_8hh.html#aa5e7f9ac14bdfa863ef36c7647bbbd5d">MAX_CHANNELS_PER_BOARD</a> + (meas-&gt;slotID-2)*<a class="code hl_define" href="definitions_8hh.html#aa5e7f9ac14bdfa863ef36c7647bbbd5d">MAX_CHANNELS_PER_BOARD</a> + meas-&gt;channelNumber] += meas-&gt;outOfRange;</div>
+<div class="line"><span class="lineno">  205</span>    reader-&gt;chPileups[meas-&gt;crateID*<a class="code hl_define" href="definitions_8hh.html#aea2a89422b7c0431259b6e918642898a">MAX_SLOTS_PER_CRATE</a>*<a class="code hl_define" href="definitions_8hh.html#aa5e7f9ac14bdfa863ef36c7647bbbd5d">MAX_CHANNELS_PER_BOARD</a> + (meas-&gt;slotID-2)*<a class="code hl_define" href="definitions_8hh.html#aa5e7f9ac14bdfa863ef36c7647bbbd5d">MAX_CHANNELS_PER_BOARD</a> + meas-&gt;channelNumber] += meas-&gt;finishCode;</div>
+<div class="line"><span class="lineno">  206</span>      </div>
+<div class="line"><span class="lineno">  207</span>    <span class="keywordflow">return</span> retval;</div>
+<div class="line"><span class="lineno">  208</span>  }</div>
 <div class="ttc" id="aclass_p_i_x_i_e_1_1_event_html_a93932ad5d16872467ad4a5a3e44cfaa3"><div class="ttname"><a href="#a93932ad5d16872467ad4a5a3e44cfaa3">PIXIE::Event::fMeasurements</a></div><div class="ttdeci">int fMeasurements[MAX_MEAS_PER_EVENT]</div><div class="ttdef"><b>Definition</b> <a href="event_8hh_source.html#l00019">event.hh:19</a></div></div>
+<div class="ttc" id="adefinitions_8hh_html_aa5e7f9ac14bdfa863ef36c7647bbbd5d"><div class="ttname"><a href="definitions_8hh.html#aa5e7f9ac14bdfa863ef36c7647bbbd5d">MAX_CHANNELS_PER_BOARD</a></div><div class="ttdeci">#define MAX_CHANNELS_PER_BOARD</div><div class="ttdef"><b>Definition</b> <a href="definitions_8hh_source.html#l00007">definitions.hh:7</a></div></div>
+<div class="ttc" id="adefinitions_8hh_html_aea2a89422b7c0431259b6e918642898a"><div class="ttname"><a href="definitions_8hh.html#aea2a89422b7c0431259b6e918642898a">MAX_SLOTS_PER_CRATE</a></div><div class="ttdeci">#define MAX_SLOTS_PER_CRATE</div><div class="ttdef"><b>Definition</b> <a href="definitions_8hh_source.html#l00008">definitions.hh:8</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -224,19 +231,19 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="event_8cc_source.html#l00176">176</a> of file <a class="el" href="event_8cc_source.html">event.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  176</span>                                         {</div>
-<div class="line"><span class="lineno">  177</span>    <a class="code hl_variable" href="#a93932ad5d16872467ad4a5a3e44cfaa3">fMeasurements</a>[<a class="code hl_variable" href="#ad39077e66bf9468214071572181d7bb1">nMeas</a>] = reader-&gt;measCtr;</div>
-<div class="line"><span class="lineno">  178</span>    Measurement *meas = &amp;(reader-&gt;measurements[reader-&gt;measCtr]);</div>
-<div class="line"><span class="lineno">  179</span>    <span class="keywordtype">int</span> retval = meas-&gt;read_header(reader);</div>
-<div class="line"><span class="lineno">  180</span>      </div>
-<div class="line"><span class="lineno">  181</span>    ++<a class="code hl_variable" href="#ad39077e66bf9468214071572181d7bb1">nMeas</a>;</div>
-<div class="line"><span class="lineno">  182</span>    ++reader-&gt;measCtr;</div>
-<div class="line"><span class="lineno">  183</span>    <span class="keywordflow">if</span> (reader-&gt;measCtr == <a class="code hl_define" href="definitions_8hh.html#a4440d694835967b63cafe00ad888c327">MAX_MEAS_PER_EVENT</a> * <a class="code hl_define" href="definitions_8hh.html#ae42954bb8545d24e3e9dcde5920c9a0b">MAX_EVENTS</a>) {</div>
-<div class="line"><span class="lineno">  184</span>      reader-&gt;measCtr = 0;</div>
-<div class="line"><span class="lineno">  185</span>    }</div>
-<div class="line"><span class="lineno">  186</span>    <span class="keywordflow">return</span> retval;</div>
-<div class="line"><span class="lineno">  187</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="event_8cc_source.html#l00179">179</a> of file <a class="el" href="event_8cc_source.html">event.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  179</span>                                         {</div>
+<div class="line"><span class="lineno">  180</span>    <a class="code hl_variable" href="#a93932ad5d16872467ad4a5a3e44cfaa3">fMeasurements</a>[<a class="code hl_variable" href="#ad39077e66bf9468214071572181d7bb1">nMeas</a>] = reader-&gt;measCtr;</div>
+<div class="line"><span class="lineno">  181</span>    Measurement *meas = &amp;(reader-&gt;measurements[reader-&gt;measCtr]);</div>
+<div class="line"><span class="lineno">  182</span>    <span class="keywordtype">int</span> retval = meas-&gt;read_header(reader);</div>
+<div class="line"><span class="lineno">  183</span>      </div>
+<div class="line"><span class="lineno">  184</span>    ++<a class="code hl_variable" href="#ad39077e66bf9468214071572181d7bb1">nMeas</a>;</div>
+<div class="line"><span class="lineno">  185</span>    ++reader-&gt;measCtr;</div>
+<div class="line"><span class="lineno">  186</span>    <span class="keywordflow">if</span> (reader-&gt;measCtr == <a class="code hl_define" href="definitions_8hh.html#a4440d694835967b63cafe00ad888c327">MAX_MEAS_PER_EVENT</a> * <a class="code hl_define" href="definitions_8hh.html#ae42954bb8545d24e3e9dcde5920c9a0b">MAX_EVENTS</a>) {</div>
+<div class="line"><span class="lineno">  187</span>      reader-&gt;measCtr = 0;</div>
+<div class="line"><span class="lineno">  188</span>    }</div>
+<div class="line"><span class="lineno">  189</span>    <span class="keywordflow">return</span> retval;</div>
+<div class="line"><span class="lineno">  190</span>  }</div>
 <div class="ttc" id="adefinitions_8hh_html_a4440d694835967b63cafe00ad888c327"><div class="ttname"><a href="definitions_8hh.html#a4440d694835967b63cafe00ad888c327">MAX_MEAS_PER_EVENT</a></div><div class="ttdeci">#define MAX_MEAS_PER_EVENT</div><div class="ttdef"><b>Definition</b> <a href="definitions_8hh_source.html#l00005">definitions.hh:5</a></div></div>
 <div class="ttc" id="adefinitions_8hh_html_ae42954bb8545d24e3e9dcde5920c9a0b"><div class="ttname"><a href="definitions_8hh.html#ae42954bb8545d24e3e9dcde5920c9a0b">MAX_EVENTS</a></div><div class="ttdeci">#define MAX_EVENTS</div><div class="ttdef"><b>Definition</b> <a href="definitions_8hh_source.html#l00004">definitions.hh:4</a></div></div>
 </div><!-- fragment -->
@@ -257,18 +264,18 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="event_8cc_source.html#l00167">167</a> of file <a class="el" href="event_8cc_source.html">event.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  167</span>                                          {</div>
-<div class="line"><span class="lineno">  168</span>    <span class="keywordtype">int</span> retval = <a class="code hl_function" href="#a435968180a70e7b86a828e7f7fc1bf42">AddMeasHeader</a>(reader);</div>
-<div class="line"><span class="lineno">  169</span>    <span class="keywordflow">if</span> (retval == -1) {</div>
-<div class="line"><span class="lineno">  170</span>      <span class="keywordflow">return</span> retval;</div>
-<div class="line"><span class="lineno">  171</span>    }</div>
-<div class="line"><span class="lineno">  172</span>      </div>
-<div class="line"><span class="lineno">  173</span>    retval = <a class="code hl_function" href="#a10e1f7b5ac95b7665ba578fb291686b0">AddMeasFull</a>(reader);</div>
-<div class="line"><span class="lineno">  174</span>    <span class="keywordflow">return</span> retval;</div>
-<div class="line"><span class="lineno">  175</span>  }</div>
-<div class="ttc" id="aclass_p_i_x_i_e_1_1_event_html_a10e1f7b5ac95b7665ba578fb291686b0"><div class="ttname"><a href="#a10e1f7b5ac95b7665ba578fb291686b0">PIXIE::Event::AddMeasFull</a></div><div class="ttdeci">int AddMeasFull(Reader *reader)</div><div class="ttdef"><b>Definition</b> <a href="event_8cc_source.html#l00188">event.cc:188</a></div></div>
-<div class="ttc" id="aclass_p_i_x_i_e_1_1_event_html_a435968180a70e7b86a828e7f7fc1bf42"><div class="ttname"><a href="#a435968180a70e7b86a828e7f7fc1bf42">PIXIE::Event::AddMeasHeader</a></div><div class="ttdeci">int AddMeasHeader(Reader *reader)</div><div class="ttdef"><b>Definition</b> <a href="event_8cc_source.html#l00176">event.cc:176</a></div></div>
+<p class="definition">Definition at line <a class="el" href="event_8cc_source.html#l00170">170</a> of file <a class="el" href="event_8cc_source.html">event.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  170</span>                                          {</div>
+<div class="line"><span class="lineno">  171</span>    <span class="keywordtype">int</span> retval = <a class="code hl_function" href="#a435968180a70e7b86a828e7f7fc1bf42">AddMeasHeader</a>(reader);</div>
+<div class="line"><span class="lineno">  172</span>    <span class="keywordflow">if</span> (retval == -1) {</div>
+<div class="line"><span class="lineno">  173</span>      <span class="keywordflow">return</span> retval;</div>
+<div class="line"><span class="lineno">  174</span>    }</div>
+<div class="line"><span class="lineno">  175</span>      </div>
+<div class="line"><span class="lineno">  176</span>    retval = <a class="code hl_function" href="#a10e1f7b5ac95b7665ba578fb291686b0">AddMeasFull</a>(reader);</div>
+<div class="line"><span class="lineno">  177</span>    <span class="keywordflow">return</span> retval;</div>
+<div class="line"><span class="lineno">  178</span>  }</div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_event_html_a10e1f7b5ac95b7665ba578fb291686b0"><div class="ttname"><a href="#a10e1f7b5ac95b7665ba578fb291686b0">PIXIE::Event::AddMeasFull</a></div><div class="ttdeci">int AddMeasFull(Reader *reader)</div><div class="ttdef"><b>Definition</b> <a href="event_8cc_source.html#l00191">event.cc:191</a></div></div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_event_html_a435968180a70e7b86a828e7f7fc1bf42"><div class="ttname"><a href="#a435968180a70e7b86a828e7f7fc1bf42">PIXIE::Event::AddMeasHeader</a></div><div class="ttdeci">int AddMeasHeader(Reader *reader)</div><div class="ttdef"><b>Definition</b> <a href="event_8cc_source.html#l00179">event.cc:179</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -301,18 +308,18 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="event_8cc_source.html#l00155">155</a> of file <a class="el" href="event_8cc_source.html">event.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  155</span>                                                                                                           {</div>
-<div class="line"><span class="lineno">  156</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;<a class="code hl_variable" href="#ad39077e66bf9468214071572181d7bb1">nMeas</a>-1; ++i) {</div>
-<div class="line"><span class="lineno">  157</span>      <span class="keyword">const</span> Measurement *meas = &amp;(reader-&gt;measurements[<a class="code hl_variable" href="#a93932ad5d16872467ad4a5a3e44cfaa3">fMeasurements</a>[i]]);</div>
-<div class="line"><span class="lineno">  158</span>      <span class="keywordflow">if</span> (meas-&gt;crateID == crateID &amp;&amp;</div>
-<div class="line"><span class="lineno">  159</span>          meas-&gt;slotID == slotID &amp;&amp;</div>
-<div class="line"><span class="lineno">  160</span>          meas-&gt;channelNumber == channelNumber) {</div>
-<div class="line"><span class="lineno">  161</span>        <span class="keywordflow">return</span> meas;</div>
-<div class="line"><span class="lineno">  162</span>      }</div>
-<div class="line"><span class="lineno">  163</span>    }</div>
-<div class="line"><span class="lineno">  164</span>    <span class="keywordflow">return</span> (NULL);</div>
-<div class="line"><span class="lineno">  165</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="event_8cc_source.html#l00158">158</a> of file <a class="el" href="event_8cc_source.html">event.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  158</span>                                                                                                           {</div>
+<div class="line"><span class="lineno">  159</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;<a class="code hl_variable" href="#ad39077e66bf9468214071572181d7bb1">nMeas</a>-1; ++i) {</div>
+<div class="line"><span class="lineno">  160</span>      <span class="keyword">const</span> Measurement *meas = &amp;(reader-&gt;measurements[<a class="code hl_variable" href="#a93932ad5d16872467ad4a5a3e44cfaa3">fMeasurements</a>[i]]);</div>
+<div class="line"><span class="lineno">  161</span>      <span class="keywordflow">if</span> (meas-&gt;crateID == crateID &amp;&amp;</div>
+<div class="line"><span class="lineno">  162</span>          meas-&gt;slotID == slotID &amp;&amp;</div>
+<div class="line"><span class="lineno">  163</span>          meas-&gt;channelNumber == channelNumber) {</div>
+<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">return</span> meas;</div>
+<div class="line"><span class="lineno">  165</span>      }</div>
+<div class="line"><span class="lineno">  166</span>    }</div>
+<div class="line"><span class="lineno">  167</span>    <span class="keywordflow">return</span> (NULL);</div>
+<div class="line"><span class="lineno">  168</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -335,10 +342,10 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="event_8cc_source.html#l00202">202</a> of file <a class="el" href="event_8cc_source.html">event.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  202</span>                                                                      {</div>
-<div class="line"><span class="lineno">  203</span>    <span class="keywordflow">return</span> &amp;(reader-&gt;measurements[<a class="code hl_variable" href="#a93932ad5d16872467ad4a5a3e44cfaa3">fMeasurements</a>[i]]);</div>
-<div class="line"><span class="lineno">  204</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="event_8cc_source.html#l00210">210</a> of file <a class="el" href="event_8cc_source.html">event.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  210</span>                                                                      {</div>
+<div class="line"><span class="lineno">  211</span>    <span class="keywordflow">return</span> &amp;(reader-&gt;measurements[<a class="code hl_variable" href="#a93932ad5d16872467ad4a5a3e44cfaa3">fMeasurements</a>[i]]);</div>
+<div class="line"><span class="lineno">  212</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -357,19 +364,19 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="event_8cc_source.html#l00140">140</a> of file <a class="el" href="event_8cc_source.html">event.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  141</span>  {</div>
-<div class="line"><span class="lineno">  142</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;======= NEW EVENT ======&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  143</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;<a class="code hl_variable" href="#ad39077e66bf9468214071572181d7bb1">nMeas</a>; ++i) {</div>
-<div class="line"><span class="lineno">  144</span>      std::cout &lt;&lt; <span class="stringliteral">&quot;index = &quot;</span> &lt;&lt; <a class="code hl_variable" href="#a93932ad5d16872467ad4a5a3e44cfaa3">fMeasurements</a>[i] &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  145</span>      reader-&gt;measurements[<a class="code hl_variable" href="#a93932ad5d16872467ad4a5a3e44cfaa3">fMeasurements</a>[i]].print();</div>
-<div class="line"><span class="lineno">  146</span>    }</div>
-<div class="line"><span class="lineno">  147</span>    std::cout &lt;&lt; <a class="code hl_variable" href="#a973b89428d1117d52568424015f327aa">pileups</a> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  148</span>    std::cout &lt;&lt; <a class="code hl_variable" href="#ab4034a1f813be7192c14143d76040d6d">badcfd</a> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  149</span>    std::cout &lt;&lt; <a class="code hl_variable" href="#a1fa2c3028bd5b4b432d34e2c3319c8b9">outofrange</a> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  150</span>    </div>
-<div class="line"><span class="lineno">  151</span>    <span class="keywordflow">return</span> (0);</div>
-<div class="line"><span class="lineno">  152</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="event_8cc_source.html#l00143">143</a> of file <a class="el" href="event_8cc_source.html">event.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  144</span>  {</div>
+<div class="line"><span class="lineno">  145</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;======= NEW EVENT ======&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  146</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;<a class="code hl_variable" href="#ad39077e66bf9468214071572181d7bb1">nMeas</a>; ++i) {</div>
+<div class="line"><span class="lineno">  147</span>      std::cout &lt;&lt; <span class="stringliteral">&quot;index = &quot;</span> &lt;&lt; <a class="code hl_variable" href="#a93932ad5d16872467ad4a5a3e44cfaa3">fMeasurements</a>[i] &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  148</span>      reader-&gt;measurements[<a class="code hl_variable" href="#a93932ad5d16872467ad4a5a3e44cfaa3">fMeasurements</a>[i]].print();</div>
+<div class="line"><span class="lineno">  149</span>    }</div>
+<div class="line"><span class="lineno">  150</span>    std::cout &lt;&lt; <a class="code hl_variable" href="#a973b89428d1117d52568424015f327aa">pileups</a> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  151</span>    std::cout &lt;&lt; <a class="code hl_variable" href="#ab4034a1f813be7192c14143d76040d6d">badcfd</a> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  152</span>    std::cout &lt;&lt; <a class="code hl_variable" href="#a1fa2c3028bd5b4b432d34e2c3319c8b9">outofrange</a> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  153</span>    </div>
+<div class="line"><span class="lineno">  154</span>    <span class="keywordflow">return</span> (0);</div>
+<div class="line"><span class="lineno">  155</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -455,75 +462,78 @@ Public Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   69</span>      <span class="keywordflow">if</span> (next_meas-&gt;eventTime&lt;=maxTime) {</div>
 <div class="line"><span class="lineno">   70</span>        <span class="comment">//in current event</span></div>
 <div class="line"><span class="lineno">   71</span>        <span class="comment">//check for duplicate in same channel</span></div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span> (reader-&gt;RejectSCPU) {</div>
-<div class="line"><span class="lineno">   73</span>          <span class="keywordflow">if</span> (<a class="code hl_function" href="#ae9157873a711b1221138f999ea1a659e">GetMeasurement</a>(next_meas-&gt;crateID, next_meas-&gt;slotID, next_meas-&gt;channelNumber, reader)) {</div>
-<div class="line"><span class="lineno">   74</span>            <span class="keyword">const</span> Measurement *dup_meas = <a class="code hl_function" href="#ae9157873a711b1221138f999ea1a659e">GetMeasurement</a>(next_meas-&gt;crateID, next_meas-&gt;slotID, next_meas-&gt;channelNumber, reader);</div>
-<div class="line"><span class="lineno">   75</span>      </div>
-<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">if</span> (warnings) {</div>
-<div class="line"><span class="lineno">   77</span>              std::cout &lt;&lt; <a class="code hl_define" href="colors_8hh.html#a34995b955465f6bbb37c359173d50477">ANSI_COLOR_RED</a> &lt;&lt; <span class="stringliteral">&quot;Warning: Channel &quot;</span> &lt;&lt; dup_meas-&gt;slotID &lt;&lt; <span class="stringliteral">&quot;:&quot;</span> &lt;&lt; dup_meas-&gt;channelNumber &lt;&lt; <span class="stringliteral">&quot; already fired in this event, perhaps the coincidence window is too large?&quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   78</span>              std::cout &lt;&lt; <a class="code hl_define" href="colors_8hh.html#a34995b955465f6bbb37c359173d50477">ANSI_COLOR_RED</a> &lt;&lt; dup_meas-&gt;eventTime &lt;&lt; <span class="stringliteral">&quot; vs &quot;</span> &lt;&lt; next_meas-&gt;eventTime &lt;&lt; <span class="stringliteral">&quot; :  &quot;</span> &lt;&lt; (double)(-dup_meas-&gt;eventTime + next_meas-&gt;eventTime)/3276.8 &lt;&lt; <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   79</span>            }</div>
-<div class="line"><span class="lineno">   80</span>            <span class="comment">//if it&#39;s not a tagger, end this event and start another</span></div>
-<div class="line"><span class="lineno">   81</span>            <span class="keyword">auto</span> *channel = reader-&gt;definition.GetChannel(next_meas-&gt;crateID, next_meas-&gt;slotID, next_meas-&gt;channelNumber);</div>
-<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">if</span>(!channel-&gt;isTagger){</div>
-<div class="line"><span class="lineno">   83</span>              curEvent = 0;</div>
-<div class="line"><span class="lineno">   84</span>              retval = 1; <span class="comment">//end of event with same channel pileup</span></div>
-<div class="line"><span class="lineno">   85</span>              <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   86</span>            }</div>
-<div class="line"><span class="lineno">   87</span>          }</div>
-<div class="line"><span class="lineno">   88</span>        }        </div>
-<div class="line"><span class="lineno">   89</span>        </div>
-<div class="line"><span class="lineno">   90</span>        <a class="code hl_variable" href="#a0164d55be13b1246c33fada1f298a2c0">mult</a> = <a class="code hl_variable" href="#a0164d55be13b1246c33fada1f298a2c0">mult</a> + 1;</div>
-<div class="line"><span class="lineno">   91</span>         </div>
-<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">if</span> (next_meas-&gt;eventTime&lt;maxTime-coincWindow) {</div>
-<div class="line"><span class="lineno">   93</span>          <span class="comment">//this is super strict, even up to CFD timing</span></div>
-<div class="line"><span class="lineno">   94</span>          <span class="comment">//relax somewhat:</span></div>
-<div class="line"><span class="lineno">   95</span>          <span class="keywordflow">if</span> (next_meas-&gt;eventTime+32768&lt;maxTime-coincWindow) {  <span class="comment">//within 10 ns</span></div>
-<div class="line"><span class="lineno">   96</span>            <span class="keywordflow">if</span> (warnings) {</div>
-<div class="line"><span class="lineno">   97</span>            std::cout&lt;&lt; <a class="code hl_define" href="colors_8hh.html#a34995b955465f6bbb37c359173d50477">ANSI_COLOR_RED</a> <span class="stringliteral">&quot;\nWarning! File is not properly time-sorted&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   98</span>            std::cout&lt;&lt; <span class="stringliteral">&quot;First event: &quot;</span></div>
-<div class="line"><span class="lineno">   99</span>                     &lt;&lt; lastCrate &lt;&lt; <span class="stringliteral">&quot;.&quot;</span> </div>
-<div class="line"><span class="lineno">  100</span>                     &lt;&lt; lastSlot &lt;&lt; <span class="stringliteral">&quot;.&quot;</span> </div>
-<div class="line"><span class="lineno">  101</span>                     &lt;&lt; lastChan &lt;&lt; <span class="stringliteral">&quot;   &quot;</span> &lt;&lt; maxTime - coincWindow &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  102</span>            std::cout&lt;&lt; <span class="stringliteral">&quot;Second event: &quot;</span></div>
-<div class="line"><span class="lineno">  103</span>                     &lt;&lt; next_meas-&gt;crateID &lt;&lt; <span class="stringliteral">&quot;.&quot;</span></div>
-<div class="line"><span class="lineno">  104</span>                     &lt;&lt; next_meas-&gt;slotID &lt;&lt; <span class="stringliteral">&quot;.&quot;</span></div>
-<div class="line"><span class="lineno">  105</span>                     &lt;&lt; next_meas-&gt;channelNumber &lt;&lt; <span class="stringliteral">&quot;   &quot;</span> &lt;&lt; next_meas-&gt;eventTime &lt;&lt; <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  106</span>            }</div>
-<div class="line"><span class="lineno">  107</span>          }</div>
-<div class="line"><span class="lineno">  108</span>        }</div>
-<div class="line"><span class="lineno">  109</span>                </div>
-<div class="line"><span class="lineno">  110</span>        lastCrate = next_meas-&gt;crateID;</div>
-<div class="line"><span class="lineno">  111</span>        lastSlot = next_meas-&gt;slotID;</div>
-<div class="line"><span class="lineno">  112</span>        lastChan = next_meas-&gt;channelNumber;</div>
-<div class="line"><span class="lineno">  113</span>        <span class="keyword">auto</span> *channel = reader-&gt;definition.GetChannel(next_meas-&gt;crateID, next_meas-&gt;slotID, next_meas-&gt;channelNumber);</div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">if</span> (!channel) { ; }</div>
-<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (channel-&gt;extwind) {</div>
-<div class="line"><span class="lineno">  116</span>          <span class="keywordflow">if</span> (next_meas-&gt;eventEnergy &gt; 0 || reader-&gt;extendOnZeros) {</div>
-<div class="line"><span class="lineno">  117</span>            maxTime = next_meas-&gt;eventTime+coincWindow;</div>
-<div class="line"><span class="lineno">  118</span>          }</div>
-<div class="line"><span class="lineno">  119</span>        }</div>
-<div class="line"><span class="lineno">  120</span>        <span class="comment">//go to next sub-event</span></div>
-<div class="line"><span class="lineno">  121</span> </div>
-<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a0164d55be13b1246c33fada1f298a2c0">mult</a> == <a class="code hl_define" href="definitions_8hh.html#a4440d694835967b63cafe00ad888c327">MAX_MEAS_PER_EVENT</a>-1) {</div>
-<div class="line"><span class="lineno">  123</span>          retval = 2;</div>
-<div class="line"><span class="lineno">  124</span>          <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  125</span>        }</div>
-<div class="line"><span class="lineno">  126</span>      }</div>
-<div class="line"><span class="lineno">  127</span>      <span class="keywordflow">else</span> {        </div>
-<div class="line"><span class="lineno">  128</span>        curEvent=0; <span class="comment">//breaks current event loop</span></div>
+<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="#ae9157873a711b1221138f999ea1a659e">GetMeasurement</a>(next_meas-&gt;crateID, next_meas-&gt;slotID, next_meas-&gt;channelNumber, reader)) {</div>
+<div class="line"><span class="lineno">   73</span>          <span class="keyword">const</span> Measurement *dup_meas = <a class="code hl_function" href="#ae9157873a711b1221138f999ea1a659e">GetMeasurement</a>(next_meas-&gt;crateID, next_meas-&gt;slotID, next_meas-&gt;channelNumber, reader);</div>
+<div class="line"><span class="lineno">   74</span>          reader-&gt;chSCPU[meas-&gt;crateID*<a class="code hl_define" href="definitions_8hh.html#aea2a89422b7c0431259b6e918642898a">MAX_SLOTS_PER_CRATE</a>*<a class="code hl_define" href="definitions_8hh.html#aa5e7f9ac14bdfa863ef36c7647bbbd5d">MAX_CHANNELS_PER_BOARD</a> + (meas-&gt;slotID-2)*<a class="code hl_define" href="definitions_8hh.html#aa5e7f9ac14bdfa863ef36c7647bbbd5d">MAX_CHANNELS_PER_BOARD</a> + meas-&gt;channelNumber] += 1;</div>
+<div class="line"><span class="lineno">   75</span>          reader-&gt;sameChanPU += 1;</div>
+<div class="line"><span class="lineno">   76</span> </div>
+<div class="line"><span class="lineno">   77</span>          <span class="keywordflow">if</span> (warnings) {</div>
+<div class="line"><span class="lineno">   78</span>            std::cout &lt;&lt; <a class="code hl_define" href="colors_8hh.html#a34995b955465f6bbb37c359173d50477">ANSI_COLOR_RED</a> &lt;&lt; <span class="stringliteral">&quot;Warning: Channel &quot;</span> &lt;&lt; dup_meas-&gt;slotID &lt;&lt; <span class="stringliteral">&quot;:&quot;</span> &lt;&lt; dup_meas-&gt;channelNumber &lt;&lt; <span class="stringliteral">&quot; already fired in this event, perhaps the coincidence window is too large?&quot;</span> <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   79</span>            std::cout &lt;&lt; <a class="code hl_define" href="colors_8hh.html#a34995b955465f6bbb37c359173d50477">ANSI_COLOR_RED</a> &lt;&lt; dup_meas-&gt;eventTime &lt;&lt; <span class="stringliteral">&quot; vs &quot;</span> &lt;&lt; next_meas-&gt;eventTime &lt;&lt; <span class="stringliteral">&quot; :  &quot;</span> &lt;&lt; (double)(-dup_meas-&gt;eventTime + next_meas-&gt;eventTime)/3276.8 &lt;&lt; <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   80</span>          }</div>
+<div class="line"><span class="lineno">   81</span>         </div>
+<div class="line"><span class="lineno">   82</span>          <span class="keywordflow">if</span> (reader-&gt;RejectSCPU) {</div>
+<div class="line"><span class="lineno">   83</span>            <span class="comment">//if it&#39;s not a tagger, end this event and start another</span></div>
+<div class="line"><span class="lineno">   84</span>            <span class="keyword">auto</span> *channel = reader-&gt;definition.GetChannel(next_meas-&gt;crateID, next_meas-&gt;slotID, next_meas-&gt;channelNumber);</div>
+<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">if</span>(!channel-&gt;isTagger){</div>
+<div class="line"><span class="lineno">   86</span>              curEvent = 0;</div>
+<div class="line"><span class="lineno">   87</span>              retval = 1; <span class="comment">//end of event with same channel pileup</span></div>
+<div class="line"><span class="lineno">   88</span>              <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   89</span>            }</div>
+<div class="line"><span class="lineno">   90</span>          }</div>
+<div class="line"><span class="lineno">   91</span>        }        </div>
+<div class="line"><span class="lineno">   92</span>        </div>
+<div class="line"><span class="lineno">   93</span>        <a class="code hl_variable" href="#a0164d55be13b1246c33fada1f298a2c0">mult</a> = <a class="code hl_variable" href="#a0164d55be13b1246c33fada1f298a2c0">mult</a> + 1;</div>
+<div class="line"><span class="lineno">   94</span>         </div>
+<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">if</span> (next_meas-&gt;eventTime&lt;maxTime-coincWindow) {</div>
+<div class="line"><span class="lineno">   96</span>          <span class="comment">//this is super strict, even up to CFD timing</span></div>
+<div class="line"><span class="lineno">   97</span>          <span class="comment">//relax somewhat:</span></div>
+<div class="line"><span class="lineno">   98</span>          <span class="keywordflow">if</span> (next_meas-&gt;eventTime+32768&lt;maxTime-coincWindow) {  <span class="comment">//within 10 ns</span></div>
+<div class="line"><span class="lineno">   99</span>            <span class="keywordflow">if</span> (warnings) {</div>
+<div class="line"><span class="lineno">  100</span>            std::cout&lt;&lt; <a class="code hl_define" href="colors_8hh.html#a34995b955465f6bbb37c359173d50477">ANSI_COLOR_RED</a> <span class="stringliteral">&quot;\nWarning! File is not properly time-sorted&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  101</span>            std::cout&lt;&lt; <span class="stringliteral">&quot;First event: &quot;</span></div>
+<div class="line"><span class="lineno">  102</span>                     &lt;&lt; lastCrate &lt;&lt; <span class="stringliteral">&quot;.&quot;</span> </div>
+<div class="line"><span class="lineno">  103</span>                     &lt;&lt; lastSlot &lt;&lt; <span class="stringliteral">&quot;.&quot;</span> </div>
+<div class="line"><span class="lineno">  104</span>                     &lt;&lt; lastChan &lt;&lt; <span class="stringliteral">&quot;   &quot;</span> &lt;&lt; maxTime - coincWindow &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  105</span>            std::cout&lt;&lt; <span class="stringliteral">&quot;Second event: &quot;</span></div>
+<div class="line"><span class="lineno">  106</span>                     &lt;&lt; next_meas-&gt;crateID &lt;&lt; <span class="stringliteral">&quot;.&quot;</span></div>
+<div class="line"><span class="lineno">  107</span>                     &lt;&lt; next_meas-&gt;slotID &lt;&lt; <span class="stringliteral">&quot;.&quot;</span></div>
+<div class="line"><span class="lineno">  108</span>                     &lt;&lt; next_meas-&gt;channelNumber &lt;&lt; <span class="stringliteral">&quot;   &quot;</span> &lt;&lt; next_meas-&gt;eventTime &lt;&lt; <a class="code hl_define" href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  109</span>            }</div>
+<div class="line"><span class="lineno">  110</span>          }</div>
+<div class="line"><span class="lineno">  111</span>        }</div>
+<div class="line"><span class="lineno">  112</span>                </div>
+<div class="line"><span class="lineno">  113</span>        lastCrate = next_meas-&gt;crateID;</div>
+<div class="line"><span class="lineno">  114</span>        lastSlot = next_meas-&gt;slotID;</div>
+<div class="line"><span class="lineno">  115</span>        lastChan = next_meas-&gt;channelNumber;</div>
+<div class="line"><span class="lineno">  116</span>        <span class="keyword">auto</span> *channel = reader-&gt;definition.GetChannel(next_meas-&gt;crateID, next_meas-&gt;slotID, next_meas-&gt;channelNumber);</div>
+<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">if</span> (!channel) { ; }</div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (channel-&gt;extwind) {</div>
+<div class="line"><span class="lineno">  119</span>          <span class="keywordflow">if</span> (next_meas-&gt;eventEnergy &gt; 0 || reader-&gt;extendOnZeros) {</div>
+<div class="line"><span class="lineno">  120</span>            maxTime = next_meas-&gt;eventTime+coincWindow;</div>
+<div class="line"><span class="lineno">  121</span>          }</div>
+<div class="line"><span class="lineno">  122</span>        }</div>
+<div class="line"><span class="lineno">  123</span>        <span class="comment">//go to next sub-event</span></div>
+<div class="line"><span class="lineno">  124</span> </div>
+<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a0164d55be13b1246c33fada1f298a2c0">mult</a> == <a class="code hl_define" href="definitions_8hh.html#a4440d694835967b63cafe00ad888c327">MAX_MEAS_PER_EVENT</a>-1) {</div>
+<div class="line"><span class="lineno">  126</span>          retval = 2;</div>
+<div class="line"><span class="lineno">  127</span>          <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  128</span>        }</div>
 <div class="line"><span class="lineno">  129</span>      }</div>
-<div class="line"><span class="lineno">  130</span>    }<span class="comment">//loop for current event</span></div>
-<div class="line"><span class="lineno">  131</span> </div>
-<div class="line"><span class="lineno">  132</span>    <span class="comment">//average event length</span></div>
-<div class="line"><span class="lineno">  133</span>    reader-&gt;av_evt_length = (reader-&gt;av_evt_length*reader-&gt;nEvents + ((maxTime-triggerTime)/(3276.8*1e3)))/(<span class="keywordtype">double</span>)(reader-&gt;nEvents + 1);</div>
-<div class="line"><span class="lineno">  134</span>    </div>
-<div class="line"><span class="lineno">  135</span>    <a class="code hl_variable" href="#ad39077e66bf9468214071572181d7bb1">nMeas</a> -= 1; <span class="comment">//not in this event</span></div>
-<div class="line"><span class="lineno">  136</span> </div>
-<div class="line"><span class="lineno">  137</span>    <span class="keywordflow">return</span> retval;</div>
-<div class="line"><span class="lineno">  138</span>  }</div>
-<div class="ttc" id="aclass_p_i_x_i_e_1_1_event_html_a8d66886fa3a13b8f9b9490bfefb8482b"><div class="ttname"><a href="#a8d66886fa3a13b8f9b9490bfefb8482b">PIXIE::Event::AddMeasurement</a></div><div class="ttdeci">int AddMeasurement(Reader *reader)</div><div class="ttdef"><b>Definition</b> <a href="event_8cc_source.html#l00167">event.cc:167</a></div></div>
-<div class="ttc" id="aclass_p_i_x_i_e_1_1_event_html_ae9157873a711b1221138f999ea1a659e"><div class="ttname"><a href="#ae9157873a711b1221138f999ea1a659e">PIXIE::Event::GetMeasurement</a></div><div class="ttdeci">const Measurement * GetMeasurement(int crateID, int slotID, int channelNumber, Reader *reader) const</div><div class="ttdef"><b>Definition</b> <a href="event_8cc_source.html#l00155">event.cc:155</a></div></div>
+<div class="line"><span class="lineno">  130</span>      <span class="keywordflow">else</span> {        </div>
+<div class="line"><span class="lineno">  131</span>        curEvent=0; <span class="comment">//breaks current event loop</span></div>
+<div class="line"><span class="lineno">  132</span>      }</div>
+<div class="line"><span class="lineno">  133</span>    }<span class="comment">//loop for current event</span></div>
+<div class="line"><span class="lineno">  134</span> </div>
+<div class="line"><span class="lineno">  135</span>    <span class="comment">//average event length</span></div>
+<div class="line"><span class="lineno">  136</span>    reader-&gt;av_evt_length = (reader-&gt;av_evt_length*reader-&gt;nEvents + ((maxTime-triggerTime)/(3276.8*1e3)))/(<span class="keywordtype">double</span>)(reader-&gt;nEvents + 1);</div>
+<div class="line"><span class="lineno">  137</span>    </div>
+<div class="line"><span class="lineno">  138</span>    <a class="code hl_variable" href="#ad39077e66bf9468214071572181d7bb1">nMeas</a> -= 1; <span class="comment">//not in this event</span></div>
+<div class="line"><span class="lineno">  139</span> </div>
+<div class="line"><span class="lineno">  140</span>    <span class="keywordflow">return</span> retval;</div>
+<div class="line"><span class="lineno">  141</span>  }</div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_event_html_a8d66886fa3a13b8f9b9490bfefb8482b"><div class="ttname"><a href="#a8d66886fa3a13b8f9b9490bfefb8482b">PIXIE::Event::AddMeasurement</a></div><div class="ttdeci">int AddMeasurement(Reader *reader)</div><div class="ttdef"><b>Definition</b> <a href="event_8cc_source.html#l00170">event.cc:170</a></div></div>
+<div class="ttc" id="aclass_p_i_x_i_e_1_1_event_html_ae9157873a711b1221138f999ea1a659e"><div class="ttname"><a href="#ae9157873a711b1221138f999ea1a659e">PIXIE::Event::GetMeasurement</a></div><div class="ttdeci">const Measurement * GetMeasurement(int crateID, int slotID, int channelNumber, Reader *reader) const</div><div class="ttdef"><b>Definition</b> <a href="event_8cc_source.html#l00158">event.cc:158</a></div></div>
 <div class="ttc" id="acolors_8hh_html_a34995b955465f6bbb37c359173d50477"><div class="ttname"><a href="colors_8hh.html#a34995b955465f6bbb37c359173d50477">ANSI_COLOR_RED</a></div><div class="ttdeci">#define ANSI_COLOR_RED</div><div class="ttdef"><b>Definition</b> <a href="colors_8hh_source.html#l00004">colors.hh:4</a></div></div>
 <div class="ttc" id="acolors_8hh_html_a92a364c2b863dde1a024a77eac2a5b3b"><div class="ttname"><a href="colors_8hh.html#a92a364c2b863dde1a024a77eac2a5b3b">ANSI_COLOR_RESET</a></div><div class="ttdeci">#define ANSI_COLOR_RESET</div><div class="ttdef"><b>Definition</b> <a href="colors_8hh_source.html#l00010">colors.hh:10</a></div></div>
 </div><!-- fragment -->
