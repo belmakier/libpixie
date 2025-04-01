@@ -69,14 +69,17 @@ namespace PIXIE
       if (next_meas->eventTime<=maxTime) {
         //in current event
         //check for duplicate in same channel
-        if (reader->RejectSCPU) {
-          if (GetMeasurement(next_meas->crateID, next_meas->slotID, next_meas->channelNumber, reader)) {
-            const Measurement *dup_meas = GetMeasurement(next_meas->crateID, next_meas->slotID, next_meas->channelNumber, reader);
-	  
-            if (warnings) {
-              std::cout << ANSI_COLOR_RED << "Warning: Channel " << dup_meas->slotID << ":" << dup_meas->channelNumber << " already fired in this event, perhaps the coincidence window is too large?" ANSI_COLOR_RESET << std::endl;
-              std::cout << ANSI_COLOR_RED << dup_meas->eventTime << " vs " << next_meas->eventTime << " :  " << (double)(-dup_meas->eventTime + next_meas->eventTime)/3276.8 << ANSI_COLOR_RESET << std::endl;
-            }
+        if (GetMeasurement(next_meas->crateID, next_meas->slotID, next_meas->channelNumber, reader)) {
+          const Measurement *dup_meas = GetMeasurement(next_meas->crateID, next_meas->slotID, next_meas->channelNumber, reader);
+          reader->chSCPU[meas->crateID*MAX_SLOTS_PER_CRATE*MAX_CHANNELS_PER_BOARD + (meas->slotID-2)*MAX_CHANNELS_PER_BOARD + meas->channelNumber] += 1;
+          reader->sameChanPU += 1;
+
+          if (warnings) {
+            std::cout << ANSI_COLOR_RED << "Warning: Channel " << dup_meas->slotID << ":" << dup_meas->channelNumber << " already fired in this event, perhaps the coincidence window is too large?" ANSI_COLOR_RESET << std::endl;
+            std::cout << ANSI_COLOR_RED << dup_meas->eventTime << " vs " << next_meas->eventTime << " :  " << (double)(-dup_meas->eventTime + next_meas->eventTime)/3276.8 << ANSI_COLOR_RESET << std::endl;
+          }
+         
+          if (reader->RejectSCPU) {
             //if it's not a tagger, end this event and start another
             auto *channel = reader->definition.GetChannel(next_meas->crateID, next_meas->slotID, next_meas->channelNumber);
             if(!channel->isTagger){
@@ -195,6 +198,11 @@ namespace PIXIE
 
     badcfd += meas->CFDForce;
     outofrange += meas->outOfRange;   
+
+    reader->chTotal[meas->crateID*MAX_SLOTS_PER_CRATE*MAX_CHANNELS_PER_BOARD + (meas->slotID-2)*MAX_CHANNELS_PER_BOARD + meas->channelNumber] += 1;
+    reader->chBadCFD[meas->crateID*MAX_SLOTS_PER_CRATE*MAX_CHANNELS_PER_BOARD + (meas->slotID-2)*MAX_CHANNELS_PER_BOARD + meas->channelNumber] += meas->CFDForce;
+    reader->chOutOfRange[meas->crateID*MAX_SLOTS_PER_CRATE*MAX_CHANNELS_PER_BOARD + (meas->slotID-2)*MAX_CHANNELS_PER_BOARD + meas->channelNumber] += meas->outOfRange;
+    reader->chPileups[meas->crateID*MAX_SLOTS_PER_CRATE*MAX_CHANNELS_PER_BOARD + (meas->slotID-2)*MAX_CHANNELS_PER_BOARD + meas->channelNumber] += meas->finishCode;
       
     return retval;
   }

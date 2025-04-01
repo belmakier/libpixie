@@ -36,6 +36,13 @@ namespace PIXIE {
     long long outofrange;
     long long mults[MAX_MEAS_PER_EVENT];
 
+    long long chPileups[MAX_CRATES*MAX_SLOTS_PER_CRATE*MAX_CHANNELS_PER_BOARD];
+    long long chBadCFD[MAX_CRATES*MAX_SLOTS_PER_CRATE*MAX_CHANNELS_PER_BOARD];
+    long long chTotal[MAX_CRATES*MAX_SLOTS_PER_CRATE*MAX_CHANNELS_PER_BOARD];
+    long long chSCPU[MAX_CRATES*MAX_SLOTS_PER_CRATE*MAX_CHANNELS_PER_BOARD];
+    long long chOutOfRange[MAX_CRATES*MAX_SLOTS_PER_CRATE*MAX_CHANNELS_PER_BOARD];
+    double warning_thresh;
+
     unsigned long long int first_time;
     unsigned long long int last_time;
     int coincWindow;
