@@ -209,7 +209,7 @@ namespace PIXIE
     if (this->liveSort) {fseek(this->file, 0, SEEK_END); this->end = true; usleep(1000000);}
     if (PIXIE_READTYPE==1 || PIXIE_READTYPE==2) {
       fd = open(path.c_str(), O_RDONLY);
-      std::cout << fd << std::endl;
+      std::cout << "memory mapping fd = " << fd << std::endl;
       // memory map things
       this->off = 0;
       this->buffer = (char*)mmap(NULL, fileSize, PROT_READ, MAP_PRIVATE, fd, 0);
@@ -237,6 +237,7 @@ namespace PIXIE
     pOffMax = 0;
     if (!NSCLDAQ) {
       std::memcpy(&pBuff[0], &buffer[0], fileSize);
+      pOffMax = fileSize/4;
     }
     else {
       while (true) {
