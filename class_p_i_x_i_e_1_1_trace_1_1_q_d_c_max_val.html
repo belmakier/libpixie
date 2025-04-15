@@ -187,30 +187,30 @@ Public Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="class_p_i_x_i_e_1_1_trace_1_1_algorithm.html#a03f21dc897a2dcd2a2391964756c9737">PIXIE::Trace::Algorithm</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="trace__algorithms_8cc_source.html#l00625">625</a> of file <a class="el" href="trace__algorithms_8cc_source.html">trace_algorithms.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  625</span>                                                                                                                           {</div>
-<div class="line"><span class="lineno">  626</span><span class="preprocessor">#if ROOT_COMPILE == 1</span></div>
-<div class="line"><span class="lineno">  627</span>      TFile *outFile;</div>
-<div class="line"><span class="lineno">  628</span>      <span class="keywordflow">if</span> (append==1){</div>
-<div class="line"><span class="lineno">  629</span>        outFile = <span class="keyword">new</span> TFile(fileName.c_str(), <span class="stringliteral">&quot;UPDATE&quot;</span>);</div>
-<div class="line"><span class="lineno">  630</span>      }</div>
-<div class="line"><span class="lineno">  631</span>      <span class="keywordflow">else</span>{</div>
-<div class="line"><span class="lineno">  632</span>        outFile = <span class="keyword">new</span> TFile(fileName.c_str(), <span class="stringliteral">&quot;RECREATE&quot;</span>);</div>
-<div class="line"><span class="lineno">  633</span>      }</div>
-<div class="line"><span class="lineno">  634</span>      </div>
-<div class="line"><span class="lineno">  635</span>      <span class="comment">//write trace + anything else to file</span></div>
-<div class="line"><span class="lineno">  636</span>      TH1D *HTrace=<span class="keyword">new</span> TH1D((traceName+std::to_string(n_traces)).c_str(),(traceName+std::to_string(n_traces)).c_str(),traceLen,0,traceLen);</div>
-<div class="line"><span class="lineno">  637</span>      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;traceLen;i++){</div>
-<div class="line"><span class="lineno">  638</span>        HTrace-&gt;AddBinContent(i,trace[i]-trace[0]);</div>
-<div class="line"><span class="lineno">  639</span>      }</div>
-<div class="line"><span class="lineno">  640</span>      HTrace-&gt;Write();</div>
-<div class="line"><span class="lineno">  641</span>      </div>
-<div class="line"><span class="lineno">  642</span>      <span class="comment">//Close File</span></div>
-<div class="line"><span class="lineno">  643</span>      outFile-&gt;Purge();</div>
-<div class="line"><span class="lineno">  644</span>      outFile-&gt;Close();</div>
-<div class="line"><span class="lineno">  645</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  646</span>      <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  647</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="trace__algorithms_8cc_source.html#l00643">643</a> of file <a class="el" href="trace__algorithms_8cc_source.html">trace_algorithms.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  643</span>                                                                                                                           {</div>
+<div class="line"><span class="lineno">  644</span><span class="preprocessor">#if ROOT_COMPILE == 1</span></div>
+<div class="line"><span class="lineno">  645</span>      TFile *outFile;</div>
+<div class="line"><span class="lineno">  646</span>      <span class="keywordflow">if</span> (append==1){</div>
+<div class="line"><span class="lineno">  647</span>        outFile = <span class="keyword">new</span> TFile(fileName.c_str(), <span class="stringliteral">&quot;UPDATE&quot;</span>);</div>
+<div class="line"><span class="lineno">  648</span>      }</div>
+<div class="line"><span class="lineno">  649</span>      <span class="keywordflow">else</span>{</div>
+<div class="line"><span class="lineno">  650</span>        outFile = <span class="keyword">new</span> TFile(fileName.c_str(), <span class="stringliteral">&quot;RECREATE&quot;</span>);</div>
+<div class="line"><span class="lineno">  651</span>      }</div>
+<div class="line"><span class="lineno">  652</span>      </div>
+<div class="line"><span class="lineno">  653</span>      <span class="comment">//write trace + anything else to file</span></div>
+<div class="line"><span class="lineno">  654</span>      TH1D *HTrace=<span class="keyword">new</span> TH1D((traceName+std::to_string(n_traces)).c_str(),(traceName+std::to_string(n_traces)).c_str(),traceLen,0,traceLen);</div>
+<div class="line"><span class="lineno">  655</span>      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;traceLen;i++){</div>
+<div class="line"><span class="lineno">  656</span>        HTrace-&gt;AddBinContent(i,trace[i]-trace[0]);</div>
+<div class="line"><span class="lineno">  657</span>      }</div>
+<div class="line"><span class="lineno">  658</span>      HTrace-&gt;Write();</div>
+<div class="line"><span class="lineno">  659</span>      </div>
+<div class="line"><span class="lineno">  660</span>      <span class="comment">//Close File</span></div>
+<div class="line"><span class="lineno">  661</span>      outFile-&gt;Purge();</div>
+<div class="line"><span class="lineno">  662</span>      outFile-&gt;Close();</div>
+<div class="line"><span class="lineno">  663</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  664</span>      <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  665</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -308,32 +308,46 @@ Public Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="class_p_i_x_i_e_1_1_trace_1_1_algorithm.html#a74e1daba588fc6a054bc45d8f85b2aad">PIXIE::Trace::Algorithm</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="trace__algorithms_8cc_source.html#l00599">599</a> of file <a class="el" href="trace__algorithms_8cc_source.html">trace_algorithms.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  599</span>                                                                         {</div>
-<div class="line"><span class="lineno">  600</span>      <a class="code hl_variable" href="class_p_i_x_i_e_1_1_trace_1_1_algorithm.html#a3a179dfa3c4c83f0750b0a205b55bb35">good_trace</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  601</span>      std::vector&lt;Measurement&gt; retval;</div>
-<div class="line"><span class="lineno">  602</span> </div>
-<div class="line"><span class="lineno">  603</span>      <span class="keywordtype">float</span> background = 0.0;</div>
-<div class="line"><span class="lineno">  604</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=<a class="code hl_variable" href="#aa1adeb3d2943eac8081cac7d64ab6723">bLow</a>; i&lt;=<a class="code hl_variable" href="#a0dc9693ba57a80c01c220334307db992">bHigh</a>; ++i) {</div>
-<div class="line"><span class="lineno">  605</span>        background += trace[i];</div>
-<div class="line"><span class="lineno">  606</span>      }</div>
-<div class="line"><span class="lineno">  607</span>      background /= (float)(<a class="code hl_variable" href="#a0dc9693ba57a80c01c220334307db992">bHigh</a> - <a class="code hl_variable" href="#aa1adeb3d2943eac8081cac7d64ab6723">bLow</a> + 1.);</div>
-<div class="line"><span class="lineno">  608</span> </div>
-<div class="line"><span class="lineno">  609</span>      <span class="keywordtype">float</span> maxVal = 0.0;</div>
-<div class="line"><span class="lineno">  610</span>      <span class="keywordtype">float</span> peak = 0.0;</div>
-<div class="line"><span class="lineno">  611</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=<a class="code hl_variable" href="#a36d49dba51c734fd09410a9a6f4ab7e2">pLow</a>; i&lt;=<a class="code hl_variable" href="#a059d5d7644ad3a378bc3e8fe4289d7f1">pHigh</a>; ++i) {</div>
-<div class="line"><span class="lineno">  612</span>        peak += (float)trace[i] - background;</div>
-<div class="line"><span class="lineno">  613</span>        <span class="keywordflow">if</span> (trace[i] &gt; maxVal) { maxVal = trace[i]; }</div>
-<div class="line"><span class="lineno">  614</span>      }</div>
-<div class="line"><span class="lineno">  615</span> </div>
-<div class="line"><span class="lineno">  616</span>      maxVal -= background;</div>
-<div class="line"><span class="lineno">  617</span> </div>
-<div class="line"><span class="lineno">  618</span>      retval.emplace_back(<span class="stringliteral">&quot;peak&quot;</span>, (<span class="keywordtype">int</span>)peak);</div>
-<div class="line"><span class="lineno">  619</span>      retval.emplace_back(<span class="stringliteral">&quot;background&quot;</span>, (<span class="keywordtype">int</span>)background);</div>
-<div class="line"><span class="lineno">  620</span>      retval.emplace_back(<span class="stringliteral">&quot;maxval&quot;</span>, (<span class="keywordtype">int</span>)maxVal);</div>
-<div class="line"><span class="lineno">  621</span> </div>
-<div class="line"><span class="lineno">  622</span>      <span class="keywordflow">return</span> retval;</div>
-<div class="line"><span class="lineno">  623</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="trace__algorithms_8cc_source.html#l00603">603</a> of file <a class="el" href="trace__algorithms_8cc_source.html">trace_algorithms.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  603</span>                                                                         {</div>
+<div class="line"><span class="lineno">  604</span>      <a class="code hl_variable" href="class_p_i_x_i_e_1_1_trace_1_1_algorithm.html#a3a179dfa3c4c83f0750b0a205b55bb35">good_trace</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  605</span>      std::vector&lt;Measurement&gt; retval;</div>
+<div class="line"><span class="lineno">  606</span> </div>
+<div class="line"><span class="lineno">  607</span>      <span class="keywordtype">float</span> background = 0.0;</div>
+<div class="line"><span class="lineno">  608</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=<a class="code hl_variable" href="#aa1adeb3d2943eac8081cac7d64ab6723">bLow</a>; i&lt;=<a class="code hl_variable" href="#a0dc9693ba57a80c01c220334307db992">bHigh</a>; ++i) {</div>
+<div class="line"><span class="lineno">  609</span>        background += trace[i];</div>
+<div class="line"><span class="lineno">  610</span>      }</div>
+<div class="line"><span class="lineno">  611</span>      background /= (float)(<a class="code hl_variable" href="#a0dc9693ba57a80c01c220334307db992">bHigh</a> - <a class="code hl_variable" href="#aa1adeb3d2943eac8081cac7d64ab6723">bLow</a> + 1.);</div>
+<div class="line"><span class="lineno">  612</span> </div>
+<div class="line"><span class="lineno">  613</span>      <span class="keywordtype">float</span> maxVal = 0.0;</div>
+<div class="line"><span class="lineno">  614</span>      <span class="keywordtype">float</span> peak = 0.0;</div>
+<div class="line"><span class="lineno">  615</span>      <span class="keywordtype">int</span> maxInd = 0;</div>
+<div class="line"><span class="lineno">  616</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=<a class="code hl_variable" href="#a36d49dba51c734fd09410a9a6f4ab7e2">pLow</a>; i&lt;=<a class="code hl_variable" href="#a059d5d7644ad3a378bc3e8fe4289d7f1">pHigh</a>; ++i) {</div>
+<div class="line"><span class="lineno">  617</span>        peak += (float)trace[i] - background;</div>
+<div class="line"><span class="lineno">  618</span>        <span class="keywordflow">if</span> (trace[i] &gt; maxVal) { maxVal = trace[i]; maxInd = i; }</div>
+<div class="line"><span class="lineno">  619</span>      }</div>
+<div class="line"><span class="lineno">  620</span> </div>
+<div class="line"><span class="lineno">  621</span>      maxVal -= background;</div>
+<div class="line"><span class="lineno">  622</span> </div>
+<div class="line"><span class="lineno">  623</span>      <span class="keywordtype">double</span> thresh = maxVal/2. + background;</div>
+<div class="line"><span class="lineno">  624</span>      <span class="keywordtype">int</span> latch = 0;</div>
+<div class="line"><span class="lineno">  625</span>      <span class="keywordtype">double</span> frac = 0;</div>
+<div class="line"><span class="lineno">  626</span> </div>
+<div class="line"><span class="lineno">  627</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=<a class="code hl_variable" href="#a0dc9693ba57a80c01c220334307db992">bHigh</a>; i&lt;=<a class="code hl_variable" href="#a059d5d7644ad3a378bc3e8fe4289d7f1">pHigh</a>; ++i) {</div>
+<div class="line"><span class="lineno">  628</span>         <span class="keywordflow">if</span> (trace[i-1] &lt; thresh &amp;&amp; thresh &lt;= trace[i]) {</div>
+<div class="line"><span class="lineno">  629</span>           frac = (thresh-trace[i-1])/(trace[i]-trace[i-1]);</div>
+<div class="line"><span class="lineno">  630</span>       latch = i;</div>
+<div class="line"><span class="lineno">  631</span>     }</div>
+<div class="line"><span class="lineno">  632</span>      }</div>
+<div class="line"><span class="lineno">  633</span> </div>
+<div class="line"><span class="lineno">  634</span>      retval.emplace_back(<span class="stringliteral">&quot;peak&quot;</span>, (<span class="keywordtype">int</span>)peak);</div>
+<div class="line"><span class="lineno">  635</span>      retval.emplace_back(<span class="stringliteral">&quot;background&quot;</span>, (<span class="keywordtype">int</span>)background);</div>
+<div class="line"><span class="lineno">  636</span>      retval.emplace_back(<span class="stringliteral">&quot;maxval&quot;</span>, (<span class="keywordtype">int</span>)maxVal);</div>
+<div class="line"><span class="lineno">  637</span>      retval.emplace_back(<span class="stringliteral">&quot;time&quot;</span>, (<span class="keywordtype">int</span>)latch);</div>
+<div class="line"><span class="lineno">  638</span>      retval.emplace_back(<span class="stringliteral">&quot;frac&quot;</span>, (<span class="keywordtype">int</span>)(frac*32768));</div>
+<div class="line"><span class="lineno">  639</span> </div>
+<div class="line"><span class="lineno">  640</span>      <span class="keywordflow">return</span> retval;</div>
+<div class="line"><span class="lineno">  641</span>    }</div>
 <div class="ttc" id="aclass_p_i_x_i_e_1_1_trace_1_1_algorithm_html_a3a179dfa3c4c83f0750b0a205b55bb35"><div class="ttname"><a href="class_p_i_x_i_e_1_1_trace_1_1_algorithm.html#a3a179dfa3c4c83f0750b0a205b55bb35">PIXIE::Trace::Algorithm::good_trace</a></div><div class="ttdeci">bool good_trace</div><div class="ttdef"><b>Definition</b> <a href="traces_8hh_source.html#l00017">traces.hh:17</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -369,13 +383,17 @@ Public Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  588</span>      Measurement peak(<span class="stringliteral">&quot;peak&quot;</span>, 0);</div>
 <div class="line"><span class="lineno">  589</span>      Measurement background(<span class="stringliteral">&quot;background&quot;</span>, 0);</div>
 <div class="line"><span class="lineno">  590</span>      Measurement maxval(<span class="stringliteral">&quot;maxval&quot;</span>, 0);</div>
-<div class="line"><span class="lineno">  591</span> </div>
-<div class="line"><span class="lineno">  592</span>      retval.push_back(peak);</div>
-<div class="line"><span class="lineno">  593</span>      retval.push_back(background);</div>
-<div class="line"><span class="lineno">  594</span>      retval.push_back(maxval);</div>
-<div class="line"><span class="lineno">  595</span> </div>
-<div class="line"><span class="lineno">  596</span>      <span class="keywordflow">return</span> retval;</div>
-<div class="line"><span class="lineno">  597</span>    }</div>
+<div class="line"><span class="lineno">  591</span>      Measurement time(<span class="stringliteral">&quot;time&quot;</span>, 0);</div>
+<div class="line"><span class="lineno">  592</span>      Measurement frac(<span class="stringliteral">&quot;frac&quot;</span>, 0);</div>
+<div class="line"><span class="lineno">  593</span> </div>
+<div class="line"><span class="lineno">  594</span>      retval.push_back(peak);</div>
+<div class="line"><span class="lineno">  595</span>      retval.push_back(background);</div>
+<div class="line"><span class="lineno">  596</span>      retval.push_back(maxval);</div>
+<div class="line"><span class="lineno">  597</span>      retval.push_back(time);</div>
+<div class="line"><span class="lineno">  598</span>      retval.push_back(frac);</div>
+<div class="line"><span class="lineno">  599</span> </div>
+<div class="line"><span class="lineno">  600</span>      <span class="keywordflow">return</span> retval;</div>
+<div class="line"><span class="lineno">  601</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>

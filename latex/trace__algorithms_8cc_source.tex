@@ -592,66 +592,84 @@
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00588}00588\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ peak(\textcolor{stringliteral}{"{}peak"{}},\ 0);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00589}00589\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ background(\textcolor{stringliteral}{"{}background"{}},\ 0);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00590}00590\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ maxval(\textcolor{stringliteral}{"{}maxval"{}},\ 0);}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00591}00591\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00592}00592\ \ \ \ \ \ \ retval.push\_back(peak);}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00593}00593\ \ \ \ \ \ \ retval.push\_back(background);}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00594}00594\ \ \ \ \ \ \ retval.push\_back(maxval);}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00595}00595\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00596}00596\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ retval;}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00597}00597\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00598}00598\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00599}\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_ae877fa6149e5398871c664ab88640c4b}{00599}}\ \ \ \ \ std::vector<Measurement>\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_ae877fa6149e5398871c664ab88640c4b}{QDCMaxVal::Process}}(uint16\_t\ *trace,\ \textcolor{keywordtype}{int}\ length)\ \{}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00600}00600\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a3a179dfa3c4c83f0750b0a205b55bb35}{good\_trace}}\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00601}00601\ \ \ \ \ \ \ std::vector<Measurement>\ retval;}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00591}00591\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ time(\textcolor{stringliteral}{"{}time"{}},\ 0);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00592}00592\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ frac(\textcolor{stringliteral}{"{}frac"{}},\ 0);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00593}00593\ }
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00594}00594\ \ \ \ \ \ \ retval.push\_back(peak);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00595}00595\ \ \ \ \ \ \ retval.push\_back(background);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00596}00596\ \ \ \ \ \ \ retval.push\_back(maxval);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00597}00597\ \ \ \ \ \ \ retval.push\_back(time);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00598}00598\ \ \ \ \ \ \ retval.push\_back(frac);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00599}00599\ }
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00600}00600\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ retval;}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00601}00601\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00602}00602\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00603}00603\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ background\ =\ 0.0;}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00604}00604\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_aa1adeb3d2943eac8081cac7d64ab6723}{bLow}};\ i<=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_a0dc9693ba57a80c01c220334307db992}{bHigh}};\ ++i)\ \{}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00605}00605\ \ \ \ \ \ \ \ \ background\ +=\ trace[i];}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00606}00606\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00607}00607\ \ \ \ \ \ \ background\ /=\ (float)(\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_a0dc9693ba57a80c01c220334307db992}{bHigh}}\ -\/\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_aa1adeb3d2943eac8081cac7d64ab6723}{bLow}}\ +\ 1.);}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00608}00608\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00609}00609\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ maxVal\ =\ 0.0;}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00610}00610\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ peak\ =\ 0.0;}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00611}00611\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_a36d49dba51c734fd09410a9a6f4ab7e2}{pLow}};\ i<=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_a059d5d7644ad3a378bc3e8fe4289d7f1}{pHigh}};\ ++i)\ \{}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00612}00612\ \ \ \ \ \ \ \ \ peak\ +=\ (float)trace[i]\ -\/\ background;}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00613}00613\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (trace[i]\ >\ maxVal)\ \{\ maxVal\ =\ trace[i];\ \}}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00614}00614\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00615}00615\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00616}00616\ \ \ \ \ \ \ maxVal\ -\/=\ background;}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00617}00617\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00618}00618\ \ \ \ \ \ \ retval.emplace\_back(\textcolor{stringliteral}{"{}peak"{}},\ (\textcolor{keywordtype}{int})peak);}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00619}00619\ \ \ \ \ \ \ retval.emplace\_back(\textcolor{stringliteral}{"{}background"{}},\ (\textcolor{keywordtype}{int})background);}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00620}00620\ \ \ \ \ \ \ retval.emplace\_back(\textcolor{stringliteral}{"{}maxval"{}},\ (\textcolor{keywordtype}{int})maxVal);}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00621}00621\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00622}00622\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ retval;}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00623}00623\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00624}00624\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00625}\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_ad609bd5911d8b530d80b662c10b4a7fc}{00625}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_ad609bd5911d8b530d80b662c10b4a7fc}{QDCMaxVal::dumpTrace}}(uint16\_t\ *trace,\ \textcolor{keywordtype}{int}\ traceLen,\ \textcolor{keywordtype}{int}\ n\_traces,\ std::string\ fileName,\ \textcolor{keywordtype}{int}\ append,std::string\ traceName)\{}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00626}00626\ \textcolor{preprocessor}{\#if\ ROOT\_COMPILE\ ==\ 1}}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00627}00627\ \ \ \ \ \ \ TFile\ *outFile;}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00628}00628\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (append==1)\{}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00629}00629\ \ \ \ \ \ \ \ \ outFile\ =\ \textcolor{keyword}{new}\ TFile(fileName.c\_str(),\ \textcolor{stringliteral}{"{}UPDATE"{}});}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00630}00630\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00631}00631\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00632}00632\ \ \ \ \ \ \ \ \ outFile\ =\ \textcolor{keyword}{new}\ TFile(fileName.c\_str(),\ \textcolor{stringliteral}{"{}RECREATE"{}});}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00633}00633\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00634}00634\ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00635}00635\ \ \ \ \ \ \ \textcolor{comment}{//write\ trace\ +\ anything\ else\ to\ file}}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00636}00636\ \ \ \ \ \ \ TH1D\ *HTrace=\textcolor{keyword}{new}\ TH1D((traceName+std::to\_string(n\_traces)).c\_str(),(traceName+std::to\_string(n\_traces)).c\_str(),traceLen,0,traceLen);}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00637}00637\ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i=0;i<traceLen;i++)\{}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00638}00638\ \ \ \ \ \ \ \ \ HTrace-\/>AddBinContent(i,trace[i]-\/trace[0]);}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00639}00639\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00640}00640\ \ \ \ \ \ \ HTrace-\/>Write();}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00641}00641\ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00642}00642\ \ \ \ \ \ \ \textcolor{comment}{//Close\ File}}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00643}00643\ \ \ \ \ \ \ outFile-\/>Purge();}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00644}00644\ \ \ \ \ \ \ outFile-\/>Close();}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00645}00645\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00646}00646\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00647}00647\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00648}00648\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00649}00649\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00650}00650\ \ \ \}}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00651}00651\ \}}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00603}\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_ae877fa6149e5398871c664ab88640c4b}{00603}}\ \ \ \ \ std::vector<Measurement>\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_ae877fa6149e5398871c664ab88640c4b}{QDCMaxVal::Process}}(uint16\_t\ *trace,\ \textcolor{keywordtype}{int}\ length)\ \{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00604}00604\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a3a179dfa3c4c83f0750b0a205b55bb35}{good\_trace}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00605}00605\ \ \ \ \ \ \ std::vector<Measurement>\ retval;}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00606}00606\ }
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00607}00607\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ background\ =\ 0.0;}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00608}00608\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_aa1adeb3d2943eac8081cac7d64ab6723}{bLow}};\ i<=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_a0dc9693ba57a80c01c220334307db992}{bHigh}};\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00609}00609\ \ \ \ \ \ \ \ \ background\ +=\ trace[i];}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00610}00610\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00611}00611\ \ \ \ \ \ \ background\ /=\ (float)(\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_a0dc9693ba57a80c01c220334307db992}{bHigh}}\ -\/\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_aa1adeb3d2943eac8081cac7d64ab6723}{bLow}}\ +\ 1.);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00612}00612\ }
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00613}00613\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ maxVal\ =\ 0.0;}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00614}00614\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ peak\ =\ 0.0;}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00615}00615\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ maxInd\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00616}00616\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_a36d49dba51c734fd09410a9a6f4ab7e2}{pLow}};\ i<=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_a059d5d7644ad3a378bc3e8fe4289d7f1}{pHigh}};\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00617}00617\ \ \ \ \ \ \ \ \ peak\ +=\ (float)trace[i]\ -\/\ background;}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00618}00618\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (trace[i]\ >\ maxVal)\ \{\ maxVal\ =\ trace[i];\ maxInd\ =\ i;\ \}}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00619}00619\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00620}00620\ }
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00621}00621\ \ \ \ \ \ \ maxVal\ -\/=\ background;}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00622}00622\ }
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00623}00623\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ thresh\ =\ maxVal/2.\ +\ background;}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00624}00624\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ latch\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00625}00625\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ frac\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00626}00626\ }
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00627}00627\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_a0dc9693ba57a80c01c220334307db992}{bHigh}};\ i<=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_a059d5d7644ad3a378bc3e8fe4289d7f1}{pHigh}};\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00628}00628\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (trace[i-\/1]\ <\ thresh\ \&\&\ thresh\ <=\ trace[i])\ \{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00629}00629\ \ \ \ \ \ \ \ \ \ \ \ frac\ =\ (thresh-\/trace[i-\/1])/(trace[i]-\/trace[i-\/1]);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00630}00630\ \ \ \ \ \ \ \ latch\ =\ i;}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00631}00631\ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00632}00632\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00633}00633\ }
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00634}00634\ \ \ \ \ \ \ retval.emplace\_back(\textcolor{stringliteral}{"{}peak"{}},\ (\textcolor{keywordtype}{int})peak);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00635}00635\ \ \ \ \ \ \ retval.emplace\_back(\textcolor{stringliteral}{"{}background"{}},\ (\textcolor{keywordtype}{int})background);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00636}00636\ \ \ \ \ \ \ retval.emplace\_back(\textcolor{stringliteral}{"{}maxval"{}},\ (\textcolor{keywordtype}{int})maxVal);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00637}00637\ \ \ \ \ \ \ retval.emplace\_back(\textcolor{stringliteral}{"{}time"{}},\ (\textcolor{keywordtype}{int})latch);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00638}00638\ \ \ \ \ \ \ retval.emplace\_back(\textcolor{stringliteral}{"{}frac"{}},\ (\textcolor{keywordtype}{int})(frac*32768));}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00639}00639\ }
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00640}00640\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ retval;}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00641}00641\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00642}00642\ }
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00643}\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_ad609bd5911d8b530d80b662c10b4a7fc}{00643}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_ad609bd5911d8b530d80b662c10b4a7fc}{QDCMaxVal::dumpTrace}}(uint16\_t\ *trace,\ \textcolor{keywordtype}{int}\ traceLen,\ \textcolor{keywordtype}{int}\ n\_traces,\ std::string\ fileName,\ \textcolor{keywordtype}{int}\ append,std::string\ traceName)\{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00644}00644\ \textcolor{preprocessor}{\#if\ ROOT\_COMPILE\ ==\ 1}}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00645}00645\ \ \ \ \ \ \ TFile\ *outFile;}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00646}00646\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (append==1)\{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00647}00647\ \ \ \ \ \ \ \ \ outFile\ =\ \textcolor{keyword}{new}\ TFile(fileName.c\_str(),\ \textcolor{stringliteral}{"{}UPDATE"{}});}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00648}00648\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00649}00649\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00650}00650\ \ \ \ \ \ \ \ \ outFile\ =\ \textcolor{keyword}{new}\ TFile(fileName.c\_str(),\ \textcolor{stringliteral}{"{}RECREATE"{}});}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00651}00651\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00652}00652\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00653}00653\ \ \ \ \ \ \ \textcolor{comment}{//write\ trace\ +\ anything\ else\ to\ file}}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00654}00654\ \ \ \ \ \ \ TH1D\ *HTrace=\textcolor{keyword}{new}\ TH1D((traceName+std::to\_string(n\_traces)).c\_str(),(traceName+std::to\_string(n\_traces)).c\_str(),traceLen,0,traceLen);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00655}00655\ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i=0;i<traceLen;i++)\{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00656}00656\ \ \ \ \ \ \ \ \ HTrace-\/>AddBinContent(i,trace[i]-\/trace[0]);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00657}00657\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00658}00658\ \ \ \ \ \ \ HTrace-\/>Write();}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00659}00659\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00660}00660\ \ \ \ \ \ \ \textcolor{comment}{//Close\ File}}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00661}00661\ \ \ \ \ \ \ outFile-\/>Purge();}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00662}00662\ \ \ \ \ \ \ outFile-\/>Close();}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00663}00663\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00664}00664\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00665}00665\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00666}00666\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00667}00667\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00668}00668\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00669}00669\ \}}
 
 \end{DoxyCode}
