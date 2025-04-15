@@ -588,10 +588,14 @@ namespace PIXIE {
       Measurement peak("peak", 0);
       Measurement background("background", 0);
       Measurement maxval("maxval", 0);
+      Measurement time("time", 0);
+      Measurement frac("frac", 0);
 
       retval.push_back(peak);
       retval.push_back(background);
       retval.push_back(maxval);
+      retval.push_back(time);
+      retval.push_back(frac);
 
       return retval;
     }
@@ -608,16 +612,30 @@ namespace PIXIE {
 
       float maxVal = 0.0;
       float peak = 0.0;
+      int maxInd = 0;
       for (int i=pLow; i<=pHigh; ++i) {
         peak += (float)trace[i] - background;
-        if (trace[i] > maxVal) { maxVal = trace[i]; }
+        if (trace[i] > maxVal) { maxVal = trace[i]; maxInd = i; }
       }
 
       maxVal -= background;
 
+      double thresh = maxVal/2. + background;
+      int latch = 0;
+      double frac = 0;
+
+      for (int i=bHigh; i<=pHigh; ++i) {
+         if (trace[i-1] < thresh && thresh <= trace[i]) {
+           frac = (thresh-trace[i-1])/(trace[i]-trace[i-1]);
+	   latch = i;
+	 }
+      }
+
       retval.emplace_back("peak", (int)peak);
       retval.emplace_back("background", (int)background);
       retval.emplace_back("maxval", (int)maxVal);
+      retval.emplace_back("time", (int)latch);
+      retval.emplace_back("frac", (int)(frac*32768));
 
       return retval;
     }
