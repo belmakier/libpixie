@@ -1,47 +1,47 @@
 \doxysection{nsclreader.\+cc}
 \hypertarget{nsclreader_8cc_source}{}\label{nsclreader_8cc_source}\index{src/nsclreader.cc@{src/nsclreader.cc}}
-\mbox{\hyperlink{nsclreader_8cc}{Go to the documentation of this file.}}
+\doxymbox{\hyperlink{nsclreader_8cc}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{nsclreader_8hh}{nsclreader.hh}}"{}}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{reader_8hh}{reader.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{nsclreader_8hh}{nsclreader.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{reader_8hh}{reader.hh}}"{}}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <string.h>}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00004}00004\ }
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00005}00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_p_i_x_i_e}{PIXIE}}\ \{}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00006}\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_abd723f33508759226c9119c38c999aa2}{00006}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_abd723f33508759226c9119c38c999aa2}{NSCLReader::readRingItemHeader}}(\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}}\ *reader)\ \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00005}00005\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_p_i_x_i_e}{PIXIE}}\ \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00006}\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_abd723f33508759226c9119c38c999aa2}{00006}}\ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_abd723f33508759226c9119c38c999aa2}{NSCLReader::readRingItemHeader}}(\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}}\ *reader)\ \{}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00007}00007\ \textcolor{preprocessor}{\#if\ PIXIE\_READTYPE==0}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00008}00008\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fread(\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ab303c4f20abd69c93e0d08cf286f785a}{ri\_size}},\ (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}),\ 1,\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a6d2bf732ff199ed45f260516507bf808}{file}})\ !=\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00008}00008\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fread(\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ab303c4f20abd69c93e0d08cf286f785a}{ri\_size}},\ (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}),\ 1,\ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a6d2bf732ff199ed45f260516507bf808}{file}})\ !=\ 1)\ \{}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00009}00009\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00010}00010\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00011}00011\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fread(\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a95a5e4361c7e3012e857c50594e3a38e}{ri\_type}},\ (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}),\ 1,\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a6d2bf732ff199ed45f260516507bf808}{file}})\ !=\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00011}00011\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fread(\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a95a5e4361c7e3012e857c50594e3a38e}{ri\_type}},\ (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}),\ 1,\ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a6d2bf732ff199ed45f260516507bf808}{file}})\ !=\ 1)\ \{}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00013}00013\ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00014}00014\ \textcolor{preprocessor}{\#elif\ PIXIE\_READTYPE==1||PIXIE\_READTYPE==2}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00015}00015\ \ \ \ \ \ \ memcpy(\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ab303c4f20abd69c93e0d08cf286f785a}{ri\_size}},\ \&reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a0592b4ee797b9b4e438c7e618fbce773}{buffer}}[reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}],\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char})*4);}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00016}00016\ \ \ \ \ \ \ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}\ +=\ 4;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00017}00017\ \ \ \ \ \ \ memcpy(\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a95a5e4361c7e3012e857c50594e3a38e}{ri\_type}},\ \&reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a0592b4ee797b9b4e438c7e618fbce773}{buffer}}[reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}],\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char})*4);}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00018}00018\ \ \ \ \ \ \ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}\ +=\ 4;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00019}00019\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}\ >\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a3cbf44c09c0127d4049eae7d04109084}{fileSize}})\ \{\ \textcolor{keywordflow}{return}\ -\/1;\ \}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00015}00015\ \ \ \ \ \ \ memcpy(\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ab303c4f20abd69c93e0d08cf286f785a}{ri\_size}},\ \&reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a0592b4ee797b9b4e438c7e618fbce773}{buffer}}[reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}],\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char})*4);}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00016}00016\ \ \ \ \ \ \ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}\ +=\ 4;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00017}00017\ \ \ \ \ \ \ memcpy(\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a95a5e4361c7e3012e857c50594e3a38e}{ri\_type}},\ \&reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a0592b4ee797b9b4e438c7e618fbce773}{buffer}}[reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}],\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char})*4);}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00018}00018\ \ \ \ \ \ \ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}\ +=\ 4;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00019}00019\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}\ >\ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a3cbf44c09c0127d4049eae7d04109084}{fileSize}})\ \{\ \textcolor{keywordflow}{return}\ -\/1;\ \}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00020}00020\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00021}00021\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00022}00022\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a95a5e4361c7e3012e857c50594e3a38e}{ri\_type}}\ !=\ 30\ )\ \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00022}00022\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a95a5e4361c7e3012e857c50594e3a38e}{ri\_type}}\ !=\ 30\ )\ \{}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00023}00023\ \ \ \ \ \ \ \textcolor{comment}{//non-\/physics\ item}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00024}00024\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a95a5e4361c7e3012e857c50594e3a38e}{ri\_type}}\ ==\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00024}00024\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a95a5e4361c7e3012e857c50594e3a38e}{ri\_type}}\ ==\ 1)\ \{}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00025}00025\ \ \ \ \ \ \ \ \ std::cout\ <<\ std::endl;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00026}00026\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}==============\ BEGIN\ RUN\ ==============="{}}\ <<\ std::endl;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00027}00027\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00028}00028\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a95a5e4361c7e3012e857c50594e3a38e}{ri\_type}}\ ==\ 2)\ \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00028}00028\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a95a5e4361c7e3012e857c50594e3a38e}{ri\_type}}\ ==\ 2)\ \{}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00029}00029\ \ \ \ \ \ \ \ \ std::cout\ <<\ std::endl;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00030}00030\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}===============\ END\ RUN\ ================"{}}\ <<\ std::endl;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00031}00031\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00032}00032\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a95a5e4361c7e3012e857c50594e3a38e}{ri\_type}}\ ==\ 3)\ \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00032}00032\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a95a5e4361c7e3012e857c50594e3a38e}{ri\_type}}\ ==\ 3)\ \{}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00033}00033\ \ \ \ \ \ \ \ \ std::cout\ <<\ std::endl;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00034}00034\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}==============\ PAUSE\ RUN\ ==============="{}}\ <<\ std::endl;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00035}00035\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00036}00036\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a95a5e4361c7e3012e857c50594e3a38e}{ri\_type}}\ ==\ 4)\ \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00036}00036\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a95a5e4361c7e3012e857c50594e3a38e}{ri\_type}}\ ==\ 4)\ \{}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00037}00037\ \ \ \ \ \ \ \ \ std::cout\ <<\ std::endl;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00038}00038\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}=============\ RESUME\ RUN\ ==============="{}}\ <<\ std::endl;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00039}00039\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00040}00040\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a95a5e4361c7e3012e857c50594e3a38e}{ri\_type}}\ ==\ 20)\ \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00040}00040\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a95a5e4361c7e3012e857c50594e3a38e}{ri\_type}}\ ==\ 20)\ \{}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00041}00041\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{comment}{//std::cout\ <<\ std::endl;}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{comment}{//std::cout\ <<\ "{}SCALERS\ FOUND..."{}\ <<\ std::endl;}}
@@ -51,29 +51,29 @@
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00047}00047\ \textcolor{preprocessor}{\#ifdef\ DEBUG\ \ \ \ \ \ \ \ \ }}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00048}00048\ \ \ \ \ \ \ \ \ std::cout\ <<\ std::endl;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00049}00049\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Untreated\ Ring\ item:\ "{}}\ <<\ std::endl;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00050}00050\ \ \ \ \ \ \ \ \ std::cout\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ab303c4f20abd69c93e0d08cf286f785a}{ri\_size}}\ <<\ \textcolor{stringliteral}{"{}\ \ \ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a95a5e4361c7e3012e857c50594e3a38e}{ri\_type}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00050}00050\ \ \ \ \ \ \ \ \ std::cout\ <<\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ab303c4f20abd69c93e0d08cf286f785a}{ri\_size}}\ <<\ \textcolor{stringliteral}{"{}\ \ \ "{}}\ <<\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a95a5e4361c7e3012e857c50594e3a38e}{ri\_type}}\ <<\ std::endl;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00051}00051\ \textcolor{preprocessor}{\#endif\ \ \ \ \ \ \ \ }}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00052}00052\ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00053}00053\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00054}00054\ \textcolor{preprocessor}{\#ifdef\ DEBUG}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00055}00055\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}rih\ size\ =\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ab303c4f20abd69c93e0d08cf286f785a}{ri\_size}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00055}00055\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}rih\ size\ =\ "{}}\ <<\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ab303c4f20abd69c93e0d08cf286f785a}{ri\_size}}\ <<\ std::endl;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00056}00056\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00057}00057\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a95a5e4361c7e3012e857c50594e3a38e}{ri\_type}};}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00057}00057\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a95a5e4361c7e3012e857c50594e3a38e}{ri\_type}};}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00058}00058\ \ \ \}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00059}00059\ }
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00060}\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a6ed5e1e488812684de0f2ba252ea7b10}{00060}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a6ed5e1e488812684de0f2ba252ea7b10}{NSCLReader::readRingItemBodyHeader}}(\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}}\ *reader)\ \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00060}\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a6ed5e1e488812684de0f2ba252ea7b10}{00060}}\ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a6ed5e1e488812684de0f2ba252ea7b10}{NSCLReader::readRingItemBodyHeader}}(\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}}\ *reader)\ \{}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00061}00061\ \ \ \ \ uint32\_t\ ribh\_size;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00062}00062\ \ \ \ \ uint64\_t\ ribh\_ts;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00063}00063\ \ \ \ \ uint32\_t\ ribh\_sid;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00064}00064\ \ \ \ \ uint32\_t\ ribh\_bt;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00065}00065\ \textcolor{preprocessor}{\#if\ PIXIE\_READTYPE==0}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00066}00066\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fread(\&ribh\_size,\ (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(uint32\_t),\ 1,\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a6d2bf732ff199ed45f260516507bf808}{file}})\ !=\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00066}00066\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fread(\&ribh\_size,\ (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(uint32\_t),\ 1,\ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a6d2bf732ff199ed45f260516507bf808}{file}})\ !=\ 1)\ \{}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00068}00068\ \ \ \ \ \ \ \}\ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00069}00069\ \textcolor{preprocessor}{\#elif\ PIXIE\_READTYPE==1||PIXIE\_READTYPE==2}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00070}00070\ \ \ \ \ \ \ memcpy(\&ribh\_size,\ \&reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a0592b4ee797b9b4e438c7e618fbce773}{buffer}}[reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}],\ \textcolor{keyword}{sizeof}(uint32\_t));}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00071}00071\ \ \ \ \ \ \ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}+=\textcolor{keyword}{sizeof}(uint32\_t);}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00072}00072\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}\ >\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a3cbf44c09c0127d4049eae7d04109084}{fileSize}})\ \{\ \textcolor{keywordflow}{return}\ -\/1;\ \}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00070}00070\ \ \ \ \ \ \ memcpy(\&ribh\_size,\ \&reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a0592b4ee797b9b4e438c7e618fbce773}{buffer}}[reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}],\ \textcolor{keyword}{sizeof}(uint32\_t));}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00071}00071\ \ \ \ \ \ \ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}+=\textcolor{keyword}{sizeof}(uint32\_t);}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00072}00072\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}\ >\ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a3cbf44c09c0127d4049eae7d04109084}{fileSize}})\ \{\ \textcolor{keywordflow}{return}\ -\/1;\ \}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00073}00073\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00074}00074\ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00075}00075\ \textcolor{preprocessor}{\#ifdef\ DEBUG}}
@@ -81,20 +81,20 @@
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00077}00077\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ size\ :\ "{}}\ <<\ ribh\_size\ <<\ std::endl;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00078}00078\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00079}00079\ }
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00080}00080\ \ \ \ \ \textcolor{keywordflow}{if}\ (ribh\_size\ ==\ 0)\ \{\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a4f1e5db4d9f299423cbb76f6a58927da}{presort}}\ =\ \textcolor{keyword}{true};\ \textcolor{keywordflow}{return}\ 0;\ \}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00080}00080\ \ \ \ \ \textcolor{keywordflow}{if}\ (ribh\_size\ ==\ 0)\ \{\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a4f1e5db4d9f299423cbb76f6a58927da}{presort}}\ =\ \textcolor{keyword}{true};\ \textcolor{keywordflow}{return}\ 0;\ \}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00081}00081\ }
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00082}00082\ \textcolor{preprocessor}{\#if\ PIXIE\_READTYPE==0}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00083}00083\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fread(\&ribh\_ts,\ (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(uint64\_t),\ 1,\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a6d2bf732ff199ed45f260516507bf808}{file}})\ !=\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00083}00083\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fread(\&ribh\_ts,\ (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(uint64\_t),\ 1,\ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a6d2bf732ff199ed45f260516507bf808}{file}})\ !=\ 1)\ \{}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00084}00084\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00085}00085\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00086}00086\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fread(\&ribh\_sid,\ (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}),\ 1,\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a6d2bf732ff199ed45f260516507bf808}{file}})\ !=\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00086}00086\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fread(\&ribh\_sid,\ (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}),\ 1,\ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a6d2bf732ff199ed45f260516507bf808}{file}})\ !=\ 1)\ \{}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00088}00088\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00089}00089\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fread(\&ribh\_bt,\ (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}),\ 1,\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a6d2bf732ff199ed45f260516507bf808}{file}})\ !=\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00089}00089\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fread(\&ribh\_bt,\ (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}),\ 1,\ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a6d2bf732ff199ed45f260516507bf808}{file}})\ !=\ 1)\ \{}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00090}00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00091}00091\ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00092}00092\ \textcolor{preprocessor}{\#else\ \ \ \ \ \ }}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00093}00093\ \ \ \ \ \ \ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}\ +=\ \textcolor{keyword}{sizeof}(uint64\_t)\ +\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int})\ +\ \textcolor{keyword}{sizeof}(int);}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00093}00093\ \ \ \ \ \ \ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}\ +=\ \textcolor{keyword}{sizeof}(uint64\_t)\ +\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int})\ +\ \textcolor{keyword}{sizeof}(int);}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00094}00094\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00095}00095\ }
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00096}00096\ \ \ \ \ \textcolor{comment}{//std::cout\ <<\ "{}\ \ \ \ \ \ timestamp\ :\ "{}\ <<\ ribh\_ts\ <<\ std::endl;}}
@@ -105,33 +105,33 @@
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00101}00101\ \ \ \ \ \textcolor{keywordflow}{return}\ ribh\_size;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00102}00102\ \ \ \}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00103}00103\ \ \ }
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00104}\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a7f21985e0ba85040205a9e7df21e9771}{00104}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a7f21985e0ba85040205a9e7df21e9771}{NSCLReader::readRingItemBody}}(\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}}\ *reader)\ \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00104}\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a7f21985e0ba85040205a9e7df21e9771}{00104}}\ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a7f21985e0ba85040205a9e7df21e9771}{NSCLReader::readRingItemBody}}(\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}}\ *reader)\ \{}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00105}00105\ \textcolor{preprocessor}{\#if\ PIXIE\_READTYPE==0}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00106}00106\ \ \ \ \ \textcolor{keywordflow}{if}\ (fread(\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}},\ (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}),\ 1,\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a6d2bf732ff199ed45f260516507bf808}{file}})\ !=\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00106}00106\ \ \ \ \ \textcolor{keywordflow}{if}\ (fread(\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}},\ (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}),\ 1,\ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a6d2bf732ff199ed45f260516507bf808}{file}})\ !=\ 1)\ \{}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00107}00107\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00108}00108\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00109}00109\ \textcolor{preprocessor}{\#elif\ PIXIE\_READTYPE==1||PIXIE\_READTYPE==2}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00110}00110\ \ \ \ \ memcpy(\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}},\ \&reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a0592b4ee797b9b4e438c7e618fbce773}{buffer}}[reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}],\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char})*4);}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00111}00111\ \ \ \ \ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}+=4;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00112}00112\ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}\ >\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a3cbf44c09c0127d4049eae7d04109084}{fileSize}})\ \{\ \textcolor{keywordflow}{return}\ -\/1;\ \}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00110}00110\ \ \ \ \ memcpy(\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}},\ \&reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a0592b4ee797b9b4e438c7e618fbce773}{buffer}}[reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}],\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char})*4);}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00111}00111\ \ \ \ \ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}+=4;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00112}00112\ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}\ >\ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a3cbf44c09c0127d4049eae7d04109084}{fileSize}})\ \{\ \textcolor{keywordflow}{return}\ -\/1;\ \}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00113}00113\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00114}00114\ }
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00115}00115\ \textcolor{preprocessor}{\#ifdef\ DEBUG}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00116}00116\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Reading\ ring\ item\ body\ size\ =\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00116}00116\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Reading\ ring\ item\ body\ size\ =\ "{}}\ <<\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}}\ <<\ std::endl;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00117}00117\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00118}00118\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00119}00119\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}}\ -\/=\ 4;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00120}00120\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}};}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00119}00119\ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}}\ -\/=\ 4;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00120}00120\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}};}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00121}00121\ \ \ \}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00122}00122\ }
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00123}\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ad81de47b189f7e03d1cc9289844eea44}{00123}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ad81de47b189f7e03d1cc9289844eea44}{NSCLReader::readNextFragment}}(\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}}\ *reader)\ \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00123}\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ad81de47b189f7e03d1cc9289844eea44}{00123}}\ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ad81de47b189f7e03d1cc9289844eea44}{NSCLReader::readNextFragment}}(\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}}\ *reader)\ \{}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00124}00124\ \ \ \ \ \textcolor{comment}{//this\ skips\ over\ the\ fragment\ header,\ the\ ring\ item\ header,\ and\ the\ ring\ item\ body\ header\ associated\ with\ the\ fragment}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00125}00125\ \ \ \ \ \textcolor{comment}{//reads\ the\ first\ 2\ words\ of\ the\ ring\ item\ body\ (body\ size\ +\ device\ info)}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00126}00126\ \ \ \ \ \textcolor{comment}{//leaves\ the\ pointer\ right\ at\ the\ beginning\ of\ the\ actual\ PIXIE\ fragment}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00127}00127\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a4f1e5db4d9f299423cbb76f6a58927da}{presort}})\ \{}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00128}00128\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}}\ >\ 48)\ \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00127}00127\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a4f1e5db4d9f299423cbb76f6a58927da}{presort}})\ \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00128}00128\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}}\ >\ 48)\ \{}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00129}00129\ \textcolor{preprocessor}{\#ifdef\ DEBUG}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00130}00130\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}rib\_size\ =\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00130}00130\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}rib\_size\ =\ "{}}\ <<\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}}\ <<\ std::endl;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00131}00131\ \textcolor{preprocessor}{\#endif\ }}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00132}00132\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00133}00133\ \textcolor{comment}{\ \ \ \ \ \ \ \ uint64\_t\ frag\_ts;}}
@@ -161,9 +161,9 @@
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00157}00157\ \textcolor{comment}{\ \ \ \ \ \ \ \ if\ (fread(\&frag\_ribh\_bt,\ (size\_t)sizeof(int),\ 1,\ file)\ !=\ 1)\ \{\ return\ -\/1;\ \}}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00158}00158\ \textcolor{comment}{\ \ \ \ \ \ \ \ */}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00159}00159\ \textcolor{preprocessor}{\#if\ PIXIE\_READTYPE==0}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00160}00160\ \ \ \ \ \ \ \ \ fseek(reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a6d2bf732ff199ed45f260516507bf808}{file}},\ 48,\ SEEK\_CUR);\ \ \textcolor{comment}{//skip\ the\ rest\ of\ the\ non-\/physics\ event}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00160}00160\ \ \ \ \ \ \ \ \ fseek(reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a6d2bf732ff199ed45f260516507bf808}{file}},\ 48,\ SEEK\_CUR);\ \ \textcolor{comment}{//skip\ the\ rest\ of\ the\ non-\/physics\ event}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00161}00161\ \textcolor{preprocessor}{\#elif\ PIXIE\_READTYPE==1\ ||\ PIXIE\_READTYPE==2}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00162}00162\ \ \ \ \ \ \ \ \ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}\ +=\ 48;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00162}00162\ \ \ \ \ \ \ \ \ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}\ +=\ 48;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00163}00163\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00164}00164\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00165}00165\ \textcolor{comment}{\ \ \ \ \ \ \ \ std::cout\ <<\ "{}Fragment\ Header:\ "{}\ <<\ std::endl;}}
@@ -187,18 +187,18 @@
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00183}00183\ \ \ \ \ \ \ \ \ uint32\_t\ frag\_size;\ \ \textcolor{comment}{//in\ 16\ bit\ words\ not\ 32\ bit\ words}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00184}00184\ \ \ \ \ \ \ \ \ uint32\_t\ dev\_info;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00185}00185\ \textcolor{preprocessor}{\#if\ PIXIE\_READTYPE==0}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fread(\&frag\_size,\ (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}),\ 1,\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a6d2bf732ff199ed45f260516507bf808}{file}})\ !=\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fread(\&frag\_size,\ (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}),\ 1,\ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a6d2bf732ff199ed45f260516507bf808}{file}})\ !=\ 1)\ \{}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fread(\&dev\_info,\ (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}),\ 1,\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a6d2bf732ff199ed45f260516507bf808}{file}})\ !=\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fread(\&dev\_info,\ (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}),\ 1,\ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a6d2bf732ff199ed45f260516507bf808}{file}})\ !=\ 1)\ \{}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00192}00192\ \textcolor{preprocessor}{\#elif\ PIXIE\_READTYPE==1\ ||\ PIXIE\_READTYPE==2}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ memcpy(\&frag\_size,\ \&reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a0592b4ee797b9b4e438c7e618fbce773}{buffer}}[reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}],\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char})*4);}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}+=4;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ memcpy(\&dev\_info,\ \&reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a0592b4ee797b9b4e438c7e618fbce773}{buffer}}[reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}],\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char})*4);}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}+=4;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}\ >\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a3cbf44c09c0127d4049eae7d04109084}{fileSize}})\ \{\ \textcolor{keywordflow}{return}\ -\/1;\ \}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ memcpy(\&frag\_size,\ \&reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a0592b4ee797b9b4e438c7e618fbce773}{buffer}}[reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}],\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char})*4);}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}+=4;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ memcpy(\&dev\_info,\ \&reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a0592b4ee797b9b4e438c7e618fbce773}{buffer}}[reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}],\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char})*4);}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}+=4;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}\ >\ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a3cbf44c09c0127d4049eae7d04109084}{fileSize}})\ \{\ \textcolor{keywordflow}{return}\ -\/1;\ \}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00198}00198\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00199}00199\ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00200}00200\ \ \ \ \ \ \ \ \ uint32\_t\ ADC\_freq\ =\ (dev\_info\ \&\ 0x0000ffff);}
@@ -211,23 +211,23 @@
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00207}00207\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}frag\_size\ =\ "{}}\ <<\ frag\_size\ <<\ std::endl;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00208}00208\ \textcolor{preprocessor}{\#endif\ }}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00209}00209\ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00210}00210\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}}\ -\/=\ (48\ +\ frag\_size*2);}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00211}00211\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}}\ <\ 0\ )\ \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00210}00210\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}}\ -\/=\ (48\ +\ frag\_size*2);}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00211}00211\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}}\ <\ 0\ )\ \{}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00212}00212\ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}SEVERE\ ERROR,\ NAVIGATION\ THROUGH\ RING\ BUFFER\ BROKEN"{}}\ <<\ std::endl;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00213}00213\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00214}00214\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00215}00215\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00216}00216\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}}\ <\ 48)\ \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00216}00216\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}}\ <\ 48)\ \{}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00217}00217\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}REMAINING\ DATA:\ "{}}\ <<\ std::endl;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00218}00218\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ rib\_tmp\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}};}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00218}00218\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ rib\_tmp\ =\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}};}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00219}00219\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ data;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00220}00220\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (rib\_tmp\ >\ 0)\ \{}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00221}00221\ \textcolor{preprocessor}{\#if\ PIXIE\_READTYPE==0}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00222}00222\ \ \ \ \ \ \ \ \ \ \ fread(\&data,\ (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}),\ 1,\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a6d2bf732ff199ed45f260516507bf808}{file}});}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00222}00222\ \ \ \ \ \ \ \ \ \ \ fread(\&data,\ (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}),\ 1,\ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a6d2bf732ff199ed45f260516507bf808}{file}});}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00223}00223\ \textcolor{preprocessor}{\#elif\ PIXIE\_READTYPE==1\ ||\ PIXIE\_READTYPE==2}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00224}00224\ \ \ \ \ \ \ \ \ \ \ memcpy(\&data,\ \&reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a0592b4ee797b9b4e438c7e618fbce773}{buffer}}[reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}],\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char})*4);}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00225}00225\ \ \ \ \ \ \ \ \ \ \ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}+=4;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00226}00226\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}\ >\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a3cbf44c09c0127d4049eae7d04109084}{fileSize}})\ \{\ \textcolor{keywordflow}{return}\ -\/1;\ \}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00224}00224\ \ \ \ \ \ \ \ \ \ \ memcpy(\&data,\ \&reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a0592b4ee797b9b4e438c7e618fbce773}{buffer}}[reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}],\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char})*4);}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00225}00225\ \ \ \ \ \ \ \ \ \ \ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}+=4;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00226}00226\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}\ >\ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a3cbf44c09c0127d4049eae7d04109084}{fileSize}})\ \{\ \textcolor{keywordflow}{return}\ -\/1;\ \}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00227}00227\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00228}00228\ \ \ \ \ \ \ \ \ \ \ rib\_tmp\ -\/=\ 4;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00229}00229\ \ \ \ \ \ \ \ \ \}}
@@ -237,23 +237,23 @@
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00233}00233\ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00234}00234\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00235}00235\ \textcolor{preprocessor}{\#ifdef\ DEBUG}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00236}00236\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}readNextFragment\ returning\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00236}00236\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}readNextFragment\ returning\ "{}}\ <<\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}}\ <<\ std::endl;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00237}00237\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00238}00238\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}};\ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00238}00238\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}};\ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00239}00239\ \ \ \}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00240}00240\ }
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00241}\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ae9f362ee912a172d39aca9d6dcb6d861}{00241}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ae9f362ee912a172d39aca9d6dcb6d861}{NSCLReader::findNextFragment}}(\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}}\ *reader)\ \{}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00242}00242\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}}\ >\ 0)\ \{}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00243}00243\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ad81de47b189f7e03d1cc9289844eea44}{readNextFragment}}(reader);}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00241}\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ae9f362ee912a172d39aca9d6dcb6d861}{00241}}\ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ae9f362ee912a172d39aca9d6dcb6d861}{NSCLReader::findNextFragment}}(\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{Reader}}\ *reader)\ \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00242}00242\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}}\ >\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00243}00243\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ad81de47b189f7e03d1cc9289844eea44}{readNextFragment}}(reader);}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00244}00244\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00245}00245\ }
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00246}00246\ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})\ \{}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00247}00247\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ type\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_abd723f33508759226c9119c38c999aa2}{readRingItemHeader}}(reader);}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00247}00247\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ type\ =\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_abd723f33508759226c9119c38c999aa2}{readRingItemHeader}}(reader);}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00248}00248\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (type\ ==\ -\/1)\ \{\ \textcolor{keywordflow}{return}\ -\/1;\ \}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00249}00249\ }
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00250}00250\ \textcolor{preprocessor}{\#ifdef\ DEBUG}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00251}00251\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}type\ =\ "{}}\ <<\ type\ <<\ std::endl;}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00252}00252\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}size\ =\ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ab303c4f20abd69c93e0d08cf286f785a}{ri\_size}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00252}00252\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}size\ =\ "{}}\ <<\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ab303c4f20abd69c93e0d08cf286f785a}{ri\_size}}\ <<\ std::endl;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00253}00253\ \textcolor{preprocessor}{\#endif\ }}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00254}00254\ \ \ \ \ \ \ \textcolor{comment}{/*}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00255}00255\ \textcolor{comment}{\ \ \ \ \ \ if\ (type\ >=\ 1\ \&\&\ type\ <=\ 4)\ \{}}
@@ -282,30 +282,30 @@
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00278}00278\ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00279}00279\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (type\ !=\ 30)\ \{}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00280}00280\ \textcolor{preprocessor}{\#if\ PIXIE\_READTYPE==0}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00281}00281\ \ \ \ \ \ \ \ \ fseek(reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a6d2bf732ff199ed45f260516507bf808}{file}},\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ab303c4f20abd69c93e0d08cf286f785a}{ri\_size}}-\/8,\ SEEK\_CUR);\ \ \textcolor{comment}{//skip\ the\ rest\ of\ the\ non-\/physics\ event}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00281}00281\ \ \ \ \ \ \ \ \ fseek(reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a6d2bf732ff199ed45f260516507bf808}{file}},\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ab303c4f20abd69c93e0d08cf286f785a}{ri\_size}}-\/8,\ SEEK\_CUR);\ \ \textcolor{comment}{//skip\ the\ rest\ of\ the\ non-\/physics\ event}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00282}00282\ \textcolor{preprocessor}{\#elif\ PIXIE\_READTYPE==1||PIXIE\_READTYPE==2}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00283}00283\ \ \ \ \ \ \ \ \ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}\ +=\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ab303c4f20abd69c93e0d08cf286f785a}{ri\_size}}-\/8);}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00283}00283\ \ \ \ \ \ \ \ \ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}\ +=\ (\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ab303c4f20abd69c93e0d08cf286f785a}{ri\_size}}-\/8);}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00284}00284\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00285}00285\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00286}00286\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00287}00287\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ ribh\_size\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a6ed5e1e488812684de0f2ba252ea7b10}{readRingItemBodyHeader}}(reader);}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00287}00287\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ ribh\_size\ =\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a6ed5e1e488812684de0f2ba252ea7b10}{readRingItemBodyHeader}}(reader);}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00288}00288\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ribh\_size\ <\ 0)\ \{\ \textcolor{keywordflow}{return}\ ribh\_size;\ \}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00289}00289\ }
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00290}00290\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a4f1e5db4d9f299423cbb76f6a58927da}{presort}})\ \{}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00291}00291\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a7f21985e0ba85040205a9e7df21e9771}{readRingItemBody}}(reader);}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00290}00290\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a4f1e5db4d9f299423cbb76f6a58927da}{presort}})\ \{}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00291}00291\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_a7f21985e0ba85040205a9e7df21e9771}{readRingItemBody}}(reader);}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00292}00292\ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00293}00293\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00294}00294\ \ \ \ \ \ \ \ \ uint32\_t\ tmp[2];}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00295}00295\ \textcolor{preprocessor}{\#if\ PIXIE\_READTYPE==0}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00296}00296\ \ \ \ \ \ \ \ \ std::fread(\&tmp[0],\ 4,\ 2,\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a6d2bf732ff199ed45f260516507bf808}{file}});}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00296}00296\ \ \ \ \ \ \ \ \ std::fread(\&tmp[0],\ 4,\ 2,\ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a6d2bf732ff199ed45f260516507bf808}{file}});}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00297}00297\ \textcolor{preprocessor}{\#elif\ PIXIE\_READTYPE==1||PIXIE\_READTYPE==2}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00298}00298\ \ \ \ \ \ \ \ \ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}\ +=\ 8;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00298}00298\ \ \ \ \ \ \ \ \ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a389f82dbf341864c059ac606dcc05fa5}{off}}\ +=\ 8;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00299}00299\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00300}00300\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}}\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ab303c4f20abd69c93e0d08cf286f785a}{ri\_size}}-\/20;}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00300}00300\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}}\ =\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ab303c4f20abd69c93e0d08cf286f785a}{ri\_size}}-\/20;}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00301}00301\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00302}00302\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}}\ <\ 0)\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}};\ \}}
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00302}00302\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}}\ <\ 0)\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_aa8e88e45223d6076a83dcd21df5cc723}{rib\_size}};\ \}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00303}00303\ }
-\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00304}00304\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ad81de47b189f7e03d1cc9289844eea44}{readNextFragment}}(reader);\ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00304}00304\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_n_s_c_l_reader_ad81de47b189f7e03d1cc9289844eea44}{readNextFragment}}(reader);\ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00305}00305\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00306}00306\ \ \ \}}
 \DoxyCodeLine{\Hypertarget{nsclreader_8cc_source_l00307}00307\ \}\ \ \ \ }

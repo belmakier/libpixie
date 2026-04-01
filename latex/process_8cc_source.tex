@@ -1,6 +1,6 @@
 \doxysection{process.\+cc}
 \hypertarget{process_8cc_source}{}\label{process_8cc_source}\index{src/process.cc@{src/process.cc}}
-\mbox{\hyperlink{process_8cc}{Go to the documentation of this file.}}
+\doxymbox{\hyperlink{process_8cc}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00001}00001\ \textcolor{preprocessor}{\#include<iostream>}}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00002}00002\ \textcolor{preprocessor}{\#include<vector>}}
@@ -25,15 +25,15 @@
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00021}00021\ \textcolor{preprocessor}{\#include\ "{}TTree.h"{}}}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00022}00022\ \textcolor{preprocessor}{\#include\ "{}TH1.h"{}}}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00023}00023\ }
-\DoxyCodeLine{\Hypertarget{process_8cc_source_l00024}00024\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{pixie_8hh}{pixie.hh}}"{}}}
-\DoxyCodeLine{\Hypertarget{process_8cc_source_l00025}00025\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{traces_8hh}{traces.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{process_8cc_source_l00024}00024\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{pixie_8hh}{pixie.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{process_8cc_source_l00025}00025\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{traces_8hh}{traces.hh}}"{}}}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00026}00026\ \textcolor{preprocessor}{\#include\ "{}pixie2root.hh"{}}}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00027}00027\ }
-\DoxyCodeLine{\Hypertarget{process_8cc_source_l00028}00028\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_p_i_x_i_e}{PIXIE}}\ \{\ \ }
-\DoxyCodeLine{\Hypertarget{process_8cc_source_l00029}\mbox{\hyperlink{namespace_p_i_x_i_e_ad864ab63e26cb252877ab4d1c8acd85b}{00029}}\ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{namespace_p_i_x_i_e_ad864ab63e26cb252877ab4d1c8acd85b}{Process}}(\textcolor{keywordtype}{void}\ *thread)\ \{}
-\DoxyCodeLine{\Hypertarget{process_8cc_source_l00030}00030\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{PIXIE::Reader}}\ *reader\ \ \ \ \ \ \ \ \ \ \ \ =\ \&(((PixieThread*)thread)\ -\/>\ reader);}
+\DoxyCodeLine{\Hypertarget{process_8cc_source_l00028}00028\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_p_i_x_i_e}{PIXIE}}\ \{\ \ }
+\DoxyCodeLine{\Hypertarget{process_8cc_source_l00029}\doxymbox{\hyperlink{namespace_p_i_x_i_e_ad864ab63e26cb252877ab4d1c8acd85b}{00029}}\ \ \ \textcolor{keywordtype}{void}\ *\doxymbox{\hyperlink{namespace_p_i_x_i_e_ad864ab63e26cb252877ab4d1c8acd85b}{Process}}(\textcolor{keywordtype}{void}\ *thread)\ \{}
+\DoxyCodeLine{\Hypertarget{process_8cc_source_l00030}00030\ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader}{PIXIE::Reader}}\ *reader\ \ \ \ \ \ \ \ \ \ \ \ =\ \&(((PixieThread*)thread)\ -\/>\ reader);}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00031}00031\ \ \ \ \ options\ options\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ ((PixieThread*)thread)\ -\/>\ opt;}
-\DoxyCodeLine{\Hypertarget{process_8cc_source_l00032}00032\ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition}{Experiment\_Definition}}\ definition\ =\ ((PixieThread*)thread)\ -\/>\ definition;}
+\DoxyCodeLine{\Hypertarget{process_8cc_source_l00032}00032\ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition}{Experiment\_Definition}}\ definition\ =\ ((PixieThread*)thread)\ -\/>\ definition;}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00033}00033\ \ \ \ \ off\_t\ offset\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ ((PixieThread*)thread)\ -\/>\ offset;}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00034}00034\ \ \ \ \ off\_t\ max\_offset\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ ((PixieThread*)thread)\ -\/>\ max\_offset;}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00035}00035\ \ \ \ \ \textcolor{keywordtype}{int}\ threadNum\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ ((PixieThread*)thread)\ -\/>\ threadNum;}
@@ -64,7 +64,7 @@
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00060}00060\ \ \ \ \ std::unordered\_map<const\ PIXIE::Experiment\_Definition::Channel*,\ PixieTagger*>\ channel\_to\_tagger;}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00061}00061\ \ \ }
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00063}00063\ \ \ \ \ \textcolor{comment}{//\ Add\ branches\ //}}
-\DoxyCodeLine{\Hypertarget{process_8cc_source_l00065}00065\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&crate\_it\ :\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_abb0fc6333195ac9dd12f7fea78834b0f}{definition}}.\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_aabcea4cb8a3eb1e2b3185f108256b43d}{crateMap}})\ \{}
+\DoxyCodeLine{\Hypertarget{process_8cc_source_l00065}00065\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&crate\_it\ :\ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_abb0fc6333195ac9dd12f7fea78834b0f}{definition}}.\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_aabcea4cb8a3eb1e2b3185f108256b43d}{crateMap}})\ \{}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00066}00066\ \ \ \ \ \ \ \textcolor{keyword}{auto}\ crate\ =\ crate\_it.second;}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00067}00067\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&slot\_it\ :\ crate-\/>slotMap)\ \{}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ slot\ =\ slot\_it.second;}
@@ -80,7 +80,7 @@
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ log\ <<\ std::flush;}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00079}00079\ }
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//the\ branch\ is\ a\ tagger:}}
-\DoxyCodeLine{\Hypertarget{process_8cc_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (std::find(reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_abb0fc6333195ac9dd12f7fea78834b0f}{definition}}.taggers.begin(),\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_abb0fc6333195ac9dd12f7fea78834b0f}{definition}}.taggers.end(),\ channel)\ !=\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_abb0fc6333195ac9dd12f7fea78834b0f}{definition}}.taggers.end())\ \{\ }
+\DoxyCodeLine{\Hypertarget{process_8cc_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (std::find(reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_abb0fc6333195ac9dd12f7fea78834b0f}{definition}}.taggers.begin(),\ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_abb0fc6333195ac9dd12f7fea78834b0f}{definition}}.taggers.end(),\ channel)\ !=\ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_abb0fc6333195ac9dd12f7fea78834b0f}{definition}}.taggers.end())\ \{\ }
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ PixieTagger*\ tag\ =\ \textcolor{keyword}{new}\ PixieTagger();\ \textcolor{comment}{//\ IIRC\ legit\ use\ of\ pointer\ for\ the\ sake\ of\ Branch}}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ tree\ -\/>\ Branch((branchName+\textcolor{stringliteral}{"{}.taggerTime"{}}).c\_str(),\ \&(tag-\/>taggerTime));}
@@ -127,8 +127,8 @@
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ trace\_meas\ =\ channel-\/>alg-\/>Prototype();}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PixieTraceEvent\ *tracedata\ =\ \textcolor{keyword}{new}\ PixieTraceEvent(trace\_meas.size());}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<trace\_meas.size();\ ++i)\ \{}
-\DoxyCodeLine{\Hypertarget{process_8cc_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{PIXIE::Trace::Measurement}}\ meas\ =\ trace\_meas[i];}
-\DoxyCodeLine{\Hypertarget{process_8cc_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tree-\/>Branch((branchName+\textcolor{stringliteral}{"{}."{}}+meas.\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement_a5fa417f5be604f7a14ab8e6d8f521be5}{name}}).c\_str(),\ \&(tracedata-\/>meas[i]));}
+\DoxyCodeLine{\Hypertarget{process_8cc_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{PIXIE::Trace::Measurement}}\ meas\ =\ trace\_meas[i];}
+\DoxyCodeLine{\Hypertarget{process_8cc_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tree-\/>Branch((branchName+\textcolor{stringliteral}{"{}."{}}+meas.\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement_a5fa417f5be604f7a14ab8e6d8f521be5}{name}}).c\_str(),\ \&(tracedata-\/>meas[i]));}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ channel\_to\_tracedata.insert(\{channel,\ tracedata\});}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
@@ -150,8 +150,8 @@
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00148}00148\ \ \ \ \ log\ <<\ std::flush;}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00149}00149\ \ \ \ \ reader\ -\/>\ open(options.listPath);}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00150}00150\ \ \ \ \ \textcolor{keywordflow}{if}\ (options.verbose==\textcolor{keyword}{true})\ \{}
-\DoxyCodeLine{\Hypertarget{process_8cc_source_l00151}00151\ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}[\ \%i\ ]\ Opened\ listmode\ data\ file\ "{}}\ \mbox{\hyperlink{colors_8hh_aca16e6a49eb51333c5fd3eee19487315}{ANSI\_COLOR\_BLUE}}\ \textcolor{stringliteral}{"{}\%s"{}}\ \mbox{\hyperlink{colors_8hh_a92a364c2b863dde1a024a77eac2a5b3b}{ANSI\_COLOR\_RESET}}\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}},\ threadNum,\ options.listPath.c\_str());}
-\DoxyCodeLine{\Hypertarget{process_8cc_source_l00152}00152\ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}[\ \%i\ ]\ Processing\ "{}}\ \mbox{\hyperlink{colors_8hh_aca16e6a49eb51333c5fd3eee19487315}{ANSI\_COLOR\_BLUE}}\ \textcolor{stringliteral}{"{}\%d"{}}\ \mbox{\hyperlink{colors_8hh_a92a364c2b863dde1a024a77eac2a5b3b}{ANSI\_COLOR\_RESET}}\ \textcolor{stringliteral}{"{}\ events\ at\ a\ time,\ with\ a\ coincidence\ window\ of\ "{}}\ \mbox{\hyperlink{colors_8hh_aca16e6a49eb51333c5fd3eee19487315}{ANSI\_COLOR\_BLUE}}\ \textcolor{stringliteral}{"{}\%d"{}}\ \mbox{\hyperlink{colors_8hh_a92a364c2b863dde1a024a77eac2a5b3b}{ANSI\_COLOR\_RESET}}\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}},\ threadNum,\ options.events\_per\_read,\ options.coincWindow);}
+\DoxyCodeLine{\Hypertarget{process_8cc_source_l00151}00151\ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}[\ \%i\ ]\ Opened\ listmode\ data\ file\ "{}}\ \doxymbox{\hyperlink{colors_8hh_aca16e6a49eb51333c5fd3eee19487315}{ANSI\_COLOR\_BLUE}}\ \textcolor{stringliteral}{"{}\%s"{}}\ \doxymbox{\hyperlink{colors_8hh_a92a364c2b863dde1a024a77eac2a5b3b}{ANSI\_COLOR\_RESET}}\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}},\ threadNum,\ options.listPath.c\_str());}
+\DoxyCodeLine{\Hypertarget{process_8cc_source_l00152}00152\ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}[\ \%i\ ]\ Processing\ "{}}\ \doxymbox{\hyperlink{colors_8hh_aca16e6a49eb51333c5fd3eee19487315}{ANSI\_COLOR\_BLUE}}\ \textcolor{stringliteral}{"{}\%d"{}}\ \doxymbox{\hyperlink{colors_8hh_a92a364c2b863dde1a024a77eac2a5b3b}{ANSI\_COLOR\_RESET}}\ \textcolor{stringliteral}{"{}\ events\ at\ a\ time,\ with\ a\ coincidence\ window\ of\ "{}}\ \doxymbox{\hyperlink{colors_8hh_aca16e6a49eb51333c5fd3eee19487315}{ANSI\_COLOR\_BLUE}}\ \textcolor{stringliteral}{"{}\%d"{}}\ \doxymbox{\hyperlink{colors_8hh_a92a364c2b863dde1a024a77eac2a5b3b}{ANSI\_COLOR\_RESET}}\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}},\ threadNum,\ options.events\_per\_read,\ options.coincWindow);}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00153}00153\ \ \ \ \ \ \ std::cout\ <<\ std::flush;}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00154}00154\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00155}00155\ }
@@ -171,13 +171,13 @@
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00170}00170\ \ \ \ \ \textcolor{comment}{//\ read\ loop\ //}}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00172}00172\ \ \ \ \ \textcolor{keywordflow}{while}(\textcolor{keyword}{true})\ \{}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00173}00173\ \ \ \ \ \ \ new\_events.clear();}
-\DoxyCodeLine{\Hypertarget{process_8cc_source_l00174}00174\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (options.breakatevent\ >\ 0\ \&\&\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a59724abfa68ca0b7a4225a66a636e1d1}{eventsread}}\ +\ options.events\_per\_read\ >\ options.breakatevent)\{}
-\DoxyCodeLine{\Hypertarget{process_8cc_source_l00175}00175\ \ \ \ \ reader\ -\/>\ read(new\_events,\ options.coincWindow,\ options.breakatevent\ -\/\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a59724abfa68ca0b7a4225a66a636e1d1}{eventsread}},\ max\_offset,\ options.warnings);}
+\DoxyCodeLine{\Hypertarget{process_8cc_source_l00174}00174\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (options.breakatevent\ >\ 0\ \&\&\ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a59724abfa68ca0b7a4225a66a636e1d1}{eventsread}}\ +\ options.events\_per\_read\ >\ options.breakatevent)\{}
+\DoxyCodeLine{\Hypertarget{process_8cc_source_l00175}00175\ \ \ \ \ reader\ -\/>\ read(new\_events,\ options.coincWindow,\ options.breakatevent\ -\/\ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a59724abfa68ca0b7a4225a66a636e1d1}{eventsread}},\ max\_offset,\ options.warnings);}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00176}00176\ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00177}00177\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00178}00178\ \ \ \ \ \ \ \ \ reader\ -\/>\ read(new\_events,\ options.coincWindow,\ options.events\_per\_read,\ max\_offset,\ options.warnings);}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00179}00179\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{process_8cc_source_l00180}00180\ \ \ \ \ \ \ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a59724abfa68ca0b7a4225a66a636e1d1}{eventsread}}\ =\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a59724abfa68ca0b7a4225a66a636e1d1}{eventsread}}\ +\ new\_events.size();}
+\DoxyCodeLine{\Hypertarget{process_8cc_source_l00180}00180\ \ \ \ \ \ \ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a59724abfa68ca0b7a4225a66a636e1d1}{eventsread}}\ =\ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a59724abfa68ca0b7a4225a66a636e1d1}{eventsread}}\ +\ new\_events.size();}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00181}00181\ }
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00182}00182\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (new\_events.size())\ \{}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00183}00183\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ event\ :\ new\_events)\ \{}
@@ -195,7 +195,7 @@
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00195}00195\ }
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Done\ setting\ up,\ iterate\ and\ fill\ the\ event}}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&meas\ :\ event.fMeasurements)\ \{}
-\DoxyCodeLine{\Hypertarget{process_8cc_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ *channel\ =\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_abb0fc6333195ac9dd12f7fea78834b0f}{definition}}.\mbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a4dafec217c0b9f571c8cc9e944e3f050}{GetChannel}}(meas.crateID,\ meas.slotID,\ meas.channelNumber);}
+\DoxyCodeLine{\Hypertarget{process_8cc_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ *channel\ =\ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_abb0fc6333195ac9dd12f7fea78834b0f}{definition}}.\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_experiment___definition_a4dafec217c0b9f571c8cc9e944e3f050}{GetChannel}}(meas.crateID,\ meas.slotID,\ meas.channelNumber);}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ detector\ =\ channel\_to\_data.find(channel);}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ tagger\ =\ channel\_to\_tagger.find(channel);}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00201}00201\ }
@@ -272,12 +272,12 @@
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00272}00272\ \ \ \ \ \ \ tree\ -\/>\ Write();}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00273}00273\ \ \ \ \ \ \ reader\ -\/>\ printUpdate();}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00274}00274\ }
-\DoxyCodeLine{\Hypertarget{process_8cc_source_l00275}00275\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (options.breakatevent\ \&\&\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a59724abfa68ca0b7a4225a66a636e1d1}{eventsread}}\ >=\ options.breakatevent)\ \{}
+\DoxyCodeLine{\Hypertarget{process_8cc_source_l00275}00275\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (options.breakatevent\ \&\&\ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a59724abfa68ca0b7a4225a66a636e1d1}{eventsread}}\ >=\ options.breakatevent)\ \{}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00276}00276\ \ \ \ \ \ \ \ \ tree\ -\/>\ Write(tree-\/>GetName(),\ TObject::kOverwrite);}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00277}00277\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00278}00278\ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00279}00279\ }
-\DoxyCodeLine{\Hypertarget{process_8cc_source_l00280}00280\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a9290c324fdbec0c231d1f4dbc34dd402}{eof}}()\ ||\ reader-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a9e1ef7766d3ee935ff0b384d52d6a87c}{end}})\ \{}
+\DoxyCodeLine{\Hypertarget{process_8cc_source_l00280}00280\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a9290c324fdbec0c231d1f4dbc34dd402}{eof}}()\ ||\ reader-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_reader_a9e1ef7766d3ee935ff0b384d52d6a87c}{end}})\ \{}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00281}00281\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (options.live\ \&\&\ options.liveCount<=10)\ \{\ \textcolor{comment}{//if\ we\ hit\ the\ end\ of\ the\ file\ for\ 50\ seconds\ continuously,\ assume\ we\ have\ stopped\ acquiring\ data\ and\ quit}}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00282}00282\ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ eof?\ "{}}\ <<\ options.liveCount\ <<\ std::endl;}
 \DoxyCodeLine{\Hypertarget{process_8cc_source_l00283}00283\ \ \ \ \ \ \ \ \ \ \ std::this\_thread::sleep\_for(std::chrono::milliseconds(10));}

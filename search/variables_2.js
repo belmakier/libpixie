@@ -12,5 +12,6 @@ var searchData=
   ['chtotal_9',['chTotal',['../class_p_i_x_i_e_1_1_reader.html#ad1732f725e3b2586e7d412588c32bab1',1,'PIXIE::Reader']]],
   ['coincwindow_10',['coincWindow',['../class_p_i_x_i_e_1_1_reader.html#afb6553488e3a40a7625f18fd68333407',1,'PIXIE::Reader']]],
   ['crateid_11',['crateID',['../struct_p_i_x_i_e_1_1_experiment___definition_1_1_channel.html#a53f6d7537fc2d2a0aec0ad3b7122852a',1,'PIXIE::Experiment_Definition::Channel::crateID'],['../struct_p_i_x_i_e_1_1_experiment___definition_1_1_slot.html#a8f99820e0eeab64c71c18bdb90516605',1,'PIXIE::Experiment_Definition::Slot::crateID'],['../struct_p_i_x_i_e_1_1_experiment___definition_1_1_crate.html#a94058e9b0ea10b9b05ec9121986c3ba5',1,'PIXIE::Experiment_Definition::Crate::crateID'],['../class_p_i_x_i_e_1_1_measurement.html#ac1630da7899d358a7f6c06bbce3b6417',1,'PIXIE::Measurement::crateID']]],
-  ['cratemap_12',['crateMap',['../class_p_i_x_i_e_1_1_experiment___definition.html#aabcea4cb8a3eb1e2b3185f108256b43d',1,'PIXIE::Experiment_Definition']]]
+  ['cratemap_12',['crateMap',['../class_p_i_x_i_e_1_1_experiment___definition.html#aabcea4cb8a3eb1e2b3185f108256b43d',1,'PIXIE::Experiment_Definition']]],
+  ['ctrlc_5fquit_13',['ctrlc_quit',['../class_p_i_x_i_e_1_1_reader.html#a5c8a027da9b256da1998ab47a7016b80',1,'PIXIE::Reader']]]
 ];

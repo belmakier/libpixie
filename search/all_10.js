@@ -15,7 +15,8 @@ var searchData=
   ['start_12',['start',['../class_p_i_x_i_e_1_1_reader.html#aa1bee3fadbcc007046d27f269f597887',1,'PIXIE::Reader']]],
   ['start_5foffset_13',['start_offset',['../class_p_i_x_i_e_1_1_reader.html#ac7ddadef511f84bea18e6a287cdb38e0',1,'PIXIE::Reader']]],
   ['starttime_14',['starttime',['../class_p_i_x_i_e_1_1_reader.html#a8bbac18262af021f9b44e6b6af252e64',1,'PIXIE::Reader']]],
-  ['stringfast_15',['stringFast',['../class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c.html#a801141883a2df166e5048313044dfa7a',1,'PIXIE::Trace::TrapezoidQDC']]],
-  ['stringslow_16',['stringSlow',['../class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c.html#a0da37779ec0506e2743cf6c6a7edbae5',1,'PIXIE::Trace::TrapezoidQDC']]],
-  ['subevents_17',['subevents',['../class_p_i_x_i_e_1_1_reader.html#a0ce86f5114467a18c6e22f7115f00fec',1,'PIXIE::Reader']]]
+  ['stop_15',['stop',['../class_p_i_x_i_e_1_1_reader.html#a12ea7a64525fed202a27fd3dc3797c37',1,'PIXIE::Reader']]],
+  ['stringfast_16',['stringFast',['../class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c.html#a801141883a2df166e5048313044dfa7a',1,'PIXIE::Trace::TrapezoidQDC']]],
+  ['stringslow_17',['stringSlow',['../class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c.html#a0da37779ec0506e2743cf6c6a7edbae5',1,'PIXIE::Trace::TrapezoidQDC']]],
+  ['subevents_18',['subevents',['../class_p_i_x_i_e_1_1_reader.html#a0ce86f5114467a18c6e22f7115f00fec',1,'PIXIE::Reader']]]
 ];

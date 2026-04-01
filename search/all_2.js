@@ -20,5 +20,6 @@ var searchData=
   ['colors_2ehh_17',['colors.hh',['../colors_8hh.html',1,'']]],
   ['crate_18',['Crate',['../struct_p_i_x_i_e_1_1_experiment___definition_1_1_crate.html',1,'PIXIE::Experiment_Definition::Crate'],['../struct_p_i_x_i_e_1_1_experiment___definition_1_1_crate.html#a04339f8ef5f22ef96930fee96ed35e24',1,'PIXIE::Experiment_Definition::Crate::Crate()']]],
   ['crateid_19',['crateID',['../struct_p_i_x_i_e_1_1_experiment___definition_1_1_channel.html#a53f6d7537fc2d2a0aec0ad3b7122852a',1,'PIXIE::Experiment_Definition::Channel::crateID'],['../struct_p_i_x_i_e_1_1_experiment___definition_1_1_slot.html#a8f99820e0eeab64c71c18bdb90516605',1,'PIXIE::Experiment_Definition::Slot::crateID'],['../struct_p_i_x_i_e_1_1_experiment___definition_1_1_crate.html#a94058e9b0ea10b9b05ec9121986c3ba5',1,'PIXIE::Experiment_Definition::Crate::crateID'],['../class_p_i_x_i_e_1_1_measurement.html#ac1630da7899d358a7f6c06bbce3b6417',1,'PIXIE::Measurement::crateID']]],
-  ['cratemap_20',['crateMap',['../class_p_i_x_i_e_1_1_experiment___definition.html#aabcea4cb8a3eb1e2b3185f108256b43d',1,'PIXIE::Experiment_Definition']]]
+  ['cratemap_20',['crateMap',['../class_p_i_x_i_e_1_1_experiment___definition.html#aabcea4cb8a3eb1e2b3185f108256b43d',1,'PIXIE::Experiment_Definition']]],
+  ['ctrlc_5fquit_21',['ctrlc_quit',['../class_p_i_x_i_e_1_1_reader.html#a5c8a027da9b256da1998ab47a7016b80',1,'PIXIE::Reader']]]
 ];

@@ -1,6 +1,6 @@
 \doxysection{trace\+\_\+algorithms.\+cc}
 \hypertarget{trace__algorithms_8cc_source}{}\label{trace__algorithms_8cc_source}\index{src/trace\_algorithms.cc@{src/trace\_algorithms.cc}}
-\mbox{\hyperlink{trace__algorithms_8cc}{Go to the documentation of this file.}}
+\doxymbox{\hyperlink{trace__algorithms_8cc}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <iostream>}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00002}00002\ \textcolor{preprocessor}{\#include<cstdio>}}
@@ -11,10 +11,10 @@
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <vector>}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <cmath>}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00009}00009\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{traces_8hh}{traces.hh}}"{}}}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{trace__algorithms_8hh}{trace\_algorithms.hh}}"{}}}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{measurement_8hh}{measurement.hh}}"{}}}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{colors_8hh}{colors.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{traces_8hh}{traces.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{trace__algorithms_8hh}{trace\_algorithms.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{measurement_8hh}{measurement.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{colors_8hh}{colors.hh}}"{}}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00014}00014\ }
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00015}00015\ \textcolor{comment}{/*\ EXTERN*/}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00016}00016\ \textcolor{preprocessor}{\#if\ ROOT\_COMPILE\ ==\ 1}}
@@ -25,31 +25,31 @@
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00021}00021\ \textcolor{preprocessor}{\#include\ "{}TFile.h"{}}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00022}00022\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00023}00023\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00024}00024\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_p_i_x_i_e}{PIXIE}}\ \{}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00025}\mbox{\hyperlink{namespace_p_i_x_i_e_a1dc265a21039e9941fc85af4ddcd7a84}{00025}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespace_p_i_x_i_e_a1dc265a21039e9941fc85af4ddcd7a84}{setTraceAlg}}(\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm}{PIXIE::Trace::Algorithm}}\ *\&tracealg,\ std::string\ algName,\ std::string\ algFile,\ \textcolor{keywordtype}{int}\ algIndex)\ \{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00024}00024\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_p_i_x_i_e}{PIXIE}}\ \{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00025}\doxymbox{\hyperlink{namespace_p_i_x_i_e_a1dc265a21039e9941fc85af4ddcd7a84}{00025}}\ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{namespace_p_i_x_i_e_a1dc265a21039e9941fc85af4ddcd7a84}{setTraceAlg}}(\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm}{PIXIE::Trace::Algorithm}}\ *\&tracealg,\ std::string\ algName,\ std::string\ algFile,\ \textcolor{keywordtype}{int}\ algIndex)\ \{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00026}00026\ \ \ \ \ \textcolor{keywordflow}{if}\ (!((algName).compare(\textcolor{stringliteral}{"{}trapfilter"{}})))\ \{}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00027}00027\ \ \ \ \ \ \ tracealg\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid}{PIXIE::Trace::Trapezoid}}();}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00027}00027\ \ \ \ \ \ \ tracealg\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid}{PIXIE::Trace::Trapezoid}}();}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00028}00028\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00029}00029\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (!((algName).compare(\textcolor{stringliteral}{"{}trapfilterqdcs"{}})))\ \{}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00030}00030\ \ \ \ \ \ \ tracealg\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c}{PIXIE::Trace::TrapezoidQDC}}();}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00030}00030\ \ \ \ \ \ \ tracealg\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c}{PIXIE::Trace::TrapezoidQDC}}();}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00031}00031\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00032}00032\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (!((algName).compare(\textcolor{stringliteral}{"{}peaktail"{}})))\ \{}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00033}00033\ \ \ \ \ \ \ tracealg\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail}{PIXIE::Trace::PeakTail}}();}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00033}00033\ \ \ \ \ \ \ tracealg\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail}{PIXIE::Trace::PeakTail}}();}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00034}00034\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00035}00035\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (!((algName).compare(\textcolor{stringliteral}{"{}qdc\_maxval"{}})))\ \{}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00036}00036\ \ \ \ \ \ \ tracealg\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val}{PIXIE::Trace::QDCMaxVal}}();}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00036}00036\ \ \ \ \ \ \ tracealg\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val}{PIXIE::Trace::QDCMaxVal}}();}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00037}00037\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00038}00038\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00039}00039\ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Warning!\ Unknown\ trace\ algorithm\ "{}}\ <<\ algName\ <<\ std::endl;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00040}00040\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00041}00041\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00042}00042\ \ \ \ \ tracealg-\/>\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a507daabea5816729273219e9d310b695}{Load}}(algFile.c\_str(),\ algIndex);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00042}00042\ \ \ \ \ tracealg-\/>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a507daabea5816729273219e9d310b695}{Load}}(algFile.c\_str(),\ algIndex);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00043}00043\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00044}00044\ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00045}00045\ \ \ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00046}\mbox{\hyperlink{namespace_p_i_x_i_e_1_1_trace}{00046}}\ \ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_p_i_x_i_e_1_1_trace}{Trace}}\ \{\ \ \ }
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00046}\doxymbox{\hyperlink{namespace_p_i_x_i_e_1_1_trace}{00046}}\ \ \ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_p_i_x_i_e_1_1_trace}{Trace}}\ \{\ \ \ }
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00047}00047\ \ \ \ \ \textcolor{comment}{//Trapezoid}}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00048}\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a7a5d35e6e5b6c79e62856f74f559861d}{00048}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a7a5d35e6e5b6c79e62856f74f559861d}{Trapezoid::Load}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filename,\ \textcolor{keywordtype}{int}\ index)\ \{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00048}\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a7a5d35e6e5b6c79e62856f74f559861d}{00048}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a7a5d35e6e5b6c79e62856f74f559861d}{Trapezoid::Load}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filename,\ \textcolor{keywordtype}{int}\ index)\ \{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00049}00049\ \ \ \ \ \ \ FILE\ *fpr\ =\ fopen(filename,\ \textcolor{stringliteral}{"{}r"{}});}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00050}00050\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fpr!=NULL)\{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ line[200];}
@@ -62,25 +62,25 @@
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'\#'}:}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ sscanf(line,\textcolor{stringliteral}{"{}\%d\ \%d\ \%d\ \%d\ \%d\ \%f\ \%d\ \%d\ \%f\ \%f"{}},\&ind,\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ae12b21d1f5a546e1fc560af9b848b1e3}{fL}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ac2acbbb289bfb291f8ad3f02c23d97b1}{fG}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a24bbb5f118d7127ebedede680dbef4fd}{sL}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a89e14d45faf34067d08ed11f5ca89cb4}{sG}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a05c05dd147acad46cc9fc88b0ec44bd7}{tau}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a3e4714dc2551cbd6396ce3a5dbeac6f8}{D}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a0569baccfd2c27a8bae5b42b532ccba9}{S}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_aebe5c3c6e03ebaf78d8e658132b75090}{ffThr}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_abcd3c02217b2f785ab57c6b31ff9c29c}{cfdThr}});}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ ind\ <<\ \textcolor{stringliteral}{"{}\ \ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ae12b21d1f5a546e1fc560af9b848b1e3}{fL}}\ <<\ \textcolor{stringliteral}{"{}\ \ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ac2acbbb289bfb291f8ad3f02c23d97b1}{fG}}\ <<\ \textcolor{stringliteral}{"{}\ \ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a24bbb5f118d7127ebedede680dbef4fd}{sL}}\ <<\ \textcolor{stringliteral}{"{}\ \ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a89e14d45faf34067d08ed11f5ca89cb4}{sG}}\ <<\ \textcolor{stringliteral}{"{}\ \ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a05c05dd147acad46cc9fc88b0ec44bd7}{tau}}\ <<\ \textcolor{stringliteral}{"{}\ \ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a3e4714dc2551cbd6396ce3a5dbeac6f8}{D}}\ <<\ \textcolor{stringliteral}{"{}\ \ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a0569baccfd2c27a8bae5b42b532ccba9}{S}}\ <<\ \textcolor{stringliteral}{"{}\ \ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_aebe5c3c6e03ebaf78d8e658132b75090}{ffThr}}\ <<\ \textcolor{stringliteral}{"{}\ \ "{}}\ <<\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_abcd3c02217b2f785ab57c6b31ff9c29c}{cfdThr}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ sscanf(line,\textcolor{stringliteral}{"{}\%d\ \%d\ \%d\ \%d\ \%d\ \%f\ \%d\ \%d\ \%f\ \%f"{}},\&ind,\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ae12b21d1f5a546e1fc560af9b848b1e3}{fL}},\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ac2acbbb289bfb291f8ad3f02c23d97b1}{fG}},\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a24bbb5f118d7127ebedede680dbef4fd}{sL}},\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a89e14d45faf34067d08ed11f5ca89cb4}{sG}},\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a05c05dd147acad46cc9fc88b0ec44bd7}{tau}},\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a3e4714dc2551cbd6396ce3a5dbeac6f8}{D}},\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a0569baccfd2c27a8bae5b42b532ccba9}{S}},\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_aebe5c3c6e03ebaf78d8e658132b75090}{ffThr}},\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_abcd3c02217b2f785ab57c6b31ff9c29c}{cfdThr}});}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ ind\ <<\ \textcolor{stringliteral}{"{}\ \ "{}}\ <<\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ae12b21d1f5a546e1fc560af9b848b1e3}{fL}}\ <<\ \textcolor{stringliteral}{"{}\ \ "{}}\ <<\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ac2acbbb289bfb291f8ad3f02c23d97b1}{fG}}\ <<\ \textcolor{stringliteral}{"{}\ \ "{}}\ <<\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a24bbb5f118d7127ebedede680dbef4fd}{sL}}\ <<\ \textcolor{stringliteral}{"{}\ \ "{}}\ <<\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a89e14d45faf34067d08ed11f5ca89cb4}{sG}}\ <<\ \textcolor{stringliteral}{"{}\ \ "{}}\ <<\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a05c05dd147acad46cc9fc88b0ec44bd7}{tau}}\ <<\ \textcolor{stringliteral}{"{}\ \ "{}}\ <<\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a3e4714dc2551cbd6396ce3a5dbeac6f8}{D}}\ <<\ \textcolor{stringliteral}{"{}\ \ "{}}\ <<\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a0569baccfd2c27a8bae5b42b532ccba9}{S}}\ <<\ \textcolor{stringliteral}{"{}\ \ "{}}\ <<\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_aebe5c3c6e03ebaf78d8e658132b75090}{ffThr}}\ <<\ \textcolor{stringliteral}{"{}\ \ "{}}\ <<\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_abcd3c02217b2f785ab57c6b31ff9c29c}{cfdThr}}\ <<\ std::endl;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ind\ ==\ index)\ \{\ \textcolor{keywordflow}{break};\ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00065}00065\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00066}00066\ \ \ \ \ \ \ \ \ fclose(fpr);}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00067}00067\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a0cd4fcab67f90370e5d485da02ee9934}{is\_loaded}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00067}00067\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a0cd4fcab67f90370e5d485da02ee9934}{is\_loaded}}\ =\ \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00068}00068\ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00069}00069\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00070}00070\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%sUnable\ to\ open\ file\ \%s,\ traces\ will\ not\ be\ processed\%s\(\backslash\)n"{}},\mbox{\hyperlink{colors_8hh_a34995b955465f6bbb37c359173d50477}{ANSI\_COLOR\_RED}},\ filename,\ \mbox{\hyperlink{colors_8hh_a92a364c2b863dde1a024a77eac2a5b3b}{ANSI\_COLOR\_RESET}});}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00070}00070\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%sUnable\ to\ open\ file\ \%s,\ traces\ will\ not\ be\ processed\%s\(\backslash\)n"{}},\doxymbox{\hyperlink{colors_8hh_a34995b955465f6bbb37c359173d50477}{ANSI\_COLOR\_RED}},\ filename,\ \doxymbox{\hyperlink{colors_8hh_a92a364c2b863dde1a024a77eac2a5b3b}{ANSI\_COLOR\_RESET}});}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00071}00071\ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00072}00072\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00073}00073\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00074}\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a51cca59d8c13a43f3cf01f1eae8353a8}{00074}}\ \ \ \ \ std::vector<Measurement>\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a51cca59d8c13a43f3cf01f1eae8353a8}{Trapezoid::Prototype}}()\ \{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00074}\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a51cca59d8c13a43f3cf01f1eae8353a8}{00074}}\ \ \ \ \ std::vector<Measurement>\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a51cca59d8c13a43f3cf01f1eae8353a8}{Trapezoid::Prototype}}()\ \{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00075}00075\ \ \ \ \ \ \ std::vector<Measurement>\ retval;}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00076}00076\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ tcp(\textcolor{stringliteral}{"{}TraceTCP"{}},\ 0);}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00077}00077\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ zcp(\textcolor{stringliteral}{"{}TraceZCP"{}},\ 0);}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00078}00078\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ cfd(\textcolor{stringliteral}{"{}TraceCFD"{}},\ 0);}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00079}00079\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ energy(\textcolor{stringliteral}{"{}TraceEnergy"{}},\ 0);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00076}00076\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ tcp(\textcolor{stringliteral}{"{}TraceTCP"{}},\ 0);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00077}00077\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ zcp(\textcolor{stringliteral}{"{}TraceZCP"{}},\ 0);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00078}00078\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ cfd(\textcolor{stringliteral}{"{}TraceCFD"{}},\ 0);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00079}00079\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ energy(\textcolor{stringliteral}{"{}TraceEnergy"{}},\ 0);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00080}00080\ }
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00081}00081\ \ \ \ \ \ \ retval.push\_back(tcp);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00082}00082\ \ \ \ \ \ \ retval.push\_back(zcp);}
@@ -90,13 +90,13 @@
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00086}00086\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ retval;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00087}00087\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00088}00088\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00089}\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ac5d8fa6692cef0675a261c191e856fb8}{00089}}\ \ \ \ \ std::vector<Measurement>\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ac5d8fa6692cef0675a261c191e856fb8}{Trapezoid::Process}}(uint16\_t\ *trace,\ \textcolor{keywordtype}{int}\ length)\ \{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00089}\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ac5d8fa6692cef0675a261c191e856fb8}{00089}}\ \ \ \ \ std::vector<Measurement>\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ac5d8fa6692cef0675a261c191e856fb8}{Trapezoid::Process}}(uint16\_t\ *trace,\ \textcolor{keywordtype}{int}\ length)\ \{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00090}00090\ \ \ \ \ \ \ std::vector<Measurement>\ retval;}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00091}00091\ \ \ \ \ \ \ retval\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a795b286a8b183874822bfa1bc8292a18}{Trapezoid::TrapFilter}}(trace,\ length);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00091}00091\ \ \ \ \ \ \ retval\ =\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a795b286a8b183874822bfa1bc8292a18}{Trapezoid::TrapFilter}}(trace,\ length);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00092}00092\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ retval;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00093}00093\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00094}00094\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00095}\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a00e96dba2654d6815574e4f5cd73931a}{00095}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a00e96dba2654d6815574e4f5cd73931a}{Trapezoid::GetBaseline}}(uint16\_t\ *trace,\ \textcolor{keywordtype}{int}\ length)\ \{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00095}\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a00e96dba2654d6815574e4f5cd73931a}{00095}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a00e96dba2654d6815574e4f5cd73931a}{Trapezoid::GetBaseline}}(uint16\_t\ *trace,\ \textcolor{keywordtype}{int}\ length)\ \{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00096}00096\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ mean=0;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00097}00097\ \ \ \ \ \ \ \textcolor{comment}{//Baseline\ -\/\ get\ a\ better\ algorithm\ for\ this\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00098}00098\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ k=0;k<40;k++)\ \{}
@@ -106,14 +106,14 @@
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00102}00102\ }
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00103}00103\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ mean;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00104}00104\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00105}\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a795b286a8b183874822bfa1bc8292a18}{00105}}\ \ \ \ \ std::vector<Measurement>\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a795b286a8b183874822bfa1bc8292a18}{Trapezoid::TrapFilter}}(uint16\_t\ *trace,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ length,\textcolor{keywordtype}{int}\ write)\ \{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00105}\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a795b286a8b183874822bfa1bc8292a18}{00105}}\ \ \ \ \ std::vector<Measurement>\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a795b286a8b183874822bfa1bc8292a18}{Trapezoid::TrapFilter}}(uint16\_t\ *trace,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ length,\textcolor{keywordtype}{int}\ write)\ \{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00106}00106\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00107}00107\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a3a179dfa3c4c83f0750b0a205b55bb35}{good\_trace}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00107}00107\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a3a179dfa3c4c83f0750b0a205b55bb35}{good\_trace}}\ =\ \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00108}00108\ \ \ \ \ \ \ std::vector<Measurement>\ retval;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00109}00109\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ P;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00110}00110\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ M;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00111}00111\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ BL[length];\textcolor{comment}{//=\{0\};}}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00112}00112\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_p_i_x_i_e_1_1_c_f_d}{CFD}}[length];\textcolor{comment}{//=\{0\};}}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00112}00112\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{struct_p_i_x_i_e_1_1_c_f_d}{CFD}}[length];\textcolor{comment}{//=\{0\};}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00113}00113\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ sD[length];\textcolor{comment}{//=\{0\};}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00114}00114\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ sP[length];\textcolor{comment}{//=\{0\};}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00115}00115\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ sR[length];\textcolor{comment}{//=\{0\};}}
@@ -130,15 +130,15 @@
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00126}00126\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ ffTrig\ =0,\ cfdTrig=0;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00127}00127\ }
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00128}00128\ \ \ \ \ \ \ \textcolor{comment}{//Pole-\/zero\ correction\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00129}00129\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a05c05dd147acad46cc9fc88b0ec44bd7}{tau}}==-\/1)\ \{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00129}00129\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a05c05dd147acad46cc9fc88b0ec44bd7}{tau}}==-\/1)\ \{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00130}00130\ \ \ \ \ \ \ \ \ P=0;M=1;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00131}00131\ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00132}00132\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00133}00133\ \ \ \ \ \ \ \ \ P=1;}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00134}00134\ \ \ \ \ \ \ \ \ M=1/(std::exp(1/(\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a05c05dd147acad46cc9fc88b0ec44bd7}{tau}}))-\/1);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00134}00134\ \ \ \ \ \ \ \ \ M=1/(std::exp(1/(\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a05c05dd147acad46cc9fc88b0ec44bd7}{tau}}))-\/1);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00135}00135\ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00136}00136\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00137}00137\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ mean\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a00e96dba2654d6815574e4f5cd73931a}{Trapezoid::GetBaseline}}(trace,\ length);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00137}00137\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ mean\ =\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a00e96dba2654d6815574e4f5cd73931a}{Trapezoid::GetBaseline}}(trace,\ length);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00138}00138\ }
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00139}00139\ \ \ \ \ \ \ \textcolor{comment}{//Trapezoid\ filter\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00140}00140\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ k=0;k<length;k++)\ \{}
@@ -147,14 +147,14 @@
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00143}00143\ \ \ \ \ \ \ \ \ sD[k]=BL[k];}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00144}00144\ \ \ \ \ \ \ \ \ fD[k]=BL[k];}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00145}00145\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00146}00146\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (k-\/\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a24bbb5f118d7127ebedede680dbef4fd}{sL}}>=0)\ \{\ sD[k]\ -\/=\ BL[k-\/\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a24bbb5f118d7127ebedede680dbef4fd}{sL}}];\ \}}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00147}00147\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (k-\/\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ae12b21d1f5a546e1fc560af9b848b1e3}{fL}}>=0)\ \{\ fD[k]\ -\/=\ BL[k-\/\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ae12b21d1f5a546e1fc560af9b848b1e3}{fL}}];\ \}}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00146}00146\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (k-\/\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a24bbb5f118d7127ebedede680dbef4fd}{sL}}>=0)\ \{\ sD[k]\ -\/=\ BL[k-\/\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a24bbb5f118d7127ebedede680dbef4fd}{sL}}];\ \}}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00147}00147\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (k-\/\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ae12b21d1f5a546e1fc560af9b848b1e3}{fL}}>=0)\ \{\ fD[k]\ -\/=\ BL[k-\/\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ae12b21d1f5a546e1fc560af9b848b1e3}{fL}}];\ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00148}00148\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00149}00149\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (k-\/(\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a89e14d45faf34067d08ed11f5ca89cb4}{sG}}+\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a24bbb5f118d7127ebedede680dbef4fd}{sL}})>=0)\ \{\ sD[k]\ -\/=\ BL[k-\/(\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a89e14d45faf34067d08ed11f5ca89cb4}{sG}}+\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a24bbb5f118d7127ebedede680dbef4fd}{sL}})];\ \}}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00150}00150\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (k-\/(\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ac2acbbb289bfb291f8ad3f02c23d97b1}{fG}}+\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ae12b21d1f5a546e1fc560af9b848b1e3}{fL}})>=0)\ \{\ fD[k]\ -\/=\ BL[k-\/(\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ac2acbbb289bfb291f8ad3f02c23d97b1}{fG}}+\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ae12b21d1f5a546e1fc560af9b848b1e3}{fL}})];\ \}}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00149}00149\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (k-\/(\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a89e14d45faf34067d08ed11f5ca89cb4}{sG}}+\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a24bbb5f118d7127ebedede680dbef4fd}{sL}})>=0)\ \{\ sD[k]\ -\/=\ BL[k-\/(\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a89e14d45faf34067d08ed11f5ca89cb4}{sG}}+\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a24bbb5f118d7127ebedede680dbef4fd}{sL}})];\ \}}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00150}00150\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (k-\/(\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ac2acbbb289bfb291f8ad3f02c23d97b1}{fG}}+\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ae12b21d1f5a546e1fc560af9b848b1e3}{fL}})>=0)\ \{\ fD[k]\ -\/=\ BL[k-\/(\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ac2acbbb289bfb291f8ad3f02c23d97b1}{fG}}+\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ae12b21d1f5a546e1fc560af9b848b1e3}{fL}})];\ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00151}00151\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00152}00152\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (k-\/(\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a89e14d45faf34067d08ed11f5ca89cb4}{sG}}+2*\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a24bbb5f118d7127ebedede680dbef4fd}{sL}})>=0)\ \{\ sD[k]\ +=\ BL[k-\/(\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a89e14d45faf34067d08ed11f5ca89cb4}{sG}}+2*\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a24bbb5f118d7127ebedede680dbef4fd}{sL}})];\ \}}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00153}00153\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (k-\/(\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ac2acbbb289bfb291f8ad3f02c23d97b1}{fG}}+2*\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ae12b21d1f5a546e1fc560af9b848b1e3}{fL}})>=0)\ \{\ fD[k]\ +=\ BL[k-\/(\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ac2acbbb289bfb291f8ad3f02c23d97b1}{fG}}+2*\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ae12b21d1f5a546e1fc560af9b848b1e3}{fL}})];\ \}}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00152}00152\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (k-\/(\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a89e14d45faf34067d08ed11f5ca89cb4}{sG}}+2*\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a24bbb5f118d7127ebedede680dbef4fd}{sL}})>=0)\ \{\ sD[k]\ +=\ BL[k-\/(\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a89e14d45faf34067d08ed11f5ca89cb4}{sG}}+2*\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a24bbb5f118d7127ebedede680dbef4fd}{sL}})];\ \}}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00153}00153\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (k-\/(\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ac2acbbb289bfb291f8ad3f02c23d97b1}{fG}}+2*\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ae12b21d1f5a546e1fc560af9b848b1e3}{fL}})>=0)\ \{\ fD[k]\ +=\ BL[k-\/(\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ac2acbbb289bfb291f8ad3f02c23d97b1}{fG}}+2*\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ae12b21d1f5a546e1fc560af9b848b1e3}{fL}})];\ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00154}00154\ }
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00155}00155\ \ \ \ \ \ \ \ \ sP[k]=\ sD[k];}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00156}00156\ \ \ \ \ \ \ \ \ fP[k]=\ fD[k];}
@@ -165,22 +165,22 @@
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00161}00161\ \ \ \ \ \ \ \ \ sR[k]\ =\ P*sP[k]\ +\ M*sD[k];}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00162}00162\ \ \ \ \ \ \ \ \ fR[k]\ =\ P*fP[k]\ +\ M*fD[k];}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00163}00163\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00164}00164\ \ \ \ \ \ \ \ \ sTrap[k]\ =\ sR[k]/(M*\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a24bbb5f118d7127ebedede680dbef4fd}{sL}});}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00164}00164\ \ \ \ \ \ \ \ \ sTrap[k]\ =\ sR[k]/(M*\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a24bbb5f118d7127ebedede680dbef4fd}{sL}});}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00165}00165\ \ \ \ \ \ \ \ \ fTrap[k]\ =\ fR[k]/(M);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00166}00166\ }
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00167}00167\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (k-\/1>=0)\ \{\ sTrap[k]\ +=\ sTrap[k-\/1];\ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00168}00168\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (k-\/1>=0)\ \{\ fTrap[k]\ +=\ fTrap[k-\/1];\ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00169}00169\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00170}00170\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_p_i_x_i_e_1_1_c_f_d}{CFD}}[k]\ =\ (1-\/\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a0569baccfd2c27a8bae5b42b532ccba9}{S}}/8)*fTrap[k]\ -\/\ fTrap[k-\/\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a3e4714dc2551cbd6396ce3a5dbeac6f8}{D}}];}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00170}00170\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_p_i_x_i_e_1_1_c_f_d}{CFD}}[k]\ =\ (1-\/\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a0569baccfd2c27a8bae5b42b532ccba9}{S}}/8)*fTrap[k]\ -\/\ fTrap[k-\/\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a3e4714dc2551cbd6396ce3a5dbeac6f8}{D}}];}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00171}00171\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Find\ fast\ trigger\ and\ CFD\ values\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00172}00172\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fTrap[k-\/1]<=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_aebe5c3c6e03ebaf78d8e658132b75090}{ffThr}}\ \&\&\ fTrap[k]>\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_aebe5c3c6e03ebaf78d8e658132b75090}{ffThr}}\ \&\&\ ffTrig==0)\ \{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00172}00172\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fTrap[k-\/1]<=\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_aebe5c3c6e03ebaf78d8e658132b75090}{ffThr}}\ \&\&\ fTrap[k]>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_aebe5c3c6e03ebaf78d8e658132b75090}{ffThr}}\ \&\&\ ffTrig==0)\ \{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ TCP\ =\ k-\/1;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ ffTrig=1;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00175}00175\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00176}00176\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{struct_p_i_x_i_e_1_1_c_f_d}{CFD}}[k-\/1]<=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_abcd3c02217b2f785ab57c6b31ff9c29c}{cfdThr}}\ \&\&\ \mbox{\hyperlink{struct_p_i_x_i_e_1_1_c_f_d}{CFD}}[k]>\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_abcd3c02217b2f785ab57c6b31ff9c29c}{cfdThr}}\ \&\&\ cfdTrig==0)\ \{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00176}00176\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{struct_p_i_x_i_e_1_1_c_f_d}{CFD}}[k-\/1]<=\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_abcd3c02217b2f785ab57c6b31ff9c29c}{cfdThr}}\ \&\&\ \doxymbox{\hyperlink{struct_p_i_x_i_e_1_1_c_f_d}{CFD}}[k]>\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_abcd3c02217b2f785ab57c6b31ff9c29c}{cfdThr}}\ \&\&\ cfdTrig==0)\ \{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ cfdTrig=1;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00178}00178\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00179}00179\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{struct_p_i_x_i_e_1_1_c_f_d}{CFD}}[k-\/1]*\mbox{\hyperlink{struct_p_i_x_i_e_1_1_c_f_d}{CFD}}[k]<0\ \&\&\ cfdTrig==1\ \&\&\ ffTrig==1\ \&\&\ k>TCP\ \&\&\ ZCP==-\/1)\ \{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00179}00179\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{struct_p_i_x_i_e_1_1_c_f_d}{CFD}}[k-\/1]*\doxymbox{\hyperlink{struct_p_i_x_i_e_1_1_c_f_d}{CFD}}[k]<0\ \&\&\ cfdTrig==1\ \&\&\ ffTrig==1\ \&\&\ k>TCP\ \&\&\ ZCP==-\/1)\ \{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ ZCP=k-\/1;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00181}00181\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00182}00182\ }
@@ -188,16 +188,16 @@
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ cfd\_frac\ =\ -\/1;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00185}00185\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00186}00186\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ cfd\_frac\ =\ (32768*\mbox{\hyperlink{struct_p_i_x_i_e_1_1_c_f_d}{CFD}}[ZCP]/(\mbox{\hyperlink{struct_p_i_x_i_e_1_1_c_f_d}{CFD}}[ZCP]-\/\mbox{\hyperlink{struct_p_i_x_i_e_1_1_c_f_d}{CFD}}[ZCP+1]));}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ cfd\_frac\ =\ (32768*\doxymbox{\hyperlink{struct_p_i_x_i_e_1_1_c_f_d}{CFD}}[ZCP]/(\doxymbox{\hyperlink{struct_p_i_x_i_e_1_1_c_f_d}{CFD}}[ZCP]-\/\doxymbox{\hyperlink{struct_p_i_x_i_e_1_1_c_f_d}{CFD}}[ZCP+1]));}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00188}00188\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00189}00189\ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00190}00190\ }
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00191}00191\ \ \ \ \ \ \ retval.emplace\_back(\textcolor{stringliteral}{"{}TraceTCP"{}},\ TCP);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00192}00192\ \ \ \ \ \ \ retval.emplace\_back(\textcolor{stringliteral}{"{}TraceZCP"{}},\ ZCP);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00193}00193\ \ \ \ \ \ \ retval.emplace\_back(\textcolor{stringliteral}{"{}TraceCFD"{}},\ cfd\_frac);}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00194}00194\ \ \ \ \ \ \ retval.emplace\_back(\textcolor{stringliteral}{"{}TraceEnergy"{}},\ sTrap[TCP\ +\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a24bbb5f118d7127ebedede680dbef4fd}{sL}}\ +\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a89e14d45faf34067d08ed11f5ca89cb4}{sG}}\ -\/1]);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00194}00194\ \ \ \ \ \ \ retval.emplace\_back(\textcolor{stringliteral}{"{}TraceEnergy"{}},\ sTrap[TCP\ +\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a24bbb5f118d7127ebedede680dbef4fd}{sL}}\ +\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a89e14d45faf34067d08ed11f5ca89cb4}{sG}}\ -\/1]);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00195}00195\ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00196}00196\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (TCP\ >\ 0)\ \{\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a3a179dfa3c4c83f0750b0a205b55bb35}{good\_trace}}\ =\ \textcolor{keyword}{true};\ \}}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00196}00196\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (TCP\ >\ 0)\ \{\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a3a179dfa3c4c83f0750b0a205b55bb35}{good\_trace}}\ =\ \textcolor{keyword}{true};\ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00197}00197\ }
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00198}00198\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (write\ ==\ 1)\{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00199}00199\ }
@@ -222,7 +222,7 @@
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00218}00218\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ k\ =0\ ;k<length;k++)\{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00219}00219\ \ \ \ \ \ \ \ \ \ \ slowTrap-\/>SetPoint(k,k,sTrap[k]);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ fastTrap-\/>SetPoint(k,k,fTrap[k]);}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00221}00221\ \ \ \ \ \ \ \ \ \ \ cfd-\/>SetPoint(k,k,\mbox{\hyperlink{struct_p_i_x_i_e_1_1_c_f_d}{CFD}}[k]);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00221}00221\ \ \ \ \ \ \ \ \ \ \ cfd-\/>SetPoint(k,k,\doxymbox{\hyperlink{struct_p_i_x_i_e_1_1_c_f_d}{CFD}}[k]);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00222}00222\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00223}00223\ }
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00224}00224\ \ \ \ \ \ \ \ \ mgSlow-\/>Add(slowTrap);}
@@ -237,7 +237,7 @@
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00233}00233\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ retval;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00234}00234\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00235}00235\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00236}\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_aa3cfc78f38f2c9f7ed09a3d7619b7db2}{00236}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_aa3cfc78f38f2c9f7ed09a3d7619b7db2}{Trapezoid::dumpTrace}}(uint16\_t\ *trace,\ \textcolor{keywordtype}{int}\ traceLen,\ \textcolor{keywordtype}{int}\ n\_traces,\ std::string\ fileName,\ \textcolor{keywordtype}{int}\ append,std::string\ traceName)\{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00236}\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_aa3cfc78f38f2c9f7ed09a3d7619b7db2}{00236}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_aa3cfc78f38f2c9f7ed09a3d7619b7db2}{Trapezoid::dumpTrace}}(uint16\_t\ *trace,\ \textcolor{keywordtype}{int}\ traceLen,\ \textcolor{keywordtype}{int}\ n\_traces,\ std::string\ fileName,\ \textcolor{keywordtype}{int}\ append,std::string\ traceName)\{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00237}00237\ \textcolor{preprocessor}{\#if\ ROOT\_COMPILE\ ==\ 1}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00238}00238\ \ \ \ \ \ \ TFile\ *outFile;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00239}00239\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (append==1)\{}
@@ -253,7 +253,7 @@
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00249}00249\ \ \ \ \ \ \ \ \ HTrace-\/>AddBinContent(i,trace[i]-\/trace[0]);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00250}00250\ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00251}00251\ \ \ \ \ \ \ HTrace-\/>Write();}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00252}00252\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a795b286a8b183874822bfa1bc8292a18}{Trapezoid::TrapFilter}}(trace,\ traceLen,1);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00252}00252\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a795b286a8b183874822bfa1bc8292a18}{Trapezoid::TrapFilter}}(trace,\ traceLen,1);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00253}00253\ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00254}00254\ \ \ \ \ \ \ \textcolor{comment}{//Close\ File}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00255}00255\ \ \ \ \ \ \ outFile-\/>Purge();}
@@ -263,7 +263,7 @@
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00259}00259\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00260}00260\ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00261}00261\ \ \ \ \ \textcolor{comment}{//Trapezoid\ with\ QDCS}}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00262}\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_af392010e0ddd84193a52d47b1e45defe}{00262}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_af392010e0ddd84193a52d47b1e45defe}{TrapezoidQDC::Load}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filename,\ \textcolor{keywordtype}{int}\ index)\ \{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00262}\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_af392010e0ddd84193a52d47b1e45defe}{00262}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_af392010e0ddd84193a52d47b1e45defe}{TrapezoidQDC::Load}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filename,\ \textcolor{keywordtype}{int}\ index)\ \{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00263}00263\ \ \ \ \ \ \ FILE\ *fpr\ =\ fopen(filename,\ \textcolor{stringliteral}{"{}r"{}});}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00264}00264\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fpr!=NULL)\{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00265}00265\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ line[200];}
@@ -276,27 +276,27 @@
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00272}00272\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'\#'}:}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00273}00273\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00274}00274\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00275}00275\ \ \ \ \ \ \ \ \ \ \ \ \ sscanf(line,\textcolor{stringliteral}{"{}\%d\ \%d\ \%d\ \%d\ \%d\ \%f\ \%d\ \%d\ \%f\ \%f\ \%f\ \%f\ \%f\ \%f\ \%f\ \%f\ \%f\ \%f\ \%s\ \%s\ \%f\ \%f\ \%f\ \%f"{}},\&ind,\ \&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ae12b21d1f5a546e1fc560af9b848b1e3}{fL}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ac2acbbb289bfb291f8ad3f02c23d97b1}{fG}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a24bbb5f118d7127ebedede680dbef4fd}{sL}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a89e14d45faf34067d08ed11f5ca89cb4}{sG}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a05c05dd147acad46cc9fc88b0ec44bd7}{tau}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a3e4714dc2551cbd6396ce3a5dbeac6f8}{D}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a0569baccfd2c27a8bae5b42b532ccba9}{S}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_aebe5c3c6e03ebaf78d8e658132b75090}{ffThr}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_abcd3c02217b2f785ab57c6b31ff9c29c}{cfdThr}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[0],\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[1],\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[2],\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[3],\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[4],\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[5],\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[6],\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[7],\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_a801141883a2df166e5048313044dfa7a}{stringFast}},\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_a0da37779ec0506e2743cf6c6a7edbae5}{stringSlow}},\ \&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_aba49a9a963be936189b7d38866ad777a}{enLo}},\ \&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_a2b15828b1fbcd4471034a8197521a98f}{enHi}},\ \&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_a7a40be509cfdc1cd5feee35eac88c7d9}{pidLo}},\ \&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ac290a329c53ec0c1aa837a764e645ed2}{pidHi}});}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00275}00275\ \ \ \ \ \ \ \ \ \ \ \ \ sscanf(line,\textcolor{stringliteral}{"{}\%d\ \%d\ \%d\ \%d\ \%d\ \%f\ \%d\ \%d\ \%f\ \%f\ \%f\ \%f\ \%f\ \%f\ \%f\ \%f\ \%f\ \%f\ \%s\ \%s\ \%f\ \%f\ \%f\ \%f"{}},\&ind,\ \&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ae12b21d1f5a546e1fc560af9b848b1e3}{fL}},\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_ac2acbbb289bfb291f8ad3f02c23d97b1}{fG}},\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a24bbb5f118d7127ebedede680dbef4fd}{sL}},\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a89e14d45faf34067d08ed11f5ca89cb4}{sG}},\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a05c05dd147acad46cc9fc88b0ec44bd7}{tau}},\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a3e4714dc2551cbd6396ce3a5dbeac6f8}{D}},\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a0569baccfd2c27a8bae5b42b532ccba9}{S}},\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_aebe5c3c6e03ebaf78d8e658132b75090}{ffThr}},\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_abcd3c02217b2f785ab57c6b31ff9c29c}{cfdThr}},\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[0],\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[1],\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[2],\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[3],\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[4],\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[5],\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[6],\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[7],\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_a801141883a2df166e5048313044dfa7a}{stringFast}},\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_a0da37779ec0506e2743cf6c6a7edbae5}{stringSlow}},\ \&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_aba49a9a963be936189b7d38866ad777a}{enLo}},\ \&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_a2b15828b1fbcd4471034a8197521a98f}{enHi}},\ \&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_a7a40be509cfdc1cd5feee35eac88c7d9}{pidLo}},\ \&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ac290a329c53ec0c1aa837a764e645ed2}{pidHi}});}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00276}00276\ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00277}00277\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ind\ ==\ index)\ \{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00278}00278\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00279}00279\ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00280}00280\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00281}00281\ \ \ \ \ \ \ \ \ fclose(fpr);\ fpr=NULL;}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00282}00282\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a0cd4fcab67f90370e5d485da02ee9934}{is\_loaded}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00282}00282\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a0cd4fcab67f90370e5d485da02ee9934}{is\_loaded}}\ =\ \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00283}00283\ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00284}00284\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00285}00285\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%sUnable\ to\ open\ file\ \%s\%s\%s,\ traces\ will\ not\ be\ processed\%s\(\backslash\)n"{}},\mbox{\hyperlink{colors_8hh_a34995b955465f6bbb37c359173d50477}{ANSI\_COLOR\_RED}},\ \mbox{\hyperlink{colors_8hh_a5a123b382640b3aa65dd5db386002fbc}{ANSI\_COLOR\_YELLOW}},filename,\mbox{\hyperlink{colors_8hh_a34995b955465f6bbb37c359173d50477}{ANSI\_COLOR\_RED}},\ \mbox{\hyperlink{colors_8hh_a92a364c2b863dde1a024a77eac2a5b3b}{ANSI\_COLOR\_RESET}});}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00285}00285\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%sUnable\ to\ open\ file\ \%s\%s\%s,\ traces\ will\ not\ be\ processed\%s\(\backslash\)n"{}},\doxymbox{\hyperlink{colors_8hh_a34995b955465f6bbb37c359173d50477}{ANSI\_COLOR\_RED}},\ \doxymbox{\hyperlink{colors_8hh_a5a123b382640b3aa65dd5db386002fbc}{ANSI\_COLOR\_YELLOW}},filename,\doxymbox{\hyperlink{colors_8hh_a34995b955465f6bbb37c359173d50477}{ANSI\_COLOR\_RED}},\ \doxymbox{\hyperlink{colors_8hh_a92a364c2b863dde1a024a77eac2a5b3b}{ANSI\_COLOR\_RESET}});}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00286}00286\ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00287}00287\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00288}00288\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00289}\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_a69db32f78148ec967fa97e969b34df89}{00289}}\ \ \ \ \ std::vector<Measurement>\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_a69db32f78148ec967fa97e969b34df89}{TrapezoidQDC::Prototype}}()\ \{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00289}\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_a69db32f78148ec967fa97e969b34df89}{00289}}\ \ \ \ \ std::vector<Measurement>\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_a69db32f78148ec967fa97e969b34df89}{TrapezoidQDC::Prototype}}()\ \{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00290}00290\ \ \ \ \ \ \ std::vector<Measurement>\ retval;}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00291}00291\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ tcp(\textcolor{stringliteral}{"{}TraceTCP"{}},\ 0);}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00292}00292\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ zcp(\textcolor{stringliteral}{"{}TraceZCP"{}},\ 0);}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00293}00293\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ cfd(\textcolor{stringliteral}{"{}TraceCFD"{}},\ 0);}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00294}00294\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ energy(\textcolor{stringliteral}{"{}TraceEnergy"{}},\ 0);}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00295}00295\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ QTime(\textcolor{stringliteral}{"{}TraceQTime"{}},\ 0);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00291}00291\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ tcp(\textcolor{stringliteral}{"{}TraceTCP"{}},\ 0);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00292}00292\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ zcp(\textcolor{stringliteral}{"{}TraceZCP"{}},\ 0);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00293}00293\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ cfd(\textcolor{stringliteral}{"{}TraceCFD"{}},\ 0);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00294}00294\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ energy(\textcolor{stringliteral}{"{}TraceEnergy"{}},\ 0);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00295}00295\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ QTime(\textcolor{stringliteral}{"{}TraceQTime"{}},\ 0);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00296}00296\ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00297}00297\ \ \ \ \ \ \ retval.push\_back(tcp);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00298}00298\ \ \ \ \ \ \ retval.push\_back(zcp);}
@@ -305,26 +305,26 @@
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00301}00301\ \ \ \ \ \ \ retval.push\_back(QTime);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00302}00302\ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00303}00303\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<8;\ ++i)\ \{}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00304}00304\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ qdc(\textcolor{stringliteral}{"{}TraceQDC"{}}+std::to\_string(i),\ 0);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00304}00304\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ qdc(\textcolor{stringliteral}{"{}TraceQDC"{}}+std::to\_string(i),\ 0);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00305}00305\ \ \ \ \ \ \ \ \ retval.push\_back(qdc);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00306}00306\ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00307}00307\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00308}00308\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ qdcFast(\textcolor{stringliteral}{"{}TraceQDCFast"{}},\ 0);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00308}00308\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ qdcFast(\textcolor{stringliteral}{"{}TraceQDCFast"{}},\ 0);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00309}00309\ \ \ \ \ \ \ retval.push\_back(qdcFast);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00310}00310\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00311}00311\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ qdcSlow(\textcolor{stringliteral}{"{}TraceQDCSlow"{}},\ 0);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00311}00311\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ qdcSlow(\textcolor{stringliteral}{"{}TraceQDCSlow"{}},\ 0);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00312}00312\ \ \ \ \ \ \ retval.push\_back(qdcSlow);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00313}00313\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00314}00314\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ qdcPID(\textcolor{stringliteral}{"{}TraceQDCPID"{}},\ 0);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00314}00314\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ qdcPID(\textcolor{stringliteral}{"{}TraceQDCPID"{}},\ 0);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00315}00315\ \ \ \ \ \ \ retval.push\_back(qdcPID);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00316}00316\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00317}00317\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ qdcTotal(\textcolor{stringliteral}{"{}TraceQDCTot"{}},\ 0);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00317}00317\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ qdcTotal(\textcolor{stringliteral}{"{}TraceQDCTot"{}},\ 0);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00318}00318\ \ \ \ \ \ \ retval.push\_back(qdcTotal);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00319}00319\ }
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00320}00320\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ retval;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00321}00321\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00322}00322\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00323}\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab0fc04f3144e4272d6f42800c4dc4183}{00323}}\ \ \ \ \ std::vector<Measurement>\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab0fc04f3144e4272d6f42800c4dc4183}{TrapezoidQDC::Process}}(uint16\_t\ *trace,\ \textcolor{keywordtype}{int}\ length)\ \{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00323}\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab0fc04f3144e4272d6f42800c4dc4183}{00323}}\ \ \ \ \ std::vector<Measurement>\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab0fc04f3144e4272d6f42800c4dc4183}{TrapezoidQDC::Process}}(uint16\_t\ *trace,\ \textcolor{keywordtype}{int}\ length)\ \{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00324}00324\ \ \ \ \ \ \ std::vector<Measurement>\ retval;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00325}00325\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ BL[length];\textcolor{comment}{//=\{0\};}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00326}00326\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ QDCSums[8];\textcolor{comment}{//=\{0\};}}
@@ -333,16 +333,16 @@
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00329}00329\ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00330}00330\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ Q=0,\ QTime=0;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00331}00331\ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00332}00332\ \ \ \ \ \ \ retval\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a795b286a8b183874822bfa1bc8292a18}{Trapezoid::TrapFilter}}(trace,\ length);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00332}00332\ \ \ \ \ \ \ retval\ =\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a795b286a8b183874822bfa1bc8292a18}{Trapezoid::TrapFilter}}(trace,\ length);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00333}00333\ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00334}00334\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ mean\ =\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a00e96dba2654d6815574e4f5cd73931a}{Trapezoid::GetBaseline}}(trace,\ length);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00334}00334\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ mean\ =\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_a00e96dba2654d6815574e4f5cd73931a}{Trapezoid::GetBaseline}}(trace,\ length);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00335}00335\ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00336}00336\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ k=0;k<length;k++)\ \{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00337}00337\ \ \ \ \ \ \ \ \ BL[k]=trace[k]-\/mean;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00338}00338\ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00339}00339\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Get\ QDCSums}}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00340}00340\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((k-\/prevQDC)>=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[currentQDC])\ \{}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00341}00341\ \ \ \ \ \ \ \ \ \ \ prevQDC+=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[currentQDC];}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00340}00340\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((k-\/prevQDC)>=\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[currentQDC])\ \{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00341}00341\ \ \ \ \ \ \ \ \ \ \ prevQDC+=\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[currentQDC];}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00342}00342\ \ \ \ \ \ \ \ \ \ \ currentQDC+=1;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00343}00343\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00344}00344\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (currentQDC<8)\{\ \ \ \ }
@@ -355,14 +355,14 @@
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00351}00351\ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00352}00352\ \ \ \ \ \ \ QTime\ =\ QTime\ /\ Q;\ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00353}00353\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00354}00354\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ qtime(\textcolor{stringliteral}{"{}TraceQTime"{}},\ (int16\_t)\ QTime);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00354}00354\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ qtime(\textcolor{stringliteral}{"{}TraceQTime"{}},\ (int16\_t)\ QTime);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00355}00355\ \ \ \ \ \ \ retval.push\_back(qtime);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00356}00356\ }
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00357}00357\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ qdcT=0,qdcF=0,qdcS=0,qdcP;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00358}00358\ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ *ptr;}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00359}00359\ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ slowMask=strtol(\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_a0da37779ec0506e2743cf6c6a7edbae5}{stringSlow}},\&ptr,2),\ fastMask=strtol(\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_a801141883a2df166e5048313044dfa7a}{stringFast}},\&ptr,2);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00359}00359\ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ slowMask=strtol(\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_a0da37779ec0506e2743cf6c6a7edbae5}{stringSlow}},\&ptr,2),\ fastMask=strtol(\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_a801141883a2df166e5048313044dfa7a}{stringFast}},\&ptr,2);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00360}00360\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<8;\ ++i)\ \{}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00361}00361\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ qdc(\textcolor{stringliteral}{"{}TraceQDC"{}}+std::to\_string(i),\ round(QDCSums[i]));}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00361}00361\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ qdc(\textcolor{stringliteral}{"{}TraceQDC"{}}+std::to\_string(i),\ round(QDCSums[i]));}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00362}00362\ \ \ \ \ \ \ \ \ retval.push\_back(qdc);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00363}00363\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(slowMask\ \&\ (1<<(7-\/i)))\{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00364}00364\ \ \ \ \ \ \ \ \ \ \ qdcS\ +=\ round(QDCSums[i]);}
@@ -374,25 +374,25 @@
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00370}00370\ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00371}00371\ \ \ \ \ \ \ qdcP\ =\ qdcS/qdcF\ *\ 32768;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00372}00372\ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00373}00373\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ qdcFast(\textcolor{stringliteral}{"{}TraceQDCFast"{}},\ qdcF);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00373}00373\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ qdcFast(\textcolor{stringliteral}{"{}TraceQDCFast"{}},\ qdcF);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00374}00374\ \ \ \ \ \ \ retval.push\_back(qdcFast);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00375}00375\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00376}00376\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ qdcSlow(\textcolor{stringliteral}{"{}TraceQDCSlow"{}},\ qdcS);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00376}00376\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ qdcSlow(\textcolor{stringliteral}{"{}TraceQDCSlow"{}},\ qdcS);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00377}00377\ \ \ \ \ \ \ retval.push\_back(qdcSlow);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00378}00378\ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00379}00379\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ qdcPID(\textcolor{stringliteral}{"{}TraceQDCPID"{}},\ qdcP\ \ );}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00379}00379\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ qdcPID(\textcolor{stringliteral}{"{}TraceQDCPID"{}},\ qdcP\ \ );}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00380}00380\ \ \ \ \ \ \ retval.push\_back(qdcPID);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00381}00381\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00382}00382\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ qdcTotal(\textcolor{stringliteral}{"{}TraceQDCTotal"{}},\ qdcT);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00382}00382\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ qdcTotal(\textcolor{stringliteral}{"{}TraceQDCTotal"{}},\ qdcT);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00383}00383\ \ \ \ \ \ \ retval.push\_back(qdcTotal);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00384}00384\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00385}00385\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (qdcT\ >\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_aba49a9a963be936189b7d38866ad777a}{enLo}}\ \&\&\ qdcT\ <\ enHi\ \&\&\ qdcP\ >\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_a7a40be509cfdc1cd5feee35eac88c7d9}{pidLo}}\ \&\&\ qdcP\ <\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ac290a329c53ec0c1aa837a764e645ed2}{pidHi}})\ \{\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a3a179dfa3c4c83f0750b0a205b55bb35}{good\_trace}}\ =\ \textcolor{keyword}{true};\ \}}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00386}00386\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a3a179dfa3c4c83f0750b0a205b55bb35}{good\_trace}}=\textcolor{keyword}{false};\}\ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00385}00385\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (qdcT\ >\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_aba49a9a963be936189b7d38866ad777a}{enLo}}\ \&\&\ qdcT\ <\ enHi\ \&\&\ qdcP\ >\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_a7a40be509cfdc1cd5feee35eac88c7d9}{pidLo}}\ \&\&\ qdcP\ <\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ac290a329c53ec0c1aa837a764e645ed2}{pidHi}})\ \{\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a3a179dfa3c4c83f0750b0a205b55bb35}{good\_trace}}\ =\ \textcolor{keyword}{true};\ \}}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00386}00386\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a3a179dfa3c4c83f0750b0a205b55bb35}{good\_trace}}=\textcolor{keyword}{false};\}\ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00387}00387\ }
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00388}00388\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ retval;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00389}00389\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00390}00390\ \ \ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00391}\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_aab796d1e25b9d22af0a354a332a0be10}{00391}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_aab796d1e25b9d22af0a354a332a0be10}{TrapezoidQDC::dumpTrace}}(uint16\_t\ *trace,\ \textcolor{keywordtype}{int}\ traceLen,\ \textcolor{keywordtype}{int}\ n\_traces,\ std::string\ fileName,\ \textcolor{keywordtype}{int}\ append,\ std::string\ traceName)\{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00391}\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_aab796d1e25b9d22af0a354a332a0be10}{00391}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_aab796d1e25b9d22af0a354a332a0be10}{TrapezoidQDC::dumpTrace}}(uint16\_t\ *trace,\ \textcolor{keywordtype}{int}\ traceLen,\ \textcolor{keywordtype}{int}\ n\_traces,\ std::string\ fileName,\ \textcolor{keywordtype}{int}\ append,\ std::string\ traceName)\{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00392}00392\ \ \ \ \ \ \ \textcolor{comment}{//Open\ files}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00393}00393\ }
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00394}00394\ \textcolor{preprocessor}{\#if\ ROOT\_COMPILE\ ==\ 1}}
@@ -421,7 +421,7 @@
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00417}00417\ \ \ \ \ \ \ \ \ TGraph\ *gr\ =\ \textcolor{keyword}{new}\ TGraph();}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00418}00418\ \ \ \ \ \ \ \ \ gr-\/>SetLineColor(kRed);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00419}00419\ \ \ \ \ \ \ \ \ gr-\/>SetLineWidth(2);}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00420}00420\ \ \ \ \ \ \ \ \ nextQDC\ +=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[i];}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00420}00420\ \ \ \ \ \ \ \ \ nextQDC\ +=\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_trapezoid_q_d_c_ab8c6063e07e11f83af27244e0cca9fa7}{QDCWindows}}[i];}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00421}00421\ \ \ \ \ \ \ \ \ gr-\/>SetPoint(0,nextQDC,0);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00422}00422\ \ \ \ \ \ \ \ \ gr-\/>SetPoint(1,nextQDC,0.1*max);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00423}00423\ \ \ \ \ \ \ \ \ mg\ -\/>Add(gr);}
@@ -437,7 +437,7 @@
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00433}00433\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00434}00434\ }
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00435}00435\ \ \ \ \ \textcolor{comment}{//PeakTail}}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00436}\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a25ed72da642f782767484902d5225f5d}{00436}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a25ed72da642f782767484902d5225f5d}{PeakTail::Load}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filename,\ \textcolor{keywordtype}{int}\ index)\ \{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00436}\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a25ed72da642f782767484902d5225f5d}{00436}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a25ed72da642f782767484902d5225f5d}{PeakTail::Load}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filename,\ \textcolor{keywordtype}{int}\ index)\ \{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00437}00437\ \ \ \ \ \ \ FILE\ *fpr\ =\ fopen(filename,\ \textcolor{stringliteral}{"{}r"{}});}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00438}00438\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fpr!=NULL)\{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00439}00439\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ line[200];}
@@ -451,24 +451,24 @@
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00447}00447\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00448}00448\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00449}00449\ \ \ \ \ \ \ \ \ \ \ \ \ sscanf(line,\textcolor{stringliteral}{"{}\%d\ \%d\ \%d\ \%d\ \%d\ \%d\ \%d\ \%d\ \%d\ \%d\ \%d\ \%d\ \%d\ \%d"{}},}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00450}00450\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&ind,\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a8c2a6d33bfd7323c9e05967e7d441f45}{bLow}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a1b8495d9daea87fdc674a386d1c74c70}{bHigh}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a4a25e450168b3e5521683f328871beb9}{pLow}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a73804ea0ad6dc29ae555ed16b23fce7b}{pHigh}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a10e2aa9fe5568010ab3c8b33a6bfe1dc}{tLow}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_ab542f7ddb6ce6d19ae46051227b8edc5}{tHigh}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_ad5630eeeb7c19d8d69c29d2f188dba25}{eLow}},}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00451}00451\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a0f92a714ca0df2b74642b3c0989bb86f}{eHigh}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a401b665d51166cad9fecf827a6641095}{pbLow}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a6c43713d36ed3009af04737bbba12388}{pbHigh}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_ad26df172bdcf19a31c3c3fb2194d1422}{fL}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_aa122b94a93ad1b03188d9a35d5139b34}{fG}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a7d8bf7203a54b69bb1e9f7a8ae5c38b4}{ffThr}});}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00450}00450\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&ind,\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a8c2a6d33bfd7323c9e05967e7d441f45}{bLow}},\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a1b8495d9daea87fdc674a386d1c74c70}{bHigh}},\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a4a25e450168b3e5521683f328871beb9}{pLow}},\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a73804ea0ad6dc29ae555ed16b23fce7b}{pHigh}},\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a10e2aa9fe5568010ab3c8b33a6bfe1dc}{tLow}},\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_ab542f7ddb6ce6d19ae46051227b8edc5}{tHigh}},\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_ad5630eeeb7c19d8d69c29d2f188dba25}{eLow}},}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00451}00451\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a0f92a714ca0df2b74642b3c0989bb86f}{eHigh}},\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a401b665d51166cad9fecf827a6641095}{pbLow}},\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a6c43713d36ed3009af04737bbba12388}{pbHigh}},\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_ad26df172bdcf19a31c3c3fb2194d1422}{fL}},\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_aa122b94a93ad1b03188d9a35d5139b34}{fG}},\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a7d8bf7203a54b69bb1e9f7a8ae5c38b4}{ffThr}});}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00452}00452\ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00453}00453\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ind\ ==\ index)\ \{\ \textcolor{keywordflow}{break};\ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00454}00454\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00455}00455\ \ \ \ \ \ \ \ \ fclose(fpr);}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00456}00456\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a0cd4fcab67f90370e5d485da02ee9934}{is\_loaded}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00456}00456\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a0cd4fcab67f90370e5d485da02ee9934}{is\_loaded}}\ =\ \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00457}00457\ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00458}00458\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00459}00459\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%sUnable\ to\ open\ file\ \%s,\ traces\ will\ not\ be\ processed\%s\(\backslash\)n"{}},\mbox{\hyperlink{colors_8hh_a34995b955465f6bbb37c359173d50477}{ANSI\_COLOR\_RED}},\ filename,\ \mbox{\hyperlink{colors_8hh_a92a364c2b863dde1a024a77eac2a5b3b}{ANSI\_COLOR\_RESET}});}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00459}00459\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%sUnable\ to\ open\ file\ \%s,\ traces\ will\ not\ be\ processed\%s\(\backslash\)n"{}},\doxymbox{\hyperlink{colors_8hh_a34995b955465f6bbb37c359173d50477}{ANSI\_COLOR\_RED}},\ filename,\ \doxymbox{\hyperlink{colors_8hh_a92a364c2b863dde1a024a77eac2a5b3b}{ANSI\_COLOR\_RESET}});}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00460}00460\ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00461}00461\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00462}00462\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00463}\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_aab290fa71e8d906d79bc9a3a1de8ddb5}{00463}}\ \ \ \ \ std::vector<Measurement>\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_aab290fa71e8d906d79bc9a3a1de8ddb5}{PeakTail::Prototype}}()\ \{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00463}\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_aab290fa71e8d906d79bc9a3a1de8ddb5}{00463}}\ \ \ \ \ std::vector<Measurement>\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_aab290fa71e8d906d79bc9a3a1de8ddb5}{PeakTail::Prototype}}()\ \{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00464}00464\ \ \ \ \ \ \ std::vector<Measurement>\ retval;}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00465}00465\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ energy(\textcolor{stringliteral}{"{}energy"{}},\ 0);}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00466}00466\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ peak(\textcolor{stringliteral}{"{}peak"{}},\ 0);}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00467}00467\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ tail(\textcolor{stringliteral}{"{}tail"{}},\ 0);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00465}00465\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ energy(\textcolor{stringliteral}{"{}energy"{}},\ 0);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00466}00466\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ peak(\textcolor{stringliteral}{"{}peak"{}},\ 0);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00467}00467\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ tail(\textcolor{stringliteral}{"{}tail"{}},\ 0);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00468}00468\ }
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00469}00469\ \ \ \ \ \ \ retval.push\_back(energy);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00470}00470\ \ \ \ \ \ \ retval.push\_back(peak);}
@@ -477,8 +477,8 @@
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00473}00473\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ retval;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00474}00474\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00475}00475\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00476}\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_aa7ce2be65200d9e7a70e2bc226a71ec8}{00476}}\ \ \ \ \ std::vector<Measurement>\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_aa7ce2be65200d9e7a70e2bc226a71ec8}{PeakTail::Process}}(uint16\_t\ *trace,\ \textcolor{keywordtype}{int}\ length)\ \{}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00477}00477\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a3a179dfa3c4c83f0750b0a205b55bb35}{good\_trace}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00476}\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_aa7ce2be65200d9e7a70e2bc226a71ec8}{00476}}\ \ \ \ \ std::vector<Measurement>\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_aa7ce2be65200d9e7a70e2bc226a71ec8}{PeakTail::Process}}(uint16\_t\ *trace,\ \textcolor{keywordtype}{int}\ length)\ \{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00477}00477\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a3a179dfa3c4c83f0750b0a205b55bb35}{good\_trace}}\ =\ \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00478}00478\ \ \ \ \ \ \ std::vector<Measurement>\ retval;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00479}00479\ \ \ \ \ \ \ \textcolor{comment}{//actual\ trace\ processing}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00480}00480\ \ \ \ \ \ \ \textcolor{comment}{//float\ BL[length];//=\{0\};}}
@@ -486,31 +486,31 @@
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00482}00482\ \ \ \ \ \ \ \textcolor{comment}{//float\ fTrap[length];//=\{0\};}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00483}00483\ }
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00484}00484\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ background\ =\ 0.0;}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00485}00485\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a8c2a6d33bfd7323c9e05967e7d441f45}{bLow}};\ i<=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a1b8495d9daea87fdc674a386d1c74c70}{bHigh}};\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00485}00485\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a8c2a6d33bfd7323c9e05967e7d441f45}{bLow}};\ i<=\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a1b8495d9daea87fdc674a386d1c74c70}{bHigh}};\ ++i)\ \{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00486}00486\ \ \ \ \ \ \ \ \ background\ +=\ trace[i];}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00487}00487\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00488}00488\ \ \ \ \ \ \ background\ /=\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a1b8495d9daea87fdc674a386d1c74c70}{bHigh}}\ -\/\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a8c2a6d33bfd7323c9e05967e7d441f45}{bLow}}\ +\ 1);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00488}00488\ \ \ \ \ \ \ background\ /=\ (\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a1b8495d9daea87fdc674a386d1c74c70}{bHigh}}\ -\/\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a8c2a6d33bfd7323c9e05967e7d441f45}{bLow}}\ +\ 1);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00489}00489\ }
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00490}00490\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ energy\ =\ 0.0;}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00491}00491\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_ad5630eeeb7c19d8d69c29d2f188dba25}{eLow}};\ i<=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a0f92a714ca0df2b74642b3c0989bb86f}{eHigh}};\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00491}00491\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_ad5630eeeb7c19d8d69c29d2f188dba25}{eLow}};\ i<=\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a0f92a714ca0df2b74642b3c0989bb86f}{eHigh}};\ ++i)\ \{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00492}00492\ \ \ \ \ \ \ \ \ energy\ +=\ trace[i]\ -\/\ background;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00493}00493\ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00494}00494\ }
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00495}00495\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ peak\ =\ 0.0;}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00496}00496\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a4a25e450168b3e5521683f328871beb9}{pLow}};\ i<=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a73804ea0ad6dc29ae555ed16b23fce7b}{pHigh}};\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00496}00496\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a4a25e450168b3e5521683f328871beb9}{pLow}};\ i<=\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a73804ea0ad6dc29ae555ed16b23fce7b}{pHigh}};\ ++i)\ \{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00497}00497\ \ \ \ \ \ \ \ \ peak\ +=\ trace[i]\ -\/\ background;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00498}00498\ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00499}00499\ }
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00500}00500\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ tail\ =\ 0.0;}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00501}00501\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a10e2aa9fe5568010ab3c8b33a6bfe1dc}{tLow}};\ i<=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_ab542f7ddb6ce6d19ae46051227b8edc5}{tHigh}};\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00501}00501\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a10e2aa9fe5568010ab3c8b33a6bfe1dc}{tLow}};\ i<=\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_ab542f7ddb6ce6d19ae46051227b8edc5}{tHigh}};\ ++i)\ \{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00502}00502\ \ \ \ \ \ \ \ \ tail\ +=\ trace[i]\ -\/\ background;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00503}00503\ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00504}00504\ }
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00505}00505\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ post\_background\ =\ 0.0;}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00506}00506\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a401b665d51166cad9fecf827a6641095}{pbLow}};\ i<=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a6c43713d36ed3009af04737bbba12388}{pbHigh}};\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00506}00506\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a401b665d51166cad9fecf827a6641095}{pbLow}};\ i<=\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a6c43713d36ed3009af04737bbba12388}{pbHigh}};\ ++i)\ \{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00507}00507\ \ \ \ \ \ \ \ \ post\_background\ +=\ trace[i];}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00508}00508\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00509}00509\ \ \ \ \ \ \ post\_background\ /=\ (\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a6c43713d36ed3009af04737bbba12388}{pbHigh}}\ -\/\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a401b665d51166cad9fecf827a6641095}{pbLow}}\ +\ 1);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00509}00509\ \ \ \ \ \ \ post\_background\ /=\ (\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a6c43713d36ed3009af04737bbba12388}{pbHigh}}\ -\/\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a401b665d51166cad9fecf827a6641095}{pbLow}}\ +\ 1);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00510}00510\ }
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00511}00511\ \ \ \ \ \ \ \textcolor{comment}{/*}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00512}00512\ \textcolor{comment}{\ \ \ \ \ \ \ \ int\ ffTrig\ =\ 0;}}
@@ -536,7 +536,7 @@
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00532}00532\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ retval;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00533}00533\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00534}00534\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00535}\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a99a0e8ae1fb01950022e5415836496cc}{00535}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a99a0e8ae1fb01950022e5415836496cc}{PeakTail::dumpTrace}}(uint16\_t\ *trace,\ \textcolor{keywordtype}{int}\ traceLen,\ \textcolor{keywordtype}{int}\ n\_traces,\ std::string\ fileName,\ \textcolor{keywordtype}{int}\ append,std::string\ traceName)\{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00535}\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a99a0e8ae1fb01950022e5415836496cc}{00535}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_peak_tail_a99a0e8ae1fb01950022e5415836496cc}{PeakTail::dumpTrace}}(uint16\_t\ *trace,\ \textcolor{keywordtype}{int}\ traceLen,\ \textcolor{keywordtype}{int}\ n\_traces,\ std::string\ fileName,\ \textcolor{keywordtype}{int}\ append,std::string\ traceName)\{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00536}00536\ \textcolor{preprocessor}{\#if\ ROOT\_COMPILE\ ==\ 1}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00537}00537\ \ \ \ \ \ \ TFile\ *outFile;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00538}00538\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (append==1)\{}
@@ -561,7 +561,7 @@
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00557}00557\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00558}00558\ }
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00559}00559\ \ \ \ \ \textcolor{comment}{//QDCMaxVal}}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00560}\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_ab896314dc0cae8c6923e4c9f2d5eca2c}{00560}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_ab896314dc0cae8c6923e4c9f2d5eca2c}{QDCMaxVal::Load}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filename,\ \textcolor{keywordtype}{int}\ index)\ \{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00560}\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_ab896314dc0cae8c6923e4c9f2d5eca2c}{00560}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_ab896314dc0cae8c6923e4c9f2d5eca2c}{QDCMaxVal::Load}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filename,\ \textcolor{keywordtype}{int}\ index)\ \{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00561}00561\ \ \ \ \ \ \ FILE\ *fpr\ =\ fopen(filename,\ \textcolor{stringliteral}{"{}r"{}});}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00562}00562\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fpr!=NULL)\{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00563}00563\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ line[200];}
@@ -575,25 +575,25 @@
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00571}00571\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00572}00572\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00573}00573\ \ \ \ \ \ \ \ \ \ \ \ \ sscanf(line,\textcolor{stringliteral}{"{}\%d\ \%d\ \%d\ \%d\ \%d"{}},}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00574}00574\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&ind,\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_aa1adeb3d2943eac8081cac7d64ab6723}{bLow}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_a0dc9693ba57a80c01c220334307db992}{bHigh}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_a36d49dba51c734fd09410a9a6f4ab7e2}{pLow}},\&\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_a059d5d7644ad3a378bc3e8fe4289d7f1}{pHigh}});}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00574}00574\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&ind,\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_aa1adeb3d2943eac8081cac7d64ab6723}{bLow}},\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_a0dc9693ba57a80c01c220334307db992}{bHigh}},\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_a36d49dba51c734fd09410a9a6f4ab7e2}{pLow}},\&\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_a059d5d7644ad3a378bc3e8fe4289d7f1}{pHigh}});}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00575}00575\ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00576}00576\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ind\ ==\ index)\ \{\ \textcolor{keywordflow}{break};\ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00577}00577\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00578}00578\ \ \ \ \ \ \ \ \ fclose(fpr);}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00579}00579\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a0cd4fcab67f90370e5d485da02ee9934}{is\_loaded}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00579}00579\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a0cd4fcab67f90370e5d485da02ee9934}{is\_loaded}}\ =\ \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00580}00580\ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00581}00581\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00582}00582\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%sUnable\ to\ open\ file\ \%s,\ traces\ will\ not\ be\ processed\%s\(\backslash\)n"{}},\mbox{\hyperlink{colors_8hh_a34995b955465f6bbb37c359173d50477}{ANSI\_COLOR\_RED}},\ filename,\ \mbox{\hyperlink{colors_8hh_a92a364c2b863dde1a024a77eac2a5b3b}{ANSI\_COLOR\_RESET}});}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00582}00582\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%sUnable\ to\ open\ file\ \%s,\ traces\ will\ not\ be\ processed\%s\(\backslash\)n"{}},\doxymbox{\hyperlink{colors_8hh_a34995b955465f6bbb37c359173d50477}{ANSI\_COLOR\_RED}},\ filename,\ \doxymbox{\hyperlink{colors_8hh_a92a364c2b863dde1a024a77eac2a5b3b}{ANSI\_COLOR\_RESET}});}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00583}00583\ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00584}00584\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00585}00585\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00586}\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_a3d8fcf071d1a2b95b346a4a7e422315d}{00586}}\ \ \ \ \ std::vector<Measurement>\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_a3d8fcf071d1a2b95b346a4a7e422315d}{QDCMaxVal::Prototype}}()\ \{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00586}\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_a3d8fcf071d1a2b95b346a4a7e422315d}{00586}}\ \ \ \ \ std::vector<Measurement>\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_a3d8fcf071d1a2b95b346a4a7e422315d}{QDCMaxVal::Prototype}}()\ \{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00587}00587\ \ \ \ \ \ \ std::vector<Measurement>\ retval;}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00588}00588\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ peak(\textcolor{stringliteral}{"{}peak"{}},\ 0);}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00589}00589\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ background(\textcolor{stringliteral}{"{}background"{}},\ 0);}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00590}00590\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ maxval(\textcolor{stringliteral}{"{}maxval"{}},\ 0);}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00591}00591\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ time(\textcolor{stringliteral}{"{}time"{}},\ 0);}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00592}00592\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ frac(\textcolor{stringliteral}{"{}frac"{}},\ 0);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00588}00588\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ peak(\textcolor{stringliteral}{"{}peak"{}},\ 0);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00589}00589\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ background(\textcolor{stringliteral}{"{}background"{}},\ 0);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00590}00590\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ maxval(\textcolor{stringliteral}{"{}maxval"{}},\ 0);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00591}00591\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ time(\textcolor{stringliteral}{"{}time"{}},\ 0);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00592}00592\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_measurement}{Measurement}}\ frac(\textcolor{stringliteral}{"{}frac"{}},\ 0);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00593}00593\ }
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00594}00594\ \ \ \ \ \ \ retval.push\_back(peak);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00595}00595\ \ \ \ \ \ \ retval.push\_back(background);}
@@ -604,20 +604,20 @@
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00600}00600\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ retval;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00601}00601\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00602}00602\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00603}\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_ae877fa6149e5398871c664ab88640c4b}{00603}}\ \ \ \ \ std::vector<Measurement>\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_ae877fa6149e5398871c664ab88640c4b}{QDCMaxVal::Process}}(uint16\_t\ *trace,\ \textcolor{keywordtype}{int}\ length)\ \{}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00604}00604\ \ \ \ \ \ \ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a3a179dfa3c4c83f0750b0a205b55bb35}{good\_trace}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00603}\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_ae877fa6149e5398871c664ab88640c4b}{00603}}\ \ \ \ \ std::vector<Measurement>\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_ae877fa6149e5398871c664ab88640c4b}{QDCMaxVal::Process}}(uint16\_t\ *trace,\ \textcolor{keywordtype}{int}\ length)\ \{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00604}00604\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_algorithm_a3a179dfa3c4c83f0750b0a205b55bb35}{good\_trace}}\ =\ \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00605}00605\ \ \ \ \ \ \ std::vector<Measurement>\ retval;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00606}00606\ }
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00607}00607\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ background\ =\ 0.0;}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00608}00608\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_aa1adeb3d2943eac8081cac7d64ab6723}{bLow}};\ i<=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_a0dc9693ba57a80c01c220334307db992}{bHigh}};\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00608}00608\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_aa1adeb3d2943eac8081cac7d64ab6723}{bLow}};\ i<=\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_a0dc9693ba57a80c01c220334307db992}{bHigh}};\ ++i)\ \{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00609}00609\ \ \ \ \ \ \ \ \ background\ +=\ trace[i];}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00610}00610\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00611}00611\ \ \ \ \ \ \ background\ /=\ (float)(\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_a0dc9693ba57a80c01c220334307db992}{bHigh}}\ -\/\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_aa1adeb3d2943eac8081cac7d64ab6723}{bLow}}\ +\ 1.);}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00611}00611\ \ \ \ \ \ \ background\ /=\ (float)(\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_a0dc9693ba57a80c01c220334307db992}{bHigh}}\ -\/\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_aa1adeb3d2943eac8081cac7d64ab6723}{bLow}}\ +\ 1.);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00612}00612\ }
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00613}00613\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ maxVal\ =\ 0.0;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00614}00614\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ peak\ =\ 0.0;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00615}00615\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ maxInd\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00616}00616\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_a36d49dba51c734fd09410a9a6f4ab7e2}{pLow}};\ i<=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_a059d5d7644ad3a378bc3e8fe4289d7f1}{pHigh}};\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00616}00616\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_a36d49dba51c734fd09410a9a6f4ab7e2}{pLow}};\ i<=\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_a059d5d7644ad3a378bc3e8fe4289d7f1}{pHigh}};\ ++i)\ \{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00617}00617\ \ \ \ \ \ \ \ \ peak\ +=\ (float)trace[i]\ -\/\ background;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00618}00618\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (trace[i]\ >\ maxVal)\ \{\ maxVal\ =\ trace[i];\ maxInd\ =\ i;\ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00619}00619\ \ \ \ \ \ \ \}}
@@ -628,7 +628,7 @@
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00624}00624\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ latch\ =\ 0;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00625}00625\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ frac\ =\ 0;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00626}00626\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00627}00627\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_a0dc9693ba57a80c01c220334307db992}{bHigh}};\ i<=\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_a059d5d7644ad3a378bc3e8fe4289d7f1}{pHigh}};\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00627}00627\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_a0dc9693ba57a80c01c220334307db992}{bHigh}};\ i<=\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_a059d5d7644ad3a378bc3e8fe4289d7f1}{pHigh}};\ ++i)\ \{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00628}00628\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (trace[i-\/1]\ <\ thresh\ \&\&\ thresh\ <=\ trace[i])\ \{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00629}00629\ \ \ \ \ \ \ \ \ \ \ \ frac\ =\ (thresh-\/trace[i-\/1])/(trace[i]-\/trace[i-\/1]);}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00630}00630\ \ \ \ \ \ \ \ latch\ =\ i;}
@@ -644,7 +644,7 @@
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00640}00640\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ retval;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00641}00641\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00642}00642\ }
-\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00643}\mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_ad609bd5911d8b530d80b662c10b4a7fc}{00643}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_ad609bd5911d8b530d80b662c10b4a7fc}{QDCMaxVal::dumpTrace}}(uint16\_t\ *trace,\ \textcolor{keywordtype}{int}\ traceLen,\ \textcolor{keywordtype}{int}\ n\_traces,\ std::string\ fileName,\ \textcolor{keywordtype}{int}\ append,std::string\ traceName)\{}
+\DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00643}\doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_ad609bd5911d8b530d80b662c10b4a7fc}{00643}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_p_i_x_i_e_1_1_trace_1_1_q_d_c_max_val_ad609bd5911d8b530d80b662c10b4a7fc}{QDCMaxVal::dumpTrace}}(uint16\_t\ *trace,\ \textcolor{keywordtype}{int}\ traceLen,\ \textcolor{keywordtype}{int}\ n\_traces,\ std::string\ fileName,\ \textcolor{keywordtype}{int}\ append,std::string\ traceName)\{}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00644}00644\ \textcolor{preprocessor}{\#if\ ROOT\_COMPILE\ ==\ 1}}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00645}00645\ \ \ \ \ \ \ TFile\ *outFile;}
 \DoxyCodeLine{\Hypertarget{trace__algorithms_8cc_source_l00646}00646\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (append==1)\{}

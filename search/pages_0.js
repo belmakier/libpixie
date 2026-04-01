@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['libpixie_0',['libpixie',['../index.html',1,'']]]
+  ['developers_0',['Developers',['../index.html#authors',1,'']]]
 ];
