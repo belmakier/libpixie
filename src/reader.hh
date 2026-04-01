@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include <sys/stat.h>
 #include <time.h>
+#include <csignal>
 
 #include "event.hh"
 #include "traces.hh"
@@ -50,6 +51,8 @@ namespace PIXIE {
     bool RejectSCPU;
     bool extendOnZeros;
     
+    std::vector<std::string> files;
+    int fileIndx;
     FILE *file;
     
     PIXIE::Trace::Algorithm *tracealg;
@@ -66,6 +69,8 @@ namespace PIXIE {
     int thread;
     
     bool end;
+
+    static bool ctrlc_quit;
 
     PIXIE::Event events[MAX_EVENTS];  //>1 for correlations
     //PIXIE::Measurement measurements[MAX_EVENTS*MAX_MEAS_PER_EVENT];
@@ -106,6 +111,7 @@ namespace PIXIE {
     void printUpdate();
     void printSummary();
     double av_evt_length = 0.0;
+    static void handle_ctrlc(int sig);
     
     int set_algorithm(PIXIE::Trace::Algorithm *&alg);
     int set_coinc(float window) { //window is in ns
@@ -113,17 +119,18 @@ namespace PIXIE {
       return coincWindow;
     }
 
+    int loadfiles(const std::string &path);
     int openfile(const std::string &path);
     int loadbuffer();
     int clearbuffer();
     int closefile();
     int read();
+    PIXIE::Event *GetEvent() { return &events[eventCtr-1]; }
+    long long int GetEventNum() { return nEvents; }
     int dump_traces(int crate, int slot, int chan, std::string outPath, int maxTraces, int append, std::string traceName);
 
-    void start() {
-      eventsread = 0;
-      time(&starttime);
-    }
+    void start();
+    void stop(); 
 
     void nscldaq() {
       NSCLDAQ = true;

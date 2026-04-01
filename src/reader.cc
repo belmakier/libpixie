@@ -40,8 +40,10 @@ namespace PIXIE
     this->fileSize = 0;
     this->first_time = 0;
     this->last_time = 0;
+    this->fileIndx = 0;
     
     this->end          = false;
+    this->ctrlc_quit   = false;
 
     this->max_offset   = -1;
     this->start_offset = 0;
@@ -192,6 +194,29 @@ namespace PIXIE
       printf(ANSI_COLOR_RESET "going out of range\n");
     }
   }
+
+  int Reader::loadfiles(const std::string &path) {
+    files.clear();
+    fileIndx = 0;
+    std::string suffix = path.substr(path.find_last_of(".")+1, path.size() - path.find_last_of(".")-1);
+    if (suffix == "to" || suffix == "evt") {
+      files.push_back(path);
+    }
+    else if ( suffix=="txt" || suffix=="dat") {
+      std::ifstream infile(path);
+      std::string thispath;
+      while (infile >> thispath) {
+        files.push_back(thispath);
+      }
+    }
+    else {
+      std::cout << "Suffix for file (list) unclear: please use *.evt, *.to for listmode data file, or *.txt, *.dat for a list of paths to data files" << std::endl;
+      return 0;
+    }
+
+    openfile(files[0]);
+    return files.size();
+  }
     
   int Reader::openfile(const std::string &path) {
     if (this->file) {
@@ -209,10 +234,32 @@ namespace PIXIE
     if (this->liveSort) {fseek(this->file, 0, SEEK_END); this->end = true; usleep(1000000);}
     if (PIXIE_READTYPE==1 || PIXIE_READTYPE==2) {
       fd = open(path.c_str(), O_RDONLY);
-      std::cout << "memory mapping fd = " << fd << std::endl;
       // memory map things
       this->off = 0;
       this->buffer = (char*)mmap(NULL, fileSize, PROT_READ, MAP_PRIVATE, fd, 0);
+    }
+    if (PIXIE_READTYPE==2) {
+      //check if someone else is using disk
+      while (true) {
+        struct stat buffer;
+        if (stat(".ioLock", &buffer)==0) {
+          usleep(300000);
+          continue;
+        }
+        else {
+          break;
+        }
+      }
+      std::ofstream lockFile(".ioLock");
+      lockFile.close();
+      std::cout << "Populating buffer with entire file..." << std::endl;
+      time_t pre_buffer;
+      time(&pre_buffer);
+      loadbuffer();
+      time_t post_buffer;
+      time(&post_buffer);
+      std::cout << "Buffer populated in " << post_buffer-pre_buffer << " s" << std::endl;
+      std::remove(".ioLock");
     }
 
     return (0);
@@ -225,6 +272,12 @@ namespace PIXIE
       munmap(this->buffer, fileSize);
       close(fd);
     }
+    
+    if (PIXIE_READTYPE==2) {
+      clearbuffer();
+    }
+
+    this->file=NULL;
 
     return 0;
   }
@@ -266,6 +319,7 @@ namespace PIXIE
         }
       }
       std::cout << "\rfs : " << off << " / " << fileSize << " pOff = " << pOffMax << std::flush;
+      std::cout << std::endl;
     }
     return 1;
   }
@@ -278,6 +332,10 @@ namespace PIXIE
   }
 
   int Reader::read() {
+    if (ctrlc_quit) {
+      this->end=true;
+      return -1;
+    }
     if (eventCtr == MAX_EVENTS) {
       eventCtr = 0;
     }
@@ -285,19 +343,33 @@ namespace PIXIE
     this->end = false;
 
     Event *event = &(events[eventCtr]); //pointer to event
-    int retval = event->read(this, coincWindow, warnings);
-    if (last_time == 0) { first_time = measurements[event->fMeasurements[0]].eventTime; }
-    last_time = measurements[event->fMeasurements[0]].eventTime;
+    while (true) {
+      int retval = event->read(this, coincWindow, warnings);
+      if (last_time == 0) { first_time = measurements[event->fMeasurements[0]].eventTime; }
+      last_time = measurements[event->fMeasurements[0]].eventTime;
 
-    if (retval == 0) {}  //successful read
-    else if (retval == -1) { //end of file 
-      this->end = true;
-      return -1;
-    }
-    else if (retval == 1) { //same channel pileup
-    }
-    else if (retval == 2) { //MAX_MEAS_PER_EVENT exceeded
-      std::cerr << "Severe warning! MAX_MEAS_PER_EVENT exceeded" << std::endl;
+      if (retval == 0) { break; }  //successful read
+      else if (retval == -1) { //end of file 
+        ++fileIndx;
+        if (fileIndx==files.size()) { //end of file list
+          this->end = true;
+          return -1;
+        }
+        else { //next file
+          printSummary();
+          closefile();
+          std::cout << "Opening " << files[fileIndx] << " for sorting" << std::endl;
+          openfile(files[fileIndx]);
+          continue;
+        }
+      }
+      else if (retval == 1) { //same channel pileup
+        break;
+      }
+      else if (retval == 2) { //MAX_MEAS_PER_EVENT exceeded
+        std::cerr << "Severe warning! MAX_MEAS_PER_EVENT exceeded" << std::endl;
+        break;
+      }
     }
         
     //increment counters
@@ -387,4 +459,25 @@ namespace PIXIE
 
   float Reader::dither;
   float Reader::Dither() { dither += 0.1; if (dither >= 1.0) { dither = 0.0; } return dither; }
+
+  bool Reader::ctrlc_quit;
+  void Reader::handle_ctrlc(int sig) { 
+    std::cout << "Ctrl-C caught, exiting cleanly" << std::endl; 
+    ctrlc_quit = true; 
+  }
+
+  void Reader::start() {
+      eventsread = 0;
+      std::signal(SIGINT, Reader::handle_ctrlc);
+      time(&starttime);
+  }
+  void Reader::stop() {
+      std::signal(SIGINT, SIG_DFL);
+      time_t finaltime;
+      time(&finaltime);
+      std::cout << "Total fill time = " << finaltime-starttime << " s " << std::endl;
+      printSummary();    
+      std::cout << "closing file" << std::endl;
+      closefile();
+  }
 }//PIXIE
