@@ -18,20 +18,16 @@ int main(int argc, const char **argv) {
 
   float coincWindow = 3000; //in ns
   double ns = 3276.8; //conversion factor
-  double dither = 0.0;
   int nCrates = 1;
   
-  PIXIE::Reader reader;
-  std::string defPath = "experiment.def";
-  reader.definition.open(defPath);
-  reader.definition.read();
+  PIXIE::Reader reader("experiment.def");
   //reader.definition.print();
+  //reader.nscldaq();
   reader.set_coinc(coincWindow);
   int nfiles = reader.loadfiles(argv[1]);
   if (nfiles == 0) {
     exit(1);
   }
-  //reader.nscldaq();
     
   TFile file(argv[2], "recreate");
   //ROOT histogram definitions
@@ -52,9 +48,6 @@ int main(int argc, const char **argv) {
  
   long long unsigned int last_time[nCrates*13*16] = {0};
   long long unsigned int last_time_tot = 0;
-
-  time_t now;
-  time(&now);
   int traceCount = 0;
 
   reader.start(); //this is for timing and Ctrl-C catching
