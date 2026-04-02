@@ -155,13 +155,13 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="experiment__definition_8cc_source.html#l00130">130</a> of file <a class="el" href="experiment__definition_8cc_source.html">experiment_definition.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  130</span>                                                                   {</div>
-<div class="line"><span class="lineno">  131</span>    <a class="code hl_variable" href="#a09f02776dd8e6fcfd40f15b5fdfd14b7">slotMap</a>[slotID-2] = <span class="keyword">new</span> Slot(<a class="code hl_variable" href="#a94058e9b0ea10b9b05ec9121986c3ba5">crateID</a>, slotID);</div>
-<div class="line"><span class="lineno">  132</span>    <a class="code hl_variable" href="#a09f02776dd8e6fcfd40f15b5fdfd14b7">slotMap</a>[slotID-2]-&gt;freq = frequency;</div>
-<div class="line"><span class="lineno">  133</span> </div>
-<div class="line"><span class="lineno">  134</span>    <span class="keywordflow">return</span>(0);</div>
-<div class="line"><span class="lineno">  135</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="experiment__definition_8cc_source.html#l00131">131</a> of file <a class="el" href="experiment__definition_8cc_source.html">experiment_definition.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  131</span>                                                                   {</div>
+<div class="line"><span class="lineno">  132</span>    <a class="code hl_variable" href="#a09f02776dd8e6fcfd40f15b5fdfd14b7">slotMap</a>[slotID-2] = <span class="keyword">new</span> Slot(<a class="code hl_variable" href="#a94058e9b0ea10b9b05ec9121986c3ba5">crateID</a>, slotID);</div>
+<div class="line"><span class="lineno">  133</span>    <a class="code hl_variable" href="#a09f02776dd8e6fcfd40f15b5fdfd14b7">slotMap</a>[slotID-2]-&gt;freq = frequency;</div>
+<div class="line"><span class="lineno">  134</span> </div>
+<div class="line"><span class="lineno">  135</span>    <span class="keywordflow">return</span>(0);</div>
+<div class="line"><span class="lineno">  136</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -180,15 +180,15 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="experiment__definition_8cc_source.html#l00121">121</a> of file <a class="el" href="experiment__definition_8cc_source.html">experiment_definition.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  121</span>                                                                                  {</div>
-<div class="line"><span class="lineno">  122</span>    <span class="comment">//const auto slot = this-&gt;slotMap.find(slotID);</span></div>
-<div class="line"><span class="lineno">  123</span> </div>
-<div class="line"><span class="lineno">  124</span>    <span class="keywordflow">if</span> (slotID-2 &lt; 0) { <span class="keywordflow">return</span> NULL; }</div>
-<div class="line"><span class="lineno">  125</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (slotID-2 &gt;= <a class="code hl_define" href="definitions_8hh.html#aea2a89422b7c0431259b6e918642898a">MAX_SLOTS_PER_CRATE</a>) { <span class="keywordflow">return</span> NULL; }</div>
-<div class="line"><span class="lineno">  126</span>    </div>
-<div class="line"><span class="lineno">  127</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="#a09f02776dd8e6fcfd40f15b5fdfd14b7">slotMap</a>[slotID-2];</div>
-<div class="line"><span class="lineno">  128</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="experiment__definition_8cc_source.html#l00122">122</a> of file <a class="el" href="experiment__definition_8cc_source.html">experiment_definition.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  122</span>                                                                                  {</div>
+<div class="line"><span class="lineno">  123</span>    <span class="comment">//const auto slot = this-&gt;slotMap.find(slotID);</span></div>
+<div class="line"><span class="lineno">  124</span> </div>
+<div class="line"><span class="lineno">  125</span>    <span class="keywordflow">if</span> (slotID-2 &lt; 0) { <span class="keywordflow">return</span> NULL; }</div>
+<div class="line"><span class="lineno">  126</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (slotID-2 &gt;= <a class="code hl_define" href="definitions_8hh.html#aea2a89422b7c0431259b6e918642898a">MAX_SLOTS_PER_CRATE</a>) { <span class="keywordflow">return</span> NULL; }</div>
+<div class="line"><span class="lineno">  127</span>    </div>
+<div class="line"><span class="lineno">  128</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="#a09f02776dd8e6fcfd40f15b5fdfd14b7">slotMap</a>[slotID-2];</div>
+<div class="line"><span class="lineno">  129</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>

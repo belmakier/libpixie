@@ -197,22 +197,22 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="experiment__definition_8cc_source.html#l00144">144</a> of file <a class="el" href="experiment__definition_8cc_source.html">experiment_definition.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  152</span>                                                             {</div>
-<div class="line"><span class="lineno">  153</span>    <a class="code hl_variable" href="#a576df736f35d23967239ae5e3a2ef44b">channelMap</a>[channelNumber] = <span class="keyword">new</span> Channel(<a class="code hl_variable" href="#a8f99820e0eeab64c71c18bdb90516605">crateID</a>,</div>
-<div class="line"><span class="lineno">  154</span>                                            <a class="code hl_variable" href="#a6fe3292c2683cdc3df1139bd41ff99d7">slotID</a>,</div>
-<div class="line"><span class="lineno">  155</span>                                            channelNumber,</div>
-<div class="line"><span class="lineno">  156</span>                                            eraw,</div>
-<div class="line"><span class="lineno">  157</span>                                            qdcs,</div>
-<div class="line"><span class="lineno">  158</span>                                            extwind,</div>
-<div class="line"><span class="lineno">  159</span>                                            traces,</div>
-<div class="line"><span class="lineno">  160</span>                                            algName,</div>
-<div class="line"><span class="lineno">  161</span>                                            algFile,</div>
-<div class="line"><span class="lineno">  162</span>                                            algIndex,</div>
-<div class="line"><span class="lineno">  163</span>                                            isTagger);</div>
-<div class="line"><span class="lineno">  164</span> </div>
-<div class="line"><span class="lineno">  165</span>    <span class="keywordflow">return</span>(0);</div>
-<div class="line"><span class="lineno">  166</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="experiment__definition_8cc_source.html#l00145">145</a> of file <a class="el" href="experiment__definition_8cc_source.html">experiment_definition.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  153</span>                                                             {</div>
+<div class="line"><span class="lineno">  154</span>    <a class="code hl_variable" href="#a576df736f35d23967239ae5e3a2ef44b">channelMap</a>[channelNumber] = <span class="keyword">new</span> Channel(<a class="code hl_variable" href="#a8f99820e0eeab64c71c18bdb90516605">crateID</a>,</div>
+<div class="line"><span class="lineno">  155</span>                                            <a class="code hl_variable" href="#a6fe3292c2683cdc3df1139bd41ff99d7">slotID</a>,</div>
+<div class="line"><span class="lineno">  156</span>                                            channelNumber,</div>
+<div class="line"><span class="lineno">  157</span>                                            eraw,</div>
+<div class="line"><span class="lineno">  158</span>                                            qdcs,</div>
+<div class="line"><span class="lineno">  159</span>                                            extwind,</div>
+<div class="line"><span class="lineno">  160</span>                                            traces,</div>
+<div class="line"><span class="lineno">  161</span>                                            algName,</div>
+<div class="line"><span class="lineno">  162</span>                                            algFile,</div>
+<div class="line"><span class="lineno">  163</span>                                            algIndex,</div>
+<div class="line"><span class="lineno">  164</span>                                            isTagger);</div>
+<div class="line"><span class="lineno">  165</span> </div>
+<div class="line"><span class="lineno">  166</span>    <span class="keywordflow">return</span>(0);</div>
+<div class="line"><span class="lineno">  167</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -231,13 +231,13 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="experiment__definition_8cc_source.html#l00137">137</a> of file <a class="el" href="experiment__definition_8cc_source.html">experiment_definition.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  137</span>                                                                                              {</div>
-<div class="line"><span class="lineno">  138</span>    <span class="keywordflow">if</span> (channelNumber &lt; 0) { <span class="keywordflow">return</span> NULL; }</div>
-<div class="line"><span class="lineno">  139</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (channelNumber &gt;= <a class="code hl_define" href="definitions_8hh.html#aa5e7f9ac14bdfa863ef36c7647bbbd5d">MAX_CHANNELS_PER_BOARD</a>) { <span class="keywordflow">return</span> NULL; }</div>
-<div class="line"><span class="lineno">  140</span> </div>
-<div class="line"><span class="lineno">  141</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="#a576df736f35d23967239ae5e3a2ef44b">channelMap</a>[channelNumber];</div>
-<div class="line"><span class="lineno">  142</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="experiment__definition_8cc_source.html#l00138">138</a> of file <a class="el" href="experiment__definition_8cc_source.html">experiment_definition.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  138</span>                                                                                              {</div>
+<div class="line"><span class="lineno">  139</span>    <span class="keywordflow">if</span> (channelNumber &lt; 0) { <span class="keywordflow">return</span> NULL; }</div>
+<div class="line"><span class="lineno">  140</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (channelNumber &gt;= <a class="code hl_define" href="definitions_8hh.html#aa5e7f9ac14bdfa863ef36c7647bbbd5d">MAX_CHANNELS_PER_BOARD</a>) { <span class="keywordflow">return</span> NULL; }</div>
+<div class="line"><span class="lineno">  141</span> </div>
+<div class="line"><span class="lineno">  142</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="#a576df736f35d23967239ae5e3a2ef44b">channelMap</a>[channelNumber];</div>
+<div class="line"><span class="lineno">  143</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>

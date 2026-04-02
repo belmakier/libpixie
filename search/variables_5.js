@@ -9,10 +9,12 @@ var searchData=
   ['filelength_6',['fileLength',['../class_p_i_x_i_e_1_1_reader.html#a838f7fc1f5b7db72f9eafa3c2ee55d49',1,'PIXIE::Reader']]],
   ['files_7',['files',['../class_p_i_x_i_e_1_1_reader.html#ae61a9a0027069ae77538af24860862c8',1,'PIXIE::Reader']]],
   ['filesize_8',['fileSize',['../class_p_i_x_i_e_1_1_reader.html#a3cbf44c09c0127d4049eae7d04109084',1,'PIXIE::Reader']]],
-  ['finishcode_9',['finishCode',['../class_p_i_x_i_e_1_1_measurement.html#abb003509076a78af508cfad581e40ad3',1,'PIXIE::Measurement']]],
-  ['first_5ftime_10',['first_time',['../class_p_i_x_i_e_1_1_reader.html#a6d6ccccaed8685259f32ccc90fed2b45',1,'PIXIE::Reader']]],
-  ['fl_11',['fL',['../class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#ae12b21d1f5a546e1fc560af9b848b1e3',1,'PIXIE::Trace::Trapezoid::fL'],['../class_p_i_x_i_e_1_1_trace_1_1_peak_tail.html#ad26df172bdcf19a31c3c3fb2194d1422',1,'PIXIE::Trace::PeakTail::fL']]],
-  ['fmeasurements_12',['fMeasurements',['../class_p_i_x_i_e_1_1_event.html#a93932ad5d16872467ad4a5a3e44cfaa3',1,'PIXIE::Event']]],
-  ['freq_13',['freq',['../struct_p_i_x_i_e_1_1_experiment___definition_1_1_slot.html#aa9a0adee74322cdf40b154e4a1b85836',1,'PIXIE::Experiment_Definition::Slot']]],
-  ['fshift_14',['fShift',['../struct_p_i_x_i_e_1_1_mask.html#a0ed6d118e74974e13b937fc23822ab89',1,'PIXIE::Mask']]]
+  ['filestart_9',['fileStart',['../class_p_i_x_i_e_1_1_reader.html#a1f779d6963eca2911b372fcdd7157a45',1,'PIXIE::Reader']]],
+  ['filestop_10',['fileStop',['../class_p_i_x_i_e_1_1_reader.html#aa36f8ea7e0413e81cd5e37f22d40777d',1,'PIXIE::Reader']]],
+  ['finishcode_11',['finishCode',['../class_p_i_x_i_e_1_1_measurement.html#abb003509076a78af508cfad581e40ad3',1,'PIXIE::Measurement']]],
+  ['first_5ftime_12',['first_time',['../class_p_i_x_i_e_1_1_reader.html#a6d6ccccaed8685259f32ccc90fed2b45',1,'PIXIE::Reader']]],
+  ['fl_13',['fL',['../class_p_i_x_i_e_1_1_trace_1_1_trapezoid.html#ae12b21d1f5a546e1fc560af9b848b1e3',1,'PIXIE::Trace::Trapezoid::fL'],['../class_p_i_x_i_e_1_1_trace_1_1_peak_tail.html#ad26df172bdcf19a31c3c3fb2194d1422',1,'PIXIE::Trace::PeakTail::fL']]],
+  ['fmeasurements_14',['fMeasurements',['../class_p_i_x_i_e_1_1_event.html#a93932ad5d16872467ad4a5a3e44cfaa3',1,'PIXIE::Event']]],
+  ['freq_15',['freq',['../struct_p_i_x_i_e_1_1_experiment___definition_1_1_slot.html#aa9a0adee74322cdf40b154e4a1b85836',1,'PIXIE::Experiment_Definition::Slot']]],
+  ['fshift_16',['fShift',['../struct_p_i_x_i_e_1_1_mask.html#a0ed6d118e74974e13b937fc23822ab89',1,'PIXIE::Mask']]]
 ];

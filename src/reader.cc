@@ -34,6 +34,7 @@ namespace PIXIE
     this->subevents    = 0;
     this->nEvents      = 0;
 
+    this->pBuff        = NULL;
     this->liveSort     = 0;
 
     this->fileLength   = 0;
@@ -195,7 +196,7 @@ namespace PIXIE
     }
   }
 
-  int Reader::loadfiles(const std::string &path) {
+  int Reader::loadfiles(const std::string &path, int iStart, int iStop) {
     files.clear();
     fileIndx = 0;
     std::string suffix = path.substr(path.find_last_of(".")+1, path.size() - path.find_last_of(".")-1);
@@ -206,6 +207,8 @@ namespace PIXIE
       std::ifstream infile(path);
       std::string thispath;
       while (infile >> thispath) {
+        if (thispath.size() == 0) { continue; }
+        if (thispath[0] == '#') { continue; }
         files.push_back(thispath);
       }
     }
@@ -214,8 +217,20 @@ namespace PIXIE
       return 0;
     }
 
-    openfile(files[0]);
+    set_files(iStart, iStop);
     return files.size();
+  }
+
+  void Reader::set_files(int iStart, int iStop) {
+    if (iStart == -1) { fileStart = 0; }
+    else { fileStart = iStart; }
+    fileIndx = fileStart;
+
+    if (iStop == -1) { fileStop = files.size()-1; }
+    else { fileStop = iStop; }
+
+    closefile();
+    openfile(files[fileIndx]);
   }
     
   int Reader::openfile(const std::string &path) {
@@ -252,7 +267,7 @@ namespace PIXIE
       }
       std::ofstream lockFile(".ioLock");
       lockFile.close();
-      std::cout << "Populating buffer with entire file..." << std::endl;
+      std::cout << "Populating buffer from " << ANSI_COLOR_BLUE << path << ANSI_COLOR_RESET << std::endl;
       time_t pre_buffer;
       time(&pre_buffer);
       loadbuffer();
@@ -325,7 +340,9 @@ namespace PIXIE
   }
 
   int Reader::clearbuffer() {
-    delete pBuff;
+    if (pBuff) {
+      delete pBuff;
+    }
     pOff = 0;
     pOffMax = 0;
     return 0;
@@ -351,14 +368,14 @@ namespace PIXIE
       if (retval == 0) { break; }  //successful read
       else if (retval == -1) { //end of file 
         ++fileIndx;
-        if (fileIndx==files.size()) { //end of file list
+        if (fileIndx==fileStop+1) { //end of file list
           this->end = true;
           return -1;
         }
         else { //next file
           printSummary();
           closefile();
-          std::cout << "Opening " << files[fileIndx] << " for sorting" << std::endl;
+          //std::cout << "Opening " << files[fileIndx] << " for sorting" << std::endl;
           openfile(files[fileIndx]);
           continue;
         }
