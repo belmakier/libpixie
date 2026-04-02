@@ -110,9 +110,10 @@ namespace PIXIE
     }
 
     //create algorithm objects
-    std::cout << "Setting algorithms" << std::endl;
     int nalgs = set_algorithms();
-    std::cout << nalgs << " set" << std::endl;
+    if (nalgs > 0) {
+      std::cout << nalgs << " trace-processing algorithms set" << std::endl;
+    }
     
     return (0);
   }//read_definition  
@@ -311,7 +312,7 @@ namespace PIXIE
             for (int k=0; k<MAX_CHANNELS_PER_BOARD; ++k) {
               if (slot->channelMap[k] != NULL) {
                 auto channel = slot->channelMap[k];
-                if (channel->traces) {
+                if (channel->traces && channel->algName.size()>0 && channel->algFile.size()>0) {
                   ++n_chans;
                   int retval = PIXIE::setTraceAlg(channel->alg, channel->algName, channel->algFile, channel->algIndex);
                   if (retval < 0) {

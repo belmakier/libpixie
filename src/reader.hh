@@ -53,6 +53,9 @@ namespace PIXIE {
     
     std::vector<std::string> files;
     int fileIndx;
+    unsigned int fileStart; 
+    unsigned int fileStop; 
+
     FILE *file;
     
     PIXIE::Trace::Algorithm *tracealg;
@@ -119,7 +122,8 @@ namespace PIXIE {
       return coincWindow;
     }
 
-    int loadfiles(const std::string &path);
+    int loadfiles(const std::string &path, int iStart=-1, int iStop=-1);
+    void set_files(int iStart, int iStop);
     int openfile(const std::string &path);
     int loadbuffer();
     int clearbuffer();
