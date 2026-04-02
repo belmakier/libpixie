@@ -17,6 +17,10 @@
 
 namespace PIXIE
 {
+  Reader::Reader(std::string definition_file) : Reader() {
+    definition.open(definition_file);
+    definition.read();
+  }
   Reader::Reader()
     : file(nullptr)
   {

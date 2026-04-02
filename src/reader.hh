@@ -97,6 +97,7 @@ namespace PIXIE {
     
   public:
     Reader();
+    Reader(std::string definition_file);
     ~Reader();
 
     static float Dither(); 
